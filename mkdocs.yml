@@ -1,0 +1,34 @@
+site_name: RetroAchievements docs 
+site_description: RetroAchievements.org Documentation Project 
+
+repo_name: RetroAchievements/docs
+repo_url: https://github.com/RetroAchievements/docs/wiki
+
+theme:
+    name: material
+    palette:
+        primary: 'blue grey'
+        accent: 'teal'
+    logo:
+        icon: 'videogame_asset'
+
+docs_dir: docs.wiki
+
+# strict 
+# Determines if a broken link to a page within the documentation is considered 
+# a warning or an error (link to a page not listed in the pages setting). Set 
+# to true to halt processing when a broken link is found, false prints a warning 
+strict: true
+
+# dev_addr 
+# Determines the address used when running mkdocs serve. 
+# Must be of the format IP:PORT. 
+dev_addr: '0.0.0.0:8000'
+
+
+pages:
+- index.md
+- Developer-Toolset.md
+- Achievement-Creation.md
+- Badge-Creation.md
+- Console-Specific-Tips.md
