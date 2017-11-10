@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Developer-Toolset/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Achievement-Creation/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Badge-Creation/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Console-Specific-Tips/</loc>
+     <lastmod>2017-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>
