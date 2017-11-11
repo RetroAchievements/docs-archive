@@ -1,8 +1,8 @@
 site_name: RetroAchievements docs 
 site_description: RetroAchievements.org Documentation Project 
 
-repo_name: RetroAchievements/docs
-repo_url: https://github.com/RetroAchievements/docs/wiki
+#repo_name: RetroAchievements/docs
+#repo_url: https://github.com/RetroAchievements/docs/wiki
 
 theme:
     name: material
@@ -11,6 +11,7 @@ theme:
         accent: 'teal'
     logo:
         icon: 'videogame_asset'
+    favicon: 'img/favicon.ico'
 
 docs_dir: docs.wiki
 
@@ -25,10 +26,3 @@ strict: true
 # Must be of the format IP:PORT. 
 dev_addr: '0.0.0.0:8000'
 
-
-pages:
-- index.md
-- Developer-Toolset.md
-- Achievement-Creation.md
-- Badge-Creation.md
-- Console-Specific-Tips.md
