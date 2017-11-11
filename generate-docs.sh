@@ -1,6 +1,9 @@
 #!/bin/bash
 # generate-docs.sh
 ##################
+# TODO:
+# - add an option to serve the pages locally (mkdocs serve).
+# - add an option to deploy pages (mkdocs gh-deploy)
 
 readonly SCRIPT_DIR="$(cd "$(dirname $0)" && pwd)"
 
