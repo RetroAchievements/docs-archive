@@ -34,7 +34,7 @@
     
     
       
-        <title>Developer Toolset - RetroAchievements docs</title>
+        <title>Beginner Tips - RetroAchievements docs</title>
       
     
     
@@ -96,7 +96,7 @@
                 </span>
               
             
-            Developer Toolset
+            Beginner Tips
           
         </span>
       </div>
@@ -239,6 +239,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
+      Developer Toolset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -247,67 +259,10 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Developer Toolset
-      </label>
-    
-    <a href="./" title="Developer Toolset" class="md-nav__link md-nav__link--active">
-      Developer Toolset
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#achievement-tools" title="Achievement Tools" class="md-nav__link">
-    Achievement Tools
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#special-flags" title="Special Flags" class="md-nav__link">
-    Special Flags
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
+    <a href="./" title="Beginner Tips" class="md-nav__link md-nav__link--active">
       Beginner Tips
     </a>
+    
   </li>
 
         
@@ -347,85 +302,89 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#achievement-tools" title="Achievement Tools" class="md-nav__link">
-    Achievement Tools
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#special-flags" title="Special Flags" class="md-nav__link">
-    Special Flags
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Developer Toolset</h1>
+                  <h1>Beginner Tips</h1>
                 
-                <p>There are several tools and options available to a developer. Knowing how to properly utilize them will improve the quality of your sets. For more help regarding these, our Discord channel is always open for assistance.</p>
-<h2 id="achievement-tools">Achievement Tools</h2>
-<h3 id="groups">Groups</h3>
-<p>Achievements can have groups added to them that can act as alternative requirements to unlock an achievement. These are called <em>Alt Groups</em>.</p>
-<p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND at least one Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>
-<p><strong>Tip:</strong> Because the Core group always need to be active, typically you would put conditions there that is common among all the alternative requirements. However, one trick you can use to basically ignore needing a Core group is to give it a condition that is always true such as: </p>
-<p><code>Mem 0x0001 = Mem 0x0001</code></p>
-<p>Since the Core group is now always true, and you can now focus on differentiating the Alt groups.</p>
-<h3 id="special-flags">Special Flags</h3>
-<p>A unique property of flagged achievement conditions are that they are always considered <strong>true</strong> unless their comparison is met. In which case, the condition is now <strong>false</strong>.</p>
+                <p><strong>These tips were originally posted by <a href="http://retroachievements.org/User/Brian">Brian</a> at <a href="http://retroachievements.org/viewtopic.php?t=1510">RetroAchievements forums</a></strong></p>
 <ul>
-<li><code>PauseIf</code> - This will pause activity for all conditions in the same group. Keep in mind this will <strong>not</strong> pause conditions in other groups.</li>
-<li><code>ResetIf</code> - This will reset the hit value of all conditions. Unlike <em>PauseIf</em>, this will reset conditions in <strong>all groups.</strong></li>
+<li>
+<p>Avoid using only one condition as the achievement will most likely pop at the wrong time.</p>
+</li>
+<li>
+<p>Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+</li>
+<li>
+<p>Choose NTSC (U) ROMs if available, because 60 FPS is a smoother experience. (E) is PAL(50 FPS), (J) is also NTSC, but is only used if it was a Japan-exclusive game.</p>
+</li>
+<li>
+<p>Do not use a ROM with a modded/custom launch screen like Mode7 and RisingSun -sometimes- have because it messes up RAM.</p>
+</li>
+<li>
+<p>Uncheck "Show Decimal Values" in the Achievement Editor so you can enter the hex values you see in the Memory Viewer.</p>
+</li>
+<li>
+<p>Always use 8-bit view in the Memory Viewer, just remember that when adding a 16-bit address that the address to the right comes first. Example: AB CD WX YZ in 8-bit will becomes CDAB YZWX in 16-bit.</p>
+</li>
+<li>
+<p>16-bit requirements do not have to be used on an even number of RAM, they can be used in-between properly, even if 16-bit view doesn't show it right. Ex: 0 1 2 3 4 5, in 16-bit it's usually viewed as 10 32 54, but if you start the address at the 1 here in your requirement, "21" will be read by the achievement, even if 16-bit view in the memory viewer isn't showing it. It also works if it's the last address in the line(starting at F, going to 0).</p>
+</li>
+<li>
+<p>In the Editor, the field on the far right side is Hit Count. 0 is default, none. It means the condition must be true when the achievement pops. If you set a manual hit count, like 1, it means the condition must be true for at least 1 frame, and once that hit count is met, it doesn't need to be met again at any other time.</p>
+</li>
+<li>
+<p><code>ResetIf</code> is much more common to use than <code>PauseIf</code> it's used to reset hit count for conditions you set a manual hit count for.</p>
+</li>
+<li>
+<p><code>ResetIf</code> and <code>PauseIf</code> conditions only work if you set a manual hit count for a condition.</p>
+</li>
+<li>
+<p><code>PauseIf</code> is used to pause hit count going up during a specific situation(like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when someone simply pauses, for example.</p>
+</li>
+<li>
+<p><code>Delta</code> is the previous frame's value. You can do <code>ResetIf health &lt; delta health</code> and that would mean <code>ResetIf health is smaller than the previous frame's health</code> (AKA the player lost health). Or you can just make the previous frame's value a requirement. <code>health delta = 1</code> means "the previous frame's value for health must be 1 when the achievement pops up."</p>
+</li>
+<li>
+<p>Use single bits(0-7) for things that only change a single bit. In the Memory Viewer, when an address is selected, there will be "bits 0 1 2 3 4 5 6 7" above the addresses, and below those numbers will be either "0" or "1" like "0 0 0 0 0 0 0 0" if bit3 has a 1 under it, bit3=1 for that address. Single bit usage is very common for game events/unlocks/etc.. You'll want to use these in games where you can do things in different orders, dialogues, events, unlocks.. If you check for "8-bit x = 7" and someone did something different like skip something or get something extra, their 8-bit value will very likely be different because the single bits within are different and the achievement won't unlock, so in this case you check for specific bits inside the 8-bit address. Now if for example, item unlocks use all 8 bits of the 8-bit address, and you want to do "unlock all items," you can just do "8-bit x = 0xff" This may be confusing, but it's very important to understand.</p>
+</li>
+<li>
+<p>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</p>
+</li>
+<li>
+<p>You can input values in the memory viewer to see if it affects the game.</p>
+</li>
+<li>
+<p>Even if something is visibly decreasing in-game, like health, the value isn't necessarily decreasing. It's possible for it to be increasing, so since it's uncommon for you to know for sure, you should just filter <code>!=</code> and <code>==</code></p>
+</li>
+<li>
+<p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting(<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually "0", Stage 1 is usually value "0", Stage 2 is usually value "1" depending on the type of game.</p>
+</li>
+<li>
+<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to add <code>mode != demo</code> or something similar in your achievements.</p>
+</li>
+<li>
+<p>Alt groups (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. See the forum thread for an image explanation of this.</p>
+</li>
+<li>
+<p>There's a 100 achievement cap, 400 point cap, and a character cap for single achievements(try not to put 50+ conditions in one achievement).</p>
+</li>
+<li>
+<p>Try to avoid achievement spam. If a game has 100 levels, do not make an achievement for each level. Do every 10 or so.</p>
+</li>
+<li>
+<p>Get as creative as possible with achievements. "Beat X without using/doing Y" "Beat X in 5 seconds" "3 heart run"</p>
+</li>
+<li>
+<p>Do not make achievements requiring glitches. Exploits like using a falling goomba in SMB1 to cross a large gap, or getting infinite lives in SMB3 by bouncing off the goombas coming out of the pipe are allowed, but straight-up glitches aren't.</p>
+</li>
+<li>
+<p>Avoid using accented/special characters like the "é" in Pokemon, as they currently break a few things like feed if they appear on feed.</p>
+</li>
 </ul>
-<hr />
-<p>When developing for <strong>N64</strong>, there are additional <em>"arithmetic flag operations"</em> that can be used. These flags are currently exclusive to N64. Please note, any condition with arithmetic flags are always considered <strong>true</strong>, regardless of their comparison values.</p>
-<ul>
-<li><code>Add Source</code> - Will add the value of the source in the field labeled <code>Memory</code> to the next achievement condition. The total value will be used in the next achievement condition.</li>
-<li><code>Sub Source</code> - Works similarly to <em>Add Source</em>, but will instead subtract the source value.</li>
-<li><code>Add Hits</code> - Will add the current hit count to the next condition. The total hit value will be used in the next achievement condition.</li>
-</ul>
-<p><img alt="Add Source Example" src="https://i.imgur.com/7rMkSNt.png" /></p>
-<p>In this example, conditions #1 and #2 will have their values (<code>5</code> and <code>3</code> respectively) added until they reach condition #3. At that point, the value contained in the <code>Memory</code> field will be <code>5 + 3 + 20</code>, and it's new value will be <code>28</code>. Condition #3 will now be <em>true</em> and read as:
-<code>28 &gt; 20</code></p>
                 
                   
                 
@@ -444,7 +403,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Achievement-Creation/" title="Achievement Creation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Developer-Toolset/" title="Developer Toolset" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -453,19 +412,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Achievement Creation
+                Developer Toolset
               </span>
             </div>
           </a>
         
         
-          <a href="../Beginner-Tips/" title="Beginner Tips" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Beginner Tips
+                Console Specific Tips
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

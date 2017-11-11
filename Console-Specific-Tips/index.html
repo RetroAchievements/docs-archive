@@ -91,6 +91,10 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Developer docs
+                </span>
+              
             
             Console Specific Tips
           
@@ -167,16 +171,61 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
-      Developer Toolset
+    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
       
       
       
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Developer docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Developer docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -185,22 +234,34 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
-      Badge Creation
+    <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
+      Developer Toolset
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
+      Beginner Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
 
   
 
@@ -273,12 +334,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nintendo-64-rap64" title="Nintendo 64 (RAP64)" class="md-nav__link">
+    Nintendo 64 (RAP64)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-gameshark-codes-for-addresses" title="Using GameShark Codes for Addresses" class="md-nav__link">
+    Using GameShark Codes for Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
+      Badge Creation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -347,6 +445,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nintendo-64-rap64" title="Nintendo 64 (RAP64)" class="md-nav__link">
+    Nintendo 64 (RAP64)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-gameshark-codes-for-addresses" title="Using GameShark Codes for Addresses" class="md-nav__link">
+    Using GameShark Codes for Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -388,6 +506,35 @@
 <p><img alt="gb_echo_ram" src="https://user-images.githubusercontent.com/33245078/32610144-755a0442-c527-11e7-9bbb-eb5a4d7b8e6d.png" /></p>
 <p>Similarly to the NES, certain variables may show up twice when searching in the Memory Inspector. The second result is in what's called the ECHO RAM, which is a mirror of the actual memory. Since some emulators tend to ignore this area or emulate it incorrectly, it's recommended to NOT use it at all and always use the first result.</p>
 <p>The Game Boy has 4KB of RAM starting at 0xC000. ECHO RAM starts at 0xE000, so if your address begins with an E you'll want to replace the first non-zero character with a C. Remember: C is correct, E is echo!</p>
+<h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)</h2>
+<h3 id="using-gameshark-codes-for-addresses">Using GameShark Codes for Addresses</h3>
+<p>GameShark codes can be a valuable resource for finding addresses you can't or don't feel like finding. They have 12 characters per line and are fairly easy to parse.</p>
+<p><code>[AA][BBBBBB] [CCCC]</code></p>
+<p>[AA] is the codetype. This is a short instruction to the GameShark that defines what to do with the next value. If you understand what the GameShark code does you can use it to help with condition-making.</p>
+<ul>
+<li><strong>80, 88:</strong> The address is 8-bit. Sets the value [00CC] to the address [BBBBBB].</li>
+<li><strong>81, 89:</strong> The address is 16-bit. Sets the value [CCCC] to the address [BBBBBB].</li>
+<li><strong>D0:</strong> The address is 8-bit. Checks if [00CC] is equal to the value at address [BBBBBB] then executes the next line if it is.</li>
+<li><strong>D2:</strong> The address is 8-bit. Checks if [00CC] is DIFFERENT to the value at address [BBBBBB] then executes the next line if it is.</li>
+<li><strong>D1:</strong> The address is 16-bit. Checks if [CCCC] is equal to the value at address [BBBBBB] then executes the next line if it is.</li>
+<li><strong>D3:</strong> The address is 16-bit. Checks if [CCCC] is DIFFERENT to the value at address [BBBBBB] then executes the next line if it is.</li>
+</ul>
+<p>Here are some examples:
+* Paper Mario: Infinite HP:</p>
+<p><code>[80][10F292] [0032]</code></p>
+<p>Sets the 8-bit value at 0x10F292 to 0x32 (50). So this means Mario's HP is an 8-bit value at 0x10F292.</p>
+<ul>
+<li>Donkey Kong 64: Play as Rambi: </li>
+</ul>
+<p><code>[80][74E77C] [0006]</code></p>
+<p>Sets the 8-bit value at 0x74E77C to 6. So this means the character you're playing as is an 8-bit value at 0x74E77C.</p>
+<ul>
+<li>Chameleon Twist 2: Hold L to Moon Jump:</li>
+</ul>
+<p><code>[D0][18BAB5] [0020] &lt;- Looking at this one</code></p>
+<p><code>[81][18B9E0] [4200]</code></p>
+<p>Checks if the 8-bit value at 0x18BAB5 is equal to 0x20. This means 0x18BAB5 contains a button press variable and Bit5 (0x20) corresponds to L.</p>
+<p><a href="http://viper.shadowflareindustries.com/antigsc/index.php?codes&amp;dev=gs&amp;system=n64">Anti-GSC</a> and <a href="https://gamehacking.org/system/n64">GameHacking</a> are both good resources for finding GameShark codes.</p>
                 
                   
                 
@@ -406,7 +553,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Badge-Creation/" title="Badge Creation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Beginner-Tips/" title="Beginner Tips" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -415,11 +562,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Badge Creation
+                Beginner Tips
               </span>
             </div>
           </a>
         
+        
+          <a href="../Badge-Creation/" title="Badge Creation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Badge Creation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
