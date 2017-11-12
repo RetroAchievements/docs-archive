@@ -4,6 +4,8 @@ site_description: RetroAchievements.org Documentation Project
 #repo_name: RetroAchievements/docs
 #repo_url: https://github.com/RetroAchievements/docs/wiki
 
+docs_dir: docs.wiki
+
 theme:
     name: material
     palette:
@@ -12,8 +14,17 @@ theme:
     logo:
         icon: 'videogame_asset'
     favicon: 'img/favicon.ico'
+    # XXX: testing if the tabs will look good
+    feature:
+        tabs: true
 
-docs_dir: docs.wiki
+# XXX: testing icons on footer
+extra:
+  social:
+    - type: github-alt
+      link: https://github.com/RetroAchievements
+    - type: globe
+      link: http://retroachievements.org/
 
 # strict 
 # Determines if a broken link to a page within the documentation is considered 
