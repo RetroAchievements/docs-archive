@@ -1,16 +1,24 @@
 #!/bin/bash
 # generate-docs.sh
 ##################
-# TODO:
-# - add an option to serve the pages locally (mkdocs serve).
-# - add an option to deploy pages (mkdocs gh-deploy)
+# TODO: add an --install option to install mkdocs, material theme, etc...
+
+
+# globals #####################################################################
 
 readonly SCRIPT_DIR="$(cd "$(dirname $0)" && pwd)"
+
+SERVE_FLAG=0
+DEPLOY_FLAG=0
+
+
+# functions ###################################################################
 
 function exit_error() {
     echo "ERROR: $@" >&2
     exit 1
 }
+
 
 function get_pages_section() {
     local sidebar="$SCRIPT_DIR/docs.wiki/_Sidebar.md"
@@ -24,17 +32,55 @@ function get_pages_section() {
             "## User docs")
                 echo "    - User docs:" ;;
 
-            "## Development docs")
+            "## Developer docs")
                 echo "    - Developer docs:" ;;
 
             "- "*)
                 echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
         esac
 
-    done < "$sidebar"
+    done < <(cat "$sidebar")
 }
 
+
+function parse_args() {
+    while [[ -n "$1" ]]; do
+        case "$1" in
+
+#H -h|--help        Print this help message and exit.
+#H 
+            -h|--help)
+                echo "$(basename "$0") [OPTIONS]"
+                echo
+                echo "Where OPTIONS are:"
+                echo
+                # getting the help message from the comments in this source code
+                sed -n 's/^#H //p' "$0"
+                exit
+                ;;
+
+#H -s|--serve       Serve the docs locally after generating the pages.
+#H 
+            -s|--serve)
+                SERVE_FLAG=1
+                ;;
+
+#H -d|--deploy      Deploy the docs to GitHub pages after generating the pages.
+#H 
+            -d|--deploy)
+                DEPLOY_FLAG=1
+                ;;
+            *)  break
+                ;;
+        esac
+        shift
+    done
+}
+
+
 function main() {
+    parse_args "$@"
+
     cd "$SCRIPT_DIR"
 
     echo "--- Getting wiki pages..."
@@ -54,10 +100,20 @@ function main() {
     echo "--- Done!"
     echo
 
-    echo "--- Generating and deploying the pages to GitHub..."
-    mkdocs gh-deploy -f temp-mkdocs.yml || exit_error "Failed to generate/deploy pages to GitHub."
-    echo "--- Done!"
-    echo
+    if [[ "$SERVE_FLAG" == "1" ]]; then
+        echo "--- Generating and serving the pages locally..."
+        echo "--- (hit CTRL+C to terminate)"
+        mkdocs serve -f temp-mkdocs.yml || exit_error "Failed to generate/serve pages locally."
+        echo "--- Done!"
+        echo
+    fi
+
+    if [[ "$DEPLOY_FLAG" == "1" ]]; then
+        echo "--- Generating and deploying the pages to GitHub..."
+        mkdocs gh-deploy -f temp-mkdocs.yml || exit_error "Failed to generate/deploy pages to GitHub."
+        echo "--- Done!"
+        echo
+    fi
 }
 
-main
+main "$@"
