@@ -28,25 +28,25 @@
     </url>
         
     <url>
-     <loc>/Developer-Toolset/</loc>
-     <lastmod>2017-11-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/Beginner-Tips/</loc>
      <lastmod>2017-11-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/Console-Specific-Tips/</loc>
+     <loc>/Developer-Toolset/</loc>
      <lastmod>2017-11-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Badge-Creation/</loc>
+     <lastmod>2017-11-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Console-Specific-Tips/</loc>
      <lastmod>2017-11-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
