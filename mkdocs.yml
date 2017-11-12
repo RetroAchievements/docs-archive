@@ -17,6 +17,8 @@ theme:
     # XXX: testing if the tabs will look good
     feature:
         tabs: true
+    # XXX: using custom_dir in order to change the footer
+    custom_dir: 'theme'
 
 # XXX: testing icons on footer
 extra:
