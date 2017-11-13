@@ -40,13 +40,19 @@
     </url>
         
     <url>
-     <loc>/Using-Hit-Counts-and-Delta-Values/</loc>
+     <loc>/Hit-Counts-and-Delta-Values/</loc>
      <lastmod>2017-11-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Badge-Creation/</loc>
+     <lastmod>2017-11-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Set-Creation-Guidelines/</loc>
      <lastmod>2017-11-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
