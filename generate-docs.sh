@@ -37,6 +37,9 @@ function get_pages_section() {
 
             "- "*)
                 echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
+                
+            "## [About](About)")
+                echo "    - About: About.md" ;;
         esac
 
     done < "$sidebar"
