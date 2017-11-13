@@ -1,8 +1,13 @@
 site_name: RetroAchievements docs 
 site_description: RetroAchievements.org Documentation Project 
 
-#repo_name: RetroAchievements/docs
-#repo_url: https://github.com/RetroAchievements/docs/wiki
+repo_name: RetroAchievements/docs
+repo_url: https://github.com/RetroAchievements/docs/wiki/
+# XXX: If you do not want any "edit URL link" displayed on your pages,
+# then set edit_uri to an empty string to disable the automatic setting.
+edit_uri: ''
+
+docs_dir: docs.wiki
 
 theme:
     name: material
@@ -12,8 +17,16 @@ theme:
     logo:
         icon: 'videogame_asset'
     favicon: 'img/favicon.ico'
+    # XXX: using custom_dir in order to change the footer
+    custom_dir: 'theme'
 
-docs_dir: docs.wiki
+# XXX: testing icons on footer
+extra:
+  social:
+    - type: globe
+      link: http://retroachievements.org/
+    - type: github-alt
+      link: https://github.com/RetroAchievements
 
 # strict 
 # Determines if a broken link to a page within the documentation is considered 

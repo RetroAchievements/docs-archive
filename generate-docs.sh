@@ -27,7 +27,7 @@ function get_pages_section() {
     echo "pages:"
     echo "    - index.md"
 
-    while read -r line; do
+    while IFS='' read -r line || [[ -n "$line" ]]; do
         case "$line" in
             "## User docs")
                 echo "    - User docs:" ;;
@@ -39,7 +39,7 @@ function get_pages_section() {
                 echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
         esac
 
-    done < <(cat "$sidebar")
+    done < "$sidebar"
 }
 
 
