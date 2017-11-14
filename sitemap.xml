@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>/FAQ/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,46 +23,54 @@
         
     <url>
      <loc>/Achievement-Creation/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Developer-Toolset/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Beginner-Tips/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Hit-Counts-and-Delta-Values/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Badge-Creation/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Set-Creation-Guidelines/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Console-Specific-Tips/</loc>
-     <lastmod>2017-11-12</lastmod>
+     <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>/About/</loc>
+     <lastmod>2017-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>
