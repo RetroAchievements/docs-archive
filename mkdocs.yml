@@ -13,12 +13,16 @@ theme:
     name: material
     palette:
         primary: 'blue grey'
-        accent: 'teal'
+        accent: 'grey'
     logo:
         icon: 'videogame_asset'
     favicon: 'img/favicon.ico'
     # XXX: using custom_dir in order to change the footer
     custom_dir: 'theme'
+
+extra_css:
+    - 'css/extra.css'
+    - 'css/extra.scss'
 
 # XXX: testing icons on footer
 extra:

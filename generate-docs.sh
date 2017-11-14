@@ -92,6 +92,7 @@ function main() {
     echo
 
     cp -R img docs.wiki/
+    cp -R css docs.wiki/
 
     cd docs.wiki
     ln -sf Home.md index.md
