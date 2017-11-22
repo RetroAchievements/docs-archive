@@ -54,10 +54,6 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../css/extra.css">
-    
-      <link rel="stylesheet" href="../css/extra.scss">
-    
     
   </head>
   
@@ -537,11 +533,11 @@
                 <p><strong>Welcome to the world of Achievement Creation!</strong></p>
 <h2 id="first-steps">First Steps</h2>
 <p>Before start ensure you have an RA emulator from the <a href="http://retroachievements.org/download.php">RetroAchievements Download Page</a> first and <a href="http://retroachievements.org/createaccount.php">create an account</a> so you can log in using the emulator.</p>
-<p>In this guide we'll be using RAGens to demonstrate, and the game <a href="http://retroachievements.org/Game/1">Sonic the Hedgehog</a>. You can use whatever you like, but I'll refer to RAGens as the emulator I'm using; the same applies for the other emulators.</p>
+<p>In this guide we'll be using RAGens to demonstrate, and the game <a href="http://retroachievements.org/Game/1">Sonic the Hedgehog</a>. We are using RAGens but the same applies for the other emulators.</p>
 <p>To begin, run the RAGens executable, and login when prompted. Next, use File -&gt; Open and select whatever ROM you would like to find achievements for.</p>
 <h2 id="memory-inspector">Memory Inspector</h2>
 <p>You should now have your main window running Sonic. There are 3 other dialogs we'll be using, which can be found under <strong>RetroAchievements</strong> in the menu. We'll be dealing with the <strong>Memory Inspector</strong> first:</p>
-<p><img alt="memory_inspector" src="https://user-images.githubusercontent.com/8508804/32601361-83b8d962-c529-11e7-9e90-85fe2edc6f45.png" /></p>
+<p><img alt="memory_inspector" src="https://user-images.githubusercontent.com/8508804/33128665-55ae87e2-cf74-11e7-8085-17b3dd528b64.png" /></p>
 <p>The Memory Inspector can be used to find addresses in RAM for us to use. Essentially you are on a treasure hunt for memory locations - this dialog will help you examine and filter the game's RAM while the game is running. To start or restart a test, click <strong>New 8-bit Test</strong> near the top middle.</p>
 <p>To keep things simple, we'll start by looking for the memory address which holds the number of rings we have collected. Our steps will be the following:</p>
 <ol>
@@ -559,13 +555,22 @@
 </li>
 </ol>
 <p>Each time you perform 3 then 4, the number of possibilities or 'candidates' will get smaller. We will continue doing this until the number of candidates reaches a very small number (as few as possible), it might take 4-5 attempts. Next we can click in the results window, and monitor the memory address in the memory viewer at the bottom. Continue using the game and you should see the values in memory change as you collect rings. If you don't, or if something doesn't look right, try another value. With the first Sonic the Hedgehog, the memory address for the number of rings should be <code>0xfe20</code>.</p>
+<ul>
+<li>
 <p><strong>Note</strong>: Using save states (F5 to save state, F8 to load state, F6-F7 to toggle which state to use), you can switch back and forth between different states allowing you to alter what is in RAM, and use this to filter out bad candidates. You can search for values that remain the same (I.e. If you know the value didn't change, use <code>=</code>), or values that are different (use 'not equal', symbol <code>!=</code>).</p>
-<p><strong>Note</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good address. Note if you are struggling to find good values, post in these forums, or see the note at the end of this post. There are plenty of people who will be very happy to help!!</p>
+</li>
+<li>
+<p><strong>Note</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good address. Note if you are struggling to find good values, post <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum</a>, or <a href="https://discord.gg/TdfC3r7">RetroAchievements Discord server</a>, or see the <a href="#extra-stuff">Extra Stuff</a> at the end of this tutorial. There are plenty of people who will be very happy to help!!</p>
+</li>
+<li>
 <p><strong>Tip</strong>: if you'd like to experiment with memory, try entering new values directly into the RAM viewer. This can have devastating effects on the game, or it might do exactly what you expect, (or nothing at all!) It can be useful though, to see if you can enter a value and get the result you expect. Use with caution!</p>
+</li>
+</ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
 <h2 id="achievement-sets">Achievement Sets</h2>
-<p>OK so the memory location for the number of rings is stored at <code>0xfe20</code> (note to a non-programmer, we're dealing in hexadecimal which can be daunting, but don't worry, essentially its just letters instead of numbers), and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement. We will now move to the <strong>Achievement Set</strong> dialog:</p>
-<p><img alt="achievement_set_dialog" src="https://user-images.githubusercontent.com/8508804/32601360-83970cba-c529-11e7-9e24-d6547e361128.png" /></p>
+<p>OK so the memory location for the number of rings is stored at <code>0xfe20</code> - note to a non-programmer, we're dealing in <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">hexadecimal numeral system</a> which can be daunting, but don't worry, essentially its just numbers and letters instead of only numbers, and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement.</p>
+<p>Go to the <strong>RetroAchievements</strong> in the menu, choose <strong>Achievement Sets</strong> and you'll see this dialog:</p>
+<p><img alt="achievement_sets" src="https://user-images.githubusercontent.com/8508804/33129271-7d562cbc-cf76-11e7-8346-c19400975d40.png" /></p>
 <p>Here we group all the achievements we know about into three sets:
 1. Core Achievements (the main, public Achievement set),
 2. Unofficial/User Achievements (public, but will not award you points: for peer review),
@@ -573,10 +578,10 @@
 <p>In the Achievements dialog, click <strong>Local Achievements</strong> (top left), then <strong>Add New Achievement</strong> (bottom left). This will add a blank entry to the list in the center. Double click on it: if it's not already open, this should select it and open the <strong>Achievement Editor</strong> dialog.</p>
 <h2 id="achievement-editor">Achievement Editor</h2>
 <p>This is how it looks:</p>
-<p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/32601359-8373419a-c529-11e7-9958-fbdb28dcc44d.png" /></p>
+<p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
 <p>This is the final dialog where we bring all the data together. Most of the top fields are self explanatory, I.e. Title, Description, Points. The main one is the 'Requirements' part.</p>
-<p>Lets say we want to add an achievement for collecting a certain number of rings. Lets say 15 rings for simplicity. After filling out the fields at the top and selecting a suitable icon (you can upload a new one, I'll just select the gold trophy badge (00136) for now), we need to fill out Requirements. I have one requirement, <strong>that the number of rings is at least 15</strong>. Next click is <strong>Add New Requirement</strong>.</p>
-<p>Clicking this button will add several default values to the Requirements list. These defaults just ensure that something relatively sensible is added to the list. For now, ignoring the field 'Special?', what this says is, 'please check that this value of memory is equal to the value 10.' (10 is just a default value). When we clicked create, the default memory value will be whatever value you last left in the memory dialog.</p>
+<p>Let's say we want to add an achievement for collecting a certain number of rings. Let's say 15 rings for simplicity. After filling out the fields at the top and selecting a suitable icon (in this example we used the gold trophy badge (00136), but you can upload a new one), we need to fill out Requirements. We have one requirement, <strong>that the number of rings is at least 15</strong>. Next click is <strong>Add New Requirement</strong>.</p>
+<p>Clicking this button will add several default values to the Requirements list. These defaults just ensure that something relatively sensible is added to the list. For now, ignoring the field 'Special?'. When we clicked create, the default memory value will be whatever value you last left in the memory dialog.</p>
 <p>Next we will change these values to the following:</p>
 <ul>
 <li>Size: <code>16-bit</code></li>
@@ -598,7 +603,7 @@
 <p>For the achievement to be enjoyed by many, it must be pushed into the Core Achievement set. For your few first achievements, it must be reviewed by a staff member before it can be pushed to Core. Once you have uploaded a set of achievements, you may be given <em>Developer</em> status, in which case you can push any achievement to Core yourself.</p>
 <p>Naturally, it's best only to submit achievements that are unique and interesting into the Core Achievements group. If there are duplicates in the Core group, the most recently added duplicates will be manually moderated and deleted. If you don't want your achievement in the Core group, or you think it might not be appropriate for the Core group (i.e. if it's incomplete, or if sometimes it appears to trigger when it's not supposed to, like when the game is showing a demo), leave it in the Unofficial/User Submitted section.</p>
 <h2 id="extra-stuff">Extra Stuff</h2>
-<p>When finding addresses, there is potentially a bit of a shortcut. PAR files can come in very useful, see http://bsfree.shadowflareindustries.com/?s=11&amp;d=5 for examples of PAR codes. PAR codes are commonly used to force an address in RAM to stay a certain value. The addresses are easily decoded: if it begins 'ff', that means 'keep a value stuck in this address'. The next four digits are the address, and after the colon is the value that should be used. For example:</p>
+<p>When finding addresses, there is potentially a bit of a shortcut. PAR files can come in very useful, see <a href="http://bsfree.shadowflareindustries.com/?s=11&amp;d=5">http://bsfree.shadowflareindustries.com/?s=11&amp;d=5</a> for examples of PAR codes. PAR codes are commonly used to force an address in RAM to stay a certain value. The addresses are easily decoded: if it begins 'ff', that means 'keep a value stuck in this address'. The next four digits are the address, and after the colon is the value that should be used. For example:</p>
 <p><code>FFFE20:00C8</code></p>
 <p>This code is for Sonic 1, and the Action Replay would ensure that the value 00c8 is stuck in the address 0xfe20. This causes sonic to permanently have (hex)c8 rings, which is 200.</p>
 <p>Note that it is only Action Replay (PAR) codes that will be useful to get addresses for use with RetroAchievements: Game Genie codes modify ROM rather than RAM and aren't what we're looking for.</p>
