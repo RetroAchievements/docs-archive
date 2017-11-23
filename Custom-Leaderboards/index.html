@@ -34,7 +34,7 @@
     
     
       
-        <title>Hit Counts and Delta Values - RetroAchievements docs</title>
+        <title>Custom Leaderboards - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Hit Counts and Delta Values
+            Custom Leaderboards
           
         </span>
       </div>
@@ -311,50 +311,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Hit Counts and Delta Values
-      </label>
-    
-    <a href="./" title="Hit Counts and Delta Values" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-nav__link">
       Hit Counts and Delta Values
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-1" title="Example 1" class="md-nav__link">
-    Example 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2" title="Example 2" class="md-nav__link">
-    Example 2
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -398,11 +359,91 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Custom-Leaderboards/" title="Custom Leaderboards" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Custom Leaderboards
+      </label>
+    
+    <a href="./" title="Custom Leaderboards" class="md-nav__link md-nav__link--active">
       Custom Leaderboards
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-conditions" title="Start Conditions" class="md-nav__link">
+    Start Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-conditions" title="Cancel Conditions" class="md-nav__link">
+    Cancel Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-conditions" title="Submit Conditions" class="md-nav__link">
+    Submit Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-interpreter" title="Value Interpreter" class="md-nav__link">
+    Value Interpreter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-help" title="Further help" class="md-nav__link">
+    Further help
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -442,15 +483,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-1" title="Example 1" class="md-nav__link">
-    Example 1
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-2" title="Example 2" class="md-nav__link">
-    Example 2
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-conditions" title="Start Conditions" class="md-nav__link">
+    Start Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-conditions" title="Cancel Conditions" class="md-nav__link">
+    Cancel Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-conditions" title="Submit Conditions" class="md-nav__link">
+    Submit Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-interpreter" title="Value Interpreter" class="md-nav__link">
+    Value Interpreter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-help" title="Further help" class="md-nav__link">
+    Further help
   </a>
   
 </li>
@@ -470,48 +552,83 @@
               
                 
                 
-                  <h1>Hit Counts and Delta Values</h1>
+                  <h1>Custom Leaderboards</h1>
                 
-                <p>When you are creating achievements you may want to have a little more flexibility with when your achievements trigger. While features are being added all the time, it's possible to make most achievements using the current feature set.</p>
-<h2 id="example-1">Example 1</h2>
-<p>Let's take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
-as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip (20) - Defeat 10 enemies without dropping your weapon</a> achievement. This relies on four conditions:</p>
-<ol>
-<li><code>8-bit 0xef33 = 1</code> (1 time)</li>
-<li><code>16-bit 0xef4e &gt; delta 16-bit 0xef4e</code> (10 times)</li>
-<li><code>Reset If: 8-bit 0xef37 != delta 0xef37</code></li>
-<li><code>Reset If: 8-bit 0xef33 != 1</code></li>
-</ol>
-<p>Detailing each condition:</p>
-<ol>
-<li><strong><code>8-bit 0xef33 = 1</code> (1 time)</strong></li>
-</ol>
-<p>This value is the flag to say whether the player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are saying that require the player to hold a weapon, at least once.</p>
-<p><strong>PLEASE NOTE</strong>: if a condition has a hit count, and reaches the number required, this condition is no longer tested. It is true and remains true, <strong>UNLESS</strong> you have a <code>Reset If</code>, which we will discuss below.</p>
-<ol>
-<li><strong><code>16-bit 0xef4e &gt; delta 16-bit 0xef4e</code> (10 times)</strong></li>
-</ol>
-<p>The memory value shown twice here is the number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times.</p>
-<p>Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one.</p>
-<p>There is a slight caviat with this... if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... in future there may be a way around this but for now it's a fairly close estimate to your number of kills.</p>
-<ol>
-<li><strong><code>Reset If: 8-bit 0xef37 != delta 0xef37</code></strong></li>
-</ol>
-<p>The <code>Reset If</code> special flag essentially tells the emulator, if I read a 'reset if' condition, and this condition is true, please reset ALL my hit counts on this achievement.</p>
-<p>For this condition, we are saying that we wish to reset all our progress, if the <strong>weapon type</strong> is different to the last known weapon type.</p>
-<ol>
-<li><strong><code>Reset If: 8-bit 0xef33 != 1</code></strong></li>
-</ol>
-<p>Here we are saying reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
-<h2 id="example-2">Example 2</h2>
-<p>Another notable example is the <a href="http://retroachievements.org/Game/16">Super Hang-On</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak (15) - Maintain at least 300kph for 10 seconds</a>. In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is 'that the speed is over 300'.</p>
-<ol>
-<li><code>16-bit 0x055a &gt;= 0x300</code> (600)</li>
-<li><code>Reset If 0x055a &lt; 0x300</code></li>
-</ol>
-<p>So once 600 frames or 10 seconds have passed, and the player's speed is above 300, the achievement will trigger.</p>
-<p>There are other more complicated approaches to hit counts that can be used to encourage the player through certain limits, but it'll be discussed in a further tutorial.</p>
-<p>So to sum up - hit counts are useful for when you wish to test that a condition has reached a certain value a certain number of times. Currently hit counts cannot be used across conditions (this is definitely something for the future though), so they must be used when a certain fact or condition reaches a certain value or memory address. Combine hit counts with <code>Reset If</code> and you'll be able to reset if the player hasn't reached a certain hit count, forcing them to start again from the beginning.</p>
+                <p>Currently Leaderboards can be edited by developers on the website. It's a pretty hefty interface and a difficult job to get a leaderboard working just right. It genuinely takes some care and attention to get a good leaderboard working, so in this doc we'll try to understand how it works.</p>
+<h2 id="overview">Overview</h2>
+<p>This is how a game's Leaderboard List looks like on the website:</p>
+<p><img alt="leaderboard_list" src="https://user-images.githubusercontent.com/8508804/33172797-ad9b2f22-d038-11e7-97fe-09116181ddfa.png" /></p>
+<p>In the center you can see every already made Leaderboard, and in the right column you can see the <strong>Code Notes</strong> for the game. The Code Notes are here to help with some conditions we'll see below.</p>
+<p>Here's a brief explanation of each field of a single Leaderboard:</p>
+<ul>
+<li><strong>Title</strong>: the leaderboard's title.</li>
+<li><strong>Description</strong>: the leaderboard's description.</li>
+<li><strong>Format</strong>: it can be <code>Score</code>, <code>Time (Frames)</code>, <code>Time (Milliseconds)</code> or <code>Value</code>. It's used to distinguish what sort of leaderboard this is (we'll go into this below).</li>
+<li><strong>"LowerIsBetter" checkbox</strong>: when checked, it means that a lower value is a better thing. It's usually the case for time based leaderboards, whereas a larger score generally is better.</li>
+<li><strong>Start</strong>: start conditions, aka <strong>STA</strong>.</li>
+<li><strong>Cancel</strong>: cancel conditions, aka <strong>CAN</strong>.</li>
+<li><strong>Submit</strong>: submit conditions, aka <strong>SUB</strong>.</li>
+<li><strong>Value</strong>: a value interpreter, aka <strong>VAL</strong>.</li>
+</ul>
+<p><strong>Note</strong>: A valid leaderboard MUST have all four of these conditions.</p>
+<p>Those last 4 fields are really important and <em>LOTS</em> of care must be taken over the entry of any characters into these strings. That's why they deserve a further explanation:</p>
+<p>The <strong>STA</strong> or <strong>Start</strong> condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. Once the <strong>STA</strong> is true, the game will activate the other three, and will keep processing them constantly.</p>
+<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel all progress towards the leaderboard submission. If however the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard entry will be submitted.</p>
+<p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box.</p>
+<h2 id="example">Example</h2>
+<p>The best place to start is to look at one of the existing leaderboards <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see that again:</p>
+<p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
+<p>The <strong>Title/Description</strong> fields are quite obvious.</p>
+<p>The <strong>Type</strong> is "Time (Frames)". In Sonic every 60 frames is 1 second, then we'll monitor the time using the frames.</p>
+<p>The <strong>Lower Is Better</strong> flag is checked, than the one who makes the shortest time will be the #1.</p>
+<p>Now we're going to break down the most important parts.</p>
+<h3 id="start-conditions">Start Conditions</h3>
+<p><strong>STA</strong>: <code>0xfe10=h0000_0xhf601=h0c_d0xhf601!=h0c_0xfff0=0</code></p>
+<ul>
+<li><code>0xfe10=h0000</code>: If RAM address 0xfe10 is equivalent to hex 0000,</li>
+<li><code>_</code>: AND,</li>
+<li><code>0xhf601=h0c</code>: If 8-bit RAM address 0xf601 is equivalent to hex 0c,</li>
+<li><code>_</code>: AND,</li>
+<li><code>d0xhf601!=h0c</code>: If the previous 8-bit RAM address 0xf601 is NOT equivalent to hex 0c,</li>
+<li><code>_</code>: AND,</li>
+<li><code>0xfff0=0</code> If RAM address 0xfff0 is equivalent to 0.</li>
+</ul>
+<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory:</p>
+<ul>
+<li>0xfe10 is the level, and is expected to be 0 (the first level).</li>
+<li>0xf601 is an 8-bit memory address, and we use the prefix '0xh' instead of '0x' to signify this. 0xf601 is the screen mode. The second and third parts of this start statement are saying 'the current mode should be 'ingame' (0c), and the previous mode should NOT be 'ingame'. Note that 'd' represents delta, or "the previous frame's value". In other words, trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
+<li>Finally we also expect 0xfff0 to be equivalent to 0, because 0xfff0 is the demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
+</ul>
+<h3 id="cancel-conditions">Cancel Conditions</h3>
+<p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
+<ul>
+<li>0xfe13 is the number of lives.</li>
+</ul>
+<p>The cancel section checks if the player's LIVES counter ever becomes lower. Literally, it says "Cancel if the CURRENT value at 0xfe13 is less than the PREVIOUS value at 0xfe13". We want to do this because you could reach the final checkpoint and run out of time, resetting your timer to 0:00. We don't want to allow this, because it's not the correct way of completing the level. So if the player dies, we reset their leaderboard progress.</p>
+<h3 id="submit-conditions">Submit Conditions</h3>
+<p><strong>SUB</strong>: <code>0xf7cc!=0_d0xf7cc=0</code></p>
+<ul>
+<li>0xf7cc is the endlevel flag, non-interactive.</li>
+</ul>
+<p>The submit section checks if the current frame has the 'endlevel' flag set to true (or <code>!=0</code>, 'nonzero'), and the previous frame (delta) has it set to false (or <code>=0</code>, 'zero'). This suggests that the player has reached the end of the level, and has proven to be a fairly sturdy benchmark.</p>
+<p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
+<h3 id="value-interpreter">Value Interpreter</h3>
+<p><strong>VAL</strong>: <code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
+<p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an ingame popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
+<p>The value condition is special in a few ways. It is evaluated constantly and shown on-screen all the time when the leaderboard is active. It doesn't work like the other conditions, it expects addresses in the following way:</p>
+<p><code>address*modifier</code> (address times modifier)</p>
+<p>and it uses the <code>_</code> underscore operator as a 'plus'. The <code>*</code> asterisk signifies 'multiply', so in the value</p>
+<p><code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
+<p>represents:</p>
+<p>8-bit 0xfe24 times 1, PLUS
+8-bit 0xfe25 times 60, PLUS
+8-bit 0xfe22 times 3600</p>
+<p>The reason for this is that the values in each of these addresses signifies frames, seconds, and minutes respectively. When we add these values together, we get a grand total in frames that we submit to the database.</p>
+<p>Remember that 'Format' field that can be either <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> or <strong>Value</strong>? <strong>Time (Frames)</strong> is the most common one, and represents 'frames'. <strong>Time (Milliseconds)</strong> expects a value that we can convert directly into millisecs (Super Mario Kart uses this). However to convert a value in frames into a human-readible format, we should divide the value by 60 to get an accurate representation of seconds, and a value in millisecs should be divided by 100 to get the number of seconds. This is used both on the website and in the app to display the value properly, and is important to distinguish so we can be sure we get the most accurate value out of the emulator, by using whatever format they use to record time.</p>
+<h2 id="further-help">Further help</h2>
+<p>There are unfortunately <em>MANY</em> ways to get this process wrong, so if you are having any trouble feel free to ask for help in our <a href="https://discord.gg/TdfC3r7">Discord server</a>.</p>
+<p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard.</p>
+<p>Please remember that these files are pulled directly into someone's game if they decide to play it, and a badly formed memory address or string could cause their emulator to crash, so please test your leaderboard code!</p>
                 
                   
                 
@@ -530,7 +647,7 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Beginner-Tips/" title="Beginner Tips" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -539,19 +656,19 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Beginner Tips
+                Console Specific Tips
               </span>
             </div>
           </a>
         
         
-          <a href="../Badge-Creation/" title="Badge Creation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Badge Creation
+                About
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
