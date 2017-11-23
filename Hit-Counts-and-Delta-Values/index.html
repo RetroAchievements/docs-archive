@@ -462,8 +462,8 @@
                 
                 <p>When you are creating achievements you may want to have a little more flexibility with when your achievements trigger. While features are being added all the time, it's possible to make most achievements using the current feature set.</p>
 <h2 id="example-1">Example 1</h2>
-<p>I'll take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
-as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip (20)</a> achievement. This relies on four conditions:</p>
+<p>Let's take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
+as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip (20) - Defeat 10 enemies without dropping your weapon</a> achievement. This relies on four conditions:</p>
 <ol>
 <li><code>8-bit 0xef33 = 1</code> (1 time)</li>
 <li><code>16-bit 0xef4e &gt; delta 16-bit 0xef4e</code> (10 times)</li>
@@ -481,7 +481,7 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
 </ol>
 <p>The memory value shown twice here is the number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times.</p>
 <p>Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one.</p>
-<p>There is a slight caviat with this... if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than I would have liked... in future there may be a way around this but for now it's a fairly close estimate to your number of kills.</p>
+<p>There is a slight caviat with this... if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... in future there may be a way around this but for now it's a fairly close estimate to your number of kills.</p>
 <ol>
 <li><strong><code>Reset If: 8-bit 0xef37 != delta 0xef37</code></strong></li>
 </ol>
@@ -492,7 +492,7 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
 </ol>
 <p>Here we are saying reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
 <h2 id="example-2">Example 2</h2>
-<p>Another notable example is <a href="http://retroachievements.org/Achievement/71">Speed Freak (15)</a>. In this achievement, I'm saying that I wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact I'm looking for is 'that the speed is over 300'.</p>
+<p>Another notable example is the <a href="http://retroachievements.org/Game/16">Super Hang-On</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak (15) - Maintain at least 300kph for 10 seconds</a>. In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is 'that the speed is over 300'.</p>
 <ol>
 <li><code>16-bit 0x055a &gt;= 0x300</code> (600)</li>
 <li><code>Reset If 0x055a &lt; 0x300</code></li>

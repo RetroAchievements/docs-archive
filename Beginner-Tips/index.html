@@ -400,7 +400,22 @@
 <p>Avoid using only one condition as the achievement will most likely pop at the wrong time.</p>
 </li>
 <li>
+<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to add <code>mode != demo</code> or something similar in your achievements.</p>
+</li>
+<li>
+<p>You can input values in the memory viewer to see if it affects the game.</p>
+</li>
+<li>
+<p>Even if something is visibly decreasing in-game, like health, the value isn't necessarily decreasing. It's possible for it to be increasing, so since it's uncommon for you to know for sure, you should just filter <code>!=</code> and <code>==</code></p>
+</li>
+<li>
+<p>Try to avoid achievement spam. If a game has 100 levels, do not make an achievement for each level. Do every 10 or so.</p>
+</li>
+<li>
 <p>Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+</li>
+<li>
+<p>Get as creative as possible with achievements. "Beat X without using/doing Y" "Beat X in 5 seconds" "3 heart run"</p>
 </li>
 <li>
 <p>Choose NTSC (U) ROMs if available, because 60 FPS is a smoother experience. (E) is PAL(50 FPS), (J) is also NTSC, but is only used if it was a Japan-exclusive game.</p>
@@ -439,28 +454,13 @@
 <p>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</p>
 </li>
 <li>
-<p>You can input values in the memory viewer to see if it affects the game.</p>
-</li>
-<li>
-<p>Even if something is visibly decreasing in-game, like health, the value isn't necessarily decreasing. It's possible for it to be increasing, so since it's uncommon for you to know for sure, you should just filter <code>!=</code> and <code>==</code></p>
-</li>
-<li>
 <p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting(<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually "0", Stage 1 is usually value "0", Stage 2 is usually value "1" depending on the type of game.</p>
-</li>
-<li>
-<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to add <code>mode != demo</code> or something similar in your achievements.</p>
 </li>
 <li>
 <p>Alt groups (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. See the forum thread for an image explanation of this.</p>
 </li>
 <li>
 <p>There's a 100 achievement cap, 400 point cap, and a character cap for single achievements(try not to put 50+ conditions in one achievement).</p>
-</li>
-<li>
-<p>Try to avoid achievement spam. If a game has 100 levels, do not make an achievement for each level. Do every 10 or so.</p>
-</li>
-<li>
-<p>Get as creative as possible with achievements. "Beat X without using/doing Y" "Beat X in 5 seconds" "3 heart run"</p>
 </li>
 <li>
 <p>Do not make achievements requiring glitches. Exploits like using a falling goomba in SMB1 to cross a large gap, or getting infinite lives in SMB3 by bouncing off the goombas coming out of the pipe are allowed, but straight-up glitches aren't.</p>
