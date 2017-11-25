@@ -34,7 +34,7 @@
     
     
       
-        <title>Custom Leaderboards - RetroAchievements docs</title>
+        <title>Leaderboards - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Custom Leaderboards
+            Leaderboards
           
         </span>
       </div>
@@ -239,6 +239,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct/" title="Users Code of Conduct" class="md-nav__link">
+      Users Code of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../FAQ/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -289,6 +301,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-nav__link">
+      Hit Counts and Delta Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
       Developer Toolset
     </a>
@@ -303,18 +327,6 @@
   <li class="md-nav__item">
     <a href="../Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
       Beginner Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-nav__link">
-      Hit Counts and Delta Values
     </a>
   </li>
 
@@ -368,11 +380,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Custom Leaderboards
+        Leaderboards
       </label>
     
-    <a href="./" title="Custom Leaderboards" class="md-nav__link md-nav__link--active">
-      Custom Leaderboards
+    <a href="./" title="Leaderboards" class="md-nav__link md-nav__link--active">
+      Leaderboards
     </a>
     
       
@@ -444,6 +456,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
+      Rich Presence
+    </a>
   </li>
 
         
@@ -552,7 +576,7 @@
               
                 
                 
-                  <h1>Custom Leaderboards</h1>
+                  <h1>Leaderboards</h1>
                 
                 <p>Currently Leaderboards can be edited by developers on the website. It's a pretty hefty interface and a difficult job to get a leaderboard working just right. It genuinely takes some care and attention to get a good leaderboard working, so in this doc we'll try to understand how it works.</p>
 <h2 id="overview">Overview</h2>
@@ -576,11 +600,11 @@
 <p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel all progress towards the leaderboard submission. If however the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard entry will be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box.</p>
 <h2 id="example">Example</h2>
-<p>The best place to start is to look at one of the existing leaderboards <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see that again:</p>
+<p>The best place to start is to look at one of the existing leaderboards <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
 <p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
 <p>The <strong>Title/Description</strong> fields are quite obvious.</p>
 <p>The <strong>Type</strong> is "Time (Frames)". In Sonic every 60 frames is 1 second, then we'll monitor the time using the frames.</p>
-<p>The <strong>Lower Is Better</strong> flag is checked, than the one who makes the shortest time will be the #1.</p>
+<p>The <strong>Lower Is Better</strong> flag is checked, then the one who makes the shortest time will be the #1.</p>
 <p>Now we're going to break down the most important parts.</p>
 <h3 id="start-conditions">Start Conditions</h3>
 <p><strong>STA</strong>: <code>0xfe10=h0000_0xhf601=h0c_d0xhf601!=h0c_0xfff0=0</code></p>
@@ -593,7 +617,7 @@
 <li><code>_</code>: AND,</li>
 <li><code>0xfff0=0</code> If RAM address 0xfff0 is equivalent to 0.</li>
 </ul>
-<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory:</p>
+<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory. In our example we have:</p>
 <ul>
 <li>0xfe10 is the level, and is expected to be 0 (the first level).</li>
 <li>0xf601 is an 8-bit memory address, and we use the prefix '0xh' instead of '0x' to signify this. 0xf601 is the screen mode. The second and third parts of this start statement are saying 'the current mode should be 'ingame' (0c), and the previous mode should NOT be 'ingame'. Note that 'd' represents delta, or "the previous frame's value". In other words, trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
@@ -662,13 +686,13 @@
           </a>
         
         
-          <a href="../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Rich-Presence/" title="Rich Presence" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                About
+                Rich Presence
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

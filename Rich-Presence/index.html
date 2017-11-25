@@ -34,7 +34,7 @@
     
     
       
-        <title>About - RetroAchievements docs</title>
+        <title>Rich Presence - RetroAchievements docs</title>
       
     
     
@@ -93,8 +93,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Developer docs
+                </span>
+              
             
-            About
+            Rich Presence
           
         </span>
       </div>
@@ -262,10 +266,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Developer docs
@@ -377,11 +383,78 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Rich Presence
+      </label>
+    
+    <a href="./" title="Rich Presence" class="md-nav__link md-nav__link--active">
       Rich Presence
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookups" title="Lookups" class="md-nav__link">
+    Lookups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" title="Limits" class="md-nav__link">
+    Limits
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -394,18 +467,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="About" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../About/" title="About" class="md-nav__link">
       About
     </a>
-    
   </li>
 
     
@@ -416,24 +482,156 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookups" title="Lookups" class="md-nav__link">
+    Lookups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" title="Limits" class="md-nav__link">
+    Limits
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>About</h1>
+                  <h1>Rich Presence</h1>
                 
-                <p>This project is an attempt to put together the guides, tutorials, tips and tricks about RetroAchievements development.</p>
-<p>Before this project started the knowledge about cheevos development was scattered in several RetroAchievements.org forum posts, making the learning experience harder for a novice developer. In fact most part of what we have here were originally taken from those forum posts, but ordered in a somewhat more coherent sequence.</p>
-<p>The <strong>RetroAchievements Documentation Project</strong> is divided into two parts:</p>
-<ol>
-<li><strong><a href="https://github.com/RetroAchievements/docs/wiki/">RetroAchievements wiki</a></strong></li>
-<li><strong><a href="https://retroachievements.github.io/docs/">RetroAchievements docs</a></strong></li>
-</ol>
-<p>The wiki is where these documents are created and edited. Anyone (with a github account) is able to edit the wiki's content. Then, if you have something to share, please edit the wiki!</p>
-<p>The <a href="https://retroachievements.github.io/docs/">RetroAchievements docs</a> website has (almost) the same content as the wiki, but with a more pleasant look. The content of this website is generated by its maintainers using the wiki's content as input.</p>
-<p><strong>When a change is made in the wiki this change is NOT instantaneously reflected in the docs.</strong> The converstion is performed by a maintainer from time to time.</p>
+                <h2 id="introduction">Introduction</h2>
+<p>Rich Presence is a feature in Xbox Live/PSN that gives you a very, very brief overview of what the player is currently doing in their game. Normally speaking it's only visible to friends of this player as well, and is a short summary containing the level or mode the player is currently on. </p>
+<p>We have a similar feature to RetroAchievements, but there are a number of differences. The emulator will report back to the website every 600 seconds. Similarly, every 600 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all online players. If there isn't a rich presence script given, the text will be 'earning achievements' or 'developing achievements' if the memory dialog is open and visible. </p>
+<p>Please note - the data will be about 10-minutes out of date. Rich Presence isn't designed to give you an up-to-the-second reflection of the players status. It really is just a simple overview, which depending on the game would be a level or map name, whether you are ingame or not, what game type you're playing etc. Generally if the information is likely to change rapidly, more than once a minute (i.e. health) it's generally not a good candidate for Rich Presence data. However there are exceptions: things like 'Score' which give you a rough guide to how long the player has been playing are an exception. </p>
+<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will now also request a Rich Presence script for the currently loaded ROM. </p>
+<p>The Rich Presence scripts for each game can be found under the development section on each game's page: </p>
+<p><img alt="Dev click" src="https://i.imgur.com/hkkpvhr.png" /></p>
+<p><img alt="RP shown" src="https://i.imgur.com/pkLpIjU.png" /></p>
+<h2 id="example">Example</h2>
+<pre><code>Lookup:LevelName  
+0x0000=Green Hill Zone Act 1  
+0x0001=Green Hill Zone Act 2  
+0x0002=Green Hill Zone Act 3  
+0x0100=Labyrinth Zone Act 1  
+0x0101=Labyrinth Zone Act 2  
+0x0102=Labyrinth Zone Act 3  
+0x0200=Marble Zone Act 1  
+0x0201=Marble Zone Act 2  
+0x0202=Marble Zone Act 3  
+0x0300=Star Light Zone Act 1  
+0x0301=Star Light Zone Act 2  
+0x0302=Star Light Zone Act 3  
+0x0400=Spring Yard Zone Act 1  
+0x0401=Spring Yard Zone Act 2  
+0x0402=Spring Yard Zone Act 3  
+0x0500=Scrap Brain Zone Act 1  
+0x0501=Scrap Brain Zone Act 2  
+0x0103=Scrap Brain Zone Act 3  
+0x0502=Final Zone  
+
+Format:Score 
+FormatType=VALUE 
+
+Format:Lives 
+FormatType=VALUE 
+
+Display: 
+@LevelName(0xfe10), @Score(0xfe28*10_0xfe29*1000_0xfe26*100000) points, @Lives(0xhfe13) lives
+</code></pre>
+
+<p>It breaks down into a series of Lookup objects, Format objects and one Display object. </p>
+<h2 id="lookups">Lookups</h2>
+<p>Lookups are defined like this: </p>
+<pre><code>Lookup:NameOfLookup 
+Value1=Text When This Value 
+Value2=Text When Another Value 
+...
+</code></pre>
+
+<p>We give the Lookup a value, consisting of a series of memory addresses and modifiers. More about this later. </p>
+<h2 id="format">Format</h2>
+<p>Format tables are defined like this:</p>
+<pre><code>Format:Score 
+FormatType=VALUE 
+</code></pre>
+
+<p>Begin with <code>Format:</code>, then the name of the format type. On the next line, give <code>FormatType=</code>, then one of the following: <code>VALUE</code>, <code>SCORE</code> (or <code>POINTS</code>), <code>TIME</code> (or <code>FRAMES</code>), <code>SECS</code>, <code>MILLISECS</code>, or <code>OTHER</code>. </p>
+<ul>
+<li><code>VALUE</code>: generic value, no leading zeroes. </li>
+<li><code>SCORE</code>/<code>POINTS</code>: "000130 points" </li>
+<li><code>TIME</code>/<code>FRAMES</code>: value describes the number of frames elapsed, and will be turned into 00:00.00 </li>
+<li><code>SECS</code>: value describes the number of seconds elapsed, and will be turned into 00:00 </li>
+<li><code>MILLISECS</code>: value describes the number of millisecs elapsed, and will be turned into 00:00.00 </li>
+</ul>
+<h2 id="display">Display</h2>
+<p>Finally, display will be a string that gets shown in the 'Active Players' box on the front page. It refers to the previously defined Lookup and Format objects using a single '@'. It then specifies a name for the lookup or format (case sensitive!), and immediately after, in brackets, a series of memory values specifying what to send to that lookup or format object. I.e. </p>
+<p><code>@LevelName(0xfe10)</code> </p>
+<p>This means use the Lookup or Format that's called <code>LevelName</code>, and give it whatever value is in 0xfe10. </p>
+<p><code>@Score(0xfe28*10_0xfe29*1000_0xfe26*100000) points</code> </p>
+<p>This means use the Lookup or Format <code>Score</code>, and give it the sum of: 
+- 0xfe28 times 10, ADD 
+- 0xfe29 times 1000, ADD 
+- 0xfe26 times 100000 </p>
+<p>This is similar formatting to the leaderboards formatting.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li>2500 character limit for script</li>
+<li>100 character limit for what is displayed</li>
+<li>Unicode characters are allowed</li>
+</ul>
                 
                   
                 
@@ -452,7 +650,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Rich-Presence/" title="Rich Presence" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Leaderboards/" title="Leaderboards" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -461,11 +659,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Rich Presence
+                Leaderboards
               </span>
             </div>
           </a>
         
+        
+          <a href="../About/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
