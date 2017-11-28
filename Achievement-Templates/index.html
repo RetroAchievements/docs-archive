@@ -593,7 +593,6 @@
 <th>Type</th>
 <th>Mem/Val</th>
 <th>Hits</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -605,7 +604,6 @@
 <td>Value</td>
 <td>0x_N</td>
 <td>(1)</td>
-<td>entered level <code>N</code> at least one time</td>
 </tr>
 <tr>
 <td>2</td>
@@ -615,7 +613,6 @@
 <td>Value</td>
 <td>0x_N+1</td>
 <td></td>
-<td>currently at level <code>N+1</code></td>
 </tr>
 <tr>
 <td>3</td>
@@ -625,7 +622,6 @@
 <td>Delta</td>
 <td>0x_LEVEL</td>
 <td></td>
-<td>the level has been increased</td>
 </tr>
 <tr>
 <td>4</td>
@@ -635,10 +631,16 @@
 <td>Value</td>
 <td>0x_TITLE</td>
 <td></td>
-<td>reset the hit counter when back to title screen</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Conditions</strong></p>
+<ol>
+<li>on level <code>N</code> at least one time</li>
+<li>currently at level <code>N+1</code></li>
+<li>the level has been increased</li>
+<li>reset the hit counter when back to title screen</li>
+</ol>
 <p>The value <strong>0x_TITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
 <p>Here is an example of game flow that could make the achievement trigger at a wrong time if it wasn't for that ReseIf:</p>
 <ol>
@@ -667,7 +669,6 @@
 <th>Type</th>
 <th>Mem/Val</th>
 <th>Hits</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -679,7 +680,6 @@
 <td>Value</td>
 <td>0x_N</td>
 <td>(1)</td>
-<td>entered level <code>N</code> at least one time</td>
 </tr>
 <tr>
 <td>2</td>
@@ -689,7 +689,6 @@
 <td>Value</td>
 <td>0x_N+1</td>
 <td></td>
-<td>currently at level <code>N+1</code></td>
 </tr>
 <tr>
 <td>3</td>
@@ -699,7 +698,6 @@
 <td>Delta</td>
 <td>0x_LEVEL</td>
 <td></td>
-<td>the level has been increased</td>
 </tr>
 <tr>
 <td>4</td>
@@ -709,7 +707,6 @@
 <td>Value</td>
 <td>0x_TITLE</td>
 <td></td>
-<td>reset the hit counter when back to title screen</td>
 </tr>
 <tr>
 <td>5</td>
@@ -719,11 +716,15 @@
 <td>Value</td>
 <td>0x_T</td>
 <td></td>
-<td>time is greater than <code>T</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Keep in mind that in  to knowing how the time behaves in game you also need to research how it behaves in memory.</strong></p>
+<p><strong>Conditions</strong></p>
+<p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
+<ol>
+<li>time is greater than <code>T</code></li>
+</ol>
+<p><strong>Keep in mind that besides knowing how the time behaves in game you also need to research how it behaves in memory.</strong></p>
 <h2 id="finish-level-n-without-dying">Finish Level N without Dying</h2>
 <table>
 <thead>
@@ -735,7 +736,6 @@
 <th>Type</th>
 <th>Mem/Val</th>
 <th>Hits</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -747,7 +747,6 @@
 <td>Value</td>
 <td>0x_N</td>
 <td>(1)</td>
-<td>entered level <code>N</code> at least one time</td>
 </tr>
 <tr>
 <td>2</td>
@@ -757,7 +756,6 @@
 <td>Value</td>
 <td>0x_N+1</td>
 <td></td>
-<td>currently at level <code>N+1</code></td>
 </tr>
 <tr>
 <td>3</td>
@@ -767,7 +765,6 @@
 <td>Delta</td>
 <td>0x_LEVEL</td>
 <td></td>
-<td>the level has been increased</td>
 </tr>
 <tr>
 <td>4</td>
@@ -777,7 +774,6 @@
 <td>Value</td>
 <td>0x_TITLE</td>
 <td></td>
-<td>reset the hit counter when back to title screen</td>
 </tr>
 <tr>
 <td>5</td>
@@ -787,10 +783,14 @@
 <td>Delta</td>
 <td>0x_LIFE</td>
 <td></td>
-<td>life decreased</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Conditions</strong></p>
+<p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
+<ol>
+<li>reset hit cout if life decreased</li>
+</ol>
 <h2 id="finish-level-n-with-item">Finish Level N with Item</h2>
 <table>
 <thead>
@@ -802,7 +802,6 @@
 <th>Type</th>
 <th>Mem/Val</th>
 <th>Hits</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -814,7 +813,6 @@
 <td>Value</td>
 <td>0x_N</td>
 <td>(1)</td>
-<td>entered level <code>N</code> at least one time</td>
 </tr>
 <tr>
 <td>2</td>
@@ -824,7 +822,6 @@
 <td>Value</td>
 <td>0x_N+1</td>
 <td></td>
-<td>currently at level <code>N+1</code></td>
 </tr>
 <tr>
 <td>3</td>
@@ -834,7 +831,6 @@
 <td>Delta</td>
 <td>0x_LEVEL</td>
 <td></td>
-<td>the level has been increased</td>
 </tr>
 <tr>
 <td>4</td>
@@ -844,7 +840,6 @@
 <td>Value</td>
 <td>0x_TITLE</td>
 <td></td>
-<td>reset the hit counter when back to title screen</td>
 </tr>
 <tr>
 <td>5</td>
@@ -854,10 +849,14 @@
 <td>Value</td>
 <td>0x_TRUE</td>
 <td></td>
-<td>the player have the item</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Conditions</strong></p>
+<p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
+<ol>
+<li>the player have the item</li>
+</ol>
 <h2 id="finish-level-n-without-using-weapon">Finish Level N without using Weapon</h2>
 <table>
 <thead>
@@ -869,7 +868,6 @@
 <th>Type</th>
 <th>Mem/Val</th>
 <th>Hits</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -881,7 +879,6 @@
 <td>Value</td>
 <td>0x_N</td>
 <td>(1)</td>
-<td>entered level <code>N</code> at least one time</td>
 </tr>
 <tr>
 <td>2</td>
@@ -891,7 +888,6 @@
 <td>Value</td>
 <td>0x_N+1</td>
 <td></td>
-<td>currently at level <code>N+1</code></td>
 </tr>
 <tr>
 <td>3</td>
@@ -901,7 +897,6 @@
 <td>Delta</td>
 <td>0x_LEVEL</td>
 <td></td>
-<td>the level has been increased</td>
 </tr>
 <tr>
 <td>4</td>
@@ -911,7 +906,6 @@
 <td>Value</td>
 <td>0x_TITLE</td>
 <td></td>
-<td>reset the hit counter when back to title screen</td>
 </tr>
 <tr>
 <td>5</td>
@@ -921,10 +915,14 @@
 <td>Value</td>
 <td>0x_TRUE</td>
 <td></td>
-<td>Weapon used</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Conditions</strong></p>
+<p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
+<ol>
+<li>reset hit count if the weapon was used</li>
+</ol>
                 
                   
                 
