@@ -34,7 +34,7 @@
     
     
       
-        <title>Achievement Creation - RetroAchievements docs</title>
+        <title>Getting Started as an Achievement Developer - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Achievement Creation
+            Getting Started as an Achievement Developer
           
         </span>
       </div>
@@ -296,11 +296,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Achievement Creation
+        Getting Started as an Achievement Developer
       </label>
     
-    <a href="./" title="Achievement Creation" class="md-nav__link md-nav__link--active">
-      Achievement Creation
+    <a href="./" title="Getting Started as an Achievement Developer" class="md-nav__link md-nav__link--active">
+      Getting Started as an Achievement Developer
     </a>
     
       
@@ -375,8 +375,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-nav__link">
-      Hit Counts and Delta Values
+    <a href="../Achievement-Logic-Features/" title="Achievement Logic Features" class="md-nav__link">
+      Achievement Logic Features
     </a>
   </li>
 
@@ -387,8 +387,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
-      Developer Toolset
+    <a href="../Real-Examples/" title="Real Examples" class="md-nav__link">
+      Real Examples
     </a>
   </li>
 
@@ -399,32 +399,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
-      Beginner Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
-      Badge Creation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Set-Creation-Guidelines/" title="Set Creation Guidelines" class="md-nav__link">
-      Set Creation Guidelines
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
     </a>
   </li>
 
@@ -437,6 +413,42 @@
   <li class="md-nav__item">
     <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
       Console Specific Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
+      Difficulty Scale and Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
+      Badge Creation
     </a>
   </li>
 
@@ -461,6 +473,18 @@
   <li class="md-nav__item">
     <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
       Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
+      Set Development Roadmap
     </a>
   </li>
 
@@ -564,7 +588,7 @@
               
                 
                 
-                  <h1>Achievement Creation</h1>
+                  <h1>Getting Started as an Achievement Developer</h1>
                 
                 <p><strong>Welcome to the world of Achievement Creation!</strong></p>
 <h2 id="first-steps">First Steps</h2>
@@ -620,13 +644,13 @@
 <p>Clicking this button will add several default values to the Requirements list. These defaults just ensure that something relatively sensible is added to the list. For now, ignoring the field 'Special?'. When we clicked create, the default memory value will be whatever value you last left in the memory dialog.</p>
 <p>Next we will change these values to the following:</p>
 <ul>
-<li>Size: <code>16-bit</code></li>
-<li>Memory: <code>0xfe20</code></li>
-<li>Cmp: <code>&gt;=</code> - this is the comparison to make. We could have any comparison here, but it's sensible to have "greater than or equal to". This is important because if we get 10 rings then a super ring box to have 20, we would miss out having <em>exactly</em> 15 rings.</li>
-<li>Type: <code>Value</code> - we're comparing this memory value to a fixed value: 15</li>
-<li>Size: <code>Empty</code> - this is only relevant when comparing memory to memory</li>
-<li>Mem/Val: <code>15</code> - the number of rings required: the value we are comparing the memory to</li>
-<li>Hit Count: <code>0</code> - ignore this for now, its useful for when something needs to happen a certain number of times</li>
+<li><strong>Size</strong>: <code>16-bit</code></li>
+<li><strong>Memory</strong>: <code>0xfe20</code></li>
+<li><strong>Cmp</strong>: <code>&gt;=</code> - this is the comparison to make. We could have any comparison here, but it's sensible to have "greater than or equal to". This is important because if we get 10 rings then a super ring box to have 20, we would miss out having <em>exactly</em> 15 rings.</li>
+<li><strong>Type</strong>: <code>Value</code> - we're comparing this memory value to a fixed value: 15</li>
+<li><strong>Size</strong>: <code>Empty</code> - this is only relevant when comparing memory to memory</li>
+<li><strong>Mem/Val</strong>: <code>15</code> - the number of rings required: the value we are comparing the memory to</li>
+<li><strong>Hit Count</strong>: <code>0</code> - ignore this for now, its useful for when something needs to happen a certain number of times</li>
 </ul>
 <p>With that set, we don't have any more conditions to add, so we return to the <strong>Achievements Dialog</strong>. To be safe, we should save our progress by hitting <strong>Save Local</strong>! This saves everything to file locally to ensure that we won't lose any progress. </p>
 <h2 id="testing-the-achievement">Testing the Achievement</h2>
@@ -676,13 +700,13 @@
           </a>
         
         
-          <a href="../Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Achievement-Logic-Features/" title="Achievement Logic Features" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Hit Counts and Delta Values
+                Achievement Logic Features
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

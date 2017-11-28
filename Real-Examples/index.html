@@ -34,7 +34,7 @@
     
     
       
-        <title>Hit Counts and Delta Values - RetroAchievements docs</title>
+        <title>Real Examples - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Hit Counts and Delta Values
+            Real Examples
           
         </span>
       </div>
@@ -289,8 +289,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Achievement-Creation/" title="Achievement Creation" class="md-nav__link">
-      Achievement Creation
+    <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
+      Getting Started as an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features/" title="Achievement Logic Features" class="md-nav__link">
+      Achievement Logic Features
     </a>
   </li>
 
@@ -308,11 +320,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Hit Counts and Delta Values
+        Real Examples
       </label>
     
-    <a href="./" title="Hit Counts and Delta Values" class="md-nav__link md-nav__link--active">
-      Hit Counts and Delta Values
+    <a href="./" title="Real Examples" class="md-nav__link md-nav__link--active">
+      Real Examples
     </a>
     
       
@@ -324,15 +336,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-1" title="Example 1" class="md-nav__link">
-    Example 1
+  <a href="#using-resetif" title="Using ResetIf" class="md-nav__link">
+    Using ResetIf
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-2" title="Example 2" class="md-nav__link">
-    Example 2
+  <a href="#delta-values-and-resetif" title="Delta Values and ResetIf" class="md-nav__link">
+    Delta Values and ResetIf
   </a>
   
 </li>
@@ -352,44 +364,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
-      Developer Toolset
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
-      Beginner Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
-      Badge Creation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Set-Creation-Guidelines/" title="Set Creation Guidelines" class="md-nav__link">
-      Set Creation Guidelines
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
     </a>
   </li>
 
@@ -402,6 +378,42 @@
   <li class="md-nav__item">
     <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
       Console Specific Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
+      Difficulty Scale and Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
+      Badge Creation
     </a>
   </li>
 
@@ -426,6 +438,18 @@
   <li class="md-nav__item">
     <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
       Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
+      Set Development Roadmap
     </a>
   </li>
 
@@ -466,15 +490,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-1" title="Example 1" class="md-nav__link">
-    Example 1
+  <a href="#using-resetif" title="Using ResetIf" class="md-nav__link">
+    Using ResetIf
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-2" title="Example 2" class="md-nav__link">
-    Example 2
+  <a href="#delta-values-and-resetif" title="Delta Values and ResetIf" class="md-nav__link">
+    Delta Values and ResetIf
   </a>
   
 </li>
@@ -494,48 +518,54 @@
               
                 
                 
-                  <h1>Hit Counts and Delta Values</h1>
+                  <h1>Real Examples</h1>
                 
-                <p>When you are creating achievements you may want to have a little more flexibility with when your achievements trigger. While features are being added all the time, it's possible to make most achievements using the current feature set.</p>
-<h2 id="example-1">Example 1</h2>
+                <h2 id="using-resetif">Using <code>ResetIf</code></h2>
+<p>Let's see how <a href="http://retroachievements.org/Game/16">Super Hang-On</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak (15) - Maintain at least 300kph for 10 seconds</a> looks like in Achievement Editor dialog:</p>
+<p><img alt="speedfreak-example" src="https://user-images.githubusercontent.com/8508804/33312584-77f7fb0e-d40f-11e7-9daf-827c0f8d7dc6.png" /></p>
+<p>In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is "speed is over 300". Also, we want the player to keep the speed above 300 without pausing the game.</p>
+<p><strong>Addresses</strong></p>
+<ul>
+<li><code>0x0055a</code>: is the speed.</li>
+<li><code>0x0c757</code>: is 0x00 when the game is unpaused.</li>
+</ul>
+<p><strong>Conditions</strong></p>
+<ol>
+<li>
+<p>player's speed is above 300 for 600 frames (or 10 seconds have passed).</p>
+</li>
+<li>
+<p>reset the hit counter if speed is under 300.</p>
+</li>
+<li>
+<p>reset the hit counter if the player pause the game.</p>
+</li>
+</ol>
+<h2 id="delta-values-and-resetif">Delta Values and <code>ResetIf</code></h2>
 <p>Let's take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
 as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip (20) - Defeat 10 enemies without dropping your weapon</a> achievement. This relies on four conditions:</p>
+<p><img alt="steelgrip-example" src="https://user-images.githubusercontent.com/8508804/33313210-32f5451e-d411-11e7-8042-2b9007a5cffb.png" /></p>
+<p><strong>Addresses</strong></p>
+<ul>
+<li><code>0xef33</code>: holding weapon </li>
+<li><code>0xef37</code>: weapon type</li>
+<li><code>0xef4e</code>: number of KOs (player 1)</li>
+</ul>
+<p><strong>Conditions</strong></p>
 <ol>
-<li><code>8-bit 0xef33 = 1 (1 time)</code></li>
-<li><code>16-bit 0xef4e &gt; delta 16-bit 0xef4e (10 times)</code></li>
-<li><code>Reset If: 8-bit 0xef37 != delta 0xef37</code></li>
-<li><code>Reset If: 8-bit 0xef33 != 1</code></li>
+<li>
+<p>the player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are saying that require the player to hold a weapon, at least once.</p>
+</li>
+<li>
+<p>number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times. Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one. <strong>LIMITATION</strong>: if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... it's not so accurate but it's a fairly close estimate to your number of kills.</p>
+</li>
+<li>
+<p>reset all our progress, if the <strong>weapon type</strong> is different to the last known weapon type.</p>
+</li>
+<li>
+<p>reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
+</li>
 </ol>
-<p>Detailing each condition:</p>
-<ol>
-<li><strong><code>8-bit 0xef33 = 1</code> (1 time)</strong></li>
-</ol>
-<p>This value is the flag to say whether the player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are saying that require the player to hold a weapon, at least once.</p>
-<p><strong>PLEASE NOTE</strong>: if a condition has a hit count, and reaches the number required, this condition is no longer tested. It is true and remains true, <strong>UNLESS</strong> you have a <code>Reset If</code>, which we will discuss below.</p>
-<ol>
-<li><strong><code>16-bit 0xef4e &gt; delta 16-bit 0xef4e</code> (10 times)</strong></li>
-</ol>
-<p>The memory value shown twice here is the number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times.</p>
-<p>Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one.</p>
-<p>There is a slight caviat with this... if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... in future there may be a way around this but for now it's a fairly close estimate to your number of kills.</p>
-<ol>
-<li><strong><code>Reset If: 8-bit 0xef37 != delta 0xef37</code></strong></li>
-</ol>
-<p>The <code>Reset If</code> special flag essentially tells the emulator, if I read a 'reset if' condition, and this condition is true, please reset ALL my hit counts on this achievement.</p>
-<p>For this condition, we are saying that we wish to reset all our progress, if the <strong>weapon type</strong> is different to the last known weapon type.</p>
-<ol>
-<li><strong><code>Reset If: 8-bit 0xef33 != 1</code></strong></li>
-</ol>
-<p>Here we are saying reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
-<h2 id="example-2">Example 2</h2>
-<p>Another notable example is the <a href="http://retroachievements.org/Game/16">Super Hang-On</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak (15) - Maintain at least 300kph for 10 seconds</a>. In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is 'that the speed is over 300'.</p>
-<ol>
-<li><code>16-bit 0x055a &gt;= 0x300</code> (600)</li>
-<li><code>Reset If 0x055a &lt; 0x300</code></li>
-</ol>
-<p>So once 600 frames or 10 seconds have passed, and the player's speed is above 300, the achievement will trigger.</p>
-<p>There are other more complicated approaches to hit counts that can be used to encourage the player through certain limits, but it'll be discussed in a further tutorial.</p>
-<p>So to sum up - hit counts are useful for when you wish to test that a condition has reached a certain value a certain number of times. Currently hit counts cannot be used across conditions (this is definitely something for the future though), so they must be used when a certain fact or condition reaches a certain value or memory address. Combine hit counts with <code>Reset If</code> and you'll be able to reset if the player hasn't reached a certain hit count, forcing them to start again from the beginning.</p>
                 
                   
                 
@@ -554,7 +584,7 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Achievement-Creation/" title="Achievement Creation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Achievement-Logic-Features/" title="Achievement Logic Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -563,19 +593,19 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Achievement Creation
+                Achievement Logic Features
               </span>
             </div>
           </a>
         
         
-          <a href="../Developer-Toolset/" title="Developer Toolset" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Developer Toolset
+                Tips and Tricks
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

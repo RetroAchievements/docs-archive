@@ -210,9 +210,34 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
     <a href="." title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#developer-docs" title="Developer docs" class="md-nav__link">
+    Developer docs
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -290,8 +315,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Achievement-Creation/" title="Achievement Creation" class="md-nav__link">
-      Achievement Creation
+    <a href="Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
+      Getting Started as an Achievement Developer
     </a>
   </li>
 
@@ -302,8 +327,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Hit-Counts-and-Delta-Values/" title="Hit Counts and Delta Values" class="md-nav__link">
-      Hit Counts and Delta Values
+    <a href="Achievement-Logic-Features/" title="Achievement Logic Features" class="md-nav__link">
+      Achievement Logic Features
     </a>
   </li>
 
@@ -314,8 +339,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Developer-Toolset/" title="Developer Toolset" class="md-nav__link">
-      Developer Toolset
+    <a href="Real-Examples/" title="Real Examples" class="md-nav__link">
+      Real Examples
     </a>
   </li>
 
@@ -326,32 +351,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Beginner-Tips/" title="Beginner Tips" class="md-nav__link">
-      Beginner Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="Badge-Creation/" title="Badge Creation" class="md-nav__link">
-      Badge Creation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="Set-Creation-Guidelines/" title="Set Creation Guidelines" class="md-nav__link">
-      Set Creation Guidelines
+    <a href="Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
     </a>
   </li>
 
@@ -364,6 +365,42 @@
   <li class="md-nav__item">
     <a href="Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
       Console Specific Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
+      Difficulty Scale and Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Badge-Creation/" title="Badge Creation" class="md-nav__link">
+      Badge Creation
     </a>
   </li>
 
@@ -392,6 +429,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
+      Set Development Roadmap
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -416,6 +465,33 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#developer-docs" title="Developer docs" class="md-nav__link">
+    Developer docs
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -429,8 +505,45 @@
 <hr />
 <p>Welcome to the <a href="https://retroachievements.github.io/docs/">RetroAchievements documentation project</a>!</p>
 <p>Newcomers, please start with the <a href="./FAQ">FAQ</a>.</p>
+<p>We encourage all community members to join our <a href="https://discord.gg/TdfC3r7">Discord chat server</a>, we use this for most communication.</p>
+<h2 id="developer-docs">Developer docs</h2>
+<p>A brief description of each Achievement developer page you'll see here.</p>
 <p>You can help to improve these docs editing/creating the pages at <a href="https://github.com/RetroAchievements/docs/wiki">RetroAchievements wiki</a>.</p>
-<p><a href="http://retroachievements.org/rss.php">Site RSS</a>.</p>
+<ol>
+<li>
+<p><a href="./Getting-Started-as-an-Achievement-Developer">Getting Started as an Achievement Developer</a>: it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). <strong>IF YOU ARE A COMPLETE ACHIEVEMENT DEVELOPER NEWBIE, START HERE!</strong></p>
+</li>
+<li>
+<p><a href="./Achievement-Logic-Features">Achievement Logic Features</a>: describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, N64 Special flags, Alt groups, etc.</p>
+</li>
+<li>
+<p><a href="./Real-Examples">Real Examples</a>: showing real examples and breaking down the logic behind them. <strong>AWESOME LEARNING RESOURCE!</strong></p>
+</li>
+<li>
+<p><a href="./Tips-and-Tricks">Tips and Tricks</a>: general tips and tricks about memory digging and achievement creation.</p>
+</li>
+<li>
+<p><a href="./Console-Specific-Tips">Console Specific Tips</a></p>
+</li>
+<li>
+<p><a href="./Achievement-Templates">Achievement Templates</a>: some generic templates to get inspiration.</p>
+</li>
+<li>
+<p><a href="./Difficulty-Scale-and-Balance">Difficulty Scale and Balance</a>: guidelines/suggestions on how to balance the difficulty of your achievement set.</p>
+</li>
+<li>
+<p><a href="./Badge-Creation">Badge Creation</a></p>
+</li>
+<li>
+<p><a href="./Leaderboards">Leaderboards</a></p>
+</li>
+<li>
+<p><a href="./Rich-Presence">Rich Presence</a></p>
+</li>
+<li>
+<p><a href="./Set-Development-Roadmap">Set Development Roadmap</a>: suggestions of steps to take in order to create a really good achievement set.</p>
+</li>
+</ol>
                 
                   
                 

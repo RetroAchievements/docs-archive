@@ -34,7 +34,7 @@
     
     
       
-        <title>Leaderboards - RetroAchievements docs</title>
+        <title>Tips and Tricks - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Leaderboards
+            Tips and Tricks
           
         </span>
       </div>
@@ -323,11 +323,50 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Tips and Tricks
+      </label>
+    
+    <a href="./" title="Tips and Tricks" class="md-nav__link md-nav__link--active">
       Tips and Tricks
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#memory-digging-tips" title="Memory Digging Tips" class="md-nav__link">
+    Memory Digging Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achivement-creation-tips" title="Achivement Creation Tips" class="md-nav__link">
+    Achivement Creation Tips
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -383,91 +422,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Leaderboards
-      </label>
-    
-    <a href="./" title="Leaderboards" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Leaderboards/" title="Leaderboards" class="md-nav__link">
       Leaderboards
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#start-conditions" title="Start Conditions" class="md-nav__link">
-    Start Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cancel-conditions" title="Cancel Conditions" class="md-nav__link">
-    Cancel Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#submit-conditions" title="Submit Conditions" class="md-nav__link">
-    Submit Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-interpreter" title="Value Interpreter" class="md-nav__link">
-    Value Interpreter
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#further-help" title="Further help" class="md-nav__link">
-    Further help
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -531,56 +490,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
+  <a href="#memory-digging-tips" title="Memory Digging Tips" class="md-nav__link">
+    Memory Digging Tips
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#start-conditions" title="Start Conditions" class="md-nav__link">
-    Start Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cancel-conditions" title="Cancel Conditions" class="md-nav__link">
-    Cancel Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#submit-conditions" title="Submit Conditions" class="md-nav__link">
-    Submit Conditions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-interpreter" title="Value Interpreter" class="md-nav__link">
-    Value Interpreter
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#further-help" title="Further help" class="md-nav__link">
-    Further help
+  <a href="#achivement-creation-tips" title="Achivement Creation Tips" class="md-nav__link">
+    Achivement Creation Tips
   </a>
   
 </li>
@@ -600,83 +518,76 @@
               
                 
                 
-                  <h1>Leaderboards</h1>
+                  <h1>Tips and Tricks</h1>
                 
-                <p>Currently Leaderboards can be edited by developers on the website. It's a pretty hefty interface and a difficult job to get a leaderboard working just right. It genuinely takes some care and attention to get a good leaderboard working, so in this doc we'll try to understand how it works.</p>
-<h2 id="overview">Overview</h2>
-<p>This is how a game's Leaderboard List looks like on the website:</p>
-<p><img alt="leaderboard_list" src="https://user-images.githubusercontent.com/8508804/33172797-ad9b2f22-d038-11e7-97fe-09116181ddfa.png" /></p>
-<p>In the center you can see every already made Leaderboard, and in the right column you can see the <strong>Code Notes</strong> for the game. The Code Notes are here to help with some conditions we'll see below.</p>
-<p>Here's a brief explanation of each field of a single Leaderboard:</p>
-<ul>
-<li><strong>Title</strong>: the leaderboard's title.</li>
-<li><strong>Description</strong>: the leaderboard's description.</li>
-<li><strong>Format</strong>: it can be <code>Score</code>, <code>Time (Frames)</code>, <code>Time (Milliseconds)</code> or <code>Value</code>. It's used to distinguish what sort of leaderboard this is (we'll go into this below).</li>
-<li><strong>"LowerIsBetter" checkbox</strong>: when checked, it means that a lower value is a better thing. It's usually the case for time based leaderboards, whereas a larger score generally is better.</li>
-<li><strong>Start</strong>: start conditions, aka <strong>STA</strong>.</li>
-<li><strong>Cancel</strong>: cancel conditions, aka <strong>CAN</strong>.</li>
-<li><strong>Submit</strong>: submit conditions, aka <strong>SUB</strong>.</li>
-<li><strong>Value</strong>: a value interpreter, aka <strong>VAL</strong>.</li>
+                <ul>
+<li>
+<p>Do not use accented/special characters like the "é" in Pokemon, as they currently break a few things like feed if they appear on feed. They are also not visible in search without the special character.</p>
+</li>
+<li>
+<p>Choose NTSC (U) ROMs if available, because 60 FPS is a smoother experience. (E) is PAL(50 FPS), (J) is also NTSC, but is only used if it was a Japan-exclusive game.</p>
+</li>
+<li>
+<p>Do not use a ROM with a modded/custom launch screen like Mode7 and RisingSun -sometimes- have because it messes up RAM.</p>
+</li>
 </ul>
-<p><strong>Note</strong>: A valid leaderboard MUST have all four of these conditions.</p>
-<p>Those last 4 fields are really important and <em>LOTS</em> of care must be taken over the entry of any characters into these strings. That's why they deserve a further explanation:</p>
-<p>The <strong>STA</strong> or <strong>Start</strong> condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. Once the <strong>STA</strong> is true, the game will activate the other three, and will keep processing them constantly.</p>
-<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel all progress towards the leaderboard submission. If however the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard entry will be submitted.</p>
-<p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box.</p>
-<h2 id="example">Example</h2>
-<p>The best place to start is to look at one of the existing leaderboards <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
-<p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
-<p>The <strong>Title/Description</strong> fields are quite obvious.</p>
-<p>The <strong>Type</strong> is "Time (Frames)". In Sonic every 60 frames is 1 second, then we'll monitor the time using the frames.</p>
-<p>The <strong>Lower Is Better</strong> flag is checked, then the one who makes the shortest time will be the #1.</p>
-<p>Now we're going to break down the most important parts.</p>
-<h3 id="start-conditions">Start Conditions</h3>
-<p><strong>STA</strong>: <code>0xfe10=h0000_0xhf601=h0c_d0xhf601!=h0c_0xfff0=0</code></p>
+<h2 id="memory-digging-tips">Memory Digging Tips</h2>
 <ul>
-<li><code>0xfe10=h0000</code>: If RAM address 0xfe10 is equivalent to hex 0000,</li>
-<li><code>_</code>: AND,</li>
-<li><code>0xhf601=h0c</code>: If 8-bit RAM address 0xf601 is equivalent to hex 0c,</li>
-<li><code>_</code>: AND,</li>
-<li><code>d0xhf601!=h0c</code>: If the previous 8-bit RAM address 0xf601 is NOT equivalent to hex 0c,</li>
-<li><code>_</code>: AND,</li>
-<li><code>0xfff0=0</code> If RAM address 0xfff0 is equivalent to 0.</li>
+<li>
+<p>You can input values in the memory viewer to see if it affects the game.</p>
+</li>
+<li>
+<p>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</p>
+</li>
+<li>
+<p>Even if something is visibly decreasing in-game, like health, the value isn't necessarily decreasing. It's possible for it to be increasing, so since it's uncommon for you to know for sure, you should just filter <code>!=</code> and <code>==</code></p>
+</li>
+<li>
+<p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting(<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually "0", Stage 1 is usually value "0", Stage 2 is usually value "1" depending on the type of game.</p>
+</li>
+<li>
+<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements.</p>
+</li>
+<li>
+<p>Always use 8-bit view in the Memory Viewer, just remember that when adding a 16-bit address that the address to the right comes first. Example: AB CD WX YZ in 8-bit will becomes CDAB YZWX in 16-bit.</p>
+</li>
 </ul>
-<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory. In our example we have:</p>
+<h2 id="achivement-creation-tips">Achivement Creation Tips</h2>
 <ul>
-<li>0xfe10 is the level, and is expected to be 0 (the first level).</li>
-<li>0xf601 is an 8-bit memory address, and we use the prefix '0xh' instead of '0x' to signify this. 0xf601 is the screen mode. The second and third parts of this start statement are saying 'the current mode should be 'ingame' (0c), and the previous mode should NOT be 'ingame'. Note that 'd' represents delta, or "the previous frame's value". In other words, trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
-<li>Finally we also expect 0xfff0 to be equivalent to 0, because 0xfff0 is the demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
+<li>
+<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements.</p>
+</li>
+<li>
+<p>Avoid using only one condition as the achievement will most likely pop at the wrong time.</p>
+</li>
+<li>
+<p>Try to avoid achievement spam. If a game has 100 levels, do not make an achievement for each level. Do every 10 or so.</p>
+</li>
+<li>
+<p>Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+</li>
+<li>
+<p>Get as creative as possible with achievements. "Beat X without using/doing Y" "Beat X in 5 seconds" "3 heart run"</p>
+</li>
+<li>
+<p>Uncheck "Show Decimal Values" in the Achievement Editor so you can enter the hex values you see in the Memory Viewer.</p>
+</li>
+<li>
+<p>There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement).</p>
+</li>
+<li>
+<p>Do not make achievements requiring glitches. Exploits like using a falling goomba in SMB1 to cross a large gap, or getting infinite lives in SMB3 by bouncing off the goombas coming out of the pipe are allowed, but straight-up glitches aren't.</p>
+</li>
+<li>
+<p>16-bit requirements do not have to be used on an even number of RAM, they can be used in-between properly, even if 16-bit view doesn't show it right. Ex: 0 1 2 3 4 5, in 16-bit it's usually viewed as 10 32 54, but if you start the address at the 1 here in your requirement, "21" will be read by the achievement, even if 16-bit view in the memory viewer isn't showing it. It also works if it's the last address in the line(starting at F, going to 0).</p>
+</li>
+<li>
+<p>Use single bits(0-7) for things that only change a single bit. In the Memory Viewer, when an address is selected, there will be "bits 0 1 2 3 4 5 6 7" above the addresses, and below those numbers will be either "0" or "1" like "0 0 0 0 0 0 0 0" if bit3 has a 1 under it, bit3=1 for that address. Single bit usage is very common for game events/unlocks/etc.. You'll want to use these in games where you can do things in different orders, dialogues, events, unlocks.. If you check for "8-bit x = 7" and someone did something different like skip something or get something extra, their 8-bit value will very likely be different because the single bits within are different and the achievement won't unlock, so in this case you check for specific bits inside the 8-bit address. Now if for example, item unlocks use all 8 bits of the 8-bit address, and you want to do "unlock all items," you can just do "8-bit x = 0xff" This may be confusing, but it's very important to understand.</p>
+</li>
+<li>
+<p>Alt groups (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. See the forum thread for an image explanation of this.</p>
+</li>
 </ul>
-<h3 id="cancel-conditions">Cancel Conditions</h3>
-<p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
-<ul>
-<li>0xfe13 is the number of lives.</li>
-</ul>
-<p>The cancel section checks if the player's LIVES counter ever becomes lower. Literally, it says "Cancel if the CURRENT value at 0xfe13 is less than the PREVIOUS value at 0xfe13". We want to do this because you could reach the final checkpoint and run out of time, resetting your timer to 0:00. We don't want to allow this, because it's not the correct way of completing the level. So if the player dies, we reset their leaderboard progress.</p>
-<h3 id="submit-conditions">Submit Conditions</h3>
-<p><strong>SUB</strong>: <code>0xf7cc!=0_d0xf7cc=0</code></p>
-<ul>
-<li>0xf7cc is the endlevel flag, non-interactive.</li>
-</ul>
-<p>The submit section checks if the current frame has the 'endlevel' flag set to true (or <code>!=0</code>, 'nonzero'), and the previous frame (delta) has it set to false (or <code>=0</code>, 'zero'). This suggests that the player has reached the end of the level, and has proven to be a fairly sturdy benchmark.</p>
-<p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
-<h3 id="value-interpreter">Value Interpreter</h3>
-<p><strong>VAL</strong>: <code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
-<p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an ingame popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
-<p>The value condition is special in a few ways. It is evaluated constantly and shown on-screen all the time when the leaderboard is active. It doesn't work like the other conditions, it expects addresses in the following way:</p>
-<p><code>address*modifier</code> (address times modifier)</p>
-<p>and it uses the <code>_</code> underscore operator as a 'plus'. The <code>*</code> asterisk signifies 'multiply', so in the value</p>
-<p><code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
-<p>represents:</p>
-<p>8-bit 0xfe24 times 1, PLUS
-8-bit 0xfe25 times 60, PLUS
-8-bit 0xfe22 times 3600</p>
-<p>The reason for this is that the values in each of these addresses signifies frames, seconds, and minutes respectively. When we add these values together, we get a grand total in frames that we submit to the database.</p>
-<p>Remember that 'Format' field that can be either <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> or <strong>Value</strong>? <strong>Time (Frames)</strong> is the most common one, and represents 'frames'. <strong>Time (Milliseconds)</strong> expects a value that we can convert directly into millisecs (Super Mario Kart uses this). However to convert a value in frames into a human-readible format, we should divide the value by 60 to get an accurate representation of seconds, and a value in millisecs should be divided by 100 to get the number of seconds. This is used both on the website and in the app to display the value properly, and is important to distinguish so we can be sure we get the most accurate value out of the emulator, by using whatever format they use to record time.</p>
-<h2 id="further-help">Further help</h2>
-<p>There are unfortunately <em>MANY</em> ways to get this process wrong, so if you are having any trouble feel free to ask for help in our <a href="https://discord.gg/TdfC3r7">Discord server</a>.</p>
-<p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard.</p>
-<p>Please remember that these files are pulled directly into someone's game if they decide to play it, and a badly formed memory address or string could cause their emulator to crash, so please test your leaderboard code!</p>
                 
                   
                 
@@ -695,7 +606,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Badge-Creation/" title="Badge Creation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Real-Examples/" title="Real Examples" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -704,19 +615,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Badge Creation
+                Real Examples
               </span>
             </div>
           </a>
         
         
-          <a href="../Rich-Presence/" title="Rich Presence" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Rich Presence
+                Console Specific Tips
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
