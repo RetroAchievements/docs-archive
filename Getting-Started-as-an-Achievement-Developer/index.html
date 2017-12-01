@@ -353,13 +353,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#extra-stuff" title="Extra Stuff" class="md-nav__link">
-    Extra Stuff
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -566,13 +559,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#extra-stuff" title="Extra Stuff" class="md-nav__link">
-    Extra Stuff
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -673,14 +659,16 @@
 <p>If we press ESCAPE in-game, you will see the achievement show up as a demonstration of what it would look like in the in-game overlay!</p>
 <p><img alt="testing_achievements2" src="https://user-images.githubusercontent.com/8508804/32601363-83fced8c-c529-11e7-885f-97d64b0384e5.png" /></p>
 <h2 id="ok-the-achievement-works-now-what">OK, the Achievement works. Now What?</h2>
-<p>Once we have tested that the achievement works locally, there is a two-step commit process that's (mostly) pain-free! First in the Achievements Dialog, we select our achievement and press 'Commit Selected', and agree to the dialog. This will push our achievement to the server and store it under 'Unofficial User-submitted Achievements'. Note that our achievement still exists in this dialog, it's just moved to a different tab.</p>
-<p>For the achievement to be enjoyed by many, it must be pushed into the Core Achievement set. For your few first achievements, it must be reviewed by a staff member before it can be pushed to Core. Once you have uploaded a set of achievements, you may be given <em>Developer</em> status, in which case you can push any achievement to Core yourself.</p>
+<p>Once we have tested that the achievement works locally, there is a two-step commit process:</p>
+<ol>
+<li>
+<p>First in the Achievements Dialog, we select our achievement and press <strong>Commit Selected</strong>, and agree to the dialog. This will push our achievement to the server and store it under <strong>Unofficial User-submitted Achievements</strong>.</p>
+</li>
+<li>
+<p>For the achievement to be enjoyed by many, it must be pushed into the <strong>Core Achievement set</strong>. For your few first achievements, it must be reviewed by a staff member before it can be pushed to Core. Once you have uploaded a set of achievements to Unofficial, you need to contact an admin who will, using their judgement and personal standards of quality to approve the set and give you a "Developer" status on the site. In which case you can push any achievement to Core yourself.</p>
+</li>
+</ol>
 <p>Naturally, it's best only to submit achievements that are unique and interesting into the Core Achievements group. If there are duplicates in the Core group, the most recently added duplicates will be manually moderated and deleted. If you don't want your achievement in the Core group, or you think it might not be appropriate for the Core group (i.e. if it's incomplete, or if sometimes it appears to trigger when it's not supposed to, like when the game is showing a demo), leave it in the Unofficial/User Submitted section.</p>
-<h2 id="extra-stuff">Extra Stuff</h2>
-<p>When finding addresses, there is potentially a bit of a shortcut. PAR files can come in very useful, see <a href="http://bsfree.shadowflareindustries.com/?s=11&amp;d=5">http://bsfree.shadowflareindustries.com/?s=11&amp;d=5</a> for examples of PAR codes. PAR codes are commonly used to force an address in RAM to stay a certain value. The addresses are easily decoded: if it begins 'ff', that means 'keep a value stuck in this address'. The next four digits are the address, and after the colon is the value that should be used. For example:</p>
-<p><code>FFFE20:00C8</code></p>
-<p>This code is for Sonic 1, and the Action Replay would ensure that the value 00c8 is stuck in the address 0xfe20. This causes sonic to permanently have (hex)c8 rings, which is 200.</p>
-<p>Note that it is only Action Replay (PAR) codes that will be useful to get addresses for use with RetroAchievements: Game Genie codes modify ROM rather than RAM and aren't what we're looking for.</p>
                 
                   
                 

@@ -650,24 +650,24 @@
 </table>
 <p><strong>Conditions</strong></p>
 <ol>
-<li>on level <code>N</code> at least one time</li>
-<li>currently at level <code>N+1</code></li>
-<li>the level has been increased</li>
-<li>reset the hit counter when back to title screen</li>
+<li>On level <code>N</code> at one time</li>
+<li>Currently at level <code>N+1</code></li>
+<li>The level has been increased</li>
+<li>Reset the hit counter when back to title screen</li>
 </ol>
 <p>The value <strong>0x_TITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
 <p>Here is an example of game flow that could make the achievement trigger at a wrong time if it wasn't for that ReseIf:</p>
 <ol>
-<li>start the game and reach level 2 (this make the hit counter goes to 1)</li>
-<li>get a game over while on level 2</li>
-<li>go back to the title screen</li>
-<li>use a password for level 3</li>
+<li>Start the game and reach level 2 (this make the hit counter goes to 1)</li>
+<li>Get a game over while on level 2</li>
+<li>Go back to the title screen</li>
+<li>Use a password for level 3</li>
 </ol>
 <p>If not using the ResetIf we will have these conditions:</p>
 <ol>
-<li>hit level 2: TRUE</li>
-<li>current level = level 3: TRUE</li>
-<li>level increased (from title/password screen to level 3): TRUE</li>
+<li>Hit level 2: TRUE</li>
+<li>Current level = level 3: TRUE</li>
+<li>Level increased (from title/password screen to level 3): TRUE</li>
 </ol>
 <p>And it would be enough to trigger the cheevo (at a wrong time). That's why we're using the <code>ResetIf</code> in this example.</p>
 <h2 id="finish-level-n-before-time-reaches-t">Finish Level N before Time reaches T</h2>
@@ -803,7 +803,7 @@
 <p><strong>Conditions</strong></p>
 <p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
 <ol>
-<li>reset hit cout if life decreased</li>
+<li>reset hit count if life decreased</li>
 </ol>
 <h2 id="finish-level-n-with-item">Finish Level N with Item</h2>
 <table>
@@ -938,7 +938,7 @@
 <li>reset hit count if the weapon was used</li>
 </ol>
 <h2 id="battery-save-protected-collect-item">Battery Save Protected Collect Item</h2>
-<p>Here's a way to check if an item is collected in the level it is supposed to be collected. It avoids awarding an "get item X" by loading a savestate where the item was already collected.</p>
+<p>Here's a way to check if an item is collected in the level/room ID it is supposed to be collected. It avoids awarding an "get item X" by loading a savestate where player already has the item.</p>
 <table>
 <thead>
 <tr>
@@ -963,15 +963,6 @@
 </tr>
 <tr>
 <td>2</td>
-<td>ResetIf</td>
-<td>0xLEVEL</td>
-<td>!=</td>
-<td>Value</td>
-<td>collect level</td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
 <td></td>
 <td>0xITEM</td>
 <td>=</td>
@@ -979,17 +970,26 @@
 <td>TRUE</td>
 <td></td>
 </tr>
+<tr>
+<td>3</td>
+<td>ResetIf</td>
+<td>0xLEVEL</td>
+<td>!=</td>
+<td>Value</td>
+<td>collect level</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <p><strong>Conditions</strong></p>
 <ol>
-<li>do not have the item at least once</li>
-<li>reset hit counter if in a level different than the one where the item must be obtained</li>
-<li>have the item</li>
+<li>Do not have the item while on the collect level, the hit is a checkpoint so 1&amp;2 can both be true at once.</li>
+<li>Have the item</li>
+<li>Reset hit counter if in a level different than the one where the item must be obtained</li>
 </ol>
-<p>Conditions 1 and 2 together mean "arrived the level without the item". And then the condition 3 checks if the player has the item.</p>
+<p>Conditions 1 and 3 together mean "arrived the level/Room ID without the item".</p>
 <p>Even if the player loads a savestate and goes to the required level they will not be able to add hits to condition 1, thus they can't get it except in normal gameplay.  </p>
-<p>It does not necessarily have to be level id. There are other ways to approach this problem, for example a unique Mem/Val that only occur on collection. Etc.</p>
+<p>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</p>
                 
                   
                 
