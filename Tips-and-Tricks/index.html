@@ -348,6 +348,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#general-tips" title="General Tips" class="md-nav__link">
+    General Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#memory-digging-tips" title="Memory Digging Tips" class="md-nav__link">
     Memory Digging Tips
   </a>
@@ -490,6 +497,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#general-tips" title="General Tips" class="md-nav__link">
+    General Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#memory-digging-tips" title="Memory Digging Tips" class="md-nav__link">
     Memory Digging Tips
   </a>
@@ -520,7 +534,8 @@
                 
                   <h1>Tips and Tricks</h1>
                 
-                <ul>
+                <h2 id="general-tips">General Tips</h2>
+<ul>
 <li>
 <p>Do not use accented/special characters like the "é" in Pokemon, as they currently break a few things like feed if they appear on feed. They are also not visible in search without the special character.</p>
 </li>
@@ -555,10 +570,10 @@
 <h2 id="achivement-creation-tips">Achivement Creation Tips</h2>
 <ul>
 <li>
-<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements.</p>
+<p><strong>Avoid using only one condition as the achievement will most likely pop at the wrong time.</strong></p>
 </li>
 <li>
-<p>Avoid using only one condition as the achievement will most likely pop at the wrong time.</p>
+<p>If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements.</p>
 </li>
 <li>
 <p>Try to avoid achievement spam. If a game has 100 levels, do not make an achievement for each level. Do every 10 or so.</p>
@@ -567,7 +582,7 @@
 <p>Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
 </li>
 <li>
-<p>Get as creative as possible with achievements. "Beat X without using/doing Y" "Beat X in 5 seconds" "3 heart run"</p>
+<p>Get as creative as possible with achievements. "Beat X without using/doing Y", "Beat X in 5 seconds", "3 heart run"</p>
 </li>
 <li>
 <p>Uncheck "Show Decimal Values" in the Achievement Editor so you can enter the hex values you see in the Memory Viewer.</p>
@@ -576,7 +591,7 @@
 <p>There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement).</p>
 </li>
 <li>
-<p>Do not make achievements requiring glitches. Exploits like using a falling goomba in SMB1 to cross a large gap, or getting infinite lives in SMB3 by bouncing off the goombas coming out of the pipe are allowed, but straight-up glitches aren't.</p>
+<p>Do not make achievements requiring glitches.</p>
 </li>
 <li>
 <p>16-bit requirements do not have to be used on an even number of RAM, they can be used in-between properly, even if 16-bit view doesn't show it right. Ex: 0 1 2 3 4 5, in 16-bit it's usually viewed as 10 32 54, but if you start the address at the 1 here in your requirement, "21" will be read by the achievement, even if 16-bit view in the memory viewer isn't showing it. It also works if it's the last address in the line(starting at F, going to 0).</p>

@@ -312,6 +312,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-concepts" title="Basic Concepts" class="md-nav__link">
+    Basic Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#first-steps" title="First Steps" class="md-nav__link">
     First Steps
   </a>
@@ -349,6 +356,13 @@
         <li class="md-nav__item">
   <a href="#ok-the-achievement-works-now-what" title="OK, the Achievement works. Now What?" class="md-nav__link">
     OK, the Achievement works. Now What?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
   </a>
   
 </li>
@@ -518,6 +532,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-concepts" title="Basic Concepts" class="md-nav__link">
+    Basic Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#first-steps" title="First Steps" class="md-nav__link">
     First Steps
   </a>
@@ -559,6 +580,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -577,7 +605,10 @@
                   <h1>Getting Started as an Achievement Developer</h1>
                 
                 <p><strong>Welcome to the world of Achievement Creation!</strong></p>
-<p>Basically the process of creating an achievement involves 3 steps:</p>
+<h2 id="basic-concepts">Basic Concepts</h2>
+<p>Technically <strong>an achievement is a group of conditions that must be met in a particular frame of the video game</strong>.</p>
+<p>When you launch a game on an emulator with the RetroAchievements feature, the emulator is always checking if those conditions are met in the current frame. When all conditions for a particular achievement are met, the achievement is awarded and the emulator stops checking this particular group of conditions.</p>
+<p>The process of creating an achievement basically involves 3 steps:</p>
 <ol>
 <li>
 <p>Finding a place in the game's RAM where the information you want is stored (examples: level, life bar, time, coins, holding a weapon, get an item, etc.).</p>
@@ -590,7 +621,8 @@
 </li>
 </ol>
 <p>Most likely you'll go back to step 2 and 3 many times to refine the logic of your Achievement.</p>
-<p>After you're sure your achievement is triggering at the conditions you want, you have to submit them to the server. We'll see more about it later in this doc.</p>
+<p>In this doc we'll see how to accomplish the steps above.</p>
+<p>After you're sure your achievement is triggering at the conditions you want, you can submit it to the server. We'll see more about it later.</p>
 <h2 id="first-steps">First Steps</h2>
 <p>Before start ensure you have an RA emulator from the <a href="http://retroachievements.org/download.php">RetroAchievements Download Page</a> first and <a href="http://retroachievements.org/createaccount.php">create an account</a> so you can log in using the emulator.</p>
 <p>In this guide we'll be using RAGens to demonstrate, and the game <a href="http://retroachievements.org/Game/1">Sonic the Hedgehog</a>. We are using RAGens but the same applies for the other emulators.</p>
@@ -627,6 +659,7 @@
 </li>
 </ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
+<p>You can find more useful <a href="../../Tips-and-Tricks#memory-digging-tips">Memory Digging Tips here</a>.</p>
 <h2 id="achievement-sets">Achievement Sets</h2>
 <p>OK so the memory location for the number of rings is stored at <code>0xfe20</code> - note to a non-programmer, we're dealing in <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">hexadecimal numeral system</a> which can be daunting, but don't worry, essentially its just numbers and letters instead of only numbers, and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement.</p>
 <p>Go to the <strong>RetroAchievements</strong> in the menu, choose <strong>Achievement Sets</strong> and you'll see this dialog:</p>
@@ -652,7 +685,10 @@
 <li><strong>Mem/Val</strong>: <code>15</code> - the number of rings required: the value we are comparing the memory to</li>
 <li><strong>Hit Count</strong>: <code>0</code> - ignore this for now, its useful for when something needs to happen a certain number of times</li>
 </ul>
-<p>With that set, we don't have any more conditions to add, so we return to the <strong>Achievements Dialog</strong>. To be safe, we should save our progress by hitting <strong>Save Local</strong>! This saves everything to file locally to ensure that we won't lose any progress. </p>
+<p>With that set, we don't have any more conditions to add, so we return to the <strong>Achievements Dialog</strong>. To be safe, we should save our progress by hitting <strong>Save Local</strong>! This saves everything to file locally to ensure that we won't lose any progress.</p>
+<ul>
+<li><strong>Note</strong>: usually achievements have more than one requirement to avoid it triggering in a wrong time (i.e. playing demo mode). In this example we are using only one requirement just to simplify the explanation. See more <a href="../../Tips-and-Tricks#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
+</ul>
 <h2 id="testing-the-achievement">Testing the Achievement</h2>
 <p>We can now 'activate' this achievement locally by hitting <strong>Activate</strong> on the right-hand side. This will start monitoring these memory locations and will award the achievement once all the conditions are true. Now we can go ahead and test to see if this achievement works!</p>
 <p><img alt="testing_achievements" src="https://user-images.githubusercontent.com/8508804/32601362-83dcb788-c529-11e7-8df9-b79038408909.png" /></p>
@@ -665,10 +701,24 @@
 <p>First in the Achievements Dialog, we select our achievement and press <strong>Commit Selected</strong>, and agree to the dialog. This will push our achievement to the server and store it under <strong>Unofficial User-submitted Achievements</strong>.</p>
 </li>
 <li>
-<p>For the achievement to be enjoyed by many, it must be pushed into the <strong>Core Achievement set</strong>. For your few first achievements, it must be reviewed by a staff member before it can be pushed to Core. Once you have uploaded a set of achievements to Unofficial, you need to contact an admin who will, using their judgement and personal standards of quality to approve the set and give you a "Developer" status on the site. In which case you can push any achievement to Core yourself.</p>
+<p>For the achievement to be enjoyed by many, it must be pushed into the <strong>Core Achievement set</strong>. For your few first achievements, it must be reviewed by a staff member before it can be pushed to Core. Once you have uploaded a set of achievements to Unofficial, you need to contact an admin who will, using their judgement and personal standards of quality to approve the set and give you a <strong>Developer status</strong> on the site. In which case you can push any achievement to Core yourself.</p>
 </li>
 </ol>
 <p>Naturally, it's best only to submit achievements that are unique and interesting into the Core Achievements group. If there are duplicates in the Core group, the most recently added duplicates will be manually moderated and deleted. If you don't want your achievement in the Core group, or you think it might not be appropriate for the Core group (i.e. if it's incomplete, or if sometimes it appears to trigger when it's not supposed to, like when the game is showing a demo), leave it in the Unofficial/User Submitted section.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
+<ul>
+<li>
+<p>In order to refine your achievement logic, you can see what features you have in the <a href="../Achievement-Logic-Features">Achievement Logic Features</a> page.</p>
+</li>
+<li>
+<p>You can learn by looking at existing Achievements that other devs made with an extra explanation in the <a href="../Real-Examples">Real Examples</a> page.</p>
+</li>
+<li>
+<p>You can also see some generic examples in the <a href="../Achievement-Templates">Achievement Templates</a> page.</p>
+</li>
+</ul>
+<p>Have fun!</p>
                 
                   
                 
