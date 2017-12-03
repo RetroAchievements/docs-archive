@@ -592,7 +592,7 @@
                 
                 <h2 id="warning-every-game-is-different"><strong>WARNING: EVERY GAME IS DIFFERENT!</strong></h2>
 <p>Here you'll see examples of some typical achievements. You can use them as inspiration to create your own achievement. But keep in mind the following:</p>
-<p><strong>The memory has different behavior from game to game. EVERY GAME IS DIFFERENT!</strong></p>
+<p><strong>EVERY GAME IS DIFFERENT! The memory has a different behavior from game to game.</strong></p>
 <p>So do <strong>NOT</strong> take these examples as a rule. They are here just for educational purposes.</p>
 <p>In these examples we use the following convention <strong>0xLEVEL</strong> is the memory address with the level ID; <strong>0xLIFE</strong> is the address used for the character life; <strong>0xTIME</strong> for time, <strong>0xITEM</strong> for getting an item, etc...</p>
 <h2 id="finish-level-n">Finish Level N</h2>
@@ -655,7 +655,7 @@
 <li>The level has been increased</li>
 <li>Reset the hit counter when back to title screen</li>
 </ol>
-<p>The value <strong>0x_TITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
+<p>The value <strong>0xTITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
 <p>Here is an example of game flow that could make the achievement trigger at a wrong time if it wasn't for that ReseIf:</p>
 <ol>
 <li>Start the game and reach level 2 (this make the hit counter goes to 1)</li>
