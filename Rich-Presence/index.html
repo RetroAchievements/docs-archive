@@ -585,51 +585,51 @@
 <p><img alt="Dev click" src="https://i.imgur.com/hkkpvhr.png" /></p>
 <p><img alt="RP shown" src="https://i.imgur.com/pkLpIjU.png" /></p>
 <h2 id="example">Example</h2>
-<pre><code>Lookup:LevelName  
-0x0000=Green Hill Zone Act 1  
-0x0001=Green Hill Zone Act 2  
-0x0002=Green Hill Zone Act 3  
-0x0100=Labyrinth Zone Act 1  
-0x0101=Labyrinth Zone Act 2  
-0x0102=Labyrinth Zone Act 3  
-0x0200=Marble Zone Act 1  
-0x0201=Marble Zone Act 2  
-0x0202=Marble Zone Act 3  
-0x0300=Star Light Zone Act 1  
-0x0301=Star Light Zone Act 2  
-0x0302=Star Light Zone Act 3  
-0x0400=Spring Yard Zone Act 1  
-0x0401=Spring Yard Zone Act 2  
-0x0402=Spring Yard Zone Act 3  
-0x0500=Scrap Brain Zone Act 1  
-0x0501=Scrap Brain Zone Act 2  
-0x0103=Scrap Brain Zone Act 3  
-0x0502=Final Zone  
+<pre><code>Lookup:LevelName
+0x0000=Green Hill Zone Act 1
+0x0001=Green Hill Zone Act 2
+0x0002=Green Hill Zone Act 3
+0x0100=Labyrinth Zone Act 1
+0x0101=Labyrinth Zone Act 2
+0x0102=Labyrinth Zone Act 3
+0x0200=Marble Zone Act 1
+0x0201=Marble Zone Act 2
+0x0202=Marble Zone Act 3
+0x0300=Star Light Zone Act 1
+0x0301=Star Light Zone Act 2
+0x0302=Star Light Zone Act 3
+0x0400=Spring Yard Zone Act 1
+0x0401=Spring Yard Zone Act 2
+0x0402=Spring Yard Zone Act 3
+0x0500=Scrap Brain Zone Act 1
+0x0501=Scrap Brain Zone Act 2
+0x0103=Scrap Brain Zone Act 3
+0x0502=Final Zone
 
-Format:Score 
-FormatType=VALUE 
+Format:Score
+FormatType=VALUE
 
-Format:Lives 
-FormatType=VALUE 
+Format:Lives
+FormatType=VALUE
 
-Display: 
+Display:
 @LevelName(0xfe10), @Score(0xfe28*10_0xfe29*1000_0xfe26*100000) points, @Lives(0xhfe13) lives
 </code></pre>
 
 <p>It breaks down into a series of Lookup objects, Format objects and one Display object. </p>
 <h2 id="lookups">Lookups</h2>
 <p>Lookups are defined like this: </p>
-<pre><code>Lookup:NameOfLookup 
-Value1=Text When This Value 
-Value2=Text When Another Value 
+<pre><code>Lookup:NameOfLookup
+Value1=Text When This Value
+Value2=Text When Another Value
 ...
 </code></pre>
 
 <p>We give the Lookup a value, consisting of a series of memory addresses and modifiers. More about this later. </p>
 <h2 id="format">Format</h2>
 <p>Format tables are defined like this:</p>
-<pre><code>Format:Score 
-FormatType=VALUE 
+<pre><code>Format:Score
+FormatType=VALUE
 </code></pre>
 
 <p>Begin with <code>Format:</code>, then the name of the format type. On the next line, give <code>FormatType=</code>, then one of the following: <code>VALUE</code>, <code>SCORE</code> (or <code>POINTS</code>), <code>TIME</code> (or <code>FRAMES</code>), <code>SECS</code>, <code>MILLISECS</code>, or <code>OTHER</code>. </p>
