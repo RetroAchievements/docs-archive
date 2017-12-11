@@ -34,7 +34,7 @@
     
     
       
-        <title>Badge Creation - RetroAchievements docs</title>
+        <title>Badge and Icon Creation - RetroAchievements docs</title>
       
     
     
@@ -98,7 +98,7 @@
                 </span>
               
             
-            Badge Creation
+            Badge and Icon Creation
           
         </span>
       </div>
@@ -380,11 +380,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Badge Creation
+        Badge and Icon Creation
       </label>
     
-    <a href="./" title="Badge Creation" class="md-nav__link md-nav__link--active">
-      Badge Creation
+    <a href="./" title="Badge and Icon Creation" class="md-nav__link md-nav__link--active">
+      Badge and Icon Creation
     </a>
     
       
@@ -396,8 +396,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#format" title="Format" class="md-nav__link">
-    Format
+  <a href="#intro" title="Intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badge-format" title="Badge Format" class="md-nav__link">
+    Badge Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icon-format" title="Icon Format" class="md-nav__link">
+    Icon Format
   </a>
   
 </li>
@@ -497,8 +511,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#format" title="Format" class="md-nav__link">
-    Format
+  <a href="#intro" title="Intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badge-format" title="Badge Format" class="md-nav__link">
+    Badge Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icon-format" title="Icon Format" class="md-nav__link">
+    Icon Format
   </a>
   
 </li>
@@ -532,23 +560,34 @@
               
                 
                 
-                  <h1>Badge Creation</h1>
+                  <h1>Badge and Icon Creation</h1>
                 
-                <p>Badges are the images associated to each achievement from each game, and are used across the site and in the app.</p>
-<h2 id="format">Format</h2>
+                <h2 id="intro">Intro</h2>
+<p>Badges and Icon are used across the site, and are a good way to represent achievement in the game.</p>
+<p>Badges are the images for the achievements of a game. They are stored on site in the following manner and place: <code>i.retroachievements.org/Badge/00136.png</code>; the number coincidences with the badge ID found in the Achievement editor. </p>
+<p>Icons are stored on the site in the following manner and place: <code>i.retroachievements.org/Images/000705.png</code>, stored in the same folder as other game images such as the game box and game screenshots. </p>
+<h2 id="badge-format">Badge Format</h2>
 <p>When uploaded, your file is converted into the following:</p>
 <ul>
-<li>128x128 32-bit colour PNG <em>(Is this correct? 96x96 seems more accurate, needs to be checked -kdecks)</em></li>
-<li>64x64 32-bit colour PNG</li>
-<li>64x64 greyscale and blurred PNG</li>
-<li>32x32 32-bit colour PNG</li>
-<li>32x32 greyscale and blurred PNG </li>
+<li>64x64 32-bit colour PNG  </li>
+<li>64x64 greyscale and blurred PNG </li>
 </ul>
 <p>It's not entirely important how the file is formatted before uploading, but as long as it's square, the file will upload and be converted pretty easily. Naturally it is important not to break any copyright law, or upload anything vulgar, offensive or pornographic, with the possible consequences of being cautioned, potentially reported and potentially removed from RetroAchievements.</p>
+<h2 id="icon-format">Icon Format</h2>
+<p>When uploaded, your Icon images are reduced to a maximum 96x96 32-bit colour PNG. If you upload an Icon that is smaller than 96x96 the image uploaded will retain it's original size. </p>
+<p>Places and sizes Icons are displayed: 
+- On leaderboards: 96x96 
+- Game Pages: 64x64 
+- User Pages: 48x48 
+- Currently Playing and Global Feed: 32x32 </p>
+<p>Same thing as with badges, the actual image is not being resized only the display size, if you use android or increase your browser zoom you will see the images more clearly. </p>
 <h2 id="guidelines">Guidelines</h2>
 <ul>
 <li>
 <p>Uploaded images for badges should be square, as an equal number of x &amp; y, otherwise the resulting image will be distorted and ugly.</p>
+</li>
+<li>
+<p>It's recommended to make Badges at 64x64 for sharpest clarity. Icons should be made in a way that the subject is clear even when sized at 32x32.</p>
 </li>
 <li>
 <p>Badges should refer in some way to what the achievement is about, i.e. a picture of the boss, level or collectible that the achievement requires the player to get to. </p>
@@ -559,10 +598,10 @@
 </ul>
 <h2 id="changes-and-demotions">Changes and Demotions</h2>
 <p>As the site does not in most cases have a permanent <em>changelog/git-style-rollback/wiki-style-rollback</em> for all actions taken on a set it's recommended that when a developer makes changes of any kind to a set that they make a note of it in the forum for that game. </p>
-<hr />
-<p>Taking this into account, in relation to badges, post in the Game's forum page one of the following:
+<p>In relation to badges, post in the Game's forum page one of the following:
 - leaving an old copy of the badge in the game thread (example: <code>[img="http://retroarchievement.org/badge/1234]</code>)
 - annotating the old badge ID (number displayed on the badge image's URL) </p>
+<p>Here is a perfect example of <a href="http://retroachievements.org/viewtopic.php?t=612&amp;o=17">how to properly back up changed badges</a>.</p>
 <p>is recommended, to help keep everything orderly so that in cases when rollbacks or change backs are appropriate it is much easier to do them.</p>
                 
                   

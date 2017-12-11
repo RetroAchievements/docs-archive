@@ -373,8 +373,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Badge-Creation/" title="Badge Creation" class="md-nav__link">
-      Badge Creation
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
     </a>
   </li>
 
@@ -577,10 +577,8 @@
                   <h1>Rich Presence</h1>
                 
                 <h2 id="introduction">Introduction</h2>
-<p>Rich Presence is a feature in Xbox Live/PSN that gives you a very, very brief overview of what the player is currently doing in their game. Normally speaking it's only visible to friends of this player as well, and is a short summary containing the level or mode the player is currently on. </p>
-<p>We have a similar feature to RetroAchievements, but there are a number of differences. The emulator will report back to the website every 600 seconds. Similarly, every 600 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all online players. If there isn't a rich presence script given, the text will be 'earning achievements' or 'developing achievements' if the memory dialog is open and visible. </p>
-<p>Please note - the data will be about 10-minutes out of date. Rich Presence isn't designed to give you an up-to-the-second reflection of the players status. It really is just a simple overview, which depending on the game would be a level or map name, whether you are ingame or not, what game type you're playing etc. Generally if the information is likely to change rapidly, more than once a minute (i.e. health) it's generally not a good candidate for Rich Presence data. However there are exceptions: things like 'Score' which give you a rough guide to how long the player has been playing are an exception. </p>
-<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will now also request a Rich Presence script for the currently loaded ROM. </p>
+<p>Rich Presence is very brief overview of what the player is currently doing in their game, a short summary containing the level, mode and other information about where the player is and what have they accomplished. </p>
+<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a <strong>Rich Presence script</strong> for the currently loaded ROM. The emulator will report back to the website every 120/600 seconds. Similarly, every 120 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all online players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
 <p>The Rich Presence scripts for each game can be found under the development section on each game's page: </p>
 <p><img alt="Dev click" src="https://i.imgur.com/hkkpvhr.png" /></p>
 <p><img alt="RP shown" src="https://i.imgur.com/pkLpIjU.png" /></p>
@@ -655,6 +653,7 @@ FormatType=VALUE
 <li>2500 character limit for script</li>
 <li>100 character limit for what is displayed</li>
 <li>Unicode characters are allowed</li>
+<li>Using &amp; in text will cut off the script before the &amp;</li>
 </ul>
                 
                   
