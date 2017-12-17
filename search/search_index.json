@@ -147,43 +147,43 @@
         }, 
         {
             "location": "/Site-Change-Log/", 
-            "text": "Started October 6, 2017\n\n\nSite Update - 6 October 2017\n\n\n\n\nRich Presence has been fixed: \nNow online shows all online players. Developers are able to create, edit and save rich presence. Number of currently online is no long visible by online players. Active players shows a time stamp of last updated.\n\n\n\n\nSite Update: - 30 October 2017\n\n\n\n\nPassword Reset is fixed and working.\nNow if you forget your password you can have a password reset link emailed to you. \n\n\nhttp://retroachievements.org/resetPassword.php\n\n\n\n\nSite Update - 7 November 2017\n\n\nTime stamps on user, game pages and in many places now show the year. \n\n\nEmulators Update [version 0.066] - 7 November 2017\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n \n\n\nGeneral Changes\n\n\n\n\nMore anti-cheat measures were included. \n\n\nSoft IPS patching is removed in the listed emulators. Caused some incompatibilities. \n\n\nIssue with leaderboards popping twice is resolved. \n\n\n\n\nDeveloper Changes\n\n\n\n\nAchievement Editor window is slightly extended. \n\n\nScroll bar retains position when editing longer achievements. \n\n\nIssue with uploading broken badges is fixed. \n\n\n\n\nEmulators Update [version 0.067] - 1 December 2017\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n\n\nDeveloper Changes\n\n\nMemory Inspector:\n \n1. You can now scroll with your mouse-wheel in the memory viewport. \n2. The memory viewer cursor no longer defaults to line 5, instead you are allowed to move it within a current viewport freely. \nWhen you move past the top or bottom the view will scroll up or down and keep the cursor position on the top most or bottom most line. \n3. In the memory viewport hitting page down will go down 1 page depending on how many addresses you have in view. Previously it would only go down 5 lines. \n4. In the memory viewport while selecting an address from the \"Watching\" it will put the selected address in focus on the center of the viewport relative to the length of the viewport. \n5. While putting values into the Mem Viewport you can wrap around the right side instead of getting stopped at 0xf of that line. This allows for quicker corrupting, which can sometimes be useful for finding addresses. \n6. When deleting a note in the Mem Viewport the selected stays at current address instead of going to 0x0. \n7. Notes window has been extended to 5 from 3 lines. \n8. Notes window now has word wrap and accept line returns greater than 3. \n9. View Notes Button has been added below Delete. \n10. Memory Search Range has been added allowing for Custom Range System RAM and Game RAM. \n11. Searching for hex values in Given Value is allowed with the prefix 0x. \n\n\nAchievement Editor:\n \n1. \"Clone selected\" achievement has been replaced with \"Copy\" and \"Paste\" buttons. \nYou are now able to copy and paste multiple selected requirements within an achievement, to an alt group or to another achievement! \n2. \"Delete Selected\" will now delete ALL selected achievements instead of just one at a time.(edited) \n\n\nRich Presence:\n \n1. No longer displays \"Unknown\". It just leaves a blank non-space. Devs this means you don't need to sweat as much about about those knowing every value state of an address in RPS. \n2. If someone is playing a set without achievement or a Rich Presence script it the Rich Presence will say \"Playing [game name]\".\n\n\nEmulators Update [version 0.068] - 16 December 2017\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n   \n\n\nGeneral Changes\n\n\n\n\nGame Titles with special characters such as ~ or [ no long appear at the start of the entry database but at the end.\n\n\n\n\nRich Presence:\n \n1. Parse Rich Presence has been changed into Rich Presence monitor. This will actively display rich presence \n2. The Rich Presence Monitor also supports much more unicode \n3. Rich presence is displayed every 2 minutes instead of every 10. \n\n\nLinking:\n \n1. Only Developers and Admin are allowed to link ROMs to game entries. This is to prevent unsupported ROM versions which will cause achievement errors and to prevent some forms of cheating. \n\n\nDeveloper Changes\n\n\nAchievement Sets Window:\n \n1. Button layout reworked and compressed \n2. Activate All has been added to Local Achievements \n3. Buttons removed: Vote Up, Vote Down, Goto Web page, Close \n\n\n\n\nRenames: \n1. Fetch Latest \u21d2 Refresh from Server \n2. Reset Achieved Status, Activate \u21d2 Activate Selected \n3. Save Local \u21d2 Save All Local \n4. Achievement Processing Active? \u21d2 Processing Active \n5. Achievements found \u21d2 Num Achievements Found \n6. In local Commit Selected \u21d2 Promote to Unofficial \nBugs Fixes: \n1. Changing the points value of an achievement even after it's been updated the points value in the Achievements window does not update. \n2. Activating an achievement and then making changes to it changes it's active status display from Yes to No even though it is still active. \n3. After committing a change and then fetching latest or reloading the rom the changes made are no longer visible. \n4. Other \"under the hood\" bug fixes.", 
+            "text": "16-Dec-2017: Emulators Update [v0.068]\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n   \n\n\nGeneral Changes\n\n\n\n\nGame Titles with special characters such as \n~\n or \n[\n no long appear at the start of the entry database but at the end.\n\n\n\n\nRich Presence:\n \n1. Parse Rich Presence has been changed into Rich Presence monitor. This will actively display rich presence \n2. The Rich Presence Monitor also supports much more unicode \n3. Rich presence is displayed every 2 minutes instead of every 10. \n\n\nLinking:\n \n1. Only Developers and Admin are allowed to link ROMs to game entries. This is to prevent unsupported ROM versions which will cause achievement errors and to prevent some forms of cheating. \n\n\nDeveloper Changes\n\n\nAchievement Sets Window:\n\n\n\n\nButton layout reworked and compressed \n\n\nActivate All has been added to Local Achievements \n\n\nButtons removed: Vote Up, Vote Down, Goto Web page, Close \n\n\n\n\nRenames:\n\n\n\n\nFetch Latest \u21d2 Refresh from Server \n\n\nReset Achieved Status, Activate \u21d2 Activate Selected \n\n\nSave Local \u21d2 Save All Local \n\n\nAchievement Processing Active? \u21d2 Processing Active \n\n\nAchievements found \u21d2 Num Achievements Found \n\n\nIn local Commit Selected \u21d2 Promote to Unofficial \n\n\n\n\nBugs Fixes:\n\n\n\n\nChanging the points value of an achievement even after it's been updated the points value in the Achievements window does not update. \n\n\nActivating an achievement and then making changes to it changes it's active status display from Yes to No even though it is still active. \n\n\nAfter committing a change and then fetching latest or reloading the rom the changes made are no longer visible. \n\n\nOther \"under the hood\" bug fixes.\n\n\n\n\n1-Dec-2017: Emulators Update [v0.067]\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n\n\nDeveloper Changes\n\n\nMemory Inspector:\n \n1. You can now scroll with your mouse-wheel in the memory viewport. \n2. The memory viewer cursor no longer defaults to line 5, instead you are allowed to move it within a current viewport freely. \nWhen you move past the top or bottom the view will scroll up or down and keep the cursor position on the top most or bottom most line. \n3. In the memory viewport hitting page down will go down 1 page depending on how many addresses you have in view. Previously it would only go down 5 lines. \n4. In the memory viewport while selecting an address from the \"Watching\" it will put the selected address in focus on the center of the viewport relative to the length of the viewport. \n5. While putting values into the Mem Viewport you can wrap around the right side instead of getting stopped at 0xf of that line. This allows for quicker corrupting, which can sometimes be useful for finding addresses. \n6. When deleting a note in the Mem Viewport the selected stays at current address instead of going to 0x0. \n7. Notes window has been extended to 5 from 3 lines. \n8. Notes window now has word wrap and accept line returns greater than 3. \n9. View Notes Button has been added below Delete. \n10. Memory Search Range has been added allowing for Custom Range System RAM and Game RAM. \n11. Searching for hex values in Given Value is allowed with the prefix 0x. \n\n\nAchievement Editor:\n \n1. \"Clone selected\" achievement has been replaced with \"Copy\" and \"Paste\" buttons. \nYou are now able to copy and paste multiple selected requirements within an achievement, to an alt group or to another achievement! \n2. \"Delete Selected\" will now delete ALL selected achievements instead of just one at a time.(edited) \n\n\nRich Presence:\n \n1. No longer displays \"Unknown\". It just leaves a blank non-space. Devs this means you don't need to sweat as much about about those knowing every value state of an address in RPS. \n2. If someone is playing a set without achievement or a Rich Presence script it the Rich Presence will say \"Playing [game name]\".\n\n\n7-Nov-2017\n\n\nSite Update\n\n\nTime stamps on user, game pages and in many places now show the year. \n\n\nEmulators Update [v0.066]\n\n\nFor RANes, RAGens, RAVBA, and RASnes9x\n \n\n\nGeneral Changes\n\n\n\n\nMore anti-cheat measures were included. \n\n\nSoft IPS patching is removed in the listed emulators. Caused some incompatibilities. \n\n\nIssue with leaderboards popping twice is resolved. \n\n\n\n\nDeveloper Changes\n\n\n\n\nAchievement Editor window is slightly extended. \n\n\nScroll bar retains position when editing longer achievements. \n\n\nIssue with uploading broken badges is fixed. \n\n\n\n\n30-Oct-2017: Site Update\n\n\n\n\nPassword Reset is fixed and working.\nNow if you forget your password you can have a password reset link emailed to you. \n\n\nhttp://retroachievements.org/resetPassword.php\n\n\n\n\n6-Oct-2017: Site Update\n\n\nStarted the log\n\n\n\n\nRich Presence has been fixed: \nNow online shows all online players. Developers are able to create, edit and save rich presence. Number of currently online is no long visible by online players. Active players shows a time stamp of last updated.", 
             "title": "Site Change Log"
         }, 
         {
-            "location": "/Site-Change-Log/#site-update-6-october-2017", 
-            "text": "Rich Presence has been fixed: \nNow online shows all online players. Developers are able to create, edit and save rich presence. Number of currently online is no long visible by online players. Active players shows a time stamp of last updated.", 
-            "title": "Site Update - 6 October 2017"
-        }, 
-        {
-            "location": "/Site-Change-Log/#site-update-30-october-2017", 
-            "text": "Password Reset is fixed and working.\nNow if you forget your password you can have a password reset link emailed to you.   http://retroachievements.org/resetPassword.php", 
-            "title": "Site Update: - 30 October 2017"
-        }, 
-        {
-            "location": "/Site-Change-Log/#site-update-7-november-2017", 
-            "text": "Time stamps on user, game pages and in many places now show the year.", 
-            "title": "Site Update - 7 November 2017"
-        }, 
-        {
-            "location": "/Site-Change-Log/#emulators-update-version-0066-7-november-2017", 
+            "location": "/Site-Change-Log/#16-dec-2017-emulators-update-v0068", 
             "text": "For RANes, RAGens, RAVBA, and RASnes9x", 
-            "title": "Emulators Update [version 0.066] - 7 November 2017"
+            "title": "16-Dec-2017: Emulators Update [v0.068]"
         }, 
         {
             "location": "/Site-Change-Log/#general-changes", 
-            "text": "More anti-cheat measures were included.   Soft IPS patching is removed in the listed emulators. Caused some incompatibilities.   Issue with leaderboards popping twice is resolved.", 
+            "text": "Game Titles with special characters such as  ~  or  [  no long appear at the start of the entry database but at the end.   Rich Presence:  \n1. Parse Rich Presence has been changed into Rich Presence monitor. This will actively display rich presence \n2. The Rich Presence Monitor also supports much more unicode \n3. Rich presence is displayed every 2 minutes instead of every 10.   Linking:  \n1. Only Developers and Admin are allowed to link ROMs to game entries. This is to prevent unsupported ROM versions which will cause achievement errors and to prevent some forms of cheating.", 
             "title": "General Changes"
         }, 
         {
             "location": "/Site-Change-Log/#developer-changes", 
-            "text": "Achievement Editor window is slightly extended.   Scroll bar retains position when editing longer achievements.   Issue with uploading broken badges is fixed.", 
+            "text": "", 
             "title": "Developer Changes"
         }, 
         {
-            "location": "/Site-Change-Log/#emulators-update-version-0067-1-december-2017", 
+            "location": "/Site-Change-Log/#achievement-sets-window", 
+            "text": "Button layout reworked and compressed   Activate All has been added to Local Achievements   Buttons removed: Vote Up, Vote Down, Goto Web page, Close", 
+            "title": "Achievement Sets Window:"
+        }, 
+        {
+            "location": "/Site-Change-Log/#renames", 
+            "text": "Fetch Latest \u21d2 Refresh from Server   Reset Achieved Status, Activate \u21d2 Activate Selected   Save Local \u21d2 Save All Local   Achievement Processing Active? \u21d2 Processing Active   Achievements found \u21d2 Num Achievements Found   In local Commit Selected \u21d2 Promote to Unofficial", 
+            "title": "Renames:"
+        }, 
+        {
+            "location": "/Site-Change-Log/#bugs-fixes", 
+            "text": "Changing the points value of an achievement even after it's been updated the points value in the Achievements window does not update.   Activating an achievement and then making changes to it changes it's active status display from Yes to No even though it is still active.   After committing a change and then fetching latest or reloading the rom the changes made are no longer visible.   Other \"under the hood\" bug fixes.", 
+            "title": "Bugs Fixes:"
+        }, 
+        {
+            "location": "/Site-Change-Log/#1-dec-2017-emulators-update-v0067", 
             "text": "For RANes, RAGens, RAVBA, and RASnes9x", 
-            "title": "Emulators Update [version 0.067] - 1 December 2017"
+            "title": "1-Dec-2017: Emulators Update [v0.067]"
         }, 
         {
             "location": "/Site-Change-Log/#developer-changes_1", 
@@ -191,19 +191,39 @@
             "title": "Developer Changes"
         }, 
         {
-            "location": "/Site-Change-Log/#emulators-update-version-0068-16-december-2017", 
+            "location": "/Site-Change-Log/#7-nov-2017", 
+            "text": "", 
+            "title": "7-Nov-2017"
+        }, 
+        {
+            "location": "/Site-Change-Log/#site-update", 
+            "text": "Time stamps on user, game pages and in many places now show the year.", 
+            "title": "Site Update"
+        }, 
+        {
+            "location": "/Site-Change-Log/#emulators-update-v0066", 
             "text": "For RANes, RAGens, RAVBA, and RASnes9x", 
-            "title": "Emulators Update [version 0.068] - 16 December 2017"
+            "title": "Emulators Update [v0.066]"
         }, 
         {
             "location": "/Site-Change-Log/#general-changes_1", 
-            "text": "Game Titles with special characters such as ~ or [ no long appear at the start of the entry database but at the end.   Rich Presence:  \n1. Parse Rich Presence has been changed into Rich Presence monitor. This will actively display rich presence \n2. The Rich Presence Monitor also supports much more unicode \n3. Rich presence is displayed every 2 minutes instead of every 10.   Linking:  \n1. Only Developers and Admin are allowed to link ROMs to game entries. This is to prevent unsupported ROM versions which will cause achievement errors and to prevent some forms of cheating.", 
+            "text": "More anti-cheat measures were included.   Soft IPS patching is removed in the listed emulators. Caused some incompatibilities.   Issue with leaderboards popping twice is resolved.", 
             "title": "General Changes"
         }, 
         {
             "location": "/Site-Change-Log/#developer-changes_2", 
-            "text": "Achievement Sets Window:  \n1. Button layout reworked and compressed \n2. Activate All has been added to Local Achievements \n3. Buttons removed: Vote Up, Vote Down, Goto Web page, Close    Renames: \n1. Fetch Latest \u21d2 Refresh from Server \n2. Reset Achieved Status, Activate \u21d2 Activate Selected \n3. Save Local \u21d2 Save All Local \n4. Achievement Processing Active? \u21d2 Processing Active \n5. Achievements found \u21d2 Num Achievements Found \n6. In local Commit Selected \u21d2 Promote to Unofficial \nBugs Fixes: \n1. Changing the points value of an achievement even after it's been updated the points value in the Achievements window does not update. \n2. Activating an achievement and then making changes to it changes it's active status display from Yes to No even though it is still active. \n3. After committing a change and then fetching latest or reloading the rom the changes made are no longer visible. \n4. Other \"under the hood\" bug fixes.", 
+            "text": "Achievement Editor window is slightly extended.   Scroll bar retains position when editing longer achievements.   Issue with uploading broken badges is fixed.", 
             "title": "Developer Changes"
+        }, 
+        {
+            "location": "/Site-Change-Log/#30-oct-2017-site-update", 
+            "text": "Password Reset is fixed and working.\nNow if you forget your password you can have a password reset link emailed to you.   http://retroachievements.org/resetPassword.php", 
+            "title": "30-Oct-2017: Site Update"
+        }, 
+        {
+            "location": "/Site-Change-Log/#6-oct-2017-site-update", 
+            "text": "Started the log   Rich Presence has been fixed: \nNow online shows all online players. Developers are able to create, edit and save rich presence. Number of currently online is no long visible by online players. Active players shows a time stamp of last updated.", 
+            "title": "6-Oct-2017: Site Update"
         }, 
         {
             "location": "/Getting-Started-as-an-Achievement-Developer/", 
