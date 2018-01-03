@@ -439,6 +439,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#address-format" title="Address Format" class="md-nav__link">
+    Address Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" title="Example" class="md-nav__link">
     Example
   </a>
@@ -562,6 +569,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#address-format" title="Address Format" class="md-nav__link">
+    Address Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" title="Example" class="md-nav__link">
     Example
   </a>
@@ -647,6 +661,84 @@
 <p>The <strong>STA</strong> or <strong>Start</strong> condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. Once the <strong>STA</strong> is true, the game will activate the other three, and will keep processing them constantly.</p>
 <p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel all progress towards the leaderboard submission. If however the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard entry will be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box.</p>
+<h2 id="address-format">Address Format</h2>
+<p>The memory addresses for STA/CAN/SUB/VAL have the following format:</p>
+<table>
+<thead>
+<tr>
+<th align="center">location/size</th>
+<th align="center">prefix (the letters can be in lower case)</th>
+<th align="center">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">bit0</td>
+<td align="center"><code>0xM</code></td>
+<td align="center"><code>0xM01234</code></td>
+</tr>
+<tr>
+<td align="center">bit1</td>
+<td align="center"><code>0xN</code></td>
+<td align="center"><code>0xN01234</code></td>
+</tr>
+<tr>
+<td align="center">bit2</td>
+<td align="center"><code>0xO</code></td>
+<td align="center"><code>0xO01234</code></td>
+</tr>
+<tr>
+<td align="center">bit3</td>
+<td align="center"><code>0xP</code></td>
+<td align="center"><code>0xP01234</code></td>
+</tr>
+<tr>
+<td align="center">bit4</td>
+<td align="center"><code>0xQ</code></td>
+<td align="center"><code>0xQ01234</code></td>
+</tr>
+<tr>
+<td align="center">bit5</td>
+<td align="center"><code>0xR</code></td>
+<td align="center"><code>0xR01234</code></td>
+</tr>
+<tr>
+<td align="center">bit6</td>
+<td align="center"><code>0xS</code></td>
+<td align="center"><code>0xS01234</code></td>
+</tr>
+<tr>
+<td align="center">bit7</td>
+<td align="center"><code>0xT</code></td>
+<td align="center"><code>0xT01234</code></td>
+</tr>
+<tr>
+<td align="center">Lower4</td>
+<td align="center"><code>0xL</code></td>
+<td align="center"><code>0xL01234</code></td>
+</tr>
+<tr>
+<td align="center">Upper4</td>
+<td align="center"><code>0xU</code></td>
+<td align="center"><code>0xU01234</code></td>
+</tr>
+<tr>
+<td align="center">8bit</td>
+<td align="center"><code>0xH</code></td>
+<td align="center"><code>0xH01234</code></td>
+</tr>
+<tr>
+<td align="center">16bit</td>
+<td align="center"><code>0x</code></td>
+<td align="center"><code>0x01234</code></td>
+</tr>
+<tr>
+<td align="center">32bit</td>
+<td align="center"><code>0xX</code></td>
+<td align="center"><code>0xX01234</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="example">Example</h2>
 <p>The best place to start is to look at one of the existing leaderboards <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
 <p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>

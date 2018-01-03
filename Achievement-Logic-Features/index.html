@@ -687,7 +687,7 @@
 <p>A <code>Delta</code> value is the previous frame's value.</p>
 <p>Examples of how it can be used:
 - Detect if the level has been increased: <code>level &gt; delta level</code>. It means "current level  is greater than the previous frame's level".
-- Detect damage: <code>health &lt; delta health</code>. It means "current health is smaller than the previous frame's health"</p>
+- Detect damage: <code>health &lt; delta health</code>. It means "current health is smaller than the previous frame's health". Or you can just make the previous frame's value a requirement. <code>health delta = 1</code> means "the previous frame's value for health must be 1 when the achievement pops up."</p>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
 <h2 id="hit-counts">Hit Counts</h2>
 <p>In the Achievement Editor, it's the field on the far right side is Hit Count.</p>
@@ -717,9 +717,6 @@
 <p><img alt="Add Source Example" src="https://i.imgur.com/7rMkSNt.png" /></p>
 <p>In this example, conditions #1 and #2 will have their values (<code>5</code> and <code>3</code> respectively) added until they reach condition #3. At that point, the value contained in the <code>Memory</code> field will be <code>5 + 3 + 20</code>, and it's new value will be <code>28</code>. Condition #3 will now be <em>true</em> and read as:
 <code>28 &gt; 20</code></p>
-<ul>
-<li><code>Delta</code> is the previous frame's value. You can do <code>ResetIf health &lt; delta health</code> and that would mean <code>ResetIf health is smaller than the previous frame's health</code> (AKA the player lost health). Or you can just make the previous frame's value a requirement. <code>health delta = 1</code> means "the previous frame's value for health must be 1 when the achievement pops up."</li>
-</ul>
 <h2 id="groups">Groups</h2>
 <p>Achievements can have groups added to them that can act as alternative requirements to unlock an achievement. These are called <em>Alt Groups</em>.</p>
 <p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND at least one Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>

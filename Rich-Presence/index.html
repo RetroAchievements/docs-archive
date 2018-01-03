@@ -448,11 +448,24 @@
     Introduction
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How Does it work?" class="md-nav__link">
+    How Does it work?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#example-super-mario-bros" title="Example (Super Mario Bros.)" class="md-nav__link">
+    Example (Super Mario Bros.)
   </a>
   
 </li>
@@ -476,11 +489,72 @@
     Display
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-lookup-breakdown" title="Example Lookup Breakdown" class="md-nav__link">
+    Example Lookup Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-size" title="Address size" class="md-nav__link">
+    Address size
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-coded-decimal-bcd" title="Binary Coded Decimal (BCD)" class="md-nav__link">
+    Binary Coded Decimal (BCD)
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#limits" title="Limits" class="md-nav__link">
     Limits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-details" title="Syntax Details" class="md-nav__link">
+    Syntax Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-tricks" title="Tips and Tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-properties" title="Value Properties" class="md-nav__link">
+    Value Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-standard-symbols" title="Unicode Standard Symbols" class="md-nav__link">
+    Unicode Standard Symbols
   </a>
   
 </li>
@@ -546,11 +620,24 @@
     Introduction
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How Does it work?" class="md-nav__link">
+    How Does it work?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#example-super-mario-bros" title="Example (Super Mario Bros.)" class="md-nav__link">
+    Example (Super Mario Bros.)
   </a>
   
 </li>
@@ -574,11 +661,72 @@
     Display
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-lookup-breakdown" title="Example Lookup Breakdown" class="md-nav__link">
+    Example Lookup Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-size" title="Address size" class="md-nav__link">
+    Address size
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-coded-decimal-bcd" title="Binary Coded Decimal (BCD)" class="md-nav__link">
+    Binary Coded Decimal (BCD)
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#limits" title="Limits" class="md-nav__link">
     Limits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax-details" title="Syntax Details" class="md-nav__link">
+    Syntax Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-tricks" title="Tips and Tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-properties" title="Value Properties" class="md-nav__link">
+    Value Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-standard-symbols" title="Unicode Standard Symbols" class="md-nav__link">
+    Unicode Standard Symbols
   </a>
   
 </li>
@@ -601,41 +749,65 @@
                   <h1>Rich Presence</h1>
                 
                 <h2 id="introduction">Introduction</h2>
-<p>Rich Presence is very brief overview of what the player is currently doing in their game, a short summary containing the level, mode and other information about where the player is and what have they accomplished. </p>
-<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a <strong>Rich Presence script</strong> for the currently loaded ROM. The emulator will report back to the website every 120/600 seconds. Similarly, every 120 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all online players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
-<p>The Rich Presence scripts for each game can be found under the development section on each game's page: </p>
-<p><img alt="Dev click" src="https://i.imgur.com/hkkpvhr.png" /></p>
-<p><img alt="RP shown" src="https://i.imgur.com/pkLpIjU.png" /></p>
-<h2 id="example">Example</h2>
-<pre><code>Lookup:LevelName
-0x0000=Green Hill Zone Act 1
-0x0001=Green Hill Zone Act 2
-0x0002=Green Hill Zone Act 3
-0x0100=Labyrinth Zone Act 1
-0x0101=Labyrinth Zone Act 2
-0x0102=Labyrinth Zone Act 3
-0x0200=Marble Zone Act 1
-0x0201=Marble Zone Act 2
-0x0202=Marble Zone Act 3
-0x0300=Star Light Zone Act 1
-0x0301=Star Light Zone Act 2
-0x0302=Star Light Zone Act 3
-0x0400=Spring Yard Zone Act 1
-0x0401=Spring Yard Zone Act 2
-0x0402=Spring Yard Zone Act 3
-0x0500=Scrap Brain Zone Act 1
-0x0501=Scrap Brain Zone Act 2
-0x0103=Scrap Brain Zone Act 3
-0x0502=Final Zone
-
-Format:Score
+<p>Rich Presence <strong>(RP)</strong> is brief overview of what active players are currently doing in their game. To have RP in a game you need a Rich Presence Script <strong>(RPS)</strong> which is created by Developers. The Script check the player's game memory and as programmed reports the values of certain addresses with definitions assigned by the Developer such as which stage the player is on, how many lives they have, if the game is paused, what game mode they are playing, what the player has accomplished, etc. This information is reported back to the website. <strong>Every game published needs at least a basic RPS.</strong></p>
+<p><img alt="Example of RP in action" src="https://i.imgur.com/E5097sz.png" /><br />
+Example of RP in action</p>
+<p>To see the RP live in a game click on the RetroAchievements menu in your emulator and then click on Rich Presence Monitor. A small window will show you your active RP. (Good for debugging)</p>
+<p><img alt="Rich Presence Monitor" src="https://i.imgur.com/XkCZoLG.png" /></p>
+<p>The best way to understand Rich Presence is to look at various examples in game, look at the addresses used and look at how the text is displayed in the Rich Presence Monitor and on site.</p>
+<h3 id="how-does-it-work">How Does it work?</h3>
+<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a Rich Presence Script for the currently loaded ROM. The emulator will report back to the website every 120 seconds. Similarly, every 120 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all active players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
+<p>The RPS for each game can be found under the development section on each game's page: </p>
+<p><img alt="Dev click" src="https://i.imgur.com/sqxOjyL.png" /></p>
+<p><img alt="RP shown" src="https://i.imgur.com/e7qoaNx.png" /></p>
+<h2 id="example-super-mario-bros">Example (Super Mario Bros.)</h2>
+<pre><code>Format:Digit
 FormatType=VALUE
 
-Format:Lives
-FormatType=VALUE
+Lookup:Mode
+0=[Demo] 
+2=[World Complete] 
+
+Lookup:Paused
+0x81=▌▌ 
+0x80=▌▌ 
+1=▌▌ 
+
+Lookup:Star
+5=🌟 
+4=🌟 
+3=🌟 
+2=🌟 
+1=🌟 
+
+Lookup:Powerup
+0=Small
+1=Super
+2=Fire
+
+Lookup:Swimming
+1= swimming
+
+Lookup:Status
+0= [Loading]
+1= taking a vine warp
+2= entering a warp pipe
+3= entering a warp pipe
+4= 🚩
+5= [Stage Complete]
+6= [Game Over]
+7= [Entering Area]
+9= growing
+0xA= shrinking
+0xB= 💀
+0xC= powering up
+
+Lookup:Quest
+0x0=1st
+0x1=2nd
 
 Display:
-@LevelName(0xfe10), @Score(0xfe28*10_0xfe29*1000_0xfe26*100000) points, @Lives(0xhfe13) lives
+@Mode(0xh770)@Paused(0xh776)@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)@Powerup(0xh0756) Mario in @Digit(0xh75f_v1)-@Digit(0xh75c_v1)@Swimming(0xh704)@Status(0xhe), 🚶:@Digit(0xh75a_v1), @Quest(0xh7fc) Quest
 </code></pre>
 
 <p>It breaks down into a series of Lookup objects, Format objects and one Display object. </p>
@@ -663,22 +835,100 @@ FormatType=VALUE
 <li><code>MILLISECS</code>: value describes the number of millisecs elapsed, and will be turned into 00:00.00 </li>
 </ul>
 <h2 id="display">Display</h2>
-<p>Finally, display will be a string that gets shown in the 'Active Players' box on the front page. It refers to the previously defined Lookup and Format objects using a single '@'. It then specifies a name for the lookup or format (case sensitive!), and immediately after, in brackets, a series of memory values specifying what to send to that lookup or format object. I.e. </p>
-<p><code>@LevelName(0xfe10)</code> </p>
-<p>This means use the Lookup or Format that's called <code>LevelName</code>, and give it whatever value is in 0xfe10. </p>
-<p><code>@Score(0xfe28*10_0xfe29*1000_0xfe26*100000) points</code> </p>
-<p>This means use the Lookup or Format <code>Score</code>, and give it the sum of: 
-- 0xfe28 times 10, ADD 
-- 0xfe29 times 1000, ADD 
-- 0xfe26 times 100000 </p>
-<p>This is similar formatting to the leaderboards formatting.</p>
+<p>Display will be a string that gets shown in the 'Active Players' box on the front page. It refers to the previously defined Lookup and Format objects using a single '@'. It then specifies a name for the lookup or format (case sensitive!), and immediately after, in brackets, a series of memory values specifying what to send to that lookup or format object.</p>
+<p><code>@Powerup(0xh756)</code> </p>
+<p>This means use the Lookup or Format that's called <code>Powerup</code>, and give it whatever value is in 0xh756. </p>
+<h3 id="example-lookup-breakdown">Example Lookup Breakdown</h3>
+<p><code>@Mode(0xh770)</code> - Lookup for the address that shows if the game is in demo mode or a world has been completed.<br />
+<code>@Paused(0xh776)</code> - Lookup for the address that shows if the game is paused (3 values are used, two of them are for pausing and unpausing).<br />
+<code>@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)</code> - Lookup for the address of if Mario has Star invincibility. More on this later.<br />
+<code>@Powerup(0xh756)</code> - Lookup for the address that show if Mairo is Small, big or has fire power.<br />
+<code>Mario in</code> - Static text to string lookup and format objects together.<br />
+<code>@Digit(0xh75f_v1)</code> - <code>Digit</code> is a format object defined as a value. The address 0xh75f is the World minus 1 (because it it 0 based, as in it starts counting at 0). <code>_v1</code> Means + value 1. <code>_v+1</code> is also correct.<br />
+<code>-</code> - More static text to split World and Level. as in the hypen in World 1-1.<br />
+<code>@Digit(0xh75c_v1)</code> - Another use of the <code>Digit</code> format object. This time It's looking up the stage. World 1-X.<br />
+@Swimming(0xh704) - Lookup for the address that shows if the player is swimming.<br />
+@Status(0xhe) - Lookup for the address that shows Mario's status, such as going through pipes.<br />
+<code>, 🚶:</code> - More static text. 🚶 is a symbol for lives.<br />
+<code>@Digit(0xh75a_v1)</code> - Third use of the <code>Digit</code> format object. This time it's checking the player lives address.<br />
+<code>,</code> - Static text.<br />
+<code>@Quest(0xh7fc)</code> A lookup to see if the player is in normal or on the 2nd quest, hardmode.<br />
+<code>Quest</code> - Static Text.  </p>
+<h3 id="address-size">Address size</h3>
+<p>To specify what size of address you are are checking there are various characters used. (capitalization is ignored)</p>
+<p>A 16bit address is default and has no character designation. At 0x10 the address is two bytes and 16 bits. <br />
+An 8bit address's character is h (or H). At 0xh10 the address is one byte and 8 bits. <code>xxxx xxxx</code><br />
+An upper4 address's character is u (or U). At 0xu10 the address is one nibble and 4 bits. <code>xxxx 0000</code><br />
+A lower4 address's character is l (or L). At 0xl10 the address is one nibble and 4 bits. <code>0000 xxxx</code><br />
+A bit0 address's character is m (or M). At 0xm10 the address is one bit, the lowest bit: <code>0000 000x</code><br />
+A bit1 address's character is n (or N). At 0xn10 the address is one bit, the second bit: <code>0000 00x0</code><br />
+A bit2 address's character is o (or O). At 0xn10 the address is one bit, the third bit: <code>0000 0x00</code><br />
+A bit3 address's character is p (or P). At 0xp10 the address is one bit, the fourth bit: <code>0000 x000</code><br />
+A bit4 address's character is q (or Q). At 0xq10 the address is one bit, the fifth bit: <code>000x 0000</code><br />
+A bit5 address's character is r (or R). At 0xr10 the address is one bit, the sixth bit: <code>00x0 0000</code><br />
+A bit6 address's character is s (or S). At 0xs10 the address is one bit, the seventh bit: <code>0x00 0000</code><br />
+A bit7 address's character is t (or T). At 0xt10 the address is one bit, the top bit: <code>0x00 0000</code><br />
+A 32bit address's character is x (or X). At 0xx10 the address is four bytes and 32 bits.</p>
+<p><img alt="at a glance" src="https://i.imgur.com/vPDk2CT.png" /><br />
+At a glance</p>
+<h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)</h2>
+<p>BCD is when the values are store in an address from as 0-9 (one digit) or 0-99 (two digits). Keep in most often values are stored in hexidecimal, but sometime games will store them in this way and here's the best way to handle these addresses in your display.</p>
+<p>For value objects you can use the BCD prefix, as in <code>b0x1</code>.
+A BCD address is assumed to be 8bit, h is unnecessary but also won't cause problems. Other character prefixes work? (untested).
+When you use the b prefix and the address is stored as a BCD your out put for an address that is 10 will be 10 instead of 16 (which is 10 in hex).</p>
+<p>This is most commonly used for score and time, but often other types of display values.</p>
 <h2 id="limits">Limits</h2>
 <ul>
-<li>2500 character limit for script</li>
-<li>100 character limit for what is displayed</li>
-<li>Unicode characters are allowed</li>
-<li>Using &amp; in text will cut off the script before the &amp;</li>
+<li>2500 character limit for script  </li>
+<li>100 character limit for what is displayed  </li>
+<li>Unicode characters are allowed  </li>
+<li>Using <code>&amp;</code> in text will cut off the script after the <code>&amp;</code>  </li>
+<li>Using the character <code>+</code> Will not display  </li>
 </ul>
+<h2 id="syntax-details">Syntax Details</h2>
+<ul>
+<li>The RPS ignores trailing 0s in hex address lookups and values 0x00001 == 0x1, 0xh0000245 == 0xh245, 0x0a == 0xa</li>
+<li>Lookup values are Decimal by default and hex if you place the prefix of 0x. This mean 1 == 0x1, 2 == 0x2, 9 == 0x9, 10 == 0xa, 100 == 0x64, etc.  </li>
+</ul>
+<h2 id="tips-and-tricks">Tips and Tricks</h2>
+<ul>
+<li>Lookups must be case specific with their corresponding @ in the display and not contain spaces after the lookup is defined.</li>
+<li>Lookup names can be as short as a single character if you need to squeeze in a few extra characters.</li>
+<li>Turning all your values from hex into decimal will take up less characters.</li>
+<li>Unicode characters don't always "take up less space" they often take up to four system characters.</li>
+<li>If you do not define your lookups they will be left blank (no space). This is only true for NES, SNES, Gen, RAVBA. N64, Meka and Lynx will leave the word "Unknown" each time you don't define a lookup.</li>
+<li>You only need one value format object. You can reference it with multiple addresses. (is this always true?)</li>
+<li>Putting spaces in your lookups sometimes before or after can allow you to hide certain lookups when they are not needed, like how <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, and @Mode do. </li>
+</ul>
+<h3 id="value-properties">Value Properties</h3>
+<p>When using lookup and format objects <code>@object()</code> it's possible to combine and perform calculations. This can be used to correctly display a score, in game time, etc. or make more advanced lookups.</p>
+<p><strong>Example</strong>
+<code>@Score(0x28*10_0x29*1000_0x26*100000) points</code> </p>
+<p>This means use the Lookup or Format <code>Score</code>, and give it the sum of:<br />
+- 0x28 times 10, ADD<br />
+- 0x29 times 1000, ADD<br />
+- 0x26 times 100000  </p>
+<ul>
+<li><code>_</code> adds the addresses together.  </li>
+<li>Or you can add a static value <code>0x28_v10</code>. This adds 10 to your total, as in whatever the value of <code>0x28</code> + 10 will be displayed. You can also subtract <code>0x28_v-10.</code>  </li>
+<li>If you'd like to subtract an address you need to multiply the address by -1. <code>0x29*-1</code>. <code>0x29</code> is now negative.  </li>
+<li>If you'd like to perform division you'll need to multiply by a decimal.  <code>0x26*.5</code>. <code>0x26</code> will output 1/2 of the value at <code>0x26</code>.  </li>
+<li>And you can string everything together: <code>0x28*10_0x29*-1_0x26*.625_v-10</code>.</li>
+<li>You can also add addresses together to give you lookups based on the sums of various addresses. This is used in the example in @Star. It's looking up sum the 6 lowest bits of the address 0xh79f. The way this address works is that so long as there is a value there Mario is invincible star mario and it counts down from hex value 0x23 (35 decimal) to 0. 23 in binary is 0010 0011 meaning the max sum of these bits could 5 during 0001 1111 when the count down reaches hex value 0x1f (31 decimal).</li>
+</ul>
+<h2 id="unicode-standard-symbols">Unicode Standard Symbols</h2>
+<p>▌▌=Paused<br />
+🔁=Loop number<br />
+🚶=Lives. Other symbols that represent the game clearly are also suitable. 🐰=in a Bugs bunny Game, 🐵=in a Donkey Kong Country game, ✈=In a jet plane game,<br />
+💞=Continues<br />
+💯=Points<br />
+⏰=In Game Time/Game Clock<br />
+🔑=Keys<br />
+💣=Bombs
+☰=Menu<br />
+ ❤️ or ❤=In a game with hearts (e.g. Zelda) <br />
+💰=Money<br />
+⚖=Difficulty  </p>
                 
                   
                 
