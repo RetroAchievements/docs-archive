@@ -438,8 +438,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#battery-save-protected-collect-item" title="Battery Save Protected Collect Item" class="md-nav__link">
-    Battery Save Protected Collect Item
+  <a href="#collect-an-item-in-a-specific-level" title="Collect an Item in a specific Level" class="md-nav__link">
+    Collect an Item in a specific Level
   </a>
   
 </li>
@@ -605,8 +605,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#battery-save-protected-collect-item" title="Battery Save Protected Collect Item" class="md-nav__link">
-    Battery Save Protected Collect Item
+  <a href="#collect-an-item-in-a-specific-level" title="Collect an Item in a specific Level" class="md-nav__link">
+    Collect an Item in a specific Level
   </a>
   
 </li>
@@ -701,12 +701,12 @@
 </tbody>
 </table>
 <p><strong>Conditions</strong></p>
-<ol>
-<li>On level <code>N</code> at least one time</li>
-<li>Currently at level <code>N+1</code></li>
-<li>The level has been increased</li>
-<li>Reset the hit counter when back to title screen</li>
-</ol>
+<ul>
+<li>1: On level <code>N</code> at least one time</li>
+<li>2: Currently at level <code>N+1</code></li>
+<li>3: The level has been increased</li>
+<li>4: Reset the hit counter when back to title screen</li>
+</ul>
 <p>The value <strong>0xTITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
 <p>Here is an example of game flow that could make the achievement trigger at a wrong time if it wasn't for that ReseIf:</p>
 <ol>
@@ -776,9 +776,9 @@
 </tr>
 <tr>
 <td>5</td>
-<td>ResetIf</td>
+<td></td>
 <td>0xTIME</td>
-<td>&lt;</td>
+<td>&gt;=</td>
 <td>Value</td>
 <td>T</td>
 <td></td>
@@ -787,9 +787,9 @@
 </table>
 <p><strong>Conditions</strong></p>
 <p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
-<ol>
-<li>reset the hit counter if the timer reaches a value lesser than <code>T</code>.</li>
-</ol>
+<ul>
+<li>5: timer is greater than <code>T</code>.</li>
+</ul>
 <p><strong>Keep in mind that besides knowing how the time behaves in game you also need to research how it behaves in memory.</strong></p>
 <h2 id="finish-level-n-without-dying">Finish Level N without Dying</h2>
 <table>
@@ -863,10 +863,10 @@
 </table>
 <p><strong>Conditions</strong></p>
 <p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
-<ol>
-<li>a checkpoint to represent the point from where the player is suposed to start the chalenge of not losing a life. If the game has a level intro screen, it can be a good checkpoint.</li>
-<li>reset hit count if life decreased.</li>
-</ol>
+<ul>
+<li>5: a checkpoint to represent the point from where the player is suposed to start the chalenge of not losing a life. If the game has a level intro screen, it can be a good checkpoint.</li>
+<li>6: reset hit count if life decreased.</li>
+</ul>
 <h2 id="finish-level-n-with-item">Finish Level N with Item</h2>
 <table>
 <thead>
@@ -930,9 +930,9 @@
 </table>
 <p><strong>Conditions</strong></p>
 <p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
-<ol>
-<li>the player have the item</li>
-</ol>
+<ul>
+<li>5: the player have the item</li>
+</ul>
 <h2 id="finish-level-n-without-using-weapon">Finish Level N without using Weapon</h2>
 <table>
 <thead>
@@ -996,10 +996,10 @@
 </table>
 <p><strong>Conditions</strong></p>
 <p>Conditions 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
-<ol>
-<li>reset hit count if the weapon was used</li>
-</ol>
-<h2 id="battery-save-protected-collect-item">Battery Save Protected Collect Item</h2>
+<ul>
+<li>5: reset hit count if the weapon was used</li>
+</ul>
+<h2 id="collect-an-item-in-a-specific-level">Collect an Item in a specific Level</h2>
 <p>Here's a way to check if an item is collected in the level/room ID it is supposed to be collected. It avoids awarding an "get item X" by loading a savestate where player already has the item.</p>
 <table>
 <thead>
@@ -1044,11 +1044,11 @@
 </tbody>
 </table>
 <p><strong>Conditions</strong></p>
-<ol>
-<li>Do not have the item while on the collect level, the hit is a checkpoint so 1&amp;2 can both be true at once.</li>
-<li>Have the item</li>
-<li>Reset hit counter if in a level different than the one where the item must be obtained</li>
-</ol>
+<ul>
+<li>1: Do not have the item while on the collect level, the hit is a checkpoint so 1&amp;2 can both be true at once.</li>
+<li>2: Have the item</li>
+<li>3: Reset hit counter if in a level different than the one where the item must be obtained</li>
+</ul>
 <p>Conditions 1 and 3 together mean "arrived the level/Room ID without the item".</p>
 <p>Even if the player loads a savestate and goes to the required level they will not be able to add hits to condition 1, thus they can't get it except in normal gameplay.  </p>
 <p>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</p>
