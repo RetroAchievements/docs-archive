@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +13,37 @@
         
     <url>
      <loc>/Users-Code-of-Conduct/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/FAQ/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/How-to-contribute-if-you-are-not-a-developer/</loc>
+     <lastmod>2018-01-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Issues-when-NOT-playing-in-hardcore-mode/</loc>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Downloads/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Site-Change-Log/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -41,67 +53,67 @@
         
     <url>
      <loc>/Getting-Started-as-an-Achievement-Developer/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Achievement-Logic-Features/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Real-Examples/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Tips-and-Tricks/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Console-Specific-Tips/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Achievement-Templates/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Difficulty-Scale-and-Balance/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Badge-and-Icon-Creation/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Leaderboards/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Rich-Presence/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Set-Development-Roadmap/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -110,7 +122,7 @@
     
     <url>
      <loc>/About/</loc>
-     <lastmod>2018-01-10</lastmod>
+     <lastmod>2018-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
