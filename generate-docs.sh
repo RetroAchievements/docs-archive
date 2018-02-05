@@ -35,7 +35,12 @@ function get_pages_section() {
             "## Developer docs")
                 echo "    - Developer docs:" ;;
 
-            "- "*)
+            "- [Real Examples]"*)
+                echo "        - Real Examples:"
+                echo "          - Intro: Real-Examples.md"
+                ;;
+
+            "- "*|"  - "*)
                 echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
                 
             "## [About](About)")
@@ -87,7 +92,7 @@ function main() {
     cd "$SCRIPT_DIR"
 
     echo "--- Getting wiki pages..."
-    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
+#    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
     echo "--- Done!"
     echo
 
