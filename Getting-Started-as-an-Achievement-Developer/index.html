@@ -414,6 +414,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#avoiding-bugs" title="Avoiding Bugs" class="md-nav__link">
+    Avoiding Bugs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ok-the-achievement-works-now-what" title="OK, the Achievement works. Now What?" class="md-nav__link">
     OK, the Achievement works. Now What?
   </a>
@@ -670,6 +677,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#avoiding-bugs" title="Avoiding Bugs" class="md-nav__link">
+    Avoiding Bugs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ok-the-achievement-works-now-what" title="OK, the Achievement works. Now What?" class="md-nav__link">
     OK, the Achievement works. Now What?
   </a>
@@ -789,8 +803,22 @@
 <h2 id="testing-the-achievement">Testing the Achievement</h2>
 <p>We can now 'activate' this achievement locally by hitting <strong>Activate</strong> on the right-hand side. This will start monitoring these memory locations and will award the achievement once all the conditions are true. Now we can go ahead and test to see if this achievement works!</p>
 <p><img alt="testing_achievements" src="https://user-images.githubusercontent.com/8508804/32601362-83dcb788-c529-11e7-8df9-b79038408909.png" /></p>
-<p>If we press ESCAPE in-game, you will see the achievement show up as a demonstration of what it would look like in the in-game overlay!</p>
+<p>If we press <code>Esc</code> n-game, you will see the achievement show up as a demonstration of what it would look like in the in-game overlay!</p>
 <p><img alt="testing_achievements2" src="https://user-images.githubusercontent.com/8508804/32601363-83fced8c-c529-11e7-885f-97d64b0384e5.png" /></p>
+<h2 id="avoiding-bugs">Avoiding Bugs</h2>
+<p>The cheevo we created in this tutorial is very simple, it has only one condition: "collected rings &gt;= 15". But the address to record the number of collected rings is also used when the game runs in "demo mode" (AI playing the game after your wait a while on the title screen). So, if Sonic collect 15 rings on demo mode this achievement will trigger, which is unwanted.</p>
+<p>So here are some tips you always have to keep in mind when creating your achievements:</p>
+<ul>
+<li>
+<p><strong>~~Never use~~ Avoid using only one condition as much as you can</strong>. Otherwise the achievement will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></p>
+</li>
+<li>
+<p><strong><code>PauseIf</code> Demo Mode</strong>:  If the game has a demo mode, make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements. More info about <code>PauseIf</code> on the <a href="../Achievement-Logic-Features#pauseif">Achievement Logic Features page</a>.</p>
+</li>
+<li>
+<p><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating a real achievement set.</p>
+</li>
+</ul>
 <h2 id="ok-the-achievement-works-now-what">OK, the Achievement works. Now What?</h2>
 <p>Once we have tested that the achievement works locally, there is a two-step commit process:</p>
 <ol>
