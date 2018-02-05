@@ -92,7 +92,7 @@ function main() {
     echo
 
     cp -R img docs.wiki/
-    cp -R css docs.wiki/
+#    cp -R css docs.wiki/
 
     cd docs.wiki
     ln -sf Home.md index.md
@@ -114,7 +114,7 @@ function main() {
 
     if [[ "$DEPLOY_FLAG" == "1" ]]; then
         echo "--- Generating and deploying the pages to GitHub..."
-        mkdocs gh-deploy -f temp-mkdocs.yml || exit_error "Failed to generate/deploy pages to GitHub."
+        mkdocs gh-deploy -f temp-mkdocs.yml -m "generated https://retroachievements.github.io/docs pages - $(date +'%Y-%m-%d %H:%M:%S')" || exit_error "Failed to generate/deploy pages to GitHub."
         echo "--- Done!"
         echo
     fi

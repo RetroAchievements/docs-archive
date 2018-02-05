@@ -12,17 +12,17 @@ docs_dir: docs.wiki
 theme:
     name: material
     palette:
-        primary: 'blue grey'
-        accent: 'grey'
+        primary: 'grey'
+        accent: 'amber'
     logo:
         icon: 'videogame_asset'
     favicon: 'img/favicon.ico'
     # XXX: using custom_dir in order to change the footer
     custom_dir: 'theme'
 
-extra_css:
-    - 'css/extra.css'
-    - 'css/extra.scss'
+#extra_css:
+#    - 'css/extra.css'
+#    - 'css/extra.scss'
 
 # XXX: testing icons on footer
 extra:
@@ -36,7 +36,7 @@ extra:
 # Determines if a broken link to a page within the documentation is considered 
 # a warning or an error (link to a page not listed in the pages setting). Set 
 # to true to halt processing when a broken link is found, false prints a warning 
-strict: true
+#strict: true
 
 # dev_addr 
 # Determines the address used when running mkdocs serve. 
