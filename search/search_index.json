@@ -438,7 +438,22 @@
         {
             "location": "/Real-Examples/", 
             "text": "One of the best learning resource is looking at some real examples. In this section we wil look deep into some achievements and break down the logic behind them.\n\n\n\n\nUsing Hit Counts and ResetIf\n\n\nUsing Delta Values and ResetIf\n\n\nSimple Example of How to Avoid Load State Abusing", 
-            "title": "Real Examples"
+            "title": "Intro"
+        }, 
+        {
+            "location": "/Using-Hit-Counts-and-ResetIf/", 
+            "text": "Let's see how \nSuper Hang-On (Mega Drive)\n's achievement \nSpeed Freak - Maintain at least 300kph for 10 seconds\n looks like in Achievement Editor dialog:\n\n\nAddresses\n\n\n\n\n0x0055a\n: is the speed.\n\n\n0x0c757\n: is 0x00 when the game is unpaused.\n\n\n\n\n\n\nIn this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is \"speed is over 300\". Also, we want the player to keep the speed above 300 without pausing the game.\n\n\nConditions\n\n\n\n\n\n\nplayer's speed is above 300 for 600 frames (or 10 seconds have passed).\n\n\n\n\n\n\nreset the hit counter if speed is under 300.\n\n\n\n\n\n\nreset the hit counter if the player pause the game.", 
+            "title": "Using Hit Counts and ResetIf"
+        }, 
+        {
+            "location": "/Using-Delta-Values-and-ResetIf/", 
+            "text": "Let's take \nStreets of Rage 2 (Mega Drive)\n\nas a case study, and \nSteel Grip - Defeat 10 enemies without dropping your weapon\n achievement. This relies on four conditions:\n\n\nAddresses\n\n\n\n\n0xef33\n: holding weapon \n\n\n0xef37\n: weapon type\n\n\n0xef4e\n: number of KOs (player 1)\n\n\n\n\n\n\nConditions\n\n\n\n\n\n\nthe player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are saying that require the player to hold a weapon, at least once.\n\n\n\n\n\n\nnumber of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times. Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one. \nLIMITATION\n: if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... it's not so accurate but it's a fairly close estimate to your number of kills.\n\n\n\n\n\n\nreset all our progress, if the \nweapon type\n is different to the last known weapon type.\n\n\n\n\n\n\nreset \nall\n our progress, if the player is no longer carrying a weapon.", 
+            "title": "Using Delta Values and ResetIf"
+        }, 
+        {
+            "location": "/Simple-Example-of-How-to-Avoid-Load-State-Abusing/", 
+            "text": "In this example the game is \nZooming Secretary (NES)\n, and the Achievement is \nGreat Job! - Now you can take a rest\n, for beating the game.\n\n\nIn this we want to make sure the player went through all levels to beat the game in order to earn the achievement. If the player uses a save state to go directly to the last stage and finish it, the achievement won't pop up.\n\n\nAddresses\n\n\n\n\n0x06e9\n: level ID. From 0 to 8 and 8 means \"finished the game\".\n\n\n\n\n\n\nConditions\n\n\n\n\nIn the \"game finished level\".\n\n\nThe level was increased 8 times.\n\n\nReset the counter if the level decreases.\n\n\n\n\nAs this game has 8 levels, the value in the level ID address must be increased 8 times to beat the game. This way a player can't just start the game, load a state to go directly to the last level and then beat the game. He/she needs to go through all levels.\n\n\nThe \nResetIf\n is here just to avoid the case where the player keep loading states going back and forth between levels making the hit counter to be 8. If he/she loads a state going to a lower level, the hit counter goes to zero.", 
+            "title": "Simple Example of How to Avoid Load State Abusing"
         }, 
         {
             "location": "/Tips-and-Tricks/", 
