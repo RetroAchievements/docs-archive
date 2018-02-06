@@ -92,7 +92,7 @@ function main() {
     cd "$SCRIPT_DIR"
 
     echo "--- Getting wiki pages..."
-#    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
+    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
     echo "--- Done!"
     echo
 
