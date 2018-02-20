@@ -602,6 +602,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#conditional-display-strings" title="Conditional Display Strings" class="md-nav__link">
+    Conditional Display Strings
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -806,6 +813,13 @@
           <li class="md-nav__item">
   <a href="#address-size" title="Address size" class="md-nav__link">
     Address size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-display-strings" title="Conditional Display Strings" class="md-nav__link">
+    Conditional Display Strings
   </a>
   
 </li>
@@ -1082,6 +1096,28 @@ FormatType=VALUE
 </tr>
 </tbody>
 </table>
+<h3 id="conditional-display-strings">Conditional Display Strings</h3>
+<p><em>WARNING</em>: This is currently pre-release functionality and only works with the pre-release version of RA_Integration.dll. Do not publish any scripts using this functionality before version 0.069 of the toolkit is released or the conditional logic will be displayed in the Active Players display.</p>
+<pre><code>Display:
+?0x 000085=0?Title Screen
+?0xT00007c=1?Custom Map in @Landscape(0xH00016c)
+Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
+</code></pre>
+
+<p>The existing <code>Display:</code> marker is still used to indicate the start of the display block. If the next line starts with a question mark, it is considered to be a conditional display string. The portion of the line between the two question marks is the conditional clause. If the conditional clause evaluates true, then the remaining portion of the line is used as the display string. If it does not evaluate true, then processing proceeds to the next line. If it starts with a question mark, the same process repeats. If it does not start with a question mark, the entire line is used as the default display string.</p>
+<p>Looking at this example, if the 16-bit value at $0085 is 0, the display string is <code>Title Screen</code>. If not, the next line is examined. If the 7th bit of $007C is 1, the display string is <code>Custom Map in @Landscape(0xH00016c)</code>. If not, the final line does not have a conditional clause and is used.</p>
+<p>Display strings associated with a conditional clause support all of the same syntax as the default display string. In this example, you can see the <code>@Landscape</code> lookup is used in both the conditional display string and the default display string. The lookup itself only has to be defined once.</p>
+<p>The conditional phrase supports all of the previously mentioned address accessors as well as AND (_) and OR (S) logic. Note that OR clauses still require a 'core' group, <a href="https://github.com/RetroAchievements/docs/wiki/Achievement-Logic-Features#groups">just like achievements</a>.</p>
+<ul>
+<li>
+<p><code>?0xH1234=32_0xH2345=0?and example</code></p>
+<p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $2345 is 0, display <code>and example</code></p>
+</li>
+<li>
+<p><code>?0xH1234=32_0xH2345=1S0xH2345=2?or example</code></p>
+<p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $2345 is 1 <em>or</em> 2, display <code>or example</code></p>
+</li>
+</ul>
 <h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)</h2>
 <p>BCD is when the values are store in an address from as 0-9 (one digit) or 0-99 (two digits). Keep in most often values are stored in hexidecimal, but sometime games will store them in this way and here's the best way to handle these addresses in your display.</p>
 <p>For value objects you can use the BCD prefix, as in <code>b0x1</code>.
