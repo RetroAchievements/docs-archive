@@ -35,13 +35,18 @@ function get_pages_section() {
             "## Developer docs")
                 echo "    - Developer docs:" ;;
 
+            "- Users Code of Conduct"*)
+                echo "        - Users Code of Conduct:"
+                ;;
+
             "- [Real Examples]"*)
                 echo "        - Real Examples:"
                 echo "          - Intro: Real-Examples.md"
                 ;;
 
             "- "*|"  - "*)
-                echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
+#                echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
+                echo "        $(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md" ;;
                 
             "## [About](About)")
                 echo "    - About: About.md" ;;
