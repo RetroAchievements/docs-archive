@@ -676,21 +676,23 @@
                 
                   <h1>Simple Example of How to Avoid Load State Abusing</h1>
                 
-                <p>In this example the game is <a href="http://retroachievements.org/Game/4650">Zooming Secretary (NES)</a>, and the Achievement is <a href="http://retroachievements.org/Achievement/55102">Great Job! - Now you can take a rest</a>, for beating the game.</p>
-<p>In this we want to make sure the player went through all levels to beat the game in order to earn the achievement. If the player uses a save state to go directly to the last stage and finish it, the achievement won't pop up.</p>
-<p><strong>Addresses</strong></p>
+                <p>Neste exemplo, o jogo é <a href="http://retroachievements.org/Game/4650">Zooming Secretary (NES)</a>, e o Achievement é <a href="http://retroachievements.org/Achievement/55102">Great Job! - Now you can take a rest</a>, por terminar o jogo.</p>
+<p>Nesse sentido, queremos garantir que o jogador tenha passado por todos os níveis para vencer o jogo para ganhar o achievement. Se o jogador usa um estado de salvamento para ir diretamente ao último estágio e finalizá-lo, o achievement não aparecerá.</p>
+<p><strong>Addresses</strong>
+(direções)</p>
 <ul>
-<li><code>0x06e9</code>: level ID. From 0 to 8 and 8 means "finished the game".</li>
+<li><code>0x06e9</code>: level ID. Do 0 ao 8. O 8 significa "fim de jogo".</li>
 </ul>
 <p><img alt="greatjob-zoomingsecretary" src="https://user-images.githubusercontent.com/8508804/33465179-6fe458ac-d62d-11e7-8e9a-7be17c73a7a8.png" /></p>
-<p><strong>Conditions</strong></p>
+<p><strong>Conditions</strong>
+(condições)</p>
 <ol>
-<li>In the "game finished level".</li>
-<li>The level was increased 8 times.</li>
-<li>Reset the counter if the level decreases.</li>
+<li>No "game finished level".</li>
+<li>O level aumentou 8 vezes.</li>
+<li>Reset o contador se o level diminuir.</li>
 </ol>
-<p>As this game has 8 levels, the value in the level ID address must be increased 8 times to beat the game. This way a player can't just start the game, load a state to go directly to the last level and then beat the game. He/she needs to go through all levels.</p>
-<p>The <code>ResetIf</code> is here just to avoid the case where the player keep loading states going back and forth between levels making the hit counter to be 8. If he/she loads a state going to a lower level, the hit counter goes to zero.</p>
+<p>Como este jogo tem 8 leveis, o valor no endereço de identificação (ID address) de nível deve ser aumentado 8 vezes para vencer o jogo. Desta forma, um jogador não pode simplesmente iniciar o jogo, carregar (load game) para ir diretamente ao último nível e depois vencer o jogo. Ele / ela precisa percorrer todos os níveis.</p>
+<p>O <code>ResetIf</code> está aqui apenas para evitar o caso em que o jogador continua carregando (load) indo para frente e para trás entre os níveis fazendo o contador de hits ser 8. Se ele / ela carrega um estado (load) indo para um nível mais baixo, o contador de visitas vai para zero.</p>
                 
                   
                 

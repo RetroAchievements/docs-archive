@@ -676,28 +676,30 @@
                 
                   <h1>Using Delta Values and ResetIf</h1>
                 
-                <p>Let's take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
-as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip - Defeat 10 enemies without dropping your weapon</a> achievement. This relies on four conditions:</p>
-<p><strong>Addresses</strong></p>
+                <p>vamos pegar <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
+e selecionar o <a href="http://retroachievements.org/Achievement/55">Steel Grip - Defeat 10 enemies without dropping your weapon</a> achievement. Isso depende de quatro condições:</p>
+<p><strong>Addresses</strong>
+(direções)</p>
 <ul>
-<li><code>0xef33</code>: holding weapon </li>
-<li><code>0xef37</code>: weapon type</li>
-<li><code>0xef4e</code>: number of KOs (player 1)</li>
+<li><code>0xef33</code>: arma em mão</li>
+<li><code>0xef37</code>: tipo de arma </li>
+<li><code>0xef4e</code>: número de KOs (player 1)</li>
 </ul>
 <p><img alt="steelgrip-example" src="https://user-images.githubusercontent.com/8508804/33313210-32f5451e-d411-11e7-8042-2b9007a5cffb.png" /></p>
-<p><strong>Conditions</strong></p>
+<p><strong>Conditions</strong>
+(condições)</p>
 <ol>
 <li>
-<p>the player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are saying that require the player to hold a weapon, at least once.</p>
+<p>o jogador está segurando uma arma. Isso deve ser verdadeiro, ao menos uma vez. Isso na verdade não é necessário, mas é útil mostrar a progressão. Estamos dizendo que exigem que o jogador mantenha uma arma, pelo menos uma vez.</p>
 </li>
 <li>
-<p>number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times. Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one. <strong>LIMITATION</strong>: if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... it's not so accurate but it's a fairly close estimate to your number of kills.</p>
+<p>número de KOs que o jogador fez. É 16 bits (o que significa que o valor pode ser superior a 255), e usando os símbolos delta e 'greater than', estamos dizendo que exigimos que o número de KOs seja maior do que o valor anterior, e precisamos disso para aconteça 10 vezes somente. Toda vez que o valor atual é maior do que o valor anterior, a contagem de hits aumentará em um. No próximo quadro, o valor 'delta' aumentará para ser o mesmo que o valor atual, isso garante que depois de cada morte, o contador KO irá subir de um, e a contagem de batidas aumentará em um.  <strong>LIMITAÇÃO</strong>: se o número de KOs aumentar em duas no mesmo quadro, a contagem de batidas só aumentará em um. É uma pequena falha que acontece um pouco mais frequentemente do que o esperado ... não é tão preciso, mas é uma estimativa bastante próxima do seu número de mortes</p>
 </li>
 <li>
-<p>reset all our progress, if the <strong>weapon type</strong> is different to the last known weapon type.</p>
+<p>Resete todo o seu progresso, se o <strong>tipo de arma</strong> for diferente do último tipo de arma conhecida.</p>
 </li>
 <li>
-<p>reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
+<p>reset <strong>todo</strong> seu progresso, se o jogador já não estiver carregando uma arma.</p>
 </li>
 </ol>
                 
