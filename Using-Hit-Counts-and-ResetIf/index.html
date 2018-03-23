@@ -369,6 +369,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
+      RALibretro
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -632,18 +644,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
-      RALibretro
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -676,26 +676,24 @@
                 
                   <h1>Using Hit Counts and ResetIf</h1>
                 
-                <p>Vamos ver como <a href="http://retroachievements.org/Game/16">Super Hang-On (Mega Drive)</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak - Maintain at least 300kph for 10 seconds</a> aparece em Achievement Editor dialog:</p>
-<p><strong>Addresses</strong>
-(endereços)</p>
+                <p>Let's see how <a href="http://retroachievements.org/Game/16">Super Hang-On (Mega Drive)</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak - Maintain at least 300kph for 10 seconds</a> looks like in Achievement Editor dialog:</p>
+<p><strong>Addresses</strong></p>
 <ul>
-<li><code>0x0055a</code>: é a velocidade.</li>
-<li><code>0x0c757</code>: é 0x00 quando o jogo é sem compensação (sem pausar).</li>
+<li><code>0x0055a</code>: is the speed.</li>
+<li><code>0x0c757</code>: is 0x00 when the game is unpaused.</li>
 </ul>
 <p><img alt="speedfreak-example" src="https://user-images.githubusercontent.com/8508804/33312584-77f7fb0e-d40f-11e7-9daf-827c0f8d7dc6.png" /></p>
-<p>Nesse achievement, desejamos que haja um fato ou condição que seja verdadeira 600 vezes consecutivamente. A razão para isso é que a gênese está trancada no processamento de 60frames de lógica por segundo (NTSC pelo menos?). E o fato que estamos procurando é que "a velocidade é mais de 300". Além disso, queremos que o jogador mantenha a velocidade acima de 300 sem pausar o jogo.</p>
-<p><strong>Conditions</strong>
-(condições)</p>
+<p>In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is "speed is over 300". Also, we want the player to keep the speed above 300 without pausing the game.</p>
+<p><strong>Conditions</strong></p>
 <ol>
 <li>
-<p>A velocidade do jogador está acima de 300 para 600 frames (ou 10 segundos se passaram).</p>
+<p>player's speed is above 300 for 600 frames (or 10 seconds have passed).</p>
 </li>
 <li>
-<p>reset o contador de hit (hit counter) se a velocidade for menor que 300.</p>
+<p>reset the hit counter if speed is under 300.</p>
 </li>
 <li>
-<p>reset o contador de hit se o jogador interrompe o jogo.</p>
+<p>reset the hit counter if the player pause the game.</p>
 </li>
 </ol>
                 
