@@ -1584,6 +1584,51 @@
             "location": "/Achievement-Templates-pt_BR/#resets-condicionais", 
             "text": "Resets Condicionais podem ser usado para muitas coisas.  Vamos dizer que voc\u00ea quer para resetar se um jogador entrar ema certa zona X e Y de um n\u00edvel:  CORE      O Core \u00e9 qualquer condi\u00e7\u00e3o que voce precisa para a sua conquista ser verdadeira. Isto pode tambem incluir comportamentos normais de resets   ALT1     ID  Special?  Type  Memory  Cmp  Type  Mem/Val      1  ResetIf  Mem  0xNIVEL  =  Value  NIVELID    2  PauseIf  Mem  0xX-COORDS   Value  RESET-X-ZONA    3  PauseIf  Mem  0xX-COORDS   Value  RESET-X-ZONA    4  PauseIf  Mem  0xY-COORDS   Value  RESET-Y-ZONA    5  PauseIf  Mem  0xY-COORDS   Value  RESET-Y-ZONA      O reset ir\u00e1 acontecer apenas se todas as condi\u00e7\u00f5es Pauseif n\u00e3o forem verdadeiras.  O pause \u00e9 local para o alt mas o reset reseta a conquista inteira.   ALT2     ID  Special?  Type  Memory  Cmp  Type  Mem/Val      1   Mem  0x1  =  Mem  0x1       Qualquer condi\u00e7\u00e3o que seja sempre verdadeira (isso \u00e9 necess\u00e1rio para que o Alt1 tenha o comportamento que desejamos)    Nota:  Voc\u00ea pode usar multiplos resets condicionais, cada um em seu pr\u00f3prio grupo alt para ter um controle muito maior do comportamento de reset.", 
             "title": "Resets Condicionais"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/", 
+            "text": "Roteiro de Desenvolvimento de um Set de Conquistas\n\n\nLink para o texto em ingl\u00eas:\n \nSet Development Roadmap\n\n\nO texto seguinte \u00e9 um roteiro detalhado da maioria das coisas que voc\u00ea deveria considerar ao fazer um conjunto de conquistas. N\u00e3o \u00e9 necess\u00e1rio seguir exatamente isso, mas serve como um guia.\n\n\nPesquisa Inicial\n\n\n\n\nManual do Jogo\n: Analise\n\n\nGame Faqs\n: Leia / Cheque\n\n\nTrapa\u00e7as\n: Procure, anote\n\n\nLongplay\n: Analise / Assista\n\n\nSets Semelhantes\n: Compare, anote as id\u00e9as favoritas\n\n\nPartimes\n: Cheque se eles existem\n\n\nSpeedruns\n: Cheque se eles existem\n\n\n\n\nDesign Conceitual\n\n\n\n\nConquista 1\n: Uma chuva de id\u00e9ias, incluindo id\u00e9as de sets similares, manuais, etc.\n\n\nNotas de segredos, progressos, eventos-chaves, colecion\u00e1veis, placares,\n    benchmarks, Easter Eggs (segredos), chaves, itens, recompensas internas\n\n\nPesquisa 2\n: Checar / Testar se os projetos s\u00e3o possiveis.\n\n\nMem\u00f3ria 1\n: Estimar endere\u00e7os necess\u00e1rios para as conquistas.\n\n\n\n\nCa\u00e7ar Mem\u00f3rias\n\n\n\n\nMem\u00f3ria 2\n:. Procure por endere\u00e7os de mem\u00f3ria necess\u00e1rios\n\n\n\n\nDesign de Conquistas\n\n\n\n\nBalan\u00e7a 1\n: Balancear a dificuldade do set, remover ou redesenhar \n  aqueles que n\u00e3o se encaixam.\n\n\nConquistas 2\n: Construa a Lista, empurre-a inteira para o unofficial (n\u00e3o-oficial) (n\u00e3o \u00e9 obrigat\u00f3rio).\n\n\nMem\u00f3ria 3\n: Procure por solu\u00e7\u00f5es perdidas, dependendo da mem\u00f3ria do jogo.\n\n\nConqusitas 3\n: Adicionar id\u00e9ias conforme elas veem.\n\n\nConquistas 4\n: Retrabalhe ou remova id\u00e9as que s\u00e3o impossiveis.\n\n\n\n\nPr\u00e9-lan\u00e7amento - Passos Finais\n\n\n\n\nTitulos \n Descri\u00e7\u00f5es\n: Finalize\n\n\nBugs 1\n: Teste conquistas por bugs, Fa\u00e7a / Use poss\u00edveis Movies\n\n\nP\u00e1gina do Jogo\n: Atualize o \u00edcone do jogo, images, informa\u00e7\u00e3o, recursos, jogos similares.\n\n\nLeaderboards\n (opcional): C\u00f3digo\n\n\nRich presence\n: C\u00f3digo\n\n\nBadges (\u00cdcones)\n: Crie\n\n\n\n\nLan\u00e7amentos\n\n\n\n\nConquistas 7\n: Mova para o Core\n\n\nPontos\n: Distribua os pontos de acordo com a dificuldade\n\n\nOrdem do set\n: Fa\u00e7a\n\n\nPost no Forum\n: Fa\u00e7a o anunciamento\n\n\n\n\nAp\u00f3s Lancamento\n\n\n\n\nBugs 2\n: Corrigir aqueles que vierem.\n\n\nBalan\u00e7a 2\n: Reequilibre a dificuldade do set baseado no feedback.", 
+            "title": "Roteiro de Desenvolvimento de um Set de Conquistas"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#roteiro-de-desenvolvimento-de-um-set-de-conquistas", 
+            "text": "Link para o texto em ingl\u00eas:   Set Development Roadmap  O texto seguinte \u00e9 um roteiro detalhado da maioria das coisas que voc\u00ea deveria considerar ao fazer um conjunto de conquistas. N\u00e3o \u00e9 necess\u00e1rio seguir exatamente isso, mas serve como um guia.", 
+            "title": "Roteiro de Desenvolvimento de um Set de Conquistas"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#pesquisa-inicial", 
+            "text": "Manual do Jogo : Analise  Game Faqs : Leia / Cheque  Trapa\u00e7as : Procure, anote  Longplay : Analise / Assista  Sets Semelhantes : Compare, anote as id\u00e9as favoritas  Partimes : Cheque se eles existem  Speedruns : Cheque se eles existem", 
+            "title": "Pesquisa Inicial"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#design-conceitual", 
+            "text": "Conquista 1 : Uma chuva de id\u00e9ias, incluindo id\u00e9as de sets similares, manuais, etc.  Notas de segredos, progressos, eventos-chaves, colecion\u00e1veis, placares,\n    benchmarks, Easter Eggs (segredos), chaves, itens, recompensas internas  Pesquisa 2 : Checar / Testar se os projetos s\u00e3o possiveis.  Mem\u00f3ria 1 : Estimar endere\u00e7os necess\u00e1rios para as conquistas.", 
+            "title": "Design Conceitual"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#cacar-memorias", 
+            "text": "Mem\u00f3ria 2 :. Procure por endere\u00e7os de mem\u00f3ria necess\u00e1rios", 
+            "title": "Ca\u00e7ar Mem\u00f3rias"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#design-de-conquistas", 
+            "text": "Balan\u00e7a 1 : Balancear a dificuldade do set, remover ou redesenhar \n  aqueles que n\u00e3o se encaixam.  Conquistas 2 : Construa a Lista, empurre-a inteira para o unofficial (n\u00e3o-oficial) (n\u00e3o \u00e9 obrigat\u00f3rio).  Mem\u00f3ria 3 : Procure por solu\u00e7\u00f5es perdidas, dependendo da mem\u00f3ria do jogo.  Conqusitas 3 : Adicionar id\u00e9ias conforme elas veem.  Conquistas 4 : Retrabalhe ou remova id\u00e9as que s\u00e3o impossiveis.", 
+            "title": "Design de Conquistas"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#pre-lancamento-passos-finais", 
+            "text": "Titulos   Descri\u00e7\u00f5es : Finalize  Bugs 1 : Teste conquistas por bugs, Fa\u00e7a / Use poss\u00edveis Movies  P\u00e1gina do Jogo : Atualize o \u00edcone do jogo, images, informa\u00e7\u00e3o, recursos, jogos similares.  Leaderboards  (opcional): C\u00f3digo  Rich presence : C\u00f3digo  Badges (\u00cdcones) : Crie", 
+            "title": "Pr\u00e9-lan\u00e7amento - Passos Finais"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#lancamentos", 
+            "text": "Conquistas 7 : Mova para o Core  Pontos : Distribua os pontos de acordo com a dificuldade  Ordem do set : Fa\u00e7a  Post no Forum : Fa\u00e7a o anunciamento", 
+            "title": "Lan\u00e7amentos"
+        }, 
+        {
+            "location": "/Set-Development-Roadmap-pt_BR/#apos-lancamento", 
+            "text": "Bugs 2 : Corrigir aqueles que vierem.  Balan\u00e7a 2 : Reequilibre a dificuldade do set baseado no feedback.", 
+            "title": "Ap\u00f3s Lancamento"
         }
     ]
 }
