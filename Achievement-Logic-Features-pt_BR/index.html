@@ -1193,14 +1193,14 @@
 <ul>
 <li>Detectar se o nível foi aumentado: <code>level &gt; delta level</code>. Significa que "o nível atual é maior que o nível do frame anterior".</li>
 <li>Detectar danos: <code>health &lt; delta health</code>. Significa que "a saúde atual é menor do que a saúde do frame anterior". Ou você pode apenas tornar o valor do frame anterior um requisito. <code>delta health = 1</code> significa que "o valor do frame anterior para a saúde deve ser 1".
-Você pode ver como isso funciona no <a href="../Real-Examples">Exemplos Reais</a></li>
+Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></li>
 </ul>
 <h2 id="hit-counts">Hit Counts</h2>
 <p>No Achievement Editor, o campo do lado direito é Hit Count.</p>
 <p>Zero é o valor padrão. Isso significa que a condição deve ser verdadeira quando a conquista aparecer.</p>
 <p>Se você definir manualmente uma contagem (hit), por exemplo 1, significa que a condição deve ser verdadeira por pelo menos 1 frame e, uma vez que a contagem de <em>hits</em> seja atendida, ela não precisa ser atendida novamente em outro momento.</p>
 <p><strong>ATENÇÃO</strong>: se uma condição tiver uma contagem de hits e atingir o número necessário, esta condição não é mais testada. Ela é verdadeira e permanece verdadeira, <strong>A MENOS</strong> que você tenha um <code>Reset If</code>, o qual discutiremos abaixo.</p>
-<p>Você pode ver como isso funciona no <a href="../Real-Examples">Exemplos Reais</a></p>
+<p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></p>
 <h2 id="special-flags">Special Flags</h2>
 <p>No Achievement Editor, é o campo intitulado como <strong>Special?</strong>.</p>
 <p>Essas flags condicionais só funcionam se você definir uma contagem de hits para uma condição.</p>
@@ -1211,7 +1211,7 @@ Você pode ver como isso funciona no <a href="../Real-Examples">Exemplos Reais</
 <h3 id="resetif"><code>ResetIf</code></h3>
 <p>Isso irá zerar a contagem de hits para todas condições em que você definiu uma contagem de hits. Ele é muito mais comum de usar do que <code>PauseIf</code></p>
 <p><strong>Nota</strong>: Ao contrário do <code>PauseIf</code>, le irá zerar as condições em <strong>todos os grupos</strong></p>
-<p>Você pode ver como isso funciona no <a href="../Real-Examples">Real Examples</a></p>
+<p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Real Examples</a></p>
 <h3 id="n64-special-flags">N64 Special Flags</h3>
 <p>Ao desenvolver para o  <strong>N64</strong>, existem "operações de flags aritméticas" ("arithmetic flag operations") adicionais que podem ser usadas. Esses flags são atualmente exclusivos do N64. Por favor, note que qualquer condição com flags aritméticos sempre é considerada verdadeira, independentemente dos valores de comparação.</p>
 <h4 id="add-source"><code>Add Source</code></h4>
