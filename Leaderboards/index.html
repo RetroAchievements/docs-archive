@@ -1251,9 +1251,9 @@
 </ul>
 <p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory. In our example we have:</p>
 <ul>
-<li>0xfe10 is the level, and is expected to be 0 (the first level).</li>
-<li>0xf601 is an 8-bit memory address, and we use the prefix '0xh' instead of '0x' to signify this. 0xf601 is the screen mode. The second and third parts of this start statement are saying 'the current mode should be 'ingame' (0c), and the previous mode should NOT be 'ingame'. Note that 'd' represents delta, or "the previous frame's value". In other words, trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
-<li>Finally we also expect 0xfff0 to be equivalent to 0, because 0xfff0 is the demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
+<li><code>0xfe10</code> is the level, and is expected to be <code>0</code> (the first level).</li>
+<li><code>0xf601</code> is an 8-bit memory address, and we use the prefix <code>0xh</code> instead of <code>0x</code> to signify this. The <code>0xf601</code> is the screen mode. The second and third parts of the start statement are saying "the current mode should be <em>ingame</em> (<code>0c</code>), and the mode on the previous frame should NOT be <em>ingame</em>". <strong>Note</strong>: that <code>d</code> prefix on the address represents delta, or "the previous frame's value". <strong>Summing up:</strong> trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
+<li>Finally we also expect <code>0xfff0</code> to be equivalent to <code>0</code>, because this address is used for demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
 </ul>
 <h3 id="cancel-conditions">Cancel Conditions</h3>
 <p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
