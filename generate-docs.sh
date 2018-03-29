@@ -21,35 +21,37 @@ function exit_error() {
 
 
 function get_pages_section() {
+    local tmp
     local sidebar="$SCRIPT_DIR/docs.wiki/_Sidebar.md"
     [[ -f "$sidebar" ]] || return 1
 
     echo "pages:"
-    echo "    - index.md"
+    echo "  - index.md"
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         case "$line" in
-            "## User docs")
-                echo "    - User docs:" ;;
-
-            "## Developer docs")
-                echo "    - Developer docs:" ;;
-
-            "- Users Code of Conduct"*)
-                echo "        - Users Code of Conduct:"
+            "## [Editing the Wiki]"*)
+                continue
                 ;;
 
-            "- [Real Examples]"*)
-                echo "        - Real Examples:"
-                echo "          - Intro: Real-Examples.md"
-                ;;
-
-            "- "*|"  - "*)
-#                echo "        $(sed 's/\[.*\](\(.*\))/\1/' <<< "$line").md" ;;
-                echo "        $(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md" ;;
-                
             "## [About](About)")
-                echo "    - About: About.md" ;;
+                echo "  - About: About.md" ;;
+
+            "## "*)
+                echo "  - ${line/### /}:"
+                ;;
+
+            "### "*)
+                echo "    - ${line/#### /}:"
+                ;;
+
+            *"- "*)
+                if [[ "$line" == *"- ["* ]]; then
+                    echo "    $(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md"
+                else
+                    echo "    $line:"
+                fi
+                ;;
         esac
 
     done < "$sidebar"
