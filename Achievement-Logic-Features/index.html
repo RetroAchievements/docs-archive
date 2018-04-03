@@ -323,8 +323,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Site-Change-Log/" title="Site Change Log" class="md-nav__link">
-      Site Change Log
+    <a href="../How-to-contribute-if-you-are-not-a-developer/" title="How to contribute if you are not a developer" class="md-nav__link">
+      How to contribute if you are not a developer
     </a>
   </li>
 
@@ -335,8 +335,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../How-to-contribute-if-you-are-not-a-developer/" title="How to contribute if you are not a developer" class="md-nav__link">
-      How to contribute if you are not a developer
+    <a href="../Contributing-with-the-docs/" title="Contributing with the docs" class="md-nav__link">
+      Contributing with the docs
     </a>
   </li>
 
@@ -538,6 +538,12 @@
 </li>
       
       
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
       
     </ul>
   
@@ -1205,6 +1211,12 @@
       
       
       
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
     </ul>
   
 </nav>
@@ -1241,9 +1253,9 @@
 <p>In the Achievement Editor, it's the field titled as <strong>Special?</strong></p>
 <p>These flags conditions only work if you set a manual hit count for a condition.</p>
 <h3 id="pauseif"><code>PauseIf</code></h3>
-<p>This will pause activity for all conditions in the same group.</p>
-<p><strong>Note</strong>: Keep in mind this will <strong>not</strong> pause conditions in other groups.</p>
-<p>The <code>PauseIf</code> is used to pause hit count going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when someone simply pauses the game, for example.</p>
+<p>The <code>PauseIf</code> pauses activity for all conditions in the same group. it does NOT pause conditions on other groups (more about <a href="#groups">groups below</a>).</p>
+<p><strong>Note</strong>: keep in mind that <em>all conditions</em> in the sentence above includes <code>ResetIf</code> conditions! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active</strong>.</p>
+<p>The <code>PauseIf</code> is usually used to pause hit count going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when someone simply pauses the game, for example.</p>
 <h3 id="resetif"><code>ResetIf</code></h3>
 <p>This will reset the hit count for conditions you set a manual hit count for. It's much more common to use than <code>PauseIf</code></p>
 <p><strong>Note</strong>: Unlike <em>PauseIf</em>, this will reset conditions in <strong>all groups</strong></p>
@@ -1270,6 +1282,22 @@
                 
               
               
+                
+                  <h2 id="__comments">Comments</h2>
+                  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "None";
+    this.page.identifier =
+      "None";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "//retroachievements.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
                 
               
             </article>
