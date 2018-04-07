@@ -25,7 +25,7 @@ The [RAdocs](https://retroachievements.github.io/docs/) website has (almost) the
 
 You'll need to install [Cygwin](https://cygwin.com/), and the following packages: `git`, `python3`, `python3-pip` and `libyaml-devel`.
 
-After installing the needed packages, perform this command:
+After installing the dependencies, open a terminal and perform this command:
 
 ```
 pip install --upgrade mkdocs mkdocs-material
@@ -35,7 +35,7 @@ pip install --upgrade mkdocs mkdocs-material
 
 ### cloning the repo
 
-After installing the dependencies, open a terminal and clone the repo with this command:
+Clone the repo with this command:
 
 ```
 git clone --depth 1 --recursive https://github.com/RetroAchievements/docs
