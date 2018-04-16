@@ -545,8 +545,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
+  <a href="#alt-groups" title="Alt Groups" class="md-nav__link">
+    Alt Groups
   </a>
   
 </li>
@@ -1217,8 +1217,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
+  <a href="#alt-groups" title="Alt Groups" class="md-nav__link">
+    Alt Groups
   </a>
   
 </li>
@@ -1286,7 +1286,7 @@
 <p>Note: <em>Sub Source</em> subtracts the current value from the additive buffer. It does not subtract the next condition from the current total. The final line (without <em>Add Source</em> or <em>Sub Source</em>) is still added to the additive buffer. Using the <em>Add Source</em> example, if the second item were changed to a <em>Sub Source</em>, the result would be <code>5 - 3 + 20</code>, resulting in <code>22</code>. If both were changed to <em>Sub Source</em>, the result would be <code>- 5 - 3 + 20</code>, resulting in <code>12</code>.</p>
 <h4 id="add-hits"><code>Add Hits</code></h4>
 <p>Will add the hit count for the current condition to the next achievement condition. The total hit count will be used when determining if the hit count for the next non-<em>Add Hits</em> condition is met.</p>
-<h2 id="groups">Groups</h2>
+<h2 id="alt-groups">Alt Groups</h2>
 <p>Achievements can have groups added to them that can act as alternative requirements to unlock an achievement. These are called <em>Alt Groups</em>.</p>
 <p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND at least one Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>
 <p><strong>Tip:</strong> Because the Core group always need to be active, typically you would put conditions there that is common among all the alternative requirements. However, one trick you can use to basically ignore needing a Core group is to give it a condition that is always true such as: </p>
