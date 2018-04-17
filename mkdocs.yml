@@ -29,6 +29,8 @@ extra:
   social:
     - type: globe
       link: http://retroachievements.org/
+    - type: discord
+      link: https://discord.gg/TdfC3r7
     - type: github-alt
       link: https://github.com/RetroAchievements
 
