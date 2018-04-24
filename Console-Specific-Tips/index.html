@@ -1253,14 +1253,14 @@
                   <h1>Console Specific Tips</h1>
                 
                 <p>When excavating the memory of these old consoles it helps to know what the original creators of the games were working with in the first place. If you familiarize yourself with the quirks of your favorite console then set making will be easier and more accurate.</p>
-<h2 id="nes-ranes">NES (RANes)</h2>
-<h3 id="memory-mirroring">Memory Mirroring</h3>
+<h2 id="nes-ranes">NES (RANes)<a class="headerlink" href="#nes-ranes" title="Permanent link">link</a></h2>
+<h3 id="memory-mirroring">Memory Mirroring<a class="headerlink" href="#memory-mirroring" title="Permanent link">link</a></h3>
 <p><img alt="nes_mem_mirror" src="https://user-images.githubusercontent.com/33245078/32608415-e8bd2cf8-c521-11e7-8da5-22c9e09efd8c.png" /></p>
 <p>When using the memory inspector to find variables for NES games, there will be 4 copies of everything you find. If you're wondering "which one do I use?" or "should I check for all of them?" it's not as complicated as it seems.</p>
 <p>This is a feature of the NES that gave developers more ways of looking at memory. Because the NES itself only has 2KB of RAM, the first result (the one below 0x800) should be used for consistency, and applying additional conditions on the others will do nothing.</p>
 <p>This applies to RPS and leaderboards as well.</p>
-<h2 id="game-boy-ravba">Game Boy (RAVBA)</h2>
-<h3 id="memory-map">Memory Map</h3>
+<h2 id="game-boy-ravba">Game Boy (RAVBA)<a class="headerlink" href="#game-boy-ravba" title="Permanent link">link</a></h2>
+<h3 id="memory-map">Memory Map<a class="headerlink" href="#memory-map" title="Permanent link">link</a></h3>
 <p>Certain ranges of values mean different things in the context of the Game Boy hardware, so having a map of what's where can help you with eliminating useless addresses. Here's the lowdown:</p>
 <ul>
 <li>❌ <strong>0x0000 - 0x7FFF: ROM Data</strong> (Typically no reason to use. If you're a super-dedicated developer you could use the 16-bit value at 0x14E along with alt groups to support multiple ROM versions/regions)</li>
@@ -1271,13 +1271,13 @@
 <li>❌ <strong>0xFE00 - 0xFE9F: More Graphics Data</strong> (same as Graphics Data above)</li>
 <li>❌ <strong>0xFEA0 - 0xFFFF: Miscellaneous</strong> (Do not use)</li>
 </ul>
-<p>For more info see: http://gameboy.mongenel.com/dmg/asmmemmap.html</p>
-<h3 id="echo-ram">ECHO RAM</h3>
+<p>For more info see: <a href="http://gameboy.mongenel.com/dmg/asmmemmap.html">http://gameboy.mongenel.com/dmg/asmmemmap.html</a></p>
+<h3 id="echo-ram">ECHO RAM<a class="headerlink" href="#echo-ram" title="Permanent link">link</a></h3>
 <p><img alt="gb_echo_ram" src="https://user-images.githubusercontent.com/33245078/32610144-755a0442-c527-11e7-9bbb-eb5a4d7b8e6d.png" /></p>
 <p>Similarly to the NES, certain variables may show up twice when searching in the Memory Inspector. The second result is in what's called the ECHO RAM, which is a mirror of the actual memory. Since some emulators tend to ignore this area or emulate it incorrectly, it's recommended to NOT use it at all and always use the first result.</p>
 <p>The Game Boy has 4KB of RAM starting at 0xC000. ECHO RAM starts at 0xE000, so if your address begins with an E you'll want to replace the first non-zero character with a C. Remember: C is correct, E is echo!</p>
-<h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)</h2>
-<h3 id="using-gameshark-codes-for-addresses">Using GameShark Codes for Addresses</h3>
+<h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)<a class="headerlink" href="#nintendo-64-rap64" title="Permanent link">link</a></h2>
+<h3 id="using-gameshark-codes-for-addresses">Using GameShark Codes for Addresses<a class="headerlink" href="#using-gameshark-codes-for-addresses" title="Permanent link">link</a></h3>
 <p>GameShark codes can be a valuable resource for finding addresses you can't or don't feel like finding. They have 12 characters per line and are fairly easy to parse.</p>
 <p><code>[AA][BBBBBB] [CCCC]</code></p>
 <p>[AA] is the codetype. This is a short instruction to the GameShark that defines what to do with the next value. If you understand what the GameShark code does you can use it to help with condition-making.</p>
@@ -1392,8 +1392,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

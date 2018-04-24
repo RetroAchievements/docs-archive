@@ -1245,7 +1245,7 @@
                   <h1>Getting Started as an Achievement Developer</h1>
                 
                 <p><strong>Welcome to the world of Achievement Creation!</strong></p>
-<h2 id="basic-concepts">Basic Concepts</h2>
+<h2 id="basic-concepts">Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">link</a></h2>
 <p>Technically <strong>an achievement is a group of conditions that must be met in a particular frame of the video game</strong>.</p>
 <p>When you launch a game on an emulator with the RetroAchievements feature, the emulator is always checking if those conditions are met in the current frame. When all conditions for a particular achievement are met, it is awarded and the emulator stops checking the conditions for that achievement.</p>
 <p>The process of creating an achievement basically involves 3 steps:</p>
@@ -1263,11 +1263,11 @@
 <p>Most likely you'll go back to step 2 and 3 many times to refine the logic of your Achievement.</p>
 <p>In this doc we'll see how to accomplish the steps above.</p>
 <p>After you're sure your achievement is triggering at the conditions you want, you can submit it to the server. We'll see more about it later.</p>
-<h2 id="first-steps">First Steps</h2>
+<h2 id="first-steps">First Steps<a class="headerlink" href="#first-steps" title="Permanent link">link</a></h2>
 <p>Before start ensure you have an RA emulator from the <a href="http://retroachievements.org/download.php">RetroAchievements Download Page</a> first and <a href="http://retroachievements.org/createaccount.php">create an account</a> so you can log in using the emulator.</p>
 <p>In this guide we'll be using RAGens to demonstrate, and the game <a href="http://retroachievements.org/Game/1">Sonic the Hedgehog</a>. We are using RAGens but the same applies for the other emulators.</p>
 <p>To begin, run the RAGens executable, and login when prompted. Next, use File -&gt; Open and select whatever ROM you would like to find achievements for.</p>
-<h2 id="memory-inspector">Memory Inspector</h2>
+<h2 id="memory-inspector">Memory Inspector<a class="headerlink" href="#memory-inspector" title="Permanent link">link</a></h2>
 <p>You should now have your main window running Sonic. There are 3 other dialogs we'll be using, which can be found under <strong>RetroAchievements</strong> in the menu. We'll be dealing with the <strong>Memory Inspector</strong> first:</p>
 <p><img alt="memoryinspector" src="https://user-images.githubusercontent.com/8508804/38775207-485b706e-4053-11e8-9a94-842e7fd838e1.png" /></p>
 <p>The Memory Inspector can be used to find addresses in RAM for us to use. Essentially you are on a treasure hunt for memory locations - this dialog will help you examine and filter the game's RAM while the game is running.</p>
@@ -1303,7 +1303,7 @@
 </ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
 <p>You can find more useful <a href="../Tips-and-Tricks#memory-digging-tips">Memory Digging Tips here</a>.</p>
-<h2 id="achievement-sets">Achievement Sets</h2>
+<h2 id="achievement-sets">Achievement Sets<a class="headerlink" href="#achievement-sets" title="Permanent link">link</a></h2>
 <p>OK so the memory location for the number of rings is stored at <code>0xfe20</code> - note to a non-programmer, we're dealing in <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">hexadecimal numeral system</a> which can be daunting, but don't worry, essentially its just numbers and letters instead of only numbers, and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement.</p>
 <p>Go to the <strong>RetroAchievements</strong> in the menu, choose <strong>Achievement Sets</strong> and you'll see this dialog:</p>
 <p><img alt="achievement_sets" src="https://user-images.githubusercontent.com/8508804/33129271-7d562cbc-cf76-11e7-8346-c19400975d40.png" /></p>
@@ -1320,7 +1320,7 @@
 </li>
 </ol>
 <p>In the Achievements dialog, click <strong>Local Achievements</strong> (top left), then <strong>Add New Achievement</strong> (bottom left). This will add a blank entry to the list in the center. Double click on it: if it's not already open, this should select it and open the <strong>Achievement Editor</strong> dialog.</p>
-<h2 id="achievement-editor">Achievement Editor</h2>
+<h2 id="achievement-editor">Achievement Editor<a class="headerlink" href="#achievement-editor" title="Permanent link">link</a></h2>
 <p>This is how it looks:</p>
 <p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
 <p>This is the final dialog where we bring all the data together. Most of the top fields are self explanatory, I.e. Title, Description, Points. The main one is the 'Requirements' part.</p>
@@ -1340,12 +1340,12 @@
 <ul>
 <li><strong>Note</strong>: usually achievements have more than one requirement to avoid it triggering in a wrong time (i.e. playing demo mode). In this example we are using only one requirement just to simplify the explanation. See more <a href="../Tips-and-Tricks#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
 </ul>
-<h2 id="testing-the-achievement">Testing the Achievement</h2>
+<h2 id="testing-the-achievement">Testing the Achievement<a class="headerlink" href="#testing-the-achievement" title="Permanent link">link</a></h2>
 <p>We can now 'activate' this achievement locally by hitting <strong>Activate</strong> on the right-hand side. This will start monitoring these memory locations and will award the achievement once all the conditions are true. Now we can go ahead and test to see if this achievement works!</p>
 <p><img alt="testing_achievements" src="https://user-images.githubusercontent.com/8508804/32601362-83dcb788-c529-11e7-8df9-b79038408909.png" /></p>
 <p>If we press <code>Esc</code> n-game, you will see the achievement show up as a demonstration of what it would look like in the in-game overlay!</p>
 <p><img alt="testing_achievements2" src="https://user-images.githubusercontent.com/8508804/32601363-83fced8c-c529-11e7-885f-97d64b0384e5.png" /></p>
-<h2 id="avoiding-bugs">Avoiding Bugs</h2>
+<h2 id="avoiding-bugs">Avoiding Bugs<a class="headerlink" href="#avoiding-bugs" title="Permanent link">link</a></h2>
 <p>The cheevo we created in this tutorial is very simple, it has only one condition: "collected rings &gt;= 15". But the address to record the number of collected rings is also used when the game runs in "demo mode" (AI playing the game after your wait a while on the title screen). So, if Sonic collect 15 rings on demo mode this achievement will trigger, which is unwanted.</p>
 <p>So here are some tips you always have to keep in mind when creating your achievements:</p>
 <ul>
@@ -1359,7 +1359,7 @@
 <p><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating a real achievement set.</p>
 </li>
 </ul>
-<h2 id="ok-the-achievement-works-now-what">OK, the Achievement works. Now What?</h2>
+<h2 id="ok-the-achievement-works-now-what">OK, the Achievement works. Now What?<a class="headerlink" href="#ok-the-achievement-works-now-what" title="Permanent link">link</a></h2>
 <p>Once we have tested that the achievement works locally, there is a two-step commit process:</p>
 <ol>
 <li>
@@ -1370,7 +1370,7 @@
 </li>
 </ol>
 <p>Naturally, it's best only to submit achievements that are unique and interesting into the Core Achievements group. If there are duplicates in the Core group, the most recently added duplicates will be manually moderated and deleted. If you don't want your achievement in the Core group, or you think it might not be appropriate for the Core group (i.e. if it's incomplete, or if sometimes it appears to trigger when it's not supposed to, like when the game is showing a demo), leave it in the Unofficial/User Submitted section.</p>
-<h2 id="next-steps">Next Steps</h2>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">link</a></h2>
 <p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
 <ul>
 <li>
@@ -1471,8 +1471,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

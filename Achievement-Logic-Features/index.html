@@ -1285,7 +1285,7 @@
                 <p>There are several tools and options available to a developer. Knowing how to properly utilize them will improve the quality of your sets. These tools/options can be used in the Achievement Editor:</p>
 <p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
 <p>For more help regarding these, our <a href="https://discord.gg/TdfC3r7">Discord server</a> is always open for assistance.</p>
-<h2 id="delta-values">Delta Values</h2>
+<h2 id="delta-values">Delta Values<a class="headerlink" href="#delta-values" title="Permanent link">link</a></h2>
 <p>A <code>Delta</code> value is the previous frame's value.</p>
 <p>Examples of how it can be used:</p>
 <ul>
@@ -1293,36 +1293,36 @@
 <li>Detect damage: <code>health &lt; delta health</code>. It means "current health is smaller than the previous frame's health". Or you can just make the previous frame's value a requirement. <code>health delta = 1</code> means "the previous frame's value for health must be 1 when the achievement pops up."</li>
 </ul>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
-<h2 id="hit-counts">Hit Counts</h2>
+<h2 id="hit-counts">Hit Counts<a class="headerlink" href="#hit-counts" title="Permanent link">link</a></h2>
 <p>In the Achievement Editor, it's the field on the far right side is Hit Count.</p>
 <p>Zero is default, none. It means the condition must be true when the achievement pops.</p>
 <p>If you set a manual hit count, like 1, it means the condition must be true for at least 1 frame, and once that hit count is met, it doesn't need to be met again at any other time.</p>
 <p><strong>PLEASE NOTE</strong>: if a condition has a hit count, and reaches the number required, this condition is no longer tested. It is true and remains true, <strong>UNLESS</strong> you have a <code>Reset If</code>, which we will discuss below.</p>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
-<h2 id="special-flags">Special Flags</h2>
+<h2 id="special-flags">Special Flags<a class="headerlink" href="#special-flags" title="Permanent link">link</a></h2>
 <p>In the Achievement Editor, it's the field titled as <strong>Special?</strong></p>
 <p>These flags conditions only work if you set a manual hit count for a condition.</p>
-<h3 id="pauseif"><code>PauseIf</code></h3>
+<h3 id="pauseif"><code>PauseIf</code><a class="headerlink" href="#pauseif" title="Permanent link">link</a></h3>
 <p>The <code>PauseIf</code> pauses activity for all conditions in the same group. it does NOT pause conditions on other groups (more about <a href="#groups">groups below</a>).</p>
 <p><strong>Note</strong>: keep in mind that <em>all conditions</em> in the sentence above includes <code>ResetIf</code> conditions! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active</strong>.</p>
 <p>The <code>PauseIf</code> is usually used to pause hit count going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when someone simply pauses the game, for example.</p>
-<h3 id="resetif"><code>ResetIf</code></h3>
+<h3 id="resetif"><code>ResetIf</code><a class="headerlink" href="#resetif" title="Permanent link">link</a></h3>
 <p>This will reset the hit count for conditions you set a manual hit count for. It's much more common to use than <code>PauseIf</code></p>
 <p><strong>Note</strong>: Unlike <em>PauseIf</em>, this will reset conditions in <strong>all groups</strong></p>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
-<h3 id="n64-special-flags">N64 Special Flags</h3>
+<h3 id="n64-special-flags">N64 Special Flags<a class="headerlink" href="#n64-special-flags" title="Permanent link">link</a></h3>
 <p>When developing for <strong>N64</strong>, there are additional <em>"arithmetic flag operations"</em> that can be used. These flags are currently exclusive to N64. Please note, any condition with arithmetic flags are always considered <strong>true</strong>, regardless of their comparison values.</p>
-<h4 id="add-source"><code>Add Source</code></h4>
+<h4 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h4>
 <p>Will add the value of the source in the field labeled <code>Memory</code> to the next achievement condition. The total value will be used in the next achievement condition.</p>
 <p><img alt="Add Source Example" src="https://i.imgur.com/7rMkSNt.png" /></p>
 <p>In this example, conditions #1 and #2 will have their values (<code>5</code> and <code>3</code> respectively) added until they reach condition #3. At that point, the value contained in the <code>Memory</code> field will be <code>5 + 3 + 20</code>, and it's new value will be <code>28</code>. Condition #3 will now be <em>true</em> and read as:
 <code>28 &gt; 20</code></p>
-<h4 id="sub-source"><code>Sub Source</code></h4>
+<h4 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h4>
 <p>Works similarly to <em>Add Source</em>, but will instead subtract the source value. </p>
 <p>Note: <em>Sub Source</em> subtracts the current value from the additive buffer. It does not subtract the next condition from the current total. The final line (without <em>Add Source</em> or <em>Sub Source</em>) is still added to the additive buffer. Using the <em>Add Source</em> example, if the second item were changed to a <em>Sub Source</em>, the result would be <code>5 - 3 + 20</code>, resulting in <code>22</code>. If both were changed to <em>Sub Source</em>, the result would be <code>- 5 - 3 + 20</code>, resulting in <code>12</code>.</p>
-<h4 id="add-hits"><code>Add Hits</code></h4>
+<h4 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h4>
 <p>Will add the hit count for the current condition to the next achievement condition. The total hit count will be used when determining if the hit count for the next non-<em>Add Hits</em> condition is met.</p>
-<h2 id="alt-groups">Alt Groups</h2>
+<h2 id="alt-groups">Alt Groups<a class="headerlink" href="#alt-groups" title="Permanent link">link</a></h2>
 <p>Achievements can have groups added to them that can act as alternative requirements to unlock an achievement. These are called <em>Alt Groups</em>.</p>
 <p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND at least one Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>
 <p><strong>Tip:</strong> Because the Core group always need to be active, typically you would put conditions there that is common among all the alternative requirements. However, one trick you can use to basically ignore needing a Core group is to give it a condition that is always true such as: </p>
@@ -1415,8 +1415,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

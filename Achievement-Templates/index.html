@@ -1230,12 +1230,12 @@
                 
                   <h1>Achievement Templates</h1>
                 
-                <h2 id="warning-every-game-is-different"><strong>WARNING: EVERY GAME IS DIFFERENT!</strong></h2>
+                <h2 id="warning-every-game-is-different"><strong>WARNING: EVERY GAME IS DIFFERENT!</strong><a class="headerlink" href="#warning-every-game-is-different" title="Permanent link">link</a></h2>
 <p>Here you'll see examples of some typical achievements. You can use them as inspiration to create your own achievement. But keep in mind the following:</p>
 <p><strong>EVERY GAME IS DIFFERENT! The memory has a different behavior from game to game.</strong></p>
 <p>So do <strong>NOT</strong> take these examples as a rule. They are here just for educational purposes.</p>
 <p>In these examples we use the following convention <strong>0xLEVEL</strong> is the memory address with the level ID; <strong>0xLIFE</strong> is the address used for the character life; <strong>0xTIME</strong> for time, <strong>0xITEM</strong> for getting an item, etc...</p>
-<h2 id="finish-level-n">Finish Level N</h2>
+<h2 id="finish-level-n">Finish Level N<a class="headerlink" href="#finish-level-n" title="Permanent link">link</a></h2>
 <p>In this example we want to award when the player finish the level <code>N</code> and goes to level <code>N+1</code>.</p>
 <table>
 <thead>
@@ -1310,7 +1310,7 @@
 <li>Level increased (from title/password screen to level 3): TRUE</li>
 </ol>
 <p>And it would be enough to trigger the cheevo (at a wrong time). That's why we're using the <code>ResetIf</code> in this example.</p>
-<h2 id="finish-level-n-before-time-reaches-t">Finish Level N before Time reaches T</h2>
+<h2 id="finish-level-n-before-time-reaches-t">Finish Level N before Time reaches T<a class="headerlink" href="#finish-level-n-before-time-reaches-t" title="Permanent link">link</a></h2>
 <p>In this example we consider a game where the time decreases (e.g.: Super Mario Bros). Adapt it accordingly the time on your game has a different behavior.</p>
 <p>We want to award if the player finishes the level <code>N</code> while time is greater than <code>T</code>.</p>
 <table>
@@ -1379,7 +1379,7 @@
 <li>5: timer is greater than <code>T</code>.</li>
 </ul>
 <p><strong>Keep in mind that besides knowing how the time behaves in game you also need to research how it behaves in memory.</strong></p>
-<h2 id="finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc">Finish Level N without Dying (or getting hit, using a weapon, etc.)</h2>
+<h2 id="finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc">Finish Level N without Dying (or getting hit, using a weapon, etc.)<a class="headerlink" href="#finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
@@ -1456,7 +1456,7 @@
 <li>6: reset hit count if life decreased.</li>
 </ul>
 <p>The requirement 6 can also be used to reset hit count if a weapon was used, damage taken, or anything else that you want the player to NOT do.</p>
-<h2 id="finish-level-n-with-item">Finish Level N with Item</h2>
+<h2 id="finish-level-n-with-item">Finish Level N with Item<a class="headerlink" href="#finish-level-n-with-item" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
@@ -1522,7 +1522,7 @@
 <ul>
 <li>5: the player have the item</li>
 </ul>
-<h2 id="collect-an-item-in-a-specific-level">Collect an Item in a specific Level</h2>
+<h2 id="collect-an-item-in-a-specific-level">Collect an Item in a specific Level<a class="headerlink" href="#collect-an-item-in-a-specific-level" title="Permanent link">link</a></h2>
 <p>Here's a way to check if an item is collected in the level/room ID it is supposed to be collected. It avoids awarding an "get item X" by loading a savestate where player already has the item.</p>
 <table>
 <thead>
@@ -1575,7 +1575,7 @@
 <p>Requirements 1 and 3 together mean "arrived the level/Room ID without the item".</p>
 <p>Even if the player loads a savestate and goes to the required level they will not be able to add hits to condition 1, thus they can't get it except in normal gameplay.  </p>
 <p>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</p>
-<h2 id="check-for-a-specific-value-changing-to-another-specific-value-ten-times">Check for a specific value changing to another specific value ten times</h2>
+<h2 id="check-for-a-specific-value-changing-to-another-specific-value-ten-times">Check for a specific value changing to another specific value ten times<a class="headerlink" href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Permanent link">link</a></h2>
 <p>In this example we want to detect a value changing from <code>V1</code> to <code>V2</code> ten times:</p>
 <table>
 <thead>
@@ -1623,7 +1623,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="conditional-resets">Conditional Resets</h2>
+<h2 id="conditional-resets">Conditional Resets<a class="headerlink" href="#conditional-resets" title="Permanent link">link</a></h2>
 <p>Conditional resets can be used for many things.</p>
 <p>Lets say you want to have a reset if a player enters a certain X and Y zone of a level:</p>
 <p><strong>CORE</strong>  </p>
@@ -1815,8 +1815,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

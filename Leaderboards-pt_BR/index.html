@@ -1248,10 +1248,10 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Leaderboards-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="leaderboards">Leaderboards</h1>
+                <h1 id="leaderboards">Leaderboards<a class="headerlink" href="#leaderboards" title="Permanent link">link</a></h1>
 <p><strong>Link para o texto em inglês:</strong> <a href="../Leaderboards">Leaderboards</a></p>
 <p>Atualmente Leaderboards podem ser editadas por desenvolvedores no site. É uma interface bastante confusa e um trabalho difícil para fazer com que uma leaderboard funcione corretamente. É realmente necessário cuidado e atenção para obter uma boa leaderboard, então, neste documento nós vamos tentar entender como isto funciona.</p>
-<h2 id="visao-geral">Visão Geral</h2>
+<h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">link</a></h2>
 <p>Isto é como uma lista de Leaderboard de um jogo aparece no site</p>
 <p><img alt="leaderboard_list" src="https://user-images.githubusercontent.com/8508804/33172797-ad9b2f22-d038-11e7-97fe-09116181ddfa.png" /></p>
 <p>No centro você pode ver todas as Leaderboard feitas, e na coluna direita você pode ver as <strong>Code Notes (Notas de Código)</strong>. As Code Notes estão aqui para ajudar com algumas condições que veremos abaixo.</p>
@@ -1271,7 +1271,7 @@
 <p>A condição <strong>STA</strong> ou <strong>Start</strong> é uma série de condições, como uma conquista, que devem ser verdadeiras para começar a a Leaderboard. Uma vez que o <strong>STA</strong> for verdadeiro, o jogo irá começar a monitorar as condições CAN, SUB e VAL.</p>
 <p>Se a condição <strong>Cancel</strong> (<strong>CAN</strong>) for verdadeira, ela irá cancelar todo o progresso relativo ao envio da leaderboard. Se no entanto a condição <strong>Submit</strong> (<strong>SUB</strong>) for verdadeira, então, o placar gerado na leaderboard será enviado</p>
 <p>Finalmente, o <strong>Valor</strong> (<strong>VAL</strong>) é um caso especial, e irá ser obtido da memória usando a fórmula iniciada na caixa de memória (memory box)</p>
-<h2 id="formato-do-endereco">Formato do Endereço</h2>
+<h2 id="formato-do-endereco">Formato do Endereço<a class="headerlink" href="#formato-do-endereco" title="Permanent link">link</a></h2>
 <p>O Endereço de memória para STA/CAN/SUB/VAL tem o segunte formato:</p>
 <table>
 <thead>
@@ -1349,14 +1349,14 @@
 </tr>
 </tbody>
 </table>
-<h2 id="exemplo">Exemplo</h2>
+<h2 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">link</a></h2>
 <p>O melhor lugar para iniciar é olhando uma das leaderboards existentes <a href="http://retroachievements.org/leaderboardList.php">http://retroachievements.org/leaderboardList.php</a> e desmontar para ver como funciona. Nós iremos usar o <a href="http://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> para este propósito. Vamos ver como fica:</p>
 <p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
 <p>Os campos <strong>Title</strong> e <strong>Description</strong> são um pouco óbvios.</p>
 <p>O <strong>Type</strong> é "Time (Frame)". Em Sonic cada 60 frames equivale a 1 segundo, então vamos monitorar o tempo usando os frames.</p>
 <p>A checkbox <strong>Lower Is Better</strong> está marcada, entao aquele que fizer o tempo mais curto será o #1.</p>
 <p>Agora nos vamos explicar as partes mais importantes.</p>
-<h3 id="condicoes-de-inicio">Condições de Início</h3>
+<h3 id="condicoes-de-inicio">Condições de Início<a class="headerlink" href="#condicoes-de-inicio" title="Permanent link">link</a></h3>
 <p><strong>STA</strong>: <code>0xfe10=h0000_0xhf601=h0c_d0xhf601!=h0c_0xfff0=0</code></p>
 <ul>
 <li><code>0xfe10=h0000</code>: Se o endereço da RAM 0xfe10 é equivalente hex 0000,</li>
@@ -1373,20 +1373,20 @@
 <li><code>0xf601</code> é um endereço de memória de 8 bits, e nos usamos o prefixo <code>0xh</code> em vez de <code>0x</code> para significar isso. <code>0xf601</code> é o modo de tela. A segunda e a terceira parte desta Condição de Início está dizendo "o modo atual deve ser <em>ingame</em> (<code>0c</code>), e o modo no frame anterior NÃO deve ser <em>ingame</em>". <strong>Nota</strong>: O prefixo "d" no endereço representa delta, ou "o valor do frame anterior". <strong>Resumindo</strong>: ative o leaderboard imediatamente após iniciar uma fase (a partir daí vamos começar a medir o tempo).</li>
 <li>Finalmente nós além de esperar que <code>0xfff0</code> seja aquivalente a <code>0</code>, porque <code>0xfff0</code> é o modo de demonstração e nós não queremos enviar pontuações para a leaderboard quando a demo estiver ativa!</li>
 </ul>
-<h3 id="condicoes-de-cancelamento">Condições de Cancelamento</h3>
+<h3 id="condicoes-de-cancelamento">Condições de Cancelamento<a class="headerlink" href="#condicoes-de-cancelamento" title="Permanent link">link</a></h3>
 <p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
 <ul>
 <li><code>0xfe13</code> é o numero de vidas.</li>
 </ul>
 <p>A seção de cancelamento checa se o contador de VIDAS do jogador se tormar menor. Literalmente, isto diz "Cancela se o ATUAL valor em 0xfe13 é menor que o valor ANTERIOR em 0xfe13. Nós queremos que faça isso porque voce pode alcançar o checkpoint final e correr fora do tempo, resetando seu contador para 0:00. Nos não queremos permitir isso, porque isto não é a forma correta de completar o nivel. Então, se o jogardor morrer, nós resetamos o progresso do leaderboard dele.</p>
-<h3 id="condicoes-de-envio">Condições de envio</h3>
+<h3 id="condicoes-de-envio">Condições de envio<a class="headerlink" href="#condicoes-de-envio" title="Permanent link">link</a></h3>
 <p><strong>SUB</strong>: <code>0xf7cc!=0_d0xf7cc=0</code></p>
 <ul>
 <li><code>0xf7cc</code> isto é a bandeira de final de fase, não-interativo.</li>
 </ul>
 <p>A seção de envio checa se o frame atual tem o marcador de 'endlevel' (fim de fase) for para verdadeiro (ou <code>!=0</code>, 'naozero'), e o frame anterior (delta) tem isto para ser falso (ou <code>=0</code>, 'zero'). Isto sugere que o jogador chegou ao fim do nivel, e provou ser um benchmark bastante robusto</p>
 <p><strong>Dica</strong>: isto pode ser útil para observar estes valores na memória para ver como eles executam, e que tipo de valores eles terminam em diferentes circunstâncias.</p>
-<h3 id="interpretador-de-valores">Interpretador de Valores</h3>
+<h3 id="interpretador-de-valores">Interpretador de Valores<a class="headerlink" href="#interpretador-de-valores" title="Permanent link">link</a></h3>
 <p><strong>VAL</strong>: <code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
 <p>Finalmente, valores. Uma vez que o jogador chegou ao inicio da condição, eles irão ser mostrados em uma caixa quue permanece na tela, aparecendo o progresso deles até agora. Se é uma leaderboard de tempo, será um relógio, e se for uma pontuação, será apenas o valor. Se eles cumprirem a condição de cancelamento, eles serão informados de que eles falharam, e o pop-up será removido. Se caso o jogador chegar com sucesso à condição de envio, o valor atual será pego e submetido como pontuação. o pop-up ingame irá informar o jogador o tão longe da leaderboard, e a posição deles na leaderboard.</p>
 <p>A condição de valor é especial em poucas maneiras. Ele é avaliado constantemente e exibido na tela o tempo todo quando a leaderboard está ativa. Isto não funciona como as outras condições. Isto espera endereços da seguinte maneira:</p>
@@ -1399,7 +1399,7 @@
 8-bit <code>0xfe22</code> vezes 3600</p>
 <p>A razão para isso é que os valores em cada um desses endereços significam frames, segundos e minutos respectivamentes. Quando nos adicionamos esses valores juntos, nós conseguimos um grande total em frames que vamos enviar para o "Banco de dados".</p>
 <p>Lembre que o campo 'Formato' pode ser <strong>Pontuação</strong>, <strong>Tempo (Frames)</strong>, <strong>Tempo (Milisegundos)</strong> ou <strong>Valor</strong>. <strong>Tempo(Frames)</strong> é o mais comum, e representa 'frames'. <strong>Tempo (Milisegundos)</strong> espera um valor que nos podemos converter diretamente para milisegundos. (Super Mario Kart usa isso). No entanto, para converter um valor em frame dentro de um formato "para ser lidos por humanos", nos devemos dividiu o valor por 60 para uma representação de segundos correta, e um valor em milisegundos deve ser dividido por 100 para conseguir o numero de segundos. Isso é usado no site e no aplicativo para exibir o valor apropriadamente, e é importante para distinguir, para que possamos ter certeza de obter o valor mais preciso do emulador, usando qualquer formato que eles usem para registrar o tempo.</p>
-<h2 id="ajuda-adicional">Ajuda Adicional</h2>
+<h2 id="ajuda-adicional">Ajuda Adicional<a class="headerlink" href="#ajuda-adicional" title="Permanent link">link</a></h2>
 <p>Infelizmente há <em>MUITAS</em> maneiras de este processo dar errado, então, se voce tiver algum problema, sinta-se livre pra pedir ajuda em nosso <a href="https://discord.gg/TdfC3r7">servidor do Discord</a>.</p>
 <p>Se você quer praticar, é altamente recomendado criar sua própria leaderboard e tentar alguma coisa em um novo jogo, melhor que usar uma leaderboard existente</p>
 <p>Por favor, lembre-se que esses arquivos são puxados diretamente para o jogo de alguém se eles decidirem jogá-lo, e uma má formação de endereço de memória ou linha pode causar um crash no emulador, então por favor, teste seu código da leaderboard!</p>
@@ -1490,8 +1490,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

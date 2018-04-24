@@ -1236,14 +1236,14 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Achievement-Templates-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="modelos-de-conquistas">Modelos de Conquistas</h1>
+                <h1 id="modelos-de-conquistas">Modelos de Conquistas<a class="headerlink" href="#modelos-de-conquistas" title="Permanent link">link</a></h1>
 <p><strong>Link para o texto em inglês:</strong> <a href="../Achievement-Templates">Achievement Templates</a></p>
-<h2 id="atencao-todo-jogo-e-diferente"><strong>ATENÇÃO: TODO JOGO É DIFERENTE!</strong></h2>
+<h2 id="atencao-todo-jogo-e-diferente"><strong>ATENÇÃO: TODO JOGO É DIFERENTE!</strong><a class="headerlink" href="#atencao-todo-jogo-e-diferente" title="Permanent link">link</a></h2>
 <p>Aqui você irá ver exemplos de algumas conquistas tipícas. Você pode usar elas como inspiração para criar suas conquistas. Mas mantenha em mente o seguinte:</p>
 <p><strong>TODO O JOGO É DIFERENTE! A memória tem uma diferença de comportamento de jogo para jogo.</strong></p>
 <p>Então <strong>NÃO</strong> faça desses exemplos como regras. Elas estão aqui apenas para fins educacionais.</p>
 <p>Nesses exemplos nós usamos a seguinte convenção  <strong>0xNIVEL</strong> é o endereço de memória (memory address) com o ID de nível; <strong>0xVIDA</strong> é o endereço usado para a vida do personagem; <strong>0xTEMPO</strong> para obter um item, etc...</p>
-<h2 id="termine-nivel-n">Termine Nível N</h2>
+<h2 id="termine-nivel-n">Termine Nível N<a class="headerlink" href="#termine-nivel-n" title="Permanent link">link</a></h2>
 <p>Neste exemplo nós queremos premiar quando o jogador terminar o nível <code>N</code> e vá para o nível <code>N+1</code></p>
 <table>
 <thead>
@@ -1318,7 +1318,7 @@
 <li>Nível aumentado (Do titulo/tela de password para o nível 3): VERDADEIRO</li>
 </ol>
 <p>E seria o suficiente para ativar a conquista (no momento errado). É por isso que nos estamos usando o <code>ResetIf</code> neste exemplo</p>
-<h2 id="termine-nivel-n-antes-que-o-tempo-atinja-t">Termine Nível N antes que o Tempo atinja T</h2>
+<h2 id="termine-nivel-n-antes-que-o-tempo-atinja-t">Termine Nível N antes que o Tempo atinja T<a class="headerlink" href="#termine-nivel-n-antes-que-o-tempo-atinja-t" title="Permanent link">link</a></h2>
 <p>Neste exemplo vamos considerar um jogo quando o tempo diminuir (ex: Super Mario Bros). Adaptar-lo de acordo com o tempo no seu jogo tem um comportamento diferente.</p>
 <p>Nós queremos premiar se o jogardor finalizar o nível <code>N</code> enquanto o tempo for maior que <code>T</code></p>
 <table>
@@ -1387,7 +1387,7 @@
 <li>5: O tempo é maior que <code>T</code>.</li>
 </ul>
 <p><strong>Mantenha em mente que por trás de além saber como o tempo se comporta no jogo, além disso você precisa pesqusar como se comporta na memória</strong></p>
-<h2 id="terminar-nivel-n-sem-morrer-ou-ser-atingido-usando-uma-arma-etc">Terminar Nível N sem Morrer (ou ser atingido, usando uma arma, etc.)</h2>
+<h2 id="terminar-nivel-n-sem-morrer-ou-ser-atingido-usando-uma-arma-etc">Terminar Nível N sem Morrer (ou ser atingido, usando uma arma, etc.)<a class="headerlink" href="#terminar-nivel-n-sem-morrer-ou-ser-atingido-usando-uma-arma-etc" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
@@ -1464,7 +1464,7 @@
 <li>6: resete o contador de hits se a vida diminuir.</li>
 </ul>
 <p>O requerimento 6 pode também ser usando para resetar o contador de hits se uma arma for usada, tomado dano, ou qualquer coisa além daquilo que você não quer que o jogador faça</p>
-<h2 id="termine-o-nivel-n-com-item">Termine o Nível N com Item</h2>
+<h2 id="termine-o-nivel-n-com-item">Termine o Nível N com Item<a class="headerlink" href="#termine-o-nivel-n-com-item" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
@@ -1530,7 +1530,7 @@
 <ul>
 <li>5: o jogador tem o item</li>
 </ul>
-<h2 id="colete-o-item-em-um-nivel-especifico">Colete o Item em um nível específico</h2>
+<h2 id="colete-o-item-em-um-nivel-especifico">Colete o Item em um nível específico<a class="headerlink" href="#colete-o-item-em-um-nivel-especifico" title="Permanent link">link</a></h2>
 <p>Aqui está uma forma de checar se o item foi coletado em um nível/sala que deve ser coletado. Isto evita a premiação à "consiga item X" por carregando um savestate onde o jogador já tem o item.</p>
 <table>
 <thead>
@@ -1583,7 +1583,7 @@
 <p>Requerimentos 1 e 3 juntos significa "chegou ao nível/sala sem o item"</p>
 <p>Mesmo se o jogador carregar um savestave e for para o nível requerido eles não poderão adicionar hits para a condição 1, portanto eles não podem conseguir exceto em gameplay normal</p>
 <p>Não precisa ser necessariamente nível/sala. Há outras maneiras de abordar esse problema, por exemplo uma única Memória/Valor que apenas ocorre na coletagem. Etc</p>
-<h2 id="cheque-por-um-valor-especifico-mudando-para-outro-valor-especifico-dez-vezes">Cheque por um valor específico mudando para outro valor específico dez vezes</h2>
+<h2 id="cheque-por-um-valor-especifico-mudando-para-outro-valor-especifico-dez-vezes">Cheque por um valor específico mudando para outro valor específico dez vezes<a class="headerlink" href="#cheque-por-um-valor-especifico-mudando-para-outro-valor-especifico-dez-vezes" title="Permanent link">link</a></h2>
 <p>Neste exemplo nós queremos para detectar uma mudança de valor de <code>V1</code> para <code>V2</code> dez vezes:</p>
 <table>
 <thead>
@@ -1631,7 +1631,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="resets-condicionais">Resets Condicionais</h2>
+<h2 id="resets-condicionais">Resets Condicionais<a class="headerlink" href="#resets-condicionais" title="Permanent link">link</a></h2>
 <p>Resets Condicionais podem ser usado para muitas coisas.</p>
 <p>Vamos dizer que você quer para resetar se um jogador entrar ema certa zona X e Y de um nível:</p>
 <p><strong>CORE</strong>  </p>
@@ -1823,8 +1823,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

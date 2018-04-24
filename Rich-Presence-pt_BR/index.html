@@ -1358,21 +1358,21 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Rich-Presence-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="estado-de-presenca">Estado de Presença</h1>
+                <h1 id="estado-de-presenca">Estado de Presença<a class="headerlink" href="#estado-de-presenca" title="Permanent link">link</a></h1>
 <p><strong>link para texto em inglês:</strong> <a href="https://github.com/RetroAchievements/docs/wiki/Rich-Presence">Rich Presence</a></p>
-<h2 id="introducao">Introdução</h2>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">link</a></h2>
 <p>O Estado de Presença <strong>(EP)</strong>, ou <strong>(RE)</strong> pelas siglas em inglês, é uma breve visão geral do que os jogadores ativos estão fazendo atualmente em seu jogo. Para ter RP em um jogo, você precisa de um <strong>Script (roteiro) do Estado de Presença (SEP) ou, Rich Presence Script (RPS)</strong>, pelas siglas em inglês, criado pelos Desenvolvedores. O Script verifica a memória do jogo do jogador e como programado relata os valores de certos endereços com definições atribuídas pelo Desenvolvedor, como em qual estágio o jogador está, quantas vidas eles têm, se o jogo está em pausa, que modo de jogo eles estão jogando, o que o jogador realizou, etc. Esta informação é reportada de volta ao site. <strong>Todo jogo publicado precisa de pelo menos um (SEP)(RPS) básico.</strong></p>
 <p><strong>Exemplo de EP em ação:</strong></p>
 <p><img alt="" src="https://camo.githubusercontent.com/cc1e8cea190f192a5b3beb2e5a700f068615a342/68747470733a2f2f692e696d6775722e636f6d2f4535303937737a2e706e67" /></p>
 <p>Para ver o EP ao vivo em um jogo, clique no menu RetroAchievements no seu emulador e clique em <strong>Rich Presence Monitor.</strong> Uma pequena janela mostrará seu EP ativo. (Bom para depuração)</p>
 <p><img alt="" src="https://camo.githubusercontent.com/1415c78f7c231279dc6f2ea74f21973195359e96/68747470733a2f2f692e696d6775722e636f6d2f586b435a6f4c472e706e67" /></p>
 <p>A melhor maneira de entender o Estado de Presença é olhar para vários exemplos no jogo, olhar para os endereços usados e ver como o texto é exibido no Rich Presence Monitor e no site.</p>
-<h2 id="como-funciona">Como funciona?</h2>
+<h2 id="como-funciona">Como funciona?<a class="headerlink" href="#como-funciona" title="Permanent link">link</a></h2>
 <p>Toda vez que um jogo é iniciado, ele busca os achievements em um arquivo 'patch' para a ROM, que detalha todos os achievements e endereços de memória (e leaderboards) que podem ser observados. Ele também solicitará um Rich Presence Script para a ROM atualmente carregada. O emulador informará o site a cada 120 segundos. Da mesma forma, a cada 120 segundos mais ou menos, a caixa de 'jogadores ativos' na frontpage será atualizada, detalhando a última atividade conhecida de todos os jogadores ativos. Se não houver um script do estado de presença, o texto estará "ganhando achievements" se estiver jogando um jogo com achievements, "jogando [jogo]" se estiver jogando sem achievements ou "desenvolvendo achievements" se a caixa de diálogo de memória estiver aberta e visível.</p>
 <p>O SEP ou RPS pelas siglas em inglês, para cada jogo pode ser encontrado na seção de desenvolvimento na página de cada jogo:</p>
 <p><img alt="" src="https://camo.githubusercontent.com/cc05291f1f0da98ef8fd429fbdd6f201735c3edb/68747470733a2f2f692e696d6775722e636f6d2f7371784f6a794c2e706e67" /></p>
 <p><img alt="" src="https://camo.githubusercontent.com/5b5837925fd7507fd47f1e25ff000e68d568d980/68747470733a2f2f692e696d6775722e636f6d2f6537716f614e782e706e67" /></p>
-<h2 id="exemplo-super-mario-bros">Exemplo (Super Mario Bros.)</h2>
+<h2 id="exemplo-super-mario-bros">Exemplo (Super Mario Bros.)<a class="headerlink" href="#exemplo-super-mario-bros" title="Permanent link">link</a></h2>
 <pre><code>Format:Digit
 FormatType=VALUE
 
@@ -1423,7 +1423,7 @@ Display:
 </code></pre>
 
 <p>Ele se divide em uma série de objetos de pesquisa, objetos de formato e um objeto de exibição.</p>
-<h2 id="pesquisas">Pesquisas</h2>
+<h2 id="pesquisas">Pesquisas<a class="headerlink" href="#pesquisas" title="Permanent link">link</a></h2>
 <p>Pesquisas são definidas assim:</p>
 <pre><code>Lookup:NameOfLookup
 Value1=Text When This Value
@@ -1432,7 +1432,7 @@ Value2=Text When Another Value
 </code></pre>
 
 <p>Nós damos ao Lookup (pesquisa) um valor, consistindo de uma série de endereços de memória e modificadores. Falaremos mais sobre isso depois.</p>
-<h2 id="formato">Formato</h2>
+<h2 id="formato">Formato<a class="headerlink" href="#formato" title="Permanent link">link</a></h2>
 <p>Tabelas de formato são definidas assim:</p>
 <pre><code>Format:Score
 FormatType=VALUE
@@ -1446,11 +1446,11 @@ FormatType=VALUE
 <li><code>SECS</code>: valor descreve o número de segundos decorridos e será transformado em 00:00</li>
 <li><code>MILLISECS</code>: value descreve o número de milissegundos decorridos e será transformado em 00: 00.00</li>
 </ul>
-<h2 id="exibicao">Exibição</h2>
+<h2 id="exibicao">Exibição<a class="headerlink" href="#exibicao" title="Permanent link">link</a></h2>
 <p>A exibição será uma string exibida na caixa "Players ativos" na primeira página. Refere-se aos objetos Lookup e Format definidos anteriormente usando um único '@'. Em seguida, ele especifica um nome para a pesquisa ou formato (diferencia maiúsculas de minúsculas) e, imediatamente depois, entre colchetes, uma série de valores de memória que especificam o que enviar para esse objeto de pesquisa ou formato.</p>
 <p><code>@Powerup (0xh756)</code></p>
 <p>Isso significa usar o Lookup ou o Formato chamado <code>Powerup</code>, e dar a ele qualquer valor que esteja em 0xh756.</p>
-<h3 id="exemplo-de-analise-de-pesquisa">Exemplo de análise de pesquisa</h3>
+<h3 id="exemplo-de-analise-de-pesquisa">Exemplo de análise de pesquisa<a class="headerlink" href="#exemplo-de-analise-de-pesquisa" title="Permanent link">link</a></h3>
 <ul>
 <li><code>@Mode (0xh770)</code> - pesquisa o endereço que mostra se o jogo está no modo de demonstração ou se um mundo foi concluído.</li>
 <li><code>@Paused (0xh776)</code> - pesquisa o endereço que mostra se o jogo está em pausa (são utilizados 3 valores, dois deles são para pausa e pausa).</li>
@@ -1468,7 +1468,7 @@ FormatType=VALUE
 <li><code>@Quest (0xh7fc)</code> Uma pesquisa para ver se o jogador está em normal ou na segunda missão, hardmode.</li>
 <li><code>Quest</code> - Texto Estático.</li>
 </ul>
-<h3 id="tamanho-do-endereco">Tamanho do endereço</h3>
+<h3 id="tamanho-do-endereco">Tamanho do endereço<a class="headerlink" href="#tamanho-do-endereco" title="Permanent link">link</a></h3>
 <p>Para especificar o tamanho do endereço que você está verificando, existem vários caracteres usados. (capitalização é ignorada)</p>
 <ul>
 <li>Um endereço de 16 bits é padrão e não possui designação de caractere. Em 0x10, o endereço é dois bytes - 16 bits.</li>
@@ -1487,7 +1487,7 @@ FormatType=VALUE
 </ul>
 <p>Resumindo em uma tabela:</p>
 <p><img alt="" src="https://i.imgur.com/8VbvtfJ.png" /></p>
-<h3 id="strings-de-exibicao-condicional">Strings de exibição condicional</h3>
+<h3 id="strings-de-exibicao-condicional">Strings de exibição condicional<a class="headerlink" href="#strings-de-exibicao-condicional" title="Permanent link">link</a></h3>
 <pre><code>Display:
 ?0x 000085=0?Title Screen
 ?0xT00007c=1?Custom Map in @Landscape(0xH00016c)
@@ -1506,11 +1506,11 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <li><code>? 0xH1234 = 32_0xH2345 = 1S0xH2345 = 2? or example</code></li>
 </ul>
 <p>se o valor de 8 bits em $ 1234 for 32 e o valor de 8 bits em $ 2345 for 1 ou 2, exibir <code>or example</code></p>
-<h2 id="decimal-binario-codificado-dbc">Decimal Binário Codificado (DBC)</h2>
+<h2 id="decimal-binario-codificado-dbc">Decimal Binário Codificado (DBC)<a class="headerlink" href="#decimal-binario-codificado-dbc" title="Permanent link">link</a></h2>
 <p>DBC é quando os valores são armazenados em um endereço de 0 a 9 (um dígito) ou 0 a 99 (dois dígitos). Na maioria das vezes os valores são armazenados em hexadecimal, mas em algum momento os jogos irão armazená-los desta maneira e aqui está a melhor maneira de lidar com esses endereços no seu monitor.</p>
 <p>Para objetos de valor, você pode usar o prefixo DBC, como em <code>b0x1</code>. Um endereço DBC é considerado 8bit, h é desnecessário, mas também não causará problemas. Outros prefixos de caracteres funcionam? (não testado). Quando você usa o prefixo b e o endereço é armazenado como um DBC, sua saída para um endereço de 10 será 10 em vez de 16 (que é 10 em hexadecimal).</p>
 <p>Isso é mais comumente usado para pontuação e tempo, mas geralmente outros tipos de valores de exibição.</p>
-<h2 id="limites">Limites</h2>
+<h2 id="limites">Limites<a class="headerlink" href="#limites" title="Permanent link">link</a></h2>
 <ul>
 <li>Limite de 2500 caracteres para script</li>
 <li>Limite de 100 caracteres para o que é exibido</li>
@@ -1518,12 +1518,12 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <li>Usar <code>&amp;</code> no texto cortará o script após o <code>&amp;</code></li>
 <li>Usando o personagem <code>+</code> não será exibido</li>
 </ul>
-<h2 id="detalhes-da-sintaxe">Detalhes da Sintaxe</h2>
+<h2 id="detalhes-da-sintaxe">Detalhes da Sintaxe<a class="headerlink" href="#detalhes-da-sintaxe" title="Permanent link">link</a></h2>
 <ul>
 <li>O RPS ignora 0s finais em pesquisas de endereço hexadecimais e os valores <code>0x00001</code> == <code>0x1</code>, <code>0xh0000245</code> == <code>0xh245, 0x0a</code> == <code>0xa</code>.</li>
 <li>Os valores de pesquisa são Decimal por padrão e hex se você colocar o prefixo de <code>0x</code>. Isso significa <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.</li>
 </ul>
-<h2 id="dicas-e-truques">Dicas e truques</h2>
+<h2 id="dicas-e-truques">Dicas e truques<a class="headerlink" href="#dicas-e-truques" title="Permanent link">link</a></h2>
 <ul>
 <li>As pesquisas devem ser específicas de caso com seus @ correspondentes na exibição e não conter espaços após a pesquisa ser definida.</li>
 <li>Os nomes de pesquisa podem ser tão curtos quanto um único caractere se você precisar incluir alguns caracteres extras.</li>
@@ -1533,7 +1533,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <li>Você só precisa de um objeto de formato de valor. Você pode referenciá-lo com vários endereços. (isso é sempre verdade?)</li>
 <li>Colocar espaços em suas pesquisas algumas vezes antes ou depois pode permitir que você oculte determinadas pesquisas quando elas não forem necessárias, como fazer <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code> e <code>@Mode</code>.</li>
 </ul>
-<h3 id="propriedades-de-valor">Propriedades de valor</h3>
+<h3 id="propriedades-de-valor">Propriedades de valor<a class="headerlink" href="#propriedades-de-valor" title="Permanent link">link</a></h3>
 <p>Ao usar objetos de pesquisa e formatação <code>@object ()</code>, é possível combinar e executar cálculos. Isso pode ser usado para exibir corretamente uma pontuação, em tempo de jogo, etc. ou fazer pesquisas mais avançadas.</p>
 <p>Exemplo `@Score (0x28 * 10_0x29 * 1000_0x26 * 100000) points``</p>
 <p>Isso significa usar a pesquisa ou pontuação de formato e dar a soma de:</p>
@@ -1566,7 +1566,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <p>Você também pode adicionar endereços juntos para fornecer pesquisas com base nas somas de vários endereços. Isso é usado no exemplo em @Star. Está procurando a soma dos 6 bits mais baixos do endereço 0xh79f. A maneira como esse endereço funciona é que, desde que haja um valor lá, Mario é star Mario invencível e a contagem regressiva do valor hexadecimal 0x23 (35 decimal) para 0. 23 em binário é 0010 0011, significando que a soma máxima desses bits pode ser 5 durante 0001 1111 quando a contagem regressiva alcança o valor hexadecimal 0x1f (31 decimal).</p>
 </li>
 </ul>
-<h3 id="simbolos-padrao-unicode">Símbolos Padrão Unicode</h3>
+<h3 id="simbolos-padrao-unicode">Símbolos Padrão Unicode<a class="headerlink" href="#simbolos-padrao-unicode" title="Permanent link">link</a></h3>
 <p>▌▌=em pausa</p>
 <p>🔁= número de loop</p>
 <p>🚶=vidas. Outros símbolos que representam o jogo claramente também são adequados. 🐰=in a Bugs bunny Game, 🐵=in a Donkey Kong Country game, ✈=In a jet plane game,</p>
@@ -1665,8 +1665,6 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

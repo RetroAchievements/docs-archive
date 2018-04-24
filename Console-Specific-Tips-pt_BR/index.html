@@ -1242,14 +1242,14 @@
                 
                   <h1>Dicas Específicas de Console</h1>
                 
-                <h2 id="dicas-especificas-do-console">Dicas Específicas do Console</h2>
+                <h2 id="dicas-especificas-do-console">Dicas Específicas do Console<a class="headerlink" href="#dicas-especificas-do-console" title="Permanent link">link</a></h2>
 <p><strong>Link para texto em inglês:</strong> <a href="https://github.com/RetroAchievements/docs/wiki/Console-Specific-Tips">Console Specific Tips</a></p>
 <hr />
 <p>Ao escavar a memória desses antigos consoles, ajuda saber em primeiro lugar com o que os criadores originais dos jogos estavam trabalhando. Se você se familiarizar com as peculiaridades do seu console favorito, a configuração será mais fácil e precisa.</p>
-<h2 id="nes-ranes">NES (RANes)</h2>
+<h2 id="nes-ranes">NES (RANes)<a class="headerlink" href="#nes-ranes" title="Permanent link">link</a></h2>
 <p><img alt="" src="https://user-images.githubusercontent.com/33245078/32608415-e8bd2cf8-c521-11e7-8da5-22c9e09efd8c.png" /></p>
-<h2 id="game-boy-ravba">Game Boy (RAVBA)</h2>
-<h3 id="mapa-de-memoria">Mapa de memória</h3>
+<h2 id="game-boy-ravba">Game Boy (RAVBA)<a class="headerlink" href="#game-boy-ravba" title="Permanent link">link</a></h2>
+<h3 id="mapa-de-memoria">Mapa de memória<a class="headerlink" href="#mapa-de-memoria" title="Permanent link">link</a></h3>
 <p>Determinadas variedades de valores significam coisas diferentes no contexto do hardware do Game Boy, portanto, ter um mapa  pode ajudá-lo a eliminar endereços inúteis. Aqui está o resumo:</p>
 <ul>
 <li>❌ <strong>0x0000 - 0x7FFF: Dados da ROM</strong> (normalmente não há razão para usar. Se você for um desenvolvedor super dedicado, poderá usar o valor de 16 bits em 0x14E junto com os grupos alt para oferecer suporte a várias versões / regiões da ROM)</li>
@@ -1261,12 +1261,12 @@
 <li>❌ <strong>0xFEA0 - 0xFFFF: Diversos</strong> (não use)</li>
 </ul>
 <p>Para mais informações, consulte: <a href="http://gameboy.mongenel.com/dmg/asmmemmap.html">http://gameboy.mongenel.com/dmg/asmmemmap.html</a> <code>texto em inglês</code></p>
-<h3 id="echo-ram">ECHO RAM</h3>
+<h3 id="echo-ram">ECHO RAM<a class="headerlink" href="#echo-ram" title="Permanent link">link</a></h3>
 <p><img alt="" src="https://user-images.githubusercontent.com/33245078/32610144-755a0442-c527-11e7-9bbb-eb5a4d7b8e6d.png" /></p>
 <p>Similarmente ao NES, certas variáveis podem aparecer duas vezes ao pesquisar no Memory Inspector. O segundo resultado está no que é chamado de RAM ECHO, que é um espelho da memória real. Como alguns emuladores tendem a ignorar essa área ou emular incorretamente, recomenda-se NÃO usá-la e sempre usar o primeiro resultado.</p>
 <p>O Game Boy tem 4KB de RAM a partir de 0xC000. ECHO RAM começa em 0xE000, então se o seu endereço começar com um E você vai querer substituir o primeiro caractere diferente de zero por um C. Lembre-se: C está correto, E é echo!</p>
-<h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)</h2>
-<h3 id="usando-codigos-gameshark-para-enderecos">Usando códigos GameShark para endereços</h3>
+<h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)<a class="headerlink" href="#nintendo-64-rap64" title="Permanent link">link</a></h2>
+<h3 id="usando-codigos-gameshark-para-enderecos">Usando códigos GameShark para endereços<a class="headerlink" href="#usando-codigos-gameshark-para-enderecos" title="Permanent link">link</a></h3>
 <p>Os códigos GameShark podem ser um recurso valioso para encontrar endereços que você não pode ou não deseja encontrar. Eles têm 12 caracteres por linha e são fáceis de analisar.</p>
 <p><code>[AA] [BBBBBB] [CCCC]</code></p>
 <p>[AA] é o tipo de código. Esta é uma breve instrução para o GameShark que define o que fazer com o próximo valor. Se você entende o código do GameShark, você pode usá-lo para ajudar na criação de condições.</p>
@@ -1383,8 +1383,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

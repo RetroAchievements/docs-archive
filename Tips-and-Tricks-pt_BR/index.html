@@ -1260,10 +1260,10 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Tips-and-Tricks-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dicas-e-truques">Dicas e Truques</h1>
+                <h1 id="dicas-e-truques">Dicas e Truques<a class="headerlink" href="#dicas-e-truques" title="Permanent link">link</a></h1>
 <p><strong>Link para o texto em inglês:</strong> <a href="../Tips-and-Tricks">Tips and Tricks</a></p>
 <hr />
-<h2 id="dicas-para-convencao-de-nomes">Dicas para Convenção de Nomes</h2>
+<h2 id="dicas-para-convencao-de-nomes">Dicas para Convenção de Nomes<a class="headerlink" href="#dicas-para-convencao-de-nomes" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>Sem símbolos</strong>: Não use caracteres acentuados / especiais como o "é" no Pokémon, pois eles vão bagunçar algumas coisas (como o <em>feed</em>). Eles também não serão visíveis na pesquisa sem o caracter especial.</p>
@@ -1275,7 +1275,7 @@
 <p><strong>Preocupe-se com a gramática</strong>: evite erros de gramática. Como o RetroAchievements é uma comunidade internacional, usar o inglês para Code Notes é uma boa prática, pois outro desenvolvedor pode usar suas anotações no futuro. Se o inglês não for o seu primeiro idioma, passar seus títulos, nomes e notas de código através de um corretor ortográfico ajudará. É um passo extra para aqueles que têm dificuldade com a língua inglesa, mas o cuidado e a atenção refletem nas suas qualidades positivas como desenvolvedor.</p>
 </li>
 </ul>
-<h2 id="dicas-de-selecao-de-rom">Dicas de seleção de ROM</h2>
+<h2 id="dicas-de-selecao-de-rom">Dicas de seleção de ROM<a class="headerlink" href="#dicas-de-selecao-de-rom" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>Seleção de região</strong>: Escolha as ROM lançadas como <code>NTSC USA</code> se disponíveis, pois 60 FPS (<strong>F</strong>rames <strong>P</strong>er <strong>S</strong>econd) é uma experiência de jogo mais suave. As ROMs lançadas como <code>PAL European</code> são executados em 50 FPS, e devem ser evitados na maioria dos casos. As ROMs lançadas como <code>NTSC Japan</code> também são executados em 60 FPS, mas só é a melhor opção se o jogo for uma versão exclusiva do Japão. Recorrer a um jogo lançado como <code>PAL European</code> deve ser apenas em último caso (exclusivo para a Europa) e normalmente é um número muito seleto de jogos <em>únicos</em> da biblioteca inteira do console.</p>
@@ -1287,7 +1287,7 @@
 <p><strong>Sem *trainers</strong>*: Não use uma ROM que inclua um recurso cheat integrado. Elas são frequentemente referidas com "ROM trainers". Elas não são oficiais e, de forma alguma são suportados pelo RetroAchievements.</p>
 </li>
 </ul>
-<h2 id="dicas-de-escavacao-de-memoria">Dicas de escavação de memória</h2>
+<h2 id="dicas-de-escavacao-de-memoria">Dicas de escavação de memória<a class="headerlink" href="#dicas-de-escavacao-de-memoria" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p>Você pode inserir valores no Memory Inspector para ver se ele afeta algo no jogo.</p>
@@ -1302,21 +1302,21 @@
 <p>Se você absolutamente não consegue reduzir os resultados de um filtro, você pode tentar adivinhar alguns valores ou pelo menos como o valor está atuando (<code>&gt;</code> ou <code>&lt;</code>). Por exemplo, geralmente nenhuma barra de energia é <code>0</code>, o estágio 1 geralmente é o valor <code>0</code>, o estágio 2 geralmente é o valor <code>1</code>, dependendo do tipo de jogo. Outro exemplo, talvez cada segmento da sua energia tenha 4 barrinhas - Você deve procurar quando "4" vai para "3" quando você perde uma barrinha?</p>
 </li>
 </ul>
-<h3 id="dicas-por-nivel-de-habilidade">Dicas por nível de habilidade</h3>
-<h4 id="nivel-1-facil">Nível 1 - Fácil</h4>
+<h3 id="dicas-por-nivel-de-habilidade">Dicas por nível de habilidade<a class="headerlink" href="#dicas-por-nivel-de-habilidade" title="Permanent link">link</a></h3>
+<h4 id="nivel-1-facil">Nível 1 - Fácil<a class="headerlink" href="#nivel-1-facil" title="Permanent link">link</a></h4>
 <p>Comece com a visualização de 8 bits no Memory Inspector. Olhar para grandes partes de memória irá complicar as coisas, mas isso facilitará o trabalho de um desenvolvedor experiente. Se você está apenas começando e desconhece termos como <strong>endianess</strong> e <strong>bit ordering</strong> (ou quando o cansaço bate), é melhor fazer suas observações na visão de 8 bits. É mais fácil!</p>
-<h4 id="nivel-2-medio">Nível 2 - Médio</h4>
+<h4 id="nivel-2-medio">Nível 2 - Médio<a class="headerlink" href="#nivel-2-medio" title="Permanent link">link</a></h4>
 <p>Big data (vista de 16 ou 32 bits): lembre-se de que ao adicionar um endereço de 16 bits o endereço à direita vem primeiro.</p>
 <p>Exemplo: <code>AB CD WX YZ</code> em 8 bits torna-se<code>CDAB YZWX</code> em 16 bits.</p>
 <p>Isso é chamado de "ordenação de bytes big endian". Você pode tranquilamente ignorar esse papo geek apenas lembrando que as coisas estão armazenadas "de trás pra frente" na vista de 16 bits e acima.</p>
 <p>Lembre-se de que se você estiver vendo memória em pedaços maiores, quando você destaca um valor, esse valor agora representa um "pedaço" de memória de 16 ou 32 bits e não o endereço de memória de 8 bits que você pode estar procurando. Você precisará voltar para a visão de 8 bits e destacar a endereço que te interessa, se você encontrar algo de 8 bits que pareça interessante.</p>
-<h4 id="nivel-3-avancado">Nível 3 - Avançado</h4>
+<h4 id="nivel-3-avancado">Nível 3 - Avançado<a class="headerlink" href="#nivel-3-avancado" title="Permanent link">link</a></h4>
 <p>Adicionando suporte para os cores libretro Little Endian: N64-specific, na maioria das vezes, ao adicionar suporte para um core libretro LE ao seu set, os conceitos explicados anteriormente (Nível Intermediário) se aplicam, com ordenação de bytes ligeiramente alteradas. O que é visto como legível em 16 bits muda drasticamente no interior de um core LE.</p>
 <p>Exemplo: AB CD WX YZ primeiro pega os bits de A, vira-os como se estivessem olhando em um espelho; bits de B bits e vira-os; bits de C... etc, até Z, e então se torna WXYZ ABCD com os bytes do seu último passo.</p>
 <p>Para adicionar o suporte LE, você estará escrevendo uma condição do núcleo falso (Mem 0x000001 = Mem 0x000001), copiando suas condições originais não-LE com um 'PauseIf<code>na parte superior em uma Alt, copie as mesmas condições para a outra. Ambos os 'PauseIf</code>s conterão um cheque olhando para um endereço de memória que nunca muda para ver se o seu valor de 16 bits teve o seu pedido de bytes alterado (Pense nisso como " <code>PauseIf</code> não estou no núcleo LE" e "<code>PauseIf</code> eu sou" nas condições alt).</p>
 <p>Um funcionará se o jogador estiver executando em um núcleo LE, o outro não. Em seguida, você executará a matemática que descrevi acima nos valores que você está procurando no "<code>PauseIf</code>, não estou no LE core" Alt, e atualizando-o.</p>
 <p>Confuso? Sim. É por isso que a maioria dos iniciantes e desenvolvedores intermediários não deve se preocupar.</p>
-<h2 id="dicas-de-criacao-de-achievements">Dicas de criação de achievements</h2>
+<h2 id="dicas-de-criacao-de-achievements">Dicas de criação de achievements<a class="headerlink" href="#dicas-de-criacao-de-achievements" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>Nunca use / Evite usar apenas uma condição, tanto quanto você puder</strong>. Ao usar apenas uma condição, o achievement provavelmente irá aparecer na hora errada. Este é o <strong>erro mais comum cometido por um desenvolvedor</strong>, resultando na justificativa "Popped at the Wrong Time" anexada nos Bug Tickets recebidos em RetroAchievements.org. Programe suas conquistas com robustez.</p>
@@ -1442,8 +1442,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

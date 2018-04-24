@@ -1250,11 +1250,11 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Getting-Started-as-an-Achievement-Developer-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="primeiros-passos-como-um-desenvolvedor-de-conquistas">Primeiros Passos como um Desenvolvedor de Conquistas</h1>
+                <h1 id="primeiros-passos-como-um-desenvolvedor-de-conquistas">Primeiros Passos como um Desenvolvedor de Conquistas<a class="headerlink" href="#primeiros-passos-como-um-desenvolvedor-de-conquistas" title="Permanent link">link</a></h1>
 <p><strong>Link para o texto em inglês:</strong> <a href="../Getting-Started-as-an-Achievement-Developer">Getting Started as an Achievement Developer</a></p>
 <hr />
 <p><strong>Bem-vindo ao mundo do desenvolvimento de conquistas!</strong></p>
-<h2 id="conceitos-basicos">Conceitos básicos</h2>
+<h2 id="conceitos-basicos">Conceitos básicos<a class="headerlink" href="#conceitos-basicos" title="Permanent link">link</a></h2>
 <p>Tecnicamente, <strong>uma conquista (no contexto de RetroAchievements) é um grupo de condições que devem ser cumpridas em um determinado <em>frame</em> do jogo.</strong></p>
 <p>Quando você inicia um jogo em um emulador com o recurso RetroAchievements, o emulador sempre verifica se essas condições são atendidas no <em>frame</em> atual. Quando todas as condições para uma conquista particular são atendidas, esta conquista é ativada e o emulador deixa de verificar as condições para essa conquista.</p>
 <p>O processo de criação de uma conquista envolve basicamente 3 etapas:</p>
@@ -1272,11 +1272,11 @@
 <p>Provavelmente você voltará para os passos 2 e 3 muitas vezes para refinar a lógica de sua conquista.</p>
 <p>Neste documento, veremos como realizar as etapas acima.</p>
 <p>Depois de ter certeza de que sua conquista está funcionando nas condições desejadas, você pode enviá-la para o servidor. Veremos mais sobre isso adiante.</p>
-<h2 id="primeiros-passos">Primeiros passos</h2>
+<h2 id="primeiros-passos">Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Permanent link">link</a></h2>
 <p>Antes de começar, certifique-se de ter um emulador RA da página do <a href="http://retroachievements.org/download.php">RetroAchievements Download Page</a> primeiro e crie uma conta para que você possa fazer login usando o emulador.</p>
 <p>Neste guia, estaremos usando RAGens para demonstrar, e o jogo  <a href="http://retroachievements.org/Game/1">Sonic the Hedgehog</a>. Estamos usando RAGens, mas o mesmo se aplica aos outros emuladores.</p>
 <p>Para começar, execute o RAGens e faça o login quando solicitado. Em seguida, use File -&gt; Open e selecione qualquer ROM que você deseja encontrar conquistas.</p>
-<h2 id="memory-inspector">Memory Inspector</h2>
+<h2 id="memory-inspector">Memory Inspector<a class="headerlink" href="#memory-inspector" title="Permanent link">link</a></h2>
 <p>Agora você deve ter sua janela principal executando o Sonic. Existem 3 outros diálogos que usaremos, que podem ser encontrados em RetroAchievements no menu. Em primeiro lugar, tratamos primeiro o Memory Inspector:</p>
 <p><img alt="memory_inspector" src="https://user-images.githubusercontent.com/8508804/33128665-55ae87e2-cf74-11e7-8085-17b3dd528b64.png" /></p>
 <p>O Memory Inspector pode ser usado para encontrar endereços na RAM para que possamos usar. Essencialmente, você está em uma caçada ao tesouro para locais de memória - este diálogo irá ajudá-lo a examinar e filtrar a RAM do jogo enquanto o jogo está sendo executado.</p>
@@ -1309,7 +1309,7 @@
 </ul>
 <p>Quando você encontrou um endereço com o qual você está feliz, você pode escrever uma nota curta para o que é e clicar em Salvar nota, isso irá armazená-lo no banco de dados e será restaurado automaticamente na próxima vez que você carregar o visor de memória para isso jogo onde quer que esteja! Note que depois de clicar em "Salvar nota", a nota será armazenada automaticamente no banco de dados, e compartilhada para que todos os desenvolvedores compartilhem o acesso a essas notas de memória. Todos serão baixados de novo quando você carregar uma ROM. Se você tentar substituir uma nota, verificará com você primeiro antes de enviar.</p>
 <p>Você pode encontrar <a href="../Tips-and-Tricks/#memory-digging-tips">Dicas de Escavação de Memória aqui</a>.</p>
-<h2 id="achievement-sets">Achievement Sets</h2>
+<h2 id="achievement-sets">Achievement Sets<a class="headerlink" href="#achievement-sets" title="Permanent link">link</a></h2>
 <p>OK para que a localização da memória para o número de anéis seja armazenada em <code>0xfe20</code> - nota para um não programador, estamos lidando com um <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">sistema de numeração hexadecimal</a> que pode ser assustador, mas não se preocupe, essencialmente são apenas números e letras em vez de apenas números, e não esquecendo <code>0x</code> no início para mostrar que é uma localização de memória em hexadecimal. Encontramos um endereço em que nos interessamos e armazenamos usando <strong>Save Note</strong>. Agora queremos criar uma nova conquista.</p>
 <p>Vá para o <strong>RetroAchievements</strong> no menu, escolha <strong>Achievement Sets</strong> e você verá esta caixa de diálogo:</p>
 <p><img alt="achievement_sets" src="https://user-images.githubusercontent.com/8508804/33129271-7d562cbc-cf76-11e7-8346-c19400975d40.png" /></p>
@@ -1326,7 +1326,7 @@
 </li>
 </ol>
 <p>Na caixa de diálogo Conquistas, clique em <strong>Local Achievements</strong> (canto superior esquerdo), depois em <strong>Add New Achievement</strong> (inferior esquerda). Isso irá adicionar uma entrada em branco à lista no centro. Clique duas vezes nele: se ainda não está aberto, isso deve selecioná-lo e abrir a caixa de diálogo Editor de conquista (<strong>Achievement Editor</strong>).</p>
-<h2 id="achievement-editor">Achievement Editor</h2>
+<h2 id="achievement-editor">Achievement Editor<a class="headerlink" href="#achievement-editor" title="Permanent link">link</a></h2>
 <p>O Achievement Editor se parece com isso:</p>
 <p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
 <p>Esta é a última caixa de diálogo onde reunimos todos os dados juntos. A maioria dos principais campos são auto-explicativos, ou seja, Title, Description, Points. A principal é a parte de 'Requirements' (Requisitos).</p>
@@ -1360,12 +1360,12 @@
 <ul>
 <li><strong>Nota</strong>: geralmente as conquistas têm mais de um requisito para evitar que ele acione em um momento errado (ou seja, jogando o modo de demonstração). Neste exemplo, estamos usando apenas um requisito apenas para simplificar a explicação. Veja mais dicas de <a href="../Tips-and-Tricks/#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
 </ul>
-<h2 id="testando-a-conquista">Testando a conquista</h2>
+<h2 id="testando-a-conquista">Testando a conquista<a class="headerlink" href="#testando-a-conquista" title="Permanent link">link</a></h2>
 <p>Agora podemos "ativar" essa conquista localmente ao clicar <strong>Activate</strong> no lado direito. Isso começará a monitorar esses locais de memória e atribuirá a conquista uma vez que todas as condições são verdadeiras. Agora, podemos prosseguir e testar para ver se essa conquista funciona!</p>
 <p><img alt="testing_achievements" src="https://user-images.githubusercontent.com/8508804/32601362-83dcb788-c529-11e7-8df9-b79038408909.png" /></p>
 <p>Se pressionarmos no jogo Esc, você verá a conquista aparecer como uma demonstração do que seria semelhante à sobreposição no jogo!</p>
 <p><img alt="testing_achievements2" src="https://user-images.githubusercontent.com/8508804/32601363-83fced8c-c529-11e7-885f-97d64b0384e5.png" /></p>
-<h2 id="evitando-bugs">Evitando bugs</h2>
+<h2 id="evitando-bugs">Evitando bugs<a class="headerlink" href="#evitando-bugs" title="Permanent link">link</a></h2>
 <p>O cheevo (<strong>achievement</strong>) que criamos neste tutorial é muito simples, tem apenas uma condição: "anéis coletados" &gt;= 15 ". Mas o endereço para gravar o número de anéis coletados também é usado quando o jogo é executado em "modo de demonstração" (AI jogando o jogo depois de esperar um pouco na tela de título). Então, se Sonic coletar 15 anéis no modo de demonstração, essa conquista irá desencadear, o que é indesejável.</p>
 <p>Então, aqui estão algumas dicas que você sempre deve ter em mente ao criar suas conquistas:</p>
 <ul>
@@ -1379,7 +1379,7 @@
 <p><strong>Use <code>PauseIf</code> usando macetes (cheat codes)</strong>: se o jogo tiver um código secreto de macete para aumentar vidas, selecionar fases, etc. Certifique-se de encontrar os endereços para isso e adicionar algum tipo de proteção em suas conquistas. OK, talvez não seja um tópico muito básico, mas você deve ter em mente ao criar um conjunto de conquistas real.</p>
 </li>
 </ul>
-<h2 id="ok-o-achievement-funciona-e-agora">OK, o achievement funciona. E agora?</h2>
+<h2 id="ok-o-achievement-funciona-e-agora">OK, o achievement funciona. E agora?<a class="headerlink" href="#ok-o-achievement-funciona-e-agora" title="Permanent link">link</a></h2>
 <p>Depois de testarmos que a conquista funciona localmente, há um processo de confirmação em duas etapas:</p>
 <ol>
 <li>
@@ -1390,7 +1390,7 @@
 </li>
 </ol>
 <p>Naturalmente, é melhor enviar apenas conquistas únicas e interessantes no grupo de conquistas principais. Se houver duplicatas no grupo Core, as duplicatas adicionadas mais recentemente serão manualmente moderadas e excluídas. Se você não quer sua conquista no grupo Core, ou você acha que pode não ser apropriado para o grupo Core (ou seja, se está incompleto, ou se às vezes ele parece se desencadear quando não é suposto, como quando o jogo está mostrando um demo), deixe-o na seção Não oficial / Seção submetida pelo usuário.</p>
-<h2 id="proximos-passos">Próximos passos</h2>
+<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">link</a></h2>
 <p>Agora que você sabe como usar o Memory Inspector e o Editor de Conquistas. É hora de aprender novas técnicas e práticas:</p>
 <ul>
 <li>
@@ -1491,8 +1491,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

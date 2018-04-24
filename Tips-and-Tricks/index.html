@@ -1254,7 +1254,7 @@
                 
                   <h1>Tips and Tricks</h1>
                 
-                <h2 id="naming-convention-tips">Naming Convention Tips</h2>
+                <h2 id="naming-convention-tips">Naming Convention Tips<a class="headerlink" href="#naming-convention-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>No Symbols</strong>: Do not use accented/special characters like the "é" in Pokemon, as they currently break a few things (like feed). They are also not visible in search without the special character.</p>
@@ -1266,7 +1266,7 @@
 <p><strong>Mind your English</strong>: avoid grammar mistakes. As RetroAchievements is an international community, using English for Code Notes is a good practice, as another developer can use your notes in the future. If English is not your first language, running your achievement titles, names, and code notes through a spell checker will help. It is an extra step for those having difficulty with the English language, but the amount of care and attention to it reflects back of your positive qualities as a developer.</p>
 </li>
 </ul>
-<h2 id="rom-selection-tips">ROM Selection Tips</h2>
+<h2 id="rom-selection-tips">ROM Selection Tips<a class="headerlink" href="#rom-selection-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>Region Selection</strong>: Choose <code>NTSC USA</code> release ROMs if available, because 60 FPS is a smoother gaming experience.  <code>PAL European</code> releases run at 50 FPS, and are to be avoided in most cases.  <code>NTSC Japan</code> releases also run at 60 FPS , but is only the best choice if the game was a Japan-exclusive release.  Needing to resort to a <code>PAL European</code> release game should be a last resort case (Europe-only exclusive), and is typically a very select few <em>unique</em> games from the entire console's library.</p>
@@ -1278,7 +1278,7 @@
 <p><strong>No Trainers</strong>: Do not use a ROM that includes an integrated cheat feature.  These are most often refereed to as after-market <code>ROM trainers</code>, are not official, and not in any way supported by Retro Achievements.</p>
 </li>
 </ul>
-<h2 id="memory-digging-tips">Memory Digging Tips</h2>
+<h2 id="memory-digging-tips">Memory Digging Tips<a class="headerlink" href="#memory-digging-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p>You can input values in the memory viewer to see if it affects the game.</p>
@@ -1293,21 +1293,21 @@
 <p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting (<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually <code>0</code>, Stage 1 is usually value <code>0</code>, Stage 2 is usually value <code>1</code> depending on the type of game. Another example, maybe each segment of health has 4 pie slices - Should you be searching when "4" goes to "3" when you lose a slice?</p>
 </li>
 </ul>
-<h3 id="tips-by-skill-level">Tips by Skill Level</h3>
-<h4 id="level-1-easy">Level 1 - Easy</h4>
+<h3 id="tips-by-skill-level">Tips by Skill Level<a class="headerlink" href="#tips-by-skill-level" title="Permanent link">link</a></h3>
+<h4 id="level-1-easy">Level 1 - Easy<a class="headerlink" href="#level-1-easy" title="Permanent link">link</a></h4>
 <p>Start with 8-bit view in the Memory Viewer. Looking at larger chunks of memory will complicate things, but it will make a seasoned developer's job easier. If you're just starting out and unaware of terms like <strong>endianess</strong> and <strong>bit ordering</strong> (or when the eyes are tired), its best to make your observations in 8-bit view. Its just easier!</p>
-<h4 id="level-2-intermediate">Level 2 - Intermediate</h4>
+<h4 id="level-2-intermediate">Level 2 - Intermediate<a class="headerlink" href="#level-2-intermediate" title="Permanent link">link</a></h4>
 <p>Big Data (16 or 32 bit view): Just remember that when adding a 16-bit address that the address to the right comes first.</p>
 <p>Example: <code>AB CD WX YZ</code> in 8-bit will becomes <code>CDAB YZWX</code> in 16-bit.</p>
 <p>This is called "big endian byte ordering". You can safely ignore the geek-speak by just remembering things are stored <strong>backwards</strong> in 16 bit view and above.</p>
 <p>Remember that if you are seeing memory in bigger chunks, when you highlight a value, that value now represents a 16 or 32-bit "chunk" of memory, and not the 8-bit memory address you may be looking for.  You'll need to drop back down to 8-bit view and highlight the interesting piece if you find something 8-bit that looks interesting.</p>
-<h4 id="level-3-advanced">Level 3 - Advanced</h4>
+<h4 id="level-3-advanced">Level 3 - Advanced<a class="headerlink" href="#level-3-advanced" title="Permanent link">link</a></h4>
 <p>Adding support for libretro Little Endian Cores:  N64-specific, most times, when adding support for a libretro LE core to your set, concepts from intermediate apply, with the byte ordering changed slightly. What is seen human readable in 16-bit changes drastically in an LE core's insides.</p>
 <p>Example:  AB CD WX YZ first takes A's bits, flips them around like looking at them in a mirror, B's bits, flips them around, C's bits... etc, all the way to Z, and then becomes WXYZ ABCD with the bytes from your last step.</p>
 <p>To add your LE support, you'll be writing a dummy core condition (Mem 0x000001 = Mem 0x000001), copying your original non-LE conditions with a <code>PauseIf</code> at the top into one Alt, copy the same conditions to the other. Both <code>PauseIf</code>s will contain a check looking at a memory address that never changes to see if its 16-bit value has had its byte ordering changed (Think of this as "<code>PauseIf</code> I'm not on an LE core" and "<code>PauseIf</code> I am" alt conditions).</p>
 <p>One will run if the gamer is running on an LE core, one wont.  You'll then perform the math I described above on the values you're checking for in the "<code>PauseIf</code> I'm not on an LE core" Alt, and updating it.</p>
 <p>Confusing? Yes. This is why most beginners and intermediate developers should not worry.</p>
-<h2 id="achievement-creation-tips">Achievement Creation Tips</h2>
+<h2 id="achievement-creation-tips">Achievement Creation Tips<a class="headerlink" href="#achievement-creation-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>Never use / Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong> resulting in "Popped at the Wrong Time" reasoning attached to Bug Tickets received at RetroAchievements.org.  Write your achievements soundly.</p>
@@ -1433,8 +1433,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

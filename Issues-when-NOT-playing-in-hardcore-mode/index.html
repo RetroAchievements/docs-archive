@@ -1214,7 +1214,7 @@
                 
                   <h1>Issues when NOT playing in hardcore mode</h1>
                 
-                <h2 id="hardcoresoftcore">Hardcore/Softcore</h2>
+                <h2 id="hardcoresoftcore">Hardcore/Softcore<a class="headerlink" href="#hardcoresoftcore" title="Permanent link">link</a></h2>
 <p>Some users like to use the save/load state feature to save their progress in a game. As you may know, this feature isn't allowed when playing with hardcore mode. But some users aren't hardcore gamers and prefer to keep hardcore mode disabled (let's call this mode as softcore).</p>
 <p>From time to time some users report that an achievement isn't triggering, and when asked they say they were playing in softcore.</p>
 <p>One thing you all have to keep in mind is:</p>
@@ -1222,7 +1222,7 @@
 <p><strong>If you use the load state feature expect to have issues of cheevos not triggering when they are expected to trigger.</strong></p>
 <hr />
 <p>Here we'll try to explain for those who don't know the details of achievements development why this kind of issue happen.</p>
-<h2 id="basic-concept-behind-an-achievement">Basic concept behind an achievement</h2>
+<h2 id="basic-concept-behind-an-achievement">Basic concept behind an achievement<a class="headerlink" href="#basic-concept-behind-an-achievement" title="Permanent link">link</a></h2>
 <p><strong>Technically an achievement is a group of conditions that must be met in a particular frame of the video game.</strong></p>
 <p>When you launch a game on an emulator with the RetroAchievements feature, the emulator is always checking if those conditions are met in the current frame. When all conditions for a particular achievement are met, it is awarded and the emulator stops checking the conditions for that achievement.</p>
 <p>Examples of conditions:</p>
@@ -1236,8 +1236,8 @@
 <li>the game is paused</li>
 </ul>
 <p>The problem with the softcore is that when you load a saved state you can ruin the logic behind an achievement.</p>
-<h2 id="examples">Examples</h2>
-<h3 id="example-1-beat-the-game-without-passwords">Example 1: Beat the game without passwords</h3>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">link</a></h2>
+<h3 id="example-1-beat-the-game-without-passwords">Example 1: Beat the game without passwords<a class="headerlink" href="#example-1-beat-the-game-without-passwords" title="Permanent link">link</a></h3>
 <p>Imagine a game with 5 stages and with the password feature.</p>
 <p>Probably the conditions to trigger the "Beat the game without passwords" are (in a real cheevo there will be more conditions, but for this explanation let's consider only these ones):</p>
 <ul>
@@ -1260,7 +1260,7 @@
 </ul>
 <p>In this scenario the achievement won't trigger.</p>
 <p>After closing the emulator it "forgets" that you passed through stages 1, 2 and 3. When you run the emulator/game again and load the state being on stage 4, the emulator won't detect that you passed through the previous stages. Then the achievement won't trigger.</p>
-<h3 id="example-2-defeat-boss-x-without-taking-damage">Example 2: Defeat boss X without taking damage</h3>
+<h3 id="example-2-defeat-boss-x-without-taking-damage">Example 2: Defeat boss X without taking damage<a class="headerlink" href="#example-2-defeat-boss-x-without-taking-damage" title="Permanent link">link</a></h3>
 <p>Most likely the conditions to be met in a frame to make this achievement trigger are:</p>
 <ol>
 <li>entered the boss room (and memorize this event as something that happened).</li>
@@ -1269,7 +1269,7 @@
 </ol>
 <p>In other words: to get this achievement the emulator must "know" that you entered the boss room, didn't get any damage, and beated the boss.</p>
 <p>The important detail to pay attention here: when you get any damage, the emulator "forgets" that you entered the boss room. Then even if you load a state to a point where you didn't get any damage but already entered the room, the emulator won't detect that you entered the room. And then the achievement won't trigger.</p>
-<h2 id="final-words">Final Words</h2>
+<h2 id="final-words">Final Words<a class="headerlink" href="#final-words" title="Permanent link">link</a></h2>
 <p>When reporting a broken achievement give as many details as possible, <strong>and don't forget to mention if you are playing on hardcore mode or not</strong>.</p>
 <p>If you want to request an admin to manually award to you an achievement that didn't triggered, be sure to provide a qualified proof. Specially for achievements like those in the examples above (no damage, no passwords, no death, etc).</p>
                 
@@ -1359,8 +1359,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     

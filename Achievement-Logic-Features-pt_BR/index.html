@@ -1288,12 +1288,12 @@
                   <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Achievement-Logic-Features-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="recursos-de-logica-para-achievements">Recursos de lógica para achievements</h1>
+                <h1 id="recursos-de-logica-para-achievements">Recursos de lógica para achievements<a class="headerlink" href="#recursos-de-logica-para-achievements" title="Permanent link">link</a></h1>
 <p>Link para o texto em inglês: <a href="../Achievement-Logic-Features">Achievement Logic Features</a></p>
 <p>Existem várias ferramentas e opções disponíveis para o desenvolvedor, saber como utilizá-las adequadamente melhorará a qualidade de seus sets. Essas ferramentas/opções podem ser usadas no Achievement Editor:</p>
 <p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
 <p>Para ajuda sobre esses, o nosso servidor do <a href="https://discordapp.com/invite/TdfC3r7">Discord</a> estará sempre aberto para ajudar.</p>
-<h2 id="valores-delta">Valores Delta</h2>
+<h2 id="valores-delta">Valores Delta<a class="headerlink" href="#valores-delta" title="Permanent link">link</a></h2>
 <p>Um valor <code>Delta</code> é o valor do <em>frame</em> anterior.</p>
 <p>Exemplos de como ele pode ser usado:</p>
 <ul>
@@ -1301,34 +1301,34 @@
 <li>Detectar danos: <code>health &lt; delta health</code>. Significa que "a saúde atual é menor do que a saúde do frame anterior". Ou você pode apenas tornar o valor do frame anterior um requisito. <code>delta health = 1</code> significa que "o valor do frame anterior para a saúde deve ser 1".
 Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></li>
 </ul>
-<h2 id="hit-counts">Hit Counts</h2>
+<h2 id="hit-counts">Hit Counts<a class="headerlink" href="#hit-counts" title="Permanent link">link</a></h2>
 <p>No Achievement Editor, o campo do lado direito é Hit Count.</p>
 <p>Zero é o valor padrão. Isso significa que a condição deve ser verdadeira quando a conquista aparecer.</p>
 <p>Se você definir manualmente uma contagem (hit), por exemplo 1, significa que a condição deve ser verdadeira por pelo menos 1 frame e, uma vez que a contagem de <em>hits</em> seja atendida, ela não precisa ser atendida novamente em outro momento.</p>
 <p><strong>ATENÇÃO</strong>: se uma condição tiver uma contagem de hits e atingir o número necessário, esta condição não é mais testada. Ela é verdadeira e permanece verdadeira, <strong>A MENOS</strong> que você tenha um <code>Reset If</code>, o qual discutiremos abaixo.</p>
 <p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></p>
-<h2 id="special-flags">Special Flags</h2>
+<h2 id="special-flags">Special Flags<a class="headerlink" href="#special-flags" title="Permanent link">link</a></h2>
 <p>No Achievement Editor, é o campo intitulado como <strong>Special?</strong>.</p>
 <p>Essas flags condicionais só funcionam se você definir uma contagem de hits para uma condição.</p>
-<h3 id="pauseif"><code>PauseIf</code></h3>
+<h3 id="pauseif"><code>PauseIf</code><a class="headerlink" href="#pauseif" title="Permanent link">link</a></h3>
 <p>Isso pausará a atividade para todas as condições no mesmo grupo.</p>
 <p><strong>Nota</strong>: tenha em mente que isso <strong>não</strong> irá pausar as condições em outros grupos.</p>
 <p>O <code>PauseIf</code> é usado para pausar a contagem de hits em uma situação específica (como pausar o jogo). É usado quando você deseja manter a contagem de hits previamente conquistada, mas não deseja reiniciá-la quando alguém simplesmente faz uma pausa no jogo, por exemplo.</p>
-<h3 id="resetif"><code>ResetIf</code></h3>
+<h3 id="resetif"><code>ResetIf</code><a class="headerlink" href="#resetif" title="Permanent link">link</a></h3>
 <p>Isso irá zerar a contagem de hits para todas condições em que você definiu uma contagem de hits. Ele é muito mais comum de usar do que <code>PauseIf</code></p>
 <p><strong>Nota</strong>: Ao contrário do <code>PauseIf</code>, le irá zerar as condições em <strong>todos os grupos</strong></p>
 <p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Real Examples</a></p>
-<h3 id="n64-special-flags">N64 Special Flags</h3>
+<h3 id="n64-special-flags">N64 Special Flags<a class="headerlink" href="#n64-special-flags" title="Permanent link">link</a></h3>
 <p>Ao desenvolver para o  <strong>N64</strong>, existem "operações de flags aritméticas" ("arithmetic flag operations") adicionais que podem ser usadas. Esses flags são atualmente exclusivos do N64. Por favor, note que qualquer condição com flags aritméticos sempre é considerada verdadeira, independentemente dos valores de comparação.</p>
-<h4 id="add-source"><code>Add Source</code></h4>
+<h4 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h4>
 <p>Adicionará o valor da fonte no campo denominado <code>Memory</code> à próxima condição de realização. O valor total será usado na próxima condição de conquista.</p>
-<h4 id="sub-source"><code>Sub Source</code></h4>
+<h4 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h4>
 <p>Funciona de forma semelhante ao Add Source, mas subtrai o valor de origem.</p>
-<h4 id="add-hits"><code>Add Hits</code></h4>
+<h4 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h4>
 <p>Adicionará a contagem de hits atual à próxima condição. O valor de sucesso total será usado na próxima condição de achievement.</p>
 <p><img alt="" src="https://camo.githubusercontent.com/61485b9cecac30508fd3f3a788dbee448667ff1a/68747470733a2f2f692e696d6775722e636f6d2f37724d6b534e742e706e67" /></p>
 <p>Neste exemplo, as condições # 1 e # 2 terão seus valores (<code>5</code> e <code>3</code>, respectivamente) adicionados até atingirem a condição # 3. Nesse ponto, o valor contido no campo <code>Memory</code> será <code>5 + 3 + 20</code>, e o valor novo será <code>28</code>. A condição # 3 será verdadeira e será lida como: <code>28&gt; 20</code></p>
-<h2 id="groups">Groups</h2>
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">link</a></h2>
 <p>Os achievements podem ter grupos adicionados a eles que podem atuar como requisitos alternativos para desbloquear um achievement. Estes são chamados de  <strong>Alt Groups</strong>.</p>
 <p>Uma coisa extremamente importante a notar: para uma conquista desbloquear, deve ter o <strong>Core group E pelo menos um Alt group ser verdadeiro</strong>. Se não houver nenhum grupo Alt presente, apenas as condições do Core group's precisam ser verdadeiras.</p>
 <p><strong>Dica</strong>: devido ao grupo Core sempre precisar ser verdadeiro, normalmente você colocaria lá condições que sejam à todos os requisitos alternativos. No entanto, um truque que você pode usar para basicamente para ignorar a necessidade de um grupo Core é dar-lhe uma condição que é sempre verdadeira, como:</p>
@@ -1421,8 +1421,6 @@ Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos R
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="http://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
-    
-      <a href="https://discord.gg/TdfC3r7" class="md-footer-social__link fa fa-discord"></a>
     
       <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
     
