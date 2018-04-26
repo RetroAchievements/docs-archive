@@ -30,6 +30,18 @@
     </url>
         
     <url>
+     <loc>https://docs.retroachievements.org//RA-Discord-server/</loc>
+     <lastmod>2018-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.retroachievements.org//RALPER-Discord-bot/</loc>
+     <lastmod>2018-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://docs.retroachievements.org//How-to-contribute-if-you-are-not-a-developer/</loc>
      <lastmod>2018-04-26</lastmod>
      <changefreq>daily</changefreq>

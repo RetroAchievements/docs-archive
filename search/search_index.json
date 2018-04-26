@@ -201,6 +201,151 @@
             "title": "Online Tools"
         },
         {
+            "location": "/RA-Discord-server/",
+            "text": "Brief description of the purpose of the most important channels at \nRetroAchievements Discord server\n.\n\n\nNote\n: Some channels won't be visible to every user.\n\n\n#general\nlink\n\n\nWhere you can discuss whatever you want.\n\n\n#help-me\nlink\n\n\nA place to ask for help and getting the answers. Nothing more.\n\n\nOn the other channels of our server we are not so rigorous of what is considered off-topic, but we want to reinforce that the \n#help-me\n channel should be used only for help.\n\n\nBy the way, if you like to help others, maybe you'll find the \nRALPER bot\n useful.\n\n\n#botspam\nlink\n\n\nA channel to play with the our bots.\n\n\nDISCUSSION category\nlink\n\n\n#devs\nlink\n\n\nThe channel where achievement developers and Jr. developers share experience and chat about anything they want.\n\n\n#rasuite\nlink\n\n\nThe channel to discuss the development and testing of \nRALibretro\n, \nRAIntegration\n and \nRAEmus\n.\n\n\nIf you're a C/C++ programmer, you'll like to join here. And even if you are not a programmer, but a user of those softwares, you are welcome on this channel too. As it can also be used to explain better a feature requests, a bug report, etc. for each one of those softwares. Although, keep in mind that using the respective issue tracker on the right repository is the recommended way to request/report something.\n\n\n#raweb\nlink\n\n\nA place to discuss the development of the official website and the documentation site, respectively \nRAWeb\n and \nRADocs\n.\n\n\n#retroarch\nlink\n\n\nMany RetroAchievements users enjoy this feature through RetroArch, then this is the place where RetroArch users share knowledge and help each other.\n\n\n#revision-voting\nlink\n\n\nWhere achievement developers vote and discuss about revisions on achievement sets.\n\n\n#patrons\nlink\n\n\nA channel for our \npatrons\n. It's just a way to let the patrons reach the leadership of RA more directly.\n\n\nNote\n: We do NOT give preference to patron requests to the detriment of another member of the community. We simply give preference to reasonable requests.\n\n\nNEWS category\nlink\n\n\nThe channels on this category are not for chatting, but a way to let admins, mods, and other contributors make important announcements.\n\n\nMost of channels' names are pretty descriptive:\n\n\n\n\n#achievement-news\n\n\n#community-news\n\n\n#developer-news\n\n\n#retroarch-news\n - where staff announce what's new on RetroArch regarding achievements feature.\n\n\n#mastery-news\n\n\n\n\nINFO category\nlink\n\n\n#docs-log\nlink\n\n\nNot a chat channel.\n\n\nWe have a bot that posts notifications on this channel everytime something change on \nRAWiki\n or \nRADocs\n. Just an way to keep an eye on what's changing on our documentation project.\n\n\n#core-set-log\nlink\n\n\nNot a chat channel.\n\n\nWe have a bot that posts notifications on this channel everytime something change on the database where the official achievements are stored (a.k.a. Core Set). This is a useful way to keep an eye if achievements are being demoted and if new cheevos are being released. But keep in mind that this is just a bot output. The official announcement of a new achievement set will post on the \n#achievement-news\n channel.\n\n\n#post-free-games\nlink\n\n\nA channel where people share links to legally free games. \nPLEASE DO NOT SHARE ILLEGAL COPYRIGHTED MATERIAL HERE!\n\n\nMEDIA category\nlink\n\n\n#wholesome-chat\nlink\n\n\nA place to share inspiring pictures and cute cats photos.\n\n\n#crazydesertbusadinoparty97\nlink\n\n\nA place for \nsh!tposting\n memes.\n\n\n#ra-streams\nlink\n\n\nWhere people share links to let others watch them streaming gameplays.\n\n\nINTERNATIONAL category\nlink\n\n\nChannels where you can use your native language.",
+            "title": "RA Discord server"
+        },
+        {
+            "location": "/RA-Discord-server/#general",
+            "text": "Where you can discuss whatever you want.",
+            "title": "#general"
+        },
+        {
+            "location": "/RA-Discord-server/#help-me",
+            "text": "A place to ask for help and getting the answers. Nothing more.  On the other channels of our server we are not so rigorous of what is considered off-topic, but we want to reinforce that the  #help-me  channel should be used only for help.  By the way, if you like to help others, maybe you'll find the  RALPER bot  useful.",
+            "title": "#help-me"
+        },
+        {
+            "location": "/RA-Discord-server/#botspam",
+            "text": "A channel to play with the our bots.",
+            "title": "#botspam"
+        },
+        {
+            "location": "/RA-Discord-server/#discussion-category",
+            "text": "",
+            "title": "DISCUSSION category"
+        },
+        {
+            "location": "/RA-Discord-server/#devs",
+            "text": "The channel where achievement developers and Jr. developers share experience and chat about anything they want.",
+            "title": "#devs"
+        },
+        {
+            "location": "/RA-Discord-server/#rasuite",
+            "text": "The channel to discuss the development and testing of  RALibretro ,  RAIntegration  and  RAEmus .  If you're a C/C++ programmer, you'll like to join here. And even if you are not a programmer, but a user of those softwares, you are welcome on this channel too. As it can also be used to explain better a feature requests, a bug report, etc. for each one of those softwares. Although, keep in mind that using the respective issue tracker on the right repository is the recommended way to request/report something.",
+            "title": "#rasuite"
+        },
+        {
+            "location": "/RA-Discord-server/#raweb",
+            "text": "A place to discuss the development of the official website and the documentation site, respectively  RAWeb  and  RADocs .",
+            "title": "#raweb"
+        },
+        {
+            "location": "/RA-Discord-server/#retroarch",
+            "text": "Many RetroAchievements users enjoy this feature through RetroArch, then this is the place where RetroArch users share knowledge and help each other.",
+            "title": "#retroarch"
+        },
+        {
+            "location": "/RA-Discord-server/#revision-voting",
+            "text": "Where achievement developers vote and discuss about revisions on achievement sets.",
+            "title": "#revision-voting"
+        },
+        {
+            "location": "/RA-Discord-server/#patrons",
+            "text": "A channel for our  patrons . It's just a way to let the patrons reach the leadership of RA more directly.  Note : We do NOT give preference to patron requests to the detriment of another member of the community. We simply give preference to reasonable requests.",
+            "title": "#patrons"
+        },
+        {
+            "location": "/RA-Discord-server/#news-category",
+            "text": "The channels on this category are not for chatting, but a way to let admins, mods, and other contributors make important announcements.  Most of channels' names are pretty descriptive:   #achievement-news  #community-news  #developer-news  #retroarch-news  - where staff announce what's new on RetroArch regarding achievements feature.  #mastery-news",
+            "title": "NEWS category"
+        },
+        {
+            "location": "/RA-Discord-server/#info-category",
+            "text": "",
+            "title": "INFO category"
+        },
+        {
+            "location": "/RA-Discord-server/#docs-log",
+            "text": "Not a chat channel.  We have a bot that posts notifications on this channel everytime something change on  RAWiki  or  RADocs . Just an way to keep an eye on what's changing on our documentation project.",
+            "title": "#docs-log"
+        },
+        {
+            "location": "/RA-Discord-server/#core-set-log",
+            "text": "Not a chat channel.  We have a bot that posts notifications on this channel everytime something change on the database where the official achievements are stored (a.k.a. Core Set). This is a useful way to keep an eye if achievements are being demoted and if new cheevos are being released. But keep in mind that this is just a bot output. The official announcement of a new achievement set will post on the  #achievement-news  channel.",
+            "title": "#core-set-log"
+        },
+        {
+            "location": "/RA-Discord-server/#post-free-games",
+            "text": "A channel where people share links to legally free games.  PLEASE DO NOT SHARE ILLEGAL COPYRIGHTED MATERIAL HERE!",
+            "title": "#post-free-games"
+        },
+        {
+            "location": "/RA-Discord-server/#media-category",
+            "text": "",
+            "title": "MEDIA category"
+        },
+        {
+            "location": "/RA-Discord-server/#wholesome-chat",
+            "text": "A place to share inspiring pictures and cute cats photos.",
+            "title": "#wholesome-chat"
+        },
+        {
+            "location": "/RA-Discord-server/#crazydesertbusadinoparty97",
+            "text": "A place for  sh!tposting  memes.",
+            "title": "#crazydesertbusadinoparty97"
+        },
+        {
+            "location": "/RA-Discord-server/#ra-streams",
+            "text": "Where people share links to let others watch them streaming gameplays.",
+            "title": "#ra-streams"
+        },
+        {
+            "location": "/RA-Discord-server/#international-category",
+            "text": "Channels where you can use your native language.",
+            "title": "INTERNATIONAL category"
+        },
+        {
+            "location": "/RALPER-Discord-bot/",
+            "text": "In this page you can see the complete command list of our RALPER \ndiscord\n bot.\n\n\nThe bot is enabled on \n#general\n, \n#help-me\n, \n#botspam\n and some other channels, but if you just wanna play with/test RALPER, use \n#botspam\n.\n\n\nabout RALPER\nlink\n\n\n!about-ralper\n\n\n\n\ngetting \"ralp\"\nlink\n\n\n!ralp\n!ralp-dev\n\n\n\n\n\"ralping\" users\nlink\n\n\n!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic\n\n\n\n\n\"ralping\" RetroArch users\nlink\n\n\n!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges\n\n\n\n\nlinks for dev docs\nlink\n\n\n!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence\n\n\n\n\ngetting the list of games with cheevos\nlink\n\n\n!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy\n\n\n\n\nmisc. links\nlink\n\n\n!gamefaqs\n!rompatcher\n!git-repos",
+            "title": "RALPER Discord bot"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#about-ralper",
+            "text": "!about-ralper",
+            "title": "about RALPER"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#getting-ralp",
+            "text": "!ralp\n!ralp-dev",
+            "title": "getting \"ralp\""
+        },
+        {
+            "location": "/RALPER-Discord-bot/#ralping-users",
+            "text": "!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic",
+            "title": "\"ralping\" users"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#ralping-retroarch-users",
+            "text": "!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges",
+            "title": "\"ralping\" RetroArch users"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#links-for-dev-docs",
+            "text": "!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence",
+            "title": "links for dev docs"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#getting-the-list-of-games-with-cheevos",
+            "text": "!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy",
+            "title": "getting the list of games with cheevos"
+        },
+        {
+            "location": "/RALPER-Discord-bot/#misc-links",
+            "text": "!gamefaqs\n!rompatcher\n!git-repos",
+            "title": "misc. links"
+        },
+        {
             "location": "/How-to-contribute-if-you-are-not-a-developer/",
             "text": "Even if you don't know how to create achievements there are many ways to contribute with the RetroAchievements community. Here are some examples.\n\n\nReport broken achievements\nlink\n\n\nIf an achievement triggered at a wrong time or didn't trigger at all, please report it. We know that many users love free points, but please, even if an achievement triggered at a wrong time, report it!\n\n\nAnother important situation that needs to be reported is a cheevo triggering by using some kind of cheat in the game (e.g. stage select code), or by loading a saved game.\n\n\nTo report a broken cheevo go to RetroAchievements -> Report Broken Achievements, this feature is only available on official emulators (not on RetroArch).\n\n\nSee this example:\n\n\n.\n\n\nAdd details of the state of your game, when it triggered/didn't trigger, what game mode, where you were when it happened/didn't happen, if you had reset the game recently, anything else you think may be relevant to the achievement. This is necessary for our system so the devs know where there is a problem.\n\n\nSuggest cool achievements/challenges\nlink\n\n\nIf you know a game very well, you probably can have some cool ideas of challenges for the game. Post your ideas on the forum topic related to the game.\n\n\nWe have \na guide on how to think about and design good achievements\n, not the technical side but the conceptual. Then even non-developers can get some inspiration from that info.\n\n\nFeedback is always welcome\nlink\n\n\nGive feedback in the forums about what you like or dislike about the achievements sets. Be specific and leave details.\n\n\nMake badges for achievements\nlink\n\n\nIf you like to play with graphics you can create some art for the achievements badges or icons for the games. Using the screenshot feature from the emulator itself can help with this, and then you can edit to make something cool.\n\n\nYou can see more info about it on the \nBadge and Icon Creation page\n.\n\n\nParticipate in community events\nlink\n\n\nSuch as Achievement of the Week, Leaderboard of the Week or other events that happens on \nour discord server\n.",
             "title": "How to contribute if you are not a developer"
