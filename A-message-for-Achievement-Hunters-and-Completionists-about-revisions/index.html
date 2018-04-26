@@ -13,7 +13,7 @@
         <meta name="description" content="RetroAchievements.org Documentation Project">
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/Simple-Example-of-How-to-Avoid-Load-State-Abusing/">
+        <link rel="canonical" href="https://docs.retroachievements.org/A-message-for-Achievement-Hunters-and-Completionists-about-revisions/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Simple Example of How to Avoid Load State Abusing - RetroAchievements docs</title>
+        <title>A message for Achievement Hunters and Completionists about revisions - RetroAchievements docs</title>
       
     
     
@@ -119,7 +119,7 @@
                 RetroAchievements docs
               </span>
               <span class="md-header-nav__topic">
-                Simple Example of How to Avoid Load State Abusing
+                A message for Achievement Hunters and Completionists about revisions
               </span>
             
           
@@ -261,10 +261,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       User docs
@@ -412,11 +414,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" title="A message for Achievement Hunters and Completionists about revisions" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="A message for Achievement Hunters and Completionists about revisions" class="md-nav__link md-nav__link--active">
       A message for Achievement Hunters and Completionists about revisions
     </a>
+    
   </li>
 
         
@@ -465,12 +474,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Developer docs
@@ -534,12 +541,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
       Real Examples
@@ -591,18 +596,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
     </a>
-    
   </li>
 
         
@@ -1108,26 +1106,22 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/Simple-Example-of-How-to-Avoid-Load-State-Abusing.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="http://retroachievements.org/wiki-edit-redirect.php?page=/A-message-for-Achievement-Hunters-and-Completionists-about-revisions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Simple Example of How to Avoid Load State Abusing</h1>
+                  <h1>A message for Achievement Hunters and Completionists about revisions</h1>
                 
-                <p>In this example the game is <a href="http://retroachievements.org/Game/4650">Zooming Secretary (NES)</a>, and the Achievement is <a href="http://retroachievements.org/Achievement/55102">Great Job! - Now you can take a rest</a>, for beating the game.</p>
-<p>In this we want to make sure the player went through all levels to beat the game in order to earn the achievement. If the player uses a save state to go directly to the last stage and finish it, the achievement won't pop up.</p>
-<p><strong>Addresses</strong></p>
-<ul>
-<li><code>0x06e9</code>: level ID. From 0 to 8 and 8 means "finished the game".</li>
-</ul>
-<p><img alt="greatjob-zoomingsecretary" src="https://user-images.githubusercontent.com/8508804/33465179-6fe458ac-d62d-11e7-8e9a-7be17c73a7a8.png" /></p>
-<p><strong>Conditions</strong></p>
-<ol>
-<li>In the "game finished level".</li>
-<li>The level was increased 8 times.</li>
-<li>Reset the counter if the level decreases.</li>
-</ol>
-<p>As this game has 8 levels, the value in the level ID address must be increased 8 times to beat the game. This way a player can't just start the game, load a state to go directly to the last level and then beat the game. He/she needs to go through all levels.</p>
-<p>The <code>ResetIf</code> is here just to avoid the case where the player keep loading states going back and forth between levels making the hit counter to be 8. If he/she loads a state going to a lower level, the hit counter goes to zero.</p>
+                <p>Let's start jumping directly to the conclusion:</p>
+<hr />
+<p><strong>If you mastered a game and then it received a revision, don't feel frustrated! Keep in mind that changes come for a better quality.</strong></p>
+<hr />
+<p>Now let's elaborate why we are saying that.</p>
+<p>RetroAchievements is a "young" project and is constantly evolving. It was launched in the late 2012, and in the early days the emulators and the site (database stuff, PHP, HTML, CSS, JavaScript, etc.) were developed by a single person: <a href="http://retroachievements.org/User/Scott">Scott</a>. Therefore the evolution occurred slowly.</p>
+<p>Another thing that was occurring very slowly in the early days was the diffusion of knowledge about achievement creation. Specially about good practices when creating achievements. There wasn't documentation at that time (RADocs only started in November/2017). People were learning to create achievements by sharing knowledge on forum threads and/or by personal messages.</p>
+<p>In the early days the community didn't have a very clear a concept of what a good achievement design is. And it resulted in many poorly designed sets for our current standards. We also didn't have much experience of how achievements could be protected against in-game cheats or battery save abusing. That's why from time to time some achievement sets receive revisions. We do it with quality in mind, and to show actual respect for the game.</p>
+<p>When a revision is going to happen, we try to involve the community, but discussing on our forums (usually the official game's topic) and/or on our discord server. We are aware that this is insufficient to reach all interested people, but it is the way we are currently using.</p>
+<p>We are working on new ways to discuss revisions with the community by implementing some new social features on the RA website, but while those features are not implemented, we'll keep using the forums and discord.</p>
+<p>If you would like to propose new methods for discussing revisions, we are open to suggestions.</p>
                 
                   
                 
@@ -1140,9 +1134,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://docs.retroachievements.org/Simple-Example-of-How-to-Avoid-Load-State-Abusing/";
+      this.page.url = "https://docs.retroachievements.org/A-message-for-Achievement-Hunters-and-Completionists-about-revisions/";
       this.page.identifier =
-        "Simple-Example-of-How-to-Avoid-Load-State-Abusing/";
+        "A-message-for-Achievement-Hunters-and-Completionists-about-revisions/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1164,7 +1158,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Issues-when-NOT-playing-in-hardcore-mode/" title="Issues when NOT playing in hardcore mode" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1173,19 +1167,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using Delta Values and ResetIf
+                Issues when NOT playing in hardcore mode
               </span>
             </div>
           </a>
         
         
-          <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Contributing-with-the-docs/" title="Contributing with the docs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tips and Tricks
+                Contributing with the docs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
