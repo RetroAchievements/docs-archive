@@ -307,7 +307,7 @@
         },
         {
             "location": "/RALPER-Discord-bot/",
-            "text": "In this page you can see the complete command list of our RALPER \ndiscord\n bot.\n\n\nThe bot is enabled on \n#general\n, \n#help-me\n, \n#botspam\n and some other channels, but if you just wanna play with/test RALPER, use \n#botspam\n.\n\n\nabout RALPER\nlink\n\n\n!about-ralper\n\n\n\n\ngetting \"ralp\"\nlink\n\n\n!ralp\n!ralp-dev\n\n\n\n\n\"ralping\" users\nlink\n\n\n!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic\n\n\n\n\n\"ralping\" RetroArch users\nlink\n\n\n!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges\n\n\n\n\nlinks for dev docs\nlink\n\n\n!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence\n\n\n\n\ngetting the list of games with cheevos\nlink\n\n\n!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy\n\n\n\n\nmisc. links\nlink\n\n\n!gamefaqs\n!rompatcher\n!git-repos",
+            "text": "In this page you can see the complete command list of our RALPER \ndiscord\n bot.\n\n\nThe bot is enabled on \n#general\n, \n#help-me\n, \n#botspam\n and some other channels, but if you just wanna play with/test RALPER, use \n#botspam\n.\n\n\nabout RALPER\nlink\n\n\n!about-ralper\n\n\n\n\ngetting \"ralp\"\nlink\n\n\n!ralp\n!ralp-dev\n\n\n\n\n\"ralping\" users\nlink\n\n\n!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic\n\n\n\n\n\"ralping\" RetroArch users\nlink\n\n\n!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges\n\n\n\n\nlinks for dev docs\nlink\n\n\n!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence\n\n\n\n\ngetting the list of games with cheevos\nlink\n\n\n!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-gamegear\n!list-atari\n!list-arcade\n!list-virtualboy\n\n\n\n\nmisc. links\nlink\n\n\n!gamefaqs\n!rompatcher\n!git-repos",
             "title": "RALPER Discord bot"
         },
         {
@@ -337,7 +337,7 @@
         },
         {
             "location": "/RALPER-Discord-bot/#getting-the-list-of-games-with-cheevos",
-            "text": "!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy",
+            "text": "!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-gamegear\n!list-atari\n!list-arcade\n!list-virtualboy",
             "title": "getting the list of games with cheevos"
         },
         {
