@@ -1,10 +1,13 @@
 #!/bin/bash
 # generate-docs.sh
 ##################
-# TODO: add an --install option to install mkdocs, material theme, etc...
 
 
 # globals #####################################################################
+
+DEPS=(git python3 python3-pip libyaml-dev)
+DEP_FILES=(git python3 pip3 /usr/include/yaml.h)
+PIP_PKGS=(mkdocs mkdocs-material)
 
 readonly SCRIPT_DIR="$(cd "$(dirname $0)" && pwd)"
 
@@ -15,8 +18,46 @@ DEPLOY_FLAG=0
 # functions ###################################################################
 
 function exit_error() {
-    echo "ERROR: $@" >&2
+    echo -e "ERROR: $@" >&2
     exit 1
+}
+
+
+function print_help() {
+    local ret="$1"
+    echo "$(basename "$0") [OPTIONS]"
+    echo
+    echo "Where OPTIONS are:"
+    echo
+    # getting the help message from the comments in this source code
+    sed -n 's/^#H //p' "$0"
+# FIXME    exit "$ret"
+}
+
+
+function check_deps() {
+    local pkg
+    local not_installed=()
+
+    for pkg in "${DEP_FILES[@]}"; do
+        if ! which "$pkg" 2>&1 >/dev/null; then
+            if [[ "$pkg" == *"yaml.h" ]]; then
+                [[ -f "$pkg" ]] && continue
+            fi
+
+            not_installed+=("$pkg")
+            echo "WARNING: $pkg not found!" >&2
+        fi
+    done
+
+    # if deps are installed, check for mkdocs stuff
+    if [[ -n "$not_installed" ]]; then
+        exit_error "missing dependencies!\n" \
+            "To use this tool you must install the following packages:\n" \
+            "${DEPS[@]}\n" >&2
+    fi
+
+    # TODO: check for mkdocs and mkdocs-material
 }
 
 
@@ -30,10 +71,6 @@ function get_pages_section() {
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         case "$line" in
-            "## [Editing the Wiki]"*)
-                continue
-                ;;
-
             "## [About](About)")
                 echo "  - About: About.md" ;;
 
@@ -59,19 +96,21 @@ function get_pages_section() {
 
 
 function parse_args() {
+    if [[ -z "$@" ]]; then
+        print_help
+        exit
+        # FIXME: exit must be on print_help() and do not exit if sourced script
+    fi
+
     while [[ -n "$1" ]]; do
         case "$1" in
 
 #H -h|--help        Print this help message and exit.
 #H 
             -h|--help)
-                echo "$(basename "$0") [OPTIONS]"
-                echo
-                echo "Where OPTIONS are:"
-                echo
-                # getting the help message from the comments in this source code
-                sed -n 's/^#H //p' "$0"
+                print_help
                 exit
+                # FIXME: exit must be on print_help() and do not exit if sourced script
                 ;;
 
 #H -s|--serve       Serve the docs locally after generating the pages.
@@ -85,6 +124,7 @@ function parse_args() {
             -d|--deploy)
                 DEPLOY_FLAG=1
                 ;;
+
             *)  break
                 ;;
         esac
@@ -94,6 +134,8 @@ function parse_args() {
 
 
 function main() {
+    check_deps
+
     parse_args "$@"
 
     cd "$SCRIPT_DIR"
@@ -108,6 +150,9 @@ function main() {
 
     cd docs.wiki
     ln -sf Home.md index.md
+
+    # ugly hack to config the custom domain docs.retroachievements.org
+    echo 'docs.retroachievements.org' > CNAME
     cd -
 
     echo "--- Generating the custom mkdocs.yml..."
@@ -126,10 +171,11 @@ function main() {
 
     if [[ "$DEPLOY_FLAG" == "1" ]]; then
         echo "--- Generating and deploying the pages to GitHub..."
-        mkdocs gh-deploy -f temp-mkdocs.yml -m "generated https://retroachievements.github.io/docs pages - $(date +'%Y-%m-%d %H:%M:%S')" || exit_error "Failed to generate/deploy pages to GitHub."
+        mkdocs gh-deploy -f temp-mkdocs.yml -m "generated <http://docs.retroachievements.org> pages - $(date +'%Y-%m-%d %H:%M:%S')" || exit_error "Failed to generate/deploy pages to GitHub."
         echo "--- Done!"
         echo
     fi
 }
+
 
 main "$@"
