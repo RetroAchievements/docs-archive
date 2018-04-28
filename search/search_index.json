@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "link\n\n\nWelcome to the \nRetroAchievements documentation project\n!\n\n\nWe encourage all community members to join our \nDiscord chat server\n, we use this for most communication.\n\n\nThe complete list of pages is on the sidebar, but here's a brief description of some of them:\n\n\n\n\n\n\nFAQ\n: the Frequently Asked Questions\n\n\n\n\n\n\nDownloads\n: our alternative downloads page.\n\n\n\n\n\n\nRA Discord server\n: a list of the most important channels on our discord server and their purpose.\n\n\n\n\n\n\nMy game is not loading achievements\n: what you have to do when your game isn't loading achievements.\n\n\n\n\n\n\nIssues when NOT playing in hardcore mode\n: why you should expect to have issues if you use save/load state while playing.\n\n\n\n\n\n\nA message for Achievement Hunters and Completionists about revisions\n: why you shouldn't be frustrated when a revision on an achievement set is made.\n\n\n\n\n\n\nHow to contribute if you are not a developer\n: if you don't know how to develop achievements, there are many other ways to contribute with the community.\n\n\n\n\n\n\nIf you want to start learning how to create achievements, check our \nDeveloper docs\n section.\n\n\nYou can help to improve these docs editing/creating the pages at \nRetroAchievements wiki\n.\n\n\nTranslations\nlink\n\n\n\n\nPortuguese",
+            "text": "link\n\n\nWelcome to the \nRetroAchievements documentation project\n!\n\n\nWe encourage all community members to join our \nDiscord chat server\n, we use this for most communication.\n\n\nThe complete list of pages is on the sidebar, but here's a brief description of some of them:\n\n\n\n\n\n\nFAQ\n: the Frequently Asked Questions\n\n\n\n\n\n\nDownloads\n: our alternative downloads page.\n\n\n\n\n\n\nFree Games\n: games that are completely and legally free download and play on your emulators.\n\n\n\n\n\n\nRA Discord server\n: a list of the most important channels on our discord server and their purpose.\n\n\n\n\n\n\nMy game is not loading achievements\n: what you have to do when your game isn't loading achievements.\n\n\n\n\n\n\nIssues when NOT playing in hardcore mode\n: why you should expect to have issues if you use save/load state while playing.\n\n\n\n\n\n\nA message for Achievement Hunters and Completionists about revisions\n: why you shouldn't be frustrated when a revision on an achievement set is made.\n\n\n\n\n\n\nHow to contribute if you are not a developer\n: if you don't know how to develop achievements, there are many other ways to contribute with the community.\n\n\n\n\n\n\nIf you want to start learning how to create achievements, check our \nDeveloper docs\n section.\n\n\nYou can help to improve these docs editing/creating the pages at \nRetroAchievements wiki\n.\n\n\nTranslations\nlink\n\n\n\n\nPortuguese",
             "title": "Home"
         },
         {
@@ -204,6 +204,31 @@
             "location": "/Downloads/#online-tools",
             "text": "CRC32 checksum  - For checking that you have the correct ROM  MD5 checksum  - For checking that you have the correct ROM  Marc Robledo's online RomPatcher  - online ROM patcher for hacks and other ROM patches",
             "title": "Online Tools"
+        },
+        {
+            "location": "/Free-Games/",
+            "text": "In this page you can find games that are \ncompletely and legally free download and play on your emulators\n. Many of them have an achievement set at \nRetroAchievements.org\n.\n\n\nAtari 2600\nlink\n\n\n\n\nWall Jump Ninja\n - by Walaber\n\n\n\n\nMega Drive/Genesis\nlink\n\n\n\n\nUwol - Quest For Money\n - by \nShiru\n\n\n\n\nNES\nlink\n\n\n\n\nAlter Ego\n - by \nShiru\n\n\nBlade Buster\n - by \nHigh Level Challenge\n\n\nGotta Protectors - Amazon's Running Diet\n - by \nAncient Corp\n\n\nLAN Master\n - by \nShiru\n\n\nLawn Mower\n - by \nShiru\n\n\nZooming Secretary\n - by \nShiru\n\n\n\n\nSNES\nlink\n\n\n\n\nSuper Boss Gaiden\n - by \nsuperfamicom.org (??)",
+            "title": "Free Games"
+        },
+        {
+            "location": "/Free-Games/#atari-2600",
+            "text": "Wall Jump Ninja  - by Walaber",
+            "title": "Atari 2600"
+        },
+        {
+            "location": "/Free-Games/#mega-drivegenesis",
+            "text": "Uwol - Quest For Money  - by  Shiru",
+            "title": "Mega Drive/Genesis"
+        },
+        {
+            "location": "/Free-Games/#nes",
+            "text": "Alter Ego  - by  Shiru  Blade Buster  - by  High Level Challenge  Gotta Protectors - Amazon's Running Diet  - by  Ancient Corp  LAN Master  - by  Shiru  Lawn Mower  - by  Shiru  Zooming Secretary  - by  Shiru",
+            "title": "NES"
+        },
+        {
+            "location": "/Free-Games/#snes",
+            "text": "Super Boss Gaiden  - by  superfamicom.org (??)",
+            "title": "SNES"
         },
         {
             "location": "/RA-Discord-server/",
