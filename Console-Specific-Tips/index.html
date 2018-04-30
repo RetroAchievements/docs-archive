@@ -763,6 +763,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#neo-geo" title="Neo Geo" class="md-nav__link">
+    Neo Geo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-unibios-protection" title="Mandatory UniBIOS protection" class="md-nav__link">
+    Mandatory UniBIOS protection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1326,6 +1346,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#neo-geo" title="Neo Geo" class="md-nav__link">
+    Neo Geo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-unibios-protection" title="Mandatory UniBIOS protection" class="md-nav__link">
+    Mandatory UniBIOS protection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1406,6 +1446,15 @@
 <p><code>[81][18B9E0] [4200]</code></p>
 <p>Checks if the 8-bit value at 0x18BAB5 is equal to 0x20. This means 0x18BAB5 contains a button press variable and Bit5 (0x20) corresponds to L.</p>
 <p><a href="http://viper.shadowflareindustries.com/antigsc/index.php?codes&amp;dev=gs&amp;system=n64">Anti-GSC</a> and <a href="https://gamehacking.org/system/n64">GameHacking</a> are both good resources for finding GameShark codes.</p>
+<h2 id="neo-geo">Neo Geo<a class="headerlink" href="#neo-geo" title="Permanent link">link</a></h2>
+<h3 id="mandatory-unibios-protection">Mandatory UniBIOS protection<a class="headerlink" href="#mandatory-unibios-protection" title="Permanent link">link</a></h3>
+<p>UniBIOS allows several debugging options, and also access the database of individual cheats for every game. Therefore all achievements for Neo Geo need to be protected from abusing it. The simpliest solution here is disallowing UniBIOS usage completely, directly from the level of achievement code.</p>
+<p>Fortunately part of UniBIOS data seems to be reflected in two address strings in the RAM: <code>0x00fe30</code> and <code>0x00fe50</code>. While UniBIOS is active <code>0x00fe30</code> in 32-bit size seems to always brings the same value (for every Neo Geo game) which is <code>80025632</code>, and it doesn't seem to change after the ROM was loaded. For any other BIOS, the value is always 0, (except for the moment the RAM is overloaded by the diagnostic program, after the ROM was loaded).</p>
+<p>To protect achievements from using UniBIOS all we need to do is to include a simple protection which will reset when <code>0x00fe30</code> in 32-bit size is not equal to <code>0</code>. This additionally, eventually protect the achievement from unlocking during RAM diagnostic process.</p>
+<p><strong>Here is how the protection should look alike (selected in the Achievement Editor):</strong>
+<img alt="unineo1" src="http://bit.ly/UniNeo1" /></p>
+<p><strong>Here is how the same RAM region looks when other BIOS are used (here MSV):</strong>
+<img alt="unineo2" src="http://bit.ly/UniNeo2" /></p>
                 
                   
                 
