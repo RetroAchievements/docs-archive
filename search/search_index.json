@@ -337,7 +337,7 @@
         },
         {
             "location": "/RALPER-Discord-bot/",
-            "text": "In this page you can see the complete command list of our RALPER \ndiscord\n bot.\n\n\nThe bot is enabled on \n#general\n, \n#help-me\n, \n#botspam\n and some other channels, but if you just wanna play with/test RALPER, use \n#botspam\n.\n\n\nabout RALPER\nlink\n\n\n!about-ralper\n\n\n\n\ngetting \"ralp\"\nlink\n\n\n!ralp\n!ralp-dev\n\n\n\n\n\"ralping\" users\nlink\n\n\n!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!hashes\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic\n\n\n\n\n\"ralping\" RetroArch users\nlink\n\n\n!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges\n\n\n\n\nlinks for dev docs\nlink\n\n\n!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence\n\n\n\n\ngetting the list of games with cheevos\nlink\n\n\n!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-gamegear\n!list-atari\n!list-arcade\n!list-virtualboy\n\n\n\n\nmisc. links\nlink\n\n\n!gamefaqs\n!rompatcher\n!git-repos",
+            "text": "In this page you can see the complete command list of our RALPER \ndiscord\n bot.\n\n\nThe bot is enabled on \n#general\n, \n#help-me\n, \n#botspam\n and some other channels, but if you just wanna play with/test RALPER, use \n#botspam\n.\n\n\nabout RALPER\nlink\n\n\n!about-ralper\n\n\n\n\ngetting \"ralp\"\nlink\n\n\n!ralp\n!ralp-dev\n\n\n\n\n\"ralping\" users\nlink\n\n\n!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads !download !dl\n!radocs\n!radocs-dev-start !dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic\n\n\n\n\n\"ralping\" RetroArch users\nlink\n\n\n!rarch-nightly\n!rarch-config\n!rarch-cores\n!rarch-specific\n!rarch-netplay\n!rarch-badges\n\n\n\n\nlinks for dev docs\nlink\n\n\n!radocs-dev\n!radocs-meminspector !meminspector\n!radocs-delta !delta\n!radocs-hitcounts !hitcounts\n!radocs-pauseif !pauseif\n!radocs-resetif !resetif\n!radocs-altgroups !altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap !dev-roadmap\n!radocs-badges !badges\n!radocs-leaderboards !leaderboards\n!radocs-richpresence !rps\n\n\n\n\ngetting the list of games with cheevos\nlink\n\n\n!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy\n\n\n\n\nmisc. links\nlink\n\n\n!gamefaqs\n!rompatcher\n!git-repos",
             "title": "RALPER Discord bot"
         },
         {
@@ -352,7 +352,7 @@
         },
         {
             "location": "/RALPER-Discord-bot/#ralping-users",
-            "text": "!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!hashes\n!softcore\n!downloads\n!radocs\n!radocs-dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic",
+            "text": "!faq\n!manual-award !manual-unlock\n!broken-cheevo\n!reset-cheevo\n!missing-cheevos !cheevos-dont-load\n!softcore\n!downloads !download !dl\n!radocs\n!radocs-dev-start !dev-start\n!contribute\n!ralibretro\n!netplay\n!get-roms\n!rapsx\n!reset-password\n!verifyme\n!panic",
             "title": "\"ralping\" users"
         },
         {
@@ -362,18 +362,28 @@
         },
         {
             "location": "/RALPER-Discord-bot/#links-for-dev-docs",
-            "text": "!radocs-dev\n!radocs-meminspector\n!radocs-delta\n!radocs-hitcounts\n!radocs-pauseif\n!radocs-resetif\n!radocs-altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap\n!radocs-badges\n!radocs-leaderboards\n!radocs-richpresence",
+            "text": "!radocs-dev\n!radocs-meminspector !meminspector\n!radocs-delta !delta\n!radocs-hitcounts !hitcounts\n!radocs-pauseif !pauseif\n!radocs-resetif !resetif\n!radocs-altgroups !altgroups\n!radocs-real-examples\n!radocs-templates\n!radocs-dev-roadmap !dev-roadmap\n!radocs-badges !badges\n!radocs-leaderboards !leaderboards\n!radocs-richpresence !rps",
             "title": "links for dev docs"
         },
         {
             "location": "/RALPER-Discord-bot/#getting-the-list-of-games-with-cheevos",
-            "text": "!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-gamegear\n!list-atari\n!list-arcade\n!list-virtualboy",
+            "text": "!list-megadrive\n!list-mastersystem\n!list-snes\n!list-gb\n!list-gbc\n!list-gba\n!list-nes\n!list-pcengine\n!list-n64\n!list-lynx\n!list-ngp\n!list-atari\n!list-arcade\n!list-virtualboy",
             "title": "getting the list of games with cheevos"
         },
         {
             "location": "/RALPER-Discord-bot/#misc-links",
             "text": "!gamefaqs\n!rompatcher\n!git-repos",
             "title": "misc. links"
+        },
+        {
+            "location": "/My-game-is-not-loading-achievements/",
+            "text": "Maybe you loaded up your game but you see a popup:\n\n\n\nThen you check the overlay (typically ESC) and see:\n\n\n\n\nOr maybe you got these messages:\n\n\n\n\nand\n\n\n\n\nWhen any of these situations happens, either your game doesn't have achievements yet or more likely you have the incorrect ROM.\n\n\nJust to be sure, search for the game name and check matching results.\n\n\n  \n\n\nIf your game has achievements but your ROM isn't in our system either you'll need to find the correct ROM or get support for your ROM.\n\n\nCheck the top post of the official game's forum thread\n. The link for it can be found at the bottom of the achievement list on game pages. Example for \nSuper Mario Bros.\n:\n\n\n\n\nProbably the first post of the official game's forum thread has a list of valid ROMs for the respective game and also the checksum of the ROMs. \n\n\nNote\n: \"checksum\" is a number used to confirm if two copies of a file are identical. On RA we use it to assure the player is using the same ROM as the achievement developer.\n\n\nAlso check some of the last posts in the game forum page and the game page wall comments for clues on which ROM you'll need. If the correct ROM name and checksum are not listed yet, then you'll need to ask for it (\nplease, do NOT ask for links to download the ROM\n, only the filename and the checksum). You can request it in the game's forum page or ask for help in \nDiscord\n or on the site chat on the front page.\n\n\nYou can also contribute to the community by getting support for your ROM, if it's compatible. Post the checksum of your existing ROM in the forum of that game and also the exact name you have for it and a developer will review it with you to see if it is compatible.\n\n\n  \n\n\nHow to find the checksum of your ROM.\n\n\nFor more details about checksum and hashes, read here: \nhttp://datacrystal.romhacking.net/wiki/Hashes\n\n\nComprehensive lists of most of the games in RetroAchievements database\nlink\n\n\nThe user \ncaricatur\n did a great job by compiling some lists of ROMs linked to games we have at RetroAchievements database. Here are the links to the respective forum posts:\n\n\n\n\nMega Drive/Genesis\n\n\nMaster System\n\n\nPC Engine\n\n\nGameboy\n\n\nGameboy Color\n\n\nGameboy Advance\n\n\nSNES\n\n\nNintendo 64",
+            "title": "My game is not loading achievements"
+        },
+        {
+            "location": "/My-game-is-not-loading-achievements/#comprehensive-lists-of-most-of-the-games-in-retroachievements-database",
+            "text": "The user  caricatur  did a great job by compiling some lists of ROMs linked to games we have at RetroAchievements database. Here are the links to the respective forum posts:   Mega Drive/Genesis  Master System  PC Engine  Gameboy  Gameboy Color  Gameboy Advance  SNES  Nintendo 64",
+            "title": "Comprehensive lists of most of the games in RetroAchievements database"
         },
         {
             "location": "/How-to-contribute-if-you-are-not-a-developer/",
@@ -474,16 +484,6 @@
             "location": "/Contributing-with-the-docs/#tables",
             "text": "A simple table looks like this:  First Header | Second Header | Third Header\n------------ | ------------- | ------------\nContent Cell | Content Cell  | Content Cell\nContent Cell | Content Cell  | Content Cell\nContent Cell | Content Cell  | Content Cell  It should render like this:     First Header  Second Header  Third Header      Content Cell  Content Cell  Content Cell    Content Cell  Content Cell  Content Cell    Content Cell  Content Cell  Content Cell     You can specify alignment for each column by adding colons to separator lines:  First Header | Second Header | Third Header\n:----------- |:-------------:| -----------:\nLeft         | Center        | Right\nLeft         | Center        | Right\nLeft         | Center        | Right  Results:     First Header  Second Header  Third Header      Left  Center  Right    Left  Center  Right    Left  Center  Right",
             "title": "Tables"
-        },
-        {
-            "location": "/My-game-is-not-loading-achievements/",
-            "text": "Maybe you loaded up your game but you see a popup:\n\n\n\nThen you check the overlay (typically ESC) and see:\n\n\n\n\nOr maybe you got these messages:\n\n\n\n\nand\n\n\n\n\nWhen any of these situations happens, either your game doesn't have achievements yet or more likely you have the incorrect ROM.\n\n\nJust to be sure, search for the game name and check matching results.\n\n\n  \n\n\nIf your game has achievements but your ROM isn't in our system either you'll need to find the correct ROM or get support for your ROM.\n\n\nCheck the top post of the official game's forum thread\n. The link for it can be found at the bottom of the achievement list on game pages. Example for \nSuper Mario Bros.\n:\n\n\n\n\nProbably the first post of the official game's forum thread has a list of valid ROMs for the respective game and also the checksum of the ROMs. \n\n\nNote\n: \"checksum\" is a number used to confirm if two copies of a file are identical. On RA we use it to assure the player is using the same ROM as the achievement developer.\n\n\nAlso check some of the last posts in the game forum page and the game page wall comments for clues on which ROM you'll need. If the correct ROM name and checksum are not listed yet, then you'll need to ask for it (\nplease, do NOT ask for links to download the ROM\n, only the filename and the checksum). You can request it in the game's forum page or ask for help in \nDiscord\n or on the site chat on the front page.\n\n\nYou can also contribute to the community by getting support for your ROM, if it's compatible. Post the checksum of your existing ROM in the forum of that game and also the exact name you have for it and a developer will review it with you to see if it is compatible.\n\n\n  \n\n\nHow to find the checksum of your ROM.\n\n\nFor more details about checksum and hashes, read here: \nhttp://datacrystal.romhacking.net/wiki/Hashes\n\n\nComprehensive lists of most of the games in RetroAchievements database\nlink\n\n\nThe user \ncaricatur\n did a great job by compiling some lists of ROMs linked to games we have at RetroAchievements database. Here are the links to the respective forum posts:\n\n\n\n\nMega Drive/Genesis\n\n\nMaster System\n\n\nPC Engine\n\n\nGameboy\n\n\nGameboy Color\n\n\nGameboy Advance\n\n\nSNES\n\n\nNintendo 64",
-            "title": "My game is not loading achievements"
-        },
-        {
-            "location": "/My-game-is-not-loading-achievements/#comprehensive-lists-of-most-of-the-games-in-retroachievements-database",
-            "text": "The user  caricatur  did a great job by compiling some lists of ROMs linked to games we have at RetroAchievements database. Here are the links to the respective forum posts:   Mega Drive/Genesis  Master System  PC Engine  Gameboy  Gameboy Color  Gameboy Advance  SNES  Nintendo 64",
-            "title": "Comprehensive lists of most of the games in RetroAchievements database"
         },
         {
             "location": "/RALibretro/",
