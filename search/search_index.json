@@ -231,6 +231,46 @@
             "title": "SNES"
         },
         {
+            "location": "/Useful-Links/",
+            "text": "https://www.gamefaqs.com/\nlink\n\n\nGreat place to find game guides, finding almost all you could want to know about game content, find cheat codes, for development utility and also for making proper protections against the codes.\n\n\nhttps://tcrf.net/\nlink\n\n\nis a site dedicated to unearthing and researching unused and cut content from video games. From debug menus, to unused music, graphics, enemies, or levels, many games have content never meant to be seen by anybody but the developers \u2014 or even meant for everybody, but cut due to time/budget constraints.\n\n\nhttps://www.romhacking.net\nlink\n\n\nbiggest repository of hacked roms. \n\n\nhttp://datacrystal.romhacking.net/wiki/Hashes\nlink\n\n\nExplains what hashes are. If you don't know what they are you should probably read this.\n\n\nhttps://emn178.github.io/online-tools/crc32_checksum.html\nlink\n\n\nDrag and drop checksum checker utility. You can also get the checksum from the rom you have loaded from the retroachievements menu in the emulators.\n\n\nhttp://www.marcrobledo.com/RomPatcher.js\nlink\n\n\nAn online ROM patcher utility.\n\n\nhttp://jsonviewer.stack.hu\nlink\n\n\nExcellent for viewing raw achievements",
+            "title": "Useful Links"
+        },
+        {
+            "location": "/Useful-Links/#httpswwwgamefaqscom",
+            "text": "Great place to find game guides, finding almost all you could want to know about game content, find cheat codes, for development utility and also for making proper protections against the codes.",
+            "title": "https://www.gamefaqs.com/"
+        },
+        {
+            "location": "/Useful-Links/#httpstcrfnet",
+            "text": "is a site dedicated to unearthing and researching unused and cut content from video games. From debug menus, to unused music, graphics, enemies, or levels, many games have content never meant to be seen by anybody but the developers \u2014 or even meant for everybody, but cut due to time/budget constraints.",
+            "title": "https://tcrf.net/"
+        },
+        {
+            "location": "/Useful-Links/#httpswwwromhackingnet",
+            "text": "biggest repository of hacked roms.",
+            "title": "https://www.romhacking.net"
+        },
+        {
+            "location": "/Useful-Links/#httpdatacrystalromhackingnetwikihashes",
+            "text": "Explains what hashes are. If you don't know what they are you should probably read this.",
+            "title": "http://datacrystal.romhacking.net/wiki/Hashes"
+        },
+        {
+            "location": "/Useful-Links/#httpsemn178githubioonline-toolscrc32_checksumhtml",
+            "text": "Drag and drop checksum checker utility. You can also get the checksum from the rom you have loaded from the retroachievements menu in the emulators.",
+            "title": "https://emn178.github.io/online-tools/crc32_checksum.html"
+        },
+        {
+            "location": "/Useful-Links/#httpwwwmarcrobledocomrompatcherjs",
+            "text": "An online ROM patcher utility.",
+            "title": "http://www.marcrobledo.com/RomPatcher.js"
+        },
+        {
+            "location": "/Useful-Links/#httpjsonviewerstackhu",
+            "text": "Excellent for viewing raw achievements",
+            "title": "http://jsonviewer.stack.hu"
+        },
+        {
             "location": "/RA-Discord-server/",
             "text": "Brief description of the purpose of the most important channels at \nRetroAchievements Discord server\n.\n\n\nNote\n: Some channels won't be visible to every user.\n\n\n#general\nlink\n\n\nWhere you can discuss whatever you want.\n\n\n#help-me\nlink\n\n\nA place to ask for help and getting the answers. Nothing more.\n\n\nOn the other channels of our server we are not so rigorous of what is considered off-topic, but we want to reinforce that the \n#help-me\n channel should be used only for help.\n\n\nBy the way, if you like to help others, maybe you'll find the \nRALPER bot\n useful.\n\n\n#botspam\nlink\n\n\nA channel to play with the our bots.\n\n\nDISCUSSION category\nlink\n\n\n#devs\nlink\n\n\nThe channel where achievement developers and Jr. developers share experience and chat about anything they want.\n\n\n#rasuite\nlink\n\n\nThe channel to discuss the development and testing of \nRALibretro\n, \nRAIntegration\n and \nRAEmus\n.\n\n\nIf you're a C/C++ programmer, you'll like to join here. And even if you are not a programmer, but a user of those softwares, you are welcome on this channel too. As it can also be used to explain better a feature requests, a bug report, etc. for each one of those softwares. Although, keep in mind that using the respective issue tracker on the right repository is the recommended way to request/report something.\n\n\n#raweb\nlink\n\n\nA place to discuss the development of the official website and the documentation site, respectively \nRAWeb\n and \nRADocs\n.\n\n\n#retroarch\nlink\n\n\nMany RetroAchievements users enjoy this feature through RetroArch, then this is the place where RetroArch users share knowledge and help each other.\n\n\n#revision-voting\nlink\n\n\nWhere achievement developers vote and discuss about revisions on achievement sets.\n\n\n#patrons\nlink\n\n\nA channel for our \npatrons\n. It's just a way to let the patrons reach the leadership of RA more directly.\n\n\nNote\n: We do NOT give preference to patron requests to the detriment of another member of the community. We simply give preference to reasonable requests.\n\n\nNEWS category\nlink\n\n\nThe channels on this category are not for chatting, but a way to let admins, mods, and other contributors make important announcements.\n\n\nMost of channels' names are pretty descriptive:\n\n\n\n\n#achievement-news\n\n\n#community-news\n\n\n#developer-news\n\n\n#retroarch-news\n - where staff announce what's new on RetroArch regarding achievements feature.\n\n\n#mastery-news\n\n\n\n\nINFO category\nlink\n\n\n#docs-log\nlink\n\n\nNot a chat channel.\n\n\nWe have a bot that posts notifications on this channel everytime something change on \nRAWiki\n or \nRADocs\n. Just an way to keep an eye on what's changing on our documentation project.\n\n\n#core-set-log\nlink\n\n\nNot a chat channel.\n\n\nWe have a bot that posts notifications on this channel everytime something change on the database where the official achievements are stored (a.k.a. Core Set). This is a useful way to keep an eye if achievements are being demoted and if new cheevos are being released. But keep in mind that this is just a bot output. The official announcement of a new achievement set will be posted on the \n#achievement-news\n channel.\n\n\n#post-free-games\nlink\n\n\nA channel where people share links to legally free games. \nPLEASE DO NOT SHARE ILLEGAL COPYRIGHTED MATERIAL HERE!\n\n\nMEDIA category\nlink\n\n\n#wholesome-chat\nlink\n\n\nA place to share inspiring pictures and cute cats photos.\n\n\n#crazydesertbusadinoparty97\nlink\n\n\nA place for \nsh!tposting\n memes.\n\n\n#ra-streams\nlink\n\n\nWhere people share links to let others watch them streaming gameplays.\n\n\nINTERNATIONAL category\nlink\n\n\nChannels where you can use your native language.",
             "title": "RA Discord server"
