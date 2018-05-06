@@ -1,0 +1,1342 @@
+commit 8d0ef8d3dd5a77081631f5319007a39f8db89bb3
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu May 3 11:45:14 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index e55ee88..a16615d 100644
+--- a/Home.md
++++ b/Home.md
+@@ -4,6 +4,8 @@
+ 
+ Welcome to the [RetroAchievements documentation project](http://docs.retroachievements.org/)!
+ 
++If you're looking for docs about creating achievements, check our [Developer docs](Developer-docs) section.
++
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+ The complete list of pages is on the sidebar, but here's a brief description of some of them:
+@@ -24,8 +26,6 @@ The complete list of pages is on the sidebar, but here's a brief description of
+ 
+ - [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
+ 
+-If you want to start learning how to create achievements, check our [Developer docs](Developer-docs) section.
+-
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+ ## Translations
+
+commit b5b37a25b37fa52a6944cab1a84915314b6b6ffe
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu May 3 11:23:08 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index c01db78..e55ee88 100644
+--- a/Home.md
++++ b/Home.md
+@@ -18,7 +18,7 @@ The complete list of pages is on the sidebar, but here's a brief description of
+ 
+ - [My game is not loading achievements](My-game-is-not-loading-achievements): what you have to do when your game isn't loading achievements.
+ 
+-- [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): why you should expect to have issues if you use save/load state while playing.
++- [Why you shouldn't use the load state feature](Why-you-shouldn't-use-the-load-state-feature): why you should expect to have issues if you use save/load state while playing.
+ 
+ - [A message for Achievement Hunters and Completionists about revisions](A-message-for-Achievement-Hunters-and-Completionists-about-revisions): why you shouldn't be frustrated when a revision on an achievement set is made.
+ 
+
+commit 1ec5d1659cbd8585d82baf0cb11ec582c3f7fa2d
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sat Apr 28 12:48:03 2018 -0300
+
+    added link to Free Games
+
+diff --git a/Home.md b/Home.md
+index 9c641bf..c01db78 100644
+--- a/Home.md
++++ b/Home.md
+@@ -12,6 +12,8 @@ The complete list of pages is on the sidebar, but here's a brief description of
+ 
+ - [Downloads](Downloads): our alternative downloads page.
+ 
++- [Free Games](Free-Games): games that are completely and legally free download and play on your emulators.
++
+ - [RA Discord server](RA-Discord-server): a list of the most important channels on our discord server and their purpose.
+ 
+ - [My game is not loading achievements](My-game-is-not-loading-achievements): what you have to do when your game isn't loading achievements.
+
+commit 097e40b0fee5735b665fadb4aa082a60161ed269
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Fri Apr 27 12:19:13 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index b17fdf1..9c641bf 100644
+--- a/Home.md
++++ b/Home.md
+@@ -6,7 +6,7 @@ Welcome to the [RetroAchievements documentation project](http://docs.retroachiev
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-A brief description of some pages you can find here
++The complete list of pages is on the sidebar, but here's a brief description of some of them:
+ 
+ - [FAQ](FAQ): the Frequently Asked Questions
+ 
+
+commit fdd64faa3582951e6e1da866ab928df308e6e562
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Fri Apr 27 10:30:44 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index d084ee4..b17fdf1 100644
+--- a/Home.md
++++ b/Home.md
+@@ -14,12 +14,14 @@ A brief description of some pages you can find here
+ 
+ - [RA Discord server](RA-Discord-server): a list of the most important channels on our discord server and their purpose.
+ 
+-- [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
++- [My game is not loading achievements](My-game-is-not-loading-achievements): what you have to do when your game isn't loading achievements.
+ 
+-- [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): in this page we explain why you should expect to have issues if you use save/load state while playing.
++- [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): why you should expect to have issues if you use save/load state while playing.
+ 
+ - [A message for Achievement Hunters and Completionists about revisions](A-message-for-Achievement-Hunters-and-Completionists-about-revisions): why you shouldn't be frustrated when a revision on an achievement set is made.
+ 
++- [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
++
+ If you want to start learning how to create achievements, check our [Developer docs](Developer-docs) section.
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+
+commit 8d32524e29ed89b43f2f7f2b9254336cc11fa1a5
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Apr 26 20:53:21 2018 -0300
+
+    added link to "revisions"
+
+diff --git a/Home.md b/Home.md
+index 21f2fa9..d084ee4 100644
+--- a/Home.md
++++ b/Home.md
+@@ -18,6 +18,8 @@ A brief description of some pages you can find here
+ 
+ - [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): in this page we explain why you should expect to have issues if you use save/load state while playing.
+ 
++- [A message for Achievement Hunters and Completionists about revisions](A-message-for-Achievement-Hunters-and-Completionists-about-revisions): why you shouldn't be frustrated when a revision on an achievement set is made.
++
+ If you want to start learning how to create achievements, check our [Developer docs](Developer-docs) section.
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+
+commit 5f16e8749f3fe059af64de90bb03df9ca1ac19ba
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Apr 26 12:33:51 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 32d08de..21f2fa9 100644
+--- a/Home.md
++++ b/Home.md
+@@ -8,13 +8,15 @@ We encourage all community members to join our [Discord chat server](https://dis
+ 
+ A brief description of some pages you can find here
+ 
+-1. [FAQ](FAQ): the Frequently Asked Questions
++- [FAQ](FAQ): the Frequently Asked Questions
+ 
+-2. [Downloads](Downloads): our alternative downloads page.
++- [Downloads](Downloads): our alternative downloads page.
+ 
+-3. [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
++- [RA Discord server](RA-Discord-server): a list of the most important channels on our discord server and their purpose.
+ 
+-4. [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): in this page we explain why you should expect to have issues if you use save/load state while playing.
++- [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
++
++- [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): in this page we explain why you should expect to have issues if you use save/load state while playing.
+ 
+ If you want to start learning how to create achievements, check our [Developer docs](Developer-docs) section.
+ 
+
+commit a1bacdf2a4692a330cc09edb9087f4a6547af7be
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Wed Apr 25 07:38:04 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 23a123d..32d08de 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,17 +1,25 @@
+-***
++---
+ [![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
+-***
++---
+ 
+ Welcome to the [RetroAchievements documentation project](http://docs.retroachievements.org/)!
+ 
+-Newcomers, please start with the [FAQ](FAQ).
+-
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-You can learn how to create achievements by reading our [Developer docs](Developer-docs).
++A brief description of some pages you can find here
++
++1. [FAQ](FAQ): the Frequently Asked Questions
++
++2. [Downloads](Downloads): our alternative downloads page.
++
++3. [How to contribute if you are not a developer](How-to-contribute-if-you-are-not-a-developer): if you don't know how to develop achievements, there are many other ways to contribute with the community.
++
++4. [Issues when NOT playing in hardcore mode](Issues-when-NOT-playing-in-hardcore-mode): in this page we explain why you should expect to have issues if you use save/load state while playing.
++
++If you want to start learning how to create achievements, check our [Developer docs](Developer-docs) section.
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+ ## Translations
+ 
+-- [Portuguese](Home-pt_BR)
+\ No newline at end of file
++- [Portuguese](Home-pt_BR)
+
+commit 13de16e116ef1d4524aa095f1bf9e54660c6d19f
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Wed Apr 25 07:16:14 2018 -0300
+
+    new link for radocs
+
+diff --git a/Home.md b/Home.md
+index 5d0ecb3..23a123d 100644
+--- a/Home.md
++++ b/Home.md
+@@ -2,7 +2,7 @@
+ [![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
+ ***
+ 
+-Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
++Welcome to the [RetroAchievements documentation project](http://docs.retroachievements.org/)!
+ 
+ Newcomers, please start with the [FAQ](FAQ).
+ 
+
+commit 22f6b8133438ce37c99e2f4343d9049145ebb2a2
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Apr 24 17:56:53 2018 -0300
+
+    Revert 1553ce31d4e7a8e5e398ec5e4761cd7930899a79...ba794f6aee62035c294a765b68f158947933e402 on Home
+
+diff --git a/Home.md b/Home.md
+index ada8f0b..5d0ecb3 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,89 +1,17 @@
+-## Welcome to the [RetroAchievements documentation project "RAdocs"](https://retroachievements.github.io/docs/)!
+-
+-### [**List of Pages**](https://github.com/RetroAchievements/docs/wiki/List-of-Pages) | [**Downloads**](https://github.com/RetroAchievements/docs/wiki/Downloads) | [**Site Change Log**](https://github.com/RetroAchievements/docs/wiki/Site-Change-Log)
+-
+-
+ ***
+-
+-
+-## RAdocs Change Log
+-
+-#####  _2018-04-24_: Frontpage redesign
+-
+-
+-***
+-
+-
+-## Recently added Pages
+-
+-#####  _2018-04-24_: [List of Pages](https://github.com/RetroAchievements/docs/wiki/List-of-Pages)
+-
+-
+-***
+-
+-
+-## Recommended Pages
+-
+-* #### For Everyone
+-
+-[Users Code of Conduct](https://github.com/RetroAchievements/docs/wiki/Users-Code-of-Conduct) | [Developers Code of Conduct](https://github.com/RetroAchievements/docs/wiki/Developers-Code-of-Conduct)
+-
+-* #### For Users / Gamers
+-
+-[Free Games](https://github.com/RetroAchievements/docs/wiki/Free-Games) | Report a Achievement
+-
+-* #### For Achievement Developers (Basic)
+-
+-* #### For Achievement Developers (Expert)
+-
+-
++[![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
+ ***
+ 
+-
+-## Frequently Asked Questions (FAQ)
++Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+ 
+ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-> **Tip:** Use the _#help-me_ Channel for a quicker response due to some users have certain Channels muted.
+-
+-
+-***
+-
+-
+-## Quick Downloads
+-
+-Latest Versions of RetroAchievements Supported Emulators
+-
+-* **RetroArch** - Multi-System: [RetroArch.com](http://www.retroarch.com/?page=platforms) | [buildbot.libretro.com](https://buildbot.libretro.com/) | [Google Play](https://play.google.com/store/apps/details?id=com.retroarch)
+-
+-* **RALibretro (For Devs)** - Multi-System: [GitHub](https://github.com/RetroAchievements/docs/wiki/RALibretro) | [Dropbox](http://bit.ly/RALibRetro)
+-
+-* **RAGens** - Mega Drive / Genesis: [RetroAchievements.org](http://retroachievements.org/bin/RAGens.zip) | [Dropbox](http://bit.ly/RAGens__)
+-
+-* **RASnes9x** - Super Nintendo Entertainment System: [RetroAchievements.org](http://retroachievements.org/bin/RASnes9x.zip) | [Dropbox](http://bit.ly/RASnes9x)
+-
+-* **RAVBA** - Gameboy Advance / Gameboy: [RetroAchievements.org](http://retroachievements.org/bin/RAVBA.zip) | [Dropbox](http://bit.ly/RAVBA_)
+-
+-* **RANes** - Nintendo Entertainment System: [RetroAchievements.org](http://retroachievements.org/bin/RANes.zip) | [Dropbox](http://bit.ly/RAFCEUx)
+-
+-* **RAProject64** - Nintendo 64: [RetroAchievements.org Forums](http://retroachievements.org/viewtopic.php?t=4686) | [Dropbox](http://bit.ly/RAP64_)
+-
+-
+-***
+-
+-
+-## Links
+-
+-* #### For Users / Gamers
+-
+-* #### For Achievement Developers
+-
+-
+-***
++You can learn how to create achievements by reading our [Developer docs](Developer-docs).
+ 
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-## [About](https://github.com/RetroAchievements/docs/wiki/About)
++## Translations
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
++- [Portuguese](Home-pt_BR)
+\ No newline at end of file
+
+commit ba794f6aee62035c294a765b68f158947933e402
+Author: magusLOGS <34919279+magusLOGS@users.noreply.github.com>
+Date:   Tue Apr 24 14:32:31 2018 +0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index f5456e3..ada8f0b 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,7 +1,5 @@
+ ## Welcome to the [RetroAchievements documentation project "RAdocs"](https://retroachievements.github.io/docs/)!
+ 
+-##### [Official RetroAchievements Website](http://retroachievements.org) | [RetroAchievements on GitHub](https://github.com/RetroAchievements) | [RetroAchievements Discord Chat](https://discord.gg/TdfC3r7)
+-
+ ### [**List of Pages**](https://github.com/RetroAchievements/docs/wiki/List-of-Pages) | [**Downloads**](https://github.com/RetroAchievements/docs/wiki/Downloads) | [**Site Change Log**](https://github.com/RetroAchievements/docs/wiki/Site-Change-Log)
+ 
+ 
+
+commit facd345884ae2d382715d66c349fc0c01d797362
+Author: magusLOGS <34919279+magusLOGS@users.noreply.github.com>
+Date:   Tue Apr 24 14:18:19 2018 +0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 5d0ecb3..f5456e3 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,17 +1,91 @@
++## Welcome to the [RetroAchievements documentation project "RAdocs"](https://retroachievements.github.io/docs/)!
++
++##### [Official RetroAchievements Website](http://retroachievements.org) | [RetroAchievements on GitHub](https://github.com/RetroAchievements) | [RetroAchievements Discord Chat](https://discord.gg/TdfC3r7)
++
++### [**List of Pages**](https://github.com/RetroAchievements/docs/wiki/List-of-Pages) | [**Downloads**](https://github.com/RetroAchievements/docs/wiki/Downloads) | [**Site Change Log**](https://github.com/RetroAchievements/docs/wiki/Site-Change-Log)
++
++
+ ***
+-[![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
++
++
++## RAdocs Change Log
++
++#####  _2018-04-24_: Frontpage redesign
++
++
++***
++
++
++## Recently added Pages
++
++#####  _2018-04-24_: [List of Pages](https://github.com/RetroAchievements/docs/wiki/List-of-Pages)
++
++
++***
++
++
++## Recommended Pages
++
++* #### For Everyone
++
++[Users Code of Conduct](https://github.com/RetroAchievements/docs/wiki/Users-Code-of-Conduct) | [Developers Code of Conduct](https://github.com/RetroAchievements/docs/wiki/Developers-Code-of-Conduct)
++
++* #### For Users / Gamers
++
++[Free Games](https://github.com/RetroAchievements/docs/wiki/Free-Games) | Report a Achievement
++
++* #### For Achievement Developers (Basic)
++
++* #### For Achievement Developers (Expert)
++
++
+ ***
+ 
+-Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
++
++## Frequently Asked Questions (FAQ)
+ 
+ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-You can learn how to create achievements by reading our [Developer docs](Developer-docs).
++> **Tip:** Use the _#help-me_ Channel for a quicker response due to some users have certain Channels muted.
++
++
++***
++
++
++## Quick Downloads
++
++Latest Versions of RetroAchievements Supported Emulators
++
++* **RetroArch** - Multi-System: [RetroArch.com](http://www.retroarch.com/?page=platforms) | [buildbot.libretro.com](https://buildbot.libretro.com/) | [Google Play](https://play.google.com/store/apps/details?id=com.retroarch)
++
++* **RALibretro (For Devs)** - Multi-System: [GitHub](https://github.com/RetroAchievements/docs/wiki/RALibretro) | [Dropbox](http://bit.ly/RALibRetro)
++
++* **RAGens** - Mega Drive / Genesis: [RetroAchievements.org](http://retroachievements.org/bin/RAGens.zip) | [Dropbox](http://bit.ly/RAGens__)
++
++* **RASnes9x** - Super Nintendo Entertainment System: [RetroAchievements.org](http://retroachievements.org/bin/RASnes9x.zip) | [Dropbox](http://bit.ly/RASnes9x)
++
++* **RAVBA** - Gameboy Advance / Gameboy: [RetroAchievements.org](http://retroachievements.org/bin/RAVBA.zip) | [Dropbox](http://bit.ly/RAVBA_)
++
++* **RANes** - Nintendo Entertainment System: [RetroAchievements.org](http://retroachievements.org/bin/RANes.zip) | [Dropbox](http://bit.ly/RAFCEUx)
++
++* **RAProject64** - Nintendo 64: [RetroAchievements.org Forums](http://retroachievements.org/viewtopic.php?t=4686) | [Dropbox](http://bit.ly/RAP64_)
++
++
++***
++
++
++## Links
++
++* #### For Users / Gamers
++
++* #### For Achievement Developers
++
++
++***
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-## Translations
++## [About](https://github.com/RetroAchievements/docs/wiki/About)
+ 
+-- [Portuguese](Home-pt_BR)
+\ No newline at end of file
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit 1553ce31d4e7a8e5e398ec5e4761cd7930899a79
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sun Mar 25 10:12:39 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 038d846..5d0ecb3 100644
+--- a/Home.md
++++ b/Home.md
+@@ -11,3 +11,7 @@ We encourage all community members to join our [Discord chat server](https://dis
+ You can learn how to create achievements by reading our [Developer docs](Developer-docs).
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
++
++## Translations
++
++- [Portuguese](Home-pt_BR)
+\ No newline at end of file
+
+commit 9a4bc61296482339198a277e36e5284d49e47256
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sat Mar 24 23:36:17 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 19408c2..038d846 100644
+--- a/Home.md
++++ b/Home.md
+@@ -8,46 +8,6 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+-
+-
+-## Developer docs
+-
+----
+-**These are the pages that every newbie developer should read and understand first**:
+-
+-1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer)
+-2. [Achievement Logic Features](Achievement-Logic-Features)
+-3. [Real Examples](Real-Examples)
+-4. [Achievement Templates](Achievement-Templates)
+----
+-
+-Now a brief description of each developer page you'll see here on the Developer section.
+-
+-1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE NEWBIE, START HERE!**
+-
+-2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, Alt groups, etc.
+-
+-3. [Real Examples](Real-Examples): showing real examples and breaking down the logic behind them. **AWESOME LEARNING RESOURCE!**
+-
+-4. [Tips and Tricks](Tips-and-Tricks): general tips and tricks about memory digging and achievement creation.
++You can learn how to create achievements by reading our [Developer docs](Developer-docs).
+ 
+-5. [Console Specific Tips](Console-Specific-Tips): knowing the peculiarities of your favorite console can help you with memory digging.
+-
+-6. [Achievement Templates](Achievement-Templates): some generic templates to get inspiration.
+-
+-7. [Difficulty Scale and Balance](Difficulty-Scale-and-Balance): guidelines/suggestions on how to balance the difficulty of your achievement set.
+-
+-8. [Badge and Icon Creation](Badge-and-Icon-Creation): some guidelines and tips about badge/icon creation.
+-
+-9. [Leaderboards](Leaderboards): instructions on how to create Leaderboards for a game.
+-
+-10. [Rich Presence](Rich-Presence): how to write Rich Presence Scripts.
+-
+-11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really neat achievement set.
+-
+-12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
+-
+-13. [Bonus Set Guide](Bonus-Sets): an advanced topic on creating special challenge sets and how to release them.
+-
+-14. [Achievements for ROM Hacks](Achievements-for-ROM-hacks):  a detailed guide for developers on the proper inclusion (and approval) of ROM Hacks.
+\ No newline at end of file
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+
+commit 37afad394dbe1913b4a6d9bded0f69692cc2aa5a
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Mon Mar 12 20:43:42 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index ae59d01..19408c2 100644
+--- a/Home.md
++++ b/Home.md
+@@ -14,7 +14,7 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ ## Developer docs
+ 
+ ---
+-**You wanna learn how to develop achievements?** These are the pages that every newbie should read and understand first:
++**These are the pages that every newbie developer should read and understand first**:
+ 
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer)
+ 2. [Achievement Logic Features](Achievement-Logic-Features)
+
+commit 762169b5090721a30a84e4a33c150d95208429c3
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Mon Mar 12 20:41:56 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index e22431f..ae59d01 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,4 +1,3 @@
+-
+ ***
+ [![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
+ ***
+@@ -11,15 +10,17 @@ We encourage all community members to join our [Discord chat server](https://dis
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
++
+ ## Developer docs
+ 
++---
+ **You wanna learn how to develop achievements?** These are the pages that every newbie should read and understand first:
+ 
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer)
+ 2. [Achievement Logic Features](Achievement-Logic-Features)
+ 3. [Real Examples](Real-Examples)
+ 4. [Achievement Templates](Achievement-Templates)
+-
++---
+ 
+ Now a brief description of each developer page you'll see here on the Developer section.
+ 
+
+commit 6bee6746d170d887af2105bda6a2fdaf1a4a9c7c
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Fri Mar 9 15:15:22 2018 -0300
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 665e556..e22431f 100644
+--- a/Home.md
++++ b/Home.md
+@@ -13,7 +13,15 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ ## Developer docs
+ 
+-A brief description of each Achievement developer page you'll see here.
++**You wanna learn how to develop achievements?** These are the pages that every newbie should read and understand first:
++
++1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer)
++2. [Achievement Logic Features](Achievement-Logic-Features)
++3. [Real Examples](Real-Examples)
++4. [Achievement Templates](Achievement-Templates)
++
++
++Now a brief description of each developer page you'll see here on the Developer section.
+ 
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE NEWBIE, START HERE!**
+ 
+
+commit 98c83d4304aa0466bdf6a16a1f25e4968c37645e
+Author: Robert Smith <lupinedreamexpress@gmail.com>
+Date:   Sun Feb 4 23:14:18 2018 -0500
+
+    Fixed:  Broken link - "ROM hacks linked to entries" -> "Achievements for ROM Hacks"
+
+diff --git a/Home.md b/Home.md
+index 1ae47ba..665e556 100644
+--- a/Home.md
++++ b/Home.md
+@@ -41,4 +41,4 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 13. [Bonus Set Guide](Bonus-Sets): an advanced topic on creating special challenge sets and how to release them.
+ 
+-14. [ROM Hack Linking Guidelines](Approved-ROM-hacks-linked-to-entries):  a detailed guide for developers on the proper inclusion (and approval) of ROM Hacks.
+\ No newline at end of file
++14. [Achievements for ROM Hacks](Achievements-for-ROM-hacks):  a detailed guide for developers on the proper inclusion (and approval) of ROM Hacks.
+\ No newline at end of file
+
+commit 846b04636ea3091faacc33d020a840df4844450f
+Author: Robert Smith <lupinedreamexpress@gmail.com>
+Date:   Fri Feb 2 20:27:13 2018 -0500
+
+    Added - ROM Hack linking guidelines to developer guide.
+
+diff --git a/Home.md b/Home.md
+index 0096225..1ae47ba 100644
+--- a/Home.md
++++ b/Home.md
+@@ -39,4 +39,6 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
+ 
+-13. [Bonus Set Guide](Bonus-Sets): an advanced topic on creating special challenge sets and how to release them.
+\ No newline at end of file
++13. [Bonus Set Guide](Bonus-Sets): an advanced topic on creating special challenge sets and how to release them.
++
++14. [ROM Hack Linking Guidelines](Approved-ROM-hacks-linked-to-entries):  a detailed guide for developers on the proper inclusion (and approval) of ROM Hacks.
+\ No newline at end of file
+
+commit bfbf05fef64035d3e943c623b11a41ff08d82f44
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Fri Feb 2 18:17:15 2018 -0200
+
+    the credit goes to LupineDream, but this is a wiki and everyone can edit. We try to keep it as impersonal as possible
+
+diff --git a/Home.md b/Home.md
+index 1248242..0096225 100644
+--- a/Home.md
++++ b/Home.md
+@@ -39,4 +39,4 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
+ 
+-13. [Bonus Set Guide](Bonus-Sets): a contribution by LupineDream on creating special challenge sets for Retro Achievements, and how to release them.
+\ No newline at end of file
++13. [Bonus Set Guide](Bonus-Sets): an advanced topic on creating special challenge sets and how to release them.
+\ No newline at end of file
+
+commit 125dc2c46d21a44f0353a60e18149f12ca888b95
+Author: Robert Smith <lupinedreamexpress@gmail.com>
+Date:   Fri Feb 2 11:18:13 2018 -0500
+
+    Added - Bonus Set Guide entry.
+
+diff --git a/Home.md b/Home.md
+index 5a24c05..1248242 100644
+--- a/Home.md
++++ b/Home.md
+@@ -37,4 +37,6 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really neat achievement set.
+ 
+-12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
+\ No newline at end of file
++12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
++
++13. [Bonus Set Guide](Bonus-Sets): a contribution by LupineDream on creating special challenge sets for Retro Achievements, and how to release them.
+\ No newline at end of file
+
+commit c26a4fa6779010167eadc1df3fe52ac0ae7370de
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Feb 1 23:46:56 2018 -0200
+
+    added link to Achievement Design page
+
+diff --git a/Home.md b/Home.md
+index 123972a..5a24c05 100644
+--- a/Home.md
++++ b/Home.md
+@@ -36,3 +36,5 @@ A brief description of each Achievement developer page you'll see here.
+ 10. [Rich Presence](Rich-Presence): how to write Rich Presence Scripts.
+ 
+ 11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really neat achievement set.
++
++12. [Achievement Design](Achievement-Design): a guide on how to think about and design good achievements, not the technical side but the conceptual.
+\ No newline at end of file
+
+commit 5feacc7f85da886ff6ae92b7e0148e4978841a91
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Mon Jan 29 13:33:48 2018 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index ef06cc7..123972a 100644
+--- a/Home.md
++++ b/Home.md
+@@ -29,10 +29,10 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 7. [Difficulty Scale and Balance](Difficulty-Scale-and-Balance): guidelines/suggestions on how to balance the difficulty of your achievement set.
+ 
+-8. [Badge and Icon Creation](Badge-and-Icon-Creation)
++8. [Badge and Icon Creation](Badge-and-Icon-Creation): some guidelines and tips about badge/icon creation.
+ 
+-9. [Leaderboards](Leaderboards)
++9. [Leaderboards](Leaderboards): instructions on how to create Leaderboards for a game.
+ 
+-10. [Rich Presence](Rich-Presence)
++10. [Rich Presence](Rich-Presence): how to write Rich Presence Scripts.
+ 
+ 11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really neat achievement set.
+
+commit add3b3a4b307325f8ae9fa709610228d3d83ed01
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Mon Jan 29 13:31:05 2018 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 80f934f..ef06cc7 100644
+--- a/Home.md
++++ b/Home.md
+@@ -23,13 +23,13 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 4. [Tips and Tricks](Tips-and-Tricks): general tips and tricks about memory digging and achievement creation.
+ 
+-5. [Console Specific Tips](Console-Specific-Tips): knowing the peculiarities of your favorite console can help you when digging the memory.
++5. [Console Specific Tips](Console-Specific-Tips): knowing the peculiarities of your favorite console can help you with memory digging.
+ 
+ 6. [Achievement Templates](Achievement-Templates): some generic templates to get inspiration.
+ 
+ 7. [Difficulty Scale and Balance](Difficulty-Scale-and-Balance): guidelines/suggestions on how to balance the difficulty of your achievement set.
+ 
+-8. [Badge Creation](Badge-Creation)
++8. [Badge and Icon Creation](Badge-and-Icon-Creation)
+ 
+ 9. [Leaderboards](Leaderboards)
+ 
+
+commit 44e755aee51c02aa04aefaf658cdc61c7bf08f1c
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Mon Jan 29 11:05:16 2018 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 150cd43..80f934f 100644
+--- a/Home.md
++++ b/Home.md
+@@ -23,7 +23,7 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ 4. [Tips and Tricks](Tips-and-Tricks): general tips and tricks about memory digging and achievement creation.
+ 
+-5. [Console Specific Tips](Console-Specific-Tips)
++5. [Console Specific Tips](Console-Specific-Tips): knowing the peculiarities of your favorite console can help you when digging the memory.
+ 
+ 6. [Achievement Templates](Achievement-Templates): some generic templates to get inspiration.
+ 
+
+commit 21e778c1faa6a9d74298b8d72fba2a29429b2286
+Author: GameDragon2k <gdragon2k@yahoo.com>
+Date:   Fri Jan 5 19:34:00 2018 -0500
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 0e2f73b..150cd43 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,16 +9,12 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-To access the wiki of this documentation project so you are able to make additions and changes this click on this image in the top right of the screen or here:
+-
+-[![Link to wiki](https://i.imgur.com/nJ3q6k6.png)](https://github.com/RetroAchievements/docs/wiki/)
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+ ## Developer docs
+ 
+ A brief description of each Achievement developer page you'll see here.
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+-
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE NEWBIE, START HERE!**
+ 
+ 2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, Alt groups, etc.
+
+commit 32aae4a68ef247822381ebf49c394b4d5c889bde
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Fri Jan 5 17:22:37 2018 -0700
+
+    spacing
+
+diff --git a/Home.md b/Home.md
+index 9f2f53a..0e2f73b 100644
+--- a/Home.md
++++ b/Home.md
+@@ -10,6 +10,7 @@ Newcomers, please start with the [FAQ](FAQ).
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+ To access the wiki of this documentation project so you are able to make additions and changes this click on this image in the top right of the screen or here:
++
+ [![Link to wiki](https://i.imgur.com/nJ3q6k6.png)](https://github.com/RetroAchievements/docs/wiki/)
+ 
+ ## Developer docs
+
+commit 98de760e95b3695aabd9e347bb510960988a8f2f
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Fri Jan 5 17:22:21 2018 -0700
+
+    added link to wiki
+
+diff --git a/Home.md b/Home.md
+index c669b05..9f2f53a 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,8 +9,7 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-To make additions and changes to documentation project click on this image in the top right of the screen or here:
+-
++To access the wiki of this documentation project so you are able to make additions and changes this click on this image in the top right of the screen or here:
+ [![Link to wiki](https://i.imgur.com/nJ3q6k6.png)](https://github.com/RetroAchievements/docs/wiki/)
+ 
+ ## Developer docs
+
+commit 66e98cb31da476dfcccc4493e22bf754ca604c30
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Fri Jan 5 17:20:21 2018 -0700
+
+    test
+
+diff --git a/Home.md b/Home.md
+index 1c72acb..c669b05 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,6 +9,10 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
++To make additions and changes to documentation project click on this image in the top right of the screen or here:
++
++[![Link to wiki](https://i.imgur.com/nJ3q6k6.png)](https://github.com/RetroAchievements/docs/wiki/)
++
+ ## Developer docs
+ 
+ A brief description of each Achievement developer page you'll see here.
+
+commit 71fac29ef79ba6be9c3adbc477692b183fdb7039
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Nov 28 09:42:49 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index ce1a68b..1c72acb 100644
+--- a/Home.md
++++ b/Home.md
+@@ -35,4 +35,4 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ 10. [Rich Presence](Rich-Presence)
+ 
+-11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really good achievement set.
++11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really neat achievement set.
+
+commit 272d348c8ecfe883007a1215dc0e7b13095b0347
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Nov 28 09:41:37 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 4538adc..ce1a68b 100644
+--- a/Home.md
++++ b/Home.md
+@@ -17,7 +17,7 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE NEWBIE, START HERE!**
+ 
+-2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, N64 Special flags, Alt groups, etc.
++2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, Alt groups, etc.
+ 
+ 3. [Real Examples](Real-Examples): showing real examples and breaking down the logic behind them. **AWESOME LEARNING RESOURCE!**
+ 
+
+commit 757d47a839c4f3b811d392810c14e8913e320878
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Nov 28 09:40:50 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 368f0c7..4538adc 100644
+--- a/Home.md
++++ b/Home.md
+@@ -15,7 +15,7 @@ A brief description of each Achievement developer page you'll see here.
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE ACHIEVEMENT DEVELOPER NEWBIE, START HERE!**
++1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE NEWBIE, START HERE!**
+ 
+ 2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, N64 Special flags, Alt groups, etc.
+ 
+
+commit 765944c4af4fc2d630029edd9cbf82c0f510cba3
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Nov 28 08:46:24 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 287659f..368f0c7 100644
+--- a/Home.md
++++ b/Home.md
+@@ -7,13 +7,13 @@ Welcome to the [RetroAchievements documentation project](https://retroachievemen
+ 
+ Newcomers, please start with the [FAQ](FAQ).
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+-
+ We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+ ## Developer docs
+ 
+-Here is a brief description of each page you'll see here:
++A brief description of each Achievement developer page you'll see here.
++
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+ 1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE ACHIEVEMENT DEVELOPER NEWBIE, START HERE!**
+ 
+
+commit 9334a281caac3cb59bee38db66c1b132517832a2
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Tue Nov 28 08:43:21 2017 -0200
+
+    added a brief explanation of each developer doc
+
+diff --git a/Home.md b/Home.md
+index 5a40cc0..287659f 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,4 +9,30 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+\ No newline at end of file
++We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
++
++## Developer docs
++
++Here is a brief description of each page you'll see here:
++
++1. [Getting Started as an Achievement Developer](Getting-Started-as-an-Achievement-Developer): it's for the very first contact with cheevos development tools (Memory Inspector and other Achievements dialogs). **IF YOU ARE A COMPLETE ACHIEVEMENT DEVELOPER NEWBIE, START HERE!**
++
++2. [Achievement Logic Features](Achievement-Logic-Features): describes the available tools a developer have in order to improve the logic behind the achievements, such as delta values, hit counts, ResetIf, PauseIf, N64 Special flags, Alt groups, etc.
++
++3. [Real Examples](Real-Examples): showing real examples and breaking down the logic behind them. **AWESOME LEARNING RESOURCE!**
++
++4. [Tips and Tricks](Tips-and-Tricks): general tips and tricks about memory digging and achievement creation.
++
++5. [Console Specific Tips](Console-Specific-Tips)
++
++6. [Achievement Templates](Achievement-Templates): some generic templates to get inspiration.
++
++7. [Difficulty Scale and Balance](Difficulty-Scale-and-Balance): guidelines/suggestions on how to balance the difficulty of your achievement set.
++
++8. [Badge Creation](Badge-Creation)
++
++9. [Leaderboards](Leaderboards)
++
++10. [Rich Presence](Rich-Presence)
++
++11. [Set Development Roadmap](Set-Development-Roadmap): suggestions of steps to take in order to create a really good achievement set.
+
+commit 86c35066f33a8350fb43488263878bffe200db74
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sun Nov 26 19:38:28 2017 -0200
+
+    removed RSS link (will find a better place), trimmed the Discord text
+
+diff --git a/Home.md b/Home.md
+index 92ad7e4..5a40cc0 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,8 +9,4 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-[Site RSS](http://retroachievements.org/rss.php).
+-
+-[Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication. It included:
+-14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>,
+-<a href="https://discord.gg/kZAtpcz">Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
++We encourage all community members to join our [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+\ No newline at end of file
+
+commit d01cfd62a84bd5db44a0360bf9fe8af82caa24ca
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Sun Nov 26 00:24:42 2017 -0700
+
+    discord stuff
+
+diff --git a/Home.md b/Home.md
+index a8c5e87..92ad7e4 100644
+--- a/Home.md
++++ b/Home.md
+@@ -11,7 +11,6 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ [Site RSS](http://retroachievements.org/rss.php).
+ 
+-[Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+-
++[Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication. It included:
+ 14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>,
+ <a href="https://discord.gg/kZAtpcz">Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
+
+commit 7bc01ad302dc14f84606ee00b18da2de1492cec4
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Sun Nov 26 00:24:11 2017 -0700
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 20d4095..a8c5e87 100644
+--- a/Home.md
++++ b/Home.md
+@@ -14,4 +14,4 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+ 14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>,
+-<a href="https://discord.gg/kZAtpcz>Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
++<a href="https://discord.gg/kZAtpcz">Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
+
+commit 75099632742c3e975a1f47524146bd700318e7b5
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Sun Nov 26 00:23:44 2017 -0700
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 74c98c5..20d4095 100644
+--- a/Home.md
++++ b/Home.md
+@@ -13,4 +13,5 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>, <a href="https://discord.gg/kZAtpcz>Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
++14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>,
++<a href="https://discord.gg/kZAtpcz>Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
+
+commit 3de5fef838981eda2fe66eec08a8e1a8335715e5
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Sun Nov 26 00:23:06 2017 -0700
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index b906cd3..74c98c5 100644
+--- a/Home.md
++++ b/Home.md
+@@ -13,5 +13,4 @@ You can help to improve these docs editing/creating the pages at [RetroAchieveme
+ 
+ [Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
+ 
+-<iframe src="https://discordapp.com/widget?id=310192285306454017&theme=dark" width="470" height="76" allowtransparency="false" frameborder="0" hideChannels=['RA-Radio', 'Netplay-voice', 'gen-voice-chat', 'PT-BR-voice'], ></iframe>
+ 14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>, <a href="https://discord.gg/kZAtpcz>Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
+
+commit 658a284a6f73a9eeeeb756bf1319fdead7e3167b
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Sun Nov 26 00:22:14 2017 -0700
+
+    test
+
+diff --git a/Home.md b/Home.md
+index 0123827..b906cd3 100644
+--- a/Home.md
++++ b/Home.md
+@@ -9,4 +9,9 @@ Newcomers, please start with the [FAQ](FAQ).
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+ 
+-[Site RSS](http://retroachievements.org/rss.php).
+\ No newline at end of file
++[Site RSS](http://retroachievements.org/rss.php).
++
++[Discord chat server](https://discord.gg/TdfC3r7), we use this for most communication.
++
++<iframe src="https://discordapp.com/widget?id=310192285306454017&theme=dark" width="470" height="76" allowtransparency="false" frameborder="0" hideChannels=['RA-Radio', 'Netplay-voice', 'gen-voice-chat', 'PT-BR-voice'], ></iframe>
++14 <a href="https://discord.gg/Hq8w9Ck">chat</a> channels (+languages: <a href="https://discord.gg/tksFWNk">Português</a>, <a href="https://discord.gg/kG5p6DR">Français</a>, <a href="https://discord.gg/hFNeGCJ">Espagnol</a>, <a href="https://discord.gg/kZAtpcz>Polski</a>, <a href="https://discord.gg/WhTABNy">Pу́сский</a>). Dedicated <a href="https://discord.gg/FswPDnu">#help-me</a> channel. Comment Editing, voice & music channels, easy image/gifs and file sharing, custom emotes. <a href="https://discord.gg/cbWaXNH">#achievement-news</a> and <a href="https://discord.gg/jTfmwZn">#community-news</a>. Plenty more.
+\ No newline at end of file
+
+commit e652be76b58f5eb3b8ac03d86afefc16b69d4e14
+Author: Kvon <32706333+kdecks@users.noreply.github.com>
+Date:   Fri Nov 24 21:15:35 2017 -0700
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 0bd7bb6..0123827 100644
+--- a/Home.md
++++ b/Home.md
+@@ -7,4 +7,6 @@ Welcome to the [RetroAchievements documentation project](https://retroachievemen
+ 
+ Newcomers, please start with the [FAQ](FAQ).
+ 
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
++
++[Site RSS](http://retroachievements.org/rss.php).
+\ No newline at end of file
+
+commit 6cc8d82626cc6591864f91bc70cca942f45329dd
+Author: RetroAchievements <ScottFromDerby@gmail.com>
+Date:   Tue Nov 14 14:40:22 2017 +0000
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 0036393..0bd7bb6 100644
+--- a/Home.md
++++ b/Home.md
+@@ -5,6 +5,6 @@
+ 
+ Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+ 
+-Newcommers, please start with the [FAQ](FAQ).
++Newcomers, please start with the [FAQ](FAQ).
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit bd2a5a917cdd18d36e4eb96441519ea21d29983d
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sun Nov 12 10:13:29 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index e37a867..0036393 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,6 +1,6 @@
+ 
+ ***
+-[![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)](http://retroachievements.org)
++[![ra_logo_large](https://retroachievements.github.io/assets/images/retroachievements-logo-large.png)](http://retroachievements.org)
+ ***
+ 
+ Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+
+commit 0dfa12432d49e4095764ce29c7679bad1ebada4a
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sun Nov 12 08:47:01 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index d608799..e37a867 100644
+--- a/Home.md
++++ b/Home.md
+@@ -5,4 +5,6 @@
+ 
+ Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+ 
++Newcommers, please start with the [FAQ](FAQ).
++
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit 0694a90ba93df5ea417fe1accb439d3c42529a4f
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sat Nov 11 21:25:54 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 8af8804..d608799 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,6 +1,6 @@
+ 
+ ***
+-![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
++[![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)](http://retroachievements.org)
+ ***
+ 
+ Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+
+commit f27dcef2810b39d9ee780cef867287b29d4b9c11
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Sat Nov 11 14:34:10 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 79b33a1..8af8804 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,4 +1,7 @@
++
++***
+ ![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
++***
+ 
+ Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+ 
+
+commit 53d5d51094fb385f42bdd6652503e8a577ab8fc8
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Fri Nov 10 23:56:26 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+index 861acda..79b33a1 100644
+--- a/Home.md
++++ b/Home.md
+@@ -1,5 +1,5 @@
+ ![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
+ 
+-Welcome to the RetroAchievements documentation project!
++Welcome to the [RetroAchievements documentation project](https://retroachievements.github.io/docs/)!
+ 
+ You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit 266e9bc2be7a946d3bc2a40d4993d1cf56bc418b
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Nov 9 23:16:50 2017 -0200
+
+    Updated index (markdown)
+
+diff --git a/Home.md b/Home.md
+new file mode 100644
+index 0000000..861acda
+--- /dev/null
++++ b/Home.md
+@@ -0,0 +1,5 @@
++![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
++
++Welcome to the RetroAchievements documentation project!
++
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit 03f3c677e3e41dcb6596fde05b90b1f15837d254
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Nov 9 23:16:10 2017 -0200
+
+    Updated Home (markdown)
+
+diff --git a/Home.md b/Home.md
+deleted file mode 100644
+index 861acda..0000000
+--- a/Home.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+-![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
+-
+-Welcome to the RetroAchievements documentation project!
+-
+-You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
+
+commit 0f12032432222950f4b712fda61e74babf3c0cbe
+Author: meleu <meleu@users.noreply.github.com>
+Date:   Thu Nov 9 20:35:47 2017 -0200
+
+    Initial Home page
+
+diff --git a/Home.md b/Home.md
+new file mode 100644
+index 0000000..861acda
+--- /dev/null
++++ b/Home.md
+@@ -0,0 +1,5 @@
++![ra_logo_large](http://i.retroachievements.org/Images/RA_LogoLarge.png)
++
++Welcome to the RetroAchievements documentation project!
++
++You can help to improve these docs editing/creating the pages at [RetroAchievements wiki](https://github.com/RetroAchievements/docs/wiki).
+\ No newline at end of file
