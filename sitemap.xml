@@ -87,6 +87,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://docs.retroachievements.org//About/</loc>
+     <lastmod>2018-05-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -183,16 +189,6 @@
         
     <url>
      <loc>https://docs.retroachievements.org//Achievements-for-ROM-hacks/</loc>
-     <lastmod>2018-05-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://docs.retroachievements.org//About/</loc>
      <lastmod>2018-05-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
