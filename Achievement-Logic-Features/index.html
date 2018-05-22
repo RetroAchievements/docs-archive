@@ -729,13 +729,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pauseif" title="PauseIf" class="md-nav__link">
-    PauseIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#resetif" title="ResetIf" class="md-nav__link">
     ResetIf
   </a>
@@ -743,12 +736,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n64-special-flags" title="N64 Special Flags" class="md-nav__link">
-    N64 Special Flags
+  <a href="#pauseif" title="PauseIf" class="md-nav__link">
+    PauseIf
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#add-source" title="Add Source" class="md-nav__link">
@@ -767,6 +759,14 @@
           <li class="md-nav__item">
   <a href="#add-hits" title="Add Hits" class="md-nav__link">
     Add Hits
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-special-flags" title="Combining Special Flags" class="md-nav__link">
+    Combining Special Flags
   </a>
   
 </li>
@@ -1014,34 +1014,10 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-17" type="checkbox" id="nav-2-17">
-    
-    <label class="md-nav__link" for="nav-2-17">
-      Achievement Set Master Log
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-17">
-        Achievement Set Master Log
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../n64/" title="N64" class="md-nav__link">
-      N64
+    <a href="../I-am-too-lazy-to-read-the-docs/" title="I am too lazy to read the docs" class="md-nav__link">
+      I am too lazy to read the docs
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1427,13 +1403,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pauseif" title="PauseIf" class="md-nav__link">
-    PauseIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#resetif" title="ResetIf" class="md-nav__link">
     ResetIf
   </a>
@@ -1441,12 +1410,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n64-special-flags" title="N64 Special Flags" class="md-nav__link">
-    N64 Special Flags
+  <a href="#pauseif" title="PauseIf" class="md-nav__link">
+    PauseIf
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#add-source" title="Add Source" class="md-nav__link">
@@ -1465,6 +1433,14 @@
           <li class="md-nav__item">
   <a href="#add-hits" title="Add Hits" class="md-nav__link">
     Add Hits
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-special-flags" title="Combining Special Flags" class="md-nav__link">
+    Combining Special Flags
   </a>
   
 </li>
@@ -1525,37 +1501,43 @@
 </ul>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
 <h2 id="hit-counts">Hit Counts<a class="headerlink" href="#hit-counts" title="Permanent link">link</a></h2>
-<p>In the Achievement Editor, it's the field on the far right side is Hit Count.</p>
-<p>Zero is default, none. It means the condition must be true when the achievement pops.</p>
-<p>If you set a manual hit count, like 1, it means the condition must be true for at least 1 frame, and once that hit count is met, it doesn't need to be met again at any other time.</p>
-<p><strong>PLEASE NOTE</strong>: if a condition has a hit count, and reaches the number required, this condition is no longer tested. It is true and remains true, <strong>UNLESS</strong> you have a <code>Reset If</code>, which we will discuss below.</p>
+<p>In the Achievement Editor, the field on the far right side is Hit Count.</p>
+<p>The default is Zero, which means the condition must be true for the achievement to trigger.</p>
+<p>If you set a target hit count, like 5, it means the condition must be true for at least that many frames, and once that hit count target is met, it doesn't need to be met again at any other time.</p>
+<p><strong>PLEASE NOTE</strong>: if a condition has a hit count, and reaches the number required, this condition is no longer tested. It  remains true, <strong>UNLESS</strong> you have a <a href="#ResetIf"><code>Reset If</code></a>, which we will discuss below.</p>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
 <h2 id="special-flags">Special Flags<a class="headerlink" href="#special-flags" title="Permanent link">link</a></h2>
 <p>In the Achievement Editor, it's the field titled as <strong>Special?</strong></p>
-<p>These flags conditions only work if you set a manual hit count for a condition.</p>
-<h3 id="pauseif"><code>PauseIf</code><a class="headerlink" href="#pauseif" title="Permanent link">link</a></h3>
-<p>The <code>PauseIf</code> pauses activity for all conditions in the same group. it does NOT pause conditions on other groups (more about <a href="#groups">groups below</a>).</p>
-<p><strong>Note</strong>: keep in mind that <em>all conditions</em> in the sentence above includes <code>ResetIf</code> conditions! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active</strong>.</p>
-<p>The <code>PauseIf</code> is usually used to pause hit count going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when someone simply pauses the game, for example.</p>
 <h3 id="resetif"><code>ResetIf</code><a class="headerlink" href="#resetif" title="Permanent link">link</a></h3>
-<p>This will reset the hit count for conditions you set a manual hit count for. It's much more common to use than <code>PauseIf</code></p>
-<p><strong>Note</strong>: Unlike <em>PauseIf</em>, this will reset conditions in <strong>all groups</strong></p>
+<p>If the associated condition is true, <strong>all</strong> <a href="#hit-counts">hit counts</a> in the achievement will be reset to 0.</p>
+<p>The achievement will not trigger if one or more <code>ResetIf</code> conditions is true, even if there are no conditions with hit count targets.</p>
 <p>You can see how it works in the <a href="../Real-Examples">Real Examples page</a>.</p>
-<h3 id="n64-special-flags">N64 Special Flags<a class="headerlink" href="#n64-special-flags" title="Permanent link">link</a></h3>
-<p>When developing for <strong>N64</strong>, there are additional <em>"arithmetic flag operations"</em> that can be used. These flags are currently exclusive to N64. Please note, any condition with arithmetic flags are always considered <strong>true</strong>, regardless of their comparison values.</p>
-<h4 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h4>
-<p>Will add the value of the source in the field labeled <code>Memory</code> to the next achievement condition. The total value will be used in the next achievement condition.</p>
+<p><em>Coming in 0.73</em>: A <code>ResetIf</code> condition with a hit count target will only trigger when the hit count target is met. If another <code>ResetIf</code> condition it met, all conditions, including the <code>ResetIf</code> with the hit count will have their hit counts reset to 0.</p>
+<p>It is very common to use a condition with a hit count of 1 as a start marker for an achievement, and use a <code>ResetIf</code> to cancel the achievement before the end condition is met. A common example is a damageless achievement: "From start of (level/battle), reset if damage taken, trigger at end of (level/battle)". When the start condition is true, a hit count is captured. If it's still set when the end condition is true, the achievement triggers. If the <code>ResetIf</code> condition triggers, the hit count on the start condition is set back to zero, which makes the condition false when evaluating the state when the end condition is true, and the achievement will not trigger.</p>
+<h3 id="pauseif"><code>PauseIf</code><a class="headerlink" href="#pauseif" title="Permanent link">link</a></h3>
+<p>While true, the <code>PauseIf</code> pauses activity for all conditions <strong>in the same group</strong> while true. It <em>does not</em> pause conditions in other groups (more about <a href="#groups">groups</a> below).</p>
+<p><strong>Note</strong>: keep in mind that <em>all conditions</em> in the sentence above includes <code>ResetIf</code> conditions! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active</strong>.</p>
+<p>The <code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to reset it when something happens. For example: pausing the game.</p>
+<p><em>Coming in 0.73</em>: A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused until a <code>ResetIf</code> condition in <em>another</em> group is true</strong>. A <code>PauseIf</code> without a hit count will unpause when the condition is no longer true.</p>
+<h3 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h3>
+<p>Adds the value of the source in the field labeled <em>Memory</em> to the next achievement condition. The comparison, right-hand value fields, and hits fields are ignored for a condition marked with <code>Add Source</code>. The total value will be used for the next comparison. </p>
 <p><img alt="Add Source Example" src="https://i.imgur.com/7rMkSNt.png" /></p>
-<p>In this example, conditions #1 and #2 will have their values (<code>5</code> and <code>3</code> respectively) added until they reach condition #3. At that point, the value contained in the <code>Memory</code> field will be <code>5 + 3 + 20</code>, and it's new value will be <code>28</code>. Condition #3 will now be <em>true</em> and read as:
-<code>28 &gt; 20</code></p>
-<h4 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h4>
-<p>Works similarly to <em>Add Source</em>, but will instead subtract the source value. </p>
-<p>Note: <em>Sub Source</em> subtracts the current value from the additive buffer. It does not subtract the next condition from the current total. The final line (without <em>Add Source</em> or <em>Sub Source</em>) is still added to the additive buffer. Using the <em>Add Source</em> example, if the second item were changed to a <em>Sub Source</em>, the result would be <code>5 - 3 + 20</code>, resulting in <code>22</code>. If both were changed to <em>Sub Source</em>, the result would be <code>- 5 - 3 + 20</code>, resulting in <code>12</code>.</p>
-<h4 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h4>
-<p>Will add the hit count for the current condition to the next achievement condition. The total hit count will be used when determining if the hit count for the next non-<em>Add Hits</em> condition is met.</p>
+<p>In this example, the values in memory addresses $8010, $8011, and $8020 are added together and compared to the memory in $8020. The resulting check is <code>5 + 3 + 20 &gt; 20</code>, or <code>28 &gt; 20</code>, which is true.</p>
+<h3 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h3>
+<p>Works similarly to <code>Add Source</code>, but will instead subtract the source value from the additive buffer. </p>
+<p><strong>Note</strong>: <code>Sub Source</code> does not subtract the next condition from the current total. The final line (without <code>Add Source</code> or <code>Sub Source</code>) is still added to the additive buffer for the final comparison. </p>
+<p>Using the <code>Add Source</code> example, if the second item were changed to a <code>Sub Source</code>, the result would be <code>5 - 3 + 20</code>, resulting in <code>22</code>. If both were changed to <code>Sub Source</code>, the result would be <code>- 5 - 3 + 20</code>, resulting in <code>12</code>.</p>
+<h3 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h3>
+<p>Adds the hit count for the current condition to the next achievement condition. The total hit count will be used when determining if the target hit count for the next non-<code>Add Hits</code> condition is met. If the next non-<code>Add Hits</code> condition does not have a hit target, the <code>Add Hits</code> condition has no effect on the achievement.</p>
+<p>All fields are supported on an <code>Add Hits</code> condition. If the condition is met, the hit count for the condition is incremented (and will stop incrementing if a target hit count is specified). </p>
+<p>The <code>Add Hits</code> condition does not have to be true for the achievement to trigger. The next non-<code>Add Hits</code> condition does, which is affected by the <code>Add Hits</code> condition.</p>
+<h4 id="combining-special-flags">Combining Special Flags<a class="headerlink" href="#combining-special-flags" title="Permanent link">link</a></h4>
+<p><em>Coming in 0.73</em></p>
+<p><code>ResetIf</code> and <code>PauseIf</code> can be applied to a condition following any number of <code>Add Hits</code>, <code>Add Source</code>, or <code>Sub Source</code> conditions. </p>
+<p>Going back to the example above, if <code>ResetIf</code> were applied to condition 3, the achievement would reset because <code>5 + 3 + 20 &gt; 20</code>.</p>
 <h2 id="alt-groups">Alt Groups<a class="headerlink" href="#alt-groups" title="Permanent link">link</a></h2>
 <p>Achievements can have groups added to them that can act as alternative requirements to unlock an achievement. These are called <em>Alt Groups</em>.</p>
-<p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND at least one Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>
+<p>One extremely important thing to note: For an achievement to unlock it must have it's <strong>Core group AND <em>at least one</em> Alt group be true.</strong> If there are no Alt groups present, then only the Core group's conditions need to be true.</p>
 <p><strong>Tip:</strong> Because the Core group always need to be active, typically you would put conditions there that is common among all the alternative requirements. However, one trick you can use to basically ignore needing a Core group is to give it a condition that is always true such as: </p>
 <p><code>Mem 0x0001 = Mem 0x0001</code></p>
 <p>Since the Core group is now always true, and you can now focus on differentiating the Alt groups.</p>

@@ -97,7 +97,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#naming-convention-tips" tabindex="1" class="md-skip">
+      <a href="#achievement-creation-tips" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -791,6 +791,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#achievement-creation-tips" title="Achievement Creation Tips" class="md-nav__link">
+    Achievement Creation Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#naming-convention-tips" title="Naming Convention Tips" class="md-nav__link">
     Naming Convention Tips
   </a>
@@ -848,13 +855,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#achievement-creation-tips" title="Achievement Creation Tips" class="md-nav__link">
-    Achievement Creation Tips
-  </a>
   
 </li>
       
@@ -1000,34 +1000,10 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-17" type="checkbox" id="nav-2-17">
-    
-    <label class="md-nav__link" for="nav-2-17">
-      Achievement Set Master Log
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-17">
-        Achievement Set Master Log
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../n64/" title="N64" class="md-nav__link">
-      N64
+    <a href="../I-am-too-lazy-to-read-the-docs/" title="I am too lazy to read the docs" class="md-nav__link">
+      I am too lazy to read the docs
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1391,6 +1367,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#achievement-creation-tips" title="Achievement Creation Tips" class="md-nav__link">
+    Achievement Creation Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#naming-convention-tips" title="Naming Convention Tips" class="md-nav__link">
     Naming Convention Tips
   </a>
@@ -1451,13 +1434,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#achievement-creation-tips" title="Achievement Creation Tips" class="md-nav__link">
-    Achievement Creation Tips
-  </a>
-  
-</li>
-      
       
       
       
@@ -1485,7 +1461,49 @@
                 
                   <h1>Tips and Tricks</h1>
                 
-                <h2 id="naming-convention-tips">Naming Convention Tips<a class="headerlink" href="#naming-convention-tips" title="Permanent link">link</a></h2>
+                <h2 id="achievement-creation-tips">Achievement Creation Tips<a class="headerlink" href="#achievement-creation-tips" title="Permanent link">link</a></h2>
+<ul>
+<li>
+<p><strong>Never use / Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong> resulting in "Popped at the Wrong Time" reasoning attached to Bug Tickets received at RetroAchievements.org.  Write your achievements soundly.</p>
+</li>
+<li>
+<p><strong>PauseIf Demo Mode</strong>:  If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements. You'll probably need to know how to use <a href="../Achievement-Logic-Features#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features#resetif">ResetIf</a>.</p>
+</li>
+<li>
+<p><strong>Protect your cheevos</strong>: If you wanna create an achieve for getting a specific and unique item in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement will be earnable by loading a state.</p>
+</li>
+<li>
+<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+</li>
+<li>
+<p><strong>Limitations</strong>:  There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement).</p>
+</li>
+<li>
+<p><strong>Alt groups</strong> (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. More info on the <a href="../Achievement-Logic-Features">Achievement Logic Features page</a>.</p>
+</li>
+<li>
+<p><strong>Avoid Achievement spam</strong>. If a game has 100 levels, do not make an achievement for each level. Do every 25 or so.  It is generally looked down upon by RA's development team to code these "Filler" type Achievements.  If you intend to create a few progressive unlocks in this manner - the words: ("Easy", "Medium", "Hard") will help to put you in context.  Consider the time segment a casual player would unlock these progressive Achievements in.  If generally you could unlock all in a progressive set of Achievements of this nature in under half an hour as a casual player, that's filler design, and not recommended.</p>
+</li>
+<li>
+<p><strong>Be Creative and Fun</strong>: Get as creative as possible with achievements. "Beat X without using/doing Y", "Beat X in 5 seconds", "3 heart run".  Be sure casual players can still get these with their best effort.  It isn't fun if its way too difficult for a casual player!  (See:  <strong>Bonus Set Tips</strong> below for the real challenges!). There is a whole page about <a href="../Achievement-Design">Achievement Design</a> that can give good advices on how to think about good achievements.</p>
+</li>
+<li>
+<p><strong>Glitchless, please!</strong>: Do not make achievements requiring glitches.  Glitches, in most cases, corrupt and destabilize game memory and RAM.  They break the rest of the set to include. It is however, wise to code block walls stopping players from using them to get easy mastery. This is a topic of much debate on RA, since performing a game-breaking glitch sometimes requires a lot of player skill. Some glitches are possible on console-only, some on emulator-only.  For their inconsistency and instability in regards to memory, it is recommended that you blockwall them to protect the integrity of your set and its/your reputation.  (This is an exceptional issue in some GameBoy games, where playground talk in glitching your way to victory was prominent!)</p>
+</li>
+<li>
+<p><strong>We love Art</strong>:  Pretty badges are rewarding badges! It should visually represent the achievement itself, or hint at the location in the game for secrets.  Matching to the game's art style works well.  Google Image searches for "Sprite Sheets" is an useful tip to include some game art. If you're a good graphics artist, updating badges is your time to shine! More info can be found at the <a href="../Badge-and-Icon-Creation">Badge and Icon Creation page</a>.</p>
+</li>
+<li>
+<p>Uncheck "Show Decimal Values" in the Achievement Editor so you can enter the hex values you see in the Memory Viewer.  Its better than using a programmers calculator!</p>
+</li>
+<li>
+<p><strong>16-bit Secrets</strong>: 16-bit requirements do not have to be used on an even number of RAM, they can be used in-between properly, even if 16-bit view doesn't show it right. Ex: 0 1 2 3 4 5, in 16-bit it's usually viewed as 10 32 54, but if you start the address at the 1 here in your requirement, "21" will be read by the achievement, even if 16-bit view in the memory viewer isn't showing it. It also works if it's the last address in the line(starting at F, going to 0).  Be aware that if you're coding for LE cores as well, you'll have to update this, too!  Always leave descriptive code notes for yourself or someone else.</p>
+</li>
+<li>
+<p><strong>Bit field Secrets</strong>: Use single bits(0-7) for things that only change a single bit. In the Memory Viewer, when an address is selected, there will be "bits 0 1 2 3 4 5 6 7" above the addresses, and below those numbers will be either "0" or "1" like "0 0 0 0 0 0 0 0" if bit3 has a 1 under it, bit3=1 for that address. Single bit usage is very common for game events/unlocks/etc.. You'll want to use these in games where you can do things in different orders, dialogues, events, unlocks.. If you check for "8-bit x = 7" and someone did something different like skip something or get something extra, their 8-bit value will very likely be different because the single bits within are different and the achievement won't unlock, so in this case you check for specific bits inside the 8-bit address. Now if for example, item unlocks use all 8 bits of the 8-bit address, and you want to do "unlock all items," you can just do "8-bit x = 0xff" This may be confusing, but it's very important to understand.  Some games with limited memory space use bit fields a lot!  Its an important technique to learn.</p>
+</li>
+</ul>
+<h2 id="naming-convention-tips">Naming Convention Tips<a class="headerlink" href="#naming-convention-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
 <p><strong>No Symbols</strong>: Do not use accented/special characters like the "é" in Pokemon, as they currently break a few things (like feed). They are also not visible in search without the special character.</p>
@@ -1538,45 +1556,6 @@
 <p>To add your LE support, you'll be writing a dummy core condition (Mem 0x000001 = Mem 0x000001), copying your original non-LE conditions with a <code>PauseIf</code> at the top into one Alt, copy the same conditions to the other. Both <code>PauseIf</code>s will contain a check looking at a memory address that never changes to see if its 16-bit value has had its byte ordering changed (Think of this as "<code>PauseIf</code> I'm not on an LE core" and "<code>PauseIf</code> I am" alt conditions).</p>
 <p>One will run if the gamer is running on an LE core, one wont.  You'll then perform the math I described above on the values you're checking for in the "<code>PauseIf</code> I'm not on an LE core" Alt, and updating it.</p>
 <p>Confusing? Yes. This is why most beginners and intermediate developers should not worry.</p>
-<h2 id="achievement-creation-tips">Achievement Creation Tips<a class="headerlink" href="#achievement-creation-tips" title="Permanent link">link</a></h2>
-<ul>
-<li>
-<p><strong>Never use / Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong> resulting in "Popped at the Wrong Time" reasoning attached to Bug Tickets received at RetroAchievements.org.  Write your achievements soundly.</p>
-</li>
-<li>
-<p><strong>PauseIf Demo Mode</strong>:  If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements.</p>
-</li>
-<li>
-<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
-</li>
-<li>
-<p><strong>Limitations</strong>:  There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement, that's more love than RetroAchievements can handle!).</p>
-</li>
-<li>
-<p><strong>Alt groups</strong> (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. More info on the <a href="../Achievement-Logic-Features">Achievement Logic Features page</a>.</p>
-</li>
-<li>
-<p><strong>Avoid Achievement spam</strong>. If a game has 100 levels, do not make an achievement for each level. Do every 25 or so.  It is generally looked down upon by RA's development team to code these "Filler" type Achievements.  If you intend to create a few progressive unlocks in this manner - the words: ("Easy", "Medium", "Hard") will help to put you in context.  Consider the time segment a casual player would unlock these progressive Achievements in.  If generally you could unlock all in a progressive set of Achievements of this nature in under half an hour as a casual player, that's filler design, and not recommended.</p>
-</li>
-<li>
-<p><strong>Be Creative and Fun</strong>: Get as creative as possible with achievements. "Beat X without using/doing Y", "Beat X in 5 seconds", "3 heart run".  Be sure casual players can still get these with their best effort.  It isn't fun if its way too difficult for a casual player!  (See:  <strong>Bonus Set Tips</strong> below for the real challenges!). There is a whole page about <a href="../Achievement-Design">Achievement Design</a> that can give good advices on how to think about good achievements.</p>
-</li>
-<li>
-<p><strong>Glitchless, please!</strong>: Do not make achievements requiring glitches.  Glitches, in most cases, corrupt and destabilize game memory and RAM.  They break the rest of the set to include. It is however, wise to code block walls stopping players from using them to get easy mastery. This is a topic of much debate on RA, since performing a game-breaking glitch sometimes requires a lot of player skill. Some glitches are possible on console-only, some on emulator-only.  For their inconsistency and instability in regards to memory, it is recommended that you blockwall them to protect the integrity of your set and its/your reputation.  (This is an exceptional issue in some GameBoy games, where playground talk in glitching your way to victory was prominent!)</p>
-</li>
-<li>
-<p><strong>We love Art</strong>:  Pretty badges are rewarding badges! It should visually represent the achievement itself, or hint at the location in the game for secrets.  Matching to the game's art style works well.  Google Image searches for "Sprite Sheets" is an useful tip to include some game art. If you're a good graphics artist, updating badges is your time to shine! More info can be found at the <a href="../Badge-and-Icon-Creation">Badge and Icon Creation page</a>.</p>
-</li>
-<li>
-<p>Uncheck "Show Decimal Values" in the Achievement Editor so you can enter the hex values you see in the Memory Viewer.  Its better than using a programmers calculator!</p>
-</li>
-<li>
-<p><strong>16-bit Secrets</strong>: 16-bit requirements do not have to be used on an even number of RAM, they can be used in-between properly, even if 16-bit view doesn't show it right. Ex: 0 1 2 3 4 5, in 16-bit it's usually viewed as 10 32 54, but if you start the address at the 1 here in your requirement, "21" will be read by the achievement, even if 16-bit view in the memory viewer isn't showing it. It also works if it's the last address in the line(starting at F, going to 0).  Be aware that if you're coding for LE cores as well, you'll have to update this, too!  Always leave descriptive code notes for yourself or someone else.</p>
-</li>
-<li>
-<p><strong>Bit field Secrets</strong>: Use single bits(0-7) for things that only change a single bit. In the Memory Viewer, when an address is selected, there will be "bits 0 1 2 3 4 5 6 7" above the addresses, and below those numbers will be either "0" or "1" like "0 0 0 0 0 0 0 0" if bit3 has a 1 under it, bit3=1 for that address. Single bit usage is very common for game events/unlocks/etc.. You'll want to use these in games where you can do things in different orders, dialogues, events, unlocks.. If you check for "8-bit x = 7" and someone did something different like skip something or get something extra, their 8-bit value will very likely be different because the single bits within are different and the achievement won't unlock, so in this case you check for specific bits inside the 8-bit address. Now if for example, item unlocks use all 8 bits of the 8-bit address, and you want to do "unlock all items," you can just do "8-bit x = 0xff" This may be confusing, but it's very important to understand.  Some games with limited memory space use bit fields a lot!  Its an important technique to learn.</p>
-</li>
-</ul>
                 
                   
                 

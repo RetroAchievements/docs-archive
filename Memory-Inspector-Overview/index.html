@@ -763,6 +763,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reading-data-in-the-memory-viewer" title="Reading data in the Memory Viewer" class="md-nav__link">
+    Reading data in the Memory Viewer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81632-bit-modes" title="8/16/32-bit modes" class="md-nav__link">
+    8/16/32-bit modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sizes-smaller-than-8-bit" title="Sizes smaller than 8-bit" class="md-nav__link">
+    Sizes smaller than 8-bit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1001,34 +1028,10 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-17" type="checkbox" id="nav-2-17">
-    
-    <label class="md-nav__link" for="nav-2-17">
-      Achievement Set Master Log
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-17">
-        Achievement Set Master Log
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../n64/" title="N64" class="md-nav__link">
-      N64
+    <a href="../I-am-too-lazy-to-read-the-docs/" title="I am too lazy to read the docs" class="md-nav__link">
+      I am too lazy to read the docs
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1460,6 +1463,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reading-data-in-the-memory-viewer" title="Reading data in the Memory Viewer" class="md-nav__link">
+    Reading data in the Memory Viewer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81632-bit-modes" title="8/16/32-bit modes" class="md-nav__link">
+    8/16/32-bit modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sizes-smaller-than-8-bit" title="Sizes smaller than 8-bit" class="md-nav__link">
+    Sizes smaller than 8-bit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1521,6 +1551,30 @@
 <p>The bookmarks can be renamed by double-clicking their description. If you double-click on the address, you can move straight to that point in the Mem Inspector.</p>
 <p>Bookmarked addresses will show in the Memory Inspector as green. From here you can also Freeze any bookmarks.</p>
 <p>This is helpful for things like health or consumables. Frozen values can be manipulated directly from the inspector. Keep in mind, freezing occurs <strong>1 frame after gameplay.</strong> This means even when frozen, the value will change for atleast one frame before returning to the frozen value. These will always be displayed as yellow.</p>
+<h2 id="reading-data-in-the-memory-viewer">Reading data in the Memory Viewer<a class="headerlink" href="#reading-data-in-the-memory-viewer" title="Permanent link">link</a></h2>
+<p>The first, and most important thing to know, is that the data shown in the memory viewer is in <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a>. Data is actually stored in binary (everything is either a 1 or 0), but the smallest working unit available to the CPU is a byte (8-bits). 8-bits can represent any value from 0 to 255, but rather than showing three characters per byte in the Memory Viewer, the data is shown in hexadecimal, which only takes two characters per byte. This has been the standard way to view raw computer data for a very long time.
+<em> One hexadecimal digit represents a value from 0-15: <code>0 1 2 3 4 5 6 7 8 9 a b c d e f</code>. 
+</em> To indicate a value is written in hexadecimal, the prefix <code>0x</code> is used: <code>10 = 10</code>, <code>0x10 = 16</code>
+<em> Two hexadecimal digits represent a value from 0-255. 
+  * The first digit is multiplied by 16 and added to the second digit: <code>0x39 = 3x16 + 9 = 57</code>, <code>0xa0 = 10x16 + 0 = 160</code>.
+</em> Four hexadecimal digits represent a value from 0-65535.
+  * Each additional digit is multiplied by the next power of 16.
+  * <code>0x63a7 = 6x16³ + 3x16² + 10x16 + 7 = 25511</code>
+* Eight hexadecimal digits represent a value from 0-4294967295
+  * <code>0x3b9d00f3 = 3x16^7 + 11x16^6 + ... + 15x16 + 3 = 1000145139</code>
+  * <code>0x00000100 = 1x16² = 256</code></p>
+<h4 id="81632-bit-modes">8/16/32-bit modes<a class="headerlink" href="#81632-bit-modes" title="Permanent link">link</a></h4>
+<p>By default, the Memory Viewer shows data in 8-bit mode. This displays each byte of memory as a separate two-character hexadecimal value. Sixteen bytes are shown per line. The address of a byte can be determined by adding the column index (displayed above the memory) to the row index (displayed to the left of the memory). Using the image above, the cursor is at <code>0x002a7</code> (<code>0x00200 + 7</code>).</p>
+<p>Before we talk about 16-bit mode and 32-bit mode, you need to understand a little about <a href="https://en.wikipedia.org/wiki/Endianness#Little-endian">little-endianness</a>. Values larger than 255 have to be stored in multiple bytes. However, for efficiency reasons, multi-byte values are stored in reverse order. For example, the value <code>0x39ce</code> (14798) will be stored in memory with <code>0xce</code> in the first byte and <code>0x39</code> in the second byte. You can see this in the image above at 0x0002c0.</p>
+<p>When you switch the viewer to 16-bit mode, it automatically groups every two bytes and displays them as 16-bit hexadecimal values. The <code>0xce</code> and <code>0x39</code> bytes at 0x0002c0 get displayed as <code>0x39ce</code>. The next two bytes are displayed as <code>0x2529</code> at address 0x0002c2. </p>
+<p><em>NOTE</em>: While 16-bit values are usually aligned to even addresses, that's not always the case, there's actually a non-displayed 16-bit value at 0x0002c1. Since the byte value at 0x0002c1 is <code>0x39</code> and the byte value at 0x0002c2 is <code>29</code>, the 16-bit value at 0x0002c1 is <code>0x2939</code>.</p>
+<p>Similarly, in 32-bit mode, the four bytes from 0x0002c0 to 0x0002c3 are displayed as a single 32-bit <code>0x252939ce</code> value at address 0x0002c0, but there are also 32-bit values at 0x0002c1, 0x0002c2, and 0x0002c3.</p>
+<h4 id="sizes-smaller-than-8-bit">Sizes smaller than 8-bit<a class="headerlink" href="#sizes-smaller-than-8-bit" title="Permanent link">link</a></h4>
+<p>In addition to the 8-bit, 16-bit and 32-bit sizes described above, there are additional sizes that can be used when writing achievements.</p>
+<p>Given that a byte is two hexadecimal characters that represents 8 binary bits:
+    <code>0x7a = 0111 1010</code></p>
+<p>Each hexadecimal character is four bits, the first four bits (repesented by the hex character <code>7</code>) is the <code>Upper4</code> bits. A condition where "Upper4 = 7" would be true for this byte. The last four bits (represented by the hex character <code>a</code> is the <code>Lower4</code> bits. A condition where "Lower4 = 10" would be true for this byte.</p>
+<p>To take things one step farther, you can write conditions for each individual bit of a byte. When in 8-bit mode, the Viewer automatically shows the bits that go into the currently selected byte just above the viewer. Each bit is labelled. The left-most bit is <code>Bit7</code>, and the right-most bit is <code>Bit0</code>. </p>
                 
                   
                 
