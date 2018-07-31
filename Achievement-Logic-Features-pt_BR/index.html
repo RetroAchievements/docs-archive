@@ -1116,14 +1116,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n64-special-flags" title="N64 Special Flags" class="md-nav__link">
-    N64 Special Flags
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#add-source" title="Add Source" class="md-nav__link">
     Add Source
   </a>
@@ -1141,11 +1133,6 @@
   <a href="#add-hits" title="Add Hits" class="md-nav__link">
     Add Hits
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1437,14 +1424,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n64-special-flags" title="N64 Special Flags" class="md-nav__link">
-    N64 Special Flags
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#add-source" title="Add Source" class="md-nav__link">
     Add Source
   </a>
@@ -1462,11 +1441,6 @@
   <a href="#add-hits" title="Add Hits" class="md-nav__link">
     Add Hits
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1537,16 +1511,26 @@ Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos R
 <p>Isso irá zerar a contagem de hits para todas condições em que você definiu uma contagem de hits. Ele é muito mais comum de usar do que <code>PauseIf</code></p>
 <p><strong>Nota</strong>: Ao contrário do <code>PauseIf</code>, le irá zerar as condições em <strong>todos os grupos</strong></p>
 <p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Real Examples</a></p>
-<h3 id="n64-special-flags">N64 Special Flags<a class="headerlink" href="#n64-special-flags" title="Permanent link">link</a></h3>
-<p>Ao desenvolver para o  <strong>N64</strong>, existem "operações de flags aritméticas" ("arithmetic flag operations") adicionais que podem ser usadas. Esses flags são atualmente exclusivos do N64. Por favor, note que qualquer condição com flags aritméticos sempre é considerada verdadeira, independentemente dos valores de comparação.</p>
-<h4 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h4>
-<p>Adicionará o valor da fonte no campo denominado <code>Memory</code> à próxima condição de realização. O valor total será usado na próxima condição de conquista.</p>
-<h4 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h4>
-<p>Funciona de forma semelhante ao Add Source, mas subtrai o valor de origem.</p>
-<h4 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h4>
-<p>Adicionará a contagem de hits atual à próxima condição. O valor de sucesso total será usado na próxima condição de achievement.</p>
-<p><img alt="" src="https://camo.githubusercontent.com/61485b9cecac30508fd3f3a788dbee448667ff1a/68747470733a2f2f692e696d6775722e636f6d2f37724d6b534e742e706e67" /></p>
-<p>Neste exemplo, as condições # 1 e # 2 terão seus valores (<code>5</code> e <code>3</code>, respectivamente) adicionados até atingirem a condição # 3. Nesse ponto, o valor contido no campo <code>Memory</code> será <code>5 + 3 + 20</code>, e o valor novo será <code>28</code>. A condição # 3 será verdadeira e será lida como: <code>28&gt; 20</code></p>
+<h3 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h3>
+<p>Quando uma condição tem a flag <code>Add Source</code> o valor daquele endereço de memória é adicionado ao valor do endereço na condição logo abaixo, e a comparação é feita na condição abaixo daquela com o <code>Add Source</code>. Isso pode soar um pouco confuso, mas o exemplo a seguir vai esclarecer como funciona:</p>
+<p><img alt="Add Source Example" src="https://user-images.githubusercontent.com/8508804/42702176-169aaf44-869f-11e8-979c-487a040e0145.png" /></p>
+<p>Neste exemplo o valor em <code>0x8010</code> será adicionado ao valor em <code>0x8020</code> e a comparação é se esta soma é maior ou igual a zero.</p>
+<p>Se o valor em <code>0x8010</code> é <code>1</code> e o valor em <code>0x8020</code> é <code>2</code>, a comparação será <code>1 + 2 &gt; 0</code>, ou <code>3 &gt; 0</code>.</p>
+<p><strong>Nota</strong>: todos os campos de comparação na condição com a flag <code>Add Source</code> são ignorados.</p>
+<p>Tentando resumir esta explicação com uma imagem:</p>
+<p><img alt="Add Source Explained" src="https://user-images.githubusercontent.com/8508804/42702180-1712bca0-869f-11e8-9949-11021fa891bb.png" /></p>
+<p><strong>Nota</strong>: você pode usar <code>Add Source</code> para somar mais endereços, como no exempo abaixo:</p>
+<p><img alt="addsource1" src="https://user-images.githubusercontent.com/8508804/42702178-16c6d97a-869f-11e8-9c0d-84ef42ec4867.png" /></p>
+<h3 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h3>
+<p>Funciona muito semelhante ao <code>Add Source</code>, porém o <code>Sub Source</code> faz o valor naquele endereço de memória ser negativo.</p>
+<p><strong>Nota 1</strong>: <code>Sub Source</code> <strong>NÃO</strong> é um flag de subtração. Ele apenas torna o valor negativo.</p>
+<p><strong>Nota 2</strong>: A linha final (sem <code>Add Source</code> ou <code>Sub Source</code>) ainda é <strong>adicionada</strong> para a comparação final.</p>
+<p>Usando aquele <a href="#add-source">exemplo de uso de <code>Add Source</code> example</a>, se nós o substituíssemos por <code>Sub Source</code> e com os mesmos valores (<code>valor(0x8010) = 1</code> e <code>valor(0x8020) = 2</code>), a comparação seria <code>-1 + 2 &gt; 0</code>, or <code>1 &gt; 0</code>.</p>
+<h3 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h3>
+<p>Também funciona de maneira de similar ao <code>Add Source</code>, porém relacionado aos hitcounts.</p>
+<p>O <code>Add Hits</code> adiciona o hitcount da condição atual à próxima condição. O hitcount total a ser checado será aquele definido na condição logo após a última condição com <code>Add Hits</code>. Se a condição logo após o último <code>Add Hits</code> não tiver um hitcount definido, todas as condições com <code>Add Hits</code> serão ignoradas.</p>
+<p>Diferentemente do <code>Add Source</code>, todos os campos são usados numa condição <code>Add Hits</code>, inclusive os campos de comparação. Se uma condição é verdadeira, o hitcount para esta condição é incrementada (e parará de incrementar se assim que o número de hitcount definido for atingido).</p>
+<p>As condições com <code>Add Hits</code> não precisam ser verdadeiras para a conquista disparar. Porém primeira condição após o último <code>Add Hits</code>, sim, precisa ser verdadeira.</p>
 <h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">link</a></h2>
 <p>Os achievements podem ter grupos adicionados a eles que podem atuar como requisitos alternativos para desbloquear um achievement. Estes são chamados de  <strong>Alt Groups</strong>.</p>
 <p>Uma coisa extremamente importante a notar: para uma conquista desbloquear, deve ter o <strong>Core group E pelo menos um Alt group ser verdadeiro</strong>. Se não houver nenhum grupo Alt presente, apenas as condições do Core group's precisam ser verdadeiras.</p>
