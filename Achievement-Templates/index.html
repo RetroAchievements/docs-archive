@@ -477,39 +477,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../RA-Discord-server/" title="RA Discord server" class="md-nav__link">
-      RA Discord server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../RALPER-Discord-bot/" title="RALPER Discord bot" class="md-nav__link">
-      RALPER Discord bot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-9" type="checkbox" id="nav-1-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7">
     
-    <label class="md-nav__link" for="nav-1-9">
+    <label class="md-nav__link" for="nav-1-7">
       My game is not loading achievements
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-9">
+      <label class="md-nav__title" for="nav-1-7">
         My game is not loading achievements
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1813,7 +1789,7 @@
 <tr>
 <td>1</td>
 <td></td>
-<td>Mem</td>
+<td>Delta</td>
 <td>0xADDRESS</td>
 <td>=</td>
 <td>Value</td>
@@ -1823,7 +1799,7 @@
 <tr>
 <td>2</td>
 <td></td>
-<td>Delta</td>
+<td>Mem</td>
 <td>0xADDRESS</td>
 <td>=</td>
 <td>Value</td>
@@ -1842,6 +1818,12 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>1: If value in <code>0xADDRESS</code> in the previous frame is <code>0xV1</code>, increases the hitcount (up to 10).</li>
+<li>2: If the current value in <code>0xADDRESS</code> is <code>0xV1</code>, increases the hitcount (up to 10).</li>
+<li>3: Do not increase the hitcounts in 1 and 2 if there's change in <code>0xADDRESS</code>.</li>
+</ul>
 <h2 id="conditional-resets">Conditional Resets<a class="headerlink" href="#conditional-resets" title="Permanent link">link</a></h2>
 <p>Conditional resets can be used for many things.</p>
 <p>Lets say you want to have a reset if a player enters a certain X and Y zone of a level:</p>
