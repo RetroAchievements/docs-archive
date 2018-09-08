@@ -648,6 +648,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer/" title="How to Become an Achievement Developer" class="md-nav__link">
+      How to Become an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
       Getting Started as an Achievement Developer
     </a>
@@ -685,13 +697,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
     
-    <label class="md-nav__link" for="nav-2-6">
+    <label class="md-nav__link" for="nav-2-7">
       Real Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-6">
+      <label class="md-nav__title" for="nav-2-7">
         Real Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -759,6 +771,18 @@
         
       </ul>
     </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
   </li>
 
         
@@ -881,30 +905,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
-      Console Specific Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
-      Achievement Templates
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
       Difficulty Scale and Balance
     </a>
@@ -917,8 +917,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
+      Achievement Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
       Set Development Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions/" title="Achievement Set Revisions" class="md-nav__link">
+      Achievement Set Revisions
     </a>
   </li>
 
@@ -965,18 +989,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
-      Achievement Design
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
       Bonus Set Guide
     </a>
@@ -991,6 +1003,18 @@
   <li class="md-nav__item">
     <a href="../Achievements-for-ROM-hacks/" title="Achievements for ROM hacks" class="md-nav__link">
       Achievements for ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
+      Console Specific Tips
     </a>
   </li>
 
@@ -1476,16 +1500,16 @@
                 <h2 id="achievement-creation-tips">Achievement Creation Tips<a class="headerlink" href="#achievement-creation-tips" title="Permanent link">link</a></h2>
 <ul>
 <li>
-<p><strong>Never use / Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong> resulting in "Popped at the Wrong Time" reasoning attached to Bug Tickets received at RetroAchievements.org.  Write your achievements soundly.</p>
+<p><strong>Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong> resulting in "Popped at the Wrong Time" reasoning attached to Bug Tickets received at RetroAchievements.org.  Write your achievements soundly.</p>
 </li>
 <li>
 <p><strong>PauseIf Demo Mode</strong>:  If the game has a demo mode (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements. You'll probably need to know how to use <a href="../Achievement-Logic-Features#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features#resetif">ResetIf</a>.</p>
 </li>
 <li>
-<p><strong>Protect your cheevos</strong>: If you wanna create an achieve for getting a specific and unique item in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement will be earnable by loading a state.</p>
+<p><strong>Protect your cheevos</strong>: If you wanna create an achievement for getting a specific and unique item in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement may trigger by loading a save game that may have been found online.</p>
 </li>
 <li>
-<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game. This is largely irrelevant after the release of version 0.73 of the toolkit (2018-09-01) as we no longer process achievements for the first 100 frames. Leaving this note here as it may be useful for diagnosing tickets created before 0.73.</p>
 </li>
 <li>
 <p><strong>Limitations</strong>:  There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement).</p>
@@ -1604,7 +1628,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" title="Creating a Timer with ResetIf Hits based on the Speed of the Game" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Achievement-Templates/" title="Achievement Templates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1613,19 +1637,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Creating a Timer with ResetIf Hits based on the Speed of the Game
+                Achievement Templates
               </span>
             </div>
           </a>
         
         
-          <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Console Specific Tips
+                Difficulty Scale and Balance
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

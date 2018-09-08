@@ -648,6 +648,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer/" title="How to Become an Achievement Developer" class="md-nav__link">
+      How to Become an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
       Getting Started as an Achievement Developer
     </a>
@@ -685,13 +697,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
     
-    <label class="md-nav__link" for="nav-2-6">
+    <label class="md-nav__link" for="nav-2-7">
       Real Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-6">
+      <label class="md-nav__title" for="nav-2-7">
         Real Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -768,32 +780,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
-      Tips and Tricks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
-      Console Specific Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
       Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
     </a>
   </li>
 
@@ -816,8 +816,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
+      Achievement Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
       Set Development Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions/" title="Achievement Set Revisions" class="md-nav__link">
+      Achievement Set Revisions
     </a>
   </li>
 
@@ -959,18 +983,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
-      Achievement Design
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
       Bonus Set Guide
     </a>
@@ -985,6 +997,18 @@
   <li class="md-nav__item">
     <a href="../Achievements-for-ROM-hacks/" title="Achievements for ROM hacks" class="md-nav__link">
       Achievements for ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
+      Console Specific Tips
     </a>
   </li>
 
@@ -1480,8 +1504,10 @@
 <p><strong>Note</strong>: A valid leaderboard MUST have all four of these conditions.</p>
 <p>Those last 4 fields are really important and <em>LOTS</em> of care must be taken over the entry of any characters into these strings. That's why they deserve a further explanation:</p>
 <p>The <strong>STA</strong> or <strong>Start</strong> condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. Once the <strong>STA</strong> is true, the game will activate the other three, and will keep processing them constantly.</p>
-<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel all progress towards the leaderboard submission. If however the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard entry will be submitted.</p>
-<p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box.</p>
+<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. </p>
+<p>If the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard score will be submitted. NOTE: Cancel is given priority over Submit. If both become true in the same frame, the score will not be submitted.</p>
+<p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
+<p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
 <h2 id="address-format">Address Format<a class="headerlink" href="#address-format" title="Permanent link">link</a></h2>
 <p>The memory addresses for STA/CAN/SUB/VAL have the following format:</p>
 <table>
@@ -1584,6 +1610,8 @@
 <li><code>0xf601</code> is an 8-bit memory address, and we use the prefix <code>0xh</code> instead of <code>0x</code> to signify this. The <code>0xf601</code> is the screen mode. The second and third parts of the start statement are saying "the current mode should be <em>ingame</em> (<code>0c</code>), and the mode on the previous frame should NOT be <em>ingame</em>". <strong>Note</strong>: that <code>d</code> prefix on the address represents delta, or "the previous frame's value". <strong>Summing up:</strong> trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
 <li>Finally we also expect <code>0xfff0</code> to be equivalent to <code>0</code>, because this address is used for demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
 </ul>
+<p><strong>Tip</strong>: the most common mistake when creating leaderboards is forgetting the <code>h</code> when trying to reference an 8-bit memory address.</p>
+<p><strong>Pro-tip:</strong> <strong>STA</strong>, <strong>CAN</strong>, and <strong>SUB</strong> support all logic available in the <a href="../Achievement-Logic-Features">achievement editor</a>. The easiest way to make sure you get them written correctly is to create local achievements that capture the events, then extract the serialized values from the "XXX-User.txt" file associated to the game you're working on.</p>
 <h3 id="cancel-conditions">Cancel Conditions<a class="headerlink" href="#cancel-conditions" title="Permanent link">link</a></h3>
 <p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
 <ul>
@@ -1610,6 +1638,8 @@
 8-bit 0xfe22 times 3600</p>
 <p>The reason for this is that the values in each of these addresses signifies frames, seconds, and minutes respectively. When we add these values together, we get a grand total in frames that we submit to the database.</p>
 <p>Remember that 'Format' field that can be either <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> or <strong>Value</strong>? <strong>Time (Frames)</strong> is the most common one, and represents 'frames'. <strong>Time (Milliseconds)</strong> expects a value that we can convert directly into millisecs (Super Mario Kart uses this). However to convert a value in frames into a human-readible format, we should divide the value by 60 to get an accurate representation of seconds, and a value in millisecs should be divided by 100 to get the number of seconds. This is used both on the website and in the app to display the value properly, and is important to distinguish so we can be sure we get the most accurate value out of the emulator, by using whatever format they use to record time.</p>
+<p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
+<p><strong>Tip</strong>: modifier is a decimal value, so if you need to divide by two, you can multiply by 0.5: <code>0xhfe24*0.5</code></p>
 <h2 id="further-help">Further help<a class="headerlink" href="#further-help" title="Permanent link">link</a></h2>
 <p>There are unfortunately <em>MANY</em> ways to get this process wrong, so if you are having any trouble feel free to ask for help in our <a href="https://discord.gg/dq2E4hE">Discord server</a>.</p>
 <p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard.</p>

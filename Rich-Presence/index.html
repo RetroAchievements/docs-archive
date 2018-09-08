@@ -648,6 +648,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer/" title="How to Become an Achievement Developer" class="md-nav__link">
+      How to Become an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
       Getting Started as an Achievement Developer
     </a>
@@ -685,13 +697,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
     
-    <label class="md-nav__link" for="nav-2-6">
+    <label class="md-nav__link" for="nav-2-7">
       Real Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-6">
+      <label class="md-nav__title" for="nav-2-7">
         Real Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -768,32 +780,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
-      Tips and Tricks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
-      Console Specific Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
       Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
     </a>
   </li>
 
@@ -816,8 +816,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
+      Achievement Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
       Set Development Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions/" title="Achievement Set Revisions" class="md-nav__link">
+      Achievement Set Revisions
     </a>
   </li>
 
@@ -997,6 +1021,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#developing-rich-presence" title="Developing Rich Presence" class="md-nav__link">
+    Developing Rich Presence
+  </a>
+  
+</li>
+      
       
       
       
@@ -1020,18 +1051,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
-      Achievement Design
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
       Bonus Set Guide
     </a>
@@ -1046,6 +1065,18 @@
   <li class="md-nav__item">
     <a href="../Achievements-for-ROM-hacks/" title="Achievements for ROM hacks" class="md-nav__link">
       Achievements for ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
+      Console Specific Tips
     </a>
   </li>
 
@@ -1556,6 +1587,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#developing-rich-presence" title="Developing Rich Presence" class="md-nav__link">
+    Developing Rich Presence
+  </a>
+  
+</li>
+      
       
       
       
@@ -1667,7 +1705,7 @@ FormatType=VALUE
 <li><code>SCORE</code>/<code>POINTS</code>: "000130 points" </li>
 <li><code>TIME</code>/<code>FRAMES</code>: value describes the number of frames elapsed, and will be turned into 00:00.00 </li>
 <li><code>SECS</code>: value describes the number of seconds elapsed, and will be turned into 00:00 </li>
-<li><code>MILLISECS</code>: value describes the number of millisecs elapsed, and will be turned into 00:00.00 </li>
+<li><code>MILLISECS</code>: value describes the number of hundredths of a second elapsed, and will be turned into 00:00.00 </li>
 </ul>
 <h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link">link</a></h2>
 <p>Display will be a string that gets shown in the 'Active Players' box on the front page. It refers to the previously defined Lookup and Format objects using a single '@'. It then specifies a name for the lookup or format (case sensitive!), and immediately after, in brackets, a series of memory values specifying what to send to that lookup or format object.</p>
@@ -1793,6 +1831,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 </code></pre>
 
 <p>The existing <code>Display:</code> marker is still used to indicate the start of the display block. If the next line starts with a question mark, it is considered to be a conditional display string. The portion of the line between the two question marks is the conditional clause. If the conditional clause evaluates true, then the remaining portion of the line is used as the display string. If it does not evaluate true, then processing proceeds to the next line. If it starts with a question mark, the same process repeats. If it does not start with a question mark, the entire line is used as the default display string.</p>
+<p><strong>NOTE</strong>: A default display string is required in case none of the conditional display strings match. If you only have conditional display strings, the script will appear to do nothing.</p>
 <p>Looking at this example, if the 16-bit value at $0085 is 0, the display string is <code>Title Screen</code>. If not, the next line is examined. If the 7th bit of $007C is 1, the display string is <code>Custom Map in @Landscape(0xH00016c)</code>. If not, the final line does not have a conditional clause and is used.</p>
 <p>Display strings associated with a conditional clause support all of the same syntax as the default display string. In this example, you can see the <code>@Landscape</code> lookup is used in both the conditional display string and the default display string. The lookup itself only has to be defined once.</p>
 <p>The conditional phrase supports all of the previously mentioned address accessors as well as AND (_) and OR (S) logic. Note that OR clauses still require a 'core' group, <a href="https://github.com/RetroAchievements/docs/wiki/Achievement-Logic-Features#groups">just like achievements</a>.</p>
@@ -1822,17 +1861,20 @@ When you use the b prefix and the address is stored as a BCD your out put for an
 </ul>
 <h2 id="syntax-details">Syntax Details<a class="headerlink" href="#syntax-details" title="Permanent link">link</a></h2>
 <ul>
-<li>The RPS ignores trailing 0s in hex address lookups and values <code>0x00001</code> == <code>0x1</code>, <code>0xh0000245</code> == <code>0xh245</code>, <code>0x0a</code> == <code>0xa</code>.</li>
-<li>Lookup values are Decimal by default and hex if you place the prefix of <code>0x</code>. This mean <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.  </li>
+<li>Lookup keys are decimal by default and hex if you place the prefix of <code>0x</code>. This mean <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.  </li>
+<li>Lookup/Format names are case specific and must exactly match the usage in the Display string: <code>@test(0x1234)</code> will not find "Format:Test"</li>
+<li>Lookup/Format and not contain spaces after the lookup is defined. <code>@test(0x1234)</code> will not find "Format:test   "</li>
+<li>If your Lookup/Format cannot be found, nothing will be displayed. <code>This is a @test(0x1234).</code> will result in <code>This is a .</code> if <code>test</code> cannot be found.</li>
+<li>Comments can be added anywhere in the script. A double slash (<code>//</code>) indicates the remaining portion of the line should be ignored when processing the script. Note: comments still apply toward the script size limit.</li>
 </ul>
 <h2 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">link</a></h2>
 <ul>
-<li>Lookups must be case specific with their corresponding @ in the display and not contain spaces after the lookup is defined.</li>
 <li>Lookup names can be as short as a single character if you need to squeeze in a few extra characters.</li>
+<li>Leading zeros can be removed from addresses (<code>0xh0001</code> can be shortened to <code>0xh1</code>).</li>
 <li>Turning all your values from hex into decimal will take up less characters.</li>
 <li>Unicode characters don't always "take up less space" they often take up to four system characters.</li>
-<li>If you do not define your lookups they will be left blank (no space). This is only true for NES, SNES, Gen, RAVBA. N64, Meka and Lynx will leave the word "Unknown" each time you don't define a lookup.</li>
-<li>You only need one value format object. You can reference it with multiple addresses. (is this always true?)</li>
+<li>If a lookup doesn't contain a mapping for a value, it will result in a blank (no space) value. You can change this behavior by adding a single line to the lookup mapping '*' to the desired fallback value.</li>
+<li>Each <code>Lookup</code> or <code>Format</code> named mapping can be referenced multiple times with the same or different addresses. You can define a single <code>Format:Number FormatType=VALUE</code> instead of defining individual ones for Lives, Score, Level, etc.</li>
 <li>Putting spaces in your lookups sometimes before or after can allow you to hide certain lookups when they are not needed, like how <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, and @Mode do. </li>
 </ul>
 <h3 id="value-properties">Value Properties<a class="headerlink" href="#value-properties" title="Permanent link">link</a></h3>
@@ -1861,9 +1903,14 @@ When you use the b prefix and the address is stored as a BCD your out put for an
 🔑=Keys<br />
 💣=Bombs
 ☰=Menu<br />
- ❤️ or ❤=In a game with hearts (e.g. Zelda) <br />
+❤️ or ❤=In a game with hearts (e.g. Zelda) <br />
 💰=Money<br />
 ⚖=Difficulty  </p>
+<h2 id="developing-rich-presence">Developing Rich Presence<a class="headerlink" href="#developing-rich-presence" title="Permanent link">link</a></h2>
+<p>The toolkit does not currently have an integrated Rich Presence editor, but you can test local changes before putting them on the server. Once you've started a game and the current Rich Presence has been downloaded from the server, you can find it in <code>RACache\Data\XXX-Rich.txt</code> where XXX is the game ID. </p>
+<p>The Rich Presence Monitor (openable from the RetroAchievments menu) reads this file and shows the current value every second while the window is open.</p>
+<p>If you make changes to the <code>XXX-Rich.txt</code> file, and reselect the menu option, it will read the new changes and allow you to immediate test them without applying the changes to the server. Continue to make changes and reselect the menu option until the script is behaving as you expect, then copy the contents to the server page to make it available to everyone else.</p>
+<p><strong>NOTE</strong>: The <code>XXX-Rich.txt</code> file is overwritten with the current server data each time the game is opened. As long as you still have the file open in an editor, you can always save your changes over the updated file after reopening the game.</p>
                 
                   
                 
@@ -1915,13 +1962,13 @@ When you use the b prefix and the address is stored as a BCD your out put for an
           </a>
         
         
-          <a href="../Achievement-Design/" title="Achievement Design" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Achievement Design
+                Bonus Set Guide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
