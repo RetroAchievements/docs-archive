@@ -1051,6 +1051,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Working-with-the-right-ROM/" title="Working with the Right ROM" class="md-nav__link">
+      Working with the Right ROM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
       Bonus Set Guide
     </a>
@@ -1863,7 +1875,7 @@ When you use the b prefix and the address is stored as a BCD your out put for an
 <ul>
 <li>Lookup keys are decimal by default and hex if you place the prefix of <code>0x</code>. This mean <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.  </li>
 <li>Lookup/Format names are case specific and must exactly match the usage in the Display string: <code>@test(0x1234)</code> will not find "Format:Test"</li>
-<li>Lookup/Format and not contain spaces after the lookup is defined. <code>@test(0x1234)</code> will not find "Format:test   "</li>
+<li>Lookup/Format cannot contain spaces before or after the lookup name. <code>@test(0x1234)</code> will not find "Format:test   " or "Format:   test"</li>
 <li>If your Lookup/Format cannot be found, nothing will be displayed. <code>This is a @test(0x1234).</code> will result in <code>This is a .</code> if <code>test</code> cannot be found.</li>
 <li>Comments can be added anywhere in the script. A double slash (<code>//</code>) indicates the remaining portion of the line should be ignored when processing the script. Note: comments still apply toward the script size limit.</li>
 </ul>
@@ -1962,13 +1974,13 @@ When you use the b prefix and the address is stored as a BCD your out put for an
           </a>
         
         
-          <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Working-with-the-right-ROM/" title="Working with the Right ROM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Bonus Set Guide
+                Working with the Right ROM
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
