@@ -1,5 +1,6 @@
-site_name: RetroAchievements docs 
+site_name: RADocs 
 site_description: RetroAchievements.org Documentation Project 
+site_url: https://docs.retroachievements.org/
 
 repo_name: RetroAchievements/docs
 repo_url: https://github.com/RetroAchievements/docs/wiki/
@@ -11,8 +12,10 @@ docs_dir: docs.wiki
 
 theme:
     name: material
+    feature:
+        tabs: true
     palette:
-        primary: 'grey'
+        primary: 'indigo'
         accent: 'amber'
     logo:
         icon: 'videogame_asset'
@@ -20,17 +23,25 @@ theme:
     # XXX: using custom_dir in order to change the footer
     custom_dir: 'theme'
 
+markdown_extensions:
+    - toc:
+        permalink: link
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.tilde
+
 #extra_css:
 #    - 'css/extra.css'
 #    - 'css/extra.scss'
 
 # XXX: testing icons on footer
 extra:
+  disqus: 'retroachievements'
   social:
     - type: globe
       link: https://retroachievements.org/
-    - type: discord
-      link: https://discord.gg/dq2E4hE
+#    - type: discord
+#      link: https://discord.gg/TdfC3r7
     - type: github-alt
       link: https://github.com/RetroAchievements
 
@@ -44,4 +55,3 @@ extra:
 # Determines the address used when running mkdocs serve. 
 # Must be of the format IP:PORT. 
 dev_addr: '0.0.0.0:8000'
-
