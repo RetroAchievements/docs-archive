@@ -67,15 +67,17 @@ function get_pages_section() {
     [[ -f "$sidebar" ]] || return 1
 
     echo "pages:"
-    echo "  - index.md"
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         case "$line" in
             "## [About](About)")
-                echo "  - About: About.md" ;;
+                echo "  - About:"
+                echo "    - About.md"
+                ;;
 
             "## "*)
                 echo "  - ${line/### /}:"
+                [[ "$line" == *"General"* ]] && echo "    - index.md"
                 ;;
 
             "### "*)
@@ -84,6 +86,9 @@ function get_pages_section() {
 
             *"- "*)
                 if [[ "$line" == *"- ["* ]]; then
+                    # example of input/output of the sed below:
+                    # in : - [Tips and Tricks](Tips-and-Tricks)
+                    # out: - Tips and Tricks: Tips-and-Tricks.md
                     echo "    $(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md"
                 else
                     echo "    $line:"
