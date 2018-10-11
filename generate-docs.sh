@@ -176,7 +176,7 @@ function main() {
 
     if [[ "$DEPLOY_FLAG" == "1" ]]; then
         echo "--- Generating and deploying the pages to GitHub..."
-        mkdocs gh-deploy -f temp-mkdocs.yml -m "generated <http://docs.retroachievements.org> pages - $(date +'%Y-%m-%d %H:%M:%S')" || exit_error "Failed to generate/deploy pages to GitHub."
+        mkdocs gh-deploy -f temp-mkdocs.yml -m "generated <https://docs.retroachievements.org> pages - $(date +'%Y-%m-%d %H:%M:%S')" || exit_error "Failed to generate/deploy pages to GitHub."
         echo "--- Done!"
         echo
     fi
