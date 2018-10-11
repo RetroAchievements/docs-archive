@@ -5,7 +5,7 @@ repo_name: RetroAchievements/docs
 repo_url: https://github.com/RetroAchievements/docs/wiki/
 # XXX: If you do not want any "edit URL link" displayed on your pages,
 # then set edit_uri to an empty string to disable the automatic setting.
-edit_uri: http://retroachievements.org/wiki-edit-redirect.php?page=
+edit_uri: https://retroachievements.org/wiki-edit-redirect.php?page=
 
 docs_dir: docs.wiki
 
@@ -28,7 +28,7 @@ theme:
 extra:
   social:
     - type: globe
-      link: http://retroachievements.org/
+      link: https://retroachievements.org/
     - type: discord
       link: https://discord.gg/dq2E4hE
     - type: github-alt
