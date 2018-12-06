@@ -988,6 +988,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gbc" title="GBC" class="md-nav__link">
+    GBC
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1475,6 +1482,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gbc" title="GBC" class="md-nav__link">
+    GBC
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1570,7 +1584,11 @@
 <h3 id="echo-ram">ECHO RAM<a class="headerlink" href="#echo-ram" title="Permanent link">link</a></h3>
 <p><img alt="gb_echo_ram" src="https://user-images.githubusercontent.com/33245078/32610144-755a0442-c527-11e7-9bbb-eb5a4d7b8e6d.png" /></p>
 <p>Similarly to the NES, certain variables may show up twice when searching in the Memory Inspector. The second result is in what's called the ECHO RAM, which is a mirror of the actual memory. Since some emulators tend to ignore this area or emulate it incorrectly, it's recommended to NOT use it at all and always use the first result.</p>
-<p>The Game Boy has 4KB of RAM starting at 0xC000. ECHO RAM starts at 0xE000, so if your address begins with an E you'll want to replace the first non-zero character with a C. Remember: C is correct, E is echo!</p>
+<p>The Game Boy has 8KB of RAM starting at 0xC000. ECHO RAM starts at 0xE000, so if your address begins with an E you'll want to replace the first non-zero character with a C. Remember: C is correct, E is echo!</p>
+<h3 id="gbc">GBC<a class="headerlink" href="#gbc" title="Permanent link">link</a></h3>
+<p>On the GBC, the 4KB of memory from 0xD000-0xDFFF is a bank from a larger 32KB memory block not directly accessible by the processor. Bits 0-2 of 0xFF70 indicate which bank is loaded into the 0xD000-0xDFFF memory block. It's a "feature" used to expand the storage available to GBC ROMs while still supporting GB ROMs.</p>
+<p>Bank switching (changing the value of 0xFF70) causes the memory in the 0xD000-0xDFFF range to update. This appears as flickering in the Memory Viewer and makes tracking down values in that memory range difficult. If you are writing conditions dependent on memory in that block, you should also require that 0xFF70 have a specific value to ensure you are looking at the correct bank. The 4KB of memory from 0xC000-0xCFFF is not bank-switched and can be used safely without additional conditions.</p>
+<p>It is not advisable to use these addresses for achievements if there is any alternative to doing so. As of December 2018, RALibretro and RetroArch will only display bank 0x00 at 0xFF70. Since nearly all achievements using these addresses would require using separate banks, they would not be functional outside of RAVisualBoyAdvance.</p>
 <h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)<a class="headerlink" href="#nintendo-64-rap64" title="Permanent link">link</a></h2>
 <h3 id="using-gameshark-codes-for-addresses">Using GameShark Codes for Addresses<a class="headerlink" href="#using-gameshark-codes-for-addresses" title="Permanent link">link</a></h3>
 <p>GameShark codes can be a valuable resource for finding addresses you can't or don't feel like finding. They have 12 characters per line and are fairly easy to parse.</p>

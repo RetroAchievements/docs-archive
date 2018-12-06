@@ -1629,7 +1629,7 @@
 <ul>
 <li>0xfe13 is the number of lives.</li>
 </ul>
-<p>The cancel section checks if the player's LIVES counter ever becomes lower. Literally, it says "Cancel if the CURRENT value at 0xfe13 is less than the PREVIOUS value at 0xfe13". We want to do this because you could reach the final checkpoint and run out of time, resetting your timer to 0:00. We don't want to allow this, because it's not the correct way of completing the level. So if the player dies, we reset their leaderboard progress.</p>
+<p>The cancel section checks if the player's LIVES counter ever becomes lower. Literally, it says "Cancel if the CURRENT value at 0xfe13 is less than the PREVIOUS value at 0xfe13". We want to do this because you could reach the final checkpoint and run out of time, resetting your timer to 0:00. We don't want to allow this, because it's not the correct way of completing the level. So if the player dies, we reset their leaderboard progress. Finally, if you connect two cancel conditions with <code>s</code>, the leaderboard will cancel when either one of them are true.</p>
 <h3 id="submit-conditions">Submit Conditions<a class="headerlink" href="#submit-conditions" title="Permanent link">link</a></h3>
 <p><strong>SUB</strong>: <code>0xf7cc!=0_d0xf7cc=0</code></p>
 <ul>
@@ -1638,6 +1638,7 @@
 <p>The submit section checks if the current frame has the 'endlevel' flag set to true (or <code>!=0</code>, 'nonzero'), and the previous frame (delta) has it set to false (or <code>=0</code>, 'zero'). This suggests that the player has reached the end of the level, and has proven to be a fairly sturdy benchmark.</p>
 <p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
 <h3 id="value-interpreter">Value Interpreter<a class="headerlink" href="#value-interpreter" title="Permanent link">link</a></h3>
+<p>See also: <a href="../Rich-Presence/#binary-coded-decimal-bcd">Binary Coded Decimal</a></p>
 <p><strong>VAL</strong>: <code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
 <p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an ingame popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
 <p>The value condition is special in a few ways. It is evaluated constantly and shown on-screen all the time when the leaderboard is active. It doesn't work like the other conditions, it expects addresses in the following way:</p>
@@ -1650,6 +1651,7 @@
 8-bit 0xfe22 times 3600</p>
 <p>The reason for this is that the values in each of these addresses signifies frames, seconds, and minutes respectively. When we add these values together, we get a grand total in frames that we submit to the database.</p>
 <p>Remember that 'Format' field that can be either <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> or <strong>Value</strong>? <strong>Time (Frames)</strong> is the most common one, and represents 'frames'. <strong>Time (Milliseconds)</strong> expects a value that we can convert directly into millisecs (Super Mario Kart uses this). However to convert a value in frames into a human-readible format, we should divide the value by 60 to get an accurate representation of seconds, and a value in millisecs should be divided by 100 to get the number of seconds. This is used both on the website and in the app to display the value properly, and is important to distinguish so we can be sure we get the most accurate value out of the emulator, by using whatever format they use to record time.</p>
+<p>There is also a symbol which only works in this field. Connecting two value conditions with <code>$</code> will cause only the one with the highest value to be used.</p>
 <p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
 <p><strong>Tip</strong>: modifier is a decimal value, so if you need to divide by two, you can multiply by 0.5: <code>0xhfe24*0.5</code></p>
 <h2 id="further-help">Further help<a class="headerlink" href="#further-help" title="Permanent link">link</a></h2>
