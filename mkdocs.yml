@@ -20,8 +20,6 @@ theme:
     logo:
         icon: 'videogame_asset'
     favicon: 'img/favicon.ico'
-    # XXX: using custom_dir in order to change the footer
-    custom_dir: 'theme'
 
 markdown_extensions:
     - toc:

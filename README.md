@@ -31,6 +31,8 @@ After installing the dependencies, open a terminal and perform this command:
 pip install --upgrade mkdocs mkdocs-material
 ```
 
+**Note**: if `pip` doesn't work try `pip3`.
+
 
 
 ### cloning the repo
