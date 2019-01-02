@@ -762,7 +762,7 @@
         },
         {
             "location": "/RALibretro/",
-            "text": "RALibretro is a multi-emulator that can be used to develop RetroAchievements.\n\n\nThe \"multi-emulation\" feature is only possible because it uses \nlibretro\n cores to do the actual emulation. What RALibretro does is to connect the emulation to the tools used to create RetroAchievements.\n\n\nWARNING\nlink\n\n\nRALibretro is a Work-in-Progress!!!\n\n\nCurrently the development is going on this repo: \nhttps://github.com/RetroAchievements/RALibretro\n\n\nHere's a list of known issues (feel free to report new issues if you find one): \nhttps://github.com/RetroAchievements/RALibretro/issues\n\n\nInstallation Instructions\nlink\n\n\nJust download RALibretro from the \nDownloads page\n and unzip it.\n\n\nBasic Usage\nlink\n\n\n\n\nLaunch RALibretro.exe\n\n\nClick on \nFile\n > \nLoad System\n, and click on the system you want to emulate\n\n\nNow go to \nFile\n > \nLoad Game\n and choose your ROM. \nNote\n: RALibretro currently doesn't accept zipped files!\n\n\nNow you can create your cheevos or just earn some!\n\n\n\n\nSupported Systems\nlink\n\n\nNOTE\n: some systems may require system (BIOS) files in the \nSystem\n directory in order to load games correctly.\n\n\nHere is a list of the systems supported currently:\n\n\n\n\nSNES\n\n\nNES\n\n\nMega Drive\n\n\nMaster System\n\n\nGameboy\n\n\nGameboy Color\n\n\nGameboy Advance\n\n\nPC Engine (TurboGrafx-16/TurboGrafx-CD)\n\n\nAtari Lynx\n\n\nGame Gear\n - new\n\n\nNeo Geo Pocket\n - new\n\n\nAtari 2600\n - new\n\n\nVirtual Boy\n - new\n\n\nNeo Geo\n (Arcade) - new. \nNOTE\n: you need to put the \nneogeo.zip\n BIOS file on the same directory as the ROMs.\n\n\nCapcom Play System 1, 2 and 3\n (Arcade) - new\n\n\n\n\nNintendo 64 is currently unsupported.\n\n\nKeyboard Input\nlink\n\n\n\n\n\n\n\n\nKeyboard\n\n\na\n\n\ns\n\n\nz\n\n\nx\n\n\nd\n\n\nc\n\n\nf\n\n\nv\n\n\nEnter\n\n\nTab\n\n\ng\n\n\nh\n\n\n\n\n\n\n\n\n\n\nRetroPad\n\n\nY\n\n\nX\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\nL2\n\n\nR2\n\n\nStart\n\n\nSelect\n\n\nL3\n\n\nR3\n\n\n\n\n\n\nSNES\n\n\nY\n\n\nX\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nNES\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nMega Drive\n\n\nA\n\n\nY\n\n\nB\n\n\nC\n\n\nX\n\n\nZ\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nMaster System\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nGameGear\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nGameboy [Color]\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nGameboy Advance\n\n\n\n\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nPC Engine\n\n\n\n\n\n\nII\n\n\nI\n\n\n\n\n\n\n\n\n\n\nRun\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nAtari Lynx\n\n\n\n\n\n\nB\n\n\nA\n\n\nOption 1\n\n\nOption 2\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nNeo Geo Pocket\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nAtari 2600\n\n\n\n\n\n\no\n\n\n\n\nL difficulty b\n\n\nR difficulty b\n\n\nL difficulty a\n\n\nR difficulty a\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nNeo Geo\n\n\nC\n\n\nD\n\n\nA\n\n\nB\n\n\n\n\n\n\n\n\n\n\nStart\n\n\nCoin\n\n\n\n\n\n\n\n\n\n\nCPS1/2/3*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n\n\n\n\nStart\n\n\nCoin\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n: the buttons for CPS1/2/3 games vary for each game.\n\n\nKeyboard Shortcuts\nlink\n\n\n\n\nsee overlay\n: \nEsc\n\n\npause emulation\n: \np\n\n\nadvance one frame at a time\n: \n;\n (automatically pauses emulation)\n\n\nfast forward\n: \n=\n\n\nfast forward toggle\n: \n-\n (minus signal)\n\n\nScreenshot\n: \nPrintScreen\n\n\n\n\nSave/Load state keys\nlink\n\n\n\n\nSave state current slot\n: \nBackspace\n\n\nLoad state current slot\n: \nF11\n\n\nLoad state from slot 1, 2, .., 9, 0\n: \nF1\n, \nF2\n, ..., \nF9\n, \nF10\n\n\nSave state to slot  1, 2, .., 9, 10\n: \nshift\n+\nF1\n, \nshift\n+\nF2\n, ..., \nshift\n+\nF9\n, \nshift\n+\nF10\n\n\nPrevious slot\n: \nshift\n+\n-\n\n\nNext slot\n: \nshift\n+\n+\n\n\nSwitch slot\n: \n0\n, \n1\n, \n2\n,..., \n9\n\n\n\n\nMissing Features\nlink\n\n\n\n\nfeedback to the user when save/load state, pausing, etc.\n\n\nN64 support\n\n\nload zipped ROMs\n\n\ninput configuration\n\n\nmore issues listed here: \nhttps://github.com/RetroAchievements/RALibretro/issues",
+            "text": "RALibretro is a multi-emulator that can be used to develop RetroAchievements.\n\n\nThe \"multi-emulation\" feature is only possible because it uses \nlibretro\n cores to do the actual emulation. What RALibretro does is to connect the emulation to the tools used to create RetroAchievements.\n\n\nWARNING\nlink\n\n\nRALibretro is a Work-in-Progress!!!\n\n\nCurrently the development is going on this repo: \nhttps://github.com/RetroAchievements/RALibretro\n\n\nHere's a list of known issues (feel free to report new issues if you find one): \nhttps://github.com/RetroAchievements/RALibretro/issues\n\n\nInstallation Instructions\nlink\n\n\nJust download RALibretro from the \nDownloads page\n and unzip it.\n\n\nBasic Usage\nlink\n\n\n\n\nLaunch RALibretro.exe\n\n\nClick on \nFile\n > \nLoad System\n, and click on the system you want to emulate\n\n\nNow go to \nFile\n > \nLoad Game\n and choose your ROM. \nNote\n: RALibretro currently doesn't accept zipped files!\n\n\nNow you can create your cheevos or just earn some!\n\n\n\n\nSupported Systems\nlink\n\n\nNOTE\n: some systems may require system (BIOS) files in the \nSystem\n directory in order to load games correctly.\n\n\nHere is a list of the systems supported currently:\n\n\n\n\nSNES\n\n\nNES\n\n\nMega Drive\n\n\nMaster System\n\n\nGameboy\n\n\nGameboy Color\n\n\nGameboy Advance\n\n\nPC Engine (TurboGrafx-16/TurboGrafx-CD)\n\n\nAtari Lynx\n\n\nGame Gear\n - new\n\n\nNeo Geo Pocket\n - new\n\n\nAtari 2600\n - new\n\n\nVirtual Boy\n - new\n\n\nNeo Geo\n (Arcade) - new. \nNOTE\n: you need to put the \nneogeo.zip\n BIOS file on the same directory as the ROMs.\n\n\nCapcom Play System 1, 2 and 3\n (Arcade) - new\n\n\n\n\nNintendo 64 is currently unsupported.\n\n\nKeyboard Input\nlink\n\n\n\n\n\n\n\n\nKeyboard\n\n\na\n\n\ns\n\n\nz\n\n\nx\n\n\nd\n\n\nc\n\n\nf\n\n\nv\n\n\nEnter\n\n\nTab\n\n\ng\n\n\nh\n\n\n\n\n\n\n\n\n\n\nRetroPad\n\n\nY\n\n\nX\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\nL2\n\n\nR2\n\n\nStart\n\n\nSelect\n\n\nL3\n\n\nR3\n\n\n\n\n\n\nSNES\n\n\nY\n\n\nX\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nNES\n\n\n\n\n\n\nB\n\n\nA\n\n\nSwap disk side (FDS)\n\n\nInsert/Eject disk (FDS)\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nMega Drive\n\n\nA\n\n\nY\n\n\nB\n\n\nC\n\n\nX\n\n\nZ\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nMaster System\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nGameGear\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nGameboy [Color]\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nGameboy Advance\n\n\n\n\n\n\nB\n\n\nA\n\n\nL\n\n\nR\n\n\n\n\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nPC Engine\n\n\n\n\n\n\nII\n\n\nI\n\n\n\n\n\n\n\n\n\n\nRun\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nAtari Lynx\n\n\n\n\n\n\nB\n\n\nA\n\n\nOption 1\n\n\nOption 2\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nNeo Geo Pocket\n\n\n\n\n\n\nB\n\n\nA\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\n\n\n\n\n\nAtari 2600\n\n\n\n\n\n\no\n\n\n\n\nL difficulty b\n\n\nR difficulty b\n\n\nL difficulty a\n\n\nR difficulty a\n\n\nStart\n\n\nSelect\n\n\n\n\n\n\n\n\n\n\nNeo Geo\n\n\nC\n\n\nD\n\n\nA\n\n\nB\n\n\n\n\n\n\n\n\n\n\nStart\n\n\nCoin\n\n\n\n\n\n\n\n\n\n\nCPS1/2/3*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n*\n\n\n\n\n\n\nStart\n\n\nCoin\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n: the buttons for CPS1/2/3 games vary for each game.\n\n\nKeyboard Shortcuts\nlink\n\n\n\n\nsee overlay\n: \nEsc\n\n\npause emulation\n: \np\n\n\nadvance one frame at a time\n: \n;\n (automatically pauses emulation)\n\n\nfast forward\n: \n=\n\n\nfast forward toggle\n: \n-\n (minus signal)\n\n\nScreenshot\n: \nPrintScreen\n\n\n\n\nSave/Load state keys\nlink\n\n\n\n\nSave state current slot\n: \nBackspace\n\n\nLoad state current slot\n: \nF11\n\n\nLoad state from slot 1, 2, .., 9, 0\n: \nF1\n, \nF2\n, ..., \nF9\n, \nF10\n\n\nSave state to slot  1, 2, .., 9, 10\n: \nshift\n+\nF1\n, \nshift\n+\nF2\n, ..., \nshift\n+\nF9\n, \nshift\n+\nF10\n\n\nPrevious slot\n: \nshift\n+\n-\n\n\nNext slot\n: \nshift\n+\n+\n\n\nSwitch slot\n: \n0\n, \n1\n, \n2\n,..., \n9\n\n\n\n\nMissing Features\nlink\n\n\n\n\nfeedback to the user when save/load state, pausing, etc.\n\n\nN64 support\n\n\nload zipped ROMs\n\n\ninput configuration\n\n\nmore issues listed here: \nhttps://github.com/RetroAchievements/RALibretro/issues",
             "title": "RALibretro"
         },
         {
@@ -787,7 +787,7 @@
         },
         {
             "location": "/RALibretro/#keyboard-input",
-            "text": "Keyboard  a  s  z  x  d  c  f  v  Enter  Tab  g  h      RetroPad  Y  X  B  A  L  R  L2  R2  Start  Select  L3  R3    SNES  Y  X  B  A  L  R    Start  Select      NES    B  A      Start  Select      Mega Drive  A  Y  B  C  X  Z    Start       Master System    B  A      Start       GameGear    B  A      Start       Gameboy [Color]    B  A      Start  Select      Gameboy Advance    B  A  L  R    Start  Select      PC Engine    II  I      Run  Select      Atari Lynx    B  A  Option 1  Option 2    Start       Neo Geo Pocket    B  A      Start       Atari 2600    o   L difficulty b  R difficulty b  L difficulty a  R difficulty a  Start  Select      Neo Geo  C  D  A  B      Start  Coin      CPS1/2/3*  *  *  *  *  *  *    Start  Coin       Note : the buttons for CPS1/2/3 games vary for each game.",
+            "text": "Keyboard  a  s  z  x  d  c  f  v  Enter  Tab  g  h      RetroPad  Y  X  B  A  L  R  L2  R2  Start  Select  L3  R3    SNES  Y  X  B  A  L  R    Start  Select      NES    B  A  Swap disk side (FDS)  Insert/Eject disk (FDS)    Start  Select      Mega Drive  A  Y  B  C  X  Z    Start       Master System    B  A      Start       GameGear    B  A      Start       Gameboy [Color]    B  A      Start  Select      Gameboy Advance    B  A  L  R    Start  Select      PC Engine    II  I      Run  Select      Atari Lynx    B  A  Option 1  Option 2    Start       Neo Geo Pocket    B  A      Start       Atari 2600    o   L difficulty b  R difficulty b  L difficulty a  R difficulty a  Start  Select      Neo Geo  C  D  A  B      Start  Coin      CPS1/2/3*  *  *  *  *  *  *    Start  Coin       Note : the buttons for CPS1/2/3 games vary for each game.",
             "title": "Keyboard Input"
         },
         {
@@ -1462,7 +1462,7 @@
         },
         {
             "location": "/Achievement-Set-Revisions/",
-            "text": "Revisions - Working on Sets with Existing Achievements\nlink\n\n\nRevisions, as in working on a set that has existing achievements typically requires community approval by presenting your plan in the forum and presenting your plan in the #revision-voting channel in Discord. Not all changes need approval.\n\n\nPreparing your plan\nlink\n\n\nAny developer wanting to revise a set need to:\n\n\n\n\nPrepare a plan for each\n\n\nAddition\n\n\nDemotion\n\n\nAchievement rework\n\n\n\n\nChange to leaderboards\n\n\n\n\n\n\nResolve the open tickets for all achievements that will be kept in the set.\n\n\n\n\n\n\nPresent the plan\n\n\n\n\nIn the game page forum thread in full\n\n\nIn #revision-voting post a link to it\n\n\nNotify the original developer(s), (no response is needed)\n\n\n\n\nGetting Community Approval\nlink\n\n\nAnyone in the community can express their concerns or objections. Allow time for discussion and for the developer to adjust their plan if they decide to. If any concerns or objections were expressed, regardless of the developer adjusting the plan, a vote will take place.\n\n\nOnce the discussion has settled a vote should be posted by a developer in the #revision-voting channel. \n\n\nThe vote is approved/rejected after 72 hours. It is pass/fail by simple majority.\n\n\nWhen making a revision\nlink\n\n\n\n\n\n\nDo not make copies of existing achievements, or clone and demote existing copies. If there are issues with current achievements make fixes to the existing ones.\n\n\n\n\n\n\nIf you are adding a \nsimilar\n concept to one found in the set, where possible reuse the old concept and update it rather than make a new one.\n\n\n\n\n\n\nThis prevents players from needing to unnecessarily re-earn achievements, restricts needless changes to sets, and preserves good quality developer work and concepts.\n\n\nNo need for approval to\nlink\n\n\n\n\n\n\nUpdate badges (But post old badges side-by-side to new in forum.)\n\n\n\n\n\n\nFix bugs\n\n\n\n\n\n\nUpdate rich presence (But explain changes or post backup of previous in forum.)\n\n\n\n\n\n\nAdd battery save, cheat code, or password protections to other's work\n\n\n\n\n\n\nMake changes to game page information and images (But make backup of previous images in forum.)",
+            "text": "Revisions - Working on Sets with Existing Achievements\nlink\n\n\nRevisions, as in working on a set that has existing achievements typically requires community approval by presenting your plan in the forum and presenting your plan in the #revision-voting channel in Discord. Not all changes need approval.\n\n\nPreparing your plan\nlink\n\n\nAny developer wanting to revise a set need to:\n\n\n\n\nPrepare a plan for each\n\n\nAddition\n\n\nDemotion\n\n\nAchievement rework\n\n\n\n\nChange to leaderboards\n\n\n\n\n\n\nResolve the open tickets for all achievements that will be kept in the set.\n\n\n\n\n\n\nPresent the plan\n\n\n\n\nIn the game page forum thread in full\n\n\nIn #revision-voting post a link to it\n\n\nNotify the original developer(s), (no response is needed)\n\n\n\n\nGetting Community Approval\nlink\n\n\nAnyone in the community can express their concerns or objections. Allow time for discussion and for the developer to adjust their plan if they decide to. If any concerns or objections were expressed, regardless of the developer adjusting the plan, a vote will take place.\n\n\nOnce the discussion has settled a vote should be posted by a developer in the #revision-voting channel. \n\n\nThe vote is approved/rejected after 72 hours. It is pass/fail by simple majority.\n\n\nWhen making a revision\nlink\n\n\n\n\n\n\nDo not make copies of existing achievements, or clone and demote existing copies. If there are issues with current achievements make fixes to the existing ones.\n\n\n\n\n\n\nIf you are adding a \nsimilar\n concept to one found in the set, where possible reuse the old concept and update it rather than make a new one.\n\n\n\n\n\n\nThis prevents players from needing to unnecessarily re-earn achievements, restricts needless changes to sets, and preserves good quality developer work and concepts.\n\n\nNo need for approval to\nlink\n\n\n\n\n\n\nUpdate badges (But post old badges side-by-side to new in forum.)\n\n\n\n\n\n\nFix bugs\n\n\n\n\n\n\nUpdate rich presence (But explain changes or post backup of previous in forum.)\n\n\n\n\n\n\nAdd battery save, cheat code, or password protections to other's work\n\n\n\n\n\n\nMake changes to game page information and images (But make backup of previous images in forum.)\n\n\n\n\n\n\nMake changes to an achievment where you are the original author and no other developer has revised it",
             "title": "Achievement Set Revisions"
         },
         {
@@ -1487,7 +1487,7 @@
         },
         {
             "location": "/Achievement-Set-Revisions/#no-need-for-approval-to",
-            "text": "Update badges (But post old badges side-by-side to new in forum.)    Fix bugs    Update rich presence (But explain changes or post backup of previous in forum.)    Add battery save, cheat code, or password protections to other's work    Make changes to game page information and images (But make backup of previous images in forum.)",
+            "text": "Update badges (But post old badges side-by-side to new in forum.)    Fix bugs    Update rich presence (But explain changes or post backup of previous in forum.)    Add battery save, cheat code, or password protections to other's work    Make changes to game page information and images (But make backup of previous images in forum.)    Make changes to an achievment where you are the original author and no other developer has revised it",
             "title": "No need for approval to"
         },
         {
@@ -1669,6 +1669,106 @@
             "location": "/Working-with-the-Right-ROM/#translation-patches",
             "text": "English is the Primary language of RetroAchievements. Translation Patches are sometimes applied by developers to non-English titles as the main MD5 for an achievement set where no licenced English version exists. In these cases patching instructions will be provided in the forum thread of that title. Providing an up-to-spec translation patch for an existing title is possibly allowed to make a game more accessible to other native language speakers. You must deep-memory inspect your translation contribution against the core set and submit it for approval before handing it over to the developer of the set for posting in their thread along with the game.  Sometimes translation patches may critically differ from the developer MD5 in memory differences that you may find online. Before linking these patches check with the original developer or do deep memory tests to ensure total compatibility. You can link translation patches you find online to core sets as long as the game's core achievements all function correctly and do not make the game more or less difficult.",
             "title": "Translation patches"
+        },
+        {
+            "location": "/Game-Identification/",
+            "text": "This page details the hashing method used for each supported system:\n\n\nNES\nlink\n\n\nIf the ROM starts with \"NES\\1a\", the first 16 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with \"NES\\1a\", the entire file is hashed.\n\n\nSNES\nlink\n\n\nIf the size of the file is 512 bytes more than a multiple of 8K, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8K, the entire file is hashed.\n\n\nN64\nlink\n\n\nThe entire file is loaded into memory and byte-swapped (if necessary). The result is hashed.\n\n\nGB\nlink\n\n\nThe entire file is hashed.\n\n\nNOTE\n: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.\n\n\nGBC\nlink\n\n\nThe entire file is hashed.\n\n\nNOTE\n: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.\n\n\nGBA\nlink\n\n\nThe entire file is hashed.\n\n\nVirtualBoy\nlink\n\n\nThe entire file is hashed.\n\n\nMaster System\nlink\n\n\nThe entire file is hashed.\n\n\nMegaDrive (Genesis)\nlink\n\n\nThe entire file is hashed.\n\n\nSega 32X\nlink\n\n\nThe entire file is hashed.\n\n\nSega CD\nlink\n\n\nTODO\n: Need to investigate this further. Is this system even supported?\n\n\nA 1KB buffer is hashed. The first 512 bytes of the buffer are the first 512 bytes of track 0. I'm not sure what's in the second 512 bytes.\n\n\nGameGear\nlink\n\n\nThe entire file is hashed.\n\n\nAtari 2600\nlink\n\n\nThe entire file is hashed.\n\n\nAtari 7800\nlink\n\n\nThe entire file is hashed.\n\n\nAtari Lynx\nlink\n\n\nThe 512 bytes starting at address 0x40 are hashed. If the file is less than 576 bytes, it's not supported.\n\n\nTODO\n: This seems arbitrary and leaves much of the ROM unprotected from modification.\n\n\nNeoGeo Pocket\nlink\n\n\nThe entire file is hashed.\n\n\nPCEngine (TurboGrafx16)\nlink\n\n\nThe entire file is hashed.\n\n\nPCEngine CD\nlink\n\n\nTODO\n: I'm not really sure how this works. RAPCE hashes the \"Mainboard Main ROM\", but I couldn't get it to work. RALibRetro doesn't appear to hash anything, and there's no special code in RetroArch, so it would appear to be hashing the entire file, but which file? The zip is a bin/cue with multiple track files.\n\n\nFBA (Arcade)\nlink\n\n\nThe filename (xxx.zip) is hashed. It is case-sensitive.",
+            "title": "Game Identification"
+        },
+        {
+            "location": "/Game-Identification/#nes",
+            "text": "If the ROM starts with \"NES\\1a\", the first 16 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with \"NES\\1a\", the entire file is hashed.",
+            "title": "NES"
+        },
+        {
+            "location": "/Game-Identification/#snes",
+            "text": "If the size of the file is 512 bytes more than a multiple of 8K, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8K, the entire file is hashed.",
+            "title": "SNES"
+        },
+        {
+            "location": "/Game-Identification/#n64",
+            "text": "The entire file is loaded into memory and byte-swapped (if necessary). The result is hashed.",
+            "title": "N64"
+        },
+        {
+            "location": "/Game-Identification/#gb",
+            "text": "The entire file is hashed.  NOTE : RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.",
+            "title": "GB"
+        },
+        {
+            "location": "/Game-Identification/#gbc",
+            "text": "The entire file is hashed.  NOTE : RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.",
+            "title": "GBC"
+        },
+        {
+            "location": "/Game-Identification/#gba",
+            "text": "The entire file is hashed.",
+            "title": "GBA"
+        },
+        {
+            "location": "/Game-Identification/#virtualboy",
+            "text": "The entire file is hashed.",
+            "title": "VirtualBoy"
+        },
+        {
+            "location": "/Game-Identification/#master-system",
+            "text": "The entire file is hashed.",
+            "title": "Master System"
+        },
+        {
+            "location": "/Game-Identification/#megadrive-genesis",
+            "text": "The entire file is hashed.",
+            "title": "MegaDrive (Genesis)"
+        },
+        {
+            "location": "/Game-Identification/#sega-32x",
+            "text": "The entire file is hashed.",
+            "title": "Sega 32X"
+        },
+        {
+            "location": "/Game-Identification/#sega-cd",
+            "text": "TODO : Need to investigate this further. Is this system even supported?  A 1KB buffer is hashed. The first 512 bytes of the buffer are the first 512 bytes of track 0. I'm not sure what's in the second 512 bytes.",
+            "title": "Sega CD"
+        },
+        {
+            "location": "/Game-Identification/#gamegear",
+            "text": "The entire file is hashed.",
+            "title": "GameGear"
+        },
+        {
+            "location": "/Game-Identification/#atari-2600",
+            "text": "The entire file is hashed.",
+            "title": "Atari 2600"
+        },
+        {
+            "location": "/Game-Identification/#atari-7800",
+            "text": "The entire file is hashed.",
+            "title": "Atari 7800"
+        },
+        {
+            "location": "/Game-Identification/#atari-lynx",
+            "text": "The 512 bytes starting at address 0x40 are hashed. If the file is less than 576 bytes, it's not supported.  TODO : This seems arbitrary and leaves much of the ROM unprotected from modification.",
+            "title": "Atari Lynx"
+        },
+        {
+            "location": "/Game-Identification/#neogeo-pocket",
+            "text": "The entire file is hashed.",
+            "title": "NeoGeo Pocket"
+        },
+        {
+            "location": "/Game-Identification/#pcengine-turbografx16",
+            "text": "The entire file is hashed.",
+            "title": "PCEngine (TurboGrafx16)"
+        },
+        {
+            "location": "/Game-Identification/#pcengine-cd",
+            "text": "TODO : I'm not really sure how this works. RAPCE hashes the \"Mainboard Main ROM\", but I couldn't get it to work. RALibRetro doesn't appear to hash anything, and there's no special code in RetroArch, so it would appear to be hashing the entire file, but which file? The zip is a bin/cue with multiple track files.",
+            "title": "PCEngine CD"
+        },
+        {
+            "location": "/Game-Identification/#fba-arcade",
+            "text": "The filename (xxx.zip) is hashed. It is case-sensitive.",
+            "title": "FBA (Arcade)"
         },
         {
             "location": "/Bonus-Sets/",
