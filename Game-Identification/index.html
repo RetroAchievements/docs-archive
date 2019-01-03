@@ -1071,12 +1071,6 @@
       
       
       
-        <li class="md-nav__item">
-          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
     </ul>
   
 </nav>
@@ -1640,12 +1634,6 @@
       
       
       
-        <li class="md-nav__item">
-          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
     </ul>
   
 </nav>
@@ -1669,7 +1657,8 @@
 <h3 id="snes">SNES<a class="headerlink" href="#snes" title="Permanent link">link</a></h3>
 <p>If the size of the file is 512 bytes more than a multiple of 8K, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8K, the entire file is hashed.</p>
 <h3 id="n64">N64<a class="headerlink" href="#n64" title="Permanent link">link</a></h3>
-<p>The entire file is loaded into memory and byte-swapped (if necessary). The result is hashed.</p>
+<p>The entire file is hashed. </p>
+<p>This may result in three unique hashes for each game. The z64 extension is big endian (ABCD). The n64 extension is little endian (DCBA). And the v64 extension is middle endian (BADC).</p>
 <h3 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">link</a></h3>
 <p>The entire file is hashed.</p>
 <p><em>NOTE</em>: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.</p>
@@ -1713,22 +1702,6 @@
               
                 
 
-
-  <h2 id="__comments">Comments</h2>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://docs.retroachievements.org/Game-Identification/";
-      this.page.identifier =
-        "Game-Identification/";
-    };
-    (function() {
-      var d = document, s = d.createElement("script");
-      s.src = "//retroachievements.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
 
               
             </article>
