@@ -34,7 +34,7 @@ markdown_extensions:
 
 # XXX: testing icons on footer
 extra:
-  disqus: 'retroachievements'
+  #disqus: 'retroachievements'
   social:
     - type: globe
       link: https://retroachievements.org/
