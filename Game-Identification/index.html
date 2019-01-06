@@ -586,6 +586,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Updating-Existing-Game-Icons/" title="Updating Existing Game Icons" class="md-nav__link">
+      Updating Existing Game Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
       RALibretro
     </a>
@@ -942,6 +954,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#famicom-disk-system" title="Famicom Disk System" class="md-nav__link">
+    Famicom Disk System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#snes" title="SNES" class="md-nav__link">
     SNES
   </a>
@@ -1063,6 +1082,20 @@
         <li class="md-nav__item">
   <a href="#fba-arcade" title="FBA (Arcade)" class="md-nav__link">
     FBA (Arcade)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pc-8001-pc-8801" title="PC-8001 / PC-8801" class="md-nav__link">
+    PC-8001 / PC-8801
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
   </a>
   
 </li>
@@ -1505,6 +1538,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#famicom-disk-system" title="Famicom Disk System" class="md-nav__link">
+    Famicom Disk System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#snes" title="SNES" class="md-nav__link">
     SNES
   </a>
@@ -1630,6 +1670,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pc-8001-pc-8801" title="PC-8001 / PC-8801" class="md-nav__link">
+    PC-8001 / PC-8801
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
       
       
       
@@ -1653,7 +1707,10 @@
                 
                 <p>This page details the hashing method used for each supported system:</p>
 <h3 id="nes">NES<a class="headerlink" href="#nes" title="Permanent link">link</a></h3>
-<p>If the ROM starts with "NES\1a", the first 16 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with "NES\1a", the entire file is hashed.</p>
+<p>If the ROM starts with <code>NES\1a</code>, the first 16 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>NES\1a</code>, the entire file is hashed.</p>
+<h3 id="famicom-disk-system">Famicom Disk System<a class="headerlink" href="#famicom-disk-system" title="Permanent link">link</a></h3>
+<p>The entire file is hashed.</p>
+<p><strong>NOTE</strong>: As saving mutates disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
 <h3 id="snes">SNES<a class="headerlink" href="#snes" title="Permanent link">link</a></h3>
 <p>If the size of the file is 512 bytes more than a multiple of 8K, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8K, the entire file is hashed.</p>
 <h3 id="n64">N64<a class="headerlink" href="#n64" title="Permanent link">link</a></h3>
@@ -1694,7 +1751,21 @@
 <h3 id="pcengine-cd">PCEngine CD<a class="headerlink" href="#pcengine-cd" title="Permanent link">link</a></h3>
 <p><em>TODO</em>: I'm not really sure how this works. RAPCE hashes the "Mainboard Main ROM", but I couldn't get it to work. RALibRetro doesn't appear to hash anything, and there's no special code in RetroArch, so it would appear to be hashing the entire file, but which file? The zip is a bin/cue with multiple track files.</p>
 <h3 id="fba-arcade">FBA (Arcade)<a class="headerlink" href="#fba-arcade" title="Permanent link">link</a></h3>
-<p>The filename (xxx.zip) is hashed. It is case-sensitive.</p>
+<p>The filename string without the extension (xxx.zip) is hashed. It is case-sensitive.</p>
+<h3 id="pc-8001-pc-8801">PC-8001 / PC-8801<a class="headerlink" href="#pc-8001-pc-8801" title="Permanent link">link</a></h3>
+<p>Load tape images and disk images loaded in drive 1 (program disk data) are fully hashed.</p>
+<p><strong>NOTE</strong>: As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2019-01-04 17:41] meleu:</code> cosmetic</li>
+<li><code>[2019-01-04 17:41] meleu:</code> reverting title changing for PC-8801/8801</li>
+<li><code>[2019-01-04 17:39] meleu:</code> making clear that arcade method is filename <em>without the extension</em></li>
+<li><code>[2019-01-03 11:43] Raphaël Zumer:</code> Add FDS and PC-8001/8801</li>
+<li><code>[2019-01-01 19:32] Jamiras:</code> Updated Game Identification (markdown)</li>
+<li><code>[2018-12-28 09:18] Jamiras:</code> Updated Game Identification (markdown)</li>
+<li><code>[2018-12-28 09:15] Jamiras:</code> Created Game Identification (markdown)</li>
+</ul>
                 
                   
                 

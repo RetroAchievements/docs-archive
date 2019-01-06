@@ -586,6 +586,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Updating-Existing-Game-Icons/" title="Updating Existing Game Icons" class="md-nav__link">
+      Updating Existing Game Icons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
       RALibretro
     </a>
@@ -884,6 +896,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
   
 </li>
       
@@ -1486,6 +1505,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
       
       
       
@@ -1590,6 +1616,20 @@
 <p>To add your LE support, you'll be writing a dummy core condition (Mem 0x000001 = Mem 0x000001), copying your original non-LE conditions with a <code>PauseIf</code> at the top into one Alt, copy the same conditions to the other. Both <code>PauseIf</code>s will contain a check looking at a memory address that never changes to see if its 16-bit value has had its byte ordering changed (Think of this as "<code>PauseIf</code> I'm not on an LE core" and "<code>PauseIf</code> I am" alt conditions).</p>
 <p>One will run if the gamer is running on an LE core, one wont.  You'll then perform the math I described above on the values you're checking for in the "<code>PauseIf</code> I'm not on an LE core" Alt, and updating it.</p>
 <p>Confusing? Yes. This is why most beginners and intermediate developers should not worry.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2018-09-09 20:52] Kvon:</code> moved rom selection onto it's own page</li>
+<li><code>[2018-09-01 12:48] Jamiras:</code> note about reset processing in 0.73</li>
+<li><code>[2018-05-18 09:06] meleu:</code> Updated Tips and Tricks (markdown)</li>
+<li><code>[2018-02-07 02:56] meleu:</code> cosmetic</li>
+<li><code>[2018-02-02 23:03] meleu:</code> trimmed down LupineDream text</li>
+<li><code>[2018-02-02 09:46] Robert Smith:</code> Corrected grammar mistake "an" -"a" in Region Selection tip.</li>
+<li><code>[2018-02-02 09:36] Robert Smith:</code> Removed grammar mistake "- Advanced Level" from "Level 3 - Advanced:  Little Endian" heading.</li>
+<li><code>[2018-02-02 09:31] Robert Smith:</code> Fixed - Alt groups tip positioning.</li>
+<li><code>[2018-02-02 09:26] Robert Smith:</code> Huge formatting update, section additions, spelling correction "Achivement Creation Tips" -&gt; "Achievement Creation Tips" Removed duplicate demo mode tip from "Memory Digging Tips" in favor of the same tip listed under "Achievement Creation Tips", organized layout.</li>
+<li><code>[2017-12-03 07:16] meleu:</code> Updated Tips and Tricks (markdown)</li>
+</ul>
                 
                   
                 
