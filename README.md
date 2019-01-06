@@ -54,22 +54,35 @@ cd docs
 
 ### `generate-docs.sh`
 
-The `generate-docs.sh ` is the script you'll be using to generate the pages for RAdocs. 
-
-Your OPTIONS for `generage-doc.sh` are:  
--h|--help | Print this help message and exit.  
--s|--serve | Serve the docs locally after generating the pages.  
--d|--deploy | Deploy the docs to GitHub pages after generating the pages.  
-
-To use an option write it after `generate-docs.sh`.
-For example use `generate-docs.sh --help` to see the above options.
-
-**Note**: if `generate-docs.sh` doesn't work try `./generate-docs.sh`.
-
-Use `generate-docs.sh --serve` to create a local file. You can then view local docs by typing this into a new tab in your browser `http://localhost:8000/`.
-
-Use `generate-docs.sh --deploy` to generate or publish the pages online.
-
-
+The `generate-docs.sh` is the script responsible to convert the pages from RAwiki to RAdocs.
 
 **Note**: only the wiki pages listed on the wiki's sidebar will be converted into RAdocs pages.
+
+To see the options, use:
+```
+./generate-docs.sh --help
+```
+
+
+#### Serving docs locally
+
+To serve the docs locally (only on your computer), so you can check if contents and formats are OK, use:
+```
+./generate-docs.sh --serve
+```
+
+While running this command you can see your local version of RAdocs in http://localhost:8000/.
+
+Make sure everything looks as expected. **If any fix is needed, do it on RAwiki and then run the `./generate-docs.sh` again.**
+
+After making sure everything is fine, you can deploy the docs
+
+
+#### Deploying the docs
+
+To deploy the pages, use:
+```
+./generate-docs.sh --deploy
+```
+
+It will probably asks for your github username and password. Enter the required info and you're done.
