@@ -23,7 +23,7 @@ The [RAdocs](https://retroachievements.github.io/docs/) website has (almost) the
 
 **Windows**
 
-You'll need to install [Cygwin](https://cygwin.com/), and the following packages: `git`, `python3`, `python3-pip` and `libyaml-devel`.
+You'll need to install [Cygwin](https://cygwin.com/), and the following packages: `git`, `python3`, `python3-pip`, `python3-devel` and `libyaml-devel`.
 
 After installing the dependencies, open a terminal and perform this command:
 
