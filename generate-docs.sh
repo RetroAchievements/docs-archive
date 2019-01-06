@@ -63,8 +63,11 @@ function check_deps() {
 
 function get_pages_section() {
     local tmp
+    local mdfile
     local sidebar="$SCRIPT_DIR/docs.wiki/_Sidebar.md"
     [[ -f "$sidebar" ]] || return 1
+
+    cd "$(dirname "$sidebar")"
 
     echo "pages:"
 
@@ -89,7 +92,12 @@ function get_pages_section() {
                     # example of input/output of the sed below:
                     # in : - [Tips and Tricks](Tips-and-Tricks)
                     # out: - Tips and Tricks: Tips-and-Tricks.md
-                    echo "    $(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md"
+                    tmp="$(sed 's/\[\(.*\)\](\(.*\))/\1: \2/' <<< "$line").md"
+                    echo "    $tmp"
+
+                    mdfile="$(echo "${tmp// /}" | cut -d: -f2)"
+                    echo -e "\n\n\n## Changelog\n\nLast 10 changes on this page:\n" >> "$mdfile"
+                    git log -n 10 --date=format:"%Y-%m-%d %H:%M" --pretty=format:"- \`[%cd] %cn:\` %s" "$mdfile" >> "$mdfile"
                 else
                     echo "    $line:"
                 fi
@@ -97,6 +105,7 @@ function get_pages_section() {
         esac
 
     done < "$sidebar"
+    cd - > /dev/null
 }
 
 
@@ -146,19 +155,23 @@ function main() {
     cd "$SCRIPT_DIR"
 
     echo "--- Getting wiki pages..."
+    cd docs.wiki
+    git stash
+
+    ln -sf Home.md index.md
+    echo -e "\n\n\n## Changelog\n\nLast 10 changes on this page:\n" >> Home.md
+    git log -n 10 --date=format:"%Y-%m-%d %H:%M" --pretty=format:"- \`[%cd] %cn:\` %s" Home.md >> Home.md
+
+    # ugly hack to config the custom domain docs.retroachievements.org
+    echo 'docs.retroachievements.org' > CNAME
+    cd - >/dev/null
+
     git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
     echo "--- Done!"
     echo
 
     cp -R img docs.wiki/
 #    cp -R css docs.wiki/
-
-    cd docs.wiki
-    ln -sf Home.md index.md
-
-    # ugly hack to config the custom domain docs.retroachievements.org
-    echo 'docs.retroachievements.org' > CNAME
-    cd -
 
     echo "--- Generating the custom mkdocs.yml..."
     cp mkdocs.yml temp-mkdocs.yml || exit_error "Failed to copy \"mkdocs.yml\"."
