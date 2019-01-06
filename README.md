@@ -54,7 +54,22 @@ cd docs
 
 ### `generate-docs.sh`
 
-The `generate-docs.sh` is the script you'll be using to generate the pages for RAdocs. Run it with `--help` and see how it works. It's pretty straightforward.
+The `generate-docs.sh ` is the script you'll be using to generate the pages for RAdocs. 
+
+Your OPTIONS for `generage-doc.sh` are:  
+-h|--help | Print this help message and exit.  
+-s|--serve | Serve the docs locally after generating the pages.  
+-d|--deploy | Deploy the docs to GitHub pages after generating the pages.  
+
+To use an option write it after `generate-docs.sh`.
+For example use `generate-docs.sh --help` to see the above options.
+
+**Note**: if `generate-docs.sh` doesn't work try `./generate-docs.sh`.
+
+Use `generate-docs.sh --serve` to create a local file. You can then view local docs by typing this into a new tab in your browser `http://localhost:8000/`.
+
+Use `generate-docs.sh --deploy` to generate or publish the pages online.
+
+
 
 **Note**: only the wiki pages listed on the wiki's sidebar will be converted into RAdocs pages.
-
