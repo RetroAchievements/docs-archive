@@ -16,7 +16,7 @@ The [RAdocs](https://retroachievements.github.io/docs/) website has (almost) the
 
 ## Generating RAdocs pages
 
-[No need to continue reading if you're not a RAdocs maintainer.]
+**No need to continue the reading if you're not a RAdocs maintainer.**
 
 
 ### dependencies
