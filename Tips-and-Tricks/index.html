@@ -453,51 +453,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../Downloads/" title="Downloads" class="md-nav__link">
-      Downloads
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Free-Games/" title="Free Games" class="md-nav__link">
-      Free Games
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Useful-Links/" title="Useful Links" class="md-nav__link">
-      Useful Links
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-8" type="checkbox" id="nav-1-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
-    <label class="md-nav__link" for="nav-1-8">
+    <label class="md-nav__link" for="nav-1-5">
       My game is not loading achievements
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-8">
+      <label class="md-nav__title" for="nav-1-5">
         My game is not loading achievements
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -574,6 +538,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../RABot,-the-RA-Discord-Robot/" title="RABot, the RA Discord Robot" class="md-nav__link">
+      RABot, the RA Discord Robot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Contributing-with-the-docs/" title="Contributing with the docs" class="md-nav__link">
       Contributing with the docs
     </a>
@@ -600,6 +576,42 @@
   <li class="md-nav__item">
     <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
       RALibretro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Downloads/" title="Downloads" class="md-nav__link">
+      Downloads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Free-Games/" title="Free Games" class="md-nav__link">
+      Free Games
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Useful-Links/" title="Useful Links" class="md-nav__link">
+      Useful Links
     </a>
   </li>
 
@@ -891,6 +903,26 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tricks" title="Tricks" class="md-nav__link">
+    Tricks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#address-watcher" title="Address Watcher" class="md-nav__link">
+    Address Watcher
+  </a>
   
 </li>
         
@@ -1506,6 +1538,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tricks" title="Tricks" class="md-nav__link">
+    Tricks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#address-watcher" title="Address Watcher" class="md-nav__link">
+    Address Watcher
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -1545,10 +1597,12 @@
 <p><strong>Protect your cheevos</strong>: If you wanna create an achievement for getting a specific and unique item in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement may trigger by loading a save game that may have been found online.</p>
 </li>
 <li>
-<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game. This is largely irrelevant after the release of version 0.73 of the toolkit (2018-09-01) as we no longer process achievements for the first 100 frames. Leaving this note here as it may be useful for diagnosing tickets created before 0.73.</p>
-</li>
-<li>
-<p><strong>Limitations</strong>:  There's a 100 achievement cap, 400 point cap, and a character cap for single achievements (try not to put 50+ conditions in one achievement).</p>
+<p><strong>Resetting Happens</strong>: Some emulators send some addresses in RAM a specific value when reset/reloaded. It's only for the first frame, but it can cause achievements to pop up, so you need to prepare for it. It's usually all one value like FF. You can see the value if you use Frame Advance / Next Frame while resetting the game.</p>
+<ul>
+<li>Version 0.73 of the toolkit (2018-09-01) disabled achievement processing for the first 100 frames after loading a game and after resetting the system. This prevented triggering caused by uninitialized memory, but introduced a problem where some title screen HitCounts weren't seen because the player got passed the title screen in less than 100 frames.</li>
+<li>Version 0.75 of the toolkit (2019-XX-XX) changed the logic again. Achievements that are true when a game is loaded or reset are ignored until they are false for at least one frame. If resetting the system causes an achievement to become true, it cannot trigger until it is no longer considered true.</li>
+<li>Make sure you understand the implications of these changes if you are working on a ticket related to resetting the system, and compare the ticket timestamp to the toolkit releases to determine which behavior the player would have been subject to.</li>
+</ul>
 </li>
 <li>
 <p><strong>Alt groups</strong> (left side of editor) are used for "or" conditions. The core group is always there and must always be true with at least one alt group being completely true to get the achievement. The entire group is your "or" condition. More info on the <a href="../Achievement-Logic-Features">Achievement Logic Features page</a>.</p>
@@ -1561,6 +1615,9 @@
 </li>
 <li>
 <p><strong>Glitchless, please!</strong>: Do not make achievements requiring glitches.  Glitches, in most cases, corrupt and destabilize game memory and RAM.  They break the rest of the set to include. It is however, wise to code block walls stopping players from using them to get easy mastery. This is a topic of much debate on RA, since performing a game-breaking glitch sometimes requires a lot of player skill. Some glitches are possible on console-only, some on emulator-only.  For their inconsistency and instability in regards to memory, it is recommended that you blockwall them to protect the integrity of your set and its/your reputation.  (This is an exceptional issue in some GameBoy games, where playground talk in glitching your way to victory was prominent!)</p>
+</li>
+<li>
+<p><strong>Avoid relying on text and graphics</strong>: Most of the time, an achievement that requires triggering a special event can be tied to an event flag (usually a single bit or byte), or to an item received by the player. It is better practice to use these values than to check the ID of text being displayed in a text box, or, even worse, video RAM (memory tied to the actual graphics displaying on the screen). They are often less stable, especially between different versions of a single game, and they are more difficult to debug.</p>
 </li>
 <li>
 <p><strong>We love Art</strong>:  Pretty badges are rewarding badges! It should visually represent the achievement itself, or hint at the location in the game for secrets.  Matching to the game's art style works well.  Google Image searches for "Sprite Sheets" is an useful tip to include some game art. If you're a good graphics artist, updating badges is your time to shine! More info can be found at the <a href="../Badge-and-Icon-Creation">Badge and Icon Creation page</a>.</p>
@@ -1596,10 +1653,13 @@
 <p>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</p>
 </li>
 <li>
-<p>Even if something is visibly decreasing in-game, like health, the value isn't necessarily decreasing. It's possible for it to be increasing, so since it's uncommon for you to know for sure, you should just filter <code>!=</code> and <code>==</code>.</p>
+<p>Even if something is visibly decreasing in-game, like health, memory can behave differently. It's possible for it to be increasing, so since it's uncommon for you to know for sure, prefer the <code>!=</code> and <code>==</code> filters.</p>
 </li>
 <li>
 <p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting (<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually <code>0</code>, Stage 1 is usually value <code>0</code>, Stage 2 is usually value <code>1</code> depending on the type of game. Another example, maybe each segment of health has 4 pie slices - Should you be searching when "4" goes to "3" when you lose a slice?</p>
+</li>
+<li>
+<p>When trying to find the address for Demo <code>==</code> True, quite often the demo value will be <code>1</code>. If you edit it to <code>0</code> and you are given control this is the address you're looking for. If the guess and check doesn't work create a new search at the title screen and filter <code>==</code> many times until the demo. Once the demo starts create a <code>!=</code> filter and then a series of <code>==</code> filters while the demo is running. Then start the game; change your filter to <code>!=</code> followed by a series of <code>==</code> while you are in game. Usually one of the demo <code>==</code> True addresses will be left as a result and you can test them by going back to the demo and changing the address to the value used for playing the game, typically 0.</p>
 </li>
 </ul>
 <h3 id="tips-by-skill-level">Tips by Skill Level<a class="headerlink" href="#tips-by-skill-level" title="Permanent link">link</a></h3>
@@ -1616,19 +1676,30 @@
 <p>To add your LE support, you'll be writing a dummy core condition (Mem 0x000001 = Mem 0x000001), copying your original non-LE conditions with a <code>PauseIf</code> at the top into one Alt, copy the same conditions to the other. Both <code>PauseIf</code>s will contain a check looking at a memory address that never changes to see if its 16-bit value has had its byte ordering changed (Think of this as "<code>PauseIf</code> I'm not on an LE core" and "<code>PauseIf</code> I am" alt conditions).</p>
 <p>One will run if the gamer is running on an LE core, one wont.  You'll then perform the math I described above on the values you're checking for in the "<code>PauseIf</code> I'm not on an LE core" Alt, and updating it.</p>
 <p>Confusing? Yes. This is why most beginners and intermediate developers should not worry.</p>
+<h2 id="tricks">Tricks<a class="headerlink" href="#tricks" title="Permanent link">link</a></h2>
+<h3 id="address-watcher">Address Watcher<a class="headerlink" href="#address-watcher" title="Permanent link">link</a></h3>
+<p>Here's an easy trick using a dummy achievement to watch an address for any changes, which is something you'll quite often want to know.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/32706333/51081767-dbdb0880-16b4-11e9-9672-4b39721accd3.png" /></p>
+<p><strong>Conditions Explained</strong><br />
+1: <code>Value 1 == Value 0</code>; This is to prevent the achievement from ever being true, as the value 0 never equals 1.
+2: <code>Value 1 == Value 1</code>; For this trick to work the achievement needs hits to reset. When 1 == 1 hits will be added to this condition.
+3: <code>ResetIf Mem 0x10 != Delta 0x10</code>; This is the address you want to watch. Any time there is a change the achievement will reset.</p>
+<ul>
+<li>Last of all make sure that <code>Pause on Reset</code> and <code>Active</code> are both checked. Now you will get a pop-up and emulation will pause each time this address changes.</li>
+</ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-01-17 11:19] meleu:</code> removed the "Limitations" topic</li>
+<li><code>[2019-01-17 11:17] meleu:</code> subnests on bullet points need 4 spaces</li>
+<li><code>[2019-01-15 19:15] Jamiras:</code> Update reset behavior for 0.75 toolkit</li>
+<li><code>[2019-01-13 16:20] Raphaël Zumer:</code> Add "Avoid relying on text and graphics" tip</li>
+<li><code>[2019-01-13 15:41] Raphaël Zumer:</code> Fix typos and reword a memory digging tip</li>
+<li><code>[2019-01-12 21:59] Kvon:</code> Added some demo finding tips and a trick for watching addresses</li>
 <li><code>[2018-09-09 20:52] Kvon:</code> moved rom selection onto it's own page</li>
 <li><code>[2018-09-01 12:48] Jamiras:</code> note about reset processing in 0.73</li>
 <li><code>[2018-05-18 09:06] meleu:</code> Updated Tips and Tricks (markdown)</li>
 <li><code>[2018-02-07 02:56] meleu:</code> cosmetic</li>
-<li><code>[2018-02-02 23:03] meleu:</code> trimmed down LupineDream text</li>
-<li><code>[2018-02-02 09:46] Robert Smith:</code> Corrected grammar mistake "an" -"a" in Region Selection tip.</li>
-<li><code>[2018-02-02 09:36] Robert Smith:</code> Removed grammar mistake "- Advanced Level" from "Level 3 - Advanced:  Little Endian" heading.</li>
-<li><code>[2018-02-02 09:31] Robert Smith:</code> Fixed - Alt groups tip positioning.</li>
-<li><code>[2018-02-02 09:26] Robert Smith:</code> Huge formatting update, section additions, spelling correction "Achivement Creation Tips" -&gt; "Achievement Creation Tips" Removed duplicate demo mode tip from "Memory Digging Tips" in favor of the same tip listed under "Achievement Creation Tips", organized layout.</li>
-<li><code>[2017-12-03 07:16] meleu:</code> Updated Tips and Tricks (markdown)</li>
 </ul>
                 
                   
