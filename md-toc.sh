@@ -11,9 +11,15 @@
 # Got the list from:
 # https://github.com/thlorenz/anchor-markdown-header/blob/56f77a232ab1915106ad1746b99333bf83ee32a2/anchor-markdown-header.js#L25
 #
+# The list of valid markdown extensions was obtained here:
+# https://superuser.com/a/285878
+#
 # meleu - January/2019
 
 INVALID_CHARS="'[]/?!:\`.,()*\";{}+=<>~$|#@&–—"
+VALID_EXTENSIONS='markdown|mdown|mkdn|md|mkd|mdwn|mdtxt|mdtext|text|Rmd|txt'
+
+USAGE="\nUsage:\n$0 markdownFile.md"
 
 toc() {
     local line
@@ -30,8 +36,26 @@ toc() {
     done <<< "$(grep -E '^#{2,10} ' "$1" | tr -d '\r')"
 }
 
+validate_file() {
+    local mdfile="$1"
+    if [[ -z "$mdfile" ]]; then
+        echo "ERROR: missing input markdown file." >&2
+        return 1
+    elif [[ ! -f "$mdfile" ]]; then
+        echo "ERROR: \"$mdfile\": no such file." >&2
+        return 1
+    elif [[ ! "${mdfile##*.}" =~ ^($EXTENSIONS)$ ]]; then
+        echo "ERROR: \"$mdfile\": invalid file extension (is it a markdown formatted file?)." >&2
+        echo "Valid extensions: "$(echo "$VALID_EXTENSIONS" | tr '|' ' ')"" >&2
+        return 1
+    fi
+}
+
+
 main() {
-    toc "$@"
+    local mdfile="$1"
+
+    validate_file "$mdfile" && toc "$mdfile" || echo -e "$USAGE"
 }
 
 [[ "$0" == "$BASH_SOURCE" ]] && main "$@"
