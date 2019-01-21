@@ -97,7 +97,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#basic-knowledge" tabindex="1" class="md-skip">
+      <a href="#required-knowledge" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -707,9 +707,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-knowledge" title="Basic Knowledge" class="md-nav__link">
-    Basic Knowledge
+  <a href="#required-knowledge" title="Required Knowledge" class="md-nav__link">
+    Required Knowledge
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-concepts" title="Advanced Concepts" class="md-nav__link">
+    Advanced Concepts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1445,9 +1458,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-knowledge" title="Basic Knowledge" class="md-nav__link">
-    Basic Knowledge
+  <a href="#required-knowledge" title="Required Knowledge" class="md-nav__link">
+    Required Knowledge
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-concepts" title="Advanced Concepts" class="md-nav__link">
+    Advanced Concepts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1521,22 +1547,47 @@
                 
                   <h1>How to Become an Achievement Developer</h1>
                 
-                <p>This document describes all the steps that any aspiring achievement developer must follow before getting Developer status. This also works as a checklist for admins to check before giving Developer status to a member.</p>
+                <p>This document describes all the steps that any aspiring achievement developer must follow before getting Developer status. These requirement are also a checklist for Code Reviewers (developers who inspect the code of new developers).</p>
 <p><strong>Anyone can become a RetroAchievements developer if they put in the effort.</strong></p>
 <p><strong>Optional but <em>strongly</em> recommended</strong>: join our Discord server and ask a mod to give you the <code>jr-dev</code> role. Use #help-me and #devs channels any time you have questions.</p>
-<h2 id="basic-knowledge">Basic Knowledge<a class="headerlink" href="#basic-knowledge" title="Permanent link">link</a></h2>
+<h2 id="required-knowledge">Required Knowledge<a class="headerlink" href="#required-knowledge" title="Permanent link">link</a></h2>
 <p>Every developer must know at least the basic concepts and techniques shown in these two docs:</p>
 <ol>
 <li><a href="../Getting-Started-as-an-Achievement-Developer">Getting Started as an Achievement Developer</a></li>
 <li><a href="../Achievement-Logic-Features">Achievement Logic Features</a></li>
 </ol>
-<p>Which means that any aspiring dev must understand how to use these techniques:</p>
+<p>Any aspiring dev must demonstrate understanding of the following concepts:</p>
 <ul>
 <li>Basic RAM digging (be familiar with the <a href="../Memory-Inspector-Overview">Memory Inspector</a>)</li>
 <li><a href="../Achievement-Logic-Features#delta-values">Delta values</a></li>
 <li><a href="../Achievement-Logic-Features#hit-counts">Hit counts</a></li>
 <li><a href="../Achievement-Logic-Features#pauseif">Pause If</a></li>
 <li><a href="../Achievement-Logic-Features#resetif">Reset If</a></li>
+<li><a href="../Achievement-Logic-Features#alt-groups">Alt Groups</a></li>
+<li>Memory sizes: <a href="../Memory-Inspector-Overview#81632-bit-modes">8-bit, 16-bit,</a> <a href="../Memory-Inspector-Overview#sizes-smaller-than-8-bit">single bit</a></li>
+<li>Achievement logic comparisons besides <code>=</code>, such as <code>&gt;</code>, <code>&lt;</code>, <code>!=</code></li>
+<li><a href="../How-to-contribute-if-you-are-not-a-developer#make-badges-for-achievements">Adding badges to an achievment</a></li>
+<li><a href="../Developers-Code-of-Conduct#basic-achievement-design-guidelines">Creating accurate descriptions for achievements</a></li>
+<li>Add appropriate <a href="#avoiding-bugs">protections</a></li>
+<li>Make a <a href="#avoiding-bugs">stable achievement set</a></li>
+</ul>
+<p><strong>Note</strong>: You do not need mastery of all these concepts to have a set published, but you do need them to have the full Developer role.</p>
+<h3 id="advanced-concepts">Advanced Concepts<a class="headerlink" href="#advanced-concepts" title="Permanent link">link</a></h3>
+<p>Here is a list of some advanced concepts/techniques. <strong>They are not required to become a Developer</strong>, but are listed here to let the jr-dev know the possibilities of the Achievement's logic.</p>
+<ul>
+<li>Hit count as <a href="../Achievement-Design#speedrun-challenges">timer</a></li>
+<li><a href="../Achievement-Templates#finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc">ResetIf Checkpoints</a></li>
+<li><a href="../Achievement-Logic-Features#hit-counts">ResetIf with Hitcount</a></li>
+<li><a href="../Achievement-Logic-Features#pauseif">PauseIf with Hitcount</a></li>
+<li><a href="../Achievement-Logic-Features#add-source">AddSource</a> and <a href="../Achievement-Logic-Features#add-source">SubSource</a> Flags</li>
+<li><a href="../Achievement-Logic-Features#add-hits">Add Hits</a> Flag</li>
+<li><a href="../Using-Delta-Values-and-ResetIf">Mem &gt; Del Counter</a></li>
+<li><a href="../Achievement-Templates/#check-for-a-specific-value-changing-to-another-specific-value-ten-times">Delta Hit Counter, pause technique</a></li>
+<li>Memory size: <a href="../Memory-Inspector-Overview#sizes-smaller-than-8-bit">Lower4, Upper4,</a> <a href="../Memory-Inspector-Overview#81632-bit-modes">32-bit</a></li>
+<li>Dynamic <a href="../Rich-Presence">Rich Presence</a></li>
+<li><a href="../Leaderboards">Leaderboards</a></li>
+<li><a href="../Achievement-Templates#conditional-resets">Pausable Resets</a></li>
+<li><a href="../Achievement-Logic-Features#sub-source">SubSource increment counter</a></li>
 </ul>
 <p>The <a href="../Real-Examples">Real Examples</a> and <a href="../Achievement-Templates">Achievement Templates</a> pages are useful resources to see how those techniques work.</p>
 <h2 id="practicing">Practicing<a class="headerlink" href="#practicing" title="Permanent link">link</a></h2>
@@ -1550,41 +1601,43 @@
 </li>
 </ul>
 <h2 id="finding-a-game-to-work-on">Finding a Game to Work on<a class="headerlink" href="#finding-a-game-to-work-on" title="Permanent link">link</a></h2>
-<p>Follow the <a href="../Developers-Code-of-Conduct#working-on-empty-sets">guidelines on the Developer's Code of Conduct</a> to find a game to work on achievements for it.</p>
+<p>Follow the <a href="../Developers-Code-of-Conduct#working-on-empty-sets">guidelines on the Developer's Code of Conduct</a> to find a game to work on achievements for it. The basics are that you must declare you plans to work on the game on in the forum, and then as you work on the game, add your plans for the game in the forum.</p>
 <p><strong>Tip</strong>: for your first achievement set it's recommended to choose a game that doesn't yet have achievements <strong>and</strong> is not very popular.</p>
 <h2 id="planning-your-achievement-set">Planning your Achievement Set<a class="headerlink" href="#planning-your-achievement-set" title="Permanent link">link</a></h2>
 <p>Once you find a game to work on you need to plan your Achievement Set.</p>
 <p>Be sure you know enough about the game to make a good set. Check the GameFAQs or something, try to learn more about the game, its secrets and details. Here is a good guide to help you with this: <a href="../Set-Development-Roadmap">Set Development Roadmap</a>.</p>
-<p>Post your plan on the official game's forum topic, so the community can leave suggestions and provide feedback.</p>
+<p>Post your plans on the official game's forum topic, so the community can leave suggestions and provide feedback. This is required behavior for all devs and jr-dev.</p>
 <p><strong>IMPORTANT!: be open to receive feedback and suggestions.</strong></p>
 <p><strong>See also</strong>: <a href="../Achievement-Design">Achievement Design</a>, it's an extensive guide on how to design good and interesting achievements. It's not about the technical side but the conceptual.</p>
 <h2 id="post-your-achievements-to-unofficial-for-reviewing">Post your achievements to Unofficial for reviewing<a class="headerlink" href="#post-your-achievements-to-unofficial-for-reviewing" title="Permanent link">link</a></h2>
-<p>After creating some achievements, promote them to Unofficial and then contact a mod on our Discord server (if you don't use Discord, send a message to RAdmin) and ask them to find someone to review your work.</p>
+<p>After creating some achievements, promote them to Unofficial and then contact a @mod or @code-reviewer on our Discord server (if you don't use Discord, send a message to <a href="http://retroachievements.org/user/RAdmin">RAdmin</a>) and ask them to find someone to review your work.</p>
 <p>Again, <strong>it's extremely important that you are open to receive constructive criticism and helpful advice from the community at any time</strong>.</p>
 <h2 id="am-i-ready-to-get-the-developer-status">Am I ready to get the Developer status?<a class="headerlink" href="#am-i-ready-to-get-the-developer-status" title="Permanent link">link</a></h2>
-<p>Once the community reviewed your achievement's code and concepts, the admins will use their judgement to approve or deny developer status and tell you what you'll need to do if you're not ready.</p>
-<p>A common question is "how many sets do I need to create in order to get Developer status?". This is a misplaced question as the answer is not about the number.</p>
-<p>The merit of a jr-dev receiving developer status depends on:
-- the quality and complexity of their set;
-- the time and thought they put into planning and working on the set;
-- showing the will use the Developer status with care and responsibility;
-- the extent to which the points above reflect their capabilities as a developer.</p>
-<p>Sometimes one set is enough for a jr-dev show they are ready, in other cases it shows they need more practice.</p>
+<p>Once the Code Reviewers have inspected your achievement's code and concepts, they and the admin will use the <a href="#required-knowledge">"Required Knowledge" checklist above</a> to determine if you're ready. If you're not fully qualified to be a developer but but your set is complete and stable the set will get published. You can then ask which concepts you still need to demonstrate proficiency in to be given developer status.</p>
+<p>The merit of a jr-dev receiving developer status depends on:</p>
+<ul>
+<li>their ability to publish work that meets the standards of the <a href="../Developers-Code-of-Conduct">Developer's Code of Conduct</a>;</li>
+<li>demonstration of <a href="#required-knowledge">required knowledge</a> and <a href="#advanced-techniques">advanced concepts</a>;</li>
+<li>the quality and complexity of their work;</li>
+<li>the time and thought they put into planning and working on achievements;</li>
+<li>showing the will to use the Developer status with care and responsibility;</li>
+<li>the extent to which the points above reflect their capabilities as a developer.</li>
+</ul>
 <h2 id="developers-code-of-conduct">Developer's Code of Conduct<a class="headerlink" href="#developers-code-of-conduct" title="Permanent link">link</a></h2>
 <p>Once you get your Developer status, you <strong>MUST</strong> adhere to the <a href="../Developers-Code-of-Conduct">Developer's Code of Conduct</a>. That is extremely important to create a fair environment between the Achievement Developers.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-01-21 03:23] meleu:</code> removed "Conditional Pause (in alt)" from the "Advanced Concepts" list - if there's no doc to explain the technique, it shouldn't be listed here</li>
+<li><code>[2019-01-21 03:18] meleu:</code> reworded the description of the "Advanced Concepts" list</li>
+<li><code>[2019-01-21 03:11] meleu:</code> fixing markdown and other cosmetics</li>
+<li><code>[2019-01-20 14:47] Kvon:</code> Updated "Am I ready..." to reflect existing practices. Few other minor edits</li>
+<li><code>[2019-01-20 14:28] Kvon:</code> Updated the list of requirements to be come a developer, added links. Added advanced techniques. Clarified how to declare working on a game. Updated a few other lines.</li>
 <li><code>[2018-09-08 07:22] meleu:</code> needed for mkdocs</li>
 <li><code>[2018-09-07 23:29] meleu:</code> adding a tip on the "planning your achievement set" topic</li>
 <li><code>[2018-09-06 11:46] Kvon:</code> typo</li>
 <li><code>[2018-09-06 13:14] meleu:</code> softer approach</li>
 <li><code>[2018-09-05 15:41] meleu:</code> Updated How to Become an Achievement Developer (markdown)</li>
-<li><code>[2018-09-05 05:44] meleu:</code> Updated How to Become an Achievement Developer (markdown)</li>
-<li><code>[2018-09-05 05:24] meleu:</code> typo</li>
-<li><code>[2018-09-05 05:17] meleu:</code> grammar</li>
-<li><code>[2018-09-05 02:57] meleu:</code> bold</li>
-<li><code>[2018-09-05 02:33] meleu:</code> Updated How to Become an Achievement Developer (markdown)</li>
 </ul>
                 
                   
