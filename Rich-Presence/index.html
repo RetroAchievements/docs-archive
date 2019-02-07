@@ -562,8 +562,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Updating-Existing-Game-Icons/" title="Updating Existing Game Icons" class="md-nav__link">
-      Updating Existing Game Icons
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
     </a>
   </li>
 
@@ -1142,18 +1142,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-am-too-lazy-to-read-the-docs/" title="I am too lazy to read the docs" class="md-nav__link">
-      I am too lazy to read the docs
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1481,18 +1469,6 @@
   <li class="md-nav__item">
     <a href="../Achievement-Design-pt_BR/" title="Design de Conquistas" class="md-nav__link">
       Design de Conquistas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-am-too-lazy-to-read-the-docs-pt_BR/" title="Eu sou muito preguiçoso para ler a documentação" class="md-nav__link">
-      Eu sou muito preguiçoso para ler a documentação
     </a>
   </li>
 
@@ -1903,8 +1879,12 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $2345 is 0, display <code>and example</code></p>
 </li>
 <li>
-<p><code>?0xH1234=32_0xH2345=1S0xH2345=2?or example</code></p>
+<p><code>?0xH1234=32S0xH2345=1S0xH2345=2?or example</code></p>
 <p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $2345 is 1 <em>or</em> 2, display <code>or example</code></p>
+</li>
+<li>
+<p><code>?0xH1234=32_0xH5678=33S0xH2345=1S0xH2345=2?and/or example</code></p>
+<p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $5678 is 33 <em>and</em> the 8-bit value at $2345 is 1 <em>or</em> 2, display <code>and/or example</code></p>
 </li>
 </ul>
 <h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)<a class="headerlink" href="#binary-coded-decimal-bcd" title="Permanent link">link</a></h2>
@@ -1978,6 +1958,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-01-28 06:42] Slimfr01:</code> Fixed a syntax error in "or" example, add an example with "and" &amp; "or"</li>
 <li><code>[2019-01-05 01:14] Kvon:</code> fixed some spacing typos</li>
 <li><code>[2018-11-10 18:50] Kvon:</code> Added 🚩(level/stage) as a standard symbol, removed ☰(menu). Added a link to a useful unicode resource" shapecatcher</li>
 <li><code>[2018-10-07 23:34] CoolCanuck:</code> 16,000 chat limit</li>
@@ -1987,7 +1968,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2018-09-09 13:17] Jamiras:</code> add note about whitespace around lookup name</li>
 <li><code>[2018-09-07 18:39] Jamiras:</code> add note indicating a default display string is required when using conditional display strings</li>
 <li><code>[2018-09-02 08:14] Jamiras:</code> Updated Rich Presence (markdown)</li>
-<li><code>[2018-09-01 13:37] Jamiras:</code> add tips about comments and default lookup value; better split of syntax vs tips</li>
 </ul>
                 
                   

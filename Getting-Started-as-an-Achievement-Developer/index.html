@@ -562,8 +562,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Updating-Existing-Game-Icons/" title="Updating Existing Game Icons" class="md-nav__link">
-      Updating Existing Game Icons
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
     </a>
   </li>
 
@@ -761,8 +761,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoiding-bugs" title="Avoiding Bugs" class="md-nav__link">
-    Avoiding Bugs
+  <a href="#important-tips" title="Important Tips" class="md-nav__link">
+    Important Tips
   </a>
   
 </li>
@@ -1064,18 +1064,6 @@
   <li class="md-nav__item">
     <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
       Console Specific Tips
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-am-too-lazy-to-read-the-docs/" title="I am too lazy to read the docs" class="md-nav__link">
-      I am too lazy to read the docs
     </a>
   </li>
 
@@ -1411,18 +1399,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-am-too-lazy-to-read-the-docs-pt_BR/" title="Eu sou muito preguiçoso para ler a documentação" class="md-nav__link">
-      Eu sou muito preguiçoso para ler a documentação
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1494,8 +1470,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoiding-bugs" title="Avoiding Bugs" class="md-nav__link">
-    Avoiding Bugs
+  <a href="#important-tips" title="Important Tips" class="md-nav__link">
+    Important Tips
   </a>
   
 </li>
@@ -1563,7 +1539,7 @@
 <p><img alt="memoryinspector" src="https://user-images.githubusercontent.com/8508804/38775207-485b706e-4053-11e8-9a94-842e7fd838e1.png" /></p>
 <p>The Memory Inspector can be used to find addresses in RAM for us to use. Essentially you are on a treasure hunt for memory locations - this dialog will help you examine and filter the game's RAM while the game is running.</p>
 <p><strong>NOTE: If you want a step-by-step video explanation on finding memory addresses, <a href="https://www.youtube.com/watch?v=8nYb_5cgQHY">this old video</a> can be useful</strong>.</p>
-<p>See also: <a href="../Memory-Inspector-Overview">Memory Inspector Overview</a>.</p>
+<p><strong>See also</strong>: <a href="../Memory-Inspector-Overview">Memory Inspector Overview</a> and <a href="../Tips-and-Tricks#memory-digging-tips">Memory Digging Tips</a>.</p>
 <p>To start or restart a test, click <strong>New 8-bit Test</strong> near the top middle.</p>
 <p>To keep things simple, we'll start by looking for the memory address which holds the number of rings we have collected. Our steps will be the following:</p>
 <ol>
@@ -1583,10 +1559,10 @@
 <p>Each time you perform 3 then 4, the number of possibilities or 'candidates' will get smaller. We will continue doing this until the number of candidates reaches a very small number (as few as possible), it might take 4-5 attempts. Next we can click in the results window, and monitor the memory address in the memory viewer at the bottom. Continue using the game and you should see the values in memory change as you collect rings. If you don't, or if something doesn't look right, try another value. With the first Sonic the Hedgehog, the memory address for the number of rings should be <code>0xfe20</code>.</p>
 <ul>
 <li>
-<p><strong>Note</strong>: Using save states (F5 to save state, F8 to load state, F6-F7 to toggle which state to use), you can switch back and forth between different states allowing you to alter what is in RAM, and use this to filter out bad candidates. You can search for values that remain the same (I.e. If you know the value didn't change, use <code>=</code>), or values that are different (use 'not equal', symbol <code>!=</code>).</p>
+<p><strong>Note 1</strong>: Using save states (F5 to save state, F8 to load state, F6-F7 to toggle which state to use), you can switch back and forth between different states allowing you to alter what is in RAM, and use this to filter out bad candidates. You can search for values that remain the same (I.e. If you know the value didn't change, use <code>=</code>), or values that are different (use 'not equal', symbol <code>!=</code>).</p>
 </li>
 <li>
-<p><strong>Note</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good address. Note if you are struggling to find good values, post <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum</a>, or <a href="https://discord.gg/dq2E4hE">RetroAchievements Discord server</a>. There are plenty of people who will be very happy to help!!</p>
+<p><strong>Note 2</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good address. Note if you are struggling to find good values, post <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum</a>, or <a href="https://discord.gg/dq2E4hE">RetroAchievements Discord server</a>. There are plenty of people who will be very happy to help!!</p>
 </li>
 <li>
 <p><strong>Tip</strong>: if you'd like to experiment with memory, try entering new values directly into the RAM viewer. This can have devastating effects on the game, or it might do exactly what you expect, (or nothing at all!) It can be useful though, to see if you can enter a value and get the result you expect. Use with caution!</p>
@@ -1636,20 +1612,40 @@
 <p><img alt="testing_achievements" src="https://user-images.githubusercontent.com/8508804/32601362-83dcb788-c529-11e7-8df9-b79038408909.png" /></p>
 <p>If we press <code>Esc</code> n-game, you will see the achievement show up as a demonstration of what it would look like in the in-game overlay!</p>
 <p><img alt="testing_achievements2" src="https://user-images.githubusercontent.com/8508804/32601363-83fced8c-c529-11e7-885f-97d64b0384e5.png" /></p>
-<h2 id="avoiding-bugs">Avoiding Bugs<a class="headerlink" href="#avoiding-bugs" title="Permanent link">link</a></h2>
-<p>The cheevo we created in this tutorial is very simple, it has only one condition: "collected rings &gt;= 15". But the address to record the number of collected rings is also used when the game runs in "demo mode" (AI playing the game after your wait a while on the title screen). So, if Sonic collect 15 rings on demo mode this achievement will trigger, which is unwanted.</p>
-<p>So here are some tips you always have to keep in mind when creating your achievements:</p>
+<p>Although the achievement worked fine in our tests, an achievement with a logic like that is not ready to be officially released. First of all: it has only one condition: "collected rings &gt;= 15". The problem is that the memory address used to record the number of collected rings is also used when the game runs in "demo mode" (AI playing the game after your wait a while on the title screen). So, if Sonic collect 15 rings on demo mode this achievement will trigger, which is unwanted.</p>
+<p>Check the tips in the next section below to know how to improve the logic of your achievement and then make it accepted to be officially released.</p>
+<h2 id="important-tips">Important Tips<a class="headerlink" href="#important-tips" title="Permanent link">link</a></h2>
+<p>So here are some tips you have to keep in mind when creating your achievements:</p>
 <ul>
 <li>
-<p><strong>Never use / Avoid using only one condition as much as you can</strong>. Otherwise the achievement will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></p>
+<p><strong><del>Never</del> Avoid to make achievements with only one condition as much as you can</strong>. Otherwise it will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></p>
 </li>
 <li>
-<p><strong><code>PauseIf</code> Demo Mode</strong>:  If the game has a demo mode, make sure to find the address for it and add <code>mode != demo</code> or something similar in your achievements. More info about <code>PauseIf</code> on the <a href="../Achievement-Logic-Features#pauseif">Achievement Logic Features page</a>.</p>
+<p>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add a condition so your achievements don't trigger in demo mode. You'll probably need to know how to use <a href="../Achievement-Logic-Features#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features#resetif">ResetIf</a>.</p>
 </li>
 <li>
-<p><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating a real achievement set.</p>
+<p><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</p>
+</li>
+<li>
+<p><strong>Avoid creating achievements for just entering on a stage.</strong> As it can be earned by a password or a stage select cheat code. Prefer to make achievements for finishing a stage, <a href="../Achievement-Templates#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</p>
+</li>
+<li>
+<p>If you wanna create an achievement for getting a specific and unique item in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement will be earnable using password or loading a saved game.</p>
+</li>
+<li>
+<p><strong>Avoid making too many achievements about simple things that need near to no effort</strong>. Examples of what <strong>NOT</strong> to do: get one coin or one mushroom on Super Mario Bros.</p>
+</li>
+<li>
+<p>Be aware of the <a href="../Developers-Code-of-Conduct#unwelcome-concepts">unwelcome achievement's design concepts</a>.</p>
+</li>
+<li>
+<p><strong>Be creative with your achievements</strong>. Those covering unique features and details of the game are the most welcome. The players love when that little detail of a game they love is supported on an achievement. Reading a Walkthrough on <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> can give some inspiration too.</p>
+</li>
+<li>
+<p>Try spending on the game as much of the time as possible, especially if it's your first attempt on developing achievements. It takes time to know the game more from the inside, and how the memory works there is the best source of ideas for unique achievements.</p>
 </li>
 </ul>
+<p>You can find more in the <a href="../Tips-and-Tricks">Tips and Tricks page</a>.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">link</a></h2>
 <p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
 <ul>
@@ -1670,6 +1666,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-04 11:24] meleu:</code> renamed "Avoiding Bugs" to "Important Tips" and added more tips</li>
+<li><code>[2019-02-03 19:11] meleu:</code> added link to memory digging tips</li>
 <li><code>[2018-09-05 05:13] meleu:</code> decreased verbosity and added a link to "how to become an achievement developer"</li>
 <li><code>[2018-08-06 14:47] meleu:</code> using an image hosted on github</li>
 <li><code>[2018-08-06 11:51] Ben-Ghazi:</code> Updated location for "Add New Achievement" button.</li>
@@ -1678,8 +1676,6 @@
 <li><code>[2018-04-15 02:24] meleu:</code> added link to "memory inspector overview"</li>
 <li><code>[2018-03-10 01:50] meleu:</code> Updated Getting Started as an Achievement Developer (markdown)</li>
 <li><code>[2018-02-23 21:47] meleu:</code> Updated Getting Started as an Achievement Developer (markdown)</li>
-<li><code>[2018-02-07 02:57] meleu:</code> cosmetic</li>
-<li><code>[2018-02-05 23:08] meleu:</code> Updated Getting Started as an Achievement Developer (markdown)</li>
 </ul>
                 
                   
