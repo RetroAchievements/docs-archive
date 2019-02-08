@@ -155,8 +155,10 @@ function main() {
     cd "$SCRIPT_DIR"
 
     echo "--- Getting wiki pages..."
-    cd docs.wiki
-    git stash
+    cd docs.wiki && git stash && cd - >/dev/null
+    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
+
+    cd docs.wiki || exit_error "There's something wrong with 'docs.wiki' directory."
 
     ln -sf Home.md index.md
     echo -e "\n\n\n## Changelog\n\nLast 10 changes on this page:\n" >> Home.md
@@ -166,7 +168,6 @@ function main() {
     echo 'docs.retroachievements.org' > CNAME
     cd - >/dev/null
 
-    git submodule update --recursive --remote || exit_error "Failed to get wiki pages."
     echo "--- Done!"
     echo
 
