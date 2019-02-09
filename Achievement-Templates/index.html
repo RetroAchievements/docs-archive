@@ -881,6 +881,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collected-100-of-something" title="Collected 100% of Something" class="md-nav__link">
+    Collected 100% of Something
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Check for a specific value changing to another specific value ten times" class="md-nav__link">
     Check for a specific value changing to another specific value ten times
   </a>
@@ -1470,6 +1477,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collected-100-of-something" title="Collected 100% of Something" class="md-nav__link">
+    Collected 100% of Something
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Check for a specific value changing to another specific value ten times" class="md-nav__link">
     Check for a specific value changing to another specific value ten times
   </a>
@@ -1804,7 +1818,7 @@
 <li>5: the player have the item</li>
 </ul>
 <h2 id="collect-an-item-in-a-specific-level">Collect an Item in a specific Level<a class="headerlink" href="#collect-an-item-in-a-specific-level" title="Permanent link">link</a></h2>
-<p>Here's a way to check if an item is collected in the level/room ID it is supposed to be collected. It avoids awarding an "get item X" by loading a savestate where player already has the item.</p>
+<p>This template is for battery save or password protection for items. It avoids awarding "get item X" by loading to where player already has the item. It checks that an item is collected in the level/room ID it is supposed to be collected, and only allows it be earned at that time.</p>
 <table>
 <thead>
 <tr>
@@ -1856,6 +1870,57 @@
 <p>Requirements 1 and 3 together mean "arrived the level/Room ID without the item".</p>
 <p>Even if the player loads a savestate and goes to the required level they will not be able to add hits to condition 1, thus they can't get it except in normal gameplay.  </p>
 <p>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</p>
+<h2 id="collected-100-of-something">Collected 100% of Something<a class="headerlink" href="#collected-100-of-something" title="Permanent link">link</a></h2>
+<p>This is limited battery save /password protection for when a player will collect 100% of something like clearing each stage in Super Mario world, or getting a 100% collection rate in Super Metroid. It's necessary so that a player cannot just load a save at 100% and get the achievement for free. (As usual there are other ways to approach this problem too.)</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Special?</th>
+<th>Type</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>Delta</td>
+<td>0xCollectPercent</td>
+<td>&lt;</td>
+<td>Value</td>
+<td>100% value</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>Mem</td>
+<td>0xCollectPercent</td>
+<td>=</td>
+<td>Value</td>
+<td>100% value</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>PauseIf</td>
+<td>Mem</td>
+<td>0xPlayerState</td>
+<td>!=</td>
+<td>Value</td>
+<td>Specific mode/point in game where % is increased</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Using the correct address value for condition 3 is especially important. You need to find an address that represents a unique time in the game where this percent increases. You'd not want the achievement to trigger when the player is loading their in game save file, which means this achievement must be paused at that time.</p>
+<p><strong>Example</strong>: In Super Mario World this change happens while the player sees the world map after completing a stage.</p>
+<p><strong>Note:</strong> This is similar in behavior and result to <a href="#collected-100-of-something">Collect an Item in a specific Level</a>.</p>
 <h2 id="check-for-a-specific-value-changing-to-another-specific-value-ten-times">Check for a specific value changing to another specific value ten times<a class="headerlink" href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Permanent link">link</a></h2>
 <p>In this example we want to detect a value changing from <code>V1</code> to <code>V2</code> ten times:</p>
 <table>
@@ -2018,6 +2083,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
+<li><code>[2019-02-08 02:48] Kvon:</code> added a new logic template Collected 100% of Something</li>
 <li><code>[2018-08-01 03:47] meleu:</code> explaining some conditions</li>
 <li><code>[2018-04-15 22:22] meleu:</code> deleted the "Concept For Not allowing worn mask in Majora's Mask in 3 certain zones and collecting and depositing all eggs"</li>
 <li><code>[2018-03-24 00:26] KingDice001:</code> Updated Achievement Templates (markdown)</li>
@@ -2026,8 +2093,6 @@
 <li><code>[2018-01-21 02:43] Kvon:</code> added conditional reset example</li>
 <li><code>[2018-01-16 02:29] meleu:</code> merged 2 topics into one and other minor changes</li>
 <li><code>[2018-01-09 13:41] meleu:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2018-01-03 22:21] meleu:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2018-01-03 21:24] meleu:</code> improved logic for "Finish Level N before Time reaches T"</li>
 </ul>
                 
                   
