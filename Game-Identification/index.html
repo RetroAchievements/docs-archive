@@ -1708,59 +1708,60 @@
                   <h1>Game Identification</h1>
                 
                 <p>This page details the hashing method used for each supported system:</p>
-<h3 id="nes">NES<a class="headerlink" href="#nes" title="Permanent link">link</a></h3>
+<h2 id="nes">NES<a class="headerlink" href="#nes" title="Permanent link">link</a></h2>
 <p>If the ROM starts with <code>NES\1a</code>, the first 16 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>NES\1a</code>, the entire file is hashed.</p>
-<h3 id="famicom-disk-system">Famicom Disk System<a class="headerlink" href="#famicom-disk-system" title="Permanent link">link</a></h3>
+<h2 id="famicom-disk-system">Famicom Disk System<a class="headerlink" href="#famicom-disk-system" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <p><strong>NOTE</strong>: As saving mutates disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
-<h3 id="snes">SNES<a class="headerlink" href="#snes" title="Permanent link">link</a></h3>
+<h2 id="snes">SNES<a class="headerlink" href="#snes" title="Permanent link">link</a></h2>
 <p>If the size of the file is 512 bytes more than a multiple of 8K, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8K, the entire file is hashed.</p>
-<h3 id="n64">N64<a class="headerlink" href="#n64" title="Permanent link">link</a></h3>
+<h2 id="n64">N64<a class="headerlink" href="#n64" title="Permanent link">link</a></h2>
 <p>The entire file is hashed. </p>
 <p>This may result in three unique hashes for each game. The z64 extension is big endian (ABCD). The n64 extension is little endian (DCBA). And the v64 extension is middle endian (BADC).</p>
-<h3 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">link</a></h3>
+<h2 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <p><em>NOTE</em>: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.</p>
-<h3 id="gbc">GBC<a class="headerlink" href="#gbc" title="Permanent link">link</a></h3>
+<h2 id="gbc">GBC<a class="headerlink" href="#gbc" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <p><em>NOTE</em>: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.</p>
-<h3 id="gba">GBA<a class="headerlink" href="#gba" title="Permanent link">link</a></h3>
+<h2 id="gba">GBA<a class="headerlink" href="#gba" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="virtualboy">VirtualBoy<a class="headerlink" href="#virtualboy" title="Permanent link">link</a></h3>
+<h2 id="virtualboy">VirtualBoy<a class="headerlink" href="#virtualboy" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="master-system">Master System<a class="headerlink" href="#master-system" title="Permanent link">link</a></h3>
+<h2 id="master-system">Master System<a class="headerlink" href="#master-system" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="megadrive-genesis">MegaDrive (Genesis)<a class="headerlink" href="#megadrive-genesis" title="Permanent link">link</a></h3>
+<h2 id="megadrive-genesis">MegaDrive (Genesis)<a class="headerlink" href="#megadrive-genesis" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="sega-32x">Sega 32X<a class="headerlink" href="#sega-32x" title="Permanent link">link</a></h3>
+<h2 id="sega-32x">Sega 32X<a class="headerlink" href="#sega-32x" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="sega-cd">Sega CD<a class="headerlink" href="#sega-cd" title="Permanent link">link</a></h3>
+<h2 id="sega-cd">Sega CD<a class="headerlink" href="#sega-cd" title="Permanent link">link</a></h2>
 <p><em>TODO</em>: Need to investigate this further. Is this system even supported?</p>
 <p>A 1KB buffer is hashed. The first 512 bytes of the buffer are the first 512 bytes of track 0. I'm not sure what's in the second 512 bytes.</p>
-<h3 id="gamegear">GameGear<a class="headerlink" href="#gamegear" title="Permanent link">link</a></h3>
+<h2 id="gamegear">GameGear<a class="headerlink" href="#gamegear" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="atari-2600">Atari 2600<a class="headerlink" href="#atari-2600" title="Permanent link">link</a></h3>
+<h2 id="atari-2600">Atari 2600<a class="headerlink" href="#atari-2600" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="atari-7800">Atari 7800<a class="headerlink" href="#atari-7800" title="Permanent link">link</a></h3>
+<h2 id="atari-7800">Atari 7800<a class="headerlink" href="#atari-7800" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="atari-lynx">Atari Lynx<a class="headerlink" href="#atari-lynx" title="Permanent link">link</a></h3>
+<h2 id="atari-lynx">Atari Lynx<a class="headerlink" href="#atari-lynx" title="Permanent link">link</a></h2>
 <p>If the ROM starts with <code>LYNX\0</code>, the first 64 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>LYNX\0</code>, the entire file is hashed.</p>
-<h3 id="colecovision">ColecoVision<a class="headerlink" href="#colecovision" title="Permanent link">link</a></h3>
+<h2 id="colecovision">ColecoVision<a class="headerlink" href="#colecovision" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="neogeo-pocket">NeoGeo Pocket<a class="headerlink" href="#neogeo-pocket" title="Permanent link">link</a></h3>
+<h2 id="neogeo-pocket">NeoGeo Pocket<a class="headerlink" href="#neogeo-pocket" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="pcengine-turbografx16">PCEngine (TurboGrafx16)<a class="headerlink" href="#pcengine-turbografx16" title="Permanent link">link</a></h3>
+<h2 id="pcengine-turbografx16">PCEngine (TurboGrafx16)<a class="headerlink" href="#pcengine-turbografx16" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
-<h3 id="pcengine-cd">PCEngine CD<a class="headerlink" href="#pcengine-cd" title="Permanent link">link</a></h3>
+<h2 id="pcengine-cd">PCEngine CD<a class="headerlink" href="#pcengine-cd" title="Permanent link">link</a></h2>
 <p><em>TODO</em>: I'm not really sure how this works. RAPCE hashes the "Mainboard Main ROM", but I couldn't get it to work. RALibRetro doesn't appear to hash anything, and there's no special code in RetroArch, so it would appear to be hashing the entire file, but which file? The zip is a bin/cue with multiple track files.</p>
-<h3 id="fba-arcade">FBA (Arcade)<a class="headerlink" href="#fba-arcade" title="Permanent link">link</a></h3>
+<h2 id="fba-arcade">FBA (Arcade)<a class="headerlink" href="#fba-arcade" title="Permanent link">link</a></h2>
 <p>The filename string without the extension (xxx.zip) is hashed. It is case-sensitive.</p>
-<h3 id="pc-8001-pc-8801">PC-8001 / PC-8801<a class="headerlink" href="#pc-8001-pc-8801" title="Permanent link">link</a></h3>
+<h2 id="pc-8001-pc-8801">PC-8001 / PC-8801<a class="headerlink" href="#pc-8001-pc-8801" title="Permanent link">link</a></h2>
 <p>Load tape images and disk images loaded in drive 1 (program disk data) are fully hashed.</p>
 <p><strong>NOTE</strong>: As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-10 13:40] meleu:</code> cosmetic</li>
 <li><code>[2019-02-01 18:40] Jamiras:</code> add ColecoVision</li>
 <li><code>[2019-01-15 09:45] Raphaël Zumer:</code> Update Lynx</li>
 <li><code>[2019-01-04 17:41] meleu:</code> cosmetic</li>
