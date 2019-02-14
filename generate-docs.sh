@@ -7,12 +7,13 @@
 
 DEPS=(git python3 python3-pip libyaml-dev)
 DEP_FILES=(git python3 pip3 /usr/include/yaml.h)
-PIP_PKGS=(mkdocs mkdocs-material)
+PIP_PKGS=(mkdocs mkdocs-material linkchecker)
 
 readonly SCRIPT_DIR="$(cd "$(dirname $0)" && pwd)"
 
 SERVE_FLAG=0
 DEPLOY_FLAG=0
+LINKCHECK_FLAG=0
 
 
 # functions ###################################################################
@@ -139,6 +140,12 @@ function parse_args() {
                 DEPLOY_FLAG=1
                 ;;
 
+#H -l|--linkcheck   Check for broken links (depends on 'linkchecker' being installed)
+#H 
+            -l|--linkcheck)
+                LINKCHECK_FLAG=1
+                ;;
+
             *)  break
                 ;;
         esac
@@ -179,6 +186,14 @@ function main() {
     get_pages_section >> temp-mkdocs.yml || exit_error "Failed to generate \"pages:\" section."
     echo "--- Done!"
     echo
+
+    if [[ "$LINKCHECK_FLAG" == "1" ]]; then
+        echo "--- Generating pages and checking for broken links..."
+        mkdocs build -f temp-mkdocs.yml || exit_error "Failed to generate the pages."
+        linkchecker site/ && echo "--- GREAT! No broken links!" || echo "--- Whoops! :("
+        exit
+        echo
+    fi
 
     if [[ "$SERVE_FLAG" == "1" ]]; then
         echo "--- Generating and serving the pages locally..."
