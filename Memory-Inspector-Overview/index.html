@@ -2079,9 +2079,7 @@
 <p>In addition to the 8-bit, 16-bit and 32-bit sizes described above, there are additional sizes that can be used when writing achievements (in the Achievement Editor).</p>
 <h4 id="single-bits">Single bits<a class="headerlink" href="#single-bits" title="Permanent link">link</a></h4>
 <p>In the memory viewer when an 8-bit address is selected you will see something like the image below (in the image: a byte with the value <code>6f</code> is selected; the bits are highlighted with an orange circle):</p>
-<p><img alt="bits" src="https://user-images.githubusercontent.com/32706333/52558880-fa661980-2db0-11e9-9e9d-7283f362150c.png" /></p>
-<p><strong><code>Bit: 7 6 5 4 3 2 1 0</code></strong> - The bit ID.<br>
-<strong><code>0 1 1 0 1 1 1 1</code></strong> - The binary values of each bit of the value <code>0x6f</code>.</p>
+<p><img alt="bitfields" src="https://user-images.githubusercontent.com/8508804/52825269-39db8100-30a3-11e9-85b0-f2a2da109954.png" /></p>
 <p>It is very common in games to store important information as a single bit. As a bit can only have two possible values (<code>1</code> or <code>0</code>), sometimes it's used to mean "yes" or "no", "on" or "off", "have item" or "no item", etc. Some games, specially those with limited memory space, use bit switches a lot.</p>
 <p><strong>Important:</strong> You can refer to each one of those bits individually in the Achievement Editor.</p>
 <p>Common meaning of bit switches in a game memory:</p>
@@ -2103,6 +2101,9 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-14 21:56] meleu:</code> bitfields image</li>
+<li><code>[2019-02-14 21:45] meleu:</code> test2</li>
+<li><code>[2019-02-14 21:44] meleu:</code> test</li>
 <li><code>[2019-02-12 08:50] meleu:</code> removed "bit switch" title, as unnecessary</li>
 <li><code>[2019-02-12 08:48] meleu:</code> reducing verbosity in "single bits"</li>
 <li><code>[2019-02-12 08:14] meleu:</code> fix broken links</li>
@@ -2110,9 +2111,6 @@
 <li><code>[2019-02-12 08:08] meleu:</code> reducing verbosity in "Upper4/Lower4"</li>
 <li><code>[2019-02-12 08:03] meleu:</code> reduced verbosity (repetition of the very last sentence)</li>
 <li><code>[2019-02-12 07:57] meleu:</code> rewording endianness, trying to reduce verbosity. also changed a little the example images</li>
-<li><code>[2019-02-11 20:11] Kvon:</code> added a single line for clarity</li>
-<li><code>[2019-02-11 04:06] Kvon:</code> Major edits, rewrite, and additions to Lower4, Upper4, and single bits. Some other minor edits.</li>
-<li><code>[2019-02-11 00:34] Kvon:</code> Reworded and reformatted endianness a little. Provided images for examples, remove the text example. Source: <a href="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/ass15_3.html">https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/ass15_3.html</a>. Removed the link to wikipedia as non-essential.</li>
 </ul>
                 
                   
