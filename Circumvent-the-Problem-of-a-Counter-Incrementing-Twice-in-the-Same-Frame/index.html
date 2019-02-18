@@ -13,7 +13,7 @@
         <meta name="description" content="RetroAchievements.org Documentation Project">
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/Using-Delta-Values-and-ResetIf/">
+        <link rel="canonical" href="https://docs.retroachievements.org/Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Using Delta Values and ResetIf - RADocs</title>
+        <title>Circumvent the Problem of a Counter Incrementing Twice in the Same Frame - RADocs</title>
       
     
     
@@ -123,7 +123,7 @@
                 RADocs
               </span>
               <span class="md-header-nav__topic">
-                Using Delta Values and ResetIf
+                Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
               </span>
             
           
@@ -957,8 +957,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
+      Simple Example of How to Avoid Load State Abusing
     </a>
   </li>
 
@@ -976,11 +1000,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Using Delta Values and ResetIf
+        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
       </label>
     
-    <a href="./" title="Using Delta Values and ResetIf" class="md-nav__link md-nav__link--active">
-      Using Delta Values and ResetIf
+    <a href="./" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link md-nav__link--active">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
     
       
@@ -1006,18 +1030,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
-      Simple Example of How to Avoid Load State Abusing
-    </a>
   </li>
 
         
@@ -1588,43 +1600,83 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Using-Delta-Values-and-ResetIf.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Using Delta Values and ResetIf</h1>
+                  <h1>Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</h1>
                 
-                <p>Let's take <a href="http://retroachievements.org/Game/3">Streets of Rage 2 (Mega Drive)</a>
-as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel Grip - Defeat 10 enemies without dropping your weapon</a> achievement. This relies on four conditions:</p>
+                <p>In this example you'll see how to circumvent the problem of a counter incrementing twice in the same frame by combining <a href="../SubSource-Flag">SubSource</a> and <a href="../AddHits-Flag">AddHits</a>.</p>
+<p>In the Game Boy Advance library there's a Christmas platformer game called <a href="http://retroachievements.org/Game/7152">Santa Claus Jr. Advance</a>. There are some achievements for collecting all 99 candy canes in each one of the bonus stages.</p>
+<p>These achievements were supposed to be quite simple, like this:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Special?</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>0xCANDIES</td>
+<td>!=</td>
+<td>Delta</td>
+<td>0xCANDIES</td>
+<td>(99)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ResetIf</td>
+<td>0xSTAGE</td>
+<td>!=</td>
+<td>Value</td>
+<td>0xBONUS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Which translates into "check if the candy canes counter changed 99 times in the bonus stage".</p>
+<p><strong>Note</strong>: we're using <code>0xCANDIES != Delta 0xCANDIES</code> (using <code>!=</code>, and not <code>&gt;</code>) cause when the player has 99 candies and collect one more, the counter goes to zero.</p>
+<p>However, there is an aspect in this game (and many others) where the if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. Unfortunately it happens more frequently than expected. When it happens the hit counter is increased by one while the candy counter is increased by two. Which, obviously, ruins the logic used above.</p>
+<p>In order to circumvent this issue we have to use the technique about <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using SubSource to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
+<p>Let's take a look at the achievement logic and then we'll see the explanation:</p>
 <p><strong>Addresses</strong></p>
 <ul>
-<li><code>0xef33</code>: holding weapon </li>
-<li><code>0xef37</code>: weapon type</li>
-<li><code>0xef4e</code>: number of KOs (player 1)</li>
+<li><code>0x80dc</code>: Candy Canes counter.</li>
+<li><code>0x809c</code>: Stage ID (any regular or bonus stage have their own unique ID).</li>
 </ul>
-<p><img alt="steelgrip-example" src="https://user-images.githubusercontent.com/8508804/33313210-32f5451e-d411-11e7-8042-2b9007a5cffb.png" /></p>
+<p>So the structure of the achievement was simply supposed to be like this:</p>
+<p><img alt="" src="https://i.imgur.com/ufPTDF3.png" /></p>
 <p><strong>Conditions</strong></p>
 <ol>
 <li>
-<p>the player is holding a weapon. We require this to be true, once. This is actually not necessary, but it's useful to show the progression. We are requiring the player to hold a weapon, at least once.</p>
+<p>Together with condition 2, is a trick used to check if <code>0xCANDIES - Delta 0xCANDIES = 2</code>.</p>
 </li>
 <li>
-<p>number of KOs that the player has made. It's 16-bit (meaning the value can be more than 255), and by using the delta and 'greater than' symbols, we are saying that we require the number of KOs to be bigger than the previous value, and we need this to happen 10 unique times. Every time the current value is bigger than the previous value, the hit count will go up by one. The next frame, the 'delta' value will have increased to be the same as the current value, this ensures that after every kill, the KO counter will go up by one, and the hit count will go up by one. <strong>LIMITATION</strong>: if the number of KOs goes up by two in the same frame, the hit count will only go up by one. It's a slight flaw that does happen a little more often than expected... it's not so accurate but it's a fairly close estimate to your number of kills.</p>
+<p>Used together with condition 1 (as explained above) and 3. As explained in <a href="../AddHits-Flag">its respective page</a>, when the <code>AddHits</code> condition is true, the hit counter in the next condition is incremented. Therefore, in our example here, when condition 2 is true, the hitcounter in condition 3 is incremented.</p>
 </li>
 <li>
-<p>reset all our progress, if the <strong>weapon type</strong> is different than the last known weapon type.</p>
+<p>Count when the candy counter changes.</p>
 </li>
 <li>
-<p>reset <strong>all</strong> our progress, if the player is no longer carrying a weapon.</p>
+<p>Reset the counter if not in the Bonus stage.</p>
 </li>
 </ol>
+<p>All these conditions could be translated as "while in the bonus stage, trigger the achievement if the candy counter changes 99 times, and if the candy counter is incremented by 2 in the same frame, count an extra change in the candy counter."</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
-<li><code>[2018-09-05 21:08] Keltron3030:</code> Grammatical corrections to improve readability.</li>
-<li><code>[2018-03-23 01:14] meleu:</code> Created Using Delta Values and ResetIf (markdown)</li>
-<li><code>[2018-03-22 19:45] KingDice001:</code> Updated Using Delta Values and ResetIf (markdown)</li>
-<li><code>[2018-03-16 22:29] 7Mogami7:</code> Updated Using Delta Values and ResetIf (markdown)</li>
-<li><code>[2018-01-29 09:39] meleu:</code> Created Using Delta Values and ResetIf (markdown)</li>
+<li><code>[2019-02-17 23:33] meleu:</code> trimmed down version</li>
+<li><code>[2019-02-17 21:20] Thoooreau:</code> minor stuff</li>
+<li><code>[2019-02-17 21:18] Thoooreau:</code> minor stuff</li>
+<li><code>[2019-02-16 20:04] meleu:</code> WIP</li>
+<li><code>[2019-02-16 19:58] meleu:</code> renamed</li>
 </ul>
                 
                   
@@ -1646,7 +1698,7 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1655,19 +1707,19 @@ as a case study, and <a href="http://retroachievements.org/Achievement/55">Steel
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using Hit Counts and ResetIf
+                Simple Example of How to Avoid Load State Abusing
               </span>
             </div>
           </a>
         
         
-          <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" title="Creating a Timer with ResetIf Hits based on the Speed of the Game" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Simple Example of How to Avoid Load State Abusing
+                Creating a Timer with ResetIf Hits based on the Speed of the Game
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

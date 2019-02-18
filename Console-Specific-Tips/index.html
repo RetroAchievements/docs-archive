@@ -955,8 +955,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
     </a>
   </li>
 
@@ -967,8 +967,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-nav__link">
-      Using Delta Values and ResetIf
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
     </a>
   </li>
 
@@ -981,6 +981,18 @@
   <li class="md-nav__item">
     <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
   </li>
 
@@ -1231,6 +1243,13 @@
           <li class="md-nav__item">
   <a href="#gbc" title="GBC" class="md-nav__link">
     GBC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gbc-bios" title="GBC BIOS" class="md-nav__link">
+    GBC BIOS
   </a>
   
 </li>
@@ -1706,6 +1725,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gbc-bios" title="GBC BIOS" class="md-nav__link">
+    GBC BIOS
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1807,6 +1833,15 @@
 <p>On the GBC, the 4KB of memory from 0xD000-0xDFFF is a bank from a larger 32KB memory block not directly accessible by the processor. Bits 0-2 of 0xFF70 indicate which bank is loaded into the 0xD000-0xDFFF memory block. It's a "feature" used to expand the storage available to GBC ROMs while still supporting GB ROMs.</p>
 <p>Bank switching (changing the value of 0xFF70) causes the memory in the 0xD000-0xDFFF range to update. This appears as flickering in the Memory Viewer and makes tracking down values in that memory range difficult. If you are writing conditions dependent on memory in that block, you should also require that 0xFF70 have a specific value to ensure you are looking at the correct bank. The 4KB of memory from 0xC000-0xCFFF is not bank-switched and can be used safely without additional conditions.</p>
 <p>It is not advisable to use these addresses for achievements if there is any alternative to doing so. As of January 2018, RALibretro will only display bank 0x00 at 0xFF70. RetroArch has fluctuating memory banks, but the various addresses do not function in the same manner as RAVisualBoyAdvance. At least until RetroArch receives a memory inspector, achievements using addresses from 0xD000-0xDFFF will only work within RAVisualBoyAdvance.</p>
+<h3 id="gbc-bios">GBC BIOS<a class="headerlink" href="#gbc-bios" title="Permanent link">link</a></h3>
+<p>RALibRetro and RetroArch support the GBC BIOS, which shows the "GameBoy" logo before starting the game. This provides approximately four seconds where the main memory ($C000-$DFFF) hasn't been initialized and can't be trusted, and may cause achievements to trigger while loading the game for a subset of users who have the BIOS enabled.</p>
+<p>To enable this feature, put the bios file (named gbc_bios.bin) into the system directory of either RALibRetro or RetroArch. When you start the game, you will see the "Nintendo" and "GameBoy" logos before proceeding into the actual game.</p>
+<p>If this is causing you problems, you may need to add logic to prevent the achievements from triggering while the BIOS is executing, but it would be preferable to use in-game logic if possible (i.e. a specific screen is being displayed).</p>
+<p>The BIOS code is loaded from $0000-$00FF, so identify some chunk of that memory that's unique while the BIOS is running and ignore it. For example, the last four bytes of the BIOS block are <code>3E 11 E0 50</code>, so you could add this condition to the achievement to prevent it from triggering while the BIOS is running.</p>
+<pre><code>32-bit 0x00FC != 0x50E0113E
+</code></pre>
+
+<p>After the BIOS completes, the block is blanked out with FF's, and repurposed for interrupt vectors. For more detail, see <a href="https://realboyemulator.wordpress.com/2013/01/03/a-look-at-the-game-boy-bootstrap-let-the-fun-begin/">A Look at the GameBoy bootstrap</a>.</p>
 <h2 id="nintendo-64-rap64">Nintendo 64 (RAP64)<a class="headerlink" href="#nintendo-64-rap64" title="Permanent link">link</a></h2>
 <h3 id="using-gameshark-codes-for-addresses">Using GameShark Codes for Addresses<a class="headerlink" href="#using-gameshark-codes-for-addresses" title="Permanent link">link</a></h3>
 <p>GameShark codes can be a valuable resource for finding addresses you can't or don't feel like finding. They have 12 characters per line and are fairly easy to parse.</p>
@@ -1848,6 +1883,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-17 09:34] Jamiras:</code> add note about GBC BIOS</li>
 <li><code>[2019-01-07 14:48] Scott:</code> Updated Console Specific Tips (markdown)</li>
 <li><code>[2018-12-01 21:29] Scott:</code> Updated Console Specific Tips (markdown)</li>
 <li><code>[2018-12-01 21:27] Scott:</code> Updated Console Specific Tips (markdown)</li>

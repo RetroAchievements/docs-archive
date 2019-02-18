@@ -694,6 +694,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-make-aes-bios-work-in-ralibretro-or-retroarch" title="How to make AES BIOS work in RALibretro or RetroArch" class="md-nav__link">
+    How to make AES BIOS work in RALibretro or RetroArch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -1053,8 +1060,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
     </a>
   </li>
 
@@ -1065,8 +1072,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-nav__link">
-      Using Delta Values and ResetIf
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
     </a>
   </li>
 
@@ -1079,6 +1086,18 @@
   <li class="md-nav__item">
     <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
   </li>
 
@@ -1690,6 +1709,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-make-aes-bios-work-in-ralibretro-or-retroarch" title="How to make AES BIOS work in RALibretro or RetroArch" class="md-nav__link">
+    How to make AES BIOS work in RALibretro or RetroArch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -1745,12 +1771,13 @@
 <li>Gameboy Advance</li>
 <li>PC Engine (TurboGrafx-16/TurboGrafx-CD)</li>
 <li>Atari Lynx</li>
-<li><strong>Game Gear</strong> - new</li>
-<li><strong>Neo Geo Pocket</strong> - new</li>
-<li><strong>Atari 2600</strong> - new</li>
-<li><strong>Virtual Boy</strong> - new</li>
-<li><strong>Neo Geo</strong> (Arcade) - new. <strong>NOTE</strong>: you need to put the <code>neogeo.zip</code> BIOS file on the same directory as the ROMs.</li>
-<li><strong>Capcom Play System 1, 2 and 3</strong> (Arcade) - new</li>
+<li>Game Gear</li>
+<li>Neo Geo Pocket</li>
+<li>Atari 2600</li>
+<li>Atari 7800</li>
+<li>Virtual Boy</li>
+<li>Neo Geo (Arcade) - new. <strong>NOTE</strong>: you need to put the <code>neogeo.zip</code> BIOS file on the same directory as the ROMs.</li>
+<li>Capcom Play System 1, 2 and 3 (Arcade) - new</li>
 </ul>
 <p><strong>Nintendo 64 is currently unsupported.</strong></p>
 <h2 id="keyboard-input">Keyboard Input<a class="headerlink" href="#keyboard-input" title="Permanent link">link</a></h2>
@@ -2013,9 +2040,32 @@
 <li>input configuration</li>
 <li>more issues listed here: <a href="https://github.com/RetroAchievements/RALibretro/issues">https://github.com/RetroAchievements/RALibretro/issues</a></li>
 </ul>
+<h2 id="how-to-make-aes-bios-work-in-ralibretro-or-retroarch">How to make AES BIOS work in RALibretro or RetroArch<a class="headerlink" href="#how-to-make-aes-bios-work-in-ralibretro-or-retroarch" title="Permanent link">link</a></h2>
+<p>To make AES BIOS emulation mode work in your emulator:</p>
+<ol>
+<li>
+<p>Make sure your emulator works correctly.</p>
+</li>
+<li>
+<p>Put <code>neogeo.zip</code> to <code>System</code> directory (RALibretro), or a folder you keep your NeoGeo ROMs (RetroArch).</p>
+</li>
+<li>
+<p>Make sure the <code>neogeo.zip</code> consist of at least files you can see here:</p>
+</li>
+</ol>
+<p><img alt="" src="https://dl.dropboxusercontent.com/s/68l37qbt8myts82/aesminimum.png" /></p>
+<p>If you keep only those files, AES mode will be automatically forced for any NeoGeo game (recommended).</p>
+<p><strong>Important!</strong> The files which are highlighted on this picture (<code>neo-epo.bin</code> and <code>neo-po.bin</code>) are the only one actually related to AES mode, and you probably will need to include them in your archive to make AES mode work for you.</p>
+<ol>
+<li>Load any FBA compatible neo geo ROM. More complete archive (including files needed to run MVS and UniBIOS modes) might need additional configuration to force AES mode:</li>
+</ol>
+<p>In RaLibretro: Settings-&gt;Emulation-&gt;Force Neo Geo Mode-&gt;AES</p>
+<p>In RetroArch: Command-&gt;Menu Toggle-&gt;Options-&gt;Force Neo Geo Mode-&gt;AES</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-18 01:01] meleu:</code> add Salsa's tutorial "How to make AES BIOS work in RALibretro or RetroArch"</li>
+<li><code>[2019-02-17 23:55] meleu:</code> Updated RALibretro (markdown)</li>
 <li><code>[2019-01-01 18:39] Raphaël Zumer:</code> Document FDS key binds</li>
 <li><code>[2018-08-05 13:59] Raphael Zumer:</code> Extract system file note to section root</li>
 <li><code>[2018-07-24 18:33] John A:</code> We didnt explain here that we also support CD version of PC Engine and that the PC Engine and TurboGrafx16 is the same console.</li>
@@ -2024,8 +2074,6 @@
 <li><code>[2018-05-06 18:09] meleu:</code> Updated RALibretro (markdown)</li>
 <li><code>[2018-05-06 21:11] John A:</code> Updated RALibretro (markdown)</li>
 <li><code>[2018-05-06 21:04] John A:</code> Updated RALibretro (markdown)</li>
-<li><code>[2018-05-06 11:45] meleu:</code> added info about CPS1/2/3</li>
-<li><code>[2018-04-16 09:36] meleu:</code> fixing links pointing to the new repo</li>
 </ul>
                 
                   

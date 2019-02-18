@@ -955,8 +955,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
     </a>
   </li>
 
@@ -967,8 +967,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-nav__link">
-      Using Delta Values and ResetIf
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
     </a>
   </li>
 
@@ -981,6 +981,18 @@
   <li class="md-nav__item">
     <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
   </li>
 
@@ -1038,6 +1050,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collecting-an-item-n-times" title="Collecting an Item N times" class="md-nav__link">
+    Collecting an Item N times
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#finish-level-n" title="Finish Level N" class="md-nav__link">
     Finish Level N
   </a>
@@ -1075,6 +1094,13 @@
         <li class="md-nav__item">
   <a href="#collected-100-of-something" title="Collected 100% of Something" class="md-nav__link">
     Collected 100% of Something
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+    Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
   </a>
   
 </li>
@@ -1634,6 +1660,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collecting-an-item-n-times" title="Collecting an Item N times" class="md-nav__link">
+    Collecting an Item N times
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#finish-level-n" title="Finish Level N" class="md-nav__link">
     Finish Level N
   </a>
@@ -1671,6 +1704,13 @@
         <li class="md-nav__item">
   <a href="#collected-100-of-something" title="Collected 100% of Something" class="md-nav__link">
     Collected 100% of Something
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+    Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
   </a>
   
 </li>
@@ -1720,8 +1760,69 @@
                 <h2 id="warning-every-game-is-different"><strong>WARNING: EVERY GAME IS DIFFERENT!</strong><a class="headerlink" href="#warning-every-game-is-different" title="Permanent link">link</a></h2>
 <p>Here you'll see examples of some typical achievements. You can use them as inspiration to create your own achievement. But keep in mind the following:</p>
 <p><strong>EVERY GAME IS DIFFERENT! The memory has a different behavior from game to game.</strong></p>
-<p>So do <strong>NOT</strong> take these examples as a rule. They are here just for educational purposes.</p>
+<p>So do <strong>NOT</strong> take these templates as a rule. They are here just for educational purposes.</p>
 <p>In these examples we use the following convention <strong>0xLEVEL</strong> is the memory address with the level ID; <strong>0xLIFE</strong> is the address used for the character life; <strong>0xTIME</strong> for time, <strong>0xITEM</strong> for getting an item, etc...</p>
+<h2 id="collecting-an-item-n-times">Collecting an Item N times<a class="headerlink" href="#collecting-an-item-n-times" title="Permanent link">link</a></h2>
+<p>There are some situations where you want to award an achievement for collecting an item (like a coin or a ring) N times. You'll need to find in the memory the address responsible to count how much of the item you have. Once you have the address, this logic usually does the job:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Special?</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>0xCOUNT</td>
+<td>&gt;</td>
+<td>Delta</td>
+<td>0xCOUNT</td>
+<td>(N)</td>
+</tr>
+</tbody>
+</table>
+<p>But you most likely will want to be more specific, for example "get item N times without dying". Then you should use another condition with a <code>ResetIf</code>, like this:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Special?</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>0xCOUNT</td>
+<td>&gt;</td>
+<td>Delta</td>
+<td>0xCOUNT</td>
+<td>(N)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ResetIf</td>
+<td>0xLIVES</td>
+<td>&lt;</td>
+<td>Delta</td>
+<td>0xLIVES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>ResetIf</code> condition could be "while in level X", "without using a bomb", etc.</p>
 <h2 id="finish-level-n">Finish Level N<a class="headerlink" href="#finish-level-n" title="Permanent link">link</a></h2>
 <p>In this example we want to award when the player finish the level <code>N</code> and goes to level <code>N+1</code>.</p>
 <table>
@@ -2112,7 +2213,72 @@
 </table>
 <p>Using the correct address value for condition 3 is especially important. You need to find an address that represents a unique time in the game where this percent increases. You'd not want the achievement to trigger when the player is loading their in game save file, which means this achievement must be paused at that time.</p>
 <p><strong>Example</strong>: In Super Mario World this change happens while the player sees the world map after completing a stage.</p>
-<p><strong>Note:</strong> This is similar in behavior and result to <a href="#collected-100-of-something">Collect an Item in a specific Level</a>.</p>
+<p><strong>Note:</strong> This is similar in behavior and result to <a href="#collect-an-item-in-a-specific-level">Collect an Item in a specific Level</a>.</p>
+<h2 id="circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame">Circumvent the Problem of a Counter Incrementing Twice in the Same Frame<a class="headerlink" href="#circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame" title="Permanent link">link</a></h2>
+<p>In the <a href="#collecting-an-item-n-times">Collecting an Item N times</a> we are counting how many times the counter goes up. But in some games there are situations where the counter goes up twice in the same frame, and the hit counter is incremented only by one. This behavior, obviously, ruins our logic. We're going to see a way to circumvent this issue.</p>
+<p>The technique used here relies on two other ones:</p>
+<ul>
+<li><a href="../SubSource-Flag#using-subsource-to-count-increments">using <code>SubSource</code> to count specific increments</a></li>
+<li><a href="../AddHits-Flag"><code>AddHits</code> Flag</a></li>
+</ul>
+<p>Here's the trick:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Special?</th>
+<th>Type</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SubSource</td>
+<td>Delta</td>
+<td>0xCOUNT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>AddHits</td>
+<td>Mem</td>
+<td>0xCOUNT</td>
+<td>=</td>
+<td>Value</td>
+<td>0x02</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Mem</td>
+<td>0xCOUNT</td>
+<td>&gt;</td>
+<td>Delta</td>
+<td>0xCOUNT</td>
+<td>(N)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ResetIf</td>
+<td>Mem</td>
+<td>0xLIVES</td>
+<td>&lt;</td>
+<td>Delta</td>
+<td>0xLIVES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>It can looks a bit confusing at a first sight, but maybe using a real example it can be more clear. Check the <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame">Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</a>.</p>
 <h2 id="check-for-a-specific-value-changing-to-another-specific-value-ten-times">Check for a specific value changing to another specific value ten times<a class="headerlink" href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Permanent link">link</a></h2>
 <p>In this example we want to detect a value changing from <code>V1</code> to <code>V2</code> ten times:</p>
 <table>
@@ -2275,6 +2441,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
 <li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
 <li><code>[2019-02-08 02:48] Kvon:</code> added a new logic template Collected 100% of Something</li>
 <li><code>[2018-08-01 03:47] meleu:</code> explaining some conditions</li>
@@ -2284,7 +2451,6 @@
 <li><code>[2018-01-23 20:25] meleu:</code> rearranged topics</li>
 <li><code>[2018-01-21 02:43] Kvon:</code> added conditional reset example</li>
 <li><code>[2018-01-16 02:29] meleu:</code> merged 2 topics into one and other minor changes</li>
-<li><code>[2018-01-09 13:41] meleu:</code> Updated Achievement Templates (markdown)</li>
 </ul>
                 
                   

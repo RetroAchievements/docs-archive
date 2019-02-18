@@ -991,8 +991,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
     </a>
   </li>
 
@@ -1003,8 +1003,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-nav__link">
-      Using Delta Values and ResetIf
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
     </a>
   </li>
 
@@ -1017,6 +1017,18 @@
   <li class="md-nav__item">
     <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
   </li>
 
@@ -1595,12 +1607,13 @@
                 
                 <p><strong>Note</strong>: most likely this technique is not needed for simple games. So, it's not mandatory for jr-devs.</p>
 <p>The <code>AddHits</code> can be chosen in the Flag column of the Achievement Editor</p>
-<p>Adds the hit count for the current condition to the next achievement condition. The total hit count will be used when determining if the target hit count for the next non-<code>Add Hits</code> condition is met. If the next non-<code>Add Hits</code> condition does not have a hit target, the <code>Add Hits</code> condition has no effect on the achievement.</p>
-<p>All fields are supported on an <code>Add Hits</code> condition. If the condition is met, the hit count for the condition is incremented (and will stop incrementing if a target hit count is specified). </p>
-<p>The <code>Add Hits</code> condition does not have to be true for the achievement to trigger. The next non-<code>Add Hits</code> condition does, which is affected by the <code>Add Hits</code> condition.</p>
+<p>When a condition with the <code>AddHits</code> flag is true, the hit counter of the next non-<code>AddHits</code> condition is incremented.</p>
+<p>If the next non-<code>AddHits</code> condition does not have a hit target, the <code>AddHits</code> condition has no effect on the achievement.</p>
+<p>The <code>AddHits</code> condition does not have to be true for the achievement to trigger, but the next non-<code>AddHits</code> condition does, which is affected by the <code>AddHits</code> condition.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-17 23:51] meleu:</code> better explanation (and trimmed down)</li>
 <li><code>[2019-02-12 09:37] meleu:</code> Updated AddHits (markdown)</li>
 </ul>
                 

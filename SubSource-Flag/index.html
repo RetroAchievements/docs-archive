@@ -97,7 +97,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#using-subsource-to-count-increments" tabindex="1" class="md-skip">
+      <a href="#using-subsource-to-count-specific-increments" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -884,8 +884,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-subsource-to-count-increments" title="Using SubSource to Count Increments" class="md-nav__link">
-    Using SubSource to Count Increments
+  <a href="#using-subsource-to-count-specific-increments" title="Using SubSource to Count Specific Increments" class="md-nav__link">
+    Using SubSource to Count Specific Increments
   </a>
   
 </li>
@@ -1005,8 +1005,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Hit-Counts-and-ResetIf/" title="Using Hit Counts and ResetIf" class="md-nav__link">
-      Using Hit Counts and ResetIf
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
     </a>
   </li>
 
@@ -1017,8 +1017,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Delta-Values-and-ResetIf/" title="Using Delta Values and ResetIf" class="md-nav__link">
-      Using Delta Values and ResetIf
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
     </a>
   </li>
 
@@ -1031,6 +1031,18 @@
   <li class="md-nav__item">
     <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
       Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
     </a>
   </li>
 
@@ -1580,8 +1592,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-subsource-to-count-increments" title="Using SubSource to Count Increments" class="md-nav__link">
-    Using SubSource to Count Increments
+  <a href="#using-subsource-to-count-specific-increments" title="Using SubSource to Count Specific Increments" class="md-nav__link">
+    Using SubSource to Count Specific Increments
   </a>
   
 </li>
@@ -1627,9 +1639,9 @@
 <p><strong>Note 1</strong>: <code>Sub Source</code> is <strong>NOT</strong> a subtraction flag. It just makes the value be negative.</p>
 <p><strong>Note 2</strong>: The final line (without <code>Add Source</code> or <code>Sub Source</code>) is still <strong>added</strong> for the final comparison. </p>
 <p>Using that <a href="../AddSource-Flag"><code>AddSource</code> usecase example</a>, if we replaced it with the <code>Sub Source</code> and with the same values (<code>value(0x8010) = 1</code> and <code>value(0x8020) = 2</code>), the comparison would be <code>-1 + 2 &gt; 0</code>, or <code>1 &gt; 0</code>.</p>
-<h2 id="using-subsource-to-count-increments">Using SubSource to Count Increments<a class="headerlink" href="#using-subsource-to-count-increments" title="Permanent link">link</a></h2>
-<p>Sub Source can also be used to track specific increases in addresses. The condition below states that the current value in address <code>0x00cbd6</code> less <code>30</code> (<code>0x1e</code> in hexadecimal) must be equal previous value of that same address. Effectively, this means that the condition is true whenever the value in address <code>0x00cbd6</code> increases by exactly 30.</p>
-<p><img alt="Sub Source Real Example" src="https://user-images.githubusercontent.com/45195781/48763632-b2d16500-ec7b-11e8-9a8e-e200eff50ea9.png" /></p>
+<h2 id="using-subsource-to-count-specific-increments">Using SubSource to Count Specific Increments<a class="headerlink" href="#using-subsource-to-count-specific-increments" title="Permanent link">link</a></h2>
+<p><code>SubSource</code> can also be used to track specific increases in addresses. The conditions below states that the current value in address <code>0x0080dc</code> less the value in the previous frame in the same address must be equal <code>2</code>. Effectively, this means that the condition is true whenever the value in address <code>0x0080dc</code> increases by exactly two.</p>
+<p><img alt="subsource" src="https://user-images.githubusercontent.com/8508804/52924824-29c6da00-330d-11e9-9bf5-8fdcd71aaf9e.png" /></p>
 <h2 id="checking-for-a-negative-result">Checking for a negative result<a class="headerlink" href="#checking-for-a-negative-result" title="Permanent link">link</a></h2>
 <p>If the result of your Sub Source operation is a negative number, it is possible to check for it. This is how negative numbers are represented:</p>
 <ul>
@@ -1654,6 +1666,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-17 23:42] meleu:</code> better example for "Using SubSource to Count Specific Increments"</li>
+<li><code>[2019-02-17 21:05] meleu:</code> cosmetic</li>
 <li><code>[2019-02-14 10:10] meleu:</code> fix broken link</li>
 <li><code>[2019-02-12 13:25] meleu:</code> add heading to "Using SubSource to Count Increments"</li>
 <li><code>[2019-02-12 13:18] meleu:</code> fix broken link</li>
