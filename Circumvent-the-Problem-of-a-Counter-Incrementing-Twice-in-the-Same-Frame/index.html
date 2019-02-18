@@ -1644,19 +1644,19 @@
 <p>Which translates into "check if the candy canes counter changed 99 times in the bonus stage".</p>
 <p><strong>Note</strong>: we're using <code>0xCANDIES != Delta 0xCANDIES</code> (using <code>!=</code>, and not <code>&gt;</code>) cause when the player has 99 candies and collect one more, the counter goes to zero.</p>
 <p>However, there is an aspect in this game (and many others) where the if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. Unfortunately it happens more frequently than expected. When it happens the hit counter is increased by one while the candy counter is increased by two. Which, obviously, ruins the logic used above.</p>
-<p>In order to circumvent this issue we have to use the technique about <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using SubSource to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
+<p>In order to circumvent this issue we have to use that technique of <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using SubSource to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
 <p>Let's take a look at the achievement logic and then we'll see the explanation:</p>
 <p><strong>Addresses</strong></p>
 <ul>
 <li><code>0x80dc</code>: Candy Canes counter.</li>
-<li><code>0x809c</code>: Stage ID (any regular or bonus stage have their own unique ID).</li>
+<li><code>0x809c</code>: Stage ID.</li>
 </ul>
 <p>So the structure of the achievement was simply supposed to be like this:</p>
 <p><img alt="" src="https://i.imgur.com/ufPTDF3.png" /></p>
 <p><strong>Conditions</strong></p>
 <ol>
 <li>
-<p>Together with condition 2, is a trick used to check if <code>0xCANDIES - Delta 0xCANDIES = 2</code>.</p>
+<p>Together with condition 2, is a trick used to check if <code>0xCANDIES - Delta 0xCANDIES = 2</code>. In other words, the candy counter was incremented by two.</p>
 </li>
 <li>
 <p>Used together with condition 1 (as explained above) and 3. As explained in <a href="../AddHits-Flag">its respective page</a>, when the <code>AddHits</code> condition is true, the hit counter in the next condition is incremented. Therefore, in our example here, when condition 2 is true, the hitcounter in condition 3 is incremented.</p>
@@ -1672,6 +1672,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-18 17:43] meleu:</code> cosmetic</li>
+<li><code>[2019-02-18 17:43] meleu:</code> a little bit of more explanation</li>
 <li><code>[2019-02-17 23:33] meleu:</code> trimmed down version</li>
 <li><code>[2019-02-17 21:20] Thoooreau:</code> minor stuff</li>
 <li><code>[2019-02-17 21:18] Thoooreau:</code> minor stuff</li>
