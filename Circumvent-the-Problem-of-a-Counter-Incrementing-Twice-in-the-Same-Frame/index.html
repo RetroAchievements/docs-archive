@@ -1606,7 +1606,7 @@
                   <h1>Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</h1>
                 
                 <p>In this example you'll see how to circumvent the problem of a counter incrementing twice in the same frame by combining <a href="../SubSource-Flag">SubSource</a> and <a href="../AddHits-Flag">AddHits</a>.</p>
-<p>In the Game Boy Advance library there's a Christmas platformer game called <a href="http://retroachievements.org/Game/7152">Santa Claus Jr. Advance</a>. There are some achievements for collecting all 99 candy canes in each one of the bonus stages.</p>
+<p>In the Game Boy Advance library there's a Christmas platformer game called <a href="http://retroachievements.org/Game/7152">Santa Claus Jr. Advance</a>. There are some achievements for collecting all candy canes in each one of the bonus stages.</p>
 <p>These achievements were supposed to be quite simple, like this:</p>
 <table>
 <thead>
@@ -1628,7 +1628,7 @@
 <td>!=</td>
 <td>Delta</td>
 <td>0xCANDIES</td>
-<td>(99)</td>
+<td>(N)</td>
 </tr>
 <tr>
 <td>2</td>
@@ -1641,10 +1641,10 @@
 </tr>
 </tbody>
 </table>
-<p>Which translates into "check if the candy canes counter changed 99 times in the bonus stage".</p>
+<p>Which translates into "check if the candy canes counter changed <code>N</code> times in the bonus stage".</p>
 <p><strong>Note</strong>: we're using <code>0xCANDIES != Delta 0xCANDIES</code> (using <code>!=</code>, and not <code>&gt;</code>) cause when the player has 99 candies and collect one more, the counter goes to zero.</p>
 <p>However, there is an aspect in this game (and many others) where the if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. Unfortunately it happens more frequently than expected. When it happens the hit counter is increased by one while the candy counter is increased by two. Which, obviously, ruins the logic used above.</p>
-<p>In order to circumvent this issue we have to use that technique of <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using SubSource to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
+<p>In order to circumvent this issue we have to use that technique of <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using <code>SubSource</code> to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
 <p>Let's take a look at the achievement logic and then we'll see the explanation:</p>
 <p><strong>Addresses</strong></p>
 <ul>
@@ -1672,6 +1672,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-02-19 19:31] meleu:</code> not every bonus have 99 candy canes</li>
 <li><code>[2019-02-18 17:43] meleu:</code> cosmetic</li>
 <li><code>[2019-02-18 17:43] meleu:</code> a little bit of more explanation</li>
 <li><code>[2019-02-17 23:33] meleu:</code> trimmed down version</li>
