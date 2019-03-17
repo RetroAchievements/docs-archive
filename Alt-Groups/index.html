@@ -934,6 +934,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-alt-groups-for-conditional-resets" title="Using Alt Groups for Conditional Resets" class="md-nav__link">
+    Using Alt Groups for Conditional Resets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -1606,6 +1613,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-alt-groups-for-conditional-resets" title="Using Alt Groups for Conditional Resets" class="md-nav__link">
+    Using Alt Groups for Conditional Resets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -1659,13 +1673,18 @@ In <code>Alt 02</code>: <code>0xbc = 2</code>. This checks that the player is cr
 <li>
 <p>When using <a href="#resetif">ResetIf</a> and <a href="#pauseif">PauseIf</a>, PauseIf only pauses the group that it's in, but ResetIf resets hit counts in all groups and prevents achievements from triggering so long as the reset is active.</p>
 </li>
-<li>
-<p><strong>Advanced:</strong> An <em>Alt group</em> can have conditions that are NEVER true. When using pauses and resets in an <em>Alt group</em> it is possible to create a pausable reset. In other words, a reset that will only reset under certain (paused) conditions. Remember: the reset will affect all group, including your core group. This can be applied to multiple <em>Alt groups</em> in the same achievement. Just <strong>make sure</strong> that you have at least one <em>Alt group</em> that is will be true. One possible always true condition <code>Value 1 = Value 1</code>.</p>
-</li>
 </ul>
+<h2 id="using-alt-groups-for-conditional-resets">Using Alt Groups for Conditional Resets<a class="headerlink" href="#using-alt-groups-for-conditional-resets" title="Permanent link">link</a></h2>
+<p><strong>Advanced:</strong> An <em>Alt group</em> can be used to create a ResetIf condition that is only active some of the time.</p>
+<p>If you create an <em>Alt group</em> containing a PauseIf condition and a ResetIf condition, you can use the PauseIf condition to disable the ResetIf condition under certain circumstances without disabling the entire achievement.
+- The Reset will still affect all groups, including your core group. The Pause will only pause the <em>Alt group</em> containing the PauseIf.
+- This logic can be applied to multiple <em>Alt groups</em> in the same achievement to protect several separate Reset statements. 
+- <strong>Make sure</strong> that you have at least one <em>Alt group</em> that will be true or the achievement won't trigger. The easiest way to do this is to create an extra alt group that has one condition that is <code>Value 1 = Value 1</code>.
+- <strong>Beware</strong>: If your Pause condition is false, and the Reset condition is also false, the group will be considered true unless you have another always false condition in the group. When using an <em>Alt group</em> to segregate a PauseIf, make sure to include an always false condition like <code>Value 1 = Value 0</code>.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-03-07 21:00] Jamiras:</code> Updated Alt Groups (markdown)</li>
 <li><code>[2019-02-12 09:38] meleu:</code> Created Alt Groups (markdown)</li>
 </ul>
                 

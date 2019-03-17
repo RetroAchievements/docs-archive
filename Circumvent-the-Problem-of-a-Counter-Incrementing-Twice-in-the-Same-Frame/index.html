@@ -1641,9 +1641,9 @@
 </tr>
 </tbody>
 </table>
-<p>Which translates into "check if the candy canes counter changed <code>N</code> times in the bonus stage".</p>
+<p>This translates into "check if the candy canes counter changed <code>N</code> times in the bonus stage".</p>
 <p><strong>Note</strong>: we're using <code>0xCANDIES != Delta 0xCANDIES</code> (using <code>!=</code>, and not <code>&gt;</code>) cause when the player has 99 candies and collect one more, the counter goes to zero.</p>
-<p>However, there is an aspect in this game (and many others) where the if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. Unfortunately it happens more frequently than expected. When it happens the hit counter is increased by one while the candy counter is increased by two. Which, obviously, ruins the logic used above.</p>
+<p>However, there is an aspect in this game (and many others) where if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. When it happens the hit counter is increased by one while the candy counter is increased by two. This, obviously, ruins the logic used above.</p>
 <p>In order to circumvent this issue we have to use that technique of <a href="../SubSource-Flag#using-subsource-to-count-specific-increments">using <code>SubSource</code> to count specific increments</a> combined with the <a href="../AddHits-Flag"><code>AddHits</code> flag</a>.</p>
 <p>Let's take a look at the achievement logic and then we'll see the explanation:</p>
 <p><strong>Addresses</strong></p>
@@ -1651,7 +1651,7 @@
 <li><code>0x80dc</code>: Candy Canes counter.</li>
 <li><code>0x809c</code>: Stage ID.</li>
 </ul>
-<p>So the structure of the achievement was simply supposed to be like this:</p>
+<p>So now the structure of the achievement is going to be like this:</p>
 <p><img alt="" src="https://i.imgur.com/ufPTDF3.png" /></p>
 <p><strong>Conditions</strong></p>
 <ol>
@@ -1672,6 +1672,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-03-16 22:33] meleu:</code> trimming down</li>
+<li><code>[2019-02-28 21:06] Thoooreau:</code> text</li>
 <li><code>[2019-02-24 12:51] meleu:</code> grammar</li>
 <li><code>[2019-02-19 19:31] meleu:</code> not every bonus have 99 candy canes</li>
 <li><code>[2019-02-18 17:43] meleu:</code> cosmetic</li>
@@ -1680,7 +1682,6 @@
 <li><code>[2019-02-17 21:20] Thoooreau:</code> minor stuff</li>
 <li><code>[2019-02-17 21:18] Thoooreau:</code> minor stuff</li>
 <li><code>[2019-02-16 20:04] meleu:</code> WIP</li>
-<li><code>[2019-02-16 19:58] meleu:</code> renamed</li>
 </ul>
                 
                   

@@ -1816,7 +1816,7 @@
 <h3 id="memory-map">Memory Map<a class="headerlink" href="#memory-map" title="Permanent link">link</a></h3>
 <p>Certain ranges of values mean different things in the context of the Game Boy hardware, so having a map of what's where can help you with eliminating useless addresses. Here's the lowdown:</p>
 <ul>
-<li>❌ <strong>0x0000 - 0x7FFF: ROM Data</strong> (Typically no reason to use. If you're a super-dedicated developer you could use the 16-bit value at 0x14E along with alt groups to support multiple ROM versions/regions)</li>
+<li>❌ <strong>0x0000 - 0x7FFF: ROM Data</strong> (No reason to use. This area contains header information that's only read on certain emulators.)</li>
 <li>❌ <strong>0x8000 - 0x9FFF: Graphics Data</strong> (Some things here might correlate with what you're looking for if you're trying to find a map ID or animation, but there will always be a better way of going about what you're doing than using any of these)</li>
 <li>✔️ <strong>0xA000 - 0xBFFF: Cartridge RAM</strong> (IE. save data. Sometimes using these addresses will be unavoidable but then your set could be prone to cheating by loading 100% save files. More info on protecting against save files to come)</li>
 <li>✔️ <strong>0xC000 - 0xDFFF: Work RAM</strong> (The good stuff; almost everything you should use will fall inside this range)</li>
@@ -1883,6 +1883,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-03-03 10:53] Ben-Ghazi:</code> Removed the tip that implies that ROM data can be used to identify different regions since this doesn't work on RetroArch.</li>
 <li><code>[2019-02-17 09:34] Jamiras:</code> add note about GBC BIOS</li>
 <li><code>[2019-01-07 14:48] Scott:</code> Updated Console Specific Tips (markdown)</li>
 <li><code>[2018-12-01 21:29] Scott:</code> Updated Console Specific Tips (markdown)</li>
