@@ -1,0 +1,2805 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Developers-Code-of-Conduct-es/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>Codigo de Conducta del Desarrollador - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#reglas-de-oro" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.retroachievements.org/" title="RADocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">videogame_asset</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                RADocs
+              </span>
+              <span class="md-header-nav__topic">
+                Codigo de Conducta del Desarrollador
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      RetroAchievements/docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." title="General" class="md-tabs__link">
+          General
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Developer-docs/" title="Developers" class="md-tabs__link">
+          Developers
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Home-pt_BR/" title="Portugues" class="md-tabs__link">
+          Portugues
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Home-es/" title="Español" class="md-tabs__link md-tabs__link--active">
+          Español
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">videogame_asset</i>
+      
+    </span>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      RetroAchievements/docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Users Code of Conduct
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        Users Code of Conduct
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct/" title="English version" class="md-nav__link">
+      English version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-pt_BR/" title="Portuguese version" class="md-nav__link">
+      Portuguese version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-es/" title="Spanish version" class="md-nav__link">
+      Spanish version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="English version" class="md-nav__link">
+      English version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-pt_BR/" title="Portuguese version" class="md-nav__link">
+      Portuguese version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-es/" title="Spanish version" class="md-nav__link">
+      Spanish version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" title="Global Leaderboard and Achievement Hunting Rules" class="md-nav__link">
+      Global Leaderboard and Achievement Hunting Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      My game is not loading achievements
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        My game is not loading achievements
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../My-game-is-not-loading-achievements/" title="English version" class="md-nav__link">
+      English version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../My-game-is-not-loading-achievements-es/" title="Spanish version" class="md-nav__link">
+      Spanish version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-contribute-if-you-are-not-a-developer/" title="How to contribute if you are not a developer" class="md-nav__link">
+      How to contribute if you are not a developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Why-you-shouldn't-use-the-load-state-feature/" title="Why you shouldn't use the load state feature" class="md-nav__link">
+      Why you shouldn't use the load state feature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" title="A message for Achievement Hunters and Completionists about revisions" class="md-nav__link">
+      A message for Achievement Hunters and Completionists about revisions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RABot,-the-RA-Discord-Robot/" title="RABot, the RA Discord Robot" class="md-nav__link">
+      RABot, the RA Discord Robot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-with-the-docs/" title="Contributing with the docs" class="md-nav__link">
+      Contributing with the docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-12" type="checkbox" id="nav-1-12">
+    
+    <label class="md-nav__link" for="nav-1-12">
+      RAEmulators
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-12">
+        RAEmulators
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RAQUASI88/" title="RAQUASI88" class="md-nav__link">
+      RAQUASI88
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
+      RALibretro
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Downloads/" title="Downloads" class="md-nav__link">
+      Downloads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Free-Games/" title="Free Games" class="md-nav__link">
+      Free Games
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Useful-Links/" title="Useful Links" class="md-nav__link">
+      Useful Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-RA-Documentation-Works/" title="How RA Documentation Works" class="md-nav__link">
+      How RA Documentation Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../About-Us/" title="About Us" class="md-nav__link">
+      About Us
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Developers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Developers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developers-Code-of-Conduct/" title="Developer's Code of Conduct" class="md-nav__link">
+      Developer's Code of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer/" title="How to Become an Achievement Developer" class="md-nav__link">
+      How to Become an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
+      Getting Started as an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Glossary-of-Developer-Terms/" title="Glossary of Developer Terms" class="md-nav__link">
+      Glossary of Developer Terms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Inspector-Overview/" title="Memory Inspector Overview" class="md-nav__link">
+      Memory Inspector Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      Achievement Logic Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        Achievement Logic Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Hit-Counts/" title="Hit Counts" class="md-nav__link">
+      Hit Counts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Delta-Values/" title="Delta Values" class="md-nav__link">
+      Delta Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ResetIf-Flag/" title="ResetIf Flag" class="md-nav__link">
+      ResetIf Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PauseIf-Flag/" title="PauseIf Flag" class="md-nav__link">
+      PauseIf Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddSource-Flag/" title="AddSource Flag" class="md-nav__link">
+      AddSource Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SubSource-Flag/" title="SubSource Flag" class="md-nav__link">
+      SubSource Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddHits-Flag/" title="AddHits Flag" class="md-nav__link">
+      AddHits Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Combining-Flags/" title="Combining Flags" class="md-nav__link">
+      Combining Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alt-Groups/" title="Alt Groups" class="md-nav__link">
+      Alt Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minimum-Required-Versions-for-Logic-Features/" title="Minimum Required Versions for Logic Features" class="md-nav__link">
+      Minimum Required Versions for Logic Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8">
+    
+    <label class="md-nav__link" for="nav-2-8">
+      Real Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-8">
+        Real Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
+      Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" title="Creating a Timer with ResetIf Hits based on the Speed of the Game" class="md-nav__link">
+      Creating a Timer with ResetIf Hits based on the Speed of the Game
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
+      Difficulty Scale and Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
+      Achievement Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
+      Set Development Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions/" title="Achievement Set Revisions" class="md-nav__link">
+      Achievement Set Revisions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Leaderboards/" title="Leaderboards" class="md-nav__link">
+      Leaderboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
+      Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-the-Right-ROM/" title="Working with the Right ROM" class="md-nav__link">
+      Working with the Right ROM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Game-Identification/" title="Game Identification" class="md-nav__link">
+      Game Identification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
+      Bonus Set Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievements-for-ROM-hacks/" title="Achievements for ROM hacks" class="md-nav__link">
+      Achievements for ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
+      Console Specific Tips
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Portugues
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Portugues
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Geral
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Geral
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-pt_BR/" title="Código de Conduta do Usuário" class="md-nav__link">
+      Código de Conduta do Usuário
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-pt_BR/" title="FAQ - Perguntas Frequentes" class="md-nav__link">
+      FAQ - Perguntas Frequentes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" title="Como contribuir se você não é um desenvolvedor" class="md-nav__link">
+      Como contribuir se você não é um desenvolvedor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Desenvolvedores
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Desenvolvedores
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" title="Primeiros Passos como um Desenvolvedor de Conquistas" class="md-nav__link">
+      Primeiros Passos como um Desenvolvedor de Conquistas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features-pt_BR/" title="Recursos de Lógica para Achievements" class="md-nav__link">
+      Recursos de Lógica para Achievements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-4" type="checkbox" id="nav-3-3-4">
+    
+    <label class="md-nav__link" for="nav-3-3-4">
+      Exemplos Reais
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-4">
+        Exemplos Reais
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" title="Usando Hit Counts e ResetIf" class="md-nav__link">
+      Usando Hit Counts e ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" title="Usando Delta Values e ResetIf" class="md-nav__link">
+      Usando Delta Values e ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" title="Simples Exemplo de como Evitar Abuso de Load State" class="md-nav__link">
+      Simples Exemplo de como Evitar Abuso de Load State
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks-pt_BR/" title="Dicas e Truques" class="md-nav__link">
+      Dicas e Truques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips-pt_BR/" title="Dicas Específicas de Console" class="md-nav__link">
+      Dicas Específicas de Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates-pt_BR/" title="Modelos de Achievement" class="md-nav__link">
+      Modelos de Achievement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance-pt_BR/" title="Escala de Dificuldade e Equilíbrio" class="md-nav__link">
+      Escala de Dificuldade e Equilíbrio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap-pt_BR/" title="Roteiro de Desenvolvimento de um Set de Conquistas" class="md-nav__link">
+      Roteiro de Desenvolvimento de um Set de Conquistas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation-pt_BR/" title="Criação de Ícones e Emblemas" class="md-nav__link">
+      Criação de Ícones e Emblemas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Leaderboards-pt_BR/" title="Leaderboards" class="md-nav__link">
+      Leaderboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rich-Presence-pt_BR/" title="Rich Presence" class="md-nav__link">
+      Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Design-pt_BR/" title="Design de Conquistas" class="md-nav__link">
+      Design de Conquistas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Español
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Español
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home-es/" title="Introducion" class="md-nav__link">
+      Introducion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-es/" title="Código de Conducta del Usuario" class="md-nav__link">
+      Código de Conducta del Usuario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-es/" title="FAQ - Preguntas Frecuentes" class="md-nav__link">
+      FAQ - Preguntas Frecuentes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../My-game-is-not-loading-achievements-es/" title="Mi juego no esta cargando los logros" class="md-nav__link">
+      Mi juego no esta cargando los logros
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Desarrolladores
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Desarrolladores
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Codigo de Conducta del Desarrollador
+      </label>
+    
+    <a href="./" title="Codigo de Conducta del Desarrollador" class="md-nav__link md-nav__link--active">
+      Codigo de Conducta del Desarrollador
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-de-oro" title="Reglas de Oro" class="md-nav__link">
+    Reglas de Oro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-los-desarrolladores-tienen-que-seguir-lo-siguientes-puntos-para-estar-en-buenos-terminos" title="Resumen - Los Desarrolladores tienen que seguir lo siguientes puntos para estar en buenos terminos" class="md-nav__link">
+    Resumen - Los Desarrolladores tienen que seguir lo siguientes puntos para estar en buenos terminos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-empezar" title="Antes de empezar" class="md-nav__link">
+    Antes de empezar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estas-libre-de-tickets" title="Estas libre de tickets?" class="md-nav__link">
+    Estas libre de tickets?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-juego-esta-presente-en-la-base-de-datos" title="El juego esta presente en la base de datos?" class="md-nav__link">
+    El juego esta presente en la base de datos?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si" title="Si" class="md-nav__link">
+    Si
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-juego-ya-cuenta-con-un-set-de-logros" title="El juego ya cuenta con un set de logros?" class="md-nav__link">
+    El juego ya cuenta con un set de logros?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yes" title="Yes" class="md-nav__link">
+    Yes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_1" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hay-otros-desarrollor-trabajando-en-el-juego" title="Hay otros desarrollor trabajando en el juego?" class="md-nav__link">
+    Hay otros desarrollor trabajando en el juego?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si_1" title="Si" class="md-nav__link">
+    Si
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_2" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anunciando-tus-planes-para-trabajar-en-un-juego" title="Anunciando tus planes para trabajar en un juego" class="md-nav__link">
+    Anunciando tus planes para trabajar en un juego
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notas-importantes" title="Notas Importantes" class="md-nav__link">
+    Notas Importantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-para-reservar-juegos-para-desarrollo" title="Reglas para reservar juegos para desarrollo" class="md-nav__link">
+    Reglas para reservar juegos para desarrollo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglamento-de-diseno-basico-de-logros" title="Reglamento de Diseño Basico de Logros" class="md-nav__link">
+    Reglamento de Diseño Basico de Logros
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-no-bienvenidos" title="Conceptos No-Bienvenidos" class="md-nav__link">
+    Conceptos No-Bienvenidos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-set-de-logros-tiene-que-tener" title="Cada Set de logros TIENE que tener" class="md-nav__link">
+    Cada Set de logros TIENE que tener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-set-de-logros-deberia-tener" title="Cada Set de logros DEBERIA tener" class="md-nav__link">
+    Cada Set de logros DEBERIA tener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendado-pero-no-requerido-por-cada-set-de-logros" title="Recomendado pero no requerido por cada Set de logros" class="md-nav__link">
+    Recomendado pero no requerido por cada Set de logros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-para-ayudarle-a-tener-exito" title="Herramientas para ayudarle a tener éxito" class="md-nav__link">
+    Herramientas para ayudarle a tener éxito
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revisiones-trabajando-en-sets-que-ya-cuentan-con-logros" title="Revisiones - Trabajando en Sets que ya cuentan con logros" class="md-nav__link">
+    Revisiones - Trabajando en Sets que ya cuentan con logros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-de-codigo" title="Notas de Codigo" class="md-nav__link">
+    Notas de Codigo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-tickets" title="Manejo de Tickets" class="md-nav__link">
+    Manejo de Tickets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedad-de-los-logros" title="Propiedad de los logros" class="md-nav__link">
+    Propiedad de los logros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroalimentacion-sobre-el-codigo-de-conducta-del-desarrollador" title="Retroalimentacion sobre el Codigo de Conducta del Desarrollador" class="md-nav__link">
+    Retroalimentacion sobre el Codigo de Conducta del Desarrollador
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer-es/" title="Como convertirme en un Desarrollador de Logros" class="md-nav__link">
+      Como convertirme en un Desarrollador de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer-es/" title="Primeros pasos como un Desarrollador de Logros" class="md-nav__link">
+      Primeros pasos como un Desarrollador de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Inspector-Overview-es/" title="Un vistazo al Inspector de Memoria" class="md-nav__link">
+      Un vistazo al Inspector de Memoria
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-6" type="checkbox" id="nav-4-3-6">
+    
+    <label class="md-nav__link" for="nav-4-3-6">
+      Características en la Logica de un Logro
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-6">
+        Características en la Logica de un Logro
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Hit-Counts-es/" title="Contador de Golpes (Hit Counts)" class="md-nav__link">
+      Contador de Golpes (Hit Counts)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Delta-Values-es/" title="Valores Delta" class="md-nav__link">
+      Valores Delta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ResetIf-Flag-es/" title="Bandera ResetIf" class="md-nav__link">
+      Bandera ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PauseIf-Flag-es/" title="Bandera PauseIf" class="md-nav__link">
+      Bandera PauseIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddSource-Flag-es/" title="Bandera AddSource" class="md-nav__link">
+      Bandera AddSource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SubSource-Flag-es/" title="Bandera SubSource" class="md-nav__link">
+      Bandera SubSource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddHits-Flag-es/" title="Bandera AddHits" class="md-nav__link">
+      Bandera AddHits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Combining-Flags-es/" title="Combinando Banderas" class="md-nav__link">
+      Combinando Banderas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alt-Groups-es/" title="Alt Groups" class="md-nav__link">
+      Alt Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minimum-Required-Versions-for-Logic-Features-es/" title="Versiones Mínimas Requeridas para Funciones en la Lógica" class="md-nav__link">
+      Versiones Mínimas Requeridas para Funciones en la Lógica
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-7" type="checkbox" id="nav-4-3-7">
+    
+    <label class="md-nav__link" for="nav-4-3-7">
+      Ejemplos Reales
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-7">
+        Ejemplos Reales
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-as-a-Timer-es/" title="Utilizando Hit Counts como un Temporizador" class="md-nav__link">
+      Utilizando Hit Counts como un Temporizador
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" title="Utilizando Valores Delta y Hit Counts para Detectar un Incremento" class="md-nav__link">
+      Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" title="Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado" class="md-nav__link">
+      Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" title="Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame" class="md-nav__link">
+      Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" title="Creando un Temporizador con un ResetIf Hits basandote en la Velocidad de un Juego" class="md-nav__link">
+      Creando un Temporizador con un ResetIf Hits basandote en la Velocidad de un Juego
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates-es/" title="Plantillas para Logros" class="md-nav__link">
+      Plantillas para Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks-es/" title="Tips y Trucos" class="md-nav__link">
+      Tips y Trucos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance-es/" title="Escala de Dificultad y Balance" class="md-nav__link">
+      Escala de Dificultad y Balance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-de-oro" title="Reglas de Oro" class="md-nav__link">
+    Reglas de Oro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-los-desarrolladores-tienen-que-seguir-lo-siguientes-puntos-para-estar-en-buenos-terminos" title="Resumen - Los Desarrolladores tienen que seguir lo siguientes puntos para estar en buenos terminos" class="md-nav__link">
+    Resumen - Los Desarrolladores tienen que seguir lo siguientes puntos para estar en buenos terminos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-empezar" title="Antes de empezar" class="md-nav__link">
+    Antes de empezar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estas-libre-de-tickets" title="Estas libre de tickets?" class="md-nav__link">
+    Estas libre de tickets?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-juego-esta-presente-en-la-base-de-datos" title="El juego esta presente en la base de datos?" class="md-nav__link">
+    El juego esta presente en la base de datos?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si" title="Si" class="md-nav__link">
+    Si
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-juego-ya-cuenta-con-un-set-de-logros" title="El juego ya cuenta con un set de logros?" class="md-nav__link">
+    El juego ya cuenta con un set de logros?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yes" title="Yes" class="md-nav__link">
+    Yes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_1" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hay-otros-desarrollor-trabajando-en-el-juego" title="Hay otros desarrollor trabajando en el juego?" class="md-nav__link">
+    Hay otros desarrollor trabajando en el juego?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si_1" title="Si" class="md-nav__link">
+    Si
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_2" title="No" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anunciando-tus-planes-para-trabajar-en-un-juego" title="Anunciando tus planes para trabajar en un juego" class="md-nav__link">
+    Anunciando tus planes para trabajar en un juego
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notas-importantes" title="Notas Importantes" class="md-nav__link">
+    Notas Importantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-para-reservar-juegos-para-desarrollo" title="Reglas para reservar juegos para desarrollo" class="md-nav__link">
+    Reglas para reservar juegos para desarrollo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglamento-de-diseno-basico-de-logros" title="Reglamento de Diseño Basico de Logros" class="md-nav__link">
+    Reglamento de Diseño Basico de Logros
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-no-bienvenidos" title="Conceptos No-Bienvenidos" class="md-nav__link">
+    Conceptos No-Bienvenidos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-set-de-logros-tiene-que-tener" title="Cada Set de logros TIENE que tener" class="md-nav__link">
+    Cada Set de logros TIENE que tener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cada-set-de-logros-deberia-tener" title="Cada Set de logros DEBERIA tener" class="md-nav__link">
+    Cada Set de logros DEBERIA tener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendado-pero-no-requerido-por-cada-set-de-logros" title="Recomendado pero no requerido por cada Set de logros" class="md-nav__link">
+    Recomendado pero no requerido por cada Set de logros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-para-ayudarle-a-tener-exito" title="Herramientas para ayudarle a tener éxito" class="md-nav__link">
+    Herramientas para ayudarle a tener éxito
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revisiones-trabajando-en-sets-que-ya-cuentan-con-logros" title="Revisiones - Trabajando en Sets que ya cuentan con logros" class="md-nav__link">
+    Revisiones - Trabajando en Sets que ya cuentan con logros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-de-codigo" title="Notas de Codigo" class="md-nav__link">
+    Notas de Codigo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-tickets" title="Manejo de Tickets" class="md-nav__link">
+    Manejo de Tickets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedad-de-los-logros" title="Propiedad de los logros" class="md-nav__link">
+    Propiedad de los logros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroalimentacion-sobre-el-codigo-de-conducta-del-desarrollador" title="Retroalimentacion sobre el Codigo de Conducta del Desarrollador" class="md-nav__link">
+    Retroalimentacion sobre el Codigo de Conducta del Desarrollador
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Developers-Code-of-Conduct-es.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Codigo de Conducta del Desarrollador</h1>
+                
+                <p>Este documento expone los derechos, responsabilidades y reglas para desarrolladores.</p>
+<p><strong>Si tu no eres un desarrollador deberias checar <a href="../How-to-Become-an-Achievement-Developer">aqui, como me convierto en un desarrollador</a>.</strong></p>
+<p><strong>Checa tambien</strong>: <a href="../Users-Code-of-Conduct-es">Codigo de conducta del usuario</a>.</p>
+<h2 id="reglas-de-oro">Reglas de Oro<a class="headerlink" href="#reglas-de-oro" title="Permanent link">link</a></h2>
+<ol>
+<li>Respeta a tu compañero desarrollador y comunica cualquier problema que tengas civilmente.</li>
+<li>Haz espacio para otros desarrolladores puedan trabajar en juegos que ellos tambien quieren, en su propia manera.</li>
+<li>Cualquiera puede convertirse en desarrollador si hace el suficiente esfuerzo.</li>
+<li>Todos los sets de logros estan abiertos para mejoras.</li>
+</ol>
+<h2 id="resumen-los-desarrolladores-tienen-que-seguir-lo-siguientes-puntos-para-estar-en-buenos-terminos">Resumen - Los Desarrolladores tienen que seguir lo siguientes puntos para estar en buenos terminos<a class="headerlink" href="#resumen-los-desarrolladores-tienen-que-seguir-lo-siguientes-puntos-para-estar-en-buenos-terminos" title="Permanent link">link</a></h2>
+<ul>
+<li>Cuando planees trabajar en un nuevo juego reservalo <a href="#announcing-your-plans-to-work-on-a-game">anunciando el plan basico en el foro del juego</a> en un nuevo post.</li>
+<li>Solo anuncia nuevos planes cuando tu estes <a href="#handling-tickets">libre de tickets</a>. Sigue las <a href="#rules-on-reserving-games-for-development">reglas de reservacion</a> tambien.</li>
+<li>Espera 3 dias despues que hubieras <a href="#announcing-your-plans-to-work-on-a-game">posteado tus planes</a> para promober cualquiera de los logros a core.</li>
+<li>Manten tu trabajo libre de <a href="#unwelcome-concepts">conceptos-no bienvenidos</a>.</li>
+<li>Usa <a href="#every-achievement-set-must-have">codigo protectivo</a> para prevenir cheating y exploits potenciales.</li>
+<li>Deja <a href="#code-notes">notas de codigo</a> precisas para cada condicion de logro que utilices.</li>
+<li>Para revisiones de set, sigue la <a href="../Achievement-Set-Revisions">politica de revision</a>.</li>
+<li><a href="#handling-tickets">Resuelve tickets</a>, y deja notas cada vez que lo hagas.</li>
+<li><strong>Una vez que publiques tu trabajo, estas dejando que la comunidad <a href="#achievementset-ownership">reseñe y lo retrabaje a traves del tiempo</a>.</strong></li>
+</ul>
+<h2 id="antes-de-empezar">Antes de empezar<a class="headerlink" href="#antes-de-empezar" title="Permanent link">link</a></h2>
+<h3 id="estas-libre-de-tickets">Estas libre de tickets?<a class="headerlink" href="#estas-libre-de-tickets" title="Permanent link">link</a></h3>
+<p>Antes que trabajes en nuevos juegos tienes que resolver todos los tickets con los que cuentes. Una vez que estes libre tickets, entonces adelante.</p>
+<h3 id="el-juego-esta-presente-en-la-base-de-datos">El juego esta presente en la base de datos?<a class="headerlink" href="#el-juego-esta-presente-en-la-base-de-datos" title="Permanent link">link</a></h3>
+<h4 id="no">No<a class="headerlink" href="#no" title="Permanent link">link</a></h4>
+<p>Entonces pregunta para que sea agregado por medio de Discord <strong>#help-me</strong> o en nuestros foros para que algun desarrollador lo agregue por ti. Es esencial que tu <a href="../Working-with-the-Right-ROM">elijas el ROM(s) correcto para trabajar</a>. Si quieres trabajar en un hack, checa <a href="../Achievements-for-ROM-hacks">logros para hacks de ROM</a> doc first.</p>
+<h4 id="si">Si<a class="headerlink" href="#si" title="Permanent link">link</a></h4>
+<p>Bien! adelante.</p>
+<h3 id="el-juego-ya-cuenta-con-un-set-de-logros">El juego ya cuenta con un set de logros?<a class="headerlink" href="#el-juego-ya-cuenta-con-un-set-de-logros" title="Permanent link">link</a></h3>
+<h4 id="yes">Yes<a class="headerlink" href="#yes" title="Permanent link">link</a></h4>
+<p>Si existe un set, no te rindas. Aun lo puede mejorar, agregando/removiendo/re-trabajando logros, o haz cambios a titulos e imagenes, etc. Sin embargo tendras que pasar por el <a href="../Achievement-Set-Revisions">proceso de revision de tu set</a>.</p>
+<h4 id="no_1">No<a class="headerlink" href="#no_1" title="Permanent link">link</a></h4>
+<p>Busca delicadamente. Algunas veces hay multiples entradas en la base de datos para el mismo juego con diferente titulos. Una vez que este seguro, ahora necesitas checar si hay otro desarrollador trabajando en el juego.</p>
+<p><strong>Nota:</strong> Solo un set de logros es permitido por el mismo juego y consola. Para detalles mira <a href="../Working-with-the-Right-ROM">trabajando con el ROM correcto</a>.</p>
+<h3 id="hay-otros-desarrollor-trabajando-en-el-juego">Hay otros desarrollor trabajando en el juego?<a class="headerlink" href="#hay-otros-desarrollor-trabajando-en-el-juego" title="Permanent link">link</a></h3>
+<p>Para estar seguro que no hay otro desarrollador trabajando en ese juego, checa el foro oficial del juego (esa es la manera oficial de <a href="#rules-on-reserving-games-for-development">reservar el juego en el que quieres trabajar</a>). Esto es necesario para evadir conflictos entre multiples desarrolladores trabajando en el mismo juego.</p>
+<h4 id="si_1">Si<a class="headerlink" href="#si_1" title="Permanent link">link</a></h4>
+<p>Podria ser posible que el desarrollor hubiera dejado de trabajar en ellos. Se espera que el desarrollador renueve su reservacion cada dos meses. Mira en las etiquetas de tiempo para ver cuando el desarrollador postio su reservacion de desarrollo. Si el desarrollador no a clarificado o renovado su reservacion despues de que hubieran pasado dos meses puedes asumir que fue abandonado y asi postear tus planes de trabajo.</p>
+<h4 id="no_2">No<a class="headerlink" href="#no_2" title="Permanent link">link</a></h4>
+<p>Perfecto! Adelante! El siguiente paso es anunciar tus planes para desarrollar logros para el juego.</p>
+<h2 id="anunciando-tus-planes-para-trabajar-en-un-juego">Anunciando tus planes para trabajar en un juego<a class="headerlink" href="#anunciando-tus-planes-para-trabajar-en-un-juego" title="Permanent link">link</a></h2>
+<p>Anunciar tus planes para el set de logros se hace en el foro oficial del juego del que tienes en mente crear el set.</p>
+<p>Postear tus planes es tu manera de reservar oficialmente un juego, sin embargo hay algunas <a href="#rules-on-reserving-games-for-development">reglas sobre el apartado sets</a> que tienes que tener en cuenta.</p>
+<h3 id="notas-importantes">Notas Importantes<a class="headerlink" href="#notas-importantes" title="Permanent link">link</a></h3>
+<ul>
+<li>
+<p><strong>No hay necesidad de que dejes un plan completo y detallado!</strong> Simplemente una idea general de cuales son tus intenciones (tus planes son muy probables que cambien una vez que hubieras investigado la memoria del juego). Haz esto para que la comunidad pueda dejar recomendaciones y puede proveer retroalimentacion.</p>
+</li>
+<li>
+<p>Intenta estar abierto a recomendaciones. Si no estas de acuerdo con la retroalimentacion recivida, puedes continuar con tu concepto. Pero recuerda tener lo siguiente en mente:</p>
+<ul>
+<li>Tienes que aderirte al <a href="#basic-achievement-design-guidelines">Reglamento de Diseño Basico de Logros</a>, de otra manera tu set no sera aprovado.</li>
+<li><strong>Cuando tu publicas tu trabajo estas dejando a la comunidad para que sea reseñado y re-trabajado sobre el paso del tiempo.</strong></li>
+</ul>
+</li>
+<li>
+<p>Si alguien escogio un juego del cual tu estas interesado antes que tu, no te desesperes. Te animamos a solicitar una colaboración. Puedes publicar tu deseos de colaborar en el foro o mandar un mensaje al desarrollador para obtener permiso para que publique tus contribuciones. Tambien puedes esperar e ir por una <a href="../Achievement-Set-Revisions">Revision de Set</a> after the set is published.</p>
+</li>
+</ul>
+<h3 id="reglas-para-reservar-juegos-para-desarrollo">Reglas para reservar juegos para desarrollo<a class="headerlink" href="#reglas-para-reservar-juegos-para-desarrollo" title="Permanent link">link</a></h3>
+<p>Las siguientes reglas existen para saber facilmente quien esta trabajando en que, definir que es aceptable, prevenir que el desarrollo de juegos no se estanque, proteger a los desarrolladores de indebida presion social.</p>
+<ol>
+<li>
+<p><strong>La unica manera de reservar un juego es posteando tu plan en el foro oficial del juego en un nuevo post</strong>.</p>
+<ul>
+<li>No otros planes o listas posteadas en cualquier otro luegar son consideradas en esto.</li>
+<li>Notas de codigo no reservan un juego (si agregaste notas pero no reservaste el juego en el foro, cualquier desarrollador es libre de trabajar en el).</li>
+</ul>
+</li>
+<li>
+<p>Numero maximo de juegos reservados a la vez:</p>
+<ul>
+<li><strong>Desarrollador Junior</strong>: 1.</li>
+<li><strong>Desarrollador</strong>: 4.</li>
+<li><strong>Desarrollador Veterano</strong>: 8 (un Desarrollador Veterano es alguien que a sido un desarrollador por minimo 18 meses <em>y</em> a publicado un minimo de 20 sets de logros).</li>
+<li><em>Nota:</em> Trabajar en una revision aprovada o unirte con otro desarrollador en un esfuerzo cooperativo no cuenta para este total.</li>
+</ul>
+</li>
+<li>
+<p>Solo reserva un juego para desarrollo cuando realmente ya vaz a empezar a trabajar en el. En otras palabras, no reserves juegos simplemenete para blockear otros usuarios en trabajar en ellos.</p>
+</li>
+<li>
+<p>Puedes renovar tu reservacion cada dos meses (+/- 2 semanas) si no haz terminado tu set aun.</p>
+<ul>
+<li>Para renovar tu reservacion, postealo en el foro oficial del juego.</li>
+<li>No edites tus antiguas declaraciones, haz un nuevo post hablando del progreso actual.</li>
+<li>Evita ignorar un set indefinidamente. Si parece que un desarrollador continua retrasando el desarrollo de un set con poco o sin progreso el staff puede intervenir.</li>
+</ul>
+</li>
+<li>
+<p>No pidas, presiones o desalentes a nadie en trabajar en cualquier juego, en publico o en privado (claramente, asumiendo que la persona esta siguiendo todos los otros estandartes de este Codigo de Conducta).</p>
+</li>
+<li>
+<p>Una vez que hubieras posteado tu plan, <strong>espera un minimo de <em>72 hours</em> antes de promover cualquier logro a Core</strong>. Esto le da tiempo a la comunidad de renovar tu plan y dar retro-alimentacion. Este periodo de espera empieza despues que tu plan este presente y esta en su forma completa (o mayormente completa).</p>
+</li>
+</ol>
+<h2 id="reglamento-de-diseno-basico-de-logros">Reglamento de Diseño Basico de Logros<a class="headerlink" href="#reglamento-de-diseno-basico-de-logros" title="Permanent link">link</a></h2>
+<h3 id="conceptos-no-bienvenidos">Conceptos No-Bienvenidos<a class="headerlink" href="#conceptos-no-bienvenidos" title="Permanent link">link</a></h3>
+<p>Tu puedes (y deberias) se lo mas creativo que puedas, pero hay algunos conceptos que <strong>NO</strong> estan bienvenidos para logros, como:
+- Requirir el uso de glitches (aceptable en <a href="../Bonus-Sets">Sets Bonus</a>).
+- Requieren dos jugadores.
+- Requiere perfeccion por todo el juego (<strong>talvez</strong> aceptable in <a href="../Bonus-Sets">Sets Bonus</a>).
+- Morir (simplemente), o juega mal sin ningun proposito.
+- Contenido no apropiado (NSFW) en la imagen o texto.
+- Logros saltando frecuentemente con poco esfuerzo del jugador (incluyendo multiples logros por hacer la misma tarea, como vencer al jefe y otro por conseguir el item que dejo el jefe , etc.)
+- Logros obtenibles con zero esfuerzo sin razon alguna (ejemplo: empieza el juego con x personaje, colecciona una moneda). Es acceptable si hay algo divertido/historico/interesante que quieres tocar.
+- Se requiere grinding repetitivo y excesivo, asi como llega a level 99 en un RPG, sin razon alguna (<strong>talvez</strong> aceptable en <a href="../Bonus-Sets">Sets Bonus</a>).
+- Se basa completamente en suerte, especialmente cuando hay probabilidades realmente bajas. Sin embargo, para juegos que el factor aleatorio es un aspecto importante, podria ser apropiado.
+- "Logros Secretos", cuando los jugadores no tiene indicacion de que es lo que tienen que hacer. Si quieres prevenir spoilers da minimo una pista en el titulo o descripcion. De otra manera los jugadores van a empezar a buscar en la web o van a moverle al editor de Logros/Inspector de Memoria, y en el proceso pueden incluso toparse con peores spoilers.</p>
+<p>Con cada regla, hay un excepcion. Esta es especialmente verdad con conceptos no-bienvenidos. Todos los conceptos no-bienvenidos tienen un margen de aprovacion. cuando te encuentres en dudas puedes consultar con el equipo de administradores.</p>
+<h3 id="cada-set-de-logros-tiene-que-tener">Cada Set de logros TIENE que tener<a class="headerlink" href="#cada-set-de-logros-tiene-que-tener" title="Permanent link">link</a></h3>
+<p><strong>Proteccion</strong> para situaciones donde los jugadores puedes conseguir logros sin esfuerzo, como:</p>
+<ul>
+<li>Modo Demo;</li>
+<li>Cheat codes en el juego;</li>
+<li>Archivos de guardado;</li>
+<li>Passwords.</li>
+</ul>
+<p><strong>Tambien mira</strong>: <a href="../Achievement-Templates">Plantillas para logros</a> y <a href="../Real-Examples">Ejemplos reales</a> para algunas tecnicas de proteccion bien conocidas.</p>
+<h3 id="cada-set-de-logros-deberia-tener">Cada Set de logros DEBERIA tener<a class="headerlink" href="#cada-set-de-logros-deberia-tener" title="Permanent link">link</a></h3>
+<ul>
+<li>Minimo <a href="../Rich-Presence">Rich Presence</a> basico; </li>
+<li>Medallas (Badges) para cada Logro; </li>
+<li>Todo la informacion del juego llena, e imagenes del juego subidas.</li>
+</ul>
+<p><strong>Nota</strong>: Rich Presence, Tablas de clasificacion, y paginas del juego imagenes/informacion solo pueden ser agregadas por verdaderos desarrolladores</p>
+<h3 id="recomendado-pero-no-requerido-por-cada-set-de-logros">Recomendado pero no requerido por cada Set de logros<a class="headerlink" href="#recomendado-pero-no-requerido-por-cada-set-de-logros" title="Permanent link">link</a></h3>
+<ul>
+<li>Tablas de clasificacion para puntajes y retos de tiempo.</li>
+<li>Logros Perdidisos flageados, especialmente para RPGs y juegos largos. <ul>
+<li>Utiliza <code>[m]</code> al final del titulo del logro para flaggearlo como perdidiso.</li>
+</ul>
+</li>
+<li>Una guia de logros. Guias pueden ser creadas y posteadas <a href="https://github.com/RetroAchievements/guides/wiki">aqui</a>. </li>
+</ul>
+<h3 id="herramientas-para-ayudarle-a-tener-exito">Herramientas para ayudarle a tener éxito<a class="headerlink" href="#herramientas-para-ayudarle-a-tener-exito" title="Permanent link">link</a></h3>
+<p>Tenemos un We have a <a href="../Set-Development-Roadmap">mapa</a> que puedes utilizar como guia para crear un buen set de logros.
+Tambien tenemos una <a href="../Achievement-Design">guia de diseño de logros</a> en como diseñar buenos logros, no el lado tecnico pero si el conceptual. Crear un set balanceado es uno de los aspectos mas dificiles de desarrollo, tenemos una <a href="../Difficulty-Scale-and-Balance">guia de balance de dificultad</a> que te podria ayudar en pensar como crear un set que fluya.</p>
+<p>Es preferible y recomendado trabajar en un set a la vez. Pero si tienes mas, ten abiertas posibilidades para trabajar en equipo o incluso delegar la creacion de un set si otro desarrollador te contacta.</p>
+<h2 id="revisiones-trabajando-en-sets-que-ya-cuentan-con-logros">Revisiones - Trabajando en Sets que ya cuentan con logros<a class="headerlink" href="#revisiones-trabajando-en-sets-que-ya-cuentan-con-logros" title="Permanent link">link</a></h2>
+<p>Revisiones, si estas trabajando en un set que ya cuenta con logros tipicamente requiere aprovacion por la comunidad, presentando tu plan en el foro y en el canal de <strong>#revision-voting</strong> en Discord. No todos los cambios requieren aprovacion. Mira <a href="../Achievement-Set-Revisions">Revisiones de Sets de Logros</a> para mas detalles.</p>
+<h2 id="notas-de-codigo">Notas de Codigo<a class="headerlink" href="#notas-de-codigo" title="Permanent link">link</a></h2>
+<p>Deja notas precisas para cada valor que utilizes en un logro. Esto te ayuda a ti y a otros de mantener el set libre de bugs.</p>
+<p>Eres libre de agregar todos las notas que quieras en el juego sin incluso a ver declarado tus intenciones en trabajar en ese juego. Simplemente se cuidadoso en no borrar notas de codigo creadas por otros usuarios.</p>
+<h2 id="manejo-de-tickets">Manejo de Tickets<a class="headerlink" href="#manejo-de-tickets" title="Permanent link">link</a></h2>
+<p><strong>Despues que hubieras publicado tus logros preparate para reportes de bugs.</strong></p>
+<p>Se supone que tienes que dejar tu trabajo libre de bugs con el manejo de tickets y resolviendolos. Responde a todos los tickets lo mas pronto posible. Mientras mas pronto mejor, porque el problema esta fuera de la mente del jugador y puedes utilizarlo como ayuda para resolver el problema tambien.</p>
+<p>Mientras resuelves tickets, deja un pequeño resumen de lo que hiciste. Si tienes una indicacion o un reporte falso deja un mensaje cuales fueron tus conclusiones, y entonces cierra el ticket. <strong>Cerrar/Resolver un ticket sin dejar ningun comentario es una actitud no-bienvenida.</strong></p>
+<p>No declares tus planes de trabajar en un juego si cuentas con tickets abiertos.</p>
+<p>Si tienes planeado resolver tickets o arreglar bugs en logros hechos por otro desarrollador, siempre es una buena practica intentar contactarlo si aun se encuentra activo antes de modificar su trabajo. <strong>Un desarrollador inactivo es alguien que cuenta con 10 o mas tickets abiertos y tienen un minimo de dos meses de antiguedad</strong> (puedes ver sus tickets abiertos desde el Ticket Manager).</p>
+<p>Si el desarrollador esta activo, puedes simplemente hecharle una ayuda con la solucion.</p>
+<p>Si el desarrollador esta inactivo puedes libremente resolverle sus tickets. Sin embargo solamente tienes permitido arreglar el logro con lo que dice en su descripcion; <strong>no cambies la intencion de logro sin haber pasado por el proceso de revision</strong>.</p>
+<h2 id="propiedad-de-los-logros">Propiedad de los logros<a class="headerlink" href="#propiedad-de-los-logros" title="Permanent link">link</a></h2>
+<p><strong>Cuando tu publicas tu trabajo tu se lo estas dando a la comunidad</strong> para que sea reseñado y re-trabajado con el paso del tiempo - mira <a href="../Achievement-Set-Revisions">Revisiones en un Set</a>. </p>
+<p>Aunque los logros publicados por un desarrollador no son propiedad de el, el aun es el encargado en terminos de arreglar y dar mantenimiento. Si otro jugador corrige el logro el es el nuevo encargado de ese logro.</p>
+<h2 id="retroalimentacion-sobre-el-codigo-de-conducta-del-desarrollador">Retroalimentacion sobre el Codigo de Conducta del Desarrollador<a class="headerlink" href="#retroalimentacion-sobre-el-codigo-de-conducta-del-desarrollador" title="Permanent link">link</a></h2>
+<p>A pesar de que el Codigo de Conducta del Desarrollador es el resultado de un intenso debate, no es un documento absoluto. Si tiene sugerencias para nuevas mejoras, contactanos en nuestro servidor de Discord o manda un mensaje a <a href="https://retroachievements.org/user/RAdmin">RAdmin</a>.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2019-03-12 14:58] meleu:</code> Updated Developers Code of Conduct ES (markdown)</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Developer-docs-es/" title="Intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intro
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../How-to-Become-an-Achievement-Developer-es/" title="Como convertirme en un Desarrollador de Logros" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Como convertirme en un Desarrollador de Logros
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
