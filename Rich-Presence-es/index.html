@@ -1,0 +1,2753 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Rich-Presence-es/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>Rich Presence - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#introduccion" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.retroachievements.org/" title="RADocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">videogame_asset</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                RADocs
+              </span>
+              <span class="md-header-nav__topic">
+                Rich Presence
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      RetroAchievements/docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." title="General" class="md-tabs__link">
+          General
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Developer-docs/" title="Developers" class="md-tabs__link">
+          Developers
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Home-pt_BR/" title="Portugues" class="md-tabs__link">
+          Portugues
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Home-es/" title="Español" class="md-tabs__link md-tabs__link--active">
+          Español
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">videogame_asset</i>
+      
+    </span>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      RetroAchievements/docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct/" title="Users Code of Conduct" class="md-nav__link">
+      Users Code of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" title="Global Leaderboard and Achievement Hunting Rules" class="md-nav__link">
+      Global Leaderboard and Achievement Hunting Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../My-game-is-not-loading-achievements/" title="My game is not loading achievements" class="md-nav__link">
+      My game is not loading achievements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-contribute-if-you-are-not-a-developer/" title="How to contribute if you are not a developer" class="md-nav__link">
+      How to contribute if you are not a developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Why-you-shouldn't-use-the-load-state-feature/" title="Why you shouldn't use the load state feature" class="md-nav__link">
+      Why you shouldn't use the load state feature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" title="A message for Achievement Hunters and Completionists about revisions" class="md-nav__link">
+      A message for Achievement Hunters and Completionists about revisions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RABot,-the-RA-Discord-Robot/" title="RABot, the RA Discord Robot" class="md-nav__link">
+      RABot, the RA Discord Robot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Contributing-with-the-docs/" title="Contributing with the docs" class="md-nav__link">
+      Contributing with the docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-12" type="checkbox" id="nav-1-12">
+    
+    <label class="md-nav__link" for="nav-1-12">
+      RAEmulators
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-12">
+        RAEmulators
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RAQUASI88/" title="RAQUASI88" class="md-nav__link">
+      RAQUASI88
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RALibretro/" title="RALibretro" class="md-nav__link">
+      RALibretro
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Downloads/" title="Downloads" class="md-nav__link">
+      Downloads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Free-Games/" title="Free Games" class="md-nav__link">
+      Free Games
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Useful-Links/" title="Useful Links" class="md-nav__link">
+      Useful Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-RA-Documentation-Works/" title="How RA Documentation Works" class="md-nav__link">
+      How RA Documentation Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../About-Us/" title="About Us" class="md-nav__link">
+      About Us
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Developers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Developers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developers-Code-of-Conduct/" title="Developer's Code of Conduct" class="md-nav__link">
+      Developer's Code of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer/" title="How to Become an Achievement Developer" class="md-nav__link">
+      How to Become an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer/" title="Getting Started as an Achievement Developer" class="md-nav__link">
+      Getting Started as an Achievement Developer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Inspector-Overview/" title="Memory Inspector Overview" class="md-nav__link">
+      Memory Inspector Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Achievement Logic Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        Achievement Logic Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Hit-Counts/" title="Hit Counts" class="md-nav__link">
+      Hit Counts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Delta-Values/" title="Delta Values" class="md-nav__link">
+      Delta Values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ResetIf-Flag/" title="ResetIf Flag" class="md-nav__link">
+      ResetIf Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PauseIf-Flag/" title="PauseIf Flag" class="md-nav__link">
+      PauseIf Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddSource-Flag/" title="AddSource Flag" class="md-nav__link">
+      AddSource Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SubSource-Flag/" title="SubSource Flag" class="md-nav__link">
+      SubSource Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddHits-Flag/" title="AddHits Flag" class="md-nav__link">
+      AddHits Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Combining-Flags/" title="Combining Flags" class="md-nav__link">
+      Combining Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alt-Groups/" title="Alt Groups" class="md-nav__link">
+      Alt Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minimum-Required-Versions-for-Logic-Features/" title="Minimum Required Versions for Logic Features" class="md-nav__link">
+      Minimum Required Versions for Logic Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      Real Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        Real Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-as-a-Timer/" title="Using Hit Counts as a Timer" class="md-nav__link">
+      Using Hit Counts as a Timer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" title="Using Delta Values and Hit Counts to Detect an Increment" class="md-nav__link">
+      Using Delta Values and Hit Counts to Detect an Increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" title="Simple Example of How to Avoid Load State Abusing" class="md-nav__link">
+      Simple Example of How to Avoid Load State Abusing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" title="Circumvent the Problem of a Counter Incrementing Twice in the Same Frame" class="md-nav__link">
+      Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" title="Creating a Timer with ResetIf Hits based on the Speed of the Game" class="md-nav__link">
+      Creating a Timer with ResetIf Hits based on the Speed of the Game
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates/" title="Achievement Templates" class="md-nav__link">
+      Achievement Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks/" title="Tips and Tricks" class="md-nav__link">
+      Tips and Tricks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance/" title="Difficulty Scale and Balance" class="md-nav__link">
+      Difficulty Scale and Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Design/" title="Achievement Design" class="md-nav__link">
+      Achievement Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap/" title="Set Development Roadmap" class="md-nav__link">
+      Set Development Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions/" title="Achievement Set Revisions" class="md-nav__link">
+      Achievement Set Revisions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation/" title="Badge and Icon Creation" class="md-nav__link">
+      Badge and Icon Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Leaderboards/" title="Leaderboards" class="md-nav__link">
+      Leaderboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rich-Presence/" title="Rich Presence" class="md-nav__link">
+      Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-the-Right-ROM/" title="Working with the Right ROM" class="md-nav__link">
+      Working with the Right ROM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Game-Identification/" title="Game Identification" class="md-nav__link">
+      Game Identification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-nav__link">
+      Bonus Set Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievements-for-ROM-hacks/" title="Achievements for ROM hacks" class="md-nav__link">
+      Achievements for ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips/" title="Console Specific Tips" class="md-nav__link">
+      Console Specific Tips
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Portugues
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Portugues
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Geral
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Geral
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-pt_BR/" title="Código de Conduta do Usuário" class="md-nav__link">
+      Código de Conduta do Usuário
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-pt_BR/" title="FAQ - Perguntas Frequentes" class="md-nav__link">
+      FAQ - Perguntas Frequentes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" title="Como contribuir se você não é um desenvolvedor" class="md-nav__link">
+      Como contribuir se você não é um desenvolvedor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Desenvolvedores
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Desenvolvedores
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" title="Primeiros Passos como um Desenvolvedor de Conquistas" class="md-nav__link">
+      Primeiros Passos como um Desenvolvedor de Conquistas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features-pt_BR/" title="Recursos de Lógica para Achievements" class="md-nav__link">
+      Recursos de Lógica para Achievements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-4" type="checkbox" id="nav-3-3-4">
+    
+    <label class="md-nav__link" for="nav-3-3-4">
+      Exemplos Reais
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-4">
+        Exemplos Reais
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples-pt_BR/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" title="Usando Hit Counts e ResetIf" class="md-nav__link">
+      Usando Hit Counts e ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" title="Usando Delta Values e ResetIf" class="md-nav__link">
+      Usando Delta Values e ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" title="Simples Exemplo de como Evitar Abuso de Load State" class="md-nav__link">
+      Simples Exemplo de como Evitar Abuso de Load State
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks-pt_BR/" title="Dicas e Truques" class="md-nav__link">
+      Dicas e Truques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips-pt_BR/" title="Dicas Específicas de Console" class="md-nav__link">
+      Dicas Específicas de Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates-pt_BR/" title="Modelos de Achievement" class="md-nav__link">
+      Modelos de Achievement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance-pt_BR/" title="Escala de Dificuldade e Equilíbrio" class="md-nav__link">
+      Escala de Dificuldade e Equilíbrio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap-pt_BR/" title="Roteiro de Desenvolvimento de um Set de Conquistas" class="md-nav__link">
+      Roteiro de Desenvolvimento de um Set de Conquistas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation-pt_BR/" title="Criação de Ícones e Emblemas" class="md-nav__link">
+      Criação de Ícones e Emblemas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Leaderboards-pt_BR/" title="Leaderboards" class="md-nav__link">
+      Leaderboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rich-Presence-pt_BR/" title="Rich Presence" class="md-nav__link">
+      Rich Presence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Design-pt_BR/" title="Design de Conquistas" class="md-nav__link">
+      Design de Conquistas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Español
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Español
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Home-es/" title="Introducción" class="md-nav__link">
+      Introducción
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Users-Code-of-Conduct-es/" title="Código de Conducta del Usuario" class="md-nav__link">
+      Código de Conducta del Usuario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ-es/" title="FAQ - Preguntas Frecuentes" class="md-nav__link">
+      FAQ - Preguntas Frecuentes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../My-game-is-not-loading-achievements-es/" title="Mi juego no esta cargando los logros" class="md-nav__link">
+      Mi juego no esta cargando los logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Downloads-es/" title="Descargas" class="md-nav__link">
+      Descargas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Desarrolladores
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Desarrolladores
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developer-docs-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developers-Code-of-Conduct-es/" title="Codigo de Conducta del Desarrollador" class="md-nav__link">
+      Codigo de Conducta del Desarrollador
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How-to-Become-an-Achievement-Developer-es/" title="Como convertirme en un Desarrollador de Logros" class="md-nav__link">
+      Como convertirme en un Desarrollador de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started-as-an-Achievement-Developer-es/" title="Primeros pasos como un Desarrollador de Logros" class="md-nav__link">
+      Primeros pasos como un Desarrollador de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Memory-Inspector-Overview-es/" title="Un vistazo al Inspector de Memoria" class="md-nav__link">
+      Un vistazo al Inspector de Memoria
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-6" type="checkbox" id="nav-4-3-6">
+    
+    <label class="md-nav__link" for="nav-4-3-6">
+      Características en la Logica de un Logro
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-6">
+        Características en la Logica de un Logro
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Hit-Counts-es/" title="Contador de Golpes (Hit Counts)" class="md-nav__link">
+      Contador de Golpes (Hit Counts)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Delta-Values-es/" title="Valores Delta" class="md-nav__link">
+      Valores Delta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ResetIf-Flag-es/" title="Bandera ResetIf" class="md-nav__link">
+      Bandera ResetIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PauseIf-Flag-es/" title="Bandera PauseIf" class="md-nav__link">
+      Bandera PauseIf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddSource-Flag-es/" title="Bandera AddSource" class="md-nav__link">
+      Bandera AddSource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SubSource-Flag-es/" title="Bandera SubSource" class="md-nav__link">
+      Bandera SubSource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddHits-Flag-es/" title="Bandera AddHits" class="md-nav__link">
+      Bandera AddHits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Combining-Flags-es/" title="Combinando Banderas" class="md-nav__link">
+      Combinando Banderas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Alt-Groups-es/" title="Alt Groups" class="md-nav__link">
+      Alt Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minimum-Required-Versions-for-Logic-Features-es/" title="Versiones Mínimas Requeridas para Funciones en la Lógica" class="md-nav__link">
+      Versiones Mínimas Requeridas para Funciones en la Lógica
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-7" type="checkbox" id="nav-4-3-7">
+    
+    <label class="md-nav__link" for="nav-4-3-7">
+      Ejemplos Reales
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-7">
+        Ejemplos Reales
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Real-Examples-es/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Hit-Counts-as-a-Timer-es/" title="Utilizando Hit Counts como un Temporizador" class="md-nav__link">
+      Utilizando Hit Counts como un Temporizador
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" title="Utilizando Valores Delta y Hit Counts para Detectar un Incremento" class="md-nav__link">
+      Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" title="Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado" class="md-nav__link">
+      Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" title="Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame" class="md-nav__link">
+      Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" title="Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego" class="md-nav__link">
+      Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Templates-es/" title="Plantillas para Logros" class="md-nav__link">
+      Plantillas para Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tips-and-Tricks-es/" title="Tips y Trucos" class="md-nav__link">
+      Tips y Trucos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Difficulty-Scale-and-Balance-es/" title="Escala de Dificultad y Balance" class="md-nav__link">
+      Escala de Dificultad y Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Design-es/" title="Diseño de Logros" class="md-nav__link">
+      Diseño de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-Development-Roadmap-es/" title="Mapa de Desarrollo de Set" class="md-nav__link">
+      Mapa de Desarrollo de Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievement-Set-Revisions-es/" title="Revisiones en Set de Logros" class="md-nav__link">
+      Revisiones en Set de Logros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Badge-and-Icon-Creation-es/" title="Creación de Iconos y Badges" class="md-nav__link">
+      Creación de Iconos y Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Leaderboards-es/" title="Tablas de Clasificación" class="md-nav__link">
+      Tablas de Clasificación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Rich Presence
+      </label>
+    
+    <a href="./" title="Rich Presence" class="md-nav__link md-nav__link--active">
+      Rich Presence
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" title="Introducción" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" title="Como funciona?" class="md-nav__link">
+    Como funciona?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-super-mario-bros" title="Ejemplo (Super Mario Bros.)" class="md-nav__link">
+    Ejemplo (Super Mario Bros.)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookups" title="Lookups" class="md-nav__link">
+    Lookups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato" title="Formato" class="md-nav__link">
+    Formato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analizando-el-lookup-de-ejemplo" title="Analizando el Lookup de Ejemplo" class="md-nav__link">
+    Analizando el Lookup de Ejemplo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-direcciones" title="Tamaño de Direcciones" class="md-nav__link">
+    Tamaño de Direcciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-con-strings-condicionales" title="Display con Strings Condicionales" class="md-nav__link">
+    Display con Strings Condicionales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-binario-programado-en-decimal-bcd" title="Código Binario programado en Decimal (BCD)" class="md-nav__link">
+    Código Binario programado en Decimal (BCD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites" title="Limites" class="md-nav__link">
+    Limites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-la-sintaxis" title="Detalles de la Sintaxis" class="md-nav__link">
+    Detalles de la Sintaxis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-y-trucos" title="Tips y Trucos" class="md-nav__link">
+    Tips y Trucos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-los-valores" title="Propiedades de los Valores" class="md-nav__link">
+    Propiedades de los Valores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simbolos-estandar-unicode" title="Símbolos Estándar Unicode" class="md-nav__link">
+    Símbolos Estándar Unicode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollando-rich-presence" title="Desarrollando Rich Presence" class="md-nav__link">
+    Desarrollando Rich Presence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working-with-the-Right-ROM-es/" title="Trabajando con el ROM apropiado" class="md-nav__link">
+      Trabajando con el ROM apropiado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Game-Identification-es/" title="Identificación del Juego" class="md-nav__link">
+      Identificación del Juego
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bonus-Sets-es/" title="Guía para Sets Bonus" class="md-nav__link">
+      Guía para Sets Bonus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Achievements-for-ROM-hacks-es/" title="Logros para ROM hacks" class="md-nav__link">
+      Logros para ROM hacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Console-Specific-Tips-es/" title="Tips Específicos por Consola" class="md-nav__link">
+      Tips Específicos por Consola
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" title="Introducción" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" title="Como funciona?" class="md-nav__link">
+    Como funciona?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-super-mario-bros" title="Ejemplo (Super Mario Bros.)" class="md-nav__link">
+    Ejemplo (Super Mario Bros.)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookups" title="Lookups" class="md-nav__link">
+    Lookups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato" title="Formato" class="md-nav__link">
+    Formato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analizando-el-lookup-de-ejemplo" title="Analizando el Lookup de Ejemplo" class="md-nav__link">
+    Analizando el Lookup de Ejemplo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-direcciones" title="Tamaño de Direcciones" class="md-nav__link">
+    Tamaño de Direcciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-con-strings-condicionales" title="Display con Strings Condicionales" class="md-nav__link">
+    Display con Strings Condicionales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-binario-programado-en-decimal-bcd" title="Código Binario programado en Decimal (BCD)" class="md-nav__link">
+    Código Binario programado en Decimal (BCD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites" title="Limites" class="md-nav__link">
+    Limites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-la-sintaxis" title="Detalles de la Sintaxis" class="md-nav__link">
+    Detalles de la Sintaxis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-y-trucos" title="Tips y Trucos" class="md-nav__link">
+    Tips y Trucos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-los-valores" title="Propiedades de los Valores" class="md-nav__link">
+    Propiedades de los Valores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simbolos-estandar-unicode" title="Símbolos Estándar Unicode" class="md-nav__link">
+    Símbolos Estándar Unicode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollando-rich-presence" title="Desarrollando Rich Presence" class="md-nav__link">
+    Desarrollando Rich Presence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Rich-Presence-es.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Rich Presence</h1>
+                
+                <h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">link</a></h2>
+<p>Rich Presence <strong>(RP)</strong> es un breve resumen de lo que están haciendo los jugadores activos en su partida. Para tener RP en un juego necesitas un Script de Rich Presence <strong>(RPS)</strong> que este es creador por desarrolladores. El Script checa la memoria del juego y ya sea como esta fue programada reporta los valores de ciertas direcciones con definiciones asignadas por el desarrollador así como en que stage se encuentra el jugador, cuantas vidas tienes, si el juego esta en pausa, que modo de juego se encuentra jugando, lo que a logrado el jugador, etc. Esta informacion es reportada de vuelta al sitio. <strong>Cada juego publicado debería de tener mínimo un RPS básico.</strong></p>
+<p><strong>Ejemplo de RP en acción:</strong></p>
+<p><img alt="Example of RP in action" src="https://i.imgur.com/E5097sz.png" />  </p>
+<p>Para ver la RP en tiempo real haz clic en el menu de RetroAchievements en tu emulador y después en Rich Presence Monitor. Una pequeña ventana debería de mostrar tu RP actual. (Bueno para realizar pruebas)</p>
+<p><img alt="Rich Presence Monitor" src="https://i.imgur.com/XkCZoLG.png" /></p>
+<p>La mejor manera de entender Rich Presence es observar varios ejemplos de juegos, mira las direcciones que fueron utilizadas a mira como el texto es mostrado en el monitor y en el sitio.</p>
+<h3 id="como-funciona">Como funciona?<a class="headerlink" href="#como-funciona" title="Permanent link">link</a></h3>
+<p>Cada vez que un juego es lanzado, guarda los logros del juego en un archivo de 'ruta' donde el ROM detalla todos los logros y valores en memoria (y tablas clasificatorias) que puede llegar a rastrear. También va a solicitar un Script de  Rich Presence para el ROM que se encuentre actualmente cargado. El emulador va a reportar al sitio web cada 120 segundos. Similarmente, cada 120 segundos o parecido, la caja de 'active players' en la pagina de inicio se va a refrescar, detallando la ultima actividad conocida por todos los jugadores activos. Si no hay un Script de rich presence entregado, el texto sera 'earning achievements' Si se esta jugando un juego con logros, 'playing [game]' si se juega un juego sin logros, o 'developing achievements' si la ventaba de memoria esta abierta y es visible. </p>
+<p>El RPS de cada juego puede ser encontrado en la sección de desarrollo en cada pagina de juego: </p>
+<p><img alt="Dev click" src="https://i.imgur.com/sqxOjyL.png" /></p>
+<p><img alt="RP shown" src="https://i.imgur.com/e7qoaNx.png" /></p>
+<h2 id="ejemplo-super-mario-bros">Ejemplo (Super Mario Bros.)<a class="headerlink" href="#ejemplo-super-mario-bros" title="Permanent link">link</a></h2>
+<pre><code>Format:Digit
+FormatType=VALUE
+
+Lookup:Mode
+0=[Demo] 
+2=[World Complete] 
+
+Lookup:Paused
+0x81=▌▌ 
+0x80=▌▌ 
+1=▌▌ 
+
+Lookup:Star
+5=🌟 
+4=🌟 
+3=🌟 
+2=🌟 
+1=🌟 
+
+Lookup:Powerup
+0=Small
+1=Super
+2=Fire
+
+Lookup:Swimming
+1= swimming
+
+Lookup:Status
+0= [Loading]
+1= taking a vine warp
+2= entering a warp pipe
+3= entering a warp pipe
+4= 🚩
+5= [Stage Complete]
+6= [Game Over]
+7= [Entering Area]
+9= growing
+0xA= shrinking
+0xB= 💀
+0xC= powering up
+
+Lookup:Quest
+0x0=1st
+0x1=2nd
+
+Display:
+@Mode(0xh770)@Paused(0xh776)@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)@Powerup(0xh0756) Mario in @Digit(0xh75f_v1)-@Digit(0xh75c_v1)@Swimming(0xh704)@Status(0xhe), 🚶:@Digit(0xh75a_v1), @Quest(0xh7fc) Quest
+</code></pre>
+
+<p>El RSP se compone de objetos de Lookup, objectos de Formato y un objeto de Display. </p>
+<h2 id="lookups">Lookups<a class="headerlink" href="#lookups" title="Permanent link">link</a></h2>
+<p>Los Lookups se definen de la siguiente manera: </p>
+<pre><code>Lookup:NombreDelLockup
+Valor1=Texto cuando este valor este activo
+Valor2=Texto cuando este otro valor
+...
+</code></pre>
+
+<p>Le damos un valor al Lookup, consistiendo de una serie de direcciones de memoria y modificador. Encontraras mas sobre esto mas adelante. </p>
+<h2 id="formato">Formato<a class="headerlink" href="#formato" title="Permanent link">link</a></h2>
+<p>Las Tablas de Formato se definen de la siguiente manera:</p>
+<pre><code>Format:Score
+FormatType=VALOR
+</code></pre>
+
+<p>Empezamos con <code>Formato:</code>, y después con el nombre del tipo de formato. En la siguiente linea, escribe <code>FormatType=</code>, y entonces uno de los siguientes valores: <code>VALUE</code>, <code>SCORE</code> (o <code>POINTS</code>), <code>TIME</code> (o <code>FRAMES</code>), <code>SECS</code>, <code>MILLISECS</code>, o <code>OTHER</code>. </p>
+<ul>
+<li><code>VALUE</code>: valor genérico, no se agregan ceros. </li>
+<li><code>SCORE</code>/<code>POINTS</code>: "000130 puntos" </li>
+<li><code>TIME</code>/<code>FRAMES</code>: este valor describe el numero de frames consecuentes, y se va a mostrar como 00:00.00 </li>
+<li><code>SECS</code>: este valor describe el numero de segundos que han pasado, y se va a mostrar como 00:00 </li>
+<li><code>MILLISECS</code>: este valor describe el numero de centenas de segundo que han pasado, y se va a mostrar como 00:00.00 </li>
+</ul>
+<h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link">link</a></h2>
+<p>Display es la string que se muestra en la caja de 'Active Players' en la pagina de inicio del sitio web. Para referirte a un Lookup o aun Format previamente definidos se utiliza simplemente un '@'. Y entonces se agrega el nombre que le diste al lookup o al format (distingue mayúsculas y minúsculas!), e inmediatamente después de eso, en brackets, sigue la serie de valores en memoria que especifican que sera enviado a ese lookup y format.</p>
+<p><code>@Powerup(0xh756)</code> </p>
+<p>Eso significa que vas a utilizar el Lookup o Format que se llama <code>Powerup</code>, y entrega cualquier valor que se encuentre actualmente en 0xh756. </p>
+<h3 id="analizando-el-lookup-de-ejemplo">Analizando el Lookup de Ejemplo<a class="headerlink" href="#analizando-el-lookup-de-ejemplo" title="Permanent link">link</a></h3>
+<ul>
+<li><code>@Mode(0xh770)</code> - Un Lookup para la dirección que muestra si el juego se encuentra en modo demo o si un mundo a sido completado.  </li>
+<li><code>@Paused(0xh776)</code> - Un Lookup para la dirección que muestra si el juego se encuentra en pausa (Se utilizan 3 valores, dos de ellos son para pausar y despausar).  </li>
+<li><code>@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)</code> - Un Lookup para la dirección que muestra si Mario tiene la Estrella. Mas sobre esto mas adelante.  </li>
+<li><code>@Powerup(0xh756)</code> - Un Lookup para la dirección que muestra si Mario es Pequeño, grande o cuenta con la habilidad de fuego.  </li>
+<li><code>Mario in</code> - Texto estático para unir los objetos format y lookup.  </li>
+<li><code>@Digit(0xh75f_v1)</code> - <code>Digit</code> es un objeto format definido como un valor. La dirección 0xh75f es Mundo menos 1 (porque cuenta con base 0, y este empieza a contar desde cero). <code>_v1</code> Significa + valor 1. <code>_v+1</code> también es correcto.  </li>
+<li><code>-</code> - Mas texto estático para separar el mundo y el nivel. como en el juego Mundo 1-1.  </li>
+<li><code>@Digit(0xh75c_v1)</code> - Otro uso del objeto <code>Digit</code> format . Esta vez se encuentra rastreando el Stage. Mundo 1-X.  </li>
+<li><code>@Swimming(0xh704)</code> - Un Lookup para la dirección que muestra si el jugador se encuentra nadando.  </li>
+<li><code>@Status(0xhe)</code> - Un Lookup para la dirección que muestra el estatus de Mario, como por ejemplo descendiendo de un tubo.  </li>
+<li><code>, 🚶:</code> - Mas texto estático. 🚶 es el símbolo para vidas.  </li>
+<li><code>@Digit(0xh75a_v1)</code> - Tercer uso del objeto <code>Digit</code> format. Esta vez checa la dirección de vidas del jugador.  </li>
+<li><code>,</code> - Texto estático.  </li>
+<li><code>@Quest(0xh7fc)</code> Un lookup para ver si el jugador se encuentra en modo normal o en la 2da vuelta (modo dificil).  </li>
+<li><code>Quest</code> - Texto estático.  </li>
+</ul>
+<h3 id="tamano-de-direcciones">Tamaño de Direcciones<a class="headerlink" href="#tamano-de-direcciones" title="Permanent link">link</a></h3>
+<p>Para especificar el tamaño de la dirección que te encuentras utilizando, hay varios caracteres que se utilizan para esto. (se ignora si es mayúscula o minúscula)</p>
+<ul>
+<li>Una dirección de 16bit es el default y esta no cuenta con un carácter designado. En 0x10 la dirección es de dos bytes - 16 bits.</li>
+<li>El carácter para una dirección de 8bit es <code>h</code> (o <code>H</code>). En 0xh10 la dirección es un byte - 8 bits. <code>xxxx xxxx</code>  </li>
+<li>El carácter para una dirección upper4 es <code>u</code> (o <code>U</code>). En 0xu10 la dirección es un nibble - 4 bits. <code>xxxx 0000</code>  </li>
+<li>El carácter para una dirección lower4 es <code>l</code> (o <code>L</code>). En 0xl10 la dirección es un nibble - 4 bits. <code>0000 xxxx</code>  </li>
+<li>El carácter para una dirección bit0 es <code>m</code> (o <code>M</code>). En 0xm10 la dirección es un bit, el bit mas bajo: <code>0000 000x</code>  </li>
+<li>El carácter para una dirección bit1 es <code>n</code> (o <code>N</code>). En 0xn10 la dirección es un bit, el segundo bit: <code>0000 00x0</code>  </li>
+<li>El carácter para una dirección bit2 es <code>o</code> (o <code>O</code>). En 0xo10 la dirección es un bit, el tercer bit: <code>0000 0x00</code>  </li>
+<li>El carácter para una dirección bit3 es <code>p</code> (o <code>P</code>). En 0xp10 la dirección es un bit, el cuarto bit: <code>0000 x000</code>  </li>
+<li>El carácter para una dirección bit4 es <code>q</code> (o <code>Q</code>). En 0xq10 la dirección es un bit, el quinto bit: <code>000x 0000</code>  </li>
+<li>El carácter para una dirección bit5 es <code>r</code> (o <code>R</code>). En 0xr10 la dirección es un bit, el sexto bit: <code>00x0 0000</code>  </li>
+<li>El carácter para una dirección bit6 es <code>s</code> (o <code>S</code>). En 0xs10 la dirección es un bit, el séptimo bit: <code>0x00 0000</code>  </li>
+<li>El carácter para una dirección bit7 es <code>t</code> (o <code>T</code>). En 0xt10 la dirección es un bit, el bit mas alto: <code>x000 0000</code>  </li>
+<li>El carácter para una dirección de 32bit es <code>x</code> (o <code>X</code>). En 0xx10 la dirección es de cuatro bytes y 32 bits.</li>
+</ul>
+<p>Resumiendolo en una tabla:</p>
+<table>
+<thead>
+<tr>
+<th align="center">localización/tamaño</th>
+<th align="center">prefijo (las letras pueden ser en minúsculas)</th>
+<th align="center">ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">bit0</td>
+<td align="center"><code>0xM</code></td>
+<td align="center"><code>0xM01234</code></td>
+</tr>
+<tr>
+<td align="center">bit1</td>
+<td align="center"><code>0xN</code></td>
+<td align="center"><code>0xN01234</code></td>
+</tr>
+<tr>
+<td align="center">bit2</td>
+<td align="center"><code>0xO</code></td>
+<td align="center"><code>0xO01234</code></td>
+</tr>
+<tr>
+<td align="center">bit3</td>
+<td align="center"><code>0xP</code></td>
+<td align="center"><code>0xP01234</code></td>
+</tr>
+<tr>
+<td align="center">bit4</td>
+<td align="center"><code>0xQ</code></td>
+<td align="center"><code>0xQ01234</code></td>
+</tr>
+<tr>
+<td align="center">bit5</td>
+<td align="center"><code>0xR</code></td>
+<td align="center"><code>0xR01234</code></td>
+</tr>
+<tr>
+<td align="center">bit6</td>
+<td align="center"><code>0xS</code></td>
+<td align="center"><code>0xS01234</code></td>
+</tr>
+<tr>
+<td align="center">bit7</td>
+<td align="center"><code>0xT</code></td>
+<td align="center"><code>0xT01234</code></td>
+</tr>
+<tr>
+<td align="center">Lower4</td>
+<td align="center"><code>0xL</code></td>
+<td align="center"><code>0xL01234</code></td>
+</tr>
+<tr>
+<td align="center">Upper4</td>
+<td align="center"><code>0xU</code></td>
+<td align="center"><code>0xU01234</code></td>
+</tr>
+<tr>
+<td align="center">8bit</td>
+<td align="center"><code>0xH</code></td>
+<td align="center"><code>0xH01234</code></td>
+</tr>
+<tr>
+<td align="center">16bit</td>
+<td align="center"><code>0x</code></td>
+<td align="center"><code>0x01234</code></td>
+</tr>
+<tr>
+<td align="center">32bit</td>
+<td align="center"><code>0xX</code></td>
+<td align="center"><code>0xX01234</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-con-strings-condicionales">Display con Strings Condicionales<a class="headerlink" href="#display-con-strings-condicionales" title="Permanent link">link</a></h3>
+<pre><code>Display:
+?0x 000085=0?Pantalla de Titulo
+?0xT00007c=1?Mapa Personalizado en @Zona(0xH00016c)
+Jugando Batalla @Batalla(0x 00007c*0.2) en @Zona(0xH00016c)
+</code></pre>
+
+<p>El marcador <code>Display:</code> se sigue utilizando para indicar el principio del bloque de Display. Si la siguiente linea empieza con un signo de interrogación, se considera como un display con una string condicional. La parte de la linea que se encuentra entre los dos signos de interrogación es la clausula de la condición. Si la clausula de la condición se evalúa y esta es verdadera, entonces la siguiente parte de la linea se utiliza como el string del display. Si esta no se evalúa como verdadera, entonces se procede a la siguiente linea. Si esta empieza con un signo de interrogación, entonces el mismo proceso se repite. Si este no empieza con un signo de interrogación, la linea entera se utiliza como el string default para el display.</p>
+<p><strong>NOTA</strong>: Se requiere una string default en caso de que ninguna de tus strings condicionales sean verdaderas. Si solamente cuentas con strings condicionales, el script no va a hacer nada.</p>
+<p>Observando este ejemplo, si el valor de 16-bit en $0085 es igual a 0, el string del display sera <code>Title Screen</code>. Si no, la siguiente linea es examinada. Si el 7mo bit de $007C es igual a 1, el string del display sera <code>Mapa Personalizado en @Zona(0xH00016c)</code>. Si no entonces, como linea final no cuenta con una clausula condicional esta es utilizada.</p>
+<p>Strings de Display asociados con una clausula condicional soportan todo la misma sintaxis que el string de display predeterminado. En este ejemplo, puedes ver que el lookup <code>@Zona</code> se utiliza en los dos strings condicionales y en el string predeterminado. </p>
+<p>La frase condicional soporta todos los asesores de direcciones previamente mencionados así como la lógica de los AND (_) y OR (S). Nota: las clausulas OR aun requieren un grupo 'core', <a href="../Alt-Groups-es">así como en los logros</a>.</p>
+<ul>
+<li>
+<p><code>?0xH1234=32_0xH2345=0?ejemplo y</code></p>
+<p>si el valor de 8-bit en $1234 es 32 <em>y</em> el valor de 8-bit en $2345 is 0, muestra <code>ejemplo y</code></p>
+</li>
+<li>
+<p><code>?0xH1234=32S0xH2345=1S0xH2345=2?ejemplo o</code></p>
+<p>si el valor de 8-bit en $1234 es 32 <em>y</em> el valor de 8-bit en $2345 es 1 <em>o</em> 2, muestra <code>ejemplo o</code></p>
+</li>
+<li>
+<p><code>?0xH1234=32_0xH5678=33S0xH2345=1S0xH2345=2?ejemplo y/o</code></p>
+<p>si el valor de 8-bit en $1234 es 32 <em>y</em> el valor de 8-bit en $5678 es 33 <em>y</em> el valor de 8-bit en $2345 es 1 <em>o</em> 2, muestra <code>ejemplo y/o</code></p>
+</li>
+</ul>
+<h2 id="codigo-binario-programado-en-decimal-bcd">Código Binario programado en Decimal (BCD)<a class="headerlink" href="#codigo-binario-programado-en-decimal-bcd" title="Permanent link">link</a></h2>
+<p>BCD es cuando cuando los valores son almacenados en una dirección del 0-9 (un dígito) o 0-99 (dos dígitos). ten en mente que la mayoría de las veces los valores son almacenados en hexadecimal, pero algunas veces los juegos los almacenan de esta manera y aquí esta el mejor método para trabajar con este tipo de valores en tu display.</p>
+<p>BCD decodifica cada carácter hexadecimal como un dígito decimal. Si el inspector de memoria muestra un 86 (en hex), el resulta de BCD decodificando el valor seria un 86 (en decimal).</p>
+<p>Para objectos con estos valores puedes utilizar le prefijo BCD, como aquí <code>b0xh1234</code>. Esto también funciona con <a href="../Leaderboards-es#interpretador-de-valores">valores en tablas de clasificación</a>.
+Ten en cuenta que también vas a necesitar especificar el tamaño de la dirección BCD en memoria. <code>b0x1234</code> lee un valor de  16-bit. <code>b0xh1234</code> lee un valor de 8-bit y <code>b0xX1234</code> lee un valor de 32-bit.
+<em>NOTA</em>: Soporte para decodificacion BCD de 16-bit y 32-bit es una función para el kit de desarrollo 0.075.</p>
+<p>Esto es usualmente usado para puntuaciones y tiempo, pero algunas veces también para otros tipos de valores.</p>
+<h2 id="limites">Limites<a class="headerlink" href="#limites" title="Permanent link">link</a></h2>
+<ul>
+<li>Limite de 16,000 caracteres por script  </li>
+<li>Limite de 100 caracteres para lo que se esta mostrando</li>
+<li>Caracteres Unicode son permitidos</li>
+</ul>
+<h2 id="detalles-de-la-sintaxis">Detalles de la Sintaxis<a class="headerlink" href="#detalles-de-la-sintaxis" title="Permanent link">link</a></h2>
+<ul>
+<li>Las llaves para Lookups son en decimal por default y hex si agregas el prefijo <code>0x</code>. Esto significa <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.  </li>
+<li>Los nombres para Lookup/Format son sensibles entre mayúsculas y minúsculas por lo que necesitas escribir exactamente igual el nombre para que se muestre correctamente en el string del display: <code>@test(0x1234)</code> el cual no va a encontrar "Format:Test"</li>
+<li>Un Lookup/Format no pueden contener espacios antes o después del nombre. <code>@test(0x1234)</code> no va a encontrar "Format:test   " o "Format:   test"</li>
+<li>Si tu Lookup/Format no puede ser encontrado, no se va a mostrar nada. <code>Esta es una prueba @test(0x1234).</code> va a salir como <code>Esto es una .</code> si <code>test</code> no puede ser encontrado.</li>
+<li>Se pueden agregar comentarios en cualquier parte del script. Una doble diagonal (<code>//</code>) indica que la parte restante de la linea va a ser ignorada cuando se procese el script. Nota: los comentarios también aplican para el tamaño máximo de caracteres del script.</li>
+</ul>
+<h2 id="tips-y-trucos">Tips y Trucos<a class="headerlink" href="#tips-y-trucos" title="Permanent link">link</a></h2>
+<ul>
+<li>Los nombres de los Lookup pueden ser tan cortos como un solo carácter si necesitas ahorrarte algunos caracteres extras.</li>
+<li>Zeros subsecuentes pueden ser eliminados de las direcciones (<code>0xh0001</code> puede ser acortado a <code>0xh1</code>).</li>
+<li>Convertir todos tus valores de hex a decimal va tomar muchos menos caracteres.</li>
+<li>Caracteres Unicode no siempre "toman menos espacio" ellos usualmente toman hasta cuatro caracteres del sistema.</li>
+<li>Si un lookup no contiene ningún valor mapeados, va a resultar en un valor (sin espacio) en blanco. Puedes cambiar este comportamiento agregando una sola linea a los valores del lookup, '*' a el valor que deseas.</li>
+<li>Cada <code>Lookup</code> o <code>Format</code> puede ser cargado múltiples veces con las mismas o diferentes direcciones. Puedes definir un solo <code>Format:Number FormatType=VALUE</code> en vez de definir valores individuales para las vidas, Puntuación, Nivel, etc.</li>
+<li>Poner espacios a tus lookups algunas veces antes o despues puede ayudarte a esconder ciertos lookups cuando estos no son requeridos, como lo hacen <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, y @Mode . </li>
+</ul>
+<h3 id="propiedades-de-los-valores">Propiedades de los Valores<a class="headerlink" href="#propiedades-de-los-valores" title="Permanent link">link</a></h3>
+<p>Cuando utilizamos objetos lookup y format <code>@object()</code> es posible combinar y hacer cálculos. Esto puede ser utilizado para mostrar una puntuación correctamente, tiempo del juego, etc. o hacen lookups avanzados.</p>
+<p><strong>Ejemplo</strong>
+<code>@Puntuación(0x28*10_0x29*1000_0x26*100000) puntos</code> </p>
+<p>Esto significa utiliza el lookup o Format <code>Puntuación</code>, y entrega la suma de:<br />
+- 0x28 10 veces, AGREGA
+- 0x29 1000 veces, AGREGA<br />
+- 0x26 100000 veces</p>
+<ul>
+<li><code>_</code> agregas las direcciones mutuamente.  </li>
+<li>O también puedes agregar un valor estático <code>0x28_v10</code>. Esto agrega un 10 a tu total, así como el valor de <code>0x28</code> + 10 puede ser mostrado. También se puede hacer lo mismo pero restando <code>0x28_v-10.</code>  </li>
+<li>Si lo que quieres es restar una dirección necesitas multiplicar el valor por -1. <code>0x29*-1</code>. <code>0x29</code> es ahora negativo.  </li>
+<li>Si lo que quieres es hacer una división lo que necesitas es multiplicar por un numero quebrado. <code>0x26*.5</code>. <code>0x26</code> va a mostrar el valor 1/2 de <code>0x26</code>.  </li>
+<li>Y así puedes crear un string con todo junto: <code>0x28*10_0x29*-1_0x26*.625_v-10</code>.</li>
+<li>También puedes agregar direcciones entre si para agregar a tus lookups de acuerdo a la suma de varias direcciones. Esto es utilizado en el ejemplo de @Star. Esta buscando la suma de los 6 bits mas bajos de la dirección 0xh79f. La manera en la que esta dirección trabaja es que mientras se encuentre un valor hay significa que Mario es invisible porque agarro una estrella y cuenta el valor hex en 0x23 (35 en decimal) a 0. 23 en binario es 0010 0011 significando que la suma máxima de estos bits seria 5 durante 0001 1111 cuando el contador llega al valor hex de 0x1f (31 en decimal).</li>
+</ul>
+<h2 id="simbolos-estandar-unicode">Símbolos Estándar Unicode<a class="headerlink" href="#simbolos-estandar-unicode" title="Permanent link">link</a></h2>
+<p>Sin ninguna duda puedes utilizar estos símbolos en rich presence.</p>
+<p>▌▌=Pausa<br />
+🔁=Continues<br />
+⏰=Tiempo de la Partida/Reloj del Juego<br />
+🔑=Llaves<br />
+💣=Bombas<br />
+❤️ o ❤=En un juego con corazones (ej. Zelda) <br />
+💰=Dinero<br />
+🚩=Nivel/Stage   </p>
+<p>Cuando te encuentres desarrollando Rich Presence tienes que hacegurarte que te estas comunicando de una manera completamente clara. Si no estas utilizando símbolos estandarizados tal vez tengan sentido para ti pero tal vez sea completamente confusos para otros. <strong>Cuando utilices símbolos no estandarizados, checalo con otro usuario</strong> o con alguna otra gente para ver si los símbolos que estas utilizando tienen sentido. Si no lo tienen, utiliza mejores símbolos, o  utiliza texto o símbolos junto con texto.</p>
+<p>Para unicode/emojis personalizados <a href="http://shapecatcher.com/">ShapeCatcher</a> es un excelente recurso, puedes ponerte a dibujarlos y la AI va a buscar resultados similares. Simplemente ten cuidado de no utilizar unicode que sea <em>demasiado oscuro</em>, ya que no se va a mostrar correctamente en todos los sistemas.</p>
+<p>Toma nota en la preferencia de la comunidad en cuanto a displays:
+<img alt="image" src="https://user-images.githubusercontent.com/32706333/56547116-a65a7c80-6539-11e9-951c-83b4f9930b3e.png" /></p>
+<h2 id="desarrollando-rich-presence">Desarrollando Rich Presence<a class="headerlink" href="#desarrollando-rich-presence" title="Permanent link">link</a></h2>
+<p>La herramienta de desarrollo actualmente no cuenta con editor de Rich Presence integrado, pero puedes hacer pruebas locales antes de guardar algo en el servidor. Una vez que hubieras empezado un juego y el Rich Presence actual a sido descargado del servidor, puedes llegar a encontrar en <code>RACache\Data\XXX-Rich.txt</code> donde XXX es el ID del juego. </p>
+<p>El Monitor de Rich Presence (ejecutable desde el menu de RetroAchievments) lee este archivo y muestra el valor actual cada segundo mientras la ventana se encuentre abierta.</p>
+<p>Si haces cambios al archivo <code>XXX-Rich.txt</code>, y vuelves a reseleccionar la opción de monitor del menu, este va a leer los nuevos cambios para aquí así puedas hacer pruebas inmediatamente sin tener que aplicar cambios al servidor. Continua haciendo cambios y vuelve a seleccionar la opción en el menu asta que el script trabaje como esperas que lo haga, una vez que hubieras terminado copia el contenido del archivo a la pagina del servidor para que estén los cambios disponibles para todos los demás jugadores.</p>
+<p><strong>NOTA</strong>: El archivo <code>XXX-Rich.txt</code> es sobre-escrito con la información actual del servidor cada vez que el juego es abierto. Mientras aun tengas el archivo abierto en un editor, siempre vas a poder guardar tus cambios a pesar de re-abrir el juego.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2019-05-24 20:02] meleu:</code> fix broken link</li>
+<li><code>[2019-05-19 15:48] eldexterr:</code> Updated Rich Presence es (markdown)</li>
+<li><code>[2019-05-19 15:42] eldexterr:</code> Updated Rich Presence es (markdown)</li>
+<li><code>[2019-05-17 11:03] eldexterr:</code> Created Rich Presence es (markdown)</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Leaderboards-es/" title="Tablas de Clasificación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tablas de Clasificación
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Working-with-the-Right-ROM-es/" title="Trabajando con el ROM apropiado" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Trabajando con el ROM apropiado
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://retroachievements.org/" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/RetroAchievements" class="md-footer-social__link fa fa-github-alt"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
