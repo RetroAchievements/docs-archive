@@ -2503,14 +2503,14 @@
                   <h1>Rich Presence</h1>
                 
                 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">link</a></h2>
-<p>Rich Presence <strong>(RP)</strong> is brief overview of what active players are currently doing in their game. To have RP in a game you need a Rich Presence Script <strong>(RPS)</strong> which is created by Developers. The Script check the player's game memory and as programmed reports the values of certain addresses with definitions assigned by the Developer such as which stage the player is on, how many lives they have, if the game is paused, what game mode they are playing, what the player has accomplished, etc. This information is reported back to the website. <strong>Every game published should have at least a basic RPS.</strong></p>
+<p>Rich Presence <strong>(RP)</strong> is brief overview of what active players are currently doing in their game. To have RP in a game you need a Rich Presence Script <strong>(RPS)</strong> which is created by Developers. The Script checks the player's game memory and as programmed reports the values of certain addresses with definitions assigned by the Developer such as which stage the player is on, how many lives they have, if the game is paused, what game mode they are playing, what the player has accomplished, etc. This information is reported back to the website. <strong>Every game published should have at least a basic RPS.</strong></p>
 <p><strong>Example of RP in action:</strong></p>
 <p><img alt="Example of RP in action" src="https://i.imgur.com/E5097sz.png" />  </p>
 <p>To see the RP live in a game click on the RetroAchievements menu in your emulator and then click on Rich Presence Monitor. A small window will show you your active RP. (Good for debugging)</p>
 <p><img alt="Rich Presence Monitor" src="https://i.imgur.com/XkCZoLG.png" /></p>
 <p>The best way to understand Rich Presence is to look at various examples in game, look at the addresses used and look at how the text is displayed in the Rich Presence Monitor and on site.</p>
 <h3 id="how-does-it-work">How Does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">link</a></h3>
-<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a Rich Presence Script for the currently loaded ROM. The emulator will report back to the website every 120 seconds. Similarly, every 120 seconds or so, the 'active players' box on the frontpage will refresh, detailing the last known activity of all active players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
+<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a Rich Presence Script for the currently loaded ROM. The emulator will report back to the website every 120 seconds. Similarly, every 120 seconds or so, the 'active players' box on the front page will refresh, detailing the last known activity of all active players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
 <p>The RPS for each game can be found under the development section on each game's page: </p>
 <p><img alt="Dev click" src="https://i.imgur.com/sqxOjyL.png" /></p>
 <p><img alt="RP shown" src="https://i.imgur.com/e7qoaNx.png" /></p>
@@ -2837,6 +2837,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-08-18 05:52] smuckola:</code> a missing letter</li>
 <li><code>[2019-07-10 19:01] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2019-05-24 20:01] meleu:</code> fix link to Alt Groups doc</li>
 <li><code>[2019-04-22 20:30] Kvon:</code> minor change related to last edit</li>
@@ -2846,7 +2847,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2019-01-05 01:14] Kvon:</code> fixed some spacing typos</li>
 <li><code>[2018-11-10 18:50] Kvon:</code> Added 🚩(level/stage) as a standard symbol, removed ☰(menu). Added a link to a useful unicode resource" shapecatcher</li>
 <li><code>[2018-10-07 23:34] CoolCanuck:</code> 16,000 chat limit</li>
-<li><code>[2018-09-23 14:00] meleu:</code> typo</li>
 </ul>
                 
                   
