@@ -824,6 +824,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../AddAddress-Flag/" title="AddAddress Flag" class="md-nav__link">
+      AddAddress Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Measured-Flag/" title="Measured Flag" class="md-nav__link">
+      Measured Flag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Combining-Flags/" title="Combining Flags" class="md-nav__link">
       Combining Flags
     </a>
@@ -1286,6 +1310,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Emulator-support-and-issues/" title="Emulator support and issues" class="md-nav__link">
+      Emulator support and issues
+    </a>
   </li>
 
         
@@ -2597,7 +2633,14 @@
 <h2 id="pcengine-turbografx16">PCEngine (TurboGrafx16)<a class="headerlink" href="#pcengine-turbografx16" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <h2 id="pcengine-cd">PCEngine CD<a class="headerlink" href="#pcengine-cd" title="Permanent link">link</a></h2>
-<p><em>TODO</em>: I'm not really sure how this works. RAPCE hashes the "Mainboard Main ROM", but I couldn't get it to work. RALibRetro doesn't appear to hash anything, and there's no special code in RetroArch, so it would appear to be hashing the entire file, but which file? The zip is a bin/cue with multiple track files.</p>
+<p>The boot code and disc title are hashed as follows:
+<em> Read 128 bytes from sector 1 of the data track (PCE predates ISO-9660, so there's no file system to read).
+</em> If "PC Engine CD-ROM SYSTEM" does not exist at 32 bytes into the data, discard as invalid.
+<em> Copy the last 22 bytes of the data into a buffer. This is the disc title, and <em>usually</em> identifies the game.
+</em> The first three bytes of the data are a little-endian sector index for the boot code.
+<em> The fourth byte is the number of sectors that the boot code occupies.
+</em> The boot code is appended to the buffer (N sectors, starting at sector X)
+* The buffer is hashed.</p>
 <h2 id="fba-arcade">FBA (Arcade)<a class="headerlink" href="#fba-arcade" title="Permanent link">link</a></h2>
 <p>The filename string without the extension (xxx.zip) is hashed. It is case-sensitive.</p>
 <h2 id="pc-8001-pc-8801">PC-8001 / PC-8801<a class="headerlink" href="#pc-8001-pc-8801" title="Permanent link">link</a></h2>
@@ -2609,12 +2652,13 @@
 <h2 id="playstation">PlayStation<a class="headerlink" href="#playstation" title="Permanent link">link</a></h2>
 <p>The primary executable and its name are hashed as follows:
 <em> The SYSTEM.CNF file is loaded and parsed. The primary executable is identified by the BOOT= line within.
-</em> The primary executable name (and it's path) are extracted from SYSTEM.CNF and written to a buffer
-<em> The contents of the primary executable are appended to the buffer
-</em> The buffer is hashed</p>
+</em> The primary executable name (and it's path) are extracted from SYSTEM.CNF and written to a buffer.
+<em> The contents of the primary executable are appended to the buffer.
+</em> The buffer is hashed.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-11-02 15:02] Jamiras:</code> document PCEngine-CD hashing algorithm</li>
 <li><code>[2019-09-20 18:57] Jamiras:</code> update Sega CD</li>
 <li><code>[2019-09-02 12:33] Jamiras:</code> Updated Game Identification (markdown)</li>
 <li><code>[2019-02-17 21:16] Raphaël Zumer:</code> Add Apple II</li>
@@ -2624,7 +2668,6 @@
 <li><code>[2019-01-15 09:45] Raphaël Zumer:</code> Update Lynx</li>
 <li><code>[2019-01-04 17:41] meleu:</code> cosmetic</li>
 <li><code>[2019-01-04 17:41] meleu:</code> reverting title changing for PC-8801/8801</li>
-<li><code>[2019-01-04 17:39] meleu:</code> making clear that arcade method is filename <em>without the extension</em></li>
 </ul>
                 
                   
@@ -2661,13 +2704,13 @@
           </a>
         
         
-          <a href="../Bonus-Sets/" title="Bonus Set Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Emulator-support-and-issues/" title="Emulator support and issues" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Bonus Set Guide
+                Emulator support and issues
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
