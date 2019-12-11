@@ -1156,6 +1156,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nintendo-ds" title="Nintendo DS" class="md-nav__link">
+    Nintendo DS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gb" title="GB" class="md-nav__link">
     GB
   </a>
@@ -1179,6 +1186,13 @@
         <li class="md-nav__item">
   <a href="#virtualboy" title="VirtualBoy" class="md-nav__link">
     VirtualBoy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pokemon-mini" title="Pokemon Mini" class="md-nav__link">
+    Pokemon Mini
   </a>
   
 </li>
@@ -1240,6 +1254,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#atari-jaguar" title="Atari Jaguar" class="md-nav__link">
+    Atari Jaguar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#colecovision" title="ColecoVision" class="md-nav__link">
     ColecoVision
   </a>
@@ -1291,6 +1312,13 @@
         <li class="md-nav__item">
   <a href="#playstation" title="PlayStation" class="md-nav__link">
     PlayStation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wonderswan" title="WonderSwan" class="md-nav__link">
+    WonderSwan
   </a>
   
 </li>
@@ -2421,6 +2449,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nintendo-ds" title="Nintendo DS" class="md-nav__link">
+    Nintendo DS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gb" title="GB" class="md-nav__link">
     GB
   </a>
@@ -2444,6 +2479,13 @@
         <li class="md-nav__item">
   <a href="#virtualboy" title="VirtualBoy" class="md-nav__link">
     VirtualBoy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pokemon-mini" title="Pokemon Mini" class="md-nav__link">
+    Pokemon Mini
   </a>
   
 </li>
@@ -2505,6 +2547,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#atari-jaguar" title="Atari Jaguar" class="md-nav__link">
+    Atari Jaguar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#colecovision" title="ColecoVision" class="md-nav__link">
     ColecoVision
   </a>
@@ -2561,6 +2610,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#wonderswan" title="WonderSwan" class="md-nav__link">
+    WonderSwan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -2599,6 +2655,13 @@
 <h2 id="n64">N64<a class="headerlink" href="#n64" title="Permanent link">link</a></h2>
 <p>The entire file is hashed. </p>
 <p>This may result in three unique hashes for each game. The z64 extension is big endian (ABCD). The n64 extension is little endian (DCBA). And the v64 extension is middle endian (BADC).</p>
+<h2 id="nintendo-ds">Nintendo DS<a class="headerlink" href="#nintendo-ds" title="Permanent link">link</a></h2>
+<p>An NDS ROM has a 0x160 byte header. In this header are pointers to icon/title information and to the boot code for both processors. The hash method combines the header, the two pieces of boot code, and the icon/title information and hashes the result.</p>
+<ul>
+<li>The icon/title information is 0xA00 bytes starting at the address stored in the header at $68</li>
+<li>The arm9 code address is stored at $20 in the header, and the size is stored at $2C in the header</li>
+<li>The arm7 code address is stored at $30 in the header, and the size is stored at $3C in the header</li>
+</ul>
 <h2 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <p><em>NOTE</em>: RAVBA appears to 0-pad the data if the the size specified by the ROM (address $148) is larger than the file. I have yet to find a case where this occurs.</p>
@@ -2608,6 +2671,8 @@
 <h2 id="gba">GBA<a class="headerlink" href="#gba" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <h2 id="virtualboy">VirtualBoy<a class="headerlink" href="#virtualboy" title="Permanent link">link</a></h2>
+<p>The entire file is hashed.</p>
+<h2 id="pokemon-mini">Pokemon Mini<a class="headerlink" href="#pokemon-mini" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <h2 id="master-system">Master System<a class="headerlink" href="#master-system" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
@@ -2626,6 +2691,8 @@
 <p>The entire file is hashed.</p>
 <h2 id="atari-lynx">Atari Lynx<a class="headerlink" href="#atari-lynx" title="Permanent link">link</a></h2>
 <p>If the ROM starts with <code>LYNX\0</code>, the first 64 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>LYNX\0</code>, the entire file is hashed.</p>
+<h2 id="atari-jaguar">Atari Jaguar<a class="headerlink" href="#atari-jaguar" title="Permanent link">link</a></h2>
+<p>The entire file is hashed.</p>
 <h2 id="colecovision">ColecoVision<a class="headerlink" href="#colecovision" title="Permanent link">link</a></h2>
 <p>The entire file is hashed.</p>
 <h2 id="neogeo-pocket">NeoGeo Pocket<a class="headerlink" href="#neogeo-pocket" title="Permanent link">link</a></h2>
@@ -2655,9 +2722,13 @@
 </em> The primary executable name (and it's path) are extracted from SYSTEM.CNF and written to a buffer.
 <em> The contents of the primary executable are appended to the buffer.
 </em> The buffer is hashed.</p>
+<h2 id="wonderswan">WonderSwan<a class="headerlink" href="#wonderswan" title="Permanent link">link</a></h2>
+<p>The entire file is hashed.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-12-01 17:57] Jamiras:</code> more detail in DS hashing algorithm</li>
+<li><code>[2019-12-01 17:54] Jamiras:</code> document Nintendo DS hashing algorithm, add entries for Jaguar, WonderSwan, and Pokemon mini</li>
 <li><code>[2019-11-02 15:02] Jamiras:</code> document PCEngine-CD hashing algorithm</li>
 <li><code>[2019-09-20 18:57] Jamiras:</code> update Sega CD</li>
 <li><code>[2019-09-02 12:33] Jamiras:</code> Updated Game Identification (markdown)</li>
@@ -2666,8 +2737,6 @@
 <li><code>[2019-02-10 13:40] meleu:</code> cosmetic</li>
 <li><code>[2019-02-01 18:40] Jamiras:</code> add ColecoVision</li>
 <li><code>[2019-01-15 09:45] Raphaël Zumer:</code> Update Lynx</li>
-<li><code>[2019-01-04 17:41] meleu:</code> cosmetic</li>
-<li><code>[2019-01-04 17:41] meleu:</code> reverting title changing for PC-8801/8801</li>
 </ul>
                 
                   

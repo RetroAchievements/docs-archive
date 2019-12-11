@@ -2946,13 +2946,13 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
+<td>AndNext</td>
 <td>Delta</td>
 <td>0xADDRESS</td>
 <td>=</td>
 <td>Value</td>
 <td>0xV1</td>
-<td>(10)</td>
+<td></td>
 </tr>
 <tr>
 <td>2</td>
@@ -2964,23 +2964,12 @@
 <td>0xV2</td>
 <td>(10)</td>
 </tr>
-<tr>
-<td>3</td>
-<td>PauseIf</td>
-<td>Mem</td>
-<td>0xADDRESS</td>
-<td>=</td>
-<td>Delta</td>
-<td>0xADDRESS</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <p><strong>Requirements</strong></p>
 <ul>
-<li>1: If value in <code>0xADDRESS</code> in the previous frame is <code>0xV1</code>, increases the hitcount (up to 10).</li>
-<li>2: If the current value in <code>0xADDRESS</code> is <code>0xV1</code>, increases the hitcount (up to 10).</li>
-<li>3: Do not increase the hitcounts in 1 and 2 if there's change in <code>0xADDRESS</code>.</li>
+<li>1: If value in <code>0xADDRESS</code> in the previous frame is <code>0xV1</code></li>
+<li>2: AND If the current value in <code>0xADDRESS</code> is <code>0xV2</code>, increases the hitcount (up to 10).</li>
 </ul>
 <h2 id="conditional-resets">Conditional Resets<a class="headerlink" href="#conditional-resets" title="Permanent link">link</a></h2>
 <p>Conditional resets can be used for many things.</p>
@@ -3090,6 +3079,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2019-12-02 11:25] Searo:</code> Updating "Check for a specific value changing to another specific value ten times" to use AndNext to simplify the logic</li>
 <li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
 <li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
 <li><code>[2019-02-08 02:48] Kvon:</code> added a new logic template Collected 100% of Something</li>
@@ -3099,7 +3089,6 @@
 <li><code>[2018-01-29 10:25] meleu:</code> Updated Achievement Templates (markdown)</li>
 <li><code>[2018-01-23 20:25] meleu:</code> rearranged topics</li>
 <li><code>[2018-01-21 02:43] Kvon:</code> added conditional reset example</li>
-<li><code>[2018-01-16 02:29] meleu:</code> merged 2 topics into one and other minor changes</li>
 </ul>
                 
                   
