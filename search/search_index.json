@@ -947,7 +947,7 @@
         },
         {
             "location": "/Useful-Links/",
-            "text": "https://gamefaqs.gamespot.com/\nlink\n\n\nGreat place to find game guides, finding almost all you could want to know about game content, find cheat codes, for development utility and also for making proper protections against the codes.\n\n\nhttps://www.vgmaps.com/\nlink\n\n\nThousands of maps/screenshots of your favourite video games.\n\n\nhttps://tcrf.net/\nlink\n\n\nIt is a site dedicated to unearthing and researching unused and cut content from video games. From debug menus, to unused music, graphics, enemies, or levels, many games have content never meant to be seen by anybody but the developers \u2014 or even meant for everybody, but cut due to time/budget constraints.\n\n\nCumulative Probability Calculator\nlink\n\n\nWhen working with achievements with an RNG factor you will often want to know the probability of success for players given a number of attempts. (see \nunwelcome concepts, achievements with low odds\n). Use it to calculate P(X>=1), assuming the player needs to succeed only once across several attempts, to estimate how many attempts an might require for less lucky players.\n\n\nhttps://www.romhacking.net\nlink\n\n\nThe biggest repository of patches to hack ROMs. \n\n\nhttp://datacrystal.romhacking.net/wiki/Hashes\nlink\n\n\nExplains what hashes are. If you don't know what they are you should probably read this.\n\n\nhttps://emn178.github.io/online-tools/crc32_checksum.html\nlink\n\n\nDrag and drop checksum checker utility. You can also get the checksum from the rom you have loaded from the retroachievements menu in the emulators.\n\n\nhttp://www.marcrobledo.com/RomPatcher.js\nlink\n\n\nAn online ROM patcher utility.\n\n\nhttp://jsonviewer.stack.hu\nlink\n\n\nExcellent for viewing raw achievements\n\n\nhttp://gamehacking.org\nlink\n\n\nProvides many Pro Action, Game Genie, and Game Shark codes which can be converted to RAW addresses on the site. \n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\n\n\n[2019-01-29 14:15] Kvon:\n added the Cumulative Probability Calculator link\n\n\n[2019-01-07 12:14] meleu:\n added vgmaps.com\n\n\n[2018-12-06 20:20] televandalist:\n Added gamehacking.org - I use the site a lot and always recommend it to people looking for addresses. - tele\n\n\n[2018-10-11 00:21] CoolCanuck:\n gamefaqs.com -> gamefaqs.gamespot.com\n\n\n[2018-05-03 11:53] meleu:\n better format, making the URLs appear on the ToC after mkdocs conversion\n\n\n[2018-04-28 22:31] meleu:\n Updated Useful Links (markdown)\n\n\n[2018-04-28 19:03] magusLOGS:\n added tcrf.net\n\n\n[2018-04-28 13:48] meleu:\n Created Useful Links (markdown)",
+            "text": "https://gamefaqs.gamespot.com/\nlink\n\n\nGreat place to find game guides, finding almost all you could want to know about game content, find cheat codes, for development utility and also for making proper protections against the codes.\n\n\nhttps://www.vgmaps.com/\nlink\n\n\nThousands of maps/screenshots of your favourite video games.\n\n\nhttps://tcrf.net/\nlink\n\n\nIt is a site dedicated to unearthing and researching unused and cut content from video games. From debug menus, to unused music, graphics, enemies, or levels, many games have content never meant to be seen by anybody but the developers \u2014 or even meant for everybody, but cut due to time/budget constraints.\n\n\nCumulative Probability Calculator\nlink\n\n\nWhen working with achievements with an RNG factor you will often want to know the probability of success for players given a number of attempts. (see \nunwelcome concepts, achievements with low odds\n). Use it to calculate P(X>=1), assuming the player needs to succeed only once across several attempts, to estimate how many attempts an might require for less lucky players.\n\n\nhttps://www.zapstudio.net/framecalc/\nlink\n\n\nSimple utility to calculate frames out of time given and the other way around.\n\n\nhttps://www.romhacking.net\nlink\n\n\nThe biggest repository of patches to hack ROMs. \n\n\nhttp://datacrystal.romhacking.net/wiki/Hashes\nlink\n\n\nExplains what hashes are. If you don't know what they are you should probably read this.\n\n\nhttps://emn178.github.io/online-tools/crc32_checksum.html\nlink\n\n\nDrag and drop checksum checker utility. You can also get the checksum from the rom you have loaded from the retroachievements menu in the emulators.\n\n\nhttp://www.marcrobledo.com/RomPatcher.js\nlink\n\n\nAn online ROM patcher utility.\n\n\nhttp://jsonviewer.stack.hu\nlink\n\n\nExcellent for viewing raw achievements\n\n\nhttp://gamehacking.org\nlink\n\n\nProvides many Pro Action, Game Genie, and Game Shark codes which can be converted to RAW addresses on the site. \n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\n\n\n[2019-12-29 12:34] meleu:\n add \nhttps://www.zapstudio.net/framecalc/\n\n\n[2019-01-29 14:15] Kvon:\n added the Cumulative Probability Calculator link\n\n\n[2019-01-07 12:14] meleu:\n added vgmaps.com\n\n\n[2018-12-06 20:20] televandalist:\n Added gamehacking.org - I use the site a lot and always recommend it to people looking for addresses. - tele\n\n\n[2018-10-11 00:21] CoolCanuck:\n gamefaqs.com -> gamefaqs.gamespot.com\n\n\n[2018-05-03 11:53] meleu:\n better format, making the URLs appear on the ToC after mkdocs conversion\n\n\n[2018-04-28 22:31] meleu:\n Updated Useful Links (markdown)\n\n\n[2018-04-28 19:03] magusLOGS:\n added tcrf.net\n\n\n[2018-04-28 13:48] meleu:\n Created Useful Links (markdown)",
             "title": "Useful Links"
         },
         {
@@ -969,6 +969,11 @@
             "location": "/Useful-Links/#cumulative-probability-calculator",
             "text": "When working with achievements with an RNG factor you will often want to know the probability of success for players given a number of attempts. (see  unwelcome concepts, achievements with low odds ). Use it to calculate P(X>=1), assuming the player needs to succeed only once across several attempts, to estimate how many attempts an might require for less lucky players.",
             "title": "Cumulative Probability Calculator"
+        },
+        {
+            "location": "/Useful-Links/#httpswwwzapstudionetframecalc",
+            "text": "Simple utility to calculate frames out of time given and the other way around.",
+            "title": "https://www.zapstudio.net/framecalc/"
         },
         {
             "location": "/Useful-Links/#httpswwwromhackingnet",
@@ -1002,7 +1007,7 @@
         },
         {
             "location": "/Useful-Links/#changelog",
-            "text": "Last 10 changes on this page:   [2019-01-29 14:15] Kvon:  added the Cumulative Probability Calculator link  [2019-01-07 12:14] meleu:  added vgmaps.com  [2018-12-06 20:20] televandalist:  Added gamehacking.org - I use the site a lot and always recommend it to people looking for addresses. - tele  [2018-10-11 00:21] CoolCanuck:  gamefaqs.com -> gamefaqs.gamespot.com  [2018-05-03 11:53] meleu:  better format, making the URLs appear on the ToC after mkdocs conversion  [2018-04-28 22:31] meleu:  Updated Useful Links (markdown)  [2018-04-28 19:03] magusLOGS:  added tcrf.net  [2018-04-28 13:48] meleu:  Created Useful Links (markdown)",
+            "text": "Last 10 changes on this page:   [2019-12-29 12:34] meleu:  add  https://www.zapstudio.net/framecalc/  [2019-01-29 14:15] Kvon:  added the Cumulative Probability Calculator link  [2019-01-07 12:14] meleu:  added vgmaps.com  [2018-12-06 20:20] televandalist:  Added gamehacking.org - I use the site a lot and always recommend it to people looking for addresses. - tele  [2018-10-11 00:21] CoolCanuck:  gamefaqs.com -> gamefaqs.gamespot.com  [2018-05-03 11:53] meleu:  better format, making the URLs appear on the ToC after mkdocs conversion  [2018-04-28 22:31] meleu:  Updated Useful Links (markdown)  [2018-04-28 19:03] magusLOGS:  added tcrf.net  [2018-04-28 13:48] meleu:  Created Useful Links (markdown)",
             "title": "Changelog"
         },
         {
@@ -2672,7 +2677,7 @@
         },
         {
             "location": "/Emulator-support-and-issues/",
-            "text": "Changelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:",
+            "text": "Changelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:",
             "title": "Emulator support and issues"
         },
         {
@@ -2737,6 +2742,16 @@
         },
         {
             "location": "/Emulator-support-and-issues/#changelog_12",
+            "text": "Last 10 changes on this page:",
+            "title": "Changelog"
+        },
+        {
+            "location": "/Emulator-support-and-issues/#changelog_13",
+            "text": "Last 10 changes on this page:",
+            "title": "Changelog"
+        },
+        {
+            "location": "/Emulator-support-and-issues/#changelog_14",
             "text": "Last 10 changes on this page:",
             "title": "Changelog"
         },
