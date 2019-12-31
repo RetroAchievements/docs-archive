@@ -13,7 +13,7 @@
         <meta name="description" content="RetroAchievements.org Documentation Project">
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/Alt-Groups-es/">
+        <link rel="canonical" href="https://docs.retroachievements.org/Multi-Disc-Games-Tutorial/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Alt Groups - RADocs</title>
+        <title>Multi-Disc Games Tutorial - RADocs</title>
       
     
     
@@ -97,7 +97,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#ejemplo" tabindex="1" class="md-skip">
+      <a href="#m3u-files" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -123,7 +123,7 @@
                 RADocs
               </span>
               <span class="md-header-nav__topic">
-                Alt Groups
+                Multi-Disc Games Tutorial
               </span>
             
           
@@ -206,7 +206,7 @@
   
     <li class="md-tabs__item">
       
-        <a href=".." title="General" class="md-tabs__link">
+        <a href=".." title="General" class="md-tabs__link md-tabs__link--active">
           General
         </a>
       
@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Home-es/" title="Español" class="md-tabs__link md-tabs__link--active">
+        <a href="../Home-es/" title="Español" class="md-tabs__link">
           Español
         </a>
       
@@ -302,10 +302,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       General
@@ -417,11 +419,66 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Multi-Disc-Games-Tutorial/" title="Multi-Disc Games Tutorial" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Multi-Disc Games Tutorial
+      </label>
+    
+    <a href="./" title="Multi-Disc Games Tutorial" class="md-nav__link md-nav__link--active">
       Multi-Disc Games Tutorial
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#m3u-files" title="m3u files" class="md-nav__link">
+    m3u files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-discs-in-ralibretro" title="Changing Discs in RAlibretro" class="md-nav__link">
+    Changing Discs in RAlibretro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-discs-in-retroarch" title="Changing Discs in Retroarch" class="md-nav__link">
+    Changing Discs in Retroarch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1502,12 +1559,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Español
@@ -1667,12 +1722,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
     <label class="md-nav__link" for="nav-4-3">
       Desarrolladores
@@ -1748,12 +1801,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-6" type="checkbox" id="nav-4-3-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-6" type="checkbox" id="nav-4-3-6">
     
     <label class="md-nav__link" for="nav-4-3-6">
       Características en la Logica de un Logro
@@ -1877,66 +1928,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Alt Groups
-      </label>
-    
-    <a href="./" title="Alt Groups" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Alt-Groups-es/" title="Alt Groups" class="md-nav__link">
       Alt Groups
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo" title="Ejemplo" class="md-nav__link">
-    Ejemplo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datos-sobre-los-alt-groups" title="Datos sobre los Alt Groups" class="md-nav__link">
-    Datos sobre los Alt Groups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utilizando-alt-groups-para-resets-condicionales" title="Utilizando Alt Groups para Resets Condicionales" class="md-nav__link">
-    Utilizando Alt Groups para Resets Condicionales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" title="Changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -2250,22 +2246,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" title="Ejemplo" class="md-nav__link">
-    Ejemplo
+  <a href="#m3u-files" title="m3u files" class="md-nav__link">
+    m3u files
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datos-sobre-los-alt-groups" title="Datos sobre los Alt Groups" class="md-nav__link">
-    Datos sobre los Alt Groups
+  <a href="#changing-discs-in-ralibretro" title="Changing Discs in RAlibretro" class="md-nav__link">
+    Changing Discs in RAlibretro
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#utilizando-alt-groups-para-resets-condicionales" title="Utilizando Alt Groups para Resets Condicionales" class="md-nav__link">
-    Utilizando Alt Groups para Resets Condicionales
+  <a href="#changing-discs-in-retroarch" title="Changing Discs in Retroarch" class="md-nav__link">
+    Changing Discs in Retroarch
   </a>
   
 </li>
@@ -2293,49 +2289,53 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Alt-Groups-es.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Multi-Disc-Games-Tutorial.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Alt Groups</h1>
+                  <h1>Multi-Disc Games Tutorial</h1>
                 
-                <p>Un logro puede tener grupos agregados a el que permiten requisitos alternativos para que el logro se desbloquee. A esto se le conoce como <em>Alt Groups</em>, (Grupos Alternativos)</p>
-<p>Cuando utilizamos <em>Alt groups</em>, para que se dispare un logro, todas las condiciones en <em>Core group</em> TIENEN que ser verdaderas. Y así también todas las condiciones de CUALQUIER <em>Alt group</em> tienen que ser verdaderas. En otras palabras, cada <em>Alt group</em> utiliza la logica <code>OR</code>.</p>
-<h2 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">link</a></h2>
-<p>En este simple ejemplo para Contra (NES) el logro requiere, "En un Stage mira hacia arriba o agáchate." Veamos que hay en el <em>Core group</em> y en los <em>Alt groups</em>: </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/32706333/48969080-7de44b80-efb6-11e8-88f2-92de405fe306.png" /><br />
-En el grupo core: <code>0x18 = 5</code>. Esto checa si el jugador se encuentra en un Stage.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/32706333/48969094-9eaca100-efb6-11e8-9f8b-4d64a7aff9b0.png" /><br />
-En <code>Alt 01</code>: <code>0xbc = 1</code>. Esto checa si el jugador esta viendo hacia arriba.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/32706333/48969096-b4ba6180-efb6-11e8-9c86-2744509fbb5b.png" /><br />
-En <code>Alt 02</code>: <code>0xbc = 2</code>. Esto checa si el jugador esta agachado.</p>
-<p>Mientras el jugador se encuentre en un stage. El grupo core es verdadero. Si el jugador mira hacia arriba, Alt 01 es verdadero. Si el jugador se agacha, Alt 02 es verdadero. Si core + Alt 01 Ó Alt 02 es verdadero, este logro se dispararia.</p>
-<h2 id="datos-sobre-los-alt-groups">Datos sobre los Alt Groups<a class="headerlink" href="#datos-sobre-los-alt-groups" title="Permanent link">link</a></h2>
-<ul>
-<li>
-<p>Para añadir o remover <em>Alt groups</em> haz click en el boton <code>+</code> o <code>-</code> en la parte inferior izquierda del editor de logros (achievement editor).<br />
-<img alt="image" src="https://user-images.githubusercontent.com/32706333/48969436-bdf9fd00-efbb-11e8-98ab-2cc730026836.png" /> </p>
-</li>
-<li>
-<p>Si quieres simplemente checar <strong>ESTE</strong> <code>O</code> <strong>ESO</strong> puedes dejar el core group en blanco y añadir <strong>ESTE</strong> en <code>Alt 01</code>, y <strong>ESO</strong> en <code>Alt 02</code>.</p>
-</li>
-<li>
-<p>No importa cuantos <code>Alt groups</code> tenga un logro, si el grupo Core es verdadero, solo un Alt tiene que ser verdadero para que el logro se dispare.</p>
-</li>
-<li>
-<p>Cuando utilizamos un <a href="#resetif-es">ResetIf</a> y <a href="#pauseif-es">PauseIf</a>, el PauseIf solo pausa el grupo en el que se encuentre, pero el ResetIf resetea los hit counts en todos los grupos e impide que el logro se dispare mientras el reset se encuentre activado.</p>
-</li>
-</ul>
-<h2 id="utilizando-alt-groups-para-resets-condicionales">Utilizando Alt Groups para Resets Condicionales<a class="headerlink" href="#utilizando-alt-groups-para-resets-condicionales" title="Permanent link">link</a></h2>
-<p><strong>Avanzado:</strong> Un <em>Alt group</em> puede ser utilizado para crear una condición ResetIf que solo se activa por cierto tiempo.</p>
-<p>Si tu creas un <em>Alt group</em> que contenga una condición PauseIf y una condicion ResetIf, puedes utilizar la condición PauseIf para pausar la condición ResetIf sobre ciertas circunstancias y sin deshabilitar todo el logro.
-- Un Reset afecta a todos los grupos, incluyendo el grupo core. El Pause solo pausara el <em>Alt group</em> que contenga el PauseIf.
-- Esta lógica puede ser aplicada a múltiples <em>Alt groups</em> en el mismo logro para proteger varios Reset de ser disparados por separado. 
-- <strong>Ten en cuenta</strong> de tener mínimo un <em>Alt group</em> que sea verdadero o el logro no se disparara. La manera mas facil de hacer esto es crear un alt group extra que tenga una condición que sea <code>Valor 1 = Valor 1</code>.
-- <strong>Cuidado</strong>: Si tu condición Pause es falsa, y la condición Reset también es falsa, el grupo va a ser considerado como verdadero al menos que tengas otra condición falsa en el grupo. Cuando utilizamos un <em>Alt group</em> para segregar un PauseIf, ten en cuenta de incluir siempre una condición que sea falsa como <code>Valor 1 = Valor 0</code>.</p>
+                <h2 id="m3u-files">m3u files<a class="headerlink" href="#m3u-files" title="Permanent link">link</a></h2>
+<p>Changing discs on Playstation requires creating a playlist file (.m3u) for your discs. This may sound intimidating but it's actually very simple.</p>
+<p><strong>Step 1:</strong> Place your .bin and .cue files in the desired location.</p>
+<p><strong>Step 2:</strong> Open Notepad</p>
+<p><strong>Step 3:</strong> Type the names of your .cue files <em>exactly</em> as they're named on your files. When you're finished your text document should look something like this:</p>
+<p><img alt="" src="https://i.imgur.com/cClkh4P.png" /></p>
+<p>When you're finished save the text document in the same location as your game discs with whatever name you like.</p>
+<p><strong>Step 4:</strong> Rename the document, changing the extension from .txt to .m3u</p>
+<p><img alt="" src="https://i.imgur.com/bVgfM92.png" /></p>
+<p><strong>NOTE:</strong> If you can't see the .txt extension at the end of your text document title you need to change your settings to show known file extensions. In Windows 10 it's very simple, you can find that on your folder under 'View' and a checkbox reading 'File name extensions'</p>
+<p><img alt="" src="https://i.imgur.com/HUljBjA.png" /></p>
+<p>Now you're done! Simple, huh? From here on out, when you start the game, load it using the .m3u file you've just created.</p>
+<p><strong>NOTE:</strong> If you have already played the first disc of a game and find your saves no longer there, you can retrieve them by navigating to your emulators 'saves' folder, finding the save for your first disc and renaming it to match the .m3u you've created. for example:</p>
+<p>'Metal Gear Solid (v1.1) (Disc 1).mcr'   &gt;   'Metal Gear Solid (v1.1).mcr'</p>
+<h2 id="changing-discs-in-ralibretro">Changing Discs in RAlibretro<a class="headerlink" href="#changing-discs-in-ralibretro" title="Permanent link">link</a></h2>
+<p>To change discs on RAlibretro, when the game prompts you, go to the file menu and follow these steps</p>
+<p><img alt="" src="https://i.imgur.com/X5aLvnt.png" /></p>
+<p><strong>Step 1:</strong> File &gt; CD-ROM &gt; Open Tray</p>
+<p><strong>Step 2:</strong> File &gt; CD-ROM &gt; Desired Disc</p>
+<p><strong>Step 3:</strong> File &gt; CD-ROM &gt; Close Tray</p>
+<p>And that's it!</p>
+<h2 id="changing-discs-in-retroarch">Changing Discs in Retroarch<a class="headerlink" href="#changing-discs-in-retroarch" title="Permanent link">link</a></h2>
+<p>You'll find the option in Retroarch under 'Quick Menu &gt; Disk Control'</p>
+<p><img alt="" src="https://i.imgur.com/rnmLM9l.png" /></p>
+<p><img alt="" src="https://i.imgur.com/9XaMXCF.png" /></p>
+<p><strong>Step 1:</strong> Select 'Disk Cycle Tray Status' (Note: If you have the 'Pause when menu activated' option on, you'll need to turn the menu off and on again so that the game knows the disc tray has been opened)</p>
+<p><strong>Step 2:</strong> Select 'Disk Index' (Left and right to change discs)</p>
+<p><strong>Step 3:</strong> Select 'Disk Cycle Tray Status' again</p>
+<p>And you're done!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
-<li><code>[2019-04-16 11:13] eldexterr:</code> ES title changed to es</li>
+<li><code>[2019-12-31 09:42] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-31 11:01] meleu:</code> add proper headings and other cosmetics</li>
+<li><code>[2019-12-29 12:26] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 12:22] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:58] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:57] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:56] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:53] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:52] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
+<li><code>[2019-12-29 11:51] wilhitewarrior:</code> Updated Multi Disc Games Tutorial (markdown)</li>
 </ul>
                 
                   
@@ -2357,7 +2357,7 @@ En <code>Alt 02</code>: <code>0xbc = 2</code>. Esto checa si el jugador esta aga
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Combining-Flags-es/" title="Combinando Banderas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" title="A message for Achievement Hunters and Completionists about revisions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2366,19 +2366,19 @@ En <code>Alt 02</code>: <code>0xbc = 2</code>. Esto checa si el jugador esta aga
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Combinando Banderas
+                A message for Achievement Hunters and Completionists about revisions
               </span>
             </div>
           </a>
         
         
-          <a href="../Minimum-Required-Versions-for-Logic-Features-es/" title="Versiones Mínimas Requeridas para Funciones en la Lógica" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../How-to-configure-OBS-Studio-to-see-the-popups/" title="How to configure OBS Studio to see the popups" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Versiones Mínimas Requeridas para Funciones en la Lógica
+                How to configure OBS Studio to see the popups
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

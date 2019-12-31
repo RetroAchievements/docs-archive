@@ -466,6 +466,31 @@
             "title": "Changelog"
         },
         {
+            "location": "/Multi-Disc-Games-Tutorial/",
+            "text": "m3u files\nlink\n\n\nChanging discs on Playstation requires creating a playlist file (.m3u) for your discs. This may sound intimidating but it's actually very simple.\n\n\nStep 1:\n Place your .bin and .cue files in the desired location.\n\n\nStep 2:\n Open Notepad\n\n\nStep 3:\n Type the names of your .cue files \nexactly\n as they're named on your files. When you're finished your text document should look something like this:\n\n\n\n\nWhen you're finished save the text document in the same location as your game discs with whatever name you like.\n\n\nStep 4:\n Rename the document, changing the extension from .txt to .m3u\n\n\n\n\nNOTE:\n If you can't see the .txt extension at the end of your text document title you need to change your settings to show known file extensions. In Windows 10 it's very simple, you can find that on your folder under 'View' and a checkbox reading 'File name extensions'\n\n\n\n\nNow you're done! Simple, huh? From here on out, when you start the game, load it using the .m3u file you've just created.\n\n\nNOTE:\n If you have already played the first disc of a game and find your saves no longer there, you can retrieve them by navigating to your emulators 'saves' folder, finding the save for your first disc and renaming it to match the .m3u you've created. for example:\n\n\n'Metal Gear Solid (v1.1) (Disc 1).mcr'   >   'Metal Gear Solid (v1.1).mcr'\n\n\nChanging Discs in RAlibretro\nlink\n\n\nTo change discs on RAlibretro, when the game prompts you, go to the file menu and follow these steps\n\n\n\n\nStep 1:\n File > CD-ROM > Open Tray\n\n\nStep 2:\n File > CD-ROM > Desired Disc\n\n\nStep 3:\n File > CD-ROM > Close Tray\n\n\nAnd that's it!\n\n\nChanging Discs in Retroarch\nlink\n\n\nYou'll find the option in Retroarch under 'Quick Menu > Disk Control'\n\n\n\n\n\n\nStep 1:\n Select 'Disk Cycle Tray Status' (Note: If you have the 'Pause when menu activated' option on, you'll need to turn the menu off and on again so that the game knows the disc tray has been opened)\n\n\nStep 2:\n Select 'Disk Index' (Left and right to change discs)\n\n\nStep 3:\n Select 'Disk Cycle Tray Status' again\n\n\nAnd you're done!\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\n\n\n[2019-12-31 09:42] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-31 11:01] meleu:\n add proper headings and other cosmetics\n\n\n[2019-12-29 12:26] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 12:22] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:58] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:57] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:56] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:53] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:52] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)\n\n\n[2019-12-29 11:51] wilhitewarrior:\n Updated Multi Disc Games Tutorial (markdown)",
+            "title": "Multi-Disc Games Tutorial"
+        },
+        {
+            "location": "/Multi-Disc-Games-Tutorial/#m3u-files",
+            "text": "Changing discs on Playstation requires creating a playlist file (.m3u) for your discs. This may sound intimidating but it's actually very simple.  Step 1:  Place your .bin and .cue files in the desired location.  Step 2:  Open Notepad  Step 3:  Type the names of your .cue files  exactly  as they're named on your files. When you're finished your text document should look something like this:   When you're finished save the text document in the same location as your game discs with whatever name you like.  Step 4:  Rename the document, changing the extension from .txt to .m3u   NOTE:  If you can't see the .txt extension at the end of your text document title you need to change your settings to show known file extensions. In Windows 10 it's very simple, you can find that on your folder under 'View' and a checkbox reading 'File name extensions'   Now you're done! Simple, huh? From here on out, when you start the game, load it using the .m3u file you've just created.  NOTE:  If you have already played the first disc of a game and find your saves no longer there, you can retrieve them by navigating to your emulators 'saves' folder, finding the save for your first disc and renaming it to match the .m3u you've created. for example:  'Metal Gear Solid (v1.1) (Disc 1).mcr'   >   'Metal Gear Solid (v1.1).mcr'",
+            "title": "m3u files"
+        },
+        {
+            "location": "/Multi-Disc-Games-Tutorial/#changing-discs-in-ralibretro",
+            "text": "To change discs on RAlibretro, when the game prompts you, go to the file menu and follow these steps   Step 1:  File > CD-ROM > Open Tray  Step 2:  File > CD-ROM > Desired Disc  Step 3:  File > CD-ROM > Close Tray  And that's it!",
+            "title": "Changing Discs in RAlibretro"
+        },
+        {
+            "location": "/Multi-Disc-Games-Tutorial/#changing-discs-in-retroarch",
+            "text": "You'll find the option in Retroarch under 'Quick Menu > Disk Control'    Step 1:  Select 'Disk Cycle Tray Status' (Note: If you have the 'Pause when menu activated' option on, you'll need to turn the menu off and on again so that the game knows the disc tray has been opened)  Step 2:  Select 'Disk Index' (Left and right to change discs)  Step 3:  Select 'Disk Cycle Tray Status' again  And you're done!",
+            "title": "Changing Discs in Retroarch"
+        },
+        {
+            "location": "/Multi-Disc-Games-Tutorial/#changelog",
+            "text": "Last 10 changes on this page:   [2019-12-31 09:42] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-31 11:01] meleu:  add proper headings and other cosmetics  [2019-12-29 12:26] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 12:22] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:58] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:57] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:56] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:53] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:52] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)  [2019-12-29 11:51] wilhitewarrior:  Updated Multi Disc Games Tutorial (markdown)",
+            "title": "Changelog"
+        },
+        {
             "location": "/How-to-configure-OBS-Studio-to-see-the-popups/",
             "text": "In \"Window Capture\" mode, OBS Studio will not capture the popups. The popups are rendered using a \"Layered Window\", and OBS Studio removed support for capturing layered windows\n\n\nIf you want to include the popups in your stream, you have two options: change to \"Display Capture\" mode, or add a second \"Window Capture\" for the \"TransparentOverlayWindow\". This page will attempt to walk you through doing the second.\n\n\nAdd a second \"Window Capture\" source to the Scene. In the popup dialog, select the \"TransparentOverlayWindow\".\n\n\n\n\nYou'll probably notice the window is pink.\n\n\n\n\nAdd a filter to the second \"Window Capture\"\n\n\n\n\nAdd a \"Color Key\" filter, set the Key Color Type to \"Custom Color\", then use the Select Color dialog to enter \n#FF01FE\n as the color. Decrease the similarity to 1 and the opacity to 90.\n\n\n\n\nFinally, if you still have a bit of a pink border showing up, enable a Scale Filter. They all seem to eliminate the remnant, so choose whichever you like best.\n\n\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\n\n\n[2019-06-30 17:06] Jamiras:\n Created How to configure OBS Studio to see the popups (markdown)",
             "title": "How to configure OBS Studio to see the popups"
@@ -2676,93 +2701,33 @@
             "title": "Changelog"
         },
         {
-            "location": "/Emulator-support-and-issues/",
-            "text": "Changelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:",
-            "title": "Emulator support and issues"
+            "location": "/Emulator-Support-and-Issues/",
+            "text": "Supported Consoles\nlink\n\n\n\n\n\n\n\n\nConsole ID\n\n\nConsole Name\n\n\nStandalones\n\n\nCores\n\n\nRALib Support\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\n1\n\n\nMega Drive/Genesis\n\n\n\n\nGenesis Plus GX\n\n\nYes\n\n\n\n\n\n\n\n\n2\n\n\nNintendo 64\n\n\n\n\nMupen64Plus\n\n\n\n\n\n\n\n\n\n\n3\n\n\nSNES\n\n\n\n\nSnes9x\n\n\nYes\n\n\n\n\n\n\n\n\n4\n\n\nGame Boy\n\n\n\n\nGambatte\n\n\nYes\n\n\n\n\n\n\n\n\n5\n\n\nGame Boy Advance\n\n\n\n\nMednafen VBA\n\n\nYes\n\n\n\n\n\n\n\n\n6\n\n\nGame Boy Color\n\n\n\n\nGambatte\n\n\nYes\n\n\n\n\n\n\n\n\n7\n\n\nNES\n\n\n\n\nFCEUmm\n\n\nYes\n\n\n\n\n\n\n\n\n8\n\n\nPC Engine\n\n\n\n\nMednafen PCE-Fast\nMednafen SuperGrafx\n\n\nYes\n\n\n\n\n\n\n\n\n9\n\n\nSega CD\n\n\n\n\nGenesis Plus GX\n\n\nYes\n\n\n\n\n\n\n\n\n10\n\n\nSega 32X\n\n\n\n\nPicoDrive\n\n\nYes\n\n\n\n\n\n\n\n\n11\n\n\nMaster System\n\n\nRAMeka\n\n\nGenesis Plus GX\n\n\nYes\n\n\n\n\n\n\n\n\n12\n\n\nPlayStation\n\n\n\n\nMednafen PSX\nPCSX ReARMed\n\n\nYes\n\n\n\n\n\n\n\n\n13\n\n\nAtari Lynx\n\n\n\n\nMednafen Handy\n\n\nYes\n\n\n\n\n\n\n\n\n14\n\n\nNeo Geo Pocket\n\n\n\n\nMednafen Neopop\n\n\nYes\n\n\n\n\n\n\n\n\n15\n\n\nGame Gear\n\n\nRAMeka\n\n\nGenesis Plus GX\n\n\nYes\n\n\n\n\n\n\n\n\n25\n\n\nAtari 2600\n\n\n\n\nStella\n\n\nYes\n\n\n\n\n\n\n\n\n27\n\n\nArcade\n\n\n\n\nFinalBurn Neo\n\n\nYes\n\n\n* Needs Updated Board List\n* Needs Screen Rotation Support\n\n\n\n\n\n\n28\n\n\nVirtual Boy\n\n\n\n\nMednafen VB\n\n\nYes\n\n\n\n\n\n\n\n\n33\n\n\nSG-1000\n\n\nRAMeka\n\n\nGenesis Plus GX\nblueMSX\n\n\nYes\n\n\n\n\n\n\n\n\n38\n\n\nApple II\n\n\n\n\n\n\nNo\n\n\n\n\n\n\n\n\n39\n\n\nSaturn\n\n\n\n\nMednafen Saturn\n\n\nYes\n\n\n\n\n\n\n\n\n44\n\n\nColecoVision\n\n\nRAMeka\n\n\nblueMSX\n\n\nYes\n\n\n\n\n\n\n\n\n47\n\n\nPC-8000/8800\n\n\nQuasi88\n\n\n\n\nNo\n\n\n\n\n\n\n\n\n51\n\n\nAtari 7800\n\n\n\n\nProSystem\n\n\nYes\n\n\n\n\n\n\n\n\n\n\nSupported But Not Validated\nlink\n\n\n\n\n\n\n\n\nConsole ID\n\n\nConsole Name\n\n\nStandalones\n\n\nCores\n\n\nRALib Support\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\n17\n\n\nAtari Jaguar\n\n\n\n\nVirtual Jaguar\n\n\nYes\n\n\n\n\n\n\n\n\n46\n\n\nVectrex\n\n\n\n\nVecx\n\n\nYes\n\n\n\n\n\n\n\n\n49\n\n\nPC-FX\n\n\n\n\nMednafen PC-FX\n\n\nYes\n\n\n\n\n\n\n\n\n53\n\n\nWonderSwan\n\n\n\n\nMednafen Cygne\n\n\nYes\n\n\n\n\n\n\n\n\n\n\nUnsupported Consoles\nlink\n\n\n\n\n\n\n\n\nConsole ID\n\n\nConsole Name\n\n\nStandalones\n\n\nCores\n\n\nRALib Support\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\n16\n\n\nGameCube\n\n\n\n\nDolphin\n\n\n\n\n\n\n\n\n\n\n18\n\n\nNintendo DS\n\n\n\n\nDeSmuMe\n\n\nNeeds Work\n\n\n*No Touch Support\n\n\n\n\n\n\n19\n\n\nWii\n\n\n\n\nDolphin\n\n\n\n\n\n\n\n\n\n\n20\n\n\nWii U\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n21\n\n\nPlayStation 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n22\n\n\nXbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n24\n\n\nPokemon Mini\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n26\n\n\nDOS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n29\n\n\nMSX\n\n\n\n\nblueMSX\n\n\nNeeds Work\n\n\n\n\n\n\n\n\n30\n\n\nCommodore 64\n\n\n\n\nvice\n\n\nNeeds Work\n\n\n\n\n\n\n\n\n31\n\n\nZX81\n\n\n\n\nEightyOne\n\n\nNeeds Work\n\n\n*Memory Not Mapped\n\n\n\n\n\n\n32\n\n\nOric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n34\n\n\nVic-20\n\n\n\n\n\n\nNeeds Work\n\n\n*Game Load Error\n\n\n\n\n\n\n35\n\n\nAmiga\n\n\n\n\nfsuae\n\n\nNeeds Work\n\n\n*Game Load Error\n\n\n\n\n\n\n36\n\n\nAtari ST\n\n\n\n\nHatari\n\n\nNeeds Work\n\n\n*Won't Load Core\n\n\n\n\n\n\n37\n\n\nAmstrad CPC\n\n\n\n\nCap32\n\n\nNeeds Work\n\n\n*Game Load Error\n\n\n\n\n\n\n40\n\n\nDreamcast\n\n\n\n\nreicast\n\n\nNeeds Work\n\n\n*RALib Crashes\n\n\n\n\n\n\n41\n\n\nPlayStation Portable\n\n\n\n\nPPSSPP\n\n\nNeeds Work\n\n\n*RA Lib Crashes Upon Startup\n\n\n\n\n\n\n42\n\n\nPhilips CD-I\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n43\n\n\n3DO Interactive Multiplayer\n\n\n\n\n4DO\n\n\nNeeds Work\n\n\n*Game Load Error\n\n\n\n\n\n\n45\n\n\nIntellivision\n\n\n\n\nFreeIntv\n\n\nNeeds Work\n\n\n*Memory Not Mapped\n\n\n\n\n\n\n48\n\n\nPC-9800\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n50\n\n\nAtari 5200\n\n\n\n\nAtari800\n\n\nNeeds Work\n\n\n*Won't Load Core\n\n\n\n\n\n\n52\n\n\nSharp X68K\n\n\n\n\npx68k\n\n\n\n\n\n\n\n\n\n\n54\n\n\nCassette Vision\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n55\n\n\nSuper Cassette Vision\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDoes Not Have Console ID\nlink\n\n\n\n\n\n\n\n\nConsole ID\n\n\nConsole Name\n\n\nStandalones\n\n\nCores\n\n\nRALib Support\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\n\n\nPocketStation\n\n\n\n\npockystation\n\n\n\n\n\n\n\n\n\n\n\n\nNintendo 3DS\n\n\n\n\nCitra\n\n\n\n\n\n\n\n\n\n\n\n\nMagnavox Odyssey\n\n\n\n\nO2EM\n\n\n\n\n\n\n\n\n\n\n\n\nZX Spectrum\n\n\n\n\nFUSE\n\n\n\n\n\n\n\n\n\n\n\n\nGame & Watch\n\n\n\n\ngw\n\n\n\n\n\n\n\n\n\n\n\n\nTomson TO8/TO8D\n\n\n\n\nTheodore\n\n\n\n\n\n\n\n\n\n\n\n\nFM Towns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFairchild Channel-F\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNokia N-Gage\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSega PICO\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTIC-80\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:\n\n\n\n\n[2019-12-31 10:15] meleu:\n fix headings (DO NOT USE # FOR HEADINGS!)\n\n\n[2019-09-28 22:05] televandalist:\n Updated Emulator Support and Issues (markdown)\n\n\n[2019-09-28 21:55] televandalist:\n WIP",
+            "title": "Emulator Support and Issues"
         },
         {
-            "location": "/Emulator-support-and-issues/#changelog",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
+            "location": "/Emulator-Support-and-Issues/#supported-consoles",
+            "text": "Console ID  Console Name  Standalones  Cores  RALib Support  Notes      1  Mega Drive/Genesis   Genesis Plus GX  Yes     2  Nintendo 64   Mupen64Plus      3  SNES   Snes9x  Yes     4  Game Boy   Gambatte  Yes     5  Game Boy Advance   Mednafen VBA  Yes     6  Game Boy Color   Gambatte  Yes     7  NES   FCEUmm  Yes     8  PC Engine   Mednafen PCE-Fast Mednafen SuperGrafx  Yes     9  Sega CD   Genesis Plus GX  Yes     10  Sega 32X   PicoDrive  Yes     11  Master System  RAMeka  Genesis Plus GX  Yes     12  PlayStation   Mednafen PSX PCSX ReARMed  Yes     13  Atari Lynx   Mednafen Handy  Yes     14  Neo Geo Pocket   Mednafen Neopop  Yes     15  Game Gear  RAMeka  Genesis Plus GX  Yes     25  Atari 2600   Stella  Yes     27  Arcade   FinalBurn Neo  Yes  * Needs Updated Board List * Needs Screen Rotation Support    28  Virtual Boy   Mednafen VB  Yes     33  SG-1000  RAMeka  Genesis Plus GX blueMSX  Yes     38  Apple II    No     39  Saturn   Mednafen Saturn  Yes     44  ColecoVision  RAMeka  blueMSX  Yes     47  PC-8000/8800  Quasi88   No     51  Atari 7800   ProSystem  Yes",
+            "title": "Supported Consoles"
         },
         {
-            "location": "/Emulator-support-and-issues/#changelog_1",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
+            "location": "/Emulator-Support-and-Issues/#supported-but-not-validated",
+            "text": "Console ID  Console Name  Standalones  Cores  RALib Support  Notes      17  Atari Jaguar   Virtual Jaguar  Yes     46  Vectrex   Vecx  Yes     49  PC-FX   Mednafen PC-FX  Yes     53  WonderSwan   Mednafen Cygne  Yes",
+            "title": "Supported But Not Validated"
         },
         {
-            "location": "/Emulator-support-and-issues/#changelog_2",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
+            "location": "/Emulator-Support-and-Issues/#unsupported-consoles",
+            "text": "Console ID  Console Name  Standalones  Cores  RALib Support  Notes      16  GameCube   Dolphin      18  Nintendo DS   DeSmuMe  Needs Work  *No Touch Support    19  Wii   Dolphin      20  Wii U        21  PlayStation 2        22  Xbox        24  Pokemon Mini        26  DOS        29  MSX   blueMSX  Needs Work     30  Commodore 64   vice  Needs Work     31  ZX81   EightyOne  Needs Work  *Memory Not Mapped    32  Oric        34  Vic-20    Needs Work  *Game Load Error    35  Amiga   fsuae  Needs Work  *Game Load Error    36  Atari ST   Hatari  Needs Work  *Won't Load Core    37  Amstrad CPC   Cap32  Needs Work  *Game Load Error    40  Dreamcast   reicast  Needs Work  *RALib Crashes    41  PlayStation Portable   PPSSPP  Needs Work  *RA Lib Crashes Upon Startup    42  Philips CD-I        43  3DO Interactive Multiplayer   4DO  Needs Work  *Game Load Error    45  Intellivision   FreeIntv  Needs Work  *Memory Not Mapped    48  PC-9800        50  Atari 5200   Atari800  Needs Work  *Won't Load Core    52  Sharp X68K   px68k      54  Cassette Vision        55  Super Cassette Vision",
+            "title": "Unsupported Consoles"
         },
         {
-            "location": "/Emulator-support-and-issues/#changelog_3",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
+            "location": "/Emulator-Support-and-Issues/#does-not-have-console-id",
+            "text": "Console ID  Console Name  Standalones  Cores  RALib Support  Notes       PocketStation   pockystation       Nintendo 3DS   Citra       Magnavox Odyssey   O2EM       ZX Spectrum   FUSE       Game & Watch   gw       Tomson TO8/TO8D   Theodore       FM Towns         Fairchild Channel-F         Nokia N-Gage         Sega PICO         TIC-80",
+            "title": "Does Not Have Console ID"
         },
         {
-            "location": "/Emulator-support-and-issues/#changelog_4",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_5",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_6",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_7",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_8",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_9",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_10",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_11",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_12",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_13",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_14",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_15",
-            "text": "Last 10 changes on this page:",
-            "title": "Changelog"
-        },
-        {
-            "location": "/Emulator-support-and-issues/#changelog_16",
-            "text": "Last 10 changes on this page:",
+            "location": "/Emulator-Support-and-Issues/#changelog",
+            "text": "Last 10 changes on this page:   [2019-12-31 10:15] meleu:  fix headings (DO NOT USE # FOR HEADINGS!)  [2019-09-28 22:05] televandalist:  Updated Emulator Support and Issues (markdown)  [2019-09-28 21:55] televandalist:  WIP",
             "title": "Changelog"
         },
         {

@@ -52,6 +52,12 @@
     </url>
         
     <url>
+     <loc>https://docs.retroachievements.org//Multi-Disc-Games-Tutorial/</loc>
+     <lastmod>2019-12-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://docs.retroachievements.org//How-to-configure-OBS-Studio-to-see-the-popups/</loc>
      <lastmod>2019-12-31</lastmod>
      <changefreq>daily</changefreq>
@@ -230,7 +236,7 @@
     </url>
         
     <url>
-     <loc>https://docs.retroachievements.org//Emulator-support-and-issues/</loc>
+     <loc>https://docs.retroachievements.org//Emulator-Support-and-Issues/</loc>
      <lastmod>2019-12-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
