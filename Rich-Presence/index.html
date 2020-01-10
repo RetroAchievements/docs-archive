@@ -2664,6 +2664,7 @@ FormatType=VALUE
 <li>A bit6 address's character is <code>s</code> (or <code>S</code>). At 0xs10 the address is one bit, the seventh bit: <code>0x00 0000</code>  </li>
 <li>A bit7 address's character is <code>t</code> (or <code>T</code>). At 0xt10 the address is one bit, the top bit: <code>x000 0000</code>  </li>
 <li>A 32bit address's character is <code>x</code> (or <code>X</code>). At 0xx10 the address is four bytes and 32 bits.</li>
+<li>A 24bit address's character is <code>w</code> (or <code>W</code>). At 0xW10 the address three bytes and 24 bits.</li>
 </ul>
 <p>Summarizing on a table:</p>
 <table>
@@ -2736,6 +2737,11 @@ FormatType=VALUE
 <td align="center"><code>0x01234</code></td>
 </tr>
 <tr>
+<td align="center">24bit</td>
+<td align="center"><code>0xW</code></td>
+<td align="center"><code>0xW123</code></td>
+</tr>
+<tr>
 <td align="center">32bit</td>
 <td align="center"><code>0xX</code></td>
 <td align="center"><code>0xX01234</code></td>
@@ -2777,7 +2783,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <p>This is most commonly used for score and time, but often other types of display values.</p>
 <h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">link</a></h2>
 <ul>
-<li>16,000 character limit for script  </li>
+<li>32,000 character limit for script  </li>
 <li>100 character limit for what is displayed  </li>
 <li>Unicode characters are allowed</li>
 </ul>
@@ -2875,6 +2881,8 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-01-08 06:38] televandalist:</code> Updated Rich Presence (markdown)</li>
+<li><code>[2020-01-08 06:37] televandalist:</code> Added 24bit to the address sizes and table. Updated the 16,000 character limit to 65,000.</li>
 <li><code>[2019-11-16 07:29] Jamiras:</code> add MINUTES and SECS_AS_MINS formats; remove " points" from SCORE format</li>
 <li><code>[2019-08-18 05:52] smuckola:</code> a missing letter</li>
 <li><code>[2019-07-10 19:01] Jamiras:</code> Updated Rich Presence (markdown)</li>
@@ -2883,8 +2891,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2019-04-22 20:23] Kvon:</code> added changes to rich standard symbols to reflect community views.</li>
 <li><code>[2019-02-24 18:37] Jamiras:</code> removed limit clauses related to unescaped characters</li>
 <li><code>[2019-01-28 06:42] Slimfr01:</code> Fixed a syntax error in "or" example, add an example with "and" &amp; "or"</li>
-<li><code>[2019-01-05 01:14] Kvon:</code> fixed some spacing typos</li>
-<li><code>[2018-11-10 18:50] Kvon:</code> Added 🚩(level/stage) as a standard symbol, removed ☰(menu). Added a link to a useful unicode resource" shapecatcher</li>
 </ul>
                 
                   
