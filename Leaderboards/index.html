@@ -2563,6 +2563,7 @@
 <p>The reason for this is that the values in each of these addresses signifies frames, seconds, and minutes respectively. When we add these values together, we get a grand total in frames that we submit to the database.</p>
 <p>Remember that 'Format' field that can be either <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> or <strong>Value</strong>? <strong>Time (Frames)</strong> is the most common one, and represents 'frames'. <strong>Time (Milliseconds)</strong> expects a value that we can convert directly into millisecs (Super Mario Kart uses this). However to convert a value in frames into a human-readible format, we should divide the value by 60 to get an accurate representation of seconds, and a value in millisecs should be divided by 100 to get the number of seconds. This is used both on the website and in the app to display the value properly, and is important to distinguish so we can be sure we get the most accurate value out of the emulator, by using whatever format they use to record time.</p>
 <p>There is also a symbol which only works in this field. Connecting two value conditions with <code>$</code> will cause only the one with the highest value to be used.</p>
+<p><strong>NOTE</strong>: The value calculation is performed using 32-bit signed integers. As such, the maximum value is 2147483647 and the minimum value is -2147483648. Values above the maximum will wrap around and register as very negative numbers. </p>
 <p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
 <p><strong>Tip</strong>: modifier is a decimal value, so if you need to divide by two, you can multiply by 0.5: <code>0xhfe24*0.5</code></p>
 <h3 id="value-from-hitcount">Value from HitCount<a class="headerlink" href="#value-from-hitcount" title="Permanent link">link</a></h3>
@@ -2585,6 +2586,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
 <li><code>[2020-01-09 22:56] Keltron3030:</code> Added 24-bit to address format table</li>
 <li><code>[2019-12-24 15:27] Jamiras:</code> add Value from HitCount section and note about using hit counts in STA/SUB/CAN</li>
 <li><code>[2019-05-15 17:53] meleu:</code> recover</li>
@@ -2594,7 +2596,6 @@
 <li><code>[2018-11-20 07:38] Scott:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2018-11-20 07:31] Scott:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2018-11-20 07:30] Scott:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2018-10-23 18:20] Kvon:</code> fixed link</li>
 </ul>
                 
                   
