@@ -2887,12 +2887,19 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <td><code>MISSING_DISPLAY_STRING</code></td>
 <td>The rich presence script did not contain a <code>Display:</code> element, or contained only conditional display strings</td>
 </tr>
+<tr>
+<td>-20</td>
+<td><code>RC_INVALID_VALUE_FLAG</code></td>
+<td>A non-combining flag is used in a non-trigger context. Combining flags are AddSource, SubSource, AddHits, AddAddress and AndNext.</td>
+</tr>
 </tbody>
 </table>
 <p>Additionally, if you see <code>[Unknown macro]</code>, that means the macro name could not be resolved. For example <code>@Points(0xh1234)</code> without defining <code>Format:Points</code> would generate <code>[Unknown macro]Points(0xh1234)</code>.</p>
+<p>This issue happens sometimes when a Rich Presence is created in the <code>&lt;GameID&gt;-Rich.txt</code> file in the <code>RACache&gt;Data</code> folder. In this case the issue can be fixed by adding an empty line at the start of the file.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-04-11 19:06] SporyTike:</code> Added Parse error -20 and how to fix Unknown Macro displayed when deving local</li>
 <li><code>[2020-01-08 06:38] televandalist:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2020-01-08 06:37] televandalist:</code> Added 24bit to the address sizes and table. Updated the 16,000 character limit to 65,000.</li>
 <li><code>[2019-11-16 07:29] Jamiras:</code> add MINUTES and SECS_AS_MINS formats; remove " points" from SCORE format</li>
@@ -2902,7 +2909,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2019-04-22 20:30] Kvon:</code> minor change related to last edit</li>
 <li><code>[2019-04-22 20:23] Kvon:</code> added changes to rich standard symbols to reflect community views.</li>
 <li><code>[2019-02-24 18:37] Jamiras:</code> removed limit clauses related to unescaped characters</li>
-<li><code>[2019-01-28 06:42] Slimfr01:</code> Fixed a syntax error in "or" example, add an example with "and" &amp; "or"</li>
 </ul>
                 
                   
