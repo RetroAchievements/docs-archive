@@ -1096,6 +1096,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#merging-sets" title="Merging Sets" class="md-nav__link">
+    Merging Sets
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2346,6 +2353,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#merging-sets" title="Merging Sets" class="md-nav__link">
+    Merging Sets
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2429,9 +2443,15 @@
                 <h2 id="revision-types">Revision Types<a class="headerlink" href="#revision-types" title="Permanent link">link</a></h2>
 <p>Any changes to a set with existing achievements is considered a revision. They typically require community approval by presenting a plan in the game's forum topic and in the <code>#revision-voting</code> channel on Discord. </p>
 <p>There are three types:
-- <a href="#Standard-Revisions">Standard Revisions</a> - Changes to an achievement set that affect another developer's work. These include adding achievements, removing achievements, and reworking existing achievements. (pingable Discord role is <code>@revision-voting</code>)
-- <a href="#Rescores">Rescores</a> - Changes to the point value of an achievement. (pingable Discord role is <code>@rescore</code>)
-- <a href="#Icon-Gauntlet">Icon-Gauntlet</a> - Changes to a game page's icon that is awarded upon mastering a set and changes to the individual achievement badges. (pingable Discord role is <code>@icon-gauntlet</code>)</p>
+- <a href="#Standard-Revisions">Standard Revisions</a> - Changes to an achievement set that affect another developer's work. These include adding achievements, removing achievements, and reworking existing achievements.
+- <a href="#Rescores">Rescores</a> - Changes to the point value of an achievement.
+- <a href="#Icon-Gauntlet">Icon-Gauntlet</a> - Changes to a game page's icon that is awarded upon mastering a set and changes to the individual achievement badges.</p>
+<p>Each are assigned their own Discord role:
+|Type|Role|
+|---|---|
+|Standard Revisions|<code>@revision-voting</code>|
+|Rescores|<code>@rescore</code>|
+|Icon Gauntlet|<code>@icon-gauntlet</code>|</p>
 <p>Any verified Discord users can opt-in to these roles by reacting to the relevant post in the <code>#welcome</code> channel. This will enable them to keep track of as well as vote on proposals. </p>
 <h2 id="standard-revisions">Standard Revisions<a class="headerlink" href="#standard-revisions" title="Permanent link">link</a></h2>
 <p>Any developer wanting to revise a set need to:</p>
@@ -2445,39 +2465,41 @@
 </ul>
 </li>
 <li>
-<p>Resolve the open tickets for all achievements that will be kept in the set.</p>
-</li>
-<li>
 <p>Present the plan in the game's forum topic.</p>
 </li>
 <li>
 <p>Post a link to that topic in <code>#revision-voting</code>. If you're not on Discord, another developer can do it for you.</p>
 </li>
+<li>
+<p>Once a revision vote is posted, the developer can address any comments, concerns, and objections the community may have to the plan. The vote is approved/rejected after 24 hours and is pass/fail by simple majority.</p>
+</li>
 </ol>
 <p><strong>Note:</strong> Anonymous revision proposals - If desired, a developer can choose to propose a revision plan while remaining anonymous throughout the voting process.  Simply contact a mod or admin to request that the plan be presented on your behalf.</p>
-<p>Anyone in the community can express their concerns or objections. Allow time for discussion and for the developer to adjust their plan if they decide to. If any concerns or objections were expressed, regardless of the developer adjusting the plan, a vote will take place.</p>
-<p>Once the discussion has settled, a vote should be posted by a developer in the #revision-voting channel. </p>
-<p>The vote is approved/rejected after 24 hours. It is pass/fail by simple majority.</p>
 <h3 id="when-making-a-revision">When Making a Revision<a class="headerlink" href="#when-making-a-revision" title="Permanent link">link</a></h3>
 <ul>
 <li>
-<p>Try to avoid making copies of existing achievements, or clone and demote existing copies. If there are issues with current achievements make fixes to the existing ones.</p>
+<p>Try to avoid making copies of existing achievements, or clone and demote existing copies. If there are issues with current achievements make fixes to the existing ones. </p>
 </li>
 <li>
-<p>If you are adding a <strong>similar</strong> concept to one found in the set, where possible reuse the old concept and update it rather than make a new one.</p>
+<p>Resolve any open tickets for achievements that will be kept in the set. </p>
+</li>
+<li>
+<p>If you are adding a <strong>similar</strong> concept to one found in the set, where possible reuse the old concept and update it rather than make a new one. This prevents players from having to unnecessarily re-earn achievements, restricts needless changes to sets, and preserves good quality developer work and concepts.</p>
+</li>
+<li>
+<p>Since revisions vary in the amount of adjusted content, they are treated the same as an achievement set reservation. If three months have passed since your revision plan was approved, you will need to provide an update that details the current progress. Not doing so will invalidate the revision and the plan will need to be approved again with a new vote. </p>
 </li>
 </ul>
-<p>This prevents players from having to unnecessarily re-earn achievements, restricts needless changes to sets, and preserves good quality developer work and concepts.</p>
-<p>If producing the revision is taking a longer time, every three months (+/- 2 weeks) make a new post in the official forum topic explaining your current progress and renew the revision. Not doing so will invalidate the revision and the plan will need to get approved again. </p>
 <h3 id="no-need-for-approval">No Need for Approval<a class="headerlink" href="#no-need-for-approval" title="Permanent link">link</a></h3>
 <ul>
-<li>Adding rich presence or leaderboards to an entry that doesn't have them.</li>
 <li>Making changes to an achievement or to an achievement set where you are the original author and no other developer has revised it; it is still a good idea to post the plan for your changes in the forum. </li>
-<li>Resolving tickets or bugs on achievements made by developers who have have <strong>10 or more open tickets that are older than two months</strong> (you can see their open tickets from the Ticket Manager). This developer is considered <strong>inactive</strong> in their tickets. In these cases you're only allowed to fix the achievement to match the description; do not change the intention of the achievement without going through the revision process above. If you find a problem with an achievement that has an <strong>active developer</strong> either create a ticket or contact them to assist in resolution.</li>
+<li>Resolving tickets or bugs on achievements made by developers who are listed as <strong>inactive</strong> in the <a href="https://retroachievements.org/developerstats.php">list of developers</a>. In these cases you're only allowed to fix the achievement to match the description; do not change the intention of the achievement without going through the revision process above. If you find a problem with an achievement that has an <strong>active developer</strong> either create a ticket or contact them to assist in resolution.</li>
 <li>Adding battery save, cheat code, or password protections to achievements where the developer is <strong>inactive</strong>. (be sure to properly test your changes). If they are <strong>active</strong>, either create a ticket or contact them to assist applying the improvements.</li>
 <li>Fixing misspellings, grammatical errors, and other typos in the achievement names or descriptions. In some cases, these are intentional, so be sure to make note of it in the forum. </li>
 <li>Making updates to game page information and title / screenshot / box art images.</li>
 </ul>
+<h3 id="merging-sets">Merging Sets<a class="headerlink" href="#merging-sets" title="Permanent link">link</a></h3>
+<p>In the event that a revision includes merging two sets together (e.g. The Legend of Zelda for NES and the NES Classic version for GBA), the developer who does the revision needs to keep track of achievements in the demoted set and their equivalent achievements in the set it is being merged with. If the revision vote passes, this information must be sent to an admin so the achievements from the merged set can be manually awarded to the earners of the demoted set.</p>
 <h2 id="rescores">Rescores<a class="headerlink" href="#rescores" title="Permanent link">link</a></h2>
 <p>Up until June 2019, RetroAchievements sets had a cap of 400 points, with no restrictions on individual achievements. The set cap was removed to focus less on overall set totals and more on the achievements themselves. This initiative was also meant to eliminate the misconception that a set worth 400 points is a "complete" set, but is also an ongoing community effort to promote fairness across the board. Information on the scoring process can be found <a href="https://docs.retroachievements.org/Achievement-Scoring/">here</a>.</p>
 <p>Anyone wanting to rescore a set needs to:
@@ -2492,20 +2514,22 @@
 - If a co-author you collaborated with on an achievement set gives you their blessing to do a rescore. 
 - If an achievement set was published before June 2019, has <strong>NOT</strong> been rescored yet, and has an inactive dev. Afterwards, these sets will need to go through the approval process. </p>
 <h2 id="icon-gauntlet">Icon Gauntlet<a class="headerlink" href="#icon-gauntlet" title="Permanent link">link</a></h2>
-<p>The Icon Gauntlet is used to vote for new Game Icons or new Badges for a set. With the vote it is checked which version is preferred by the community.</p>
-<p>Any user wanting to change the Game Icon or Badges of a set need to:</p>
+<p>The Icon Gauntlet is used to vote for new game icons or new badges for a set. With the vote it is checked which version is preferred by the community.</p>
+<p>Any user wanting to change the game icon or badges of a set need to:</p>
 <ol>
-<li>Create the Game Icon or a full set of new badges.</li>
+<li>Create the game icon or new badges. For more info, see <a href="http://docs.retroachievements.org/Badge-and-Icon-Creation/">Badge and Icon Creation</a>.</li>
 <li>Upload the work on an image sharing site (e.g. <a href="https://imgur.com/">https://imgur.com/</a>, <a href="http://lensdump.org">http://lensdump.org</a>, etc.)</li>
 <li>
 <p>Post your images in <a href="https://retroachievements.org/viewtopic.php?t=8064">the correct forum topic</a>. </p>
 <ul>
 <li>Add the <code>[game=GameID]</code> tag and insert the Game ID which can be found in the URL of the game's page.</li>
 <li>Add the <code>[img=http://YourImageURL.png]</code> tag and insert the URL from your image into it along side the one which should be replaced and mark which of them is the new one.</li>
+<li>An example of a typical game icon vote can be seen <a href="https://i.lensdump.com/i/jmYiMQ.png">here</a>.</li>
+<li>An example of a typical badge vote can be seen <a href="https://i.lensdump.com/i/jmYgbx.png">here</a>.</li>
 </ul>
 </li>
 <li>
-<p>Post the link to the old Icon/Badges and the new ones in the <code>#revision-voting</code> channel on Discord or wait until the server team does it.
+<p>Post links to the old icon/badges and their contenders in the <code>#revision-voting</code> channel on Discord by using the following template:
      <details>
       <summary>Discord Template</summary>
       @icon-gauntlet<br>
@@ -2514,36 +2538,42 @@
       :regional_indicator_a: Current: [Old Image URL]<br>
       :regional_indicator_b: Contender: [New Image URL]<br>
       <br>
-      Note: In the case there are several designs, the contender list can be extended.
-     &lt;/details</p>
+     </details></p>
 </li>
 <li>Voting will be active for 24 hours. If the voting passes, a developer can replace the Icon/Badges.</li>
 </ol>
-<p><strong>Notes:</strong> Game icons have the size of 96x96 and badges have a size of 64x64 pixels. PNG images have the best quality.</p>
+<p><strong>Notes:</strong> 
+- In cases where there are several designs, the contender list can be extended. <strong>Remember to add the letter emojis, in alphabetical order, as soon as you post the proposal so people can vote by clicking on them.</strong> 
+- If you are not active on Discord, you may have someone else post the vote on your behalf. </p>
 <h3 id="no-need-for-approval_2">No Need for Approval<a class="headerlink" href="#no-need-for-approval_2" title="Permanent link">link</a></h3>
 <ol>
-<li>The current game has no badge.</li>
+<li>The game does not have an achievement set, nor is it reserved by a developer.</li>
+<li>The entry has no game icon or badges.</li>
 <li>The new icon/badge(s) display the same content, but are of better quality.</li>
 </ol>
 <h2 id="voting-and-discussion">Voting and Discussion<a class="headerlink" href="#voting-and-discussion" title="Permanent link">link</a></h2>
-<p>Revision voting was originally dev-only and remained that way until late-2019 when the top 150 players were granted access to the channels. More recently, this was discarded in favor of an opt-in role that any verified Discord user can obtain.</p>
+<p>Revision voting was originally dev-only and remained that way until late-2019 when the top 150 players were granted access to the channels. More recently, this was discarded in favor of an opt-in role that any verified Discord user can obtain. While voting is exclusive to Discord, please remember that anyone can express their comments, questions, concerns, criticisms, etc. in the forum thread in which the plan was posted. The issues regarding Discord exclusivity will be addressed in a future version of the website.</p>
 <ul>
-<li>If you vote against changes in a set, please state your reasoning in the discussion channel. This is so potential compromises can be made for a broader acceptance of the changes.</li>
-<li>Hijacking revision, rescore, or icon-gauntlet votes will not be tolerated. Votes from alt accounts will be discarded if discovered and repeated occurrences will result in the alt account being removed from the server. If the alt's primary account is confirmed, they will be issued the <code>@vote-ban</code> role, which prevents further participation in voting.</li>
+<li>
+<p>If you vote against changes in a achievement set, please state your reasoning in the discussion channel. This is so potential compromises can be made for a broader acceptance of the changes.</p>
+</li>
+<li>
+<p>Hijacking revision, rescore, or icon-gauntlet votes will not be tolerated. Votes from alt accounts will be discarded if discovered and repeated occurrences will result in the alt account being removed from the server. If the alt's primary account is confirmed, they will be issued the <code>@vote-ban</code> role, which prevents further participation in voting.</p>
+</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-05-15 19:05] meleu:</code> smallfix</li>
+<li><code>[2020-05-15 17:02] televandalist:</code> Reworded some of the Merging Sets section</li>
+<li><code>[2020-05-15 17:28] SporyTike:</code> Updated Achievement Set Revisions (markdown)</li>
+<li><code>[2020-05-14 02:42] televandalist:</code> Added examples of previous icon-gauntlet polls.</li>
+<li><code>[2020-05-14 01:13] televandalist:</code> Reworded and simplified the part about renewing revision plans. Fixed the random capitalizations of "game icons" and "badges" - replaced the comments regarding discord roles with a table.</li>
+<li><code>[2020-05-14 00:32] televandalist:</code> Made the part about voting/discussion the fourth point in proposing a revision and simplified it. .</li>
+<li><code>[2020-05-14 00:14] televandalist:</code> The bit about resolving open tickets in a set was made to look like a requirement to even present a plan. Moved it to the ### When Making a Revision section.</li>
+<li><code>[2020-05-14 00:00] televandalist:</code> Removed "full set" from the badge proposal requirements, added a note regarding the contender list.</li>
+<li><code>[2020-05-13 22:59] televandalist:</code> Fixed typo</li>
 <li><code>[2020-05-07 12:06] televandalist:</code> Updated Achievement Set Revisions (markdown)</li>
-<li><code>[2020-05-07 12:05] televandalist:</code> Condensed it a bit. Made tweaks to some of the wording for clarity. Added the Voting and Discussion section.</li>
-<li><code>[2020-04-28 16:59] televandalist:</code> Updated Achievement Set Revisions (markdown)</li>
-<li><code>[2020-03-23 08:36] televandalist:</code> Merged icon-gauntlet and rescore info. Updated several things. Still WIP, but I need to take a break.</li>
-<li><code>[2020-03-23 06:13] televandalist:</code> Changed 2 month time limit to 3 months, since that's what it actually is. Changed the rescore time from July 2019 to June 2019, when the rescore project started. Reduced the 48 hour approval/rejection period to 24 hours to match that of the icon gauntlet and rescores. Added typo corrections to "No Need for Approval"</li>
-<li><code>[2020-01-21 22:09] Keltron3030:</code> Updated wording for clarity</li>
-<li><code>[2020-01-21 21:59] Keltron3030:</code> Updated Achievement Set Revisions (markdown)</li>
-<li><code>[2020-01-21 21:58] Keltron3030:</code> Anonymous voting as requested by Thoreau and unanimously approved by staff.</li>
-<li><code>[2019-08-08 04:04] Kvon:</code> Achievement Set Revisions: Updated policy for replacing badges to go through the icon gauntlet</li>
-<li><code>[2019-08-05 16:03] Kvon:</code> Revisions: Made it clear that if you are the only dev of a set you do not need to post a revision</li>
 </ul>
                 
                   
