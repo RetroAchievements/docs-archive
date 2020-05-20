@@ -13,7 +13,7 @@
         <meta name="description" content="RetroAchievements.org Documentation Project">
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/AndNext-Flag/">
+        <link rel="canonical" href="https://docs.retroachievements.org/BitCount-Size/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>AndNext Flag - RADocs</title>
+        <title>BitCount Size - RADocs</title>
       
     
     
@@ -123,7 +123,7 @@
                 RADocs
               </span>
               <span class="md-header-nav__topic">
-                AndNext Flag
+                BitCount Size
               </span>
             
           
@@ -776,45 +776,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        AndNext Flag
-      </label>
-    
-    <a href="./" title="AndNext Flag" class="md-nav__link md-nav__link--active">
-      AndNext Flag
+  <li class="md-nav__item">
+    <a href="../AndNext-and-OrNext-Flags/" title="AndNext and OrNext Flags" class="md-nav__link">
+      AndNext and OrNext Flags
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" title="Changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -875,6 +841,52 @@
     <a href="../Measured-Flag/" title="Measured Flag" class="md-nav__link">
       Measured Flag
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        BitCount Size
+      </label>
+    
+    <a href="./" title="BitCount Size" class="md-nav__link md-nav__link--active">
+      BitCount Size
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -2261,19 +2273,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/AndNext-Flag.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/BitCount-Size.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>AndNext Flag</h1>
+                  <h1>BitCount Size</h1>
                 
-                <p><code>AndNext</code> is used to associate more than one condition to a [[ResetIf|ResetIf Flag]], [[PauseIf|PauseIf Flag]], or [[Hit Count|Hit Counts]].</p>
-<p><code>AndNext</code> can be chosen in the Flag column of the Achievement Editor</p>
-<p>When a condition has the <code>And Next</code> flag, the condition must be true in addition to the following condition for the following condition to be considered true. </p>
-<p>You can chain multiple <code>And Next</code> conditions to create complex requirements for a single <code>ResetIf</code>, <code>PauseIf</code>, or <code>Hit Count</code>.</p>
+                <p><code>BitCount</code> is a shortcut for counting the number of bits set in a byte.</p>
+<pre><code>BitCount Mem 0x1234 == Value 6
+</code></pre>
+
+<p>is the same as</p>
+<pre><code>AddSource Bit0 Mem 0x1234
+AddSource Bit1 Mem 0x1234
+AddSource Bit2 Mem 0x1234
+AddSource Bit3 Mem 0x1234
+AddSource Bit4 Mem 0x1234
+AddSource Bit5 Mem 0x1234
+AddSource Bit6 Mem 0x1234
+          Bit7 Mem 0x1234 == Value 6
+</code></pre>
+
+<p>and would be true for <code>0x3F</code> (00111111), <code>0xDB</code> (11011011), <code>0xEE</code> (11101110), etc.</p>
+<p>It's most common use is counting collectibles for a [[Measured|Measured Flag]] condition.</p>
+<p>It can be combined with other flags like [[Delta|Delta Values]].</p>
+<pre><code>BitCount Mem 0x1234 != BitCount Delta 0x1234
+</code></pre>
+
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
-<li><code>[2019-06-21 19:08] Jamiras:</code> Created AndNext Flag (markdown)</li>
+<li><code>[2020-05-17 14:09] Jamiras:</code> add BitCount</li>
 </ul>
                 
                   
@@ -2295,7 +2324,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../PauseIf-Flag/" title="PauseIf Flag" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Measured-Flag/" title="Measured Flag" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2304,19 +2333,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                PauseIf Flag
+                Measured Flag
               </span>
             </div>
           </a>
         
         
-          <a href="../AddSource-Flag/" title="AddSource Flag" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Combining-Flags/" title="Combining Flags" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                AddSource Flag
+                Combining Flags
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

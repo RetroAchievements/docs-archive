@@ -778,8 +778,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AndNext-Flag/" title="AndNext Flag" class="md-nav__link">
-      AndNext Flag
+    <a href="../AndNext-and-OrNext-Flags/" title="AndNext and OrNext Flags" class="md-nav__link">
+      AndNext and OrNext Flags
     </a>
   </li>
 
@@ -875,6 +875,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BitCount-Size/" title="BitCount Size" class="md-nav__link">
+      BitCount Size
+    </a>
   </li>
 
         
@@ -2271,10 +2283,12 @@
 <p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="../AddSource-Flag"><code>AddSource</code></a> and <a href="../SubSource-Flag"><code>SubSource</code></a> can be used.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have the same target value, the current value will be the maximum of all the <code>Measured</code> conditions.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have different target values, a Parse Error -22 will occur.</p>
-<p>Note that progress for Measured values is reported at the time of examination and may actually go down depending on the current value (Hit Count could be reset, or comparison value decreases).</p>
+<p>Note that progress for <code>Measured</code> values is reported at the time of examination and may actually go down depending on the current value (Hit Count could be reset, or comparison value decreases).</p>
+<p>To limit the scope of a <code>Measured</code> condition, you can add a <code>MeasuredIf</code> condition. A <code>MeasuredIf</code> condition must be true for the <code>Measured</code> value to be non-zero (and for the achievement to trigger). You can use <code>MeasuredIf</code> to create achievements that require playing as a certain character, or just to prevent bogus data from showing up if the player is in the wrong part of the game. If any <code>MeasuredIf</code> condition in a group is false, the <code>Measured</code> value for the group is automatically 0.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-05-17 14:14] Jamiras:</code> add MeasuredIf</li>
 <li><code>[2019-11-14 19:42] Jamiras:</code> Created Measured Flag (markdown)</li>
 </ul>
                 
@@ -2312,13 +2326,13 @@
           </a>
         
         
-          <a href="../Combining-Flags/" title="Combining Flags" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../BitCount-Size/" title="BitCount Size" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Combining Flags
+                BitCount Size
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
