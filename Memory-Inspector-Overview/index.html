@@ -2579,9 +2579,9 @@
 </em> <code>Last Value</code> - comparison is made against the value captured by the last applied filter, or the initial value if no filter has been applied
 <em> <code>Last Value Plus</code> - comparison is made against the Last Value plus the value entered in the field below the drop down. If the value were 3, the comparison would me made against a number which is three higher than the Last Value for each value captured by the last applied filter.
 </em> <code>Last Value Minus</code> - the same as Last Value Plus, except the value entered in the field below the drop down is subtracted from each value captured by the last applied filter.
-* <code>Initial Value</code> - comparison is made against the value captured when the New Search was begin.</p>
+* <code>Initial Value</code> - comparison is made against the value captured when the New Search was begun.</p>
 <p>The <code>Filter Once</code> button immediately applies the selected filter and updates the Results.</p>
-<p>The <code>Continuous Filter</code> button applies the selected filter repeatedly until stopped. The fewer the results, the more frequently the filter is applied.</p>
+<p>The <code>Continuous Filter</code> button applies the selected filter repeatedly until stopped. The fewer the results, the more frequently the filter is applied. The filter is only applied once every N ms, where N is the number of results / 1000. If there are less than 1000 results, it's applied every frame. If there are 50000 results, it's applied every 500ms (twice a second). If there are 1000000 results, it's only applied every 10 seconds.</p>
 <h3 id="3-results">3. Results<a class="headerlink" href="#3-results" title="Permanent link">link</a></h3>
 <p>As filtering is applied, the list of potential matches will appear here.</p>
 <p>On the left side is information about the results, including the number of matches, the filter applied, and how many filters have been applied. If you believe you have applied a filter incorrectly, or the filter results in no matches, you can use the <code>&lt;&lt;</code> button to return to the previous set of results. You can do this all the way back to the initial results. Similarly, you can use the <code>&gt;&gt;</code> button to return to results you have backed out of. Once you apply a new filter, the forward filters are discarded and the <code>&gt;&gt;</code> button is disabled.</p>
@@ -2775,6 +2775,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-06-11 07:34] Jamiras:</code> add details about Continuous Filter backoff algorithm</li>
 <li><code>[2020-05-17 21:48] Jamiras:</code> update for new memory inspector dialog</li>
 <li><code>[2019-03-14 00:37] Keltron3030:</code> Updated Memory Inspector Overview (markdown)</li>
 <li><code>[2019-03-14 00:35] Keltron3030:</code> Added some additional info to memory viewer features as requested by Jr developer.</li>
@@ -2784,7 +2785,6 @@
 <li><code>[2019-02-12 08:50] meleu:</code> removed "bit switch" title, as unnecessary</li>
 <li><code>[2019-02-12 08:48] meleu:</code> reducing verbosity in "single bits"</li>
 <li><code>[2019-02-12 08:14] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 08:14] meleu:</code> exchange "single bits" and "Upper4/Lower4" sections (it's easier to understand Upper4/Lower4 once you know about bits)</li>
 </ul>
                 
                   

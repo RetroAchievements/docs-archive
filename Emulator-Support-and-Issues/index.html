@@ -2357,9 +2357,9 @@
 <td>2</td>
 <td>Nintendo 64</td>
 <td>Project64</td>
-<td>Mupen64Plus</td>
-<td></td>
-<td></td>
+<td>ParaLLEl N64</td>
+<td>Yes</td>
+<td>*The Mupen64Plus Next core does not expose memory</td>
 </tr>
 <tr>
 <td>3</td>
@@ -2373,15 +2373,15 @@
 <td>4</td>
 <td>Game Boy</td>
 <td>RAVBA</td>
-<td>Gambatte</td>
+<td>Gambatte<br>Gearboy<br>Mednafen VBA-M</td>
 <td>Yes</td>
-<td></td>
+<td>*mGBA <a href="https://github.com/libretro/mgba/issues/188">crashes when unloading</a> the core because RALibretro doesn't implement the camera interface</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Game Boy Advance</td>
 <td>RAVBA</td>
-<td>Mednafen VBA</td>
+<td>mGBA<br>Mednafen VBA-M<br>VBA Next</td>
 <td>Yes</td>
 <td></td>
 </tr>
@@ -2389,7 +2389,7 @@
 <td>6</td>
 <td>Game Boy Color</td>
 <td>RAVBA</td>
-<td>Gambatte</td>
+<td>Gambatte<br>Gearboy<br>Mednafen VBA-M</td>
 <td>Yes</td>
 <td></td>
 </tr>
@@ -2471,7 +2471,7 @@
 <td></td>
 <td>Virtual Jaguar</td>
 <td>Yes</td>
-<td></td>
+<td><em>No savestate support<br> </em><a href="https://github.com/libretro/virtualjaguar-libretro/issues/38">Many issues with the emulation</a></td>
 </tr>
 <tr>
 <td>18</td>
@@ -2514,6 +2514,14 @@
 <td></td>
 </tr>
 <tr>
+<td>29</td>
+<td>MSX</td>
+<td></td>
+<td>blueMSX</td>
+<td>Yes</td>
+<td>*Hash relies on dsk file not being modified</td>
+</tr>
+<tr>
 <td>33</td>
 <td>SG-1000</td>
 <td>RAMeka</td>
@@ -2538,6 +2546,14 @@
 <td></td>
 </tr>
 <tr>
+<td>43</td>
+<td>3DO Interactive Multiplayer</td>
+<td></td>
+<td>Opera</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
 <td>44</td>
 <td>ColecoVision</td>
 <td>RAMeka</td>
@@ -2546,11 +2562,27 @@
 <td></td>
 </tr>
 <tr>
+<td>46</td>
+<td>Vectrex</td>
+<td></td>
+<td>VecX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
 <td>47</td>
 <td>PC-8000/8800</td>
 <td>RAQuasi88</td>
-<td></td>
+<td>Quasi88</td>
 <td>No</td>
+<td>*Quasi88 crashes RALib <a href="https://github.com/libretro/quasi88-libretro/issues/35">when loading core</a> and <a href="https://github.com/libretro/quasi88-libretro/issues/34">when running game</a> because RALibretro doesn't implement rumble interface.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -2567,7 +2599,7 @@
 <td></td>
 <td>Mednafen Cygne</td>
 <td>Yes</td>
-<td>*SRAM is not mapped, so some games are not doable</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2584,14 +2616,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>46</td>
-<td>Vectrex</td>
-<td></td>
-<td>Vecx</td>
-<td>Yes</td>
-<td></td>
-</tr>
 <tr>
 <td>49</td>
 <td>PC-FX</td>
@@ -2621,7 +2645,7 @@
 <td></td>
 <td>Dolphin</td>
 <td>Needs work</td>
-<td>Crashes RALib when testing</td>
+<td>Crashes RALib when loading game</td>
 </tr>
 <tr>
 <td>19</td>
@@ -2643,9 +2667,9 @@
 <td>21</td>
 <td>PlayStation 2</td>
 <td></td>
+<td>Play</td>
 <td></td>
-<td></td>
-<td>Crashes RALib when testing</td>
+<td>Low compatibility with most commercial games; black screen with stuttering sound</td>
 </tr>
 <tr>
 <td>22</td>
@@ -2661,15 +2685,7 @@
 <td></td>
 <td></td>
 <td>Needs work</td>
-<td>Needs keyboard support and a reliable hashing method</td>
-</tr>
-<tr>
-<td>29</td>
-<td>MSX</td>
-<td></td>
-<td>blueMSX</td>
-<td>Needs Work</td>
-<td>Needs keyboard support</td>
+<td>Needs a reliable hashing method</td>
 </tr>
 <tr>
 <td>30</td>
@@ -2677,7 +2693,7 @@
 <td></td>
 <td>vice</td>
 <td>Needs Work</td>
-<td>Needs keyboard support</td>
+<td>Crashes RALib when loading game (divide by zero error)</td>
 </tr>
 <tr>
 <td>31</td>
@@ -2733,7 +2749,7 @@
 <td></td>
 <td>reicast</td>
 <td>Needs Work</td>
-<td>*Crashes RALib when testing</td>
+<td>*Crashes RALib when loading game</td>
 </tr>
 <tr>
 <td>41</td>
@@ -2741,7 +2757,7 @@
 <td></td>
 <td>PPSSPP</td>
 <td>Needs Work</td>
-<td>*Crashes RALib</td>
+<td>*Crashes RALib when loading game - Emu thread doesn't have scope to core s_instance; runs fast</td>
 </tr>
 <tr>
 <td>42</td>
@@ -2752,20 +2768,12 @@
 <td>Untested</td>
 </tr>
 <tr>
-<td>43</td>
-<td>3DO Interactive Multiplayer</td>
-<td></td>
-<td>4DO</td>
-<td>Needs Work</td>
-<td>*Game Load Error</td>
-</tr>
-<tr>
 <td>45</td>
 <td>Intellivision</td>
 <td></td>
 <td>FreeIntv</td>
 <td>Needs Work</td>
-<td>*Memory Not Mapped</td>
+<td>*Uncontrollable (<a href="https://github.com/libretro/FreeIntv/issues/46">related issue</a>)</td>
 </tr>
 <tr>
 <td>48</td>
@@ -2915,15 +2923,16 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-06-16 08:16] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
+<li><code>[2020-06-06 18:03] Jamiras:</code> update unsupported cores</li>
+<li><code>[2020-06-06 16:20] Jamiras:</code> document mGBA incompatibility</li>
+<li><code>[2020-06-06 15:53] Jamiras:</code> add vba-m as a gb/gbc/gba core</li>
+<li><code>[2020-06-06 13:59] Jamiras:</code> add Opera as a supported core</li>
+<li><code>[2020-06-06 11:09] Jamiras:</code> add parallel n64 as a supported core</li>
+<li><code>[2020-06-06 09:51] Jamiras:</code> move MSX to supported consoles</li>
+<li><code>[2020-06-06 09:31] Jamiras:</code> add vecx to supported cores</li>
 <li><code>[2020-01-11 00:50] televandalist:</code> Removed " or games that utilize the Sub CPU" fom Sega CD notes. A recent update changed that.</li>
 <li><code>[2019-12-31 20:09] televandalist:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2019-12-31 20:07] televandalist:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2019-12-31 20:01] televandalist:</code> Several more updates, mostly including regional names.</li>
-<li><code>[2019-12-31 19:55] televandalist:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2019-12-31 19:54] televandalist:</code> Several updates</li>
-<li><code>[2019-12-31 10:15] meleu:</code> fix headings (DO NOT USE # FOR HEADINGS!)</li>
-<li><code>[2019-09-28 22:05] televandalist:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2019-09-28 21:55] televandalist:</code> WIP</li>
 </ul>
                 
                   
