@@ -2578,14 +2578,6 @@
 <td>*Quasi88 crashes RALib <a href="https://github.com/libretro/quasi88-libretro/issues/35">when loading core</a> and <a href="https://github.com/libretro/quasi88-libretro/issues/34">when running game</a> because RALibretro doesn't implement rumble interface.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>51</td>
 <td>Atari 7800</td>
 <td></td>
@@ -2723,9 +2715,9 @@
 <td>35</td>
 <td>Amiga</td>
 <td></td>
-<td>fsuae</td>
+<td>P-UAE</td>
 <td>Needs Work</td>
-<td>*Game Load Error</td>
+<td>*Seems to run fine if zips are loaded. Memory is not exposed.</td>
 </tr>
 <tr>
 <td>36</td>
@@ -2741,7 +2733,7 @@
 <td></td>
 <td>Cap32</td>
 <td>Needs Work</td>
-<td>*Game Load Error</td>
+<td>*Memory is exposed. Has 'maching-gun' audio bug. Only one game tested.</td>
 </tr>
 <tr>
 <td>40</td>
@@ -2779,9 +2771,9 @@
 <td>48</td>
 <td>PC-9800</td>
 <td></td>
-<td></td>
-<td></td>
-<td>*Crashes RALib when testing</td>
+<td>np2kai</td>
+<td>Needs Work</td>
+<td>*Memory is not exposed. Ran all 10 games tested.</td>
 </tr>
 <tr>
 <td>50</td>
@@ -2813,7 +2805,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td>Currently only playable in MAME, which is unsupported.</td>
 </tr>
 </tbody>
 </table>
@@ -2832,51 +2824,11 @@
 <tbody>
 <tr>
 <td></td>
-<td>PocketStation</td>
+<td>Fairchild Channel-F</td>
 <td></td>
-<td>pockystation</td>
+<td>FreeChaF</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Nintendo 3DS</td>
-<td></td>
-<td>Citra</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Magnavox Odyssey</td>
-<td></td>
-<td>O2EM</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>ZX Spectrum</td>
-<td></td>
-<td>FUSE</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Game &amp; Watch</td>
-<td></td>
-<td>gw</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Tomson TO8/TO8D</td>
-<td></td>
-<td>Theodore</td>
-<td></td>
-<td></td>
+<td>Exposes memory, but has some control issues</td>
 </tr>
 <tr>
 <td></td>
@@ -2888,9 +2840,33 @@
 </tr>
 <tr>
 <td></td>
-<td>Fairchild Channel-F</td>
+<td>Game &amp; Watch</td>
 <td></td>
+<td>gw</td>
 <td></td>
+<td>Doesn't expose memory</td>
+</tr>
+<tr>
+<td></td>
+<td>Magnavox Odyssey</td>
+<td></td>
+<td>O2EM</td>
+<td></td>
+<td>Appears to be fully functional</td>
+</tr>
+<tr>
+<td></td>
+<td>Neo Geo CD</td>
+<td></td>
+<td>NeoCD</td>
+<td></td>
+<td>Appears fully functional, needs ID and hashing method</td>
+</tr>
+<tr>
+<td></td>
+<td>Nintendo 3DS</td>
+<td></td>
+<td>Citra</td>
 <td></td>
 <td></td>
 </tr>
@@ -2904,17 +2880,41 @@
 </tr>
 <tr>
 <td></td>
+<td>PocketStation</td>
+<td></td>
+<td>pockystation</td>
+<td></td>
+<td>Core doesn't seem functional even in Retroarch</td>
+</tr>
+<tr>
+<td></td>
 <td>Sega PICO</td>
 <td></td>
+<td>Picodrive</td>
 <td></td>
-<td></td>
-<td></td>
+<td>Can't be controlled fully, needs controls related to turning pages in attached books</td>
 </tr>
 <tr>
 <td></td>
 <td>TIC-80</td>
 <td></td>
+<td>TIC-80</td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tomson TO8/TO8D</td>
+<td></td>
+<td>Theodore</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ZX Spectrum</td>
+<td></td>
+<td>FUSE</td>
 <td></td>
 <td></td>
 </tr>
@@ -2923,6 +2923,9 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-06-21 21:36] televandalist:</code> Added compatibility notes to Amiga, Amstrad, and PC-9800</li>
+<li><code>[2020-06-22 01:54] Sanaki:</code> Updated Neo Geo CD notes</li>
+<li><code>[2020-06-22 01:42] Sanaki:</code> Updated various notes, rearranged consoles without IDs alphabetically.</li>
 <li><code>[2020-06-16 08:16] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2020-06-06 18:03] Jamiras:</code> update unsupported cores</li>
 <li><code>[2020-06-06 16:20] Jamiras:</code> document mGBA incompatibility</li>
@@ -2930,9 +2933,6 @@
 <li><code>[2020-06-06 13:59] Jamiras:</code> add Opera as a supported core</li>
 <li><code>[2020-06-06 11:09] Jamiras:</code> add parallel n64 as a supported core</li>
 <li><code>[2020-06-06 09:51] Jamiras:</code> move MSX to supported consoles</li>
-<li><code>[2020-06-06 09:31] Jamiras:</code> add vecx to supported cores</li>
-<li><code>[2020-01-11 00:50] televandalist:</code> Removed " or games that utilize the Sub CPU" fom Sega CD notes. A recent update changed that.</li>
-<li><code>[2019-12-31 20:09] televandalist:</code> Updated Emulator Support and Issues (markdown)</li>
 </ul>
                 
                   
