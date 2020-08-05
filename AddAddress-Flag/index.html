@@ -863,6 +863,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" title="Video Tutorial" class="md-nav__link">
+    Video Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -2279,6 +2286,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" title="Video Tutorial" class="md-nav__link">
+    Video Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
     Changelog
   </a>
@@ -2320,7 +2334,7 @@
 <li>Using a 24-bit read instead of a 32-bit read gives us 0x0110B8</li>
 <li>0x011114 - 0x0110B8 = 0x00005C, so that becomes the "base address" in the second condition.</li>
 </ul>
-<h3 id="types-of-pointers">Types of Pointers<a class="headerlink" href="#types-of-pointers" title="Permanent link">link</a></h3>
+<h2 id="types-of-pointers">Types of Pointers<a class="headerlink" href="#types-of-pointers" title="Permanent link">link</a></h2>
 <p><code>AddAddress</code> is how RAIntegration handles pointers. There are four major types of pointer support:</p>
 <p><strong>Direct Pointer</strong>: The pointer contains another address that is referenced without modification. These are most commonly used for string pointers. To use a direct pointer, the base address to which the pointer is added would be 0.</p>
 <p><strong>Indirect Pointer</strong>: The pointer contains another address that indicates the start of some block of data. The data of interest is a fixed number of bytes into the block of data. These are commonly used for attributes of a character/object.</p>
@@ -2335,11 +2349,14 @@
 
 <p>Would read a 16-bit number from 0x1234 and read the single byte that is that many bytes after 0x4567.</p>
 <p>NOTE: <em>Scaling an array index is not currently supported</em>. The intent is that the first line would become <code>AddAddress 16-bit Mem 0x1234 * 4</code> to indicate that each time 0x1234 is incremented by 1, the offset past 0x4567 would be incremented by 4. Attempting to call <code>AddAddress</code> four times to simulate the multiplication won't work because each line of the chain is a separate lookup.</p>
-<h3 id="chaining-pointers">Chaining Pointers<a class="headerlink" href="#chaining-pointers" title="Permanent link">link</a></h3>
+<h2 id="chaining-pointers">Chaining Pointers<a class="headerlink" href="#chaining-pointers" title="Permanent link">link</a></h2>
 <p><code>AddAddress</code> can be chained to perform multi-step lookups, but only one step at a time. As such, you can reference data pointed at by a pointer that's pointed at by another pointer, but you can't reference data in an array that's pointed at by another pointer unless either the array or the array index is at a fixed address.</p>
+<h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">link</a></h2>
+<p>The experienced achievement creator <a href="https://retroachievements.org/User/wilhitewarrior">wilhitewarrior</a> created a nice video showing how to work with pointers and AddAddress flag. You can check it here: <a href="https://www.youtube.com/watch?v=_gk0vYYlm-E">https://www.youtube.com/watch?v=_gk0vYYlm-E</a>.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-08-05 01:58] meleu:</code> add link to wilhitewarrio's video tutorial</li>
 <li><code>[2019-11-17 22:18] meleu:</code> fix markdown formats</li>
 <li><code>[2019-11-16 07:53] Jamiras:</code> Updated AddAddress Flag (markdown)</li>
 <li><code>[2019-11-14 20:25] Jamiras:</code> Created AddAddress Flag (markdown)</li>
