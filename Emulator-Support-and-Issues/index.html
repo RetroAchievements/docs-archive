@@ -2415,7 +2415,7 @@
 <td></td>
 <td>Genesis Plus GX</td>
 <td>Yes</td>
-<td>*Current does not support multi-disc games</td>
+<td><em>Current does not support multi-disc games<br></em>Appears to still have unmapped RAM (Ecco 1+2)</td>
 </tr>
 <tr>
 <td>10</td>
@@ -2480,6 +2480,14 @@
 <td>DeSmuMe</td>
 <td>Needs Work</td>
 <td><em>No Microphone Support<br></em>No DSi support</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Magnavox Odyssey 2</td>
+<td></td>
+<td>O2EM</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>24</td>
@@ -2645,7 +2653,7 @@
 <td></td>
 <td>Dolphin</td>
 <td>Needs work</td>
-<td>Crashes RALib when loading game</td>
+<td>Generates sound but not video in RALibretro</td>
 </tr>
 <tr>
 <td>19</td>
@@ -2717,7 +2725,7 @@
 <td></td>
 <td></td>
 <td>Needs Work</td>
-<td>*Game Load Error</td>
+<td>Untested with proper BIOS.</td>
 </tr>
 <tr>
 <td>35</td>
@@ -2741,7 +2749,7 @@
 <td></td>
 <td>Cap32</td>
 <td>Needs Work</td>
-<td>*Memory is exposed. Has 'maching-gun' audio bug. Only one game tested.</td>
+<td><em>Memory is exposed<br></em>Has 'maching-gun' audio bug in several games depending on machine selected.</td>
 </tr>
 <tr>
 <td>37</td>
@@ -2755,9 +2763,9 @@
 <td>40</td>
 <td>Dreamcast</td>
 <td></td>
-<td>reicast</td>
+<td>flycast</td>
 <td>Needs Work</td>
-<td>*Crashes RALib when loading game</td>
+<td>runs too fast; crashes when unloading core</td>
 </tr>
 <tr>
 <td>41</td>
@@ -2765,7 +2773,7 @@
 <td></td>
 <td>PPSSPP</td>
 <td>Needs Work</td>
-<td>*Crashes RALib when loading game - Emu thread doesn't have scope to core s_instance; runs fast</td>
+<td>runs too fast</td>
 </tr>
 <tr>
 <td>42</td>
@@ -2781,7 +2789,7 @@
 <td></td>
 <td>FreeIntv</td>
 <td>Needs Work</td>
-<td>*Uncontrollable (<a href="https://github.com/libretro/FreeIntv/issues/46">related issue</a>)</td>
+<td><em>Controls are much better than they were<br></em>Crashes if game is reset<br>*Some crashes that might be related to Intellivoice</td>
 </tr>
 <tr>
 <td>48</td>
@@ -2797,7 +2805,7 @@
 <td></td>
 <td>Atari800</td>
 <td>Needs Work</td>
-<td>*Won't Load Core</td>
+<td>Appears to work fine, the core itself is a bit of a headache, though.</td>
 </tr>
 <tr>
 <td>52</td>
@@ -2805,7 +2813,7 @@
 <td></td>
 <td>px68k</td>
 <td></td>
-<td></td>
+<td>Untested with proper BIOS</td>
 </tr>
 <tr>
 <td>54</td>
@@ -2823,6 +2831,62 @@
 <td></td>
 <td>Currently only playable in MAME, which is unsupported.</td>
 </tr>
+<tr>
+<td>56</td>
+<td>Neo Geo CD</td>
+<td></td>
+<td>NeoCD</td>
+<td></td>
+<td>Appears fully functional. Needs hashing method</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Fairchild Channel-F</td>
+<td></td>
+<td>FreeChaF</td>
+<td></td>
+<td>Exposes memory, but has some control issues</td>
+</tr>
+<tr>
+<td>58</td>
+<td>FM Towns</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>ZX Spectrum</td>
+<td></td>
+<td>FUSE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>Game &amp; Watch</td>
+<td></td>
+<td>gw</td>
+<td></td>
+<td>Doesn't expose memory</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Nokia N-Gage</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td>Nintendo 3DS</td>
+<td></td>
+<td>Citra</td>
+<td></td>
+<td>Core doesn't load at all.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="does-not-have-console-id">Does Not Have Console ID<a class="headerlink" href="#does-not-have-console-id" title="Permanent link">link</a></h2>
@@ -2838,62 +2902,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td>Fairchild Channel-F</td>
-<td></td>
-<td>FreeChaF</td>
-<td></td>
-<td>Exposes memory, but has some control issues</td>
-</tr>
-<tr>
-<td></td>
-<td>FM Towns</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Game &amp; Watch</td>
-<td></td>
-<td>gw</td>
-<td></td>
-<td>Doesn't expose memory</td>
-</tr>
-<tr>
-<td></td>
-<td>Magnavox Odyssey</td>
-<td></td>
-<td>O2EM</td>
-<td></td>
-<td>Appears to be fully functional</td>
-</tr>
-<tr>
-<td></td>
-<td>Neo Geo CD</td>
-<td></td>
-<td>NeoCD</td>
-<td></td>
-<td>Appears fully functional, needs ID and hashing method</td>
-</tr>
-<tr>
-<td></td>
-<td>Nintendo 3DS</td>
-<td></td>
-<td>Citra</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Nokia N-Gage</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr>
 <td></td>
 <td>PocketStation</td>
@@ -2928,17 +2936,20 @@
 </tr>
 <tr>
 <td></td>
-<td>ZX Spectrum</td>
+<td>Sharp X1</td>
 <td></td>
-<td>FUSE</td>
+<td>X1 Millennium</td>
 <td></td>
-<td></td>
+<td>Untested with proper BIOS.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-08-31 23:29] televandalist:</code> Updates for Sega CD, Atari 5200, Intellivision, Sharp X68k, Amstrad CPC, Vic-20, and Sharp X1.</li>
+<li><code>[2020-08-30 15:00] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
+<li><code>[2020-08-20 16:11] televandalist:</code> Moved Magnavox Odyssey 2 to supported cores. Updated console IDs for ones that did not have them.</li>
 <li><code>[2020-08-06 03:49] televandalist:</code> Removed note about Mesen and SRAM under NES since it's no longer applicable.</li>
 <li><code>[2020-07-15 14:03] televandalist:</code> Updated Atari ST.</li>
 <li><code>[2020-07-15 13:42] televandalist:</code> Added note about CrocoDS core for Amstrad CPC.</li>
@@ -2946,9 +2957,6 @@
 <li><code>[2020-06-23 14:05] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2020-06-23 14:03] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2020-06-23 14:02] Jamiras:</code> mupen does expose memory, just not initially</li>
-<li><code>[2020-06-23 10:48] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2020-06-21 21:36] televandalist:</code> Added compatibility notes to Amiga, Amstrad, and PC-9800</li>
-<li><code>[2020-06-22 01:54] Sanaki:</code> Updated Neo Geo CD notes</li>
 </ul>
                 
                   
