@@ -2932,11 +2932,16 @@
         },
         {
             "location": "/RetroAchievements-Manifesto-pt_BR/",
-            "text": "Changelog\nlink\n\n\nLast 10 changes on this page:",
+            "text": "Changelog\nlink\n\n\nLast 10 changes on this page:\n\n\nChangelog\nlink\n\n\nLast 10 changes on this page:",
             "title": "O Manifesto RetroAchievements"
         },
         {
             "location": "/RetroAchievements-Manifesto-pt_BR/#changelog",
+            "text": "Last 10 changes on this page:",
+            "title": "Changelog"
+        },
+        {
+            "location": "/RetroAchievements-Manifesto-pt_BR/#changelog_1",
             "text": "Last 10 changes on this page:",
             "title": "Changelog"
         },
