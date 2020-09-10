@@ -13,7 +13,7 @@
         <meta name="description" content="RetroAchievements.org Documentation Project">
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/Achievement-Logic-Features-pt_BR/">
+        <link rel="canonical" href="https://docs.retroachievements.org/RetroAchievements-Manifesto-pt_BR/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Recursos de Lógica para Achievements - RADocs</title>
+        <title>O Manifesto RetroAchievements - RADocs</title>
       
     
     
@@ -97,7 +97,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#recursos-de-logica-para-achievements" tabindex="1" class="md-skip">
+      <a href="#changelog" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -123,7 +123,7 @@
                 RADocs
               </span>
               <span class="md-header-nav__topic">
-                Recursos de Lógica para Achievements
+                O Manifesto RetroAchievements
               </span>
             
           
@@ -1223,10 +1223,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
     
     <label class="md-nav__link" for="nav-3-2">
       Geral
@@ -1242,11 +1244,45 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../RetroAchievements-Manifesto-pt_BR/" title="O Manifesto RetroAchievements" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        O Manifesto RetroAchievements
+      </label>
+    
+    <a href="./" title="O Manifesto RetroAchievements" class="md-nav__link md-nav__link--active">
       O Manifesto RetroAchievements
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1307,12 +1343,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       Desenvolvedores
@@ -1352,118 +1386,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Recursos de Lógica para Achievements
-      </label>
-    
-    <a href="./" title="Recursos de Lógica para Achievements" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Achievement-Logic-Features-pt_BR/" title="Recursos de Lógica para Achievements" class="md-nav__link">
       Recursos de Lógica para Achievements
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#valores-delta" title="Valores Delta" class="md-nav__link">
-    Valores Delta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hit-counts" title="Hit Counts" class="md-nav__link">
-    Hit Counts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-flags" title="Special Flags" class="md-nav__link">
-    Special Flags
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pauseif" title="PauseIf" class="md-nav__link">
-    PauseIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resetif" title="ResetIf" class="md-nav__link">
-    ResetIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-source" title="Add Source" class="md-nav__link">
-    Add Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-source" title="Sub Source" class="md-nav__link">
-    Sub Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-hits" title="Add Hits" class="md-nav__link">
-    Add Hits
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" title="Changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -2343,80 +2270,9 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#valores-delta" title="Valores Delta" class="md-nav__link">
-    Valores Delta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hit-counts" title="Hit Counts" class="md-nav__link">
-    Hit Counts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-flags" title="Special Flags" class="md-nav__link">
-    Special Flags
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pauseif" title="PauseIf" class="md-nav__link">
-    PauseIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resetif" title="ResetIf" class="md-nav__link">
-    ResetIf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-source" title="Add Source" class="md-nav__link">
-    Add Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-source" title="Sub Source" class="md-nav__link">
-    Sub Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-hits" title="Add Hits" class="md-nav__link">
-    Add Hits
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#changelog" title="Changelog" class="md-nav__link">
@@ -2441,75 +2297,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Achievement-Logic-Features-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/RetroAchievements-Manifesto-pt_BR.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="recursos-de-logica-para-achievements">Recursos de lógica para achievements<a class="headerlink" href="#recursos-de-logica-para-achievements" title="Permanent link">link</a></h1>
-<p>Link para o texto em inglês: <a href="../Achievement-Logic-Features">Achievement Logic Features</a></p>
-<p>Existem várias ferramentas e opções disponíveis para o desenvolvedor, saber como utilizá-las adequadamente melhorará a qualidade de seus sets. Essas ferramentas/opções podem ser usadas no Achievement Editor:</p>
-<p><img alt="achievement_editor" src="https://user-images.githubusercontent.com/8508804/33130013-0eb07d96-cf79-11e7-8f73-6d737dfe5e16.png" /></p>
-<p>Para ajuda sobre esses, o nosso servidor do <a href="https://discordapp.com/invite/TdfC3r7">Discord</a> estará sempre aberto para ajudar.</p>
-<h2 id="valores-delta">Valores Delta<a class="headerlink" href="#valores-delta" title="Permanent link">link</a></h2>
-<p>Um valor <code>Delta</code> é o valor do <em>frame</em> anterior.</p>
-<p>Exemplos de como ele pode ser usado:</p>
-<ul>
-<li>Detectar se o nível foi aumentado: <code>level &gt; delta level</code>. Significa que "o nível atual é maior que o nível do frame anterior".</li>
-<li>Detectar danos: <code>health &lt; delta health</code>. Significa que "a saúde atual é menor do que a saúde do frame anterior". Ou você pode apenas tornar o valor do frame anterior um requisito. <code>delta health = 1</code> significa que "o valor do frame anterior para a saúde deve ser 1".
-Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></li>
-</ul>
-<h2 id="hit-counts">Hit Counts<a class="headerlink" href="#hit-counts" title="Permanent link">link</a></h2>
-<p>No Achievement Editor, o campo do lado direito é Hit Count.</p>
-<p>Zero é o valor padrão. Isso significa que a condição deve ser verdadeira quando a conquista aparecer.</p>
-<p>Se você definir manualmente uma contagem (hit), por exemplo 1, significa que a condição deve ser verdadeira por pelo menos 1 frame e, uma vez que a contagem de <em>hits</em> seja atendida, ela não precisa ser atendida novamente em outro momento.</p>
-<p><strong>ATENÇÃO</strong>: se uma condição tiver uma contagem de hits e atingir o número necessário, esta condição não é mais testada. Ela é verdadeira e permanece verdadeira, <strong>A MENOS</strong> que você tenha um <code>Reset If</code>, o qual discutiremos abaixo.</p>
-<p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos Reais</a></p>
-<h2 id="special-flags">Special Flags<a class="headerlink" href="#special-flags" title="Permanent link">link</a></h2>
-<p>No Achievement Editor, é o campo intitulado como <strong>Special?</strong>.</p>
-<p>Essas flags condicionais só funcionam se você definir uma contagem de hits para uma condição.</p>
-<h3 id="pauseif"><code>PauseIf</code><a class="headerlink" href="#pauseif" title="Permanent link">link</a></h3>
-<p>Isso pausará a atividade para todas as condições no mesmo grupo.</p>
-<p><strong>Nota</strong>: tenha em mente que isso <strong>não</strong> irá pausar as condições em outros grupos.</p>
-<p>O <code>PauseIf</code> é usado para pausar a contagem de hits em uma situação específica (como pausar o jogo). É usado quando você deseja manter a contagem de hits previamente conquistada, mas não deseja reiniciá-la quando alguém simplesmente faz uma pausa no jogo, por exemplo.</p>
-<h3 id="resetif"><code>ResetIf</code><a class="headerlink" href="#resetif" title="Permanent link">link</a></h3>
-<p>Isso irá zerar a contagem de hits para todas condições em que você definiu uma contagem de hits. Ele é muito mais comum de usar do que <code>PauseIf</code></p>
-<p><strong>Nota</strong>: Ao contrário do <code>PauseIf</code>, le irá zerar as condições em <strong>todos os grupos</strong></p>
-<p>Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Real Examples</a></p>
-<h3 id="add-source"><code>Add Source</code><a class="headerlink" href="#add-source" title="Permanent link">link</a></h3>
-<p>Quando uma condição tem a flag <code>Add Source</code> o valor daquele endereço de memória é adicionado ao valor do endereço na condição logo abaixo, e a comparação é feita na condição abaixo daquela com o <code>Add Source</code>. Isso pode soar um pouco confuso, mas o exemplo a seguir vai esclarecer como funciona:</p>
-<p><img alt="Add Source Example" src="https://user-images.githubusercontent.com/8508804/42702176-169aaf44-869f-11e8-979c-487a040e0145.png" /></p>
-<p>Neste exemplo o valor em <code>0x8010</code> será adicionado ao valor em <code>0x8020</code> e a comparação é se esta soma é maior ou igual a zero.</p>
-<p>Se o valor em <code>0x8010</code> é <code>1</code> e o valor em <code>0x8020</code> é <code>2</code>, a comparação será <code>1 + 2 &gt; 0</code>, ou <code>3 &gt; 0</code>.</p>
-<p><strong>Nota</strong>: todos os campos de comparação na condição com a flag <code>Add Source</code> são ignorados.</p>
-<p>Tentando resumir esta explicação com uma imagem:</p>
-<p><img alt="Add Source Explained" src="https://user-images.githubusercontent.com/8508804/42702180-1712bca0-869f-11e8-9949-11021fa891bb.png" /></p>
-<p><strong>Nota</strong>: você pode usar <code>Add Source</code> para somar mais endereços, como no exempo abaixo:</p>
-<p><img alt="addsource1" src="https://user-images.githubusercontent.com/8508804/42702178-16c6d97a-869f-11e8-9c0d-84ef42ec4867.png" /></p>
-<h3 id="sub-source"><code>Sub Source</code><a class="headerlink" href="#sub-source" title="Permanent link">link</a></h3>
-<p>Funciona muito semelhante ao <code>Add Source</code>, porém o <code>Sub Source</code> faz o valor naquele endereço de memória ser negativo.</p>
-<p><strong>Nota 1</strong>: <code>Sub Source</code> <strong>NÃO</strong> é um flag de subtração. Ele apenas torna o valor negativo.</p>
-<p><strong>Nota 2</strong>: A linha final (sem <code>Add Source</code> ou <code>Sub Source</code>) ainda é <strong>adicionada</strong> para a comparação final.</p>
-<p>Usando aquele <a href="#add-source">exemplo de uso de <code>Add Source</code> example</a>, se nós o substituíssemos por <code>Sub Source</code> e com os mesmos valores (<code>valor(0x8010) = 1</code> e <code>valor(0x8020) = 2</code>), a comparação seria <code>-1 + 2 &gt; 0</code>, or <code>1 &gt; 0</code>.</p>
-<h3 id="add-hits"><code>Add Hits</code><a class="headerlink" href="#add-hits" title="Permanent link">link</a></h3>
-<p>Também funciona de maneira de similar ao <code>Add Source</code>, porém relacionado aos hitcounts.</p>
-<p>O <code>Add Hits</code> adiciona o hitcount da condição atual à próxima condição. O hitcount total a ser checado será aquele definido na condição logo após a última condição com <code>Add Hits</code>. Se a condição logo após o último <code>Add Hits</code> não tiver um hitcount definido, todas as condições com <code>Add Hits</code> serão ignoradas.</p>
-<p>Diferentemente do <code>Add Source</code>, todos os campos são usados numa condição <code>Add Hits</code>, inclusive os campos de comparação. Se uma condição é verdadeira, o hitcount para esta condição é incrementada (e parará de incrementar se assim que o número de hitcount definido for atingido).</p>
-<p>As condições com <code>Add Hits</code> não precisam ser verdadeiras para a conquista disparar. Porém primeira condição após o último <code>Add Hits</code>, sim, precisa ser verdadeira.</p>
-<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">link</a></h2>
-<p>Os achievements podem ter grupos adicionados a eles que podem atuar como requisitos alternativos para desbloquear um achievement. Estes são chamados de  <strong>Alt Groups</strong>.</p>
-<p>Uma coisa extremamente importante a notar: para uma conquista desbloquear, deve ter o <strong>Core group E pelo menos um Alt group ser verdadeiro</strong>. Se não houver nenhum grupo Alt presente, apenas as condições do Core group's precisam ser verdadeiras.</p>
-<p><strong>Dica</strong>: devido ao grupo Core sempre precisar ser verdadeiro, normalmente você colocaria lá condições que sejam à todos os requisitos alternativos. No entanto, um truque que você pode usar para basicamente para ignorar a necessidade de um grupo Core é dar-lhe uma condição que é sempre verdadeira, como:</p>
-<p><code>Mem 0x0001 = Mem 0x0001</code></p>
-<p>Como o grupo Core agora é sempre verdadeiro, agora você pode se concentrar em diferenciar os grupos Alt.</p>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+                  <h1>O Manifesto RetroAchievements</h1>
+                
+                <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2018-07-14 13:33] meleu:</code> melhorando explicações sobre AddSource/SubSource e afins</li>
-<li><code>[2018-07-14 13:17] meleu:</code> Updated Achievement Logic Features pt_BR (markdown)</li>
-<li><code>[2018-03-28 19:57] meleu:</code> Updated Achievement Logic Features pt_BR (markdown)</li>
-<li><code>[2018-03-28 19:56] meleu:</code> Updated Achievement Logic Features pt_BR (markdown)</li>
-<li><code>[2018-03-25 11:46] KingDice001:</code> Updated Achievement Logic Features pt_BR (markdown)</li>
-<li><code>[2018-03-23 01:17] meleu:</code> Updated Achievement Logic Features.pt_BR (markdown)</li>
-</ul>
                 
                   
                 
@@ -2530,7 +2324,7 @@ Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos R
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" title="Primeiros Passos como um Desenvolvedor de Conquistas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Home-pt_BR/" title="Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2539,19 +2333,19 @@ Você pode ver como isso funciona no <a href="../Real-Examples-pt_BR">Exemplos R
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Primeiros Passos como um Desenvolvedor de Conquistas
+                Introdução
               </span>
             </div>
           </a>
         
         
-          <a href="../Real-Examples-pt_BR/" title="Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Users-Code-of-Conduct-pt_BR/" title="Código de Conduta do Usuário" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Introdução
+                Código de Conduta do Usuário
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
