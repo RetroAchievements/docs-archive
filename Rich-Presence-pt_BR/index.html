@@ -1244,8 +1244,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../RetroAchievements-Manifesto-pt_BR/" title="O Manifesto RetroAchievements" class="md-nav__link">
-      O Manifesto RetroAchievements
+    <a href="../RetroAchievements-Manifesto-pt_BR/" title="Manifesto RetroAchievements" class="md-nav__link">
+      Manifesto RetroAchievements
     </a>
   </li>
 
@@ -1754,6 +1754,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RetroAchievements-Manifesto-es/" title="Manifesto RetroAchievements" class="md-nav__link">
+      Manifesto RetroAchievements
+    </a>
+  </li>
+
         
           
           
@@ -2541,17 +2553,17 @@
                 
                 
                 <h1 id="estado-de-presenca">Estado de Presença<a class="headerlink" href="#estado-de-presenca" title="Permanent link">link</a></h1>
-<p><strong>link para texto em inglês:</strong> <a href="https://github.com/RetroAchievements/docs/wiki/Rich-Presence">Rich Presence</a></p>
+<p><strong>link para texto em inglês:</strong> <a href="../Rich-Presence">Rich Presence</a></p>
 <h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">link</a></h2>
-<p>O Estado de Presença <strong>(EP)</strong>, ou <strong>(RE)</strong> pelas siglas em inglês, é uma breve visão geral do que os jogadores ativos estão fazendo atualmente em seu jogo. Para ter RP em um jogo, você precisa de um <strong>Script (roteiro) do Estado de Presença (SEP) ou, Rich Presence Script (RPS)</strong>, pelas siglas em inglês, criado pelos Desenvolvedores. O Script verifica a memória do jogo do jogador e como programado relata os valores de certos endereços com definições atribuídas pelo Desenvolvedor, como em qual estágio o jogador está, quantas vidas eles têm, se o jogo está em pausa, que modo de jogo eles estão jogando, o que o jogador realizou, etc. Esta informação é reportada de volta ao site. <strong>Todo jogo publicado precisa de pelo menos um (SEP)(RPS) básico.</strong></p>
-<p><strong>Exemplo de EP em ação:</strong></p>
+<p>O Estado de Presença (<strong>RP - Rich Presence</strong>, pela sigla em inglês), é uma breve visão geral do que os jogadores estão fazendo atualmente em seu jogo. Para ter RP em um jogo, você precisa de um Script do Estado de Presença (ou <strong>Rich Presence Script - RPS</strong> - pela sigla em inglês). O Script verifica a memória do jogo do jogador e como programado relata os valores de certos endereços com definições atribuídas pelo Desenvolvedor, como em qual estágio o jogador está, quantas vidas eles têm, se o jogo está em pausa, que modo de jogo eles estão jogando, o que o jogador realizou, etc. Esta informação é reportada de volta ao site.</p>
+<p><strong>Exemplo de RP em ação:</strong></p>
 <p><img alt="" src="https://camo.githubusercontent.com/cc1e8cea190f192a5b3beb2e5a700f068615a342/68747470733a2f2f692e696d6775722e636f6d2f4535303937737a2e706e67" /></p>
-<p>Para ver o EP ao vivo em um jogo, clique no menu RetroAchievements no seu emulador e clique em <strong>Rich Presence Monitor.</strong> Uma pequena janela mostrará seu EP ativo. (Bom para depuração)</p>
+<p>Para ver o RP ao vivo em um jogo, clique no menu RetroAchievements no seu emulador e clique em <strong>Rich Presence Monitor.</strong> Uma pequena janela mostrará seu RP ativo. (Bom para depuração)</p>
 <p><img alt="" src="https://camo.githubusercontent.com/1415c78f7c231279dc6f2ea74f21973195359e96/68747470733a2f2f692e696d6775722e636f6d2f586b435a6f4c472e706e67" /></p>
 <p>A melhor maneira de entender o Estado de Presença é olhar para vários exemplos no jogo, olhar para os endereços usados e ver como o texto é exibido no Rich Presence Monitor e no site.</p>
 <h2 id="como-funciona">Como funciona?<a class="headerlink" href="#como-funciona" title="Permanent link">link</a></h2>
 <p>Toda vez que um jogo é iniciado, ele busca os achievements em um arquivo 'patch' para a ROM, que detalha todos os achievements e endereços de memória (e leaderboards) que podem ser observados. Ele também solicitará um Rich Presence Script para a ROM atualmente carregada. O emulador informará o site a cada 120 segundos. Da mesma forma, a cada 120 segundos mais ou menos, a caixa de 'jogadores ativos' na frontpage será atualizada, detalhando a última atividade conhecida de todos os jogadores ativos. Se não houver um script do estado de presença, o texto estará "ganhando achievements" se estiver jogando um jogo com achievements, "jogando [jogo]" se estiver jogando sem achievements ou "desenvolvendo achievements" se a caixa de diálogo de memória estiver aberta e visível.</p>
-<p>O SEP ou RPS pelas siglas em inglês, para cada jogo pode ser encontrado na seção de desenvolvimento na página de cada jogo:</p>
+<p>O RPS para cada jogo pode ser encontrado na seção de desenvolvimento na página de cada jogo:</p>
 <p><img alt="" src="https://camo.githubusercontent.com/cc05291f1f0da98ef8fd429fbdd6f201735c3edb/68747470733a2f2f692e696d6775722e636f6d2f7371784f6a794c2e706e67" /></p>
 <p><img alt="" src="https://camo.githubusercontent.com/5b5837925fd7507fd47f1e25ff000e68d568d980/68747470733a2f2f692e696d6775722e636f6d2f6537716f614e782e706e67" /></p>
 <h2 id="exemplo-super-mario-bros">Exemplo (Super Mario Bros.)<a class="headerlink" href="#exemplo-super-mario-bros" title="Permanent link">link</a></h2>
@@ -2679,7 +2691,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <p>O <code>Display</code>: marker existente ainda é usado para indicar o início do bloco de exibição. Se a próxima linha começar com um ponto de interrogação, ela será considerada uma sequência de exibição condicional. A parte da linha entre os dois pontos de interrogação é a cláusula condicional. Se a cláusula condicional avaliar que é verdadeiro (true), a parte restante da linha será usada como a sequência de exibição. Se não avaliar true, o processamento prosseguirá para a próxima linha. Se começar com um ponto de interrogação, o mesmo processo será repetido. Se não começar com um ponto de interrogação, a linha inteira será usada como a sequência de exibição padrão.</p>
 <p>Olhando para este exemplo, se o valor de 16 bits em $ 0085 for 0, a seqüência de exibição é <code>Title Screen</code>. Se não, a próxima linha é examinada. Se o sétimo bit de $ 007C for 1, a cadeia de exibição será Custom <code>Map em @Landscape (0xH00016c)</code>. Se não, a linha final não tem uma cláusula condicional e é usada.</p>
 <p>As cadeias de exibição associadas a uma cláusula condicional suportam a mesma sintaxe que a cadeia de exibição padrão. Neste exemplo, você pode ver que a pesquisa <code>@Landscape</code> é usada na seqüência de exibição condicional e na sequência de exibição padrão. A pesquisa em si só precisa ser definida uma vez.</p>
-<p>A frase condicional suporta todos os assessores de endereço mencionados anteriormente, bem como a lógica AND (_) e OR (S). Note que cláusulas OR ainda requerem um grupo 'core',<a href="https://github.com/RetroAchievements/docs/wiki/Achievement-Logic-Features#groups"> just like achievements.</a></p>
+<p>A frase condicional suporta todos os assessores de endereço mencionados anteriormente, bem como a lógica AND (_) e OR (S). Note que cláusulas OR ainda requerem um grupo 'core', <a href="../Achievement-Logic-Features">da mesma forma que as conquistas.</a></p>
 <ul>
 <li><code>? 0xH1234 = 32_0xH2345 = 0? and example</code></li>
 </ul>
@@ -2763,13 +2775,16 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-09-16 12:25] meleu:</code> smallfix</li>
+<li><code>[2020-09-16 12:24] meleu:</code> use RP acronym</li>
+<li><code>[2020-09-16 12:20] meleu:</code> use relative links</li>
+<li><code>[2020-09-15 17:49] Ben-Ghazi:</code> Changed the links to go to the docs equivalent instead of the wiki.</li>
 <li><code>[2018-03-28 03:11] KingDice001:</code> Updated Rich Presence pt_BR (markdown)</li>
 <li><code>[2018-03-28 03:06] KingDice001:</code> Updated Rich Presence pt_BR (markdown)</li>
 <li><code>[2018-03-27 23:25] 7Mogami7:</code> Updated Rich Presence pt_BR (markdown)</li>
 <li><code>[2018-03-27 23:24] 7Mogami7:</code> Updated Rich Presence pt_BR (markdown)</li>
 <li><code>[2018-03-27 23:06] 7Mogami7:</code> Updated Rich Presence pt_BR (markdown)</li>
 <li><code>[2018-03-27 21:17] 7Mogami7:</code> Updated Rich Presence pt_BR (markdown)</li>
-<li><code>[2018-03-27 21:03] 7Mogami7:</code> Created Rich Presence pt_BR (markdown)</li>
 </ul>
                 
                   
