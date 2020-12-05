@@ -407,6 +407,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../System-X-wen/" title="System X wen" class="md-nav__link">
+      System X wen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Why-you-shouldn't-use-the-load-state-feature/" title="Why you shouldn't use the load state feature" class="md-nav__link">
       Why you shouldn't use the load state feature
     </a>
@@ -480,13 +492,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-14" type="checkbox" id="nav-1-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-15" type="checkbox" id="nav-1-15">
     
-    <label class="md-nav__link" for="nav-1-14">
+    <label class="md-nav__link" for="nav-1-15">
       RAEmulators
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-14">
+      <label class="md-nav__title" for="nav-1-15">
         RAEmulators
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2468,8 +2480,8 @@
 </ul>
 <p><strong>Note</strong>: A valid leaderboard MUST have all four of these conditions.</p>
 <p>Those last 4 fields are really important and <em>LOTS</em> of care must be taken over the entry of any characters into these strings. That's why they deserve a further explanation:</p>
-<p>The <strong>STA</strong> or <strong>Start</strong> condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. Once the <strong>STA</strong> is true, the game will activate the other three, and will keep processing them constantly.</p>
-<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. </p>
+<p>The <strong>Start</strong> (<strong>STA</strong>) condition is a series of values, like an achievement, that must be true in order to start looking for a leaderboard submission. </p>
+<p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. NOTE: Cancel is given priority over Start. If both become true in the same frame, the leaderboard will not start.</p>
 <p>If the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard score will be submitted. NOTE: Cancel is given priority over Submit. If both become true in the same frame, the score will not be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
 <p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
@@ -2634,6 +2646,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
 <li><code>[2020-01-09 22:56] Keltron3030:</code> Added 24-bit to address format table</li>
 <li><code>[2019-12-24 15:27] Jamiras:</code> add Value from HitCount section and note about using hit counts in STA/SUB/CAN</li>
@@ -2643,7 +2656,6 @@
 <li><code>[2018-11-20 07:39] Scott:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2018-11-20 07:38] Scott:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2018-11-20 07:31] Scott:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2018-11-20 07:30] Scott:</code> Updated Leaderboards (markdown)</li>
 </ul>
                 
                   
