@@ -1374,8 +1374,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pcengine-cd" title="PCEngine CD" class="md-nav__link">
-    PCEngine CD
+  <a href="#pc-engine-cd" title="PC Engine CD" class="md-nav__link">
+    PC Engine CD
   </a>
   
 </li>
@@ -2757,8 +2757,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pcengine-cd" title="PCEngine CD" class="md-nav__link">
-    PCEngine CD
+  <a href="#pc-engine-cd" title="PC Engine CD" class="md-nav__link">
+    PC Engine CD
   </a>
   
 </li>
@@ -2870,7 +2870,7 @@
 <li>The arm9 code address is stored at $20 in the header, and the size is stored at $2C in the header</li>
 <li>The arm7 code address is stored at $30 in the header, and the size is stored at $3C in the header</li>
 </ul>
-<h4 id="pcengine-cd">PCEngine CD<a class="headerlink" href="#pcengine-cd" title="Permanent link">link</a></h4>
+<h4 id="pc-engine-cd">PC Engine CD<a class="headerlink" href="#pc-engine-cd" title="Permanent link">link</a></h4>
 <p>The boot code and disc title are hashed as follows:
 <em> Read 128 bytes from sector 1 of the data track (PCE predates ISO-9660, so there's no file system to read).
 </em> If "PC Engine CD-ROM SYSTEM" does not exist at 32 bytes into the data, discard as invalid.
@@ -2891,7 +2891,7 @@
 <h4 id="playstation">PlayStation<a class="headerlink" href="#playstation" title="Permanent link">link</a></h4>
 <p>The primary executable and its name are hashed as follows:
 <em> The SYSTEM.CNF file is loaded and parsed. The primary executable is identified by the BOOT= line within.
-</em> The primary executable name (and it's path) are extracted from SYSTEM.CNF and written to a buffer.
+</em> The primary executable name (and its path) are extracted from SYSTEM.CNF and written to a buffer.
 <em> The contents of the primary executable are appended to the buffer.
 </em> The buffer is hashed.</p>
 <h4 id="sega-cd-sega-saturn">Sega CD / Sega Saturn<a class="headerlink" href="#sega-cd-sega-saturn" title="Permanent link">link</a></h4>
@@ -2902,6 +2902,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2020-12-25 00:07] televandalist:</code> Corrected PC Engine CD name and fixed a minor grammatical error. :bomber:</li>
 <li><code>[2020-06-13 17:45] Jamiras:</code> add PC-FX</li>
 <li><code>[2020-06-07 11:41] Jamiras:</code> update for new systems</li>
 <li><code>[2020-05-07 07:28] meleu:</code> Updated Game Identification (markdown)</li>
@@ -2911,7 +2912,6 @@
 <li><code>[2019-12-01 17:57] Jamiras:</code> more detail in DS hashing algorithm</li>
 <li><code>[2019-12-01 17:54] Jamiras:</code> document Nintendo DS hashing algorithm, add entries for Jaguar, WonderSwan, and Pokemon mini</li>
 <li><code>[2019-11-02 15:02] Jamiras:</code> document PCEngine-CD hashing algorithm</li>
-<li><code>[2019-09-20 18:57] Jamiras:</code> update Sega CD</li>
 </ul>
                 
                   
