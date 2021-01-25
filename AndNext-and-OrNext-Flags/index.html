@@ -2338,7 +2338,7 @@
                 
                   <h1>AndNext and OrNext Flags</h1>
                 
-                <p><code>AndNext</code> and <code>OrNext</code> are used to associate more than one condition to a [[ResetIf|ResetIf Flag]], [[PauseIf|PauseIf Flag]], or [[Hit Count|Hit Counts]].</p>
+                <p><code>AndNext</code> and <code>OrNext</code> are used to associate more than one condition to a <a href="../ResetIf-Flag">ResetIf</a>, <a href="../PauseIf-Flag">PauseIf</a>, or <a href="../Hit-Counts">Hit Count</a>.</p>
 <p><code>AndNext</code> and <code>OrNext</code> can be chosen in the Flag column of the Achievement Editor</p>
 <p>When a condition has the <code>AndNext</code> flag, the condition must be true <em>in addition to the following condition</em> for the following condition to be considered true. </p>
 <p>When a condition has the <code>OrNext</code> flag, the condition <em>or the following condition</em> must be true for the following condition to be considered true.</p>
@@ -2356,11 +2356,12 @@ ResetIf F=1
 <pre><code>reset if (((((A = 1 &amp;&amp; B = 1) || C = 1) &amp;&amp; D = 1) || E = 1) &amp;&amp; F = 1)
 </code></pre>
 
-<p>[[Alt Groups]] are still preferred over <code>OrNext</code> for most use cases. They allow for multiple conditions to be present in each clause of the OR, and support more than two clauses.</p>
+<p><a href="../Alt-Groups">Alt Groups</a> are still preferred over <code>OrNext</code> for most use cases. They allow for multiple conditions to be present in each clause of the OR, and support more than two clauses.</p>
 <p><code>AndNext</code> is not required for simple logic. All conditions in a group are automatically AND'd together. <code>AndNext</code> just allows for two or more conditions to affect a single <code>PauseIf</code>, <code>ResetIf</code>, or <code>Hit Count</code>.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-01-25 13:18] meleu:</code> fix markdown links</li>
 <li><code>[2020-05-17 14:01] Jamiras:</code> update title</li>
 </ul>
                 
