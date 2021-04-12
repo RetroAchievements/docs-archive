@@ -1047,6 +1047,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_1" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_2" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
       
       
       
@@ -2317,6 +2331,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_1" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_2" title="Changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
       
       
       
@@ -2338,27 +2366,30 @@
                 
                   <h1>Using Add Source and Deltas for Collectables and Similar Achievements</h1>
                 
-                <p>In these examples are a couple simple ways one can utilize the Add Source flag in their achievement logic.</p>
-<p>First, we'll look at an achievement from <a href="https://retroachievements.org/game/11255">Suikoden (PlayStation)</a> entitled <a href="http://retroachievements.org/Achievement/80100">Treasure Hunter - Dragon Knights' Domain</a>:</p>
-<p><strong>Addresses Used</strong></p>
-<ul>
-<li><code>0x1b8244</code>: bit0-bit4 are treasures in Soniere, bit5 is a treasure at the Northern Checkpoint, and bit6-bit7 are treasures at the Dragon Den.</li>
-<li><code>0x1b8245</code>: bit0 is a treasure at the Dragon Den, bit1-bit5 are treasures at Seek Valley, and bit6-7 are treasures in Kalekka.</li>
-<li><code>0x1b824b</code>: bit0-bit1 are treasures at the Village of the Hidden Rune, bit2 is unused, bit3-4 are treasures at the Dragon Knights' Fortress, bit5-6 are treasures in Teien, and bit7 is a treasure at Luiken's House. </li>
-</ul>
-<p><img alt="addsource-example1" src="https://i1.lensdump.com/i/0niTax.png" /></p>
-<p>This particular achievement only requires treasures from Dragon Knights' Fortress, Dragon Den, and Seek Valley; therefore, we only need bit6-7 from <code>0x1b8244</code>, bit0-bit5 from <code>0x1b8245</code>, and bit3-bit4 from <code>0x1b824b</code>. </p>
-<p><strong>Logic Breakdown</strong></p>
-<ul>
-<li>There are two groups of ten conditions with the main differences being the Delta type and the total. This is to ensure that the player goes from nine of these treasures obtained to having all ten of these treasures obtained. <em>Note: Remember to use hexadecimal for Add Source totals!</em> </li>
-<li>Since we're using bitflags here, the totals for individual conditions will only ever be 0x00 or 0x01. Obviously, we want them all to be 0x01 for the trigger, but we don't want someone to get the achievement simply by loading a save with all ten treasures already found.</li>
-<li>The trigger is the first frame that the player goes from nine to ten treasures obtained. This is to help prevent the achievement from triggering when it's not supposed to.</li>
-<li>The Measured flag is on the last condition so the player can check how far they are from their goal. If they have eight out of ten treasures, the achievement will show that it is 80% complete in the overlay (RAEmus) or achievement menu (RetroArch). </li>
-</ul>
-<p>This method is mostly handy for when the totals between the Delta-type and Mem-type only have a difference of 0x01, but it can be used in various types of achievements: collectables that are only obtainable one-at-a-time, map completion (such as dungeon-crawlers with viewable maps that get revealed as you enter new areas), learnable skills, completing a certain number of side missions, and many others. </p>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+                <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-03-20 22:39] televandalist:</code> Typo fixes.</li>
+<li><code>[2021-01-19 15:05] meleu:</code> markdown fix</li>
+<li><code>[2021-01-19 14:19] meleu:</code> leftover</li>
+<li><code>[2021-01-10 08:38] televandalist:</code> Wording changes</li>
+<li><code>[2021-01-10 08:31] televandalist:</code> Updated Using Add Source and Deltas for Collectables or Similar Achievements (markdown)</li>
+<li><code>[2020-12-25 02:13] televandalist:</code> Started an Add Source page for Real Examples. Going to finish it later.</li>
+</ul>
+<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-03-20 22:39] televandalist:</code> Typo fixes.</li>
+<li><code>[2021-01-19 15:05] meleu:</code> markdown fix</li>
+<li><code>[2021-01-19 14:19] meleu:</code> leftover</li>
+<li><code>[2021-01-10 08:38] televandalist:</code> Wording changes</li>
+<li><code>[2021-01-10 08:31] televandalist:</code> Updated Using Add Source and Deltas for Collectables or Similar Achievements (markdown)</li>
+<li><code>[2020-12-25 02:13] televandalist:</code> Started an Add Source page for Real Examples. Going to finish it later.</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-03-20 22:39] televandalist:</code> Typo fixes.</li>
 <li><code>[2021-01-19 15:05] meleu:</code> markdown fix</li>
 <li><code>[2021-01-19 14:19] meleu:</code> leftover</li>
 <li><code>[2021-01-10 08:38] televandalist:</code> Wording changes</li>
