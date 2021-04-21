@@ -12,13 +12,15 @@ docs_dir: docs.wiki
 
 theme:
     name: material
-    feature:
-        tabs: true
+    features:
+       - navigation.tabs
+       - navigation.instant
     palette:
         primary: 'indigo'
         accent: 'amber'
-    logo:
-        icon: 'videogame_asset'
+    icon:
+      logo: fontawesome/solid/gamepad
+      repo: fontawesome/brands/github
     favicon: 'img/favicon.ico'
 
 markdown_extensions:
@@ -28,20 +30,22 @@ markdown_extensions:
     - pymdownx.mark
     - pymdownx.tilde
 
-#extra_css:
-#    - 'css/extra.css'
-#    - 'css/extra.scss'
-
-# XXX: testing icons on footer
 extra:
-  #disqus: 'retroachievements'
-  social:
-    - type: globe
-      link: https://retroachievements.org/
-#    - type: discord
-#      link: https://discord.gg/TdfC3r7
-    - type: github-alt
-      link: https://github.com/RetroAchievements
+    social:
+        - icon: fontawesome/solid/globe
+          link: https://retroachievements.org/
+        - icon: fontawesome/brands/discord
+          link: https://discord.gg/dq2E4hE
+        - icon: fontawesome/brands/github
+          link: https://github.com/RetroAchievements
+
+plugins:
+    - search:
+        separator: '[\s\-\.]+'
+        lang:
+          - en
+          - pt
+          - es
 
 # strict 
 # Determines if a broken link to a page within the documentation is considered 
@@ -52,4 +56,4 @@ extra:
 # dev_addr 
 # Determines the address used when running mkdocs serve. 
 # Must be of the format IP:PORT. 
-dev_addr: '0.0.0.0:8000'
+dev_addr: '127.0.0.1:8000'

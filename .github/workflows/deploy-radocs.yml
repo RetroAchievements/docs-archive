@@ -1,0 +1,13 @@
+name: Deploy RADocs
+
+on: workflow_dispatch
+
+jobs:
+  Deploy-Documentation-Site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Running the deploy script
+        run: bash generate-docs.sh
+
