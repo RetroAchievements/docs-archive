@@ -89,7 +89,18 @@ function main() {
     echo "--- Done!"
     echo
 
+    # TODO: create a custom Docker image with a Dockerfile like this:
+    # FROM squidfunk/mkdocs-material
+    # RUN pip install git+https://github.com/cmitu/mkdocs-altlink-plugin
     #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy
+
+    # These git commands are here to prevent the need of
+    # `mkdocs gh-deploy --force`, which would overwrite the commit history.
+    # see: https://github.com/mkdocs/mkdocs/issues/973
+    git checkout -b gh-pages
+    git pull --rebase origin gh-pages
+    git checkout master
+
     mkdocs gh-deploy
 }
 

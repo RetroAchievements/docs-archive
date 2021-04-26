@@ -6,8 +6,16 @@ jobs:
   Deploy-Documentation-Site:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: Running the deploy script
-        run: bash generate-docs.sh
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: |
+          pip install mkdocs-material
+          pip install git+https://github.com/cmitu/mkdocs-altlink-plugin
+      - name: Deploying the documentation website...
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.username "${{ github.actor }}"
+          bash generate-docs.sh
 
