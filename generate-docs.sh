@@ -89,7 +89,8 @@ function main() {
     echo "--- Done!"
     echo
 
-    docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy
+    #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy
+    mkdocs gh-deploy
 }
 
 
