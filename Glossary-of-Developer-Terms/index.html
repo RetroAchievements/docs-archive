@@ -1,0 +1,3510 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Glossary-of-Developer-Terms/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Glossary of Developer Terms - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#16-bit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RADocs" class="md-header__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glossary of Developer Terms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        General
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Developer-docs/" class="md-tabs__link">
+        Developers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-pt_BR/" class="md-tabs__link">
+        Portugues
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-es/" class="md-tabs__link">
+        Español
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RADocs" class="md-nav__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto/" class="md-nav__link">
+        RetroAchievements Manifesto
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct/" class="md-nav__link">
+        Users Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" class="md-nav__link">
+        Global Leaderboard and Achievement Hunting Rules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements/" class="md-nav__link">
+        My game is not loading achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer/" class="md-nav__link">
+        How to contribute if you are not a developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System-X-wen/" class="md-nav__link">
+        System X wen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature/" class="md-nav__link">
+        Why you shouldn't use the load state feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" class="md-nav__link">
+        A message for Achievement Hunters and Completionists about revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial/" class="md-nav__link">
+        Multi-Disc Games Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-configure-OBS-Studio-to-see-the-popups/" class="md-nav__link">
+        How to configure OBS Studio to see the popups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RABot%2C-the-RA-Discord-Robot/" class="md-nav__link">
+        RABot, the RA Discord Robot
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_15" type="checkbox" id="__nav_1_15" >
+      
+      <label class="md-nav__link" for="__nav_1_15">
+        RAEmulators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="RAEmulators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_15">
+          <span class="md-nav__icon md-icon"></span>
+          RAEmulators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RAQUASI88/" class="md-nav__link">
+        RAQUASI88
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RALibretro/" class="md-nav__link">
+        RALibretro
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Free-Games/" class="md-nav__link">
+        Free Games
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Useful-Links/" class="md-nav__link">
+        Useful Links
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs/" class="md-nav__link">
+        Contributing with the docs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../About-Us/" class="md-nav__link">
+        About Us
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct/" class="md-nav__link">
+        Developer's Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
+        How to Become an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer/" class="md-nav__link">
+        Getting Started as an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../New-achievement-set-checklist/" class="md-nav__link">
+        New achievement set checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Scoring/" class="md-nav__link">
+        Achievement Scoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview/" class="md-nav__link">
+        Memory Inspector Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      <label class="md-nav__link" for="__nav_2_8">
+        Achievement Logic Features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Achievement Logic Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Achievement Logic Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts/" class="md-nav__link">
+        Hit Counts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values/" class="md-nav__link">
+        Delta Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prior-Values/" class="md-nav__link">
+        Prior Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag/" class="md-nav__link">
+        ResetIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag/" class="md-nav__link">
+        PauseIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AndNext-and-OrNext-Flags/" class="md-nav__link">
+        AndNext and OrNext Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag/" class="md-nav__link">
+        AddSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag/" class="md-nav__link">
+        SubSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag/" class="md-nav__link">
+        AddHits Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddAddress-Flag/" class="md-nav__link">
+        AddAddress Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measured-Flag/" class="md-nav__link">
+        Measured Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BitCount-Size/" class="md-nav__link">
+        BitCount Size
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags/" class="md-nav__link">
+        Combining Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
+        Minimum Required Versions for Logic Features
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      <label class="md-nav__link" for="__nav_2_9">
+        Real Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Real Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Real Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
+        Using Hit Counts as a Timer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
+        Using Delta Values and Hit Counts to Detect an Increment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" class="md-nav__link">
+        Simple Example of How to Avoid Load State Abusing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
+        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
+        Creating a Timer with ResetIf Hits based on the Speed of the Game
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Add-Source-and-Deltas-for-Collectables-or-Similar-Achievements/" class="md-nav__link">
+        Using Add Source and Deltas for Collectables and Similar Achievements
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates/" class="md-nav__link">
+        Achievement Templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance/" class="md-nav__link">
+        Difficulty Scale and Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design/" class="md-nav__link">
+        Achievement Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap/" class="md-nav__link">
+        Set Development Roadmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions/" class="md-nav__link">
+        Achievement Set Revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM/" class="md-nav__link">
+        Working with the Right ROM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification/" class="md-nav__link">
+        Game Identification
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Emulator-Support-and-Issues/" class="md-nav__link">
+        Emulator Support and Issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets/" class="md-nav__link">
+        Bonus Set Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        Achievements for ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        Console Specific Tips
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Portugues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Portugues" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Portugues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Geral
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Geral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-pt_BR/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-pt_BR/" class="md-nav__link">
+        Código de Conduta do Usuário
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-pt_BR/" class="md-nav__link">
+        FAQ - Perguntas Frequentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" class="md-nav__link">
+        Como contribuir se você não é um desenvolvedor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial-pt_BR/" class="md-nav__link">
+        Tutorial para Jogos Multi-Discos
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Desenvolvedores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desenvolvedores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvedores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" class="md-nav__link">
+        Primeiros Passos como um Desenvolvedor de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-pt_BR/" class="md-nav__link">
+        Recursos de Lógica para Achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_3_4">
+        Exemplos Reais
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exemplos Reais" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exemplos Reais
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Hit Counts e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Delta Values e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" class="md-nav__link">
+        Simples Exemplo de como Evitar Abuso de Load State
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-pt_BR/" class="md-nav__link">
+        Dicas e Truques
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-pt_BR/" class="md-nav__link">
+        Dicas Específicas de Console
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-pt_BR/" class="md-nav__link">
+        Modelos de Achievement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-pt_BR/" class="md-nav__link">
+        Escala de Dificuldade e Equilíbrio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-pt_BR/" class="md-nav__link">
+        Roteiro de Desenvolvimento de um Set de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-pt_BR/" class="md-nav__link">
+        Criação de Ícones e Emblemas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-pt_BR/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-pt_BR/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-pt_BR/" class="md-nav__link">
+        Design de Conquistas
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Español
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Español" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Español
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-es/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-es/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Usuario
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-es/" class="md-nav__link">
+        FAQ - Preguntas Frecuentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules-es/" class="md-nav__link">
+        Tablas Globales y Reglas para la Casería de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements-es/" class="md-nav__link">
+        Mi juego no esta cargando los logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-es/" class="md-nav__link">
+        Como contribuir si no eres un desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature-es/" class="md-nav__link">
+        Por que no deberías utilizar la función de cargar estado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs-es/" class="md-nav__link">
+        Contribuyendo con los documentos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-RA-Documentation-Works-es/" class="md-nav__link">
+        Como funciona la Documentación de RA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads-es/" class="md-nav__link">
+        Descargas
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Desarrolladores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desarrolladores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desarrolladores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer-es/" class="md-nav__link">
+        Como convertirme en un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-es/" class="md-nav__link">
+        Primeros pasos como un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview-es/" class="md-nav__link">
+        Un vistazo al Inspector de Memoria
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_6" type="checkbox" id="__nav_4_3_6" >
+      
+      <label class="md-nav__link" for="__nav_4_3_6">
+        Características en la Logica de un Logro
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Características en la Logica de un Logro" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Características en la Logica de un Logro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts-es/" class="md-nav__link">
+        Contador de Golpes (Hit Counts)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values-es/" class="md-nav__link">
+        Valores Delta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag-es/" class="md-nav__link">
+        Bandera ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag-es/" class="md-nav__link">
+        Bandera PauseIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag-es/" class="md-nav__link">
+        Bandera AddSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag-es/" class="md-nav__link">
+        Bandera SubSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag-es/" class="md-nav__link">
+        Bandera AddHits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags-es/" class="md-nav__link">
+        Combinando Banderas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups-es/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features-es/" class="md-nav__link">
+        Versiones Mínimas Requeridas para Funciones en la Lógica
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_7" type="checkbox" id="__nav_4_3_7" >
+      
+      <label class="md-nav__link" for="__nav_4_3_7">
+        Ejemplos Reales
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ejemplos Reales" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Ejemplos Reales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer-es/" class="md-nav__link">
+        Utilizando Hit Counts como un Temporizador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" class="md-nav__link">
+        Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" class="md-nav__link">
+        Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" class="md-nav__link">
+        Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" class="md-nav__link">
+        Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-es/" class="md-nav__link">
+        Plantillas para Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-es/" class="md-nav__link">
+        Tips y Trucos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-es/" class="md-nav__link">
+        Escala de Dificultad y Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-es/" class="md-nav__link">
+        Diseño de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-es/" class="md-nav__link">
+        Mapa de Desarrollo de Set
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions-es/" class="md-nav__link">
+        Revisiones en Set de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-es/" class="md-nav__link">
+        Creación de Iconos y Badges
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-es/" class="md-nav__link">
+        Tablas de Clasificación
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-es/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM-es/" class="md-nav__link">
+        Trabajando con el ROM apropiado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification-es/" class="md-nav__link">
+        Identificación del Juego
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets-es/" class="md-nav__link">
+        Guía para Sets Bonus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks-es/" class="md-nav__link">
+        Logros para ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-es/" class="md-nav__link">
+        Tips Específicos por Consola
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#16-bit" class="md-nav__link">
+    16-bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-bit" class="md-nav__link">
+    32-bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bit" class="md-nav__link">
+    8-bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-id" class="md-nav__link">
+    Achievement ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-editor" class="md-nav__link">
+    Achievement Editor|
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-of-the-week" class="md-nav__link">
+    Achievement of the Week|
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-page" class="md-nav__link">
+    achievement page
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-processing" class="md-nav__link">
+    achievement processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achievement-sets" class="md-nav__link">
+    achievement sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addhits" class="md-nav__link">
+    AddHits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#address" class="md-nav__link">
+    address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addsource" class="md-nav__link">
+    AddSource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    admin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alt-group" class="md-nav__link">
+    alt group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aotw" class="md-nav__link">
+    aotw
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-key" class="md-nav__link">
+    API key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    author
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badge" class="md-nav__link">
+    badge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    binary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#be" class="md-nav__link">
+    BE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-endian" class="md-nav__link">
+    big endian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit" class="md-nav__link">
+    bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-set" class="md-nav__link">
+    ~bonus~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#byte" class="md-nav__link">
+    byte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancel-leaderboard" class="md-nav__link">
+    cancel (leaderboard)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checksum" class="md-nav__link">
+    checksum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheevo" class="md-nav__link">
+    cheevo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim" class="md-nav__link">
+    claim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-note" class="md-nav__link">
+    code note
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviewer" class="md-nav__link">
+    code reviewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-selected" class="md-nav__link">
+    commit selected
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completed-trophy" class="md-nav__link">
+    completed trophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-achievements" class="md-nav__link">
+    core achievements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crc-32" class="md-nav__link">
+    CRC-32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutting-room-floor-the" class="md-nav__link">
+    cutting room floor, the
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demotion" class="md-nav__link">
+    demotion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dec" class="md-nav__link">
+    dec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decimal" class="md-nav__link">
+    decimal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dev" class="md-nav__link">
+    dev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer" class="md-nav__link">
+    Developer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-achievements" class="md-nav__link">
+    developing achievements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    Discord
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dll" class="md-nav__link">
+    dll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-memory" class="md-nav__link">
+    dynamic memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earning-achievements" class="md-nav__link">
+    earning achievements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endianness" class="md-nav__link">
+    endianness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry" class="md-nav__link">
+    entry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-set" class="md-nav__link">
+    ~event~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flag-achievement-field" class="md-nav__link">
+    flag (achievement field)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flag-memory" class="md-nav__link">
+    flag (memory)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forum" class="md-nav__link">
+    forum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-icon" class="md-nav__link">
+    game icon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-entry" class="md-nav__link">
+    game entry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-id" class="md-nav__link">
+    game ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-page" class="md-nav__link">
+    game page
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-leaderboard" class="md-nav__link">
+    global leaderboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hack" class="md-nav__link">
+    hack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hack-set" class="md-nav__link">
+    ~hack~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardcore-mode" class="md-nav__link">
+    hardcore mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    hash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash-links-log" class="md-nav__link">
+    #hash-links-log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hex" class="md-nav__link">
+    hex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexadecimal" class="md-nav__link">
+    hexadecimal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hits" class="md-nav__link">
+    hits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homebrew" class="md-nav__link">
+    homebrew
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homebrew-set" class="md-nav__link">
+    ~homebrew~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jr-dev" class="md-nav__link">
+    jr. dev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leaderboard" class="md-nav__link">
+    leaderboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le" class="md-nav__link">
+    LE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#little-endian" class="md-nav__link">
+    little endian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-achievements" class="md-nav__link">
+    local achievements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    localization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic-comparison" class="md-nav__link">
+    logic comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lower4" class="md-nav__link">
+    lower4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    md5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mastery-trophy" class="md-nav__link">
+    mastery trophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-achievement-editor" class="md-nav__link">
+    memory (achievement editor)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-bookmarker" class="md-nav__link">
+    memory bookmarker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-inspector" class="md-nav__link">
+    memory inspector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memval" class="md-nav__link">
+    mem/val
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motto" class="md-nav__link">
+    motto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-set" class="md-nav__link">
+    ~multi~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pauseif" class="md-nav__link">
+    PauseIf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointers" class="md-nav__link">
+    pointers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
+    points
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prototype-set" class="md-nav__link">
+    ~prototype~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promote-to-core" class="md-nav__link">
+    promote to core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcheevos" class="md-nav__link">
+    rcheevos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra" class="md-nav__link">
+    RA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radocs" class="md-nav__link">
+    RADocs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raeums" class="md-nav__link">
+    RAeums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    requirement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetif" class="md-nav__link">
+    ResetIf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reservation" class="md-nav__link">
+    reservation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retro-ratio" class="md-nav__link">
+    retro ratio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroarch" class="md-nav__link">
+    Retroarch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision" class="md-nav__link">
+    revision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-voting" class="md-nav__link">
+    revision voting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rich-presence-script" class="md-nav__link">
+    rich presence script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rich-presence-monitor" class="md-nav__link">
+    rich presence monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rng" class="md-nav__link">
+    RNG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rom" class="md-nav__link">
+    ROM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rom-hack" class="md-nav__link">
+    ROM hack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#romhackingnet" class="md-nav__link">
+    romhacking.net
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rps" class="md-nav__link">
+    rps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-cap" class="md-nav__link">
+    set cap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#size-achievement-editor" class="md-nav__link">
+    size (achievement editor)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#softcore-mode" class="md-nav__link">
+    softcore mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-id" class="md-nav__link">
+    stage id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-leaderboard" class="md-nav__link">
+    start (leaderboard)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-memory" class="md-nav__link">
+    static memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-leaderboard" class="md-nav__link">
+    submit (leaderboard)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitted-score" class="md-nav__link">
+    submitted (score)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsource" class="md-nav__link">
+    SubSource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket" class="md-nav__link">
+    ticket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket-manager" class="md-nav__link">
+    ticket manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger" class="md-nav__link">
+    trigger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trophy" class="md-nav__link">
+    trophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-memdeltavalue" class="md-nav__link">
+    type (mem/delta/value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unofficial-achievements" class="md-nav__link">
+    unofficial achievements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlicenced-set" class="md-nav__link">
+    ~unlicenced~ set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper4" class="md-nav__link">
+    upper4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-motto" class="md-nav__link">
+    user motto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-page" class="md-nav__link">
+    user page
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-field-leaderboardrps" class="md-nav__link">
+    value field (leaderboard/rps)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Glossary-of-Developer-Terms.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Glossary of Developer Terms</h1>
+                
+                <p>(Note: This page is a work in progress)</p>
+<p>Term definitions as related to RA but especially to development</p>
+<p>Please:
+1) Define terms
+2) Add new terms
+3) Improve upon existing terms</p>
+<p>This can include technical terms that relate to game memory, specific terms that that relate to our tools, and colloquial terms that are common use for RA, such as <code>set</code>, <code>cheevo</code>, etc.</p>
+<h2 id="16-bit">16-bit<a class="headerlink" href="#16-bit" title="Permanent link">link</a></h2>
+<h2 id="32-bit">32-bit<a class="headerlink" href="#32-bit" title="Permanent link">link</a></h2>
+<h2 id="8-bit">8-bit<a class="headerlink" href="#8-bit" title="Permanent link">link</a></h2>
+<h2 id="achievement-id">Achievement ID<a class="headerlink" href="#achievement-id" title="Permanent link">link</a></h2>
+<p>A unique number associated to an achievement, displayed in some places and part of the achievement url: <a href="http://retroachievements.org/achievement/[achievement">http://retroachievements.org/achievement/[achievement</a> id]</p>
+<h2 id="achievement-editor">Achievement Editor|<a class="headerlink" href="#achievement-editor" title="Permanent link">link</a></h2>
+<h2 id="achievement-of-the-week">Achievement of the Week|<a class="headerlink" href="#achievement-of-the-week" title="Permanent link">link</a></h2>
+<h2 id="achievement-page">achievement page<a class="headerlink" href="#achievement-page" title="Permanent link">link</a></h2>
+<h2 id="achievement-processing">achievement processing<a class="headerlink" href="#achievement-processing" title="Permanent link">link</a></h2>
+<h2 id="achievement-sets">achievement sets<a class="headerlink" href="#achievement-sets" title="Permanent link">link</a></h2>
+<h2 id="addhits">AddHits<a class="headerlink" href="#addhits" title="Permanent link">link</a></h2>
+<h2 id="address">address<a class="headerlink" href="#address" title="Permanent link">link</a></h2>
+<h2 id="addsource">AddSource<a class="headerlink" href="#addsource" title="Permanent link">link</a></h2>
+<h2 id="admin">admin<a class="headerlink" href="#admin" title="Permanent link">link</a></h2>
+<h2 id="alt-group">alt group<a class="headerlink" href="#alt-group" title="Permanent link">link</a></h2>
+<h2 id="aotw">aotw<a class="headerlink" href="#aotw" title="Permanent link">link</a></h2>
+<p>short for "Achievement of the Week"</p>
+<h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">link</a></h2>
+<h2 id="api-key">API key<a class="headerlink" href="#api-key" title="Permanent link">link</a></h2>
+<h2 id="author">author<a class="headerlink" href="#author" title="Permanent link">link</a></h2>
+<p>The original developer who published an achievement.</p>
+<h2 id="badge">badge<a class="headerlink" href="#badge" title="Permanent link">link</a></h2>
+<p>The image associated with a single achievement. It's square and is 64x64 at full size.</p>
+<h2 id="binary">binary<a class="headerlink" href="#binary" title="Permanent link">link</a></h2>
+<h2 id="be">BE<a class="headerlink" href="#be" title="Permanent link">link</a></h2>
+<p>short for "big endian"</p>
+<h2 id="big-endian">big endian<a class="headerlink" href="#big-endian" title="Permanent link">link</a></h2>
+<h2 id="bit">bit<a class="headerlink" href="#bit" title="Permanent link">link</a></h2>
+<h2 id="bonus-set"><code>~bonus~</code> set<a class="headerlink" href="#bonus-set" title="Permanent link">link</a></h2>
+<h2 id="byte">byte<a class="headerlink" href="#byte" title="Permanent link">link</a></h2>
+<h2 id="cancel-leaderboard">cancel (leaderboard)<a class="headerlink" href="#cancel-leaderboard" title="Permanent link">link</a></h2>
+<h2 id="checksum">checksum<a class="headerlink" href="#checksum" title="Permanent link">link</a></h2>
+<h2 id="cheevo">cheevo<a class="headerlink" href="#cheevo" title="Permanent link">link</a></h2>
+<h2 id="claim">claim<a class="headerlink" href="#claim" title="Permanent link">link</a></h2>
+<h2 id="code-note">code note<a class="headerlink" href="#code-note" title="Permanent link">link</a></h2>
+<h2 id="code-reviewer">code reviewer<a class="headerlink" href="#code-reviewer" title="Permanent link">link</a></h2>
+<h2 id="commit-selected">commit selected<a class="headerlink" href="#commit-selected" title="Permanent link">link</a></h2>
+<h2 id="comparison">comparison<a class="headerlink" href="#comparison" title="Permanent link">link</a></h2>
+<p>see "logic comparison"</p>
+<h2 id="completed-trophy">completed trophy<a class="headerlink" href="#completed-trophy" title="Permanent link">link</a></h2>
+<p>The award give to a user who has finished every achievement in a set in softcore mode.</p>
+<h2 id="core-achievements">core achievements<a class="headerlink" href="#core-achievements" title="Permanent link">link</a></h2>
+<h2 id="crc-32">CRC-32<a class="headerlink" href="#crc-32" title="Permanent link">link</a></h2>
+<h2 id="cutting-room-floor-the">cutting room floor, the<a class="headerlink" href="#cutting-room-floor-the" title="Permanent link">link</a></h2>
+<p>Website resource for sharing easter eggs, hidden or unused stuff in the games, localization differences, etc.</p>
+<h2 id="demotion">demotion<a class="headerlink" href="#demotion" title="Permanent link">link</a></h2>
+<h2 id="dec">dec<a class="headerlink" href="#dec" title="Permanent link">link</a></h2>
+<p>Short for decimal</p>
+<h2 id="decimal">decimal<a class="headerlink" href="#decimal" title="Permanent link">link</a></h2>
+<h2 id="dev">dev<a class="headerlink" href="#dev" title="Permanent link">link</a></h2>
+<p>Short for achievment developer</p>
+<h2 id="developer">Developer<a class="headerlink" href="#developer" title="Permanent link">link</a></h2>
+<h2 id="developing-achievements">developing achievements<a class="headerlink" href="#developing-achievements" title="Permanent link">link</a></h2>
+<h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">link</a></h2>
+<p>A freeware communication platform designed for video gaming communities, that specializes in text, image, video and audio communication between users in a chat channel.</p>
+<h2 id="dll">dll<a class="headerlink" href="#dll" title="Permanent link">link</a></h2>
+<p>Means, "Dynamic Link Library", which is a type of file For RA there is a dll in the root directory of each RA emulator that tells the emulator how to process achievements, among other things.</p>
+<h2 id="dynamic-memory">dynamic memory<a class="headerlink" href="#dynamic-memory" title="Permanent link">link</a></h2>
+<h2 id="earning-achievements">earning achievements<a class="headerlink" href="#earning-achievements" title="Permanent link">link</a></h2>
+<h2 id="endianness">endianness<a class="headerlink" href="#endianness" title="Permanent link">link</a></h2>
+<p>The order in which a sequence of bytes are stored in memory</p>
+<h2 id="entry">entry<a class="headerlink" href="#entry" title="Permanent link">link</a></h2>
+<p>see "game entry"</p>
+<h2 id="event-set"><code>~event~</code> set<a class="headerlink" href="#event-set" title="Permanent link">link</a></h2>
+<h2 id="flag-achievement-field">flag (achievement field)<a class="headerlink" href="#flag-achievement-field" title="Permanent link">link</a></h2>
+<h2 id="flag-memory">flag (memory)<a class="headerlink" href="#flag-memory" title="Permanent link">link</a></h2>
+<h2 id="forum">forum<a class="headerlink" href="#forum" title="Permanent link">link</a></h2>
+<h2 id="game-icon">game icon<a class="headerlink" href="#game-icon" title="Permanent link">link</a></h2>
+<h2 id="game-entry">game entry<a class="headerlink" href="#game-entry" title="Permanent link">link</a></h2>
+<h2 id="game-id">game ID<a class="headerlink" href="#game-id" title="Permanent link">link</a></h2>
+<h2 id="game-page">game page<a class="headerlink" href="#game-page" title="Permanent link">link</a></h2>
+<h2 id="github">github<a class="headerlink" href="#github" title="Permanent link">link</a></h2>
+<h2 id="global-leaderboard">global leaderboard<a class="headerlink" href="#global-leaderboard" title="Permanent link">link</a></h2>
+<h2 id="hack">hack<a class="headerlink" href="#hack" title="Permanent link">link</a></h2>
+<p>see "ROM hack"</p>
+<h2 id="hack-set"><code>~hack~</code> set<a class="headerlink" href="#hack-set" title="Permanent link">link</a></h2>
+<h2 id="hardcore-mode">hardcore mode<a class="headerlink" href="#hardcore-mode" title="Permanent link">link</a></h2>
+<p>A mode of earning achievements. No save states or emulator advantages allowed. For the most part requires the player to earn achievements as if they were on original hardware.</p>
+<h2 id="hash">hash<a class="headerlink" href="#hash" title="Permanent link">link</a></h2>
+<h2 id="hash-links-log">#hash-links-log<a class="headerlink" href="#hash-links-log" title="Permanent link">link</a></h2>
+<h2 id="hex">hex<a class="headerlink" href="#hex" title="Permanent link">link</a></h2>
+<p>short for hexadecimal</p>
+<h2 id="hexadecimal">hexadecimal<a class="headerlink" href="#hexadecimal" title="Permanent link">link</a></h2>
+<h2 id="hits">hits<a class="headerlink" href="#hits" title="Permanent link">link</a></h2>
+<h2 id="homebrew">homebrew<a class="headerlink" href="#homebrew" title="Permanent link">link</a></h2>
+<h2 id="homebrew-set"><code>~homebrew~</code> set<a class="headerlink" href="#homebrew-set" title="Permanent link">link</a></h2>
+<h2 id="issue">issue<a class="headerlink" href="#issue" title="Permanent link">link</a></h2>
+<h2 id="jr-dev">jr. dev<a class="headerlink" href="#jr-dev" title="Permanent link">link</a></h2>
+<h2 id="json">json<a class="headerlink" href="#json" title="Permanent link">link</a></h2>
+<h2 id="leaderboard">leaderboard<a class="headerlink" href="#leaderboard" title="Permanent link">link</a></h2>
+<h2 id="le">LE<a class="headerlink" href="#le" title="Permanent link">link</a></h2>
+<p>short for little endian</p>
+<h2 id="little-endian">little endian<a class="headerlink" href="#little-endian" title="Permanent link">link</a></h2>
+<h2 id="local-achievements">local achievements<a class="headerlink" href="#local-achievements" title="Permanent link">link</a></h2>
+<h2 id="localization">localization<a class="headerlink" href="#localization" title="Permanent link">link</a></h2>
+<h2 id="logic-comparison">logic comparison<a class="headerlink" href="#logic-comparison" title="Permanent link">link</a></h2>
+<h2 id="lower4">lower4<a class="headerlink" href="#lower4" title="Permanent link">link</a></h2>
+<h2 id="md5">md5<a class="headerlink" href="#md5" title="Permanent link">link</a></h2>
+<h2 id="mastery-trophy">mastery trophy<a class="headerlink" href="#mastery-trophy" title="Permanent link">link</a></h2>
+<p>The award give to a user who has finished every achievement in a set in hardcore mode.</p>
+<h2 id="memory">memory<a class="headerlink" href="#memory" title="Permanent link">link</a></h2>
+<h2 id="memory-achievement-editor">memory (achievement editor)<a class="headerlink" href="#memory-achievement-editor" title="Permanent link">link</a></h2>
+<h2 id="memory-bookmarker">memory bookmarker<a class="headerlink" href="#memory-bookmarker" title="Permanent link">link</a></h2>
+<h2 id="memory-inspector">memory inspector<a class="headerlink" href="#memory-inspector" title="Permanent link">link</a></h2>
+<h2 id="memval">mem/val<a class="headerlink" href="#memval" title="Permanent link">link</a></h2>
+<h2 id="motto">motto<a class="headerlink" href="#motto" title="Permanent link">link</a></h2>
+<p>See "user motto"</p>
+<h2 id="multi-set"><code>~multi~</code> set<a class="headerlink" href="#multi-set" title="Permanent link">link</a></h2>
+<h2 id="pauseif">PauseIf<a class="headerlink" href="#pauseif" title="Permanent link">link</a></h2>
+<h2 id="pointers">pointers<a class="headerlink" href="#pointers" title="Permanent link">link</a></h2>
+<h2 id="points">points<a class="headerlink" href="#points" title="Permanent link">link</a></h2>
+<h2 id="processing">processing<a class="headerlink" href="#processing" title="Permanent link">link</a></h2>
+<p>see "achievement processing"</p>
+<h2 id="prototype-set"><code>~prototype~</code> set<a class="headerlink" href="#prototype-set" title="Permanent link">link</a></h2>
+<h2 id="promote-to-core">promote to core<a class="headerlink" href="#promote-to-core" title="Permanent link">link</a></h2>
+<h2 id="rcheevos">rcheevos<a class="headerlink" href="#rcheevos" title="Permanent link">link</a></h2>
+<h2 id="ra">RA<a class="headerlink" href="#ra" title="Permanent link">link</a></h2>
+<p>Short for RetroAchievments. Often used as a prefix for various Retroachiemement related tools such as RASnes9x.</p>
+<h2 id="radocs">RADocs<a class="headerlink" href="#radocs" title="Permanent link">link</a></h2>
+<h2 id="raeums">RAeums<a class="headerlink" href="#raeums" title="Permanent link">link</a></h2>
+<h2 id="requirement">requirement<a class="headerlink" href="#requirement" title="Permanent link">link</a></h2>
+<h2 id="resetif">ResetIf<a class="headerlink" href="#resetif" title="Permanent link">link</a></h2>
+<p>flag</p>
+<h2 id="reservation">reservation<a class="headerlink" href="#reservation" title="Permanent link">link</a></h2>
+<h2 id="retro-ratio">retro ratio<a class="headerlink" href="#retro-ratio" title="Permanent link">link</a></h2>
+<p>White points</p>
+<h2 id="retroarch">Retroarch<a class="headerlink" href="#retroarch" title="Permanent link">link</a></h2>
+<h2 id="revision">revision<a class="headerlink" href="#revision" title="Permanent link">link</a></h2>
+<h2 id="revision-voting">revision voting<a class="headerlink" href="#revision-voting" title="Permanent link">link</a></h2>
+<h2 id="rich-presence-script">rich presence script<a class="headerlink" href="#rich-presence-script" title="Permanent link">link</a></h2>
+<p>A script created by developers and posted in on the game page of the achievement tools that tells you what a player has been recently doing in a game. The results are displayed on the front page of the site, active players. </p>
+<h2 id="rich-presence-monitor">rich presence monitor<a class="headerlink" href="#rich-presence-monitor" title="Permanent link">link</a></h2>
+<p>An option in the RetroAchievement menu of RAemus that shows you the current rich presence display.</p>
+<h2 id="rng">RNG<a class="headerlink" href="#rng" title="Permanent link">link</a></h2>
+<p>Short for "random number generator", a program to create randomization in a system.</p>
+<h2 id="rom">ROM<a class="headerlink" href="#rom" title="Permanent link">link</a></h2>
+<p>Short for "read only memory", an image of the game.</p>
+<h2 id="rom-hack">ROM hack<a class="headerlink" href="#rom-hack" title="Permanent link">link</a></h2>
+<p>Modification of original game by fans.</p>
+<h2 id="romhackingnet">romhacking.net<a class="headerlink" href="#romhackingnet" title="Permanent link">link</a></h2>
+<p>The biggest repository of romhacks. Contains guides, utilities, and of course hacks.</p>
+<h2 id="rps">rps<a class="headerlink" href="#rps" title="Permanent link">link</a></h2>
+<p>Short for "rich presence script"</p>
+<h2 id="set">set<a class="headerlink" href="#set" title="Permanent link">link</a></h2>
+<p>A group of achievements associated with a game</p>
+<h2 id="set-cap">set cap<a class="headerlink" href="#set-cap" title="Permanent link">link</a></h2>
+<p>400 points. It's the limit for how many points are allowed in a set of achievements.</p>
+<h2 id="size-achievement-editor">size (achievement editor)<a class="headerlink" href="#size-achievement-editor" title="Permanent link">link</a></h2>
+<h2 id="softcore-mode">softcore mode<a class="headerlink" href="#softcore-mode" title="Permanent link">link</a></h2>
+<h2 id="stage-id">stage id<a class="headerlink" href="#stage-id" title="Permanent link">link</a></h2>
+<h2 id="start-leaderboard">start (leaderboard)<a class="headerlink" href="#start-leaderboard" title="Permanent link">link</a></h2>
+<h2 id="static-memory">static memory<a class="headerlink" href="#static-memory" title="Permanent link">link</a></h2>
+<h2 id="submit-leaderboard">submit (leaderboard)<a class="headerlink" href="#submit-leaderboard" title="Permanent link">link</a></h2>
+<h2 id="submitted-score">submitted (score)<a class="headerlink" href="#submitted-score" title="Permanent link">link</a></h2>
+<h2 id="subsource">SubSource<a class="headerlink" href="#subsource" title="Permanent link">link</a></h2>
+<h2 id="ticket">ticket<a class="headerlink" href="#ticket" title="Permanent link">link</a></h2>
+<h2 id="ticket-manager">ticket manager<a class="headerlink" href="#ticket-manager" title="Permanent link">link</a></h2>
+<h2 id="trigger">trigger<a class="headerlink" href="#trigger" title="Permanent link">link</a></h2>
+<h2 id="trophy">trophy<a class="headerlink" href="#trophy" title="Permanent link">link</a></h2>
+<h2 id="type-memdeltavalue">type (mem/delta/value)<a class="headerlink" href="#type-memdeltavalue" title="Permanent link">link</a></h2>
+<h2 id="unofficial-achievements">unofficial achievements<a class="headerlink" href="#unofficial-achievements" title="Permanent link">link</a></h2>
+<h2 id="unlicenced-set"><code>~unlicenced~</code> set<a class="headerlink" href="#unlicenced-set" title="Permanent link">link</a></h2>
+<h2 id="upper4">upper4<a class="headerlink" href="#upper4" title="Permanent link">link</a></h2>
+<h2 id="user-motto">user motto<a class="headerlink" href="#user-motto" title="Permanent link">link</a></h2>
+<h2 id="user-page">user page<a class="headerlink" href="#user-page" title="Permanent link">link</a></h2>
+<h2 id="value">value<a class="headerlink" href="#value" title="Permanent link">link</a></h2>
+<h2 id="value-field-leaderboardrps">value field (leaderboard/rps)<a class="headerlink" href="#value-field-leaderboardrps" title="Permanent link">link</a></h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://retroachievements.org/" target="_blank" rel="noopener" title="retroachievements.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://discord.gg/dq2E4hE" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/RetroAchievements" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
