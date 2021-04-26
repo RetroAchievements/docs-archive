@@ -2872,7 +2872,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <p><strong>NOTE</strong>: A default display string is required in case none of the conditional display strings match. If you only have conditional display strings, the script will appear to do nothing.</p>
 <p>Looking at this example, if the 16-bit value at $0085 is 0, the display string is <code>Title Screen</code>. If not, the next line is examined. If the 7th bit of $007C is 1, the display string is <code>Custom Map in @Landscape(0xH00016c)</code>. If not, the final line does not have a conditional clause and is used.</p>
 <p>Display strings associated with a conditional clause support all of the same syntax as the default display string. In this example, you can see the <code>@Landscape</code> lookup is used in both the conditional display string and the default display string. The lookup itself only has to be defined once.</p>
-<p>The conditional phrase supports all of the previously mentioned address accessors as well as AND (_) and OR (S) logic. Note that OR clauses still require a 'core' group, <a href="Alt-Groups">just like achievements</a>.</p>
+<p>The conditional phrase supports all of the previously mentioned address accessors as well as AND (_) and OR (S) logic. Note that OR clauses still require a 'core' group, <a href="../Alt-Groups/">just like achievements</a>.</p>
 <ul>
 <li>
 <p><code>?0xH1234=32_0xH2345=0?and example</code></p>
@@ -2890,7 +2890,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)<a class="headerlink" href="#binary-coded-decimal-bcd" title="Permanent link">link</a></h2>
 <p>BCD is when the values are store in an address from as 0-9 (one digit) or 0-99 (two digits). Keep in mind that most often values are stored in hexidecimal, but sometime games will store them in this way and here's the best way to handle these addresses in your display.</p>
 <p>BCD decoding treats each hex character as a decimal digit. If the memory inspector shows 86 (in hex), the result of BCD decoding the value would be 86 (in decimal).</p>
-<p>For value objects you can use the BCD prefix, as in <code>b0xh1234</code>. This also works with <a href="Leaderboards#value-interpreter">leaderboard values</a>.
+<p>For value objects you can use the BCD prefix, as in <code>b0xh1234</code>. This also works with <a href="../Leaderboards/#value-interpreter">leaderboard values</a>.
 Note that you still need to specify the size of the BCD memory address. <code>b0x1234</code> reads a 16-bit value. <code>b0xh1234</code> reads an 8-bit value and <code>b0xX1234</code> reads a 32-bit value.
 <em>NOTE</em>: Support for 16-bit and 32-bit BCD decoding is a feature of the 0.075 toolkit.</p>
 <p>This is most commonly used for score and time, but often other types of display values.</p>

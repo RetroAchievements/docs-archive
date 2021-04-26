@@ -2373,7 +2373,7 @@
                 
                   <h1>Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame</h1>
                 
-                <p>En este ejemplo veras como evitar el problema de que un contador se incremente dos veces en el mismo frame combinando un <a href="SubSource-Flag-es">SubSource</a> y <a href="AddHits-Flag-es">AddHits</a>.</p>
+                <p>En este ejemplo veras como evitar el problema de que un contador se incremente dos veces en el mismo frame combinando un <a href="../SubSource-Flag-es/">SubSource</a> y <a href="../AddHits-Flag-es/">AddHits</a>.</p>
 <p>En la libreria del Game Boy Advance hay un plataformero Navideño conocido como <a href="http://retroachievements.org/Game/7152">Santa Claus Jr. Advance</a>. Hay algunos logros de coleccionar varios dulces en cada uno de los Stages Bonus.</p>
 <p>Esos logros se suponen que tendrian que ser algo simple, como esto:</p>
 <table>
@@ -2412,8 +2412,8 @@
 <p>Esto se traduciría "checa si el contador de dulces cambio <code>N</code> veces en el stage bonus".</p>
 <p><strong>Nota</strong>: estamos utilizando <code>0xDULCES != Delta 0xDULCES</code> (utilizando <code>!=</code>, y no <code>&gt;</code>) porque cuando el jugador cuenta con 99 dulces y colecciona uno mas el contador se va a cero.</p>
 <p>Sin embargo, hay un aspecto en este juego (y muchos otros) donde si el jugador colecciona 2 dulces a la vez el contador va a aumentar por 2 en el mismo frame. Cuando pasa el contador de hits es aumentado por uno mientras que el contador de dulces aumento en dos. Esto, obviamente, arruina la lógica que utilizamos arriba.</p>
-<p>En manera que podamos evitar este problema tenemos que utilizar la técnica de <a href="SubSource-Flag-es#utilizando-subsource-para-contar-incrementos-especificos">utilizar <code>SubSource</code> para contar incrementos específicos</a> combinado con una 
- <a href="AddHits-Flag-es"><code>AddHits</code> flag</a>.</p>
+<p>En manera que podamos evitar este problema tenemos que utilizar la técnica de <a href="../SubSource-Flag-es/#utilizando-subsource-para-contar-incrementos-especificos">utilizar <code>SubSource</code> para contar incrementos específicos</a> combinado con una 
+ <a href="../AddHits-Flag-es/"><code>AddHits</code> flag</a>.</p>
 <p>Echemos un vistazo a la lógica del logro y así poder ver la explicación:</p>
 <p><strong>Variables (Addresses)</strong></p>
 <ul>
@@ -2428,7 +2428,7 @@
 <p>Junto con la condición 2, es un truco para ver si <code>0xDULCES - Delta 0xDULCES = 2</code>. En otras palabras, el contador de dulces fue incrementado por dos.</p>
 </li>
 <li>
-<p>Utilizando a la vez con la condición 1 (como se explica arriba) y 3. Como se explica en <a href="AddHits-Flag-es">su respectiva pagina</a>, cuando la condición de <code>AddHits</code> es verdadera, el hit counter en la siguiente condición es incrementado. Entonces , en nuestro ejemplo de aquí, cuando condición 2 es verdadera, el hitcounter en condición 3 es incrementado.</p>
+<p>Utilizando a la vez con la condición 1 (como se explica arriba) y 3. Como se explica en <a href="../AddHits-Flag-es/">su respectiva pagina</a>, cuando la condición de <code>AddHits</code> es verdadera, el hit counter en la siguiente condición es incrementado. Entonces , en nuestro ejemplo de aquí, cuando condición 2 es verdadera, el hitcounter en condición 3 es incrementado.</p>
 </li>
 <li>
 <p>Contador cuando el contador de dulces cambia.</p>

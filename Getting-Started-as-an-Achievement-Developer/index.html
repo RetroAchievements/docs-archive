@@ -2509,7 +2509,7 @@
 <p><img alt="memoryinspector" src="https://i.lensdump.com/i/jmw72x.png" /></p>
 <p>The Memory Inspector can be used to find addresses in RAM for us to use. Essentially you are on a treasure hunt for memory locations - this dialog will help you examine and filter the game's RAM while the game is running.</p>
 <p><strong>NOTE: If you want a step-by-step video explanation on finding memory addresses, <a href="https://www.youtube.com/watch?v=8nYb_5cgQHY">this old video</a> can be useful</strong>.</p>
-<p><strong>See also</strong>: <a href="Memory-Inspector-Overview">Memory Inspector Overview</a> and <a href="Tips-and-Tricks#memory-digging-tips">Memory Digging Tips</a>.</p>
+<p><strong>See also</strong>: <a href="../Memory-Inspector-Overview/">Memory Inspector Overview</a> and <a href="../Tips-and-Tricks/#memory-digging-tips">Memory Digging Tips</a>.</p>
 <p>To start or restart a test, click <strong>Reset</strong> near the top left.</p>
 <p>To keep things simple, we'll start by looking for the memory address which holds the number of rings we have collected. Our steps will be the following:</p>
 <ol>
@@ -2542,7 +2542,7 @@
 </li>
 </ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
-<p>You can find more useful <a href="Tips-and-Tricks#memory-digging-tips">Memory Digging Tips here</a>.</p>
+<p>You can find more useful <a href="../Tips-and-Tricks/#memory-digging-tips">Memory Digging Tips here</a>.</p>
 <h2 id="achievement-sets">Achievement Sets<a class="headerlink" href="#achievement-sets" title="Permanent link">link</a></h2>
 <p>So the memory location for the number of rings is stored at <code>0xfe20</code> - note to a non-programmer, we're dealing in <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">hexadecimal numeral system</a> which can be daunting, but don't worry, essentially it's just numbers and letters instead of only numbers, and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement.</p>
 <p>Go to the <strong>RetroAchievements</strong> in the menu, choose <strong>Achievement Sets</strong> and you'll see this dialog:</p>
@@ -2578,7 +2578,7 @@
 </ul>
 <p>With that set, we don't have any more conditions to add, so we return to the <strong>Achievements Dialog</strong>. To be safe, we should save our progress by hitting <strong>Save Local</strong>! This saves everything to file locally to ensure that we won't lose any progress.</p>
 <ul>
-<li><strong>Note</strong>: An achievement should have more than one requirement to avoid it triggering at the wrong time (i.e. playing demo mode). In this example, we are using only one requirement to simplify the explanation. See more <a href="Tips-and-Tricks#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
+<li><strong>Note</strong>: An achievement should have more than one requirement to avoid it triggering at the wrong time (i.e. playing demo mode). In this example, we are using only one requirement to simplify the explanation. See more <a href="../Tips-and-Tricks/#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
 </ul>
 <h2 id="testing-the-achievement">Testing the Achievement<a class="headerlink" href="#testing-the-achievement" title="Permanent link">link</a></h2>
 <p>We can now 'activate' this achievement locally by checking the box next to <strong>Active</strong> on the right-hand side in the Achievement Editor or by selecting the achievement in Achievement Sets and clicking <strong>Activate Selected</strong>. This will start monitoring these memory locations and will award the achievement once all the conditions are true. Now we can go ahead and test to see if this achievement works!</p>
@@ -2594,22 +2594,22 @@
 <p><strong><del>Never</del> Avoid making achievements with only one condition as much as you can</strong>. Otherwise it will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></p>
 </li>
 <li>
-<p>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="Tips-and-Tricks#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="Achievement-Logic-Features#pauseif">PauseIf</a> and <a href="Achievement-Logic-Features#resetif">ResetIf</a>.</p>
+<p>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="../Tips-and-Tricks/#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</p>
 </li>
 <li>
-<p><strong><a href="Achievement-Logic-Features#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</p>
+<p><strong><a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</p>
 </li>
 <li>
-<p><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="Achievement-Templates#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</p>
+<p><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="../Achievement-Templates/#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</p>
 </li>
 <li>
-<p>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</p>
+<p>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</p>
 </li>
 <li>
 <p><strong>Avoid making too many achievements about simple things that require minimal effort</strong>. Examples of what <strong>NOT</strong> to do: get one coin or one mushroom on Super Mario Bros.</p>
 </li>
 <li>
-<p>Be aware of the <a href="Developers-Code-of-Conduct#unwelcome-concepts">unwelcome achievement's design concepts</a>.</p>
+<p>Be aware of the <a href="../Developers-Code-of-Conduct/#unwelcome-concepts">unwelcome achievement's design concepts</a>.</p>
 </li>
 <li>
 <p><strong>Be creative with your achievements</strong>. Those covering unique features and details of the game are the most welcome. The players love when that little detail of a game they love is supported on an achievement. Reading a walkthrough on <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> can give some inspiration too.</p>
@@ -2618,21 +2618,21 @@
 <p>It can take a while to understand how the memory works in a game, so try spending as much time with it as you can, especially if it's your first attempt at developing achievements. </p>
 </li>
 </ul>
-<p>You can find more in the <a href="Tips-and-Tricks">Tips and Tricks page</a>.</p>
+<p>You can find more in the <a href="../Tips-and-Tricks/">Tips and Tricks page</a>.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">link</a></h2>
 <p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
 <ul>
 <li>
-<p>In order to refine your achievement logic, you can see what features you have in the <a href="Achievement-Logic-Features">Achievement Logic Features</a> page.</p>
+<p>In order to refine your achievement logic, you can see what features you have in the <a href="../Achievement-Logic-Features/">Achievement Logic Features</a> page.</p>
 </li>
 <li>
-<p>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="Real-Examples">Real Examples</a> page.</p>
+<p>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="../Real-Examples/">Real Examples</a> page.</p>
 </li>
 <li>
-<p>You can also see some generic examples in the <a href="Achievement-Templates">Achievement Templates</a> page.</p>
+<p>You can also see some generic examples in the <a href="../Achievement-Templates/">Achievement Templates</a> page.</p>
 </li>
 <li>
-<p>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="How-to-Become-an-Achievement-Developer">How to Become an Achievement Developer</a></p>
+<p>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="../How-to-Become-an-Achievement-Developer/">How to Become an Achievement Developer</a></p>
 </li>
 </ul>
 <p>Have fun!</p>

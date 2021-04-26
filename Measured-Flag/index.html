@@ -2372,8 +2372,8 @@
                   <h1>Measured Flag</h1>
                 
                 <p><code>Measured</code> marks a condition for tracking progress. It adds a progress bar to the achievement overlay to inform the user how close they are to completing an achievement. As the user expects an achievement to trigger when the progress bar is full, it is expected that any other conditions in the achievement should be true most of the time.</p>
-<p>If placed on a condition with a required <a href="Hit-Counts">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="AddHits-Flag"><code>AddHits</code></a> can be used.</p>
-<p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="AddSource-Flag"><code>AddSource</code></a> and <a href="SubSource-Flag"><code>SubSource</code></a> can be used.</p>
+<p>If placed on a condition with a required <a href="../Hit-Counts/">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="../AddHits-Flag/"><code>AddHits</code></a> can be used.</p>
+<p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="../AddSource-Flag/"><code>AddSource</code></a> and <a href="../SubSource-Flag/"><code>SubSource</code></a> can be used.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have the same target value, the current value will be the maximum of all the <code>Measured</code> conditions.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have different target values, a Parse Error -22 will occur.</p>
 <p>Note that progress for <code>Measured</code> values is reported at the time of examination and may actually go down depending on the current value (Hit Count could be reset, or comparison value decreases).</p>

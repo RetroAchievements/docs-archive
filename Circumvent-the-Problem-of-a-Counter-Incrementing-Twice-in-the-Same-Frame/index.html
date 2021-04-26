@@ -2371,7 +2371,7 @@
                 
                   <h1>Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</h1>
                 
-                <p>In this example you'll see how to circumvent the problem of a counter incrementing twice in the same frame by combining <a href="SubSource-Flag">SubSource</a> and <a href="AddHits-Flag">AddHits</a>.</p>
+                <p>In this example you'll see how to circumvent the problem of a counter incrementing twice in the same frame by combining <a href="../SubSource-Flag/">SubSource</a> and <a href="../AddHits-Flag/">AddHits</a>.</p>
 <p>In the Game Boy Advance library there's a Christmas platformer game called <a href="http://retroachievements.org/Game/7152">Santa Claus Jr. Advance</a>. There are some achievements for collecting all candy canes in each one of the bonus stages.</p>
 <p>Such achievements were supposed to be quite simple, like this:</p>
 <table>
@@ -2410,7 +2410,7 @@
 <p>This translates into "check if the candy canes counter changed <code>N</code> times in the bonus stage".</p>
 <p><strong>Note</strong>: we're using <code>0xCANDIES != Delta 0xCANDIES</code> (using <code>!=</code>, and not <code>&gt;</code>) cause when the player has 99 candies and collect one more, the counter goes to zero.</p>
 <p>However, there is an aspect in this game (and many others) where if the player collect 2 candy canes simultaneously the counter is increased by 2 in the same frame. When it happens the hit counter is increased by one while the candy counter is increased by two. This, obviously, ruins the logic used above.</p>
-<p>In order to circumvent this issue we have to use that technique of <a href="SubSource-Flag#using-subsource-to-count-specific-increments">using <code>SubSource</code> to count specific increments</a> combined with the <a href="AddHits-Flag"><code>AddHits</code> flag</a>.</p>
+<p>In order to circumvent this issue we have to use that technique of <a href="../SubSource-Flag/#using-subsource-to-count-specific-increments">using <code>SubSource</code> to count specific increments</a> combined with the <a href="../AddHits-Flag/"><code>AddHits</code> flag</a>.</p>
 <p>Let's take a look at the achievement logic and then we'll see the explanation:</p>
 <p><strong>Addresses</strong></p>
 <ul>
@@ -2425,7 +2425,7 @@
 <p>Together with condition 2, is a trick used to check if <code>0xCANDIES - Delta 0xCANDIES = 2</code>. In other words, the candy counter was incremented by two.</p>
 </li>
 <li>
-<p>Used together with condition 1 (as explained above) and 3. As explained in <a href="AddHits-Flag">its respective page</a>, when the <code>AddHits</code> condition is true, the hit counter in the next condition is incremented. Therefore, in our example here, when condition 2 is true, the hitcounter in condition 3 is incremented.</p>
+<p>Used together with condition 1 (as explained above) and 3. As explained in <a href="../AddHits-Flag/">its respective page</a>, when the <code>AddHits</code> condition is true, the hit counter in the next condition is incremented. Therefore, in our example here, when condition 2 is true, the hitcounter in condition 3 is incremented.</p>
 </li>
 <li>
 <p>Count when the candy counter changes.</p>

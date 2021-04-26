@@ -2413,7 +2413,7 @@
                 
                   <h1>AddAddress Flag</h1>
                 
-                <p><code>AddAddress</code> modifies the memory address(es) of the following condition by the calculated value. It works similar to <a href="AddSource-Flag"><code>AddSource</code></a>, but modifies the address, not the resulting value. Additionally, it affects addresses on both sides of the condition.</p>
+                <p><code>AddAddress</code> modifies the memory address(es) of the following condition by the calculated value. It works similar to <a href="../AddSource-Flag/"><code>AddSource</code></a>, but modifies the address, not the resulting value. Additionally, it affects addresses on both sides of the condition.</p>
 <p><code>AddAddress</code> only affects the next condition. If multiple <code>AddAddress</code> lines are chained together, each lookup in the chain will be altered; the values won't all be added to the final lookup.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/32680403/68913137-9396d780-0717-11ea-871f-150903408d5f.png" /></p>
 <p>The 32-bit value at 0x0112F8 is a pointer to the data for the first character in the party. When the party order changes, the pointer will point at a different block of memory, but data within the block will have the same structure.</p>
