@@ -765,10 +765,45 @@
             
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8_5" type="checkbox" id="__nav_2_8_5" checked>
+      
+      <label class="md-nav__link" for="__nav_2_8_5">
+        Flags
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Flags" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Flags
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
   
     <li class="md-nav__item">
       <a href="../ResetIf-Flag/" class="md-nav__link">
         ResetIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetNextIf-Flag/" class="md-nav__link">
+        ResetNextIf Flag
       </a>
     </li>
   
@@ -827,8 +862,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../AddHits-Flag/" class="md-nav__link">
-        AddHits Flag
+      <a href="../AddHits-and-SubHits-Flag/" class="md-nav__link">
+        AddHits and SubHits Flag
       </a>
     </li>
   
@@ -899,9 +934,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../BitCount-Size/" class="md-nav__link">
-        BitCount Size
+      <a href="../Trigger-Flag/" class="md-nav__link">
+        Trigger Flag
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -911,8 +952,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Combining-Flags/" class="md-nav__link">
-        Combining Flags
+      <a href="../BitCount-Size/" class="md-nav__link">
+        BitCount Size
       </a>
     </li>
   
@@ -2372,7 +2413,7 @@
                   <h1>Measured Flag</h1>
                 
                 <p><code>Measured</code> marks a condition for tracking progress. It adds a progress bar to the achievement overlay to inform the user how close they are to completing an achievement. As the user expects an achievement to trigger when the progress bar is full, it is expected that any other conditions in the achievement should be true most of the time.</p>
-<p>If placed on a condition with a required <a href="../Hit-Counts/">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="../AddHits-Flag/"><code>AddHits</code></a> can be used.</p>
+<p>If placed on a condition with a required <a href="../Hit-Counts/">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="AddHits-Flag.md"><code>AddHits</code></a> can be used.</p>
 <p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="../AddSource-Flag/"><code>AddSource</code></a> and <a href="../SubSource-Flag/"><code>SubSource</code></a> can be used.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have the same target value, the current value will be the maximum of all the <code>Measured</code> conditions.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have different target values, a Parse Error -22 will occur.</p>
@@ -2417,13 +2458,13 @@
         </a>
       
       
-        <a href="../BitCount-Size/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../Trigger-Flag/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              BitCount Size
+              Trigger Flag
             </div>
           </div>
           <div class="md-footer__button md-icon">
