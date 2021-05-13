@@ -181,13 +181,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Developer-docs/" class="md-tabs__link">
+      <a href="../Developer-docs/" class="md-tabs__link md-tabs__link--active">
         Developers
       </a>
     </li>
@@ -585,12 +587,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Developers
@@ -654,11 +658,148 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../New-achievement-set-checklist/" class="md-nav__link">
-        New achievement set checklist
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          New Achievement Set Checklist
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        New Achievement Set Checklist
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    Before you Begin
+  </a>
+  
+    <nav class="md-nav" aria-label="Before you Begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-are-you-free-of-tickets" class="md-nav__link">
+    1. Are you free of tickets?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-is-the-game-present-on-the-database" class="md-nav__link">
+    2. Is the game present on the database?
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Is the game present on the database?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yes" class="md-nav__link">
+    Yes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-does-the-game-already-have-an-achievement-set" class="md-nav__link">
+    3. Does the game already have an achievement set?
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Does the game already have an achievement set?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yes_1" class="md-nav__link">
+    Yes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_1" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-is-another-developer-working-on-the-game" class="md-nav__link">
+    4. Is another developer working on the game?
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Is another developer working on the game?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yes_2" class="md-nav__link">
+    Yes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_2" class="md-nav__link">
+    No
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2443,6 +2584,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2482,6 +2630,11 @@
 <p>It may be possible that developer has stopped working on it. Developers are expected to renew their reservation every three months. Look at the time stamps to see when the developer posted a reservation for development. If the developer has not stated or renewed their reservation on the game after three months you can assume it has been abandoned and then you can post your plans to work.</p>
 <h4 id="no_2">No<a class="headerlink" href="#no_2" title="Permanent link">link</a></h4>
 <p>Great! You're free to go ahead! The next step is to announce your plans to develop achievements for the game.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-05-11 09:27] televandalist:</code> Capitalization fix for title.</li>
+</ul>
                 
               
               
@@ -2497,6 +2650,39 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Getting-Started-as-an-Achievement-Developer/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Getting Started as an Achievement Developer
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Achievement-Scoring/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Achievement Scoring
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
