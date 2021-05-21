@@ -2410,27 +2410,10 @@
                 
                   <h1>Simple Example of How to Avoid Load State Abusing</h1>
                 
-                <p>In this example the game is <a href="http://retroachievements.org/Game/4650">Zooming Secretary (NES)</a>, and the Achievement is <a href="http://retroachievements.org/Achievement/55102">Great Job! - Now you can take a rest</a>, for beating the game.</p>
-<p>In this we want to make sure the player went through all levels to beat the game in order to earn the achievement. If the player uses a save state to go directly to the last stage and finish it, the achievement won't pop up.</p>
-<p><strong>Addresses</strong></p>
-<ul>
-<li><code>0x06e9</code>: level ID. From 0 to 8 and 8 means "finished the game".</li>
-</ul>
-<p><img alt="greatjob-zoomingsecretary" src="https://user-images.githubusercontent.com/8508804/33465179-6fe458ac-d62d-11e7-8e9a-7be17c73a7a8.png" /></p>
-<p><strong>Conditions</strong></p>
-<ol>
-<li>In the "game finished level".</li>
-<li>The level was increased 8 times.</li>
-<li>Reset the counter if the level decreases.</li>
-</ol>
-<p>As this game has 8 levels, the value in the level ID address must be increased 8 times to beat the game. This way a player can't just start the game, load a state to go directly to the last level and then beat the game. He/she needs to go through all levels.</p>
-<p>The <code>ResetIf</code> is here just to avoid the case where the player keep loading states going back and forth between levels making the hit counter to be 8. If he/she loads a state going to a lower level, the hit counter goes to zero.</p>
-<hr />
-<p><em>NOTE:</em> Load State abuse is currently only an issue in RetroArch. In the standalone emulators, the hit counts are persisted with the save state, so they can't be arbitrarily manipulated as described below. In both RetroArch and the standalone emulators, save states cannot be loaded in hardcore, which further limits the impact of abuse. If your achievement misfires when using load states, we won't hold it against you but you may receive tickets. Just be aware of the problem and if you can attribute the failure to using load states and confirm the user was using load states, you can close the ticket with "Another Reason" and detail why you believe its related to using load states.</p>
-<p>Applying a solution similar to the one above also protects against cheat codes or passwords where the user might skip right to the last level. Use your best judgment when deciding how much effort you want to apply in adding logic like this to your sets. It's much more important that the set functions appropriately in hardcore mode (where you cannot load states). You should still protect against cheat codes, passwords, and in-game saves.</p>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+                <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-05-21 07:44] meleu:</code> Destroyed Simple Example of How to Avoid Load State Abusing (markdown)</li>
 <li><code>[2020-10-28 23:25] meleu:</code> moved the warning to the bottom</li>
 <li><code>[2020-04-24 16:36] Jamiras:</code> add note suggesting this shouldn't be something devs get too hung up on</li>
 <li><code>[2019-03-13 19:03] Keltron3030:</code> Document may be deprecated.</li>
