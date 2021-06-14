@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Rich-Presence/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -46,6 +46,8 @@
     
     
       
+
+
     
     
   </head>
@@ -1274,13 +1276,6 @@
         <li class="md-nav__item">
   <a href="#limits" class="md-nav__link">
     Limits
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax-details" class="md-nav__link">
-    Syntax Details
   </a>
   
 </li>
@@ -2615,13 +2610,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntax-details" class="md-nav__link">
-    Syntax Details
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tips-and-tricks" class="md-nav__link">
     Tips and Tricks
   </a>
@@ -2759,30 +2747,40 @@ Display:
 <h2 id="lookups">Lookups<a class="headerlink" href="#lookups" title="Permanent link">link</a></h2>
 <p>Lookups are defined like this: </p>
 <pre><code>Lookup:NameOfLookup
-Value1=Text When This Value
-Value2=Text When Another Value
+1=Text When 1
+2=Text When 2
 ...
 </code></pre>
-<p>We give the Lookup a value, consisting of a series of memory addresses and modifiers. More about this later. </p>
+<p>When a Display string references a Lookup, it's Value will be located in the table and the associated text will be displayed.</p>
+<p><strong>NOTE</strong>: Values in the Lookup should be in decimal. If you want to use hex values, include a <code>0x</code> prefix. (i.e. <code>0x12=Eighteen</code>)</p>
+<p>You can also specify multiple values for a single text string:</p>
+<pre><code>1-5,10=Text When These Values
+*=Text For All Other Values
+</code></pre>
+<p>In this example, the values 1, 2, 3, 4, 5, and 10 all map to the first text string.</p>
+<p>Anything that doesn't match an item defined in the lookup table will return the text associated with <code>*</code>. If <code>*</code> does not appear in the lookup table, no text will be returned if a value doesn't have an entry.</p>
 <h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">link</a></h2>
 <p>Format tables are defined like this:</p>
 <pre><code>Format:Score
 FormatType=VALUE
 </code></pre>
-<p>Begin with <code>Format:</code>, then the name of the format type. On the next line, give <code>FormatType=</code>, then one of the following: <code>VALUE</code>, <code>SCORE</code> (or <code>POINTS</code>), <code>TIME</code> (or <code>FRAMES</code>), <code>SECS</code>, <code>MILLISECS</code>, or <code>OTHER</code>. </p>
+<p>Begin with <code>Format:</code>, then the name of the Format converter. On the next line, give <code>FormatType=</code>, then one of the following:</p>
 <ul>
 <li><code>VALUE</code>: generic value, no leading zeroes. </li>
 <li><code>SCORE</code>/<code>POINTS</code>: generic value, padded with leading 0s to 6 digits.</li>
-<li><code>TIME</code>/<code>FRAMES</code>: value describes the number of frames elapsed, and will be turned into 00:00.00 </li>
-<li><code>SECS</code>: value describes the number of seconds elapsed, and will be turned into 00:00 </li>
+<li><code>TIME</code>/<code>FRAMES</code>: value describes the number of frames elapsed, and will be turned into 00:00.00 by multiplying by 100 (hundredths of a second) and dividing by 60 (frames per second). If your system runs at something other than 60 fps, you'll have to do the conversion yourself and use <code>MILLISECS</code>.</li>
 <li><code>MILLISECS</code>: value describes the number of hundredths of a second elapsed, and will be turned into 00:00.00 </li>
+<li><code>SECS</code>: value describes the number of seconds elapsed, and will be turned into 00:00 </li>
 <li><code>MINUTES</code>: value describes the number of minutes elapsed, and will be turned into 0h00</li>
 <li><code>SECS_AS_MINS</code>: value describes the number of seconds elapsed, and will be turned into 0h00</li>
 </ul>
 <h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link">link</a></h2>
-<p>Display will be a string that gets shown in the 'Active Players' box on the front page. It refers to the previously defined Lookup and Format objects using a single '@'. It then specifies a name for the lookup or format (case sensitive!), and immediately after, in brackets, a series of memory values specifying what to send to that lookup or format object.</p>
-<p><code>@Powerup(0xh756)</code> </p>
-<p>This means use the Lookup or Format that's called <code>Powerup</code>, and give it whatever value is in 0xh756. </p>
+<p>Display is a string that gets shown in the 'Active Players' box on the front page and the 'Last Seen In' section of the player's profile.</p>
+<p>It is built by replacing any macros in the display string with text from a Lookup or formatted values from a Format converter. Each macro is identified by a single '@', which is followed by the name for the Lookup or Format (case sensitive!), and immediately after, in parenthesis, a value specifying what to send to that Lookup or Format object.</p>
+<p><code>Using @Powerup(0xh756)!</code> </p>
+<p>This means use the Lookup or Format that's called <code>Powerup</code>, and give it whatever 8-bit value is in the address 0x756. After converting, put the result in between "Using " and "!".</p>
+<p><strong>NOTE</strong>: Lookup/Format names are case sensitive and must exactly match the usage in the Display string: <code>@test(0x1234)</code> will not find <code>Format:Test</code></p>
+<p><strong>NOTE</strong>: Lookup/Format definitions cannot contain spaces before or after the name. <code>@test(0x1234)</code> will not find <code>Format:test</code> or <code>Format:   test</code></p>
 <h3 id="example-lookup-breakdown">Example Lookup Breakdown<a class="headerlink" href="#example-lookup-breakdown" title="Permanent link">link</a></h3>
 <ul>
 <li><code>@Mode(0xh770)</code> - Lookup for the address that shows if the game is in demo mode or a world has been completed.  </li>
@@ -2926,6 +2924,7 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 <p>if the 8-bit value at $1234 is 32 <em>and</em> the 8-bit value at $5678 is 33 <em>and</em> the 8-bit value at $2345 is 1 <em>or</em> 2, display <code>and/or example</code></p>
 </li>
 </ul>
+<p><strong>Pro-tip:</strong> Conditions can be created using the <a href="../Achievement-Logic-Features/">achievement editor</a>. Once you have your condition defined, use the <code>Copy Def</code> button to copy the achievement definition to the clipboard so you can paste it into the rich presence script.</p>
 <h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)<a class="headerlink" href="#binary-coded-decimal-bcd" title="Permanent link">link</a></h2>
 <p>BCD is when the values are store in an address from as 0-9 (one digit) or 0-99 (two digits). Keep in mind that most often values are stored in hexidecimal, but sometime games will store them in this way and here's the best way to handle these addresses in your display.</p>
 <p>BCD decoding treats each hex character as a decimal digit. If the memory inspector shows 86 (in hex), the result of BCD decoding the value would be 86 (in decimal).</p>
@@ -2939,40 +2938,24 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li>255 character limit for what is displayed  </li>
 <li>Unicode characters are allowed, some use more characters than 1</li>
 </ul>
-<h2 id="syntax-details">Syntax Details<a class="headerlink" href="#syntax-details" title="Permanent link">link</a></h2>
-<ul>
-<li>Lookup keys are decimal by default and hex if you place the prefix of <code>0x</code>. This mean <code>1</code> == <code>0x1</code>, <code>2</code> == <code>0x2</code>, <code>9</code> == <code>0x9</code>, <code>10</code> == <code>0xa</code>, <code>100</code> == <code>0x64</code>, etc.  </li>
-<li>Lookup/Format names are case specific and must exactly match the usage in the Display string: <code>@test(0x1234)</code> will not find "Format:Test"</li>
-<li>Lookup/Format cannot contain spaces before or after the lookup name. <code>@test(0x1234)</code> will not find "Format:test   " or "Format:   test"</li>
-<li>If your Lookup/Format cannot be found, nothing will be displayed. <code>This is a @test(0x1234).</code> will result in <code>This is a .</code> if <code>test</code> cannot be found.</li>
-<li>Comments can be added anywhere in the script. A double slash (<code>//</code>) indicates the remaining portion of the line should be ignored when processing the script. Note: comments still apply toward the script size limit.</li>
-</ul>
 <h2 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">link</a></h2>
 <ul>
+<li>Comments can be added anywhere in the script. A double slash (<code>//</code>) indicates the remaining portion of the line should be ignored when processing the script. Note: comments still apply toward the script size limit.</li>
 <li>Lookup names can be as short as a single character if you need to squeeze in a few extra characters.</li>
 <li>Leading zeros can be removed from addresses (<code>0xh0001</code> can be shortened to <code>0xh1</code>).</li>
 <li>Turning all your values from hex into decimal will take up less characters.</li>
 <li>Unicode characters don't always "take up less space" they often take up to four system characters.</li>
-<li>If a lookup doesn't contain a mapping for a value, it will result in a blank (no space) value. You can change this behavior by adding a single line to the lookup mapping '*' to the desired fallback value.</li>
 <li>Each <code>Lookup</code> or <code>Format</code> named mapping can be referenced multiple times with the same or different addresses. You can define a single <code>Format:Number FormatType=VALUE</code> instead of defining individual ones for Lives, Score, Level, etc.</li>
-<li>Putting spaces in your lookups sometimes before or after can allow you to hide certain lookups when they are not needed, like how <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, and @Mode do. </li>
+<li>Putting spaces in your Lookups sometimes before or after can allow you to hide certain lookups when they are not needed, like how <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, and @Mode do. </li>
 </ul>
 <h3 id="value-properties">Value Properties<a class="headerlink" href="#value-properties" title="Permanent link">link</a></h3>
-<p>When using lookup and format objects <code>@object()</code> it's possible to combine and perform calculations. This can be used to correctly display a score, in game time, etc. or make more advanced lookups.</p>
+<p>When using lookup and format objects <code>@object()</code> it's possible to combine and perform calculations. Macro values support everything that <a href="../Leaderboards/#value">leaderboard values</a> support, so you can use multiplication, addition, and even some logic to generate values that aren't directly available in memory.</p>
 <p><strong>Example</strong>
-<code>@Score(0x28*10_0x29*1000_0x26*100000) points</code> </p>
+<code>@Score(0xh28*10_0xh29*1000_0xh26*100000) points</code> </p>
 <p>This means use the Lookup or Format <code>Score</code>, and give it the sum of:<br />
-- 0x28 times 10, ADD<br />
-- 0x29 times 1000, ADD<br />
-- 0x26 times 100000  </p>
-<ul>
-<li><code>_</code> adds the addresses together.  </li>
-<li>Or you can add a static value <code>0x28_v10</code>. This adds 10 to your total, as in whatever the value of <code>0x28</code> + 10 will be displayed. You can also subtract <code>0x28_v-10.</code>  </li>
-<li>If you'd like to subtract an address you need to multiply the address by -1. <code>0x29*-1</code>. <code>0x29</code> is now negative.  </li>
-<li>If you'd like to perform division you'll need to multiply by a decimal.  <code>0x26*.5</code>. <code>0x26</code> will output 1/2 of the value at <code>0x26</code>.  </li>
-<li>And you can string everything together: <code>0x28*10_0x29*-1_0x26*.625_v-10</code>.</li>
-<li>You can also add addresses together to give you lookups based on the sums of various addresses. This is used in the example in @Star. It's looking up sum the 6 lowest bits of the address 0xh79f. The way this address works is that so long as there is a value there Mario is invincible star mario and it counts down from hex value 0x23 (35 decimal) to 0. 23 in binary is 0010 0011 meaning the max sum of these bits could 5 during 0001 1111 when the count down reaches hex value 0x1f (31 decimal).</li>
-</ul>
+- the 8-bit value at 0x28 times 10, ADD<br />
+- the 8-bit value at 0x29 times 1000, ADD<br />
+- the 8-bit value at 0x26 times 100000  </p>
 <h2 id="unicode-standard-symbols">Unicode Standard Symbols<a class="headerlink" href="#unicode-standard-symbols" title="Permanent link">link</a></h2>
 <p>You can without doubt use these symbols in rich presence.</p>
 <p>▌▌=Paused<br />
@@ -3039,6 +3022,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-06-08 10:38] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-02-22 13:06] SporyTike:</code> Updated limits which were pretty outdated</li>
 <li><code>[2020-09-16 12:37] meleu:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2020-04-11 19:06] SporyTike:</code> Added Parse error -20 and how to fix Unknown Macro displayed when deving local</li>
@@ -3048,7 +3032,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2019-08-18 05:52] smuckola:</code> a missing letter</li>
 <li><code>[2019-07-10 19:01] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2019-05-24 20:01] meleu:</code> fix link to Alt Groups doc</li>
-<li><code>[2019-04-22 20:30] Kvon:</code> minor change related to last edit</li>
 </ul>
                 
               
@@ -3068,7 +3051,8 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../Leaderboards/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../Leaderboards/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Leaderboards" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3083,7 +3067,8 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
         </a>
       
       
-        <a href="../Working-with-the-Right-ROM/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../Working-with-the-Right-ROM/" class="md-footer__link md-footer__link--next" aria-label="Next: Working with the Right ROM" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -3149,10 +3134,10 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
