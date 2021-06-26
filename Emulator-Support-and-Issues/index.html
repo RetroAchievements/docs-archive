@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Emulator-Support-and-Issues/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -2781,11 +2781,11 @@
 </tr>
 <tr>
 <td>29</td>
-<td>MSX</td>
+<td>MSX/MSX2</td>
 <td></td>
 <td>blueMSX</td>
 <td>Yes</td>
-<td>• Hash relies on dsk file not being modified</td>
+<td>• Hash relies on dsk file not being modified<br>• .DSK files appear to be unsupported if they also require a cartridge (typically a "sound" cartridge, which was the case with SD Snatcher). There is a core option for this, but it doesn't seem to function properly.</td>
 </tr>
 <tr>
 <td>33</td>
@@ -3327,6 +3327,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-06-25 23:05] televandalist:</code> Added MSX2 to console ID 29 + added note about DSK files.</li>
 <li><code>[2021-05-19 11:40] televandalist:</code> Added PC-6001 to consoles with no console ID. Added note about PC-88VA for RAQUASI88</li>
 <li><code>[2021-05-19 11:32] televandalist:</code> Delete PC-6001 from list of consoles for RAQUASI88</li>
 <li><code>[2021-04-26 07:56] Sanaki:</code> Cleanups, new info, corrected core names, etc.</li>
@@ -3336,7 +3337,6 @@
 <li><code>[2021-03-31 01:59] televandalist:</code> Includes recent console ID additions. Moves Intellivision to the supported group. Adds New Emulator Checklist.</li>
 <li><code>[2021-03-24 05:31] televandalist:</code> Correction: Tomson TO8 -&gt; Thomson TO8</li>
 <li><code>[2020-12-05 05:05] televandalist:</code> Quick update to FB Neo issues.</li>
-<li><code>[2020-11-17 22:03] Jamiras:</code> how to handle multi-disk c64 games without an m3u?</li>
 </ul>
                 
               
@@ -3439,10 +3439,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
