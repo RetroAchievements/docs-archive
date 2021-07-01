@@ -2431,14 +2431,16 @@
                 <p><code>Trigger</code> marks one or more conditions in an achievement as the logic that is expected to be the final logic to become true which causes the achievement to trigger. This allows the runtime to know when an achievement is about to trigger, so a challenge indicator can be shown on the screen.</p>
 <p>When all conditions that must be true for the achievement to trigger are true except those marked with the <code>Trigger</code> flag, the achievement will become Primed. It will remain Primed as long as all of the previous conditions remain true, or until the achievement triggers or is deactivated.</p>
 <p>This functionality allows putting indicators on the screen to help players know when a challenge is active, or more importantly, when they fail the challenge. </p>
-<p>A prime example would be for a damageless boss fight. The <code>Trigger</code> flag would be put on the "boss is dead" condition. When all other conditions are true (in boss fight, boss at full hp (<a href="../Hit-Counts/">HitCount</a> 1), not demo), the challenge indicator would be displayed. If the player takes damage, the HitCount on the "boss at full hp" condition would get reset, and the challenge indicator would go away.</p>
+<p>A prime example would be for a damageless boss fight. The <code>Trigger</code> flag would be put on the "boss is dead" condition. When all other conditions are true (ex: in boss fight, boss at full hp (<a href="../Hit-Counts/">HitCount</a> 1), not demo), the challenge indicator would be displayed. If the player takes damage, the HitCount on the "boss at full hp" condition would get reset, and the challenge indicator would go away.</p>
+<p>Up to eight challenge indicators can be shown at one time (though rarely more than one or two should be). If indicators and leaderboard trackers are both visible, the tracker will appear above the indicators.</p>
 <h3 id="interaction-with-pauseif">Interaction with PauseIf<a class="headerlink" href="#interaction-with-pauseif" title="Permanent link">link</a></h3>
-<p>If the achievement is Paused while Primed, the indicator will remain on screen even if the other non-Trigger conditions become false.</p>
-<p>If it is Paused before it is Primed, the indicator will not be shown until the achievement in unpaused.</p>
+<p>If the achievement is Paused while Primed, the indicator will become hidden.</p>
+<p>If it is Paused before it is Primed, the indicator will not be shown at all until the achievement is unpaused.</p>
 <p>When the achievement becomes unpaused, the indicator may be displayed or hidden depending on the state of the non-Trigger conditions.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-06-29 08:18] Chris:</code> update interaction w/ pauseif to latest (0.79.2) integration</li>
 <li><code>[2021-04-30 12:07] Jamiras:</code> Created Trigger Flag (markdown)</li>
 </ul>
                 
