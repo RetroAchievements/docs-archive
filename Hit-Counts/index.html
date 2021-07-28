@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Hit-Counts/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
         
           
           
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changelog" class="md-skip">
+        <a href="#effect-of-resetting-the-emulator" class="md-skip">
           Skip to content
         </a>
       
@@ -116,14 +116,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -760,6 +764,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effect-of-resetting-the-emulator" class="md-nav__link">
+    Effect of Resetting the Emulator
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
@@ -2387,6 +2398,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#effect-of-resetting-the-emulator" class="md-nav__link">
+    Effect of Resetting the Emulator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
     Changelog
   </a>
@@ -2412,8 +2430,8 @@
                 
                   <h1>Hit Counts</h1>
                 
-                <p>In the Achievement Editor, the field on the far right side is Hit Count.
-<img alt="image" src="https://user-images.githubusercontent.com/32706333/48969526-38774c80-efbd-11e8-98ec-9d6c16dba022.png" /></p>
+                <p>In the Achievement Editor, the field on the far right side is Hit Count.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/32706333/48969526-38774c80-efbd-11e8-98ec-9d6c16dba022.png" /></p>
 <p>The default is Zero, which means the condition must be true for the achievement to trigger.</p>
 <p>If you set a target hit count, like 5, it means the condition must be true for at least that many frames, and once that hit count target is met, it doesn't need to be met again at any other time.</p>
 <p><strong>PLEASE NOTE</strong>: if a condition has a non-zero hit count, and reaches the number required, this condition is no longer tested. It  remains true, <strong>UNLESS</strong> you have a <a href="../ResetIf-Flag/"><code>ResetIf</code></a>, which we will discuss below.</p>
@@ -2424,9 +2442,15 @@
 <li><a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/">Using Delta Values and Hit Counts to Detect an Increment</a></li>
 <li><a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/">Simple Example of How to Avoid Load State Abusing</a></li>
 </ul>
+<h3 id="effect-of-resetting-the-emulator">Effect of Resetting the Emulator<a class="headerlink" href="#effect-of-resetting-the-emulator" title="Permanent link">link</a></h3>
+<p>When the emulator is reset, all hits are immediately zeroed out and the achievement is set back to Waiting. However, an emulator reset does not clear out memory, so it's possible for the hits to reaccumulate before the game reinitializes the memory. As such, you should not rely on the hits being cleared out by the emulator reset.</p>
+<p>Similarly, when the emulator first "powers on", the state of memory is not guaranteed to be consistent as true hardware does not initialize its memory. Instead, the software sets some initial state when it claims portions of memory. Some games actually rely on the random nature of the uninitialized memory to seed their random number generators.</p>
+<p>For both cases, you should have an explicit reset for some piece of knowable logic, like the player being on the title screen.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-07-17 07:27] Jamiras:</code> Updated Hit Counts (markdown)</li>
+<li><code>[2021-07-17 07:27] Jamiras:</code> add section detailing behavior at reset/power on</li>
 <li><code>[2019-02-18 17:01] meleu:</code> fix broken links</li>
 <li><code>[2019-02-12 13:10] meleu:</code> fix broken links</li>
 <li><code>[2019-02-12 09:23] meleu:</code> Updated Hit Counts (markdown)</li>
@@ -2533,10 +2557,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
