@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/PauseIf-Flag/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
@@ -2432,15 +2432,17 @@
                 
                   <h1>PauseIf Flag</h1>
                 
-                <p>The <code>PauseIf</code> can be chosen in the Flag column of the Achievement Editor</p>
-<p>While true, the <code>PauseIf</code> pauses activity for all conditions <strong>in the same group</strong>. It <em>does not</em> pause conditions in other groups (more about <a href="../Alt-Groups/">Alt Groups</a> below).</p>
-<p><strong>Note</strong>: keep in mind that <em>all conditions</em> in the sentence above includes <code>ResetIf</code> conditions! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active</strong>.</p>
-<p>The <code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like pausing the game). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
+                <p>The <code>PauseIf</code> can be chosen in the Flag column of the Achievement Editor.</p>
+<p>While true, the <code>PauseIf</code> pauses activity for most conditions <strong>in the same group</strong>. It <em>does not</em> pause conditions in other groups (more about <a href="../Alt-Groups/">Alt Groups</a> below).</p>
+<p><strong>Note</strong>: Keep in mind that <code>PauseIf</code> has priority over a <code>ResetIf</code> condition! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active in the same group</strong>.</p>
+<p>The <code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like when the game is paused). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
+<p><strong>Also Note</strong>: A <code>ResetNextIf</code> condition attached to the active <code>PauseIf</code> condition is <em>not</em> paused. However, a <code>ResetNextIf</code> outside of the active <code>PauseIf</code> does get paused. This is the only case where a condition inside a paused group can still work. <code>ResetNextIf</code> attached to a <code>PauseIf</code> is useful for resetting a <code>PauseIf</code> with hit counts (see below) to unpause a group without resetting hit counts elsewhere in the group.</p>
 <h2 id="pauseif-with-hit-counts"><code>PauseIf</code> with hit counts<a class="headerlink" href="#pauseif-with-hit-counts" title="Permanent link">link</a></h2>
-<p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused until a <code>ResetIf</code> condition in <em>another</em> group is true</strong> or until the game is reset. A <code>PauseIf</code> without a hit count will unpause when the condition is no longer true.</p>
+<p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused until a <code>ResetNextIf</code> condition attached to the active <code>PauseIf</code> condition is true</strong>, or <strong>until a <code>ResetIf</code> condition in <em>another</em> group is true</strong>, or until the game is reset. A <code>PauseIf</code> without a hit count will unpause when the condition is no longer true.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-08-07 17:00] Dimedime:</code> updated interaction with ResetNextIf</li>
 <li><code>[2019-02-12 13:13] meleu:</code> typo</li>
 <li><code>[2019-02-12 13:13] meleu:</code> fix broken link</li>
 <li><code>[2019-02-12 09:36] meleu:</code> Updated PauseIf (markdown)</li>
@@ -2546,10 +2548,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
       
     
   </body>

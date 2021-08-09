@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/AddAddress-Flag/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
@@ -2487,7 +2487,11 @@
            8-bit  Mem 0x4567
 </code></pre>
 <p>Would read a 16-bit number from 0x1234 and read the single byte that is that many bytes after 0x4567.</p>
-<p>NOTE: <em>Scaling an array index is not currently supported</em>. The intent is that the first line would become <code>AddAddress 16-bit Mem 0x1234 * 4</code> to indicate that each time 0x1234 is incremented by 1, the offset past 0x4567 would be incremented by 4. Attempting to call <code>AddAddress</code> four times to simulate the multiplication won't work because each line of the chain is a separate lookup.</p>
+<p>To scale an array index, click on the space in the Cmp column for the array index address and select the <code>*</code> symbol. Then enter the size of each array item in the second mem/val column. For example:</p>
+<pre><code>AddAddress 16-bit Mem 0x1234 * Value 4
+           8-bit  Mem 0x4567
+</code></pre>
+<p>Would read a 16-bit number from 0x1234, multiply it by 4, and read the single byte that is that many bytes after 0x4567.</p>
 <h2 id="chaining-pointers">Chaining Pointers<a class="headerlink" href="#chaining-pointers" title="Permanent link">link</a></h2>
 <p><code>AddAddress</code> can be chained to perform multi-step lookups, but only one step at a time. As such, you can reference data pointed at by a pointer that's pointed at by another pointer, but you can't reference data in an array that's pointed at by another pointer unless either the array or the array index is at a fixed address.</p>
 <h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">link</a></h2>
@@ -2496,6 +2500,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-08-08 18:59] Jamiras:</code> update for scaled array index support</li>
 <li><code>[2020-08-05 02:06] meleu:</code> cosmetic</li>
 <li><code>[2020-08-05 01:58] meleu:</code> add link to wilhitewarrio's video tutorial</li>
 <li><code>[2019-11-17 22:18] meleu:</code> fix markdown formats</li>
@@ -2603,10 +2608,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
       
     
   </body>
