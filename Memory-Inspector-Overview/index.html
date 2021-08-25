@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Memory-Inspector-Overview/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.be71726b.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -2712,12 +2712,14 @@
 <h3 id="2-filter">2. Filter<a class="headerlink" href="#2-filter" title="Permanent link">link</a></h3>
 <p>Filters the memory state in an attempt to locate a specific memory address.</p>
 <p>The first drop down allows you to specify the comparison to use. The second drop down is what you're comparing against. Most of the time you're going to be filtering on <code>!= Last Value</code>, which eliminates any results where the memory has changed.</p>
-<p>The available comparisons are:
-* <code>Constant</code> - comparison is made against the value entered in the field below the drop down.
-* <code>Last Value</code> - comparison is made against the value captured by the last applied filter, or the initial value if no filter has been applied
-* <code>Last Value Plus</code> - comparison is made against the Last Value plus the value entered in the field below the drop down. If the value were 3, the comparison would me made against a number which is three higher than the Last Value for each value captured by the last applied filter.
-* <code>Last Value Minus</code> - the same as Last Value Plus, except the value entered in the field below the drop down is subtracted from each value captured by the last applied filter.
-* <code>Initial Value</code> - comparison is made against the value captured when the New Search was begun.</p>
+<p>The available comparisons are:</p>
+<ul>
+<li><code>Constant</code> - comparison is made against the value entered in the field below the drop down.</li>
+<li><code>Last Value</code> - comparison is made against the value captured by the last applied filter, or the initial value if no filter has been applied</li>
+<li><code>Last Value Plus</code> - comparison is made against the Last Value plus the value entered in the field below the drop down. If the value were 3, the comparison would me made against a number which is three higher than the Last Value for each value captured by the last applied filter.</li>
+<li><code>Last Value Minus</code> - the same as Last Value Plus, except the value entered in the field below the drop down is subtracted from each value captured by the last applied filter.</li>
+<li><code>Initial Value</code> - comparison is made against the value captured when the New Search was begun.</li>
+</ul>
 <p>The <code>Filter Once</code> button immediately applies the selected filter and updates the Results.</p>
 <p>The <code>Continuous Filter</code> button applies the selected filter repeatedly until stopped. The fewer the results, the more frequently the filter is applied. The filter is only applied once every N ms, where N is the number of results / 1000. If there are less than 1000 results, it's applied every frame. If there are 50000 results, it's applied every 500ms (twice a second). If there are 1000000 results, it's only applied every 10 seconds.</p>
 <h3 id="3-results">3. Results<a class="headerlink" href="#3-results" title="Permanent link">link</a></h3>
@@ -2726,11 +2728,13 @@
 <p>Below the result information are two buttons. The first allows you to manually remove the selected items from the result set. You can use Ctrl and Shift to select multiple items. The second lets you create a bookmark for an item in the result set. It will appear in the Bookmarks dialog.</p>
 <p><img alt="memoryinspector-filter jpg" src="https://user-images.githubusercontent.com/32680403/82170020-7f779280-9880-11ea-84aa-ab2435f294e2.png" /></p>
 <p>The items in the result set show the address of the match, the current value, and a brief description of the memory at the address. If a code note exists for the address, it will be shown. Otherwise, a general classification of the address will be shown.</p>
-<p>Additionally, items in the result set can be colored. 
-* Red - the item does not currently match the filter
-* Grey - the item does currently match the filter, but at some point since the filter was applied it did not match.
-* Green - the item is bookmarked
-* Blue - the item has a code note</p>
+<p>Additionally, items in the result set can be colored.</p>
+<ul>
+<li>Red - the item does not currently match the filter</li>
+<li>Grey - the item does currently match the filter, but at some point since the filter was applied it did not match.</li>
+<li>Green - the item is bookmarked</li>
+<li>Blue - the item has a code note</li>
+</ul>
 <p>Clicking on a row will set the selected address to the associated item.</p>
 <h3 id="4-code-notes">4. Code Notes<a class="headerlink" href="#4-code-notes" title="Permanent link">link</a></h3>
 <p>Provides detailed information about the selected address, and allows the user to annotate addresses found by the search process. Try to keep your descriptions simple and clear, so they can be easily understood. Clear notes are important for debugging if a problem with an achievement occurs.</p>
@@ -2913,6 +2917,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-08-25 19:10] meleu:</code> fix markdown format</li>
 <li><code>[2020-06-11 07:34] Jamiras:</code> add details about Continuous Filter backoff algorithm</li>
 <li><code>[2020-05-17 21:48] Jamiras:</code> update for new memory inspector dialog</li>
 <li><code>[2019-03-14 00:37] Keltron3030:</code> Updated Memory Inspector Overview (markdown)</li>
@@ -2922,7 +2927,6 @@
 <li><code>[2019-02-14 21:44] meleu:</code> test</li>
 <li><code>[2019-02-12 08:50] meleu:</code> removed "bit switch" title, as unnecessary</li>
 <li><code>[2019-02-12 08:48] meleu:</code> reducing verbosity in "single bits"</li>
-<li><code>[2019-02-12 08:14] meleu:</code> fix broken links</li>
 </ul>
                 
               
@@ -3025,10 +3029,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../assets/javascripts/bundle.56a63758.min.js"></script>
       
     
   </body>
