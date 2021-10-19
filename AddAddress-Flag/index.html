@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/AddAddress-Flag/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1041,6 +1041,19 @@
   <a href="#chaining-pointers" class="md-nav__link">
     Chaining Pointers
   </a>
+  
+    <nav class="md-nav" aria-label="Chaining Pointers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-delta-with-chained-pointers" class="md-nav__link">
+    Using Delta with Chained Pointers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2798,6 +2811,19 @@
     Chaining Pointers
   </a>
   
+    <nav class="md-nav" aria-label="Chaining Pointers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-delta-with-chained-pointers" class="md-nav__link">
+    Using Delta with Chained Pointers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2867,12 +2893,35 @@
 <p>Would read a 16-bit number from 0x1234, multiply it by 4, and read the single byte that is that many bytes after 0x4567.</p>
 <h2 id="chaining-pointers">Chaining Pointers<a class="headerlink" href="#chaining-pointers" title="Permanent link">link</a></h2>
 <p><code>AddAddress</code> can be chained to perform multi-step lookups, but only one step at a time. As such, you can reference data pointed at by a pointer that's pointed at by another pointer, but you can't reference data in an array that's pointed at by another pointer unless either the array or the array index is at a fixed address.</p>
+<h4 id="using-delta-with-chained-pointers">Using Delta with Chained Pointers<a class="headerlink" href="#using-delta-with-chained-pointers" title="Permanent link">link</a></h4>
+<p>To do a delta check on an <code>AddAddress</code> chain, you should only put the delta on the final condition. You want to use the current value for each step of the chain to derive the final result, and you only care about the changes in the final value. Using previous values for the pointers will have you reading invalid memory and will likely cause problems.</p>
+<pre><code>A) AddAddress Mem   0000
+B) AddAddress Mem   0000
+C)            Delta 0000
+</code></pre>
+<p>Assuming Mem: $0000=0, $0001=2, and $0002=4, this will evaluate to 0 for the first few frames, and when Mem 0 changes to 1, the following happens:</p>
+<pre><code>Frame N  : A = Mem[0] = 1 (delta[0] = 0), B = Mem[A] = Mem[1] = 2 (delta B = 0), C = Mem[B] = Mem[2] = 4 (delta C = 0)
+Frame N+1: A = Mem[0] = 1 (delta[0] = 1), B = Mem[A] = Mem[1] = 2 (delta B = 2), C = Mem[B] = Mem[2] = 4 (delta C = 4)
+</code></pre>
+<p>You can see the entire delta chain updates in the same frame (one frame after the change occurs).</p>
+<p>If you use Delta for A and B, something different happens:</p>
+<pre><code>A) AddAddress Delta 0000
+B) AddAddress Delta 0000
+C)            Delta 0000
+</code></pre>
+<pre><code>Frame N  : Mem[0] = 1 (delta[0] = 0), B = Mem[deltaA] = Mem[0] = 1 (delta B = 0), C = Mem[deltaB] = Mem[0] = 1 (delta C = 0)
+Frame N+1: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 1), C = Mem[deltaB] = Mem[1] = 2 (delta C = 1)
+Frame N+2: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 2), C = Mem[deltaB] = Mem[2] = 4 (delta C = 2)
+Frame N+3: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 2), C = Mem[deltaB] = Mem[2] = 4 (delta C = 4)
+</code></pre>
+<p>Not only does it take two extra frames for delta C to be correct, it has two intermediate values that are not correct. The value went from 0 to 4 in a single frame and never was 1 or 2. </p>
 <h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">link</a></h2>
 <p>The experienced achievement creator <a href="https://retroachievements.org/User/wilhitewarrior">wilhitewarrior</a> made a nice video showing how to work with pointers and AddAddress flag.</p>
 <p>You can check it here: <a href="https://www.youtube.com/watch?v=_gk0vYYlm-E">https://www.youtube.com/watch?v=_gk0vYYlm-E</a>.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-10-06 19:35] Jamiras:</code> Updated AddAddress Flag (markdown)</li>
 <li><code>[2021-08-08 18:59] Jamiras:</code> update for scaled array index support</li>
 <li><code>[2020-08-05 02:06] meleu:</code> cosmetic</li>
 <li><code>[2020-08-05 01:58] meleu:</code> add link to wilhitewarrio's video tutorial</li>
@@ -2983,10 +3032,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>

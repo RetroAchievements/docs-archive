@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Game-Identification/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1643,6 +1643,13 @@
           <li class="md-nav__item">
   <a href="#playstation-2" class="md-nav__link">
     PlayStation 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playstation-portable" class="md-nav__link">
+    PlayStation Portable
   </a>
   
 </li>
@@ -3285,6 +3292,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#playstation-portable" class="md-nav__link">
+    PlayStation Portable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sega-cd-sega-saturn" class="md-nav__link">
     Sega CD / Sega Saturn
   </a>
@@ -3409,6 +3423,11 @@
 * The primary executable name (and its path) are extracted from SYSTEM.CNF and written to a buffer.
 * The contents of the primary executable are appended to the buffer.
 * The buffer is hashed.</p>
+<h4 id="playstation-portable">PlayStation Portable<a class="headerlink" href="#playstation-portable" title="Permanent link">link</a></h4>
+<p>The disc metadata and primary executable are hashed as follows:
+* The contents of the PSP_GAME\PARAMS.SFO file are written to a buffer. This contains the game attributes displayed in the menu, including the name and serial.
+* The contents of the primary executable (PSP_GAME\SYSDIR\EBOOT.BIN) are appended to the buffer.
+* The buffer is hashed.</p>
 <h4 id="sega-cd-sega-saturn">Sega CD / Sega Saturn<a class="headerlink" href="#sega-cd-sega-saturn" title="Permanent link">link</a></h4>
 <p>The first 512 bytes of track 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be "SEGADISCSYSTEM  " for Sega CD or "SEGA SEGASATURN " for Sega Saturn. If not, discard as invalid.</p>
 <p>Immediately following those 512 bytes are an arbitrary amount of code that validates the region and loads the primary executable. Without processing the code, we cannot determine what additional file(s) to hash, so this was determined to be sufficient as an alternative to hashing the entire CD.</p>
@@ -3417,6 +3436,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-10-10 11:20] Jamiras:</code> add psp</li>
 <li><code>[2021-04-30 13:05] Jamiras:</code> Updated Game Identification (markdown)</li>
 <li><code>[2020-12-25 00:07] televandalist:</code> Corrected PC Engine CD name and fixed a minor grammatical error. :bomber:</li>
 <li><code>[2020-06-13 17:45] Jamiras:</code> add PC-FX</li>
@@ -3426,7 +3446,6 @@
 <li><code>[2020-05-06 13:22] meleu:</code> fix heading</li>
 <li><code>[2020-05-06 13:22] meleu:</code> group by hashing methods</li>
 <li><code>[2019-12-01 17:57] Jamiras:</code> more detail in DS hashing algorithm</li>
-<li><code>[2019-12-01 17:54] Jamiras:</code> document Nintendo DS hashing algorithm, add entries for Jaguar, WonderSwan, and Pokemon mini</li>
 </ul>
                 
               
@@ -3531,10 +3550,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
