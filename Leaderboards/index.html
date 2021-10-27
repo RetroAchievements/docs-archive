@@ -3132,12 +3132,13 @@
 <p>There is also a symbol which only works in this field. Connecting two value conditions with <code>$</code> will cause only the one with the highest value to be used.</p>
 <p>Many games use <a href="../Rich-Presence/#binary-coded-decimal-bcd">Binary Coded Decimal</a> to encode scores. You can have the runtime decode BCD values by putting a <code>b</code> prefix in front of the memory reference (i.e. <code>b0xW1234</code>)</p>
 <h4 id="value-from-measured">Value from Measured<a class="headerlink" href="#value-from-measured" title="Permanent link">link</a></h4>
-<p>Starting with the 0.77 DLL (and RetroArch 1.8.2), you can use the Measured flag to generate a Value. This supports all logic supported by the achievement editor, but every condition must have a flag that somehow influences the Measured value (i.e. AddSource, AddAddress).</p>
-<p><strong>VAL</strong>: <code>A:0xhfe24_A:0xhfe25*60_M:0xhfe22*3600</code></p>
+<p>Starting with the 0.77 DLL (and RetroArch 1.8.2), you can use the Measured flag to generate a Value. This supports all logic supported by the achievement editor, but every condition must have a flag that somehow influences the Measured value (i.e. AddSource, AddAddress). Note that the Measured condition cannot have a multiplier directly on it. If the final clause needs to be multiplied, use an additional AddSource and Measure 0.</p>
+<p><strong>VAL</strong>: <code>A:0xhfe24_A:0xhfe25*60_A:0xhfe22*3600_M:0</code></p>
 <p>The example provided above reads:</p>
 <pre><code>AddSource 8-bit 0xfe24
 AddSource 8-bit 0xfe25 * Value 60
-Measured  8-bit 0xfe22 * Value 3600
+AddSource 8-bit 0xfe22 * Value 3600
+Measured  Value 0
 </code></pre>
 <p>The addresses represent frames, seconds, and minutes respectively, and are individually multiplied and then added together to create a total number of frames that can be submitted to the database.</p>
 <h4 id="value-from-hitcount">Value from HitCount<a class="headerlink" href="#value-from-hitcount" title="Permanent link">link</a></h4>
@@ -3173,6 +3174,7 @@ Measured  8-bit 0xfe22 * Value 3600
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
 <li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
@@ -3182,7 +3184,6 @@ Measured  8-bit 0xfe22 * Value 3600
 <li><code>[2019-05-15 17:53] meleu:</code> recover</li>
 <li><code>[2019-05-15 10:21] eldexterr:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2018-11-20 07:41] Scott:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2018-11-20 07:39] Scott:</code> Updated Leaderboards (markdown)</li>
 </ul>
                 
               
