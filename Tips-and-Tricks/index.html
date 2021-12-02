@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Tips-and-Tricks/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ad626c1e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.816931ca.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
@@ -2906,7 +2906,7 @@
 <p><strong>16/32 bit view</strong>: remember that when working with 16 or 32 bit address the address to the right comes first. Example: if in 8bit it looks like <code>AB CD WX YZ</code>, in 16 bit it becomes <code>CDAB YZWX</code>. This is called "<a href="https://en.wikipedia.org/wiki/Endianness#Big-endian">big endian byte ordering</a>". You can safely ignore the geek-speak by just remembering things are stored <strong>backwards</strong> in 16 bit view and above.</p>
 </li>
 <li>
-<p><strong>Bit fields</strong>: Use single bits for things that only change a single bit. In the Memory Inspector, when an address is selected, there will be <code>Bits: 7 6 5 4 3 2 1 0</code> above the addresses. And below those numbers will be either <code>0</code> or <code>1</code>, like <code>0 0 1 0 0 0 1 1</code> in the image below. If <code>bit5</code> has <code>1</code> under it, then <code>bit3=1</code> for that address. Single bit usage is very common for game items/events/unlocks/etc. This may be confusing, but it's very important to understand. Some games with limited memory space use bit fields a lot! Its an important technique to learn.</p>
+<p><strong>Bit fields</strong>: Use single bits for things that only change a single bit. In the Memory Inspector, when an address is selected, there will be <code>Bits: 7 6 5 4 3 2 1 0</code> above the addresses. And below those numbers will be either <code>0</code> or <code>1</code>, like <code>0 0 1 0 0 0 1 1</code> in the image below. If <code>bit5</code> has <code>1</code> under it, then <code>bit5=1</code> for that address. Single bit usage is very common for game items/events/unlocks/etc. This may be confusing, but it's very important to understand. Some games with limited memory space use bit fields a lot! Its an important technique to learn.</p>
 </li>
 </ul>
 <p><img alt="memsizes" src="https://user-images.githubusercontent.com/32680403/45276439-8cbf6580-b47f-11e8-803c-7e7e391a9e55.png" /></p>
@@ -2980,6 +2980,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-11-30 18:30] SporyTike:</code> Typo that caused a jr-dev confusion. Bit5 = Bit5 and not Bit3</li>
 <li><code>[2019-08-13 19:42] Kvon:</code> Tips and Tricks: Text hooks tip added</li>
 <li><code>[2019-02-07 14:57] meleu:</code> decrease verbosity; add trick fo find demo mode; group tips and tricks more reasonably</li>
 <li><code>[2019-01-17 11:19] meleu:</code> removed the "Limitations" topic</li>
@@ -2989,7 +2990,6 @@
 <li><code>[2019-01-13 15:41] Raphaël Zumer:</code> Fix typos and reword a memory digging tip</li>
 <li><code>[2019-01-12 21:59] Kvon:</code> Added some demo finding tips and a trick for watching addresses</li>
 <li><code>[2018-09-09 20:52] Kvon:</code> moved rom selection onto it's own page</li>
-<li><code>[2018-09-01 12:48] Jamiras:</code> note about reset processing in 0.73</li>
 </ul>
 
               
@@ -3090,7 +3090,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.01824240.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e8a254df.min.js"></script>
+      <script src="../assets/javascripts/bundle.ff0eccb3.min.js"></script>
       
     
   </body>
