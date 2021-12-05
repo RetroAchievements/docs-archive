@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Rich-Presence/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.4">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a4617e2.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
@@ -45,7 +45,6 @@
     <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"..":".."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
-
 
     
     
@@ -3065,8 +3064,10 @@
 <p><img alt="Rich Presence Monitor" src="https://i.imgur.com/XkCZoLG.png" /></p>
 <p>The best way to understand Rich Presence is to look at various examples in game, look at the addresses used and look at how the text is displayed in the Rich Presence Monitor and on site.</p>
 <h3 id="how-does-it-work">How Does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">link</a></h3>
-<p>Every time a game is launched, it fetches the achievements in a 'patch' file for the ROM which details all the achievements and memory addresses (and leaderboards) that can be watched for. It will also request a Rich Presence Script for the currently loaded ROM. The emulator will report back to the website every 120 seconds. Similarly, every 120 seconds or so, the 'active players' box on the front page will refresh, detailing the last known activity of all active players. If there isn't a rich presence script given, the text will be 'earning achievements' if playing a game with achievements, 'playing [game]' if playing a game without achievements, or 'developing achievements' if the memory dialog is open and visible. </p>
-<p>The RPS for each game can be found under the development section on each game's page: </p>
+<p>The game's Rich Presence script is downloaded with the achievement and leaderboard data for a game. As soon as the emulator validates this data, it starts a session for the user. This sets the user's 'Last Seen In' to 'Playing [game]'. 30 seconds later, the Rich Presence script will be evaluated and the result sent to the server. This will update the 'Last Seen In' for the player, which is also used in the 'Active Players' list on the front page. Every two minutes after that, the Rich Presence script will be evaluated again, and the 'Last Seen In' will be updated again. This continues until the user closes the emulator.</p>
+<p>If there isn't a Rich Presence script for the game, the user has disabled rich presence, or the user has modified the Rich Presence script, the text will remain 'Playing [game]'.</p>
+<p>The user's 'Last Seen In' may also say 'Fixing Achievements' or 'Developing Achievements' if they have any of the tool windows open. The first will display if achievements have been published for the set. The second if achievements have not been published for the set.</p>
+<p>The Rich Presence script for a game can be found under the development section on each game's page: </p>
 <p><img alt="Dev click" src="https://i.imgur.com/sqxOjyL.png" /></p>
 <p><img alt="RP shown" src="https://i.imgur.com/e7qoaNx.png" /></p>
 <h2 id="example-super-mario-bros">Example (Super Mario Bros.)<a class="headerlink" href="#example-super-mario-bros" title="Permanent link">link</a></h2>
@@ -3397,6 +3398,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-12-04 07:33] Jamiras:</code> update rich 'how does it work' section</li>
 <li><code>[2021-10-03 07:30] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-06-08 10:38] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-02-22 13:06] SporyTike:</code> Updated limits which were pretty outdated</li>
@@ -3406,7 +3408,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2020-01-08 06:37] televandalist:</code> Added 24bit to the address sizes and table. Updated the 16,000 character limit to 65,000.</li>
 <li><code>[2019-11-16 07:29] Jamiras:</code> add MINUTES and SECS_AS_MINS formats; remove " points" from SCORE format</li>
 <li><code>[2019-08-18 05:52] smuckola:</code> a missing letter</li>
-<li><code>[2019-07-10 19:01] Jamiras:</code> Updated Rich Presence (markdown)</li>
 </ul>
 
               
@@ -3504,10 +3505,10 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.ca141e46.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../assets/javascripts/bundle.6baa0517.min.js"></script>
       
     
   </body>
