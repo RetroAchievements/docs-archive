@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Game-Identification/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2a4617e2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -42,7 +42,7 @@
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"..":".."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -1653,6 +1653,13 @@
           <li class="md-nav__item">
   <a href="#sega-cd-sega-saturn" class="md-nav__link">
     Sega CD / Sega Saturn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sega-dreamcast" class="md-nav__link">
+    Sega Dreamcast
   </a>
   
 </li>
@@ -3303,6 +3310,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sega-dreamcast" class="md-nav__link">
+    Sega Dreamcast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#snes" class="md-nav__link">
     SNES
   </a>
@@ -3426,13 +3440,19 @@
 * The contents of the primary executable (PSP_GAME\SYSDIR\EBOOT.BIN) are appended to the buffer.
 * The buffer is hashed.</p>
 <h4 id="sega-cd-sega-saturn">Sega CD / Sega Saturn<a class="headerlink" href="#sega-cd-sega-saturn" title="Permanent link">link</a></h4>
-<p>The first 512 bytes of track 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be "SEGADISCSYSTEM  " for Sega CD or "SEGA SEGASATURN " for Sega Saturn. If not, discard as invalid.</p>
+<p>The first 512 bytes of sector 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be "SEGADISCSYSTEM  " for Sega CD or "SEGA SEGASATURN " for Sega Saturn. If not, discard as invalid.</p>
 <p>Immediately following those 512 bytes are an arbitrary amount of code that validates the region and loads the primary executable. Without processing the code, we cannot determine what additional file(s) to hash, so this was determined to be sufficient as an alternative to hashing the entire CD.</p>
+<h4 id="sega-dreamcast">Sega Dreamcast<a class="headerlink" href="#sega-dreamcast" title="Permanent link">link</a></h4>
+<p>The disc metadata and primary executable are hashed as follows:
+* The first 512 bytes of sector 0 are appended to the buffer. This contains the volume header and ROM header. The first 16 bytes must be "SEGA SEGAKATANA ". If not, discard as invalid.
+* The contents of the primary executable (as identified by the volume header) are appended to the buffer.
+* The buffer is hashed.</p>
 <h4 id="snes">SNES<a class="headerlink" href="#snes" title="Permanent link">link</a></h4>
 <p>If the size of the file is 512 bytes more than a multiple of 8KB, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 8KB, the entire file is hashed.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2021-12-16 13:02] Jamiras:</code> add dreamcast</li>
 <li><code>[2021-10-10 11:20] Jamiras:</code> add psp</li>
 <li><code>[2021-04-30 13:05] Jamiras:</code> Updated Game Identification (markdown)</li>
 <li><code>[2020-12-25 00:07] televandalist:</code> Corrected PC Engine CD name and fixed a minor grammatical error. :bomber:</li>
@@ -3442,7 +3462,6 @@
 <li><code>[2020-05-06 19:52] meleu:</code> alphabetical order</li>
 <li><code>[2020-05-06 13:22] meleu:</code> fix heading</li>
 <li><code>[2020-05-06 13:22] meleu:</code> group by hashing methods</li>
-<li><code>[2019-12-01 17:57] Jamiras:</code> more detail in DS hashing algorithm</li>
 </ul>
 
               
@@ -3540,10 +3559,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.ca141e46.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.6baa0517.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
