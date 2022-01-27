@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Rich-Presence/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1535,6 +1535,74 @@
   
   
     <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        Achievements for ROM hacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets/" class="md-nav__link">
+        Bonus Set Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Supported Systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Supported Systems" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Systems
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        Console Specific Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Game-Identification/" class="md-nav__link">
         Game Identification
       </a>
@@ -1563,37 +1631,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bonus-Sets/" class="md-nav__link">
-        Bonus Set Guide
+      <a href="../libretro-core-support/" class="md-nav__link">
+        libretro core support
       </a>
     </li>
   
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
-        Achievements for ROM hacks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Console-Specific-Tips/" class="md-nav__link">
-        Console Specific Tips
-      </a>
+        </ul>
+      </nav>
     </li>
   
 
@@ -3162,10 +3209,10 @@ FormatType=VALUE
 <li><code>@Mode(0xh770)</code> - Lookup for the address that shows if the game is in demo mode or a world has been completed.  </li>
 <li><code>@Paused(0xh776)</code> - Lookup for the address that shows if the game is paused (3 values are used, two of them are for pausing and unpausing).  </li>
 <li><code>@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)</code> - Lookup for the address of if Mario has Star invincibility. More on this later.  </li>
-<li><code>@Powerup(0xh756)</code> - Lookup for the address that show if Mairo is Small, big or has fire power.  </li>
+<li><code>@Powerup(0xh756)</code> - Lookup for the address that show if Mario is Small, big or has fire power.  </li>
 <li><code>Mario in</code> - Static text to string lookup and format objects together.  </li>
-<li><code>@Digit(0xh75f_v1)</code> - <code>Digit</code> is a format object defined as a value. The address 0xh75f is the World minus 1 (because it it 0 based, as in it starts counting at 0). <code>_v1</code> Means + value 1. <code>_v+1</code> is also correct.  </li>
-<li><code>-</code> - More static text to split World and Level. as in the hypen in World 1-1.  </li>
+<li><code>@Digit(0xh75f_v1)</code> - <code>Digit</code> is a format object defined as a value. The address 0xh75f is the World minus 1 (because it is 0 based, as in it starts counting at 0). <code>_v1</code> Means + value 1. <code>_v+1</code> is also correct.  </li>
+<li><code>-</code> - More static text to split World and Level. as in the hyphen in World 1-1.  </li>
 <li><code>@Digit(0xh75c_v1)</code> - Another use of the <code>Digit</code> format object. This time It's looking up the stage. World 1-X.  </li>
 <li><code>@Swimming(0xh704)</code> - Lookup for the address that shows if the player is swimming.  </li>
 <li><code>@Status(0xhe)</code> - Lookup for the address that shows Mario's status, such as going through pipes.  </li>
@@ -3176,7 +3223,7 @@ FormatType=VALUE
 <li><code>Quest</code> - Static Text.  </li>
 </ul>
 <h3 id="address-size">Address size<a class="headerlink" href="#address-size" title="Permanent link">link</a></h3>
-<p>To specify what size of address you are are checking there are various characters used. (capitalization is ignored)</p>
+<p>To specify what size of address you are checking there are various characters used. (capitalization is ignored)</p>
 <ul>
 <li>A 16bit address is default and has no character designation. At 0x10 the address is two bytes - 16 bits.</li>
 <li>An 8bit address's character is <code>h</code> (or <code>H</code>). At 0xh10 the address is one byte - 8 bits. <code>xxxx xxxx</code>  </li>
@@ -3398,6 +3445,8 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-01-26 09:39] Shane Shirey:</code> Updated Rich Presence (markdown)</li>
+<li><code>[2022-01-26 09:38] Shane Shirey:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-12-04 07:33] Jamiras:</code> update rich 'how does it work' section</li>
 <li><code>[2021-10-03 07:30] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-06-08 10:38] Jamiras:</code> Updated Rich Presence (markdown)</li>
@@ -3406,8 +3455,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2020-04-11 19:06] SporyTike:</code> Added Parse error -20 and how to fix Unknown Macro displayed when deving local</li>
 <li><code>[2020-01-08 06:38] televandalist:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2020-01-08 06:37] televandalist:</code> Added 24bit to the address sizes and table. Updated the 16,000 character limit to 65,000.</li>
-<li><code>[2019-11-16 07:29] Jamiras:</code> add MINUTES and SECS_AS_MINS formats; remove " points" from SCORE format</li>
-<li><code>[2019-08-18 05:52] smuckola:</code> a missing letter</li>
 </ul>
 
               
@@ -3505,10 +3552,10 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>

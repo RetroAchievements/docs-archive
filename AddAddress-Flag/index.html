@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/AddAddress-Flag/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1054,6 +1054,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#calculating-your-offset" class="md-nav__link">
+    Calculating your offset
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculating your offset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#second-example" class="md-nav__link">
+    Second example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#video-tutorial" class="md-nav__link">
     Video Tutorial
   </a>
@@ -1437,6 +1457,74 @@
   
   
     <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        Achievements for ROM hacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets/" class="md-nav__link">
+        Bonus Set Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Supported Systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Supported Systems" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Systems
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        Console Specific Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Game-Identification/" class="md-nav__link">
         Game Identification
       </a>
@@ -1465,37 +1553,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bonus-Sets/" class="md-nav__link">
-        Bonus Set Guide
+      <a href="../libretro-core-support/" class="md-nav__link">
+        libretro core support
       </a>
     </li>
   
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
-        Achievements for ROM hacks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Console-Specific-Tips/" class="md-nav__link">
-        Console Specific Tips
-      </a>
+        </ul>
+      </nav>
     </li>
   
 
@@ -2824,6 +2891,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#calculating-your-offset" class="md-nav__link">
+    Calculating your offset
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculating your offset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#second-example" class="md-nav__link">
+    Second example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#video-tutorial" class="md-nav__link">
     Video Tutorial
   </a>
@@ -2912,12 +2999,43 @@ Frame N+2: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 2)
 Frame N+3: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 2), C = Mem[deltaB] = Mem[2] = 4 (delta C = 4)
 </code></pre>
 <p>Not only does it take two extra frames for delta C to be correct, it has two intermediate values that are not correct. The value went from 0 to 4 in a single frame and never was 1 or 2. </p>
+<h2 id="calculating-your-offset">Calculating your offset<a class="headerlink" href="#calculating-your-offset" title="Permanent link">link</a></h2>
+<p>Once you think that you've found your data and something that points at (or near) your data, you need to calculate the offset to use to read that data.
+* 32-bit data at <code>0x821448</code> (RetroAchievements address)
+* Pointer at <code>0xA1CA14</code> (RetroAchievements address) (value is <code>0x8C821440</code>)</p>
+<p>First, determine how much of the pointer you need. For a system with 16MB of RAM, you need 24-bits to address it all (2^24 = 16777216). For 32MB, you'd need 25-bits. For 8MB, you'd only need 23-bits.</p>
+<p>For the data provided above, we have 16MB of memory, so we only need 24-bits of the pointer (<code>0x8C821440</code> &amp; <code>0x00FFFFFF</code> = <code>0x821440</code>)</p>
+<p>Then, subtract that value from the data address to calculate the offset: <code>0x821448</code> - <code>0x821440</code> = <code>0x000008</code></p>
+<p>Now, you can construct the logic. Place the pointer address and size/mask in the <code>AddAddress</code> condition and the offset/logic in the second line:</p>
+<pre><code>AddAddress Mem 24-bit 0x00A1CA14
+           Mem 32-bit 0x00000008 &lt; 1000
+</code></pre>
+<p>Executing this example with the provided data:
+* Read 24-bit data at <code>0x00A1CA14</code>: <code>0x00821440</code>
+* Add the offset: <code>0x00821440</code> + <code>0x00000008</code> = <code>0x00821448</code>
+* Read 32-bit data at new address (<code>0x00821448</code>)</p>
+<h4 id="second-example">Second example<a class="headerlink" href="#second-example" title="Permanent link">link</a></h4>
+<ul>
+<li>16-bit data at <code>0x1B385E0</code> (RetroAchievements address)</li>
+<li>Pointer at <code>0xE7B054</code> (RetroAchievements address) (value is <code>0x09B42F0C</code>)</li>
+<li>System has 32MB of RAM (25 bits needed) <code>0x09B42F0C</code> &amp; <code>0x01FFFFFF</code> = <code>0x1B42F0C</code></li>
+<li>Calculate offset: <code>0x1B385E0</code> - <code>0x1B42F0C</code> = <code>0xFFFFFFFFFFFF56D4</code> (truncate to 32-bits: <code>0xFFFF56D4</code>)</li>
+<li>Construct the logic:
+  <code>AddAddress Mem 32-bit 0x00E7B054 &amp; 0x1FFFFFF
+             Mem 16-bit 0xFFFF56D4 = 0x0E</code></li>
+</ul>
+<p>In this case, the pointer is actually pointing backwards, so the offset is a really big number. That's how computers represent negative values. Due to the rules of <a href="https://en.wikipedia.org/wiki/Two's_complement">twos-compliment</a> and overflow, you can add the really big number to perform subtraction. Executing this example with the provided data:
+* Read 32-bit data at <code>0x00E7B054</code>: <code>0x09B42F0C</code>
+* Mask off 25-bits: <code>0x09B42F0C</code> &amp; <code>0x01FFFFFF</code> = <code>0x01B42F0C</code>
+* Add the offset: <code>0x1B42F0C</code> + <code>0xFFFF56D4</code> = <code>0x101B385E0</code> (truncated to 32-bits: <code>0x01B385E0</code>)
+* Read 16-bit data at new address (<code>0x01B385E0</code>)</p>
 <h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">link</a></h2>
 <p>The experienced achievement creator <a href="https://retroachievements.org/User/wilhitewarrior">wilhitewarrior</a> made a nice video showing how to work with pointers and AddAddress flag.</p>
 <p>You can check it here: <a href="https://www.youtube.com/watch?v=_gk0vYYlm-E">https://www.youtube.com/watch?v=_gk0vYYlm-E</a>.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-01-26 08:53] Jamiras:</code> add calculating offset section</li>
 <li><code>[2021-10-06 19:35] Jamiras:</code> Updated AddAddress Flag (markdown)</li>
 <li><code>[2021-08-08 18:59] Jamiras:</code> update for scaled array index support</li>
 <li><code>[2020-08-05 02:06] meleu:</code> cosmetic</li>
@@ -3022,10 +3140,10 @@ Frame N+3: Mem[0] = 1 (delta[0] = 1), B = Mem[deltaA] = Mem[1] = 2 (delta B = 2)
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
