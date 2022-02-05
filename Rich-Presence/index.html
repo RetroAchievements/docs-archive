@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Rich-Presence/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1070,6 +1070,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Value-Definition/" class="md-nav__link">
+        Value Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Condition-Syntax/" class="md-nav__link">
+        Condition Syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
         Minimum Required Versions for Logic Features
       </a>
@@ -1391,37 +1419,44 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#lookups" class="md-nav__link">
     Lookups
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#format" class="md-nav__link">
     Format
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#display" class="md-nav__link">
-    Display
-  </a>
-  
-    <nav class="md-nav" aria-label="Display">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-lookup-breakdown" class="md-nav__link">
-    Example Lookup Breakdown
+  <a href="#built-in-macros" class="md-nav__link">
+    Built-in macros
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#address-size" class="md-nav__link">
-    Address size
+  <a href="#display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-lookup-breakdown" class="md-nav__link">
+    Example Lookup Breakdown
   </a>
   
 </li>
@@ -1435,13 +1470,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binary-coded-decimal-bcd" class="md-nav__link">
-    Binary Coded Decimal (BCD)
-  </a>
   
 </li>
       
@@ -2969,37 +2997,44 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#lookups" class="md-nav__link">
     Lookups
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#format" class="md-nav__link">
     Format
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#display" class="md-nav__link">
-    Display
-  </a>
-  
-    <nav class="md-nav" aria-label="Display">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-lookup-breakdown" class="md-nav__link">
-    Example Lookup Breakdown
+  <a href="#built-in-macros" class="md-nav__link">
+    Built-in macros
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#address-size" class="md-nav__link">
-    Address size
+  <a href="#display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-lookup-breakdown" class="md-nav__link">
+    Example Lookup Breakdown
   </a>
   
 </li>
@@ -3013,13 +3048,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binary-coded-decimal-bcd" class="md-nav__link">
-    Binary Coded Decimal (BCD)
-  </a>
   
 </li>
       
@@ -3104,7 +3132,8 @@
   <h1>Rich Presence</h1>
 
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">link</a></h2>
-<p>Rich Presence <strong>(RP)</strong> is brief overview of what active players are currently doing in their game. To have RP in a game you need a Rich Presence Script <strong>(RPS)</strong> which is created by Developers. The Script checks the player's game memory and as programmed reports the values of certain addresses with definitions assigned by the Developer such as which stage the player is on, how many lives they have, if the game is paused, what game mode they are playing, what the player has accomplished, etc. This information is reported back to the website. </p>
+<p>Rich Presence (RP) is <strong>brief</strong> overview of what active players are currently doing in their game. To have RP in a game you need a Rich Presence script, which is created by Developers. The script checks the player's game memory and reports the values of certain addresses with definitions assigned by the Developer such as which stage the player is on, how many lives they have, if the game is paused, what game mode they are playing, what the player has accomplished, etc. This information is reported back to the website once every two minutes.</p>
+<p>A good rich presence should inform other users how far into the game you are (level/ town/dungeon), and give an overall sense of how the player is doing (score/remaining lives/character level). Additional details may be useful, depending on their context within the game. Try not to go overboard with the detail though. Other players don't care what you named your dog, or need to know how many bullets you have left, especially since it only updates every two minutes. Additionally, the more fluff you add to a rich presence display, the more diluted the important information becomes.</p>
 <p><strong>Example of RP in action:</strong></p>
 <p><img alt="Example of RP in action" src="https://i.imgur.com/E5097sz.png" />  </p>
 <p>To see the RP live in a game click on the RetroAchievements menu in your emulator and then click on Rich Presence Monitor. A small window will show you your active RP. (Good for debugging)</p>
@@ -3167,14 +3196,18 @@ Display:
 @Mode(0xh770)@Paused(0xh776)@Star(0xM79f_0xN79f_0xo79f_0xP79f_0xQ79f_0xR79f)@Powerup(0xh0756) Mario in @Digit(0xh75f_v1)-@Digit(0xh75c_v1)@Swimming(0xh704)@Status(0xhe), 🚶:@Digit(0xh75a_v1), @Quest(0xh7fc) Quest
 </code></pre>
 <p>It breaks down into a series of Lookup objects, Format objects and one Display object. </p>
-<h2 id="lookups">Lookups<a class="headerlink" href="#lookups" title="Permanent link">link</a></h2>
+<h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">link</a></h2>
+<p>A macro converts a value into a user-friendly string. Macros are placed within a display string and will be replaced when the display string is evaluated. A macro starts with an <code>@</code>, then the name of the macro, an opening parenthesis, the value to evaluate, and a closing parenthesis.</p>
+<p><code>@Macro(0xh1234)</code> says read the byte at $1234, transform it using the <code>Macro</code> macro, and place the result in the display string where the macro had been.</p>
+<p>Parameters for each macro are constructed using a <a href="../Value-Definition/">value definition</a>.</p>
+<h3 id="lookups">Lookups<a class="headerlink" href="#lookups" title="Permanent link">link</a></h3>
 <p>Lookups are defined like this: </p>
 <pre><code>Lookup:NameOfLookup
 1=Text When 1
 2=Text When 2
 ...
 </code></pre>
-<p>When a Display string references a Lookup, it's Value will be located in the table and the associated text will be displayed.</p>
+<p>When a display string references a Lookup, it's value will be located in the table and the associated text will be displayed.</p>
 <p><strong>NOTE</strong>: Values in the Lookup should be in decimal. If you want to use hex values, include a <code>0x</code> prefix. (i.e. <code>0x12=Eighteen</code>)</p>
 <p>You can also specify multiple values for a single text string:</p>
 <pre><code>1-5,10=Text When These Values
@@ -3182,7 +3215,7 @@ Display:
 </code></pre>
 <p>In this example, the values 1, 2, 3, 4, 5, and 10 all map to the first text string.</p>
 <p>Anything that doesn't match an item defined in the lookup table will return the text associated with <code>*</code>. If <code>*</code> does not appear in the lookup table, no text will be returned if a value doesn't have an entry.</p>
-<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">link</a></h2>
+<h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">link</a></h3>
 <p>Format tables are defined like this:</p>
 <pre><code>Format:Score
 FormatType=VALUE
@@ -3196,8 +3229,87 @@ FormatType=VALUE
 <li><code>SECS</code>: value describes the number of seconds elapsed, and will be turned into 00:00 </li>
 <li><code>MINUTES</code>: value describes the number of minutes elapsed, and will be turned into 0h00</li>
 <li><code>SECS_AS_MINS</code>: value describes the number of seconds elapsed, and will be turned into 0h00</li>
+<li><code>FLOAT1</code>-<code>FLOAT6</code>: formats a floating point number with the specified number of digits after the decimal</li>
 </ul>
-<h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link">link</a></h2>
+<h3 id="built-in-macros">Built-in macros<a class="headerlink" href="#built-in-macros" title="Permanent link">link</a></h3>
+<p>As of the 1.0 version of the DLL, you can use predefined macros for the most common formats. The following macros are now implicit:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Macro</th>
+<th align="center">Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>@Number()</code></td>
+<td align="center"><code>VALUE</code></td>
+<td>A generic value with no leading zeroes</td>
+</tr>
+<tr>
+<td align="center"><code>@Score()</code></td>
+<td align="center"><code>SCORE</code></td>
+<td>A generic value, padded with leading zeroes to six digits</td>
+</tr>
+<tr>
+<td align="center"><code>@Centisecs()</code></td>
+<td align="center"><code>MILLISECS</code></td>
+<td>The number of hundreths of a second elapsed, and will be formatted as <code>00:00.00</code></td>
+</tr>
+<tr>
+<td align="center"><code>@Seconds()</code></td>
+<td align="center"><code>SECS</code></td>
+<td>The number of seconds elapsed, and will be formatted as <code>00:00</code></td>
+</tr>
+<tr>
+<td align="center"><code>@Minutes()</code></td>
+<td align="center"><code>MINUTES</code></td>
+<td>The number of minutes elapsed, and will be formatted as <code>0h00</code></td>
+</tr>
+<tr>
+<td align="center"><code>@Float1()</code></td>
+<td align="center"><code>FLOAT1</code></td>
+<td>A floating point number, formatted with one digit after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@Float2()</code></td>
+<td align="center"><code>FLOAT2</code></td>
+<td>A floating point number, formatted with two digits after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@Float3()</code></td>
+<td align="center"><code>FLOAT3</code></td>
+<td>A floating point number, formatted with three digits after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@Float4()</code></td>
+<td align="center"><code>FLOAT4</code></td>
+<td>A floating point number, formatted with four digits after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@Float5()</code></td>
+<td align="center"><code>FLOAT5</code></td>
+<td>A floating point number, formatted with five digits after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@Float6()</code></td>
+<td align="center"><code>FLOAT6</code></td>
+<td>A floating point number, formatted with six digits after the decimal</td>
+</tr>
+<tr>
+<td align="center"><code>@ASCIIChar()</code></td>
+<td align="center">n/a</td>
+<td>Converts a value from 0x20-0x7F into a character using the ASCII character map. Other values will be converted to <code>?</code></td>
+</tr>
+<tr>
+<td align="center"><code>@UnicodeChar()</code></td>
+<td align="center">n/a</td>
+<td>Converts a value into a character using the 16-bit Unicode character map. Unknown values will be converted to <code>�</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="display">Display<a class="headerlink" href="#display" title="Permanent link">link</a></h3>
 <p>Display is a string that gets shown in the 'Active Players' box on the front page and the 'Last Seen In' section of the player's profile.</p>
 <p>It is built by replacing any macros in the display string with text from a Lookup or formatted values from a Format converter. Each macro is identified by a single '@', which is followed by the name for the Lookup or Format (case sensitive!), and immediately after, in parenthesis, a value specifying what to send to that Lookup or Format object.</p>
 <p><code>Using @Powerup(0xh756)!</code> </p>
@@ -3222,106 +3334,6 @@ FormatType=VALUE
 <li><code>@Quest(0xh7fc)</code> A lookup to see if the player is in normal or on the 2nd quest, hardmode.  </li>
 <li><code>Quest</code> - Static Text.  </li>
 </ul>
-<h3 id="address-size">Address size<a class="headerlink" href="#address-size" title="Permanent link">link</a></h3>
-<p>To specify what size of address you are checking there are various characters used. (capitalization is ignored)</p>
-<ul>
-<li>A 16bit address is default and has no character designation. At 0x10 the address is two bytes - 16 bits.</li>
-<li>An 8bit address's character is <code>h</code> (or <code>H</code>). At 0xh10 the address is one byte - 8 bits. <code>xxxx xxxx</code>  </li>
-<li>An upper4 address's character is <code>u</code> (or <code>U</code>). At 0xu10 the address is one nibble - 4 bits. <code>xxxx 0000</code>  </li>
-<li>A lower4 address's character is <code>l</code> (or <code>L</code>). At 0xl10 the address is one nibble - 4 bits. <code>0000 xxxx</code>  </li>
-<li>A bit0 address's character is <code>m</code> (or <code>M</code>). At 0xm10 the address is one bit, the lowest bit: <code>0000 000x</code>  </li>
-<li>A bit1 address's character is <code>n</code> (or <code>N</code>). At 0xn10 the address is one bit, the second bit: <code>0000 00x0</code>  </li>
-<li>A bit2 address's character is <code>o</code> (or <code>O</code>). At 0xo10 the address is one bit, the third bit: <code>0000 0x00</code>  </li>
-<li>A bit3 address's character is <code>p</code> (or <code>P</code>). At 0xp10 the address is one bit, the fourth bit: <code>0000 x000</code>  </li>
-<li>A bit4 address's character is <code>q</code> (or <code>Q</code>). At 0xq10 the address is one bit, the fifth bit: <code>000x 0000</code>  </li>
-<li>A bit5 address's character is <code>r</code> (or <code>R</code>). At 0xr10 the address is one bit, the sixth bit: <code>00x0 0000</code>  </li>
-<li>A bit6 address's character is <code>s</code> (or <code>S</code>). At 0xs10 the address is one bit, the seventh bit: <code>0x00 0000</code>  </li>
-<li>A bit7 address's character is <code>t</code> (or <code>T</code>). At 0xt10 the address is one bit, the top bit: <code>x000 0000</code>  </li>
-<li>A 32bit address's character is <code>x</code> (or <code>X</code>). At 0xx10 the address is four bytes and 32 bits.</li>
-<li>A 24bit address's character is <code>w</code> (or <code>W</code>). At 0xW10 the address three bytes and 24 bits.</li>
-</ul>
-<p>Summarizing on a table:</p>
-<table>
-<thead>
-<tr>
-<th align="center">location/size</th>
-<th align="center">prefix (the letters can be in lower case)</th>
-<th align="center">example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">bit0</td>
-<td align="center"><code>0xM</code></td>
-<td align="center"><code>0xM01234</code></td>
-</tr>
-<tr>
-<td align="center">bit1</td>
-<td align="center"><code>0xN</code></td>
-<td align="center"><code>0xN01234</code></td>
-</tr>
-<tr>
-<td align="center">bit2</td>
-<td align="center"><code>0xO</code></td>
-<td align="center"><code>0xO01234</code></td>
-</tr>
-<tr>
-<td align="center">bit3</td>
-<td align="center"><code>0xP</code></td>
-<td align="center"><code>0xP01234</code></td>
-</tr>
-<tr>
-<td align="center">bit4</td>
-<td align="center"><code>0xQ</code></td>
-<td align="center"><code>0xQ01234</code></td>
-</tr>
-<tr>
-<td align="center">bit5</td>
-<td align="center"><code>0xR</code></td>
-<td align="center"><code>0xR01234</code></td>
-</tr>
-<tr>
-<td align="center">bit6</td>
-<td align="center"><code>0xS</code></td>
-<td align="center"><code>0xS01234</code></td>
-</tr>
-<tr>
-<td align="center">bit7</td>
-<td align="center"><code>0xT</code></td>
-<td align="center"><code>0xT01234</code></td>
-</tr>
-<tr>
-<td align="center">Lower4</td>
-<td align="center"><code>0xL</code></td>
-<td align="center"><code>0xL01234</code></td>
-</tr>
-<tr>
-<td align="center">Upper4</td>
-<td align="center"><code>0xU</code></td>
-<td align="center"><code>0xU01234</code></td>
-</tr>
-<tr>
-<td align="center">8bit</td>
-<td align="center"><code>0xH</code></td>
-<td align="center"><code>0xH01234</code></td>
-</tr>
-<tr>
-<td align="center">16bit</td>
-<td align="center"><code>0x</code></td>
-<td align="center"><code>0x01234</code></td>
-</tr>
-<tr>
-<td align="center">24bit</td>
-<td align="center"><code>0xW</code></td>
-<td align="center"><code>0xW123</code></td>
-</tr>
-<tr>
-<td align="center">32bit</td>
-<td align="center"><code>0xX</code></td>
-<td align="center"><code>0xX01234</code></td>
-</tr>
-</tbody>
-</table>
 <h3 id="conditional-display-strings">Conditional Display Strings<a class="headerlink" href="#conditional-display-strings" title="Permanent link">link</a></h3>
 <pre><code>Display:
 ?0x 000085=0?Title Screen
@@ -3348,18 +3360,11 @@ Playing Battle @Battle(0x 00007c*0.2) in @Landscape(0xH00016c)
 </li>
 </ul>
 <p><strong>Pro-tip:</strong> Conditions can be created using the <a href="../Achievement-Logic-Features/">achievement editor</a>. Once you have your condition defined, use the <code>Copy Def</code> button to copy the achievement definition to the clipboard so you can paste it into the rich presence script.</p>
-<h2 id="binary-coded-decimal-bcd">Binary Coded Decimal (BCD)<a class="headerlink" href="#binary-coded-decimal-bcd" title="Permanent link">link</a></h2>
-<p>BCD is when the values are store in an address from as 0-9 (one digit) or 0-99 (two digits). Keep in mind that most often values are stored in hexidecimal, but sometime games will store them in this way and here's the best way to handle these addresses in your display.</p>
-<p>BCD decoding treats each hex character as a decimal digit. If the memory inspector shows 86 (in hex), the result of BCD decoding the value would be 86 (in decimal).</p>
-<p>For value objects you can use the BCD prefix, as in <code>b0xh1234</code>. This also works with <a href="../Leaderboards/#value-interpreter">leaderboard values</a>.
-Note that you still need to specify the size of the BCD memory address. <code>b0x1234</code> reads a 16-bit value. <code>b0xh1234</code> reads an 8-bit value and <code>b0xX1234</code> reads a 32-bit value.
-<em>NOTE</em>: Support for 16-bit and 32-bit BCD decoding is a feature of the 0.075 toolkit.</p>
-<p>This is most commonly used for score and time, but often other types of display values.</p>
 <h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">link</a></h2>
 <ul>
 <li>65,535 character limit for script  </li>
 <li>255 character limit for what is displayed  </li>
-<li>Unicode characters are allowed, some use more characters than 1</li>
+<li>Unicode characters are allowed, but use count as more than 1 character towards the specified limits.</li>
 </ul>
 <h2 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">link</a></h2>
 <ul>
@@ -3372,7 +3377,7 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li>Putting spaces in your Lookups sometimes before or after can allow you to hide certain lookups when they are not needed, like how <code>@Pause</code>, <code>@Star</code>, <code>@Swimming</code>, and @Mode do. </li>
 </ul>
 <h3 id="value-properties">Value Properties<a class="headerlink" href="#value-properties" title="Permanent link">link</a></h3>
-<p>When using lookup and format objects <code>@object()</code> it's possible to combine and perform calculations. Macro values support everything that <a href="../Leaderboards/#value">leaderboard values</a> support, so you can use multiplication, addition, and even some logic to generate values that aren't directly available in memory.</p>
+<p>When using lookup and format objects <code>@object()</code> it's possible to combine and perform calculations. Macro parameters are <a href="../Value-Definition/">value definitions</a>, so you can use multiplication, addition, and even some logic to generate values that aren't directly available in memory.</p>
 <p><strong>Example</strong>
 <code>@Score(0xh28*10_0xh29*1000_0xh26*100000) points</code> </p>
 <p>This means use the Lookup or Format <code>Score</code>, and give it the sum of:<br />
@@ -3389,10 +3394,10 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 ❤️ or ❤=In a game with hearts (e.g. Zelda) <br />
 💰=Money<br />
 🚩=Level/Stage   </p>
-<p>While making Rich Presence devs need to be careful that they are communicating clearly. If you are using non-standard symbols they will make sense to you but could be entirely confusing to others. <strong>When using non-standard symbols, check them with someone else</strong> or a few people to see if the symbols you use make sense. If they don't, use better symbols, use text or use symbols alongside of text.</p>
+<p>While making Rich Presence, devs need to be careful that they are communicating clearly. If you are using non-standard symbols they will make sense to you but could be entirely confusing to others. <strong>When using non-standard symbols, check them with someone else</strong> or a few people to see if the symbols you use make sense. If they don't, use better symbols, use text or use symbols alongside of text.</p>
 <p>For custom unicode/emoji <a href="http://shapecatcher.com/">ShapeCatcher</a> is an excellent resource, you can draw what you're looking for and an AI will find similar matches. Just be careful to not use unicode that <em>too obscure</em>, as they don't all display on all systems.</p>
-<p>Take note of community display preference:
-<img alt="image" src="https://user-images.githubusercontent.com/32706333/56547116-a65a7c80-6539-11e9-951c-83b4f9930b3e.png" /></p>
+<p>Take note of community display preference:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/32706333/56547116-a65a7c80-6539-11e9-951c-83b4f9930b3e.png" /></p>
 <h2 id="developing-rich-presence">Developing Rich Presence<a class="headerlink" href="#developing-rich-presence" title="Permanent link">link</a></h2>
 <p>The toolkit does not currently have an integrated Rich Presence editor, but you can test local changes before putting them on the server. Once you've started a game and the current Rich Presence has been downloaded from the server, you can find it in <code>RACache\Data\XXX-Rich.txt</code> where XXX is the game ID. </p>
 <p>The Rich Presence Monitor (openable from the RetroAchievments menu) reads this file and shows the current value every second while the window is open.</p>
@@ -3445,6 +3450,9 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-02-04 17:38] Jamiras:</code> extract memory sizes</li>
+<li><code>[2022-02-04 17:12] Jamiras:</code> extract Value Definition to separate page</li>
+<li><code>[2022-01-31 10:51] Jamiras:</code> add built-in macros</li>
 <li><code>[2022-01-26 09:39] Shane Shirey:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2022-01-26 09:38] Shane Shirey:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-12-04 07:33] Jamiras:</code> update rich 'how does it work' section</li>
@@ -3452,9 +3460,6 @@ Note that you still need to specify the size of the BCD memory address. <code>b0
 <li><code>[2021-06-08 10:38] Jamiras:</code> Updated Rich Presence (markdown)</li>
 <li><code>[2021-02-22 13:06] SporyTike:</code> Updated limits which were pretty outdated</li>
 <li><code>[2020-09-16 12:37] meleu:</code> Updated Rich Presence (markdown)</li>
-<li><code>[2020-04-11 19:06] SporyTike:</code> Added Parse error -20 and how to fix Unknown Macro displayed when deving local</li>
-<li><code>[2020-01-08 06:38] televandalist:</code> Updated Rich Presence (markdown)</li>
-<li><code>[2020-01-08 06:37] televandalist:</code> Added 24bit to the address sizes and table. Updated the 16,000 character limit to 65,000.</li>
 </ul>
 
               

@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Leaderboards/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1070,6 +1070,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Value-Definition/" class="md-nav__link">
+        Value Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Condition-Syntax/" class="md-nav__link">
+        Condition Syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
         Minimum Required Versions for Logic Features
       </a>
@@ -1357,13 +1385,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#address-format" class="md-nav__link">
-    Address Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     Example
   </a>
@@ -1396,33 +1417,6 @@
   <a href="#value" class="md-nav__link">
     Value
   </a>
-  
-    <nav class="md-nav" aria-label="Value">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#value-from-measured" class="md-nav__link">
-    Value from Measured
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-from-hitcount" class="md-nav__link">
-    Value from HitCount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#legacy-syntax" class="md-nav__link">
-    Legacy Syntax:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2909,13 +2903,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#address-format" class="md-nav__link">
-    Address Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     Example
   </a>
@@ -2948,33 +2935,6 @@
   <a href="#value" class="md-nav__link">
     Value
   </a>
-  
-    <nav class="md-nav" aria-label="Value">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#value-from-measured" class="md-nav__link">
-    Value from Measured
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-from-hitcount" class="md-nav__link">
-    Value from HitCount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#legacy-syntax" class="md-nav__link">
-    Legacy Syntax:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3045,91 +3005,9 @@
 <p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. NOTE: Cancel is given priority over Start. If both become true in the same frame, the leaderboard will not start.</p>
 <p>If the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard score will be submitted. NOTE: Cancel is given priority over Submit. If both become true in the same frame, the score will not be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
+<p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="../Condition-Syntax/">here</a>.</p>
 <p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
 <p><strong>Pro-tip:</strong> <strong>STA</strong>, <strong>CAN</strong>, and <strong>SUB</strong> support all logic available in the <a href="../Achievement-Logic-Features/">achievement editor</a>. The easiest way to make sure you get them written correctly is to create local achievements that capture the events, then use the <code>Copy Def</code> button to copy the achievement definition to the clipboard so you can paste it into the editor on the website.</p>
-<h2 id="address-format">Address Format<a class="headerlink" href="#address-format" title="Permanent link">link</a></h2>
-<p>The memory addresses for STA/CAN/SUB/VAL have the following format:</p>
-<table>
-<thead>
-<tr>
-<th align="center">location/size</th>
-<th align="center">prefix (the letters can be in lower case)</th>
-<th align="center">example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">bit0</td>
-<td align="center"><code>0xM</code></td>
-<td align="center"><code>0xM01234</code></td>
-</tr>
-<tr>
-<td align="center">bit1</td>
-<td align="center"><code>0xN</code></td>
-<td align="center"><code>0xN01234</code></td>
-</tr>
-<tr>
-<td align="center">bit2</td>
-<td align="center"><code>0xO</code></td>
-<td align="center"><code>0xO01234</code></td>
-</tr>
-<tr>
-<td align="center">bit3</td>
-<td align="center"><code>0xP</code></td>
-<td align="center"><code>0xP01234</code></td>
-</tr>
-<tr>
-<td align="center">bit4</td>
-<td align="center"><code>0xQ</code></td>
-<td align="center"><code>0xQ01234</code></td>
-</tr>
-<tr>
-<td align="center">bit5</td>
-<td align="center"><code>0xR</code></td>
-<td align="center"><code>0xR01234</code></td>
-</tr>
-<tr>
-<td align="center">bit6</td>
-<td align="center"><code>0xS</code></td>
-<td align="center"><code>0xS01234</code></td>
-</tr>
-<tr>
-<td align="center">bit7</td>
-<td align="center"><code>0xT</code></td>
-<td align="center"><code>0xT01234</code></td>
-</tr>
-<tr>
-<td align="center">Lower4</td>
-<td align="center"><code>0xL</code></td>
-<td align="center"><code>0xL01234</code></td>
-</tr>
-<tr>
-<td align="center">Upper4</td>
-<td align="center"><code>0xU</code></td>
-<td align="center"><code>0xU01234</code></td>
-</tr>
-<tr>
-<td align="center">8bit</td>
-<td align="center"><code>0xH</code></td>
-<td align="center"><code>0xH01234</code></td>
-</tr>
-<tr>
-<td align="center">16bit</td>
-<td align="center"><code>0x</code></td>
-<td align="center"><code>0x01234</code></td>
-</tr>
-<tr>
-<td align="center">24bit</td>
-<td align="center"><code>0xW</code></td>
-<td align="center"><code>0xW01234</code></td>
-</tr>
-<tr>
-<td align="center">32bit</td>
-<td align="center"><code>0xX</code></td>
-<td align="center"><code>0xX01234</code></td>
-</tr>
-</tbody>
-</table>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">link</a></h2>
 <p>The best place to start is to look at one of the existing leaderboards <a href="https://retroachievements.org/leaderboardList.php">https://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="https://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
 <p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
@@ -3171,42 +3049,8 @@
 <p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
 <h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">link</a></h3>
 <p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an in game popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
+<p>For more information on the value format, see <a href="../Value-Definition/">Value Definition</a>.</p>
 <p><strong>NOTE</strong>: The value calculation is performed using 32-bit signed integers. As such, the maximum value is 2147483647 and the minimum value is -2147483648. Values above the maximum will wrap around and register as very negative numbers. </p>
-<p>The value condition is special in a few ways. It is evaluated constantly and shown on-screen all the time when the leaderboard is active. </p>
-<p>There is also a symbol which only works in this field. Connecting two value conditions with <code>$</code> will cause only the one with the highest value to be used.</p>
-<p>Many games use <a href="../Rich-Presence/#binary-coded-decimal-bcd">Binary Coded Decimal</a> to encode scores. You can have the runtime decode BCD values by putting a <code>b</code> prefix in front of the memory reference (i.e. <code>b0xW1234</code>)</p>
-<h4 id="value-from-measured">Value from Measured<a class="headerlink" href="#value-from-measured" title="Permanent link">link</a></h4>
-<p>Starting with the 0.77 DLL (and RetroArch 1.8.2), you can use the Measured flag to generate a Value. This supports all logic supported by the achievement editor, but every condition must have a flag that somehow influences the Measured value (i.e. AddSource, AddAddress). Note that the Measured condition cannot have a multiplier directly on it. If the final clause needs to be multiplied, use an additional AddSource and Measure 0.</p>
-<p><strong>VAL</strong>: <code>A:0xhfe24_A:0xhfe25*60_A:0xhfe22*3600_M:0</code></p>
-<p>The example provided above reads:</p>
-<pre><code>AddSource 8-bit 0xfe24
-AddSource 8-bit 0xfe25 * Value 60
-AddSource 8-bit 0xfe22 * Value 3600
-Measured  Value 0
-</code></pre>
-<p>The addresses represent frames, seconds, and minutes respectively, and are individually multiplied and then added together to create a total number of frames that can be submitted to the database.</p>
-<h4 id="value-from-hitcount">Value from HitCount<a class="headerlink" href="#value-from-hitcount" title="Permanent link">link</a></h4>
-<p>Sometimes you want to count the number of times something happens and submit that as the value. You can also do this using Measured syntax. Just add a comparison to your final condition. Do not include an explicit Hit target, or that will be the maximum value that can be submitted.</p>
-<p>The HitCount on the condition will automatically be set to 0 when the leaderboard starts, and the HitCount will be submitted as the Value when the leaderboard submit trigger activates. You can use PauseIf and ResetIf within the Value conditions to further control the behavior.</p>
-<p>For example:</p>
-<pre><code>M:0xH1234!=d0xH1234
-</code></pre>
-<p>Would submit the number of times the byte at $1234 changed while the leaderboard was active.</p>
-<pre><code>N:0xH1234!=20_M:0xH1234!=d0xH1234
-</code></pre>
-<p>Would submit the number of times the byte at $1234 changed to something other than 20 while the leaderboard was active.</p>
-<h4 id="legacy-syntax">Legacy Syntax:<a class="headerlink" href="#legacy-syntax" title="Permanent link">link</a></h4>
-<p><strong>VAL</strong>: <code>0xhfe24*1_0xhfe25*60_0xhfe22*3600</code></p>
-<p>Before the introduction of the Measured flag, Values were written using their own syntax. Some people still prefer this syntax as it's generally easier to do by hand. A legacy value is the sum of a collection of memory values multiplied by modifiers.</p>
-<p><code>address*modifier</code> (address times modifier)</p>
-<p>The <code>_</code> underscore operator separates the individual values and acts as 'plus'. So the example above represents:</p>
-<pre><code>8-bit 0xfe24 times 1, PLUS
-8-bit 0xfe25 times 60, PLUS
-8-bit 0xfe22 times 3600
-</code></pre>
-<p>The addresses represent frames, seconds, and minutes respectively, and are individually multiplied and then added together to create a total number of frames that can be submitted to the database.</p>
-<p>To add a constant, use <code>_vN</code> where N is the constant in decimal (i.e. <code>_v10</code>) will add 10 to the result. You can also use negative values for N (i.e. <code>_v-10</code> will subtract 10 from the result.</p>
-<p><strong>Tip</strong>: modifier can be a non-integer value, so if you need to divide by two, you can multiply by 0.5: <code>0xhfe24*0.5</code></p>
 <h3 id="value-format">Value Format<a class="headerlink" href="#value-format" title="Permanent link">link</a></h3>
 <p>'Format' can be any of the available <a href="../Rich-Presence/#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
 <p><strong>NOTE</strong>: If you're using a system that doesn't run at 60Hz, you have to use "Time (millisecs)" and multiply by some value to do the conversion yourself (50Hz = <code>*2</code> [100/50], 60Hz = <code>*1.666666</code> [100/60], 75Hz =<code>*1.333333</code> [100/75]).</p>
@@ -3218,6 +3062,8 @@ Measured  Value 0
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-02-04 17:36] Jamiras:</code> extract memory sizes</li>
+<li><code>[2022-02-04 16:47] Jamiras:</code> extract Value Definition to separate page</li>
 <li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
@@ -3226,8 +3072,6 @@ Measured  Value 0
 <li><code>[2020-01-09 22:56] Keltron3030:</code> Added 24-bit to address format table</li>
 <li><code>[2019-12-24 15:27] Jamiras:</code> add Value from HitCount section and note about using hit counts in STA/SUB/CAN</li>
 <li><code>[2019-05-15 17:53] meleu:</code> recover</li>
-<li><code>[2019-05-15 10:21] eldexterr:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2018-11-20 07:41] Scott:</code> Updated Leaderboards (markdown)</li>
 </ul>
 
               

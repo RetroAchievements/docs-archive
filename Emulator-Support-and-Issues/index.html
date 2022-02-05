@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Emulator-Support-and-Issues/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1058,6 +1058,34 @@
     <li class="md-nav__item">
       <a href="../Alt-Groups/" class="md-nav__link">
         Alt Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Value-Definition/" class="md-nav__link">
+        Value Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Condition-Syntax/" class="md-nav__link">
+        Condition Syntax
       </a>
     </li>
   
@@ -3206,6 +3234,14 @@
 </thead>
 <tbody>
 <tr>
+<td>37</td>
+<td>Amstrad CPC</td>
+<td></td>
+<td>Cap32</td>
+<td>Needs Work</td>
+<td>• Updates seem to have made it fully functional<br>• Uncertain how core handles writing to disk - may affect hashing</td>
+</tr>
+<tr>
 <td>40</td>
 <td>Dreamcast</td>
 <td></td>
@@ -3219,7 +3255,15 @@
 <td></td>
 <td>NeoCD</td>
 <td></td>
-<td>Appears fully functional. Needs hashing method</td>
+<td>• Appears fully functional<br>• Needs hashing method</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Mega Duck</td>
+<td></td>
+<td>SameDuck</td>
+<td></td>
+<td>• Appears fully functional<br></td>
 </tr>
 </tbody>
 </table>
@@ -3264,9 +3308,17 @@
 <td>21</td>
 <td>PlayStation 2</td>
 <td></td>
-<td>Play<br>PCSX2</td>
+<td>Play!</td>
 <td></td>
-<td>Low compatibility with most commercial games; black screen with stuttering sound<br>PCSX2 is still in an alpha state, does not yet expose memory.</td>
+<td>Low compatibility with most commercial games; black screen with stuttering sound</td>
+</tr>
+<tr>
+<td>21</td>
+<td>PlayStation 2</td>
+<td></td>
+<td>PCSX2</td>
+<td></td>
+<td>PCSX2 is still in an alpha state, does not yet expose memory</td>
 </tr>
 <tr>
 <td>22</td>
@@ -3333,22 +3385,6 @@
 <td>• Memory not exposed. Games seem to run fine.</td>
 </tr>
 <tr>
-<td>37</td>
-<td>Amstrad CPC</td>
-<td></td>
-<td>Cap32</td>
-<td>Needs Work</td>
-<td>• Memory is exposed<br>• Has "machine gun" audio bug in several games depending on machine selected.</td>
-</tr>
-<tr>
-<td>37</td>
-<td>Amstrad CPC</td>
-<td></td>
-<td>CrocoDS</td>
-<td>Needs Work</td>
-<td>• Memory is NOT exposed. Seems to run fine. Several games tested.</td>
-</tr>
-<tr>
 <td>42</td>
 <td>Philips CD-I</td>
 <td></td>
@@ -3362,7 +3398,7 @@
 <td></td>
 <td>np2kai</td>
 <td>Needs Work</td>
-<td>• Memory is not exposed. Ran all 10 games tested.</td>
+<td>• Memory is not exposed. It <em>appears</em> to be exposed in some games depending on the RAM size selected, but it seems like it's machine RAM and not actually related to the game(s).<br>Performance wise, all games tested run without issues.</td>
 </tr>
 <tr>
 <td>50</td>
@@ -3378,7 +3414,7 @@
 <td></td>
 <td>px68k</td>
 <td></td>
-<td>Untested with proper BIOS</td>
+<td>Crashes RALib upon loading a game</td>
 </tr>
 <tr>
 <td>54</td>
@@ -3485,14 +3521,6 @@
 <td>Can't be controlled fully, needs controls related to turning pages in attached books</td>
 </tr>
 <tr>
-<td>69</td>
-<td>Mega Duck</td>
-<td></td>
-<td>N/A</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>70</td>
 <td>Zeebo</td>
 <td></td>
@@ -3537,6 +3565,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-02-04 22:09] televandalist:</code> Updated Amstrad CPC, Mega Duck, Sharp X68K, and PC-9800. Made separate lines for Play! and PCSX2.</li>
 <li><code>[2021-12-21 22:12] televandalist:</code> Bumped Dreamcast up a category</li>
 <li><code>[2021-12-05 12:45] televandalist:</code> Typo fix</li>
 <li><code>[2021-12-02 02:59] televandalist:</code> Console IDs 67-70 were assigned so I moved those up a category.</li>
@@ -3546,7 +3575,6 @@
 <li><code>[2021-10-27 11:40] televandalist:</code> Update PSP notes.</li>
 <li><code>[2021-10-27 09:29] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2021-09-20 20:46] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
-<li><code>[2021-08-21 05:53] televandalist:</code> Marked Intellivision as supported in RALib since apparently we forgot to update it before. Moved PSP up a category.</li>
 </ul>
 
               
