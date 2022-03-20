@@ -2872,9 +2872,11 @@
 <p>If multiple conditions are marked as <code>Measured</code> and have different target values, a Parse Error -22 will occur.</p>
 <p>Note that progress for <code>Measured</code> values is reported at the time of examination and may actually go down depending on the current value (Hit Count could be reset, or comparison value decreases).</p>
 <p>To limit the scope of a <code>Measured</code> condition, you can add a <code>MeasuredIf</code> condition. A <code>MeasuredIf</code> condition must be true for the <code>Measured</code> value to be non-zero (and for the achievement to trigger). You can use <code>MeasuredIf</code> to create achievements that require playing as a certain character, or just to prevent bogus data from showing up if the player is in the wrong part of the game. If any <code>MeasuredIf</code> condition in a group is false, the <code>Measured</code> value for the group is automatically 0.</p>
+<p>Since <a href="../PauseIf-Flag/"><code>PauseIf</code></a> has precedence over <code>Measured</code>, the <code>Measured</code> value will be captured when a group becomes paused, and the captured value will be returned until the group is unpaused and <code>Measured</code> can be evaluated again. If another <code>Measured</code> exists in a non-paused group, its value will be returned even if it is lower than the captured value.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-03-19 07:21] Jamiras:</code> add note about behavior when Paused</li>
 <li><code>[2021-05-01 07:28] meleu:</code> fix link to AddHits page</li>
 <li><code>[2020-05-17 14:14] Jamiras:</code> add MeasuredIf</li>
 <li><code>[2019-11-14 19:42] Jamiras:</code> Created Measured Flag (markdown)</li>
