@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Emulator-Support-and-Issues/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
@@ -3202,7 +3202,7 @@
 <td>RAQUASI88</td>
 <td>QUASI88</td>
 <td>No</td>
-<td>• QUASI88 crashes RALib <a href="https://github.com/libretro/quasi88-libretro/issues/35">when loading core</a>. Core <a href="https://github.com/libretro/quasi88-libretro/issues/44">writes over dsk file when emulator writes to dsk</a> - this breaks hashing<br>• PC-88VA not supported</td>
+<td>16 Apr 2022: Cannot load m3u. Hash fails because core locks disk file<br>16 Apr 2022: Attempting to load single disk game in RAlibretro just goes to "How many disks?" prompt. Seems to work in RetroArch<br>16 Apr 2022: RAlibretro does not provide subsystem interface for loading multi-disk games<br> ????: PC-88VA not supported</td>
 </tr>
 <tr>
 <td>49</td>
@@ -3344,7 +3344,7 @@
 <td></td>
 <td>vice_x64</td>
 <td>Needs Work</td>
-<td>• Save disks are generated with a virtual command (<code>#SAVEDISK:</code>) in the m3u (how to ignore for hashing?)<br>• How to handle multi-disk games that come in a zip <em>without an m3u</em>?</td>
+<td>• How to handle multi-disk games that come in a zip <em>without an m3u</em>?</td>
 </tr>
 <tr>
 <td>31</td>
@@ -3446,9 +3446,9 @@
 <td>57</td>
 <td>Fairchild Channel-F</td>
 <td></td>
-<td>FreeChaF<br>FBNeo</td>
+<td>FreeChaF</td>
 <td></td>
-<td>FreeChaF exposes memory, but has some control issues<br>FBNeo appears fine</td>
+<td>16 Apr 2022: Must press Select to switch P2/P1 in RALibreo (RetroArch maps both controllers?)<br>16 Apr 2022: System only has 2KB of RAM, core exposes 64KB, of which the only populated memory is the ROM data starting at $0800.<br>16 Apr 2022: Memory does not update when game is active (probably related to previous bullet point)</td>
 </tr>
 <tr>
 <td>58</td>
@@ -3496,7 +3496,7 @@
 <td></td>
 <td>X1 Millennium</td>
 <td></td>
-<td>• Does not expose memory<br>• <a href="https://github.com/r-type/xmil-libretro/issues/3">Crashes RALibretro</a><br>• Uncertain how core handles writing to disk/tape - may affect hashing</td>
+<td>16 Apr 2022: Disk writes modify source media - breaks hashing</td>
 </tr>
 <tr>
 <td>65</td>
@@ -3593,12 +3593,36 @@
 <td></td>
 <td>• Needs multi-touch fix in RALibretro<br/>• Needs console ID and hashing support</td>
 </tr>
+<tr>
+<td></td>
+<td>Uzebox</td>
+<td></td>
+<td>uzem</td>
+<td></td>
+<td>16 Apr 2022: Just needs console ID and hashing support</td>
+</tr>
+<tr>
+<td></td>
+<td>CHIP-8</td>
+<td></td>
+<td>jaxe</td>
+<td></td>
+<td>16 Apr 2022: Just needs console ID and hashing support; may need settings blacklist to prevent lowering speed</td>
+</tr>
+<tr>
+<td>***</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<hr />
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-04-17 21:49] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-04-05 22:54] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-04-04 16:10] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-03-13 21:13] televandalist:</code> Moved Mega Duck back down to Unsupported.</li>
@@ -3608,7 +3632,6 @@
 <li><code>[2022-02-19 17:23] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-02-04 22:09] televandalist:</code> Updated Amstrad CPC, Mega Duck, Sharp X68K, and PC-9800. Made separate lines for Play! and PCSX2.</li>
 <li><code>[2021-12-21 22:12] televandalist:</code> Bumped Dreamcast up a category</li>
-<li><code>[2021-12-05 12:45] televandalist:</code> Typo fix</li>
 </ul>
 
               
@@ -3709,7 +3732,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
       
     
   </body>

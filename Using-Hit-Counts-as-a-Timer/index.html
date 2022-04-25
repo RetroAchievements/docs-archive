@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Using-Hit-Counts-as-a-Timer/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
@@ -2863,30 +2863,31 @@
 
   <h1>Using Hit Counts as a Timer</h1>
 
-<p>In this example you'll see how hit counts can be used as a timer and award an achievement if a condition is true for 10 seconds.</p>
-<p>Let's see how <a href="http://retroachievements.org/Game/16">Super Hang-On (Mega Drive)</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak - Maintain at least 300kph for 10 seconds</a> looks like in Achievement Editor dialog:</p>
+<p>In this example, you'll see how hit counts can be used as a timer and award an achievement if a condition is true for 10 seconds.</p>
+<p>Let's see what <a href="http://retroachievements.org/Game/16">Super Hang-On (Mega Drive)</a>'s achievement <a href="http://retroachievements.org/Achievement/71">Speed Freak - Maintain at least 300kph for 10 seconds</a> looks like in the Achievement Editor dialog:</p>
 <p><strong>Addresses</strong></p>
 <ul>
 <li><code>0x0055a</code>: is the speed.</li>
 <li><code>0x0c757</code>: is 0x00 when the game is unpaused.</li>
 </ul>
 <p><img alt="speedfreak-example" src="https://user-images.githubusercontent.com/8508804/33312584-77f7fb0e-d40f-11e7-9daf-827c0f8d7dc6.png" /></p>
-<p>In this achievement, we wish for there to be a fact or condition that is true 600 times consecutively. The reason for this is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the fact we're looking for is "speed is over 300". Also, we want the player to keep the speed above 300 without pausing the game.</p>
+<p>For this achievement, we are looking for a condition that is met 600 times consecutively. The reason why is that the genesis is locked into processing 60 frames of logic per second (NTSC at least?). And the condition we're checking is "speed is over 300". Also, we want the player to keep the speed above 300 without pausing the game.</p>
 <p><strong>Conditions</strong></p>
 <ol>
 <li>
 <p>player's speed is above 300 for 600 frames (or 10 seconds have passed).</p>
 </li>
 <li>
-<p>reset the hit counter if speed is under 300.</p>
+<p>reset the hit counter if the speed goes under 300.</p>
 </li>
 <li>
-<p>reset the hit counter if the player pause the game.</p>
+<p>reset the hit counter if the player pauses the game.</p>
 </li>
 </ol>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-04-18 14:41] S-Flavius:</code> format: grammar</li>
 <li><code>[2019-02-16 19:57] meleu:</code> renamed "Using Hit Counts and ResetIf"</li>
 </ul>
 
@@ -2988,7 +2989,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
       
     
   </body>
