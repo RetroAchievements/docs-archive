@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/PauseIf-Flag/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3de6f41f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
@@ -2879,16 +2879,18 @@
 
   <h1>PauseIf Flag</h1>
 
-<p>The <code>PauseIf</code> can be chosen in the Flag column of the Achievement Editor.</p>
-<p>While true, the <code>PauseIf</code> pauses activity for most conditions <strong>in the same group</strong>. It <em>does not</em> pause conditions in other groups (more about <a href="../Alt-Groups/">Alt Groups</a> below).</p>
-<p><strong>Note</strong>: Keep in mind that <code>PauseIf</code> has priority over a <code>ResetIf</code> condition! In other words <strong><code>ResetIf</code> won't work while a <code>PauseIf</code> is active in the same group</strong>.</p>
-<p>The <code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like when the game is paused). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
-<p><strong>Also Note</strong>: A <code>ResetNextIf</code> condition attached to the active <code>PauseIf</code> condition is <em>not</em> paused. However, a <code>ResetNextIf</code> outside of the active <code>PauseIf</code> does get paused. This is the only case where a condition inside a paused group can still work. <code>ResetNextIf</code> attached to a <code>PauseIf</code> is useful for resetting a <code>PauseIf</code> with hit counts (see below) to unpause a group without resetting hit counts elsewhere in the group.</p>
+<p>The <code>PauseIf</code> flag can be chosen in the Flag column of the Achievement Editor.</p>
+<p><code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like when the game is paused). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
+<p>When a group is processed, first all <code>PauseIf</code> are evaluated in order. As soon as any <code>PauseIf</code> is true, the group stops processing. This means that any <code>PauseIf</code>s after the true <code>PauseIf</code> <strong>will not be evaluated</strong>. This allows one <code>PauseIf</code> to prevent another <code>PauseIf</code> from collecting hits, but it's usually better to write the second <code>PauseIf</code> with an <a href="../AndNext-and-OrNext-Flags/"><code>AndNext</code></a> to limit when it collects hits.</p>
+<p>This also means that any <a href="../ResetIf-Flag/"><code>ResetIf</code></a>s in the group will not be processed while the group is paused. To reset the hit count on a <code>PauseIf</code>, you must place the <code>ResetIf</code> in an alt group or attach a <a href="../ResetNextIf-Flag/"><code>ResetNextIf</code></a> to the <code>PauseIf</code>.</p>
+<p><a href="../Delta-Values/">Delta values</a> are not affected by paused groups. The value returned by a delta read will still be from the previous frame, not from the frame just before the group was paused.</p>
 <h2 id="pauseif-with-hit-counts"><code>PauseIf</code> with hit counts<a class="headerlink" href="#pauseif-with-hit-counts" title="Permanent link">link</a></h2>
-<p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused until a <code>ResetNextIf</code> condition attached to the active <code>PauseIf</code> condition is true</strong>, or <strong>until a <code>ResetIf</code> condition in <em>another</em> group is true</strong>, or until the game is reset. A <code>PauseIf</code> without a hit count will unpause when the condition is no longer true.</p>
+<p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused</strong> until the hit count is reset by a <code>ResetIf</code> in another group or a <code>ResetNextIf</code> attached to the <code>PauseIf</code>. You may hear this referred to as a PauseLock.</p>
+<p>A <code>PauseIf</code> without a hit count will automatically unpause when the condition is no longer true.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-05-24 18:58] Jamiras:</code> Updated PauseIf Flag (markdown)</li>
 <li><code>[2021-08-07 17:00] Dimedime:</code> updated interaction with ResetNextIf</li>
 <li><code>[2019-02-12 13:13] meleu:</code> typo</li>
 <li><code>[2019-02-12 13:13] meleu:</code> fix broken link</li>
@@ -2993,7 +2995,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c2e1ee47.min.js"></script>
+      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
       
     
   </body>
