@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Leaderboards/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -21,15 +21,16 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#4051b5">
         
+      
       
     
     
@@ -1430,6 +1431,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-tips" class="md-nav__link">
+    Design Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-wrapping" class="md-nav__link">
+    Score Wrapping
+  </a>
   
 </li>
       
@@ -2952,6 +2967,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#design-tips" class="md-nav__link">
+    Design Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-wrapping" class="md-nav__link">
+    Score Wrapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#further-help" class="md-nav__link">
     Further help
   </a>
@@ -2985,11 +3014,12 @@
 
   <h1>Leaderboards</h1>
 
-<p>Currently Leaderboards can be edited by developers on the website. It's a pretty hefty interface and a difficult job to get a leaderboard working just right. It genuinely takes some care and attention to get a good leaderboard working, so in this doc we'll try to understand how it works.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">link</a></h2>
 <p>This is how a game's Leaderboard List looks like on the website:</p>
 <p><img alt="leaderboard_list" src="https://user-images.githubusercontent.com/8508804/33172797-ad9b2f22-d038-11e7-97fe-09116181ddfa.png" /></p>
 <p>In the center you can see every already made Leaderboard, and in the right column you can see the <strong>Code Notes</strong> for the game. The Code Notes are here to help with some conditions we'll see below.</p>
+<p>And now you can also create and edit Leaderboards through the GUI just like achievements by selecting Leaderboards from the Assets List:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171059865-e8562b7e-225b-490e-a1b8-49945dac6483.png" /></p>
 <p>Here's a brief explanation of each field of a single Leaderboard:</p>
 <ul>
 <li><strong>Title</strong>: the leaderboard's title.</li>
@@ -3000,6 +3030,7 @@
 <li><strong>Cancel</strong>: cancel conditions, aka <strong>CAN</strong>.</li>
 <li><strong>Submit</strong>: submit conditions, aka <strong>SUB</strong>.</li>
 <li><strong>Value</strong>: a value interpreter, aka <strong>VAL</strong>.</li>
+<li><strong>Display Order</strong>: The order leaderboards appear and also used for hiding them from view if set to -1. This can only be edited from the site editor.</li>
 </ul>
 <p><strong>Note</strong>: A valid leaderboard MUST have all four of these conditions, even if they're set to always be true (<code>1=1</code>) or always be false (<code>0=1</code>).</p>
 <p>Those last 4 fields are really important and <em>LOTS</em> of care must be taken over the entry of any characters into these strings. That's why they deserve a further explanation:</p>
@@ -3009,9 +3040,8 @@
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
 <p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="../Condition-Syntax/">here</a>.</p>
 <p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
-<p><strong>Pro-tip:</strong> <strong>STA</strong>, <strong>CAN</strong>, and <strong>SUB</strong> support all logic available in the <a href="../Achievement-Logic-Features/">achievement editor</a>. The easiest way to make sure you get them written correctly is to create local achievements that capture the events, then use the <code>Copy Def</code> button to copy the achievement definition to the clipboard so you can paste it into the editor on the website.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">link</a></h2>
-<p>The best place to start is to look at one of the existing leaderboards <a href="https://retroachievements.org/leaderboardList.php">https://retroachievements.org/leaderboardList.php</a> and break it down to see how it works. We're going to use the <a href="https://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
+<p>The best place to start is to look at existing leaderboards and break it down to see how it works. We're going to use the <a href="https://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
 <p><img alt="new_leaderboard2" src="https://user-images.githubusercontent.com/8508804/33169120-90ddd7b2-d02a-11e7-8667-a659c980e7e5.png" /></p>
 <p>The <strong>Title/Description</strong> fields are quite obvious.</p>
 <p>The <strong>Type</strong> is "Time (Frames)". The value we're tracking updates once a frame, and the Genesis runs at 60 frames per second. (see not below for systems that run at other speeds)</p>
@@ -3019,6 +3049,7 @@
 <p>Now we're going to break down the most important parts.</p>
 <h3 id="start-conditions">Start Conditions<a class="headerlink" href="#start-conditions" title="Permanent link">link</a></h3>
 <p><strong>STA</strong>: <code>0xfe10=h0000_0xhf601=h0c_d0xhf601!=h0c_0xfff0=0</code></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171060330-82259da9-f1d8-4f6e-a86f-30c6a3bb6cb0.png" /></p>
 <ul>
 <li><code>0xfe10=h0000</code>: If 16-bit RAM address 0xfe10 is equivalent to hex 0000,</li>
 <li><code>_</code>: AND,</li>
@@ -3028,22 +3059,24 @@
 <li><code>_</code>: AND,</li>
 <li><code>0xfff0=0</code> If 16-bit RAM address 0xfff0 is equivalent to 0.</li>
 </ul>
-<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labelled in memory. In our example we have:</p>
+<p>This might seem daunting, because we don't know what these addresses mean. That's why the <strong>Code Notes</strong> in the right column are pretty handy! You can see how these addresses are labeled in memory. In our example we have:</p>
 <ul>
 <li><code>0xfe10</code> is the level, and is expected to be <code>0</code> (the first level).</li>
 <li><code>0xf601</code> is an 8-bit memory address, and we use the prefix <code>0xh</code> instead of <code>0x</code> to signify this. The <code>0xf601</code> is the screen mode. The second and third parts of the start statement are saying "the current mode should be <em>ingame</em> (<code>0c</code>), and the mode on the previous frame should NOT be <em>ingame</em>". <strong>Note</strong>: that <code>d</code> prefix on the address represents delta, or "the previous frame's value". <strong>Summing up:</strong> trigger this if we've JUST arrived in a level (the start of the level, when we want to start testing their time).</li>
 <li>Finally we also expect <code>0xfff0</code> to be equivalent to <code>0</code>, because this address is used for demo mode, and we don't want to award a leaderboard entry when the demo is active!</li>
 </ul>
-<p><strong>Tip</strong>: the most common mistake when creating leaderboards is forgetting the <code>h</code> when trying to reference an 8-bit memory address.</p>
+<p><strong>Tip</strong>: the most common mistake when creating leaderboards through the site editor is forgetting the <code>h</code> when trying to reference an 8-bit memory address.</p>
 <p><strong>Note</strong>: You can use HitCounts in the Start/Submit/Cancel triggers, but you are responsible for resetting them. These triggers are evaluated every frame, and the state of the leaderboard is dependent on which ones are true. As such, the HitCount will increment even when the leaderboard is not active unless you have an explicit ResetIf condition.</p>
 <h3 id="cancel-conditions">Cancel Conditions<a class="headerlink" href="#cancel-conditions" title="Permanent link">link</a></h3>
 <p><strong>CAN</strong>: <code>0xhfe13&lt;d0xhfe13</code></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171060309-97a86189-dcb7-4d13-90a1-6492094f195a.png" /></p>
 <ul>
 <li>0xfe13 is the number of lives.</li>
 </ul>
 <p>The cancel section checks if the player's LIVES counter ever becomes lower. Literally, it says "Cancel if the CURRENT value at 0xfe13 is less than the PREVIOUS value at 0xfe13". We want to do this because you could reach the final checkpoint and run out of time, resetting your timer to 0:00. We don't want to allow this, because it's not the correct way of completing the level. So if the player dies, we reset their leaderboard progress. Finally, if you connect two cancel conditions with <code>s</code>, the leaderboard will cancel when either one of them are true.</p>
 <h3 id="submit-conditions">Submit Conditions<a class="headerlink" href="#submit-conditions" title="Permanent link">link</a></h3>
 <p><strong>SUB</strong>: <code>0xf7cc!=0_d0xf7cc=0</code></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171060353-de03952b-ed25-4310-835a-aab059a5bffb.png" /></p>
 <ul>
 <li>0xf7cc is the endlevel flag, non-interactive.</li>
 </ul>
@@ -3057,13 +3090,33 @@
 <p>'Format' can be any of the available <a href="../Rich-Presence/#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
 <p><strong>NOTE</strong>: If you're using a system that doesn't run at 60Hz, you have to use "Time (millisecs)" and multiply by some value to do the conversion yourself (50Hz = <code>*2</code> [100/50], 60Hz = <code>*1.666666</code> [100/60], 75Hz =<code>*1.333333</code> [100/75]).</p>
 <p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
+<h2 id="design-tips">Design Tips<a class="headerlink" href="#design-tips" title="Permanent link">link</a></h2>
+<p>Leaderboards can sometimes get pretty spammy and take up a lot of screen space when starting or depending on how many are active at once. It is generally good practice to try and eliminate this as much as possible when you can. You can do this by taking advantage of the fact that you can start and submit a leaderboard on the same frame by setting the start condition to what you would normally use as the submit and then setting the submit condition so something that is always true like 1=1.</p>
+<p>If a game tracks a score or time that you are using to directly call for your value then consider starting and submitting the leaderboard on the same frame so that only one popup is called (for the submission) and the screen won't have extra clutter. There are still cases where it can be useful for players to have the values up on display if they are hidden in menus so use your best judgement. </p>
+<p>In games where levels are short and retries are quick you really don't want to have it start/cancel/submit repeatedly after each start/retry when you can help it as the popups can start stacking together and clutter the screen well past the actual attempts are over. These are a prime candidate for starting and submitting on the same frame when possible.</p>
+<h2 id="score-wrapping">Score Wrapping<a class="headerlink" href="#score-wrapping" title="Permanent link">link</a></h2>
+<p>In games where the high score wraps around back to 0 it is actually possible to account for this and keep your leaderboard tracking the score! You can do this by using Alt Groups combined with MeasuredIf to track which loop you are on and will use one Alt per loop.</p>
+<p>As an example lets take a look at Balloon Fight on NES where the score wraps around after 999,990. Here is the original leaderboard:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171064242-361165b4-cb69-4e3a-afac-8f5644146e4e.png" /></p>
+<p>And an updated version which will continue tracking after each loop:
+Core needs to have a Measured statement in it so just put something that is never true and also a ResetIf for resetting the MeasuredIf statements in the Alt Groups when needed (in this case on the title screen)</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171063958-dc6ffa27-ed0f-4005-8b76-3e8708b5629f.png" /></p>
+<p>The first Alt will contain the normal logic for high score</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171063915-b0216659-c441-4b43-8577-37161213a2d3.png" /></p>
+<p>The next Alt will contain a MeasuredIf that is true after the first loop which will allow this value to be used. You will also add an extra condition to AddSource in the total score from the first loop which will be 1,000,000 in this case. This value will now be used since MeasuredIf is true and the value is the highest of the Alt Groups</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171063993-04267eec-c4db-47cd-b15a-e8255b1c3f50.png" /></p>
+<p>For the next Alt we increment the number of hits used in the loop detection as well as the value we multiply the total score added by for each loop</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171064115-5680050d-e9d9-477f-9070-d45b7a353dc2.png" /></p>
 <h2 id="further-help">Further help<a class="headerlink" href="#further-help" title="Permanent link">link</a></h2>
 <p>There are unfortunately <em>MANY</em> ways to get this process wrong, so if you are having any trouble feel free to ask for help in our <a href="https://discord.gg/dq2E4hE">Discord server</a>.</p>
-<p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard.</p>
+<p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard. Just remember to clean up any test leaderboards that you push to the site afterwards.</p>
 <p>Please remember that these files are pulled directly into someone's game if they decide to play it, and a badly formed memory address or string could cause their emulator to crash, so please test your leaderboard code!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
+<li><code>[2022-05-30 18:45] Searo:</code> Typos</li>
+<li><code>[2022-05-30 18:35] Searo:</code> Misc updates</li>
 <li><code>[2022-02-04 17:36] Jamiras:</code> extract memory sizes</li>
 <li><code>[2022-02-04 16:47] Jamiras:</code> extract Value Definition to separate page</li>
 <li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
@@ -3071,13 +3124,11 @@
 <li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
 <li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
-<li><code>[2020-01-09 22:56] Keltron3030:</code> Added 24-bit to address format table</li>
-<li><code>[2019-12-24 15:27] Jamiras:</code> add Value from HitCount section and note about using hit counts in STA/SUB/CAN</li>
-<li><code>[2019-05-15 17:53] meleu:</code> recover</li>
 </ul>
 
               
             </article>
+            
           </div>
         </div>
         
@@ -3085,7 +3136,8 @@
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../Badge-and-Icon-Creation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Badge and Icon Creation" rel="prev">
@@ -3171,10 +3223,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
       
     
   </body>
