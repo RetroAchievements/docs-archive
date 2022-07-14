@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/BitCount-Size/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -2878,8 +2878,8 @@ AddSource Bit6 Mem 0x1234
           Bit7 Mem 0x1234 == Value 6
 </code></pre>
 <p>and would be true for <code>0x3F</code> (00111111), <code>0xDB</code> (11011011), <code>0xEE</code> (11101110), etc.</p>
-<p>It's most common use is counting collectibles for a [[Measured|Measured Flag]] condition.</p>
-<p>It can be combined with other flags like [[Delta|Delta Values]].</p>
+<p>Its most common use is counting collectibles for a <a href="../Measured-Flag/">Measured</a> condition.</p>
+<p>It can be combined with other flags like <a href="../Delta-Values/">Delta</a>.</p>
 <pre><code>BitCount Mem 0x1234 != BitCount Delta 0x1234
 </code></pre>
 <p>If you just want to make sure all the bits are set and don't need to worry about some subset of bits being set, you should check for concrete values (i.e. <code>Eight Bit 0x1234 = 0xFF</code> or <code>Lower4 0x1234 = 0x0F</code>).</p>
@@ -2887,6 +2887,7 @@ AddSource Bit6 Mem 0x1234
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-07-09 15:18] RALordAndrew:</code> Double-bracket links do not work on docs.retroachievements.org</li>
 <li><code>[2021-04-22 09:12] Jamiras:</code> Updated BitCount Size (markdown)</li>
 <li><code>[2021-04-22 09:06] Jamiras:</code> Updated BitCount Size (markdown)</li>
 <li><code>[2020-05-17 14:09] Jamiras:</code> add BitCount</li>
@@ -2992,7 +2993,7 @@ AddSource Bit6 Mem 0x1234
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
