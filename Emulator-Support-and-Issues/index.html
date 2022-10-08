@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.retroachievements.org/Emulator-Support-and-Issues/">
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.4">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.80dcb947.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -3074,6 +3074,14 @@
 <td>• Limited Microphone Support<br>• No DSi support</td>
 </tr>
 <tr>
+<td>21</td>
+<td>PlayStation 2</td>
+<td>PCSX2</td>
+<td>None</td>
+<td>No</td>
+<td>• PCSX2 is the only officially supported option for earning achievements</td>
+</tr>
+<tr>
 <td>23</td>
 <td>Magnavox Odyssey 2</td>
 <td></td>
@@ -3103,7 +3111,7 @@
 <td></td>
 <td>FinalBurn Neo</td>
 <td>Yes</td>
-<td>•  Needs Updated Board List<br>• Some boards may not be fully exposed</td>
+<td>• Needs Updated Board List<br>• Some boards may not be fully exposed</td>
 </tr>
 <tr>
 <td>28</td>
@@ -3234,10 +3242,42 @@
 <td></td>
 </tr>
 <tr>
+<td>57</td>
+<td>Fairchild Channel-F</td>
+<td></td>
+<td>FreeChaF</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
 <td>63</td>
 <td>Watara Supervision</td>
 <td></td>
 <td>Potator</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>69</td>
+<td>Mega Duck</td>
+<td></td>
+<td>SameDuck</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>71</td>
+<td>Arduboy</td>
+<td></td>
+<td>Arduous</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td>WASM-4</td>
+<td></td>
+<td>wasm4</td>
 <td>Yes</td>
 <td></td>
 </tr>
@@ -3263,22 +3303,6 @@
 <td>NeoCD</td>
 <td></td>
 <td>• Appears fully functional<br>• Needs hashing method</td>
-</tr>
-<tr>
-<td>71</td>
-<td>Arduboy</td>
-<td></td>
-<td>Arduous</td>
-<td></td>
-<td>• Appears fully functional</td>
-</tr>
-<tr>
-<td>72</td>
-<td>WASM-4</td>
-<td></td>
-<td>wasm4</td>
-<td></td>
-<td>• Needs multi-touch fix in RALibretro</td>
 </tr>
 </tbody>
 </table>
@@ -3318,14 +3342,6 @@
 <td></td>
 <td></td>
 <td>Untested</td>
-</tr>
-<tr>
-<td>21</td>
-<td>PlayStation 2</td>
-<td>PCSX2</td>
-<td></td>
-<td></td>
-<td>Standalone with RA support is in active development</td>
 </tr>
 <tr>
 <td>21</td>
@@ -3464,14 +3480,6 @@
 <td>Currently only playable in MAME, which cannot be supported</td>
 </tr>
 <tr>
-<td>57</td>
-<td>Fairchild Channel-F</td>
-<td></td>
-<td>FreeChaF</td>
-<td></td>
-<td>16 Apr 2022: Must press Select to switch P2/P1 in RALibreo (RetroArch maps both controllers?)<br>16 Apr 2022: System only has 2KB of RAM, core exposes 64KB, of which the only populated memory is the ROM data starting at $0800.<br>16 Apr 2022: Memory does not update when game is active (probably related to previous bullet point)</td>
-</tr>
-<tr>
 <td>58</td>
 <td>FM Towns</td>
 <td></td>
@@ -3552,20 +3560,36 @@
 <td>Can't be controlled fully, needs controls related to turning pages in attached books</td>
 </tr>
 <tr>
-<td>69</td>
-<td>Mega Duck</td>
-<td></td>
-<td>SameDuck</td>
-<td></td>
-<td>• Shares SameBoy's issue of reinitializing memory</td>
-</tr>
-<tr>
 <td>70</td>
 <td>Zeebo</td>
 <td></td>
 <td>N/A</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>74</td>
+<td>Arcadia 2001</td>
+<td>WinArcadia</td>
+<td></td>
+<td></td>
+<td>• RetroAchievements support is WIP</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Interton VC 4000</td>
+<td>WinArcadia</td>
+<td></td>
+<td></td>
+<td>• RetroAchievements support is WIP</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Elektor TV Games Computer</td>
+<td>WinArcadia</td>
+<td></td>
+<td></td>
+<td>• RetroAchievements support is WIP</td>
 </tr>
 </tbody>
 </table>
@@ -3635,6 +3659,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2022-10-08 01:10] televandalist:</code> Moved PS2, Mega Duck, Channel F, Arduboy, and WASM-4 to supported. Added Arcadia 2001, Interton VC 4000, and Elektor TV Games Computer.</li>
 <li><code>[2022-05-01 10:29] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-04-25 17:30] televandalist:</code> Added info for PCSX2 standalone</li>
 <li><code>[2022-04-25 17:26] televandalist:</code> Moved WASM-4 up</li>
@@ -3644,7 +3669,6 @@
 <li><code>[2022-04-04 16:10] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
 <li><code>[2022-03-13 21:13] televandalist:</code> Moved Mega Duck back down to Unsupported.</li>
 <li><code>[2022-03-01 03:25] televandalist:</code> Added Console ID to Arduboy</li>
-<li><code>[2022-02-28 19:11] TheFetishMachine:</code> Added core for CD-i, added VMU</li>
 </ul>
 
 
