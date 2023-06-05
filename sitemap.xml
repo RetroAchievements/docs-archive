@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.retroachievements.org/Code-Notes/</loc>
+         <lastmod>2023-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.retroachievements.org/Code-Review-Checklist/</loc>
          <lastmod>2023-06-05</lastmod>
          <changefreq>daily</changefreq>
