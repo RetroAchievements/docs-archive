@@ -236,6 +236,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.retroachievements.org/Creating-Entries/</loc>
+         <lastmod>2023-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.retroachievements.org/Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/</loc>
          <lastmod>2023-06-05</lastmod>
          <changefreq>daily</changefreq>
@@ -887,11 +892,6 @@
     </url>
     <url>
          <loc>https://docs.retroachievements.org/WIP-Content-Guidelines/</loc>
-         <lastmod>2023-06-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.retroachievements.org/WIP-DevCoC/</loc>
          <lastmod>2023-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
