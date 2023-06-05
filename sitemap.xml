@@ -411,6 +411,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.retroachievements.org/Handling-Tickets/</loc>
+         <lastmod>2023-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.retroachievements.org/Hash-Labels/</loc>
          <lastmod>2023-06-05</lastmod>
          <changefreq>daily</changefreq>
@@ -767,11 +772,6 @@
     </url>
     <url>
          <loc>https://docs.retroachievements.org/Testing-for-Demo-Mode/</loc>
-         <lastmod>2023-06-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.retroachievements.org/Tickets/</loc>
          <lastmod>2023-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
