@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/PauseIf-Flag/">
+      
       
         <link rel="prev" href="../ResetNextIf-Flag/">
       
@@ -1220,27 +1222,6 @@
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
     Changelog
   </a>
   
@@ -3139,27 +3120,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3182,40 +3142,13 @@
 
 <p>The <code>PauseIf</code> flag can be chosen in the Flag column of the Achievement Editor.</p>
 <p><code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like when the game is paused). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
-<p>When a group is processed, first all <code>PauseIf</code> are evaluated in order. As soon as any <code>PauseIf</code> is true, the group stops processing. This means that any <code>PauseIf</code>s after the true <code>PauseIf</code> <strong>will not be evaluated</strong>. This allows one <code>PauseIf</code> to prevent another <code>PauseIf</code> from collecting hits, but it's usually better to write the second <code>PauseIf</code> with an <a href="../AndNext-and-OrNext-Flags/"><code>AndNext</code></a> to limit when it collects hits.</p>
-<p>This also means that any <a href="../ResetIf-Flag/"><code>ResetIf</code></a>s in the group will not be processed while the group is paused. To reset the hit count on a <code>PauseIf</code>, you must place the <code>ResetIf</code> in an alt group or attach a <a href="../ResetNextIf-Flag/"><code>ResetNextIf</code></a> to the <code>PauseIf</code>.</p>
-<p><a href="../Delta-Values/">Delta values</a> are not affected by paused groups. The value returned by a delta read will still be from the previous frame, not from the frame just before the group was paused.</p>
+<p>When a group is processed, first all <code>PauseIf</code> are evaluated in order. As soon as any <code>PauseIf</code> is true, the group stops processing. This means that any <code>PauseIf</code>s after the true <code>PauseIf</code> <strong>will not be evaluated</strong>. This allows one <code>PauseIf</code> to prevent another <code>PauseIf</code> from collecting hits, but it's usually better to write the second <code>PauseIf</code> with an <a href="AndNext-and-OrNext-Flags"><code>AndNext</code></a> to limit when it collects hits.</p>
+<p>This also means that any <a href="ResetIf-Flag"><code>ResetIf</code></a>s in the group will not be processed while the group is paused. To reset the hit count on a <code>PauseIf</code>, you must place the <code>ResetIf</code> in an alt group or attach a <a href="ResetNextIf-Flag"><code>ResetNextIf</code></a> to the <code>PauseIf</code>.</p>
+<p><a href="Delta-Values">Delta values</a> are not affected by paused groups. The value returned by a delta read will still be from the previous frame, not from the frame just before the group was paused.</p>
 <h2 id="pauseif-with-hit-counts"><code>PauseIf</code> with hit counts<a class="headerlink" href="#pauseif-with-hit-counts" title="Permanent link">link</a></h2>
 <p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused</strong> until the hit count is reset by a <code>ResetIf</code> in another group or a <code>ResetNextIf</code> attached to the <code>PauseIf</code>. You may hear this referred to as a PauseLock.</p>
 <p>A <code>PauseIf</code> without a hit count will automatically unpause when the condition is no longer true.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-24 18:58] Jamiras:</code> Updated PauseIf Flag (markdown)</li>
-<li><code>[2021-08-07 17:00] Dimedime:</code> updated interaction with ResetNextIf</li>
-<li><code>[2019-02-12 13:13] meleu:</code> typo</li>
-<li><code>[2019-02-12 13:13] meleu:</code> fix broken link</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated PauseIf (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-24 18:58] Jamiras:</code> Updated PauseIf Flag (markdown)</li>
-<li><code>[2021-08-07 17:00] Dimedime:</code> updated interaction with ResetNextIf</li>
-<li><code>[2019-02-12 13:13] meleu:</code> typo</li>
-<li><code>[2019-02-12 13:13] meleu:</code> fix broken link</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated PauseIf (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-24 18:58] Jamiras:</code> Updated PauseIf Flag (markdown)</li>
-<li><code>[2021-08-07 17:00] Dimedime:</code> updated interaction with ResetNextIf</li>
-<li><code>[2019-02-12 13:13] meleu:</code> typo</li>
-<li><code>[2019-02-12 13:13] meleu:</code> fix broken link</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated PauseIf (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-05-24 18:58] Jamiras:</code> Updated PauseIf Flag (markdown)</li>

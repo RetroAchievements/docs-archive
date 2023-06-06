@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/libretro-core-support/">
+      
       
         <link rel="prev" href="../Console-Specific-Tips/">
       
@@ -1739,27 +1741,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3247,27 +3228,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3323,7 +3283,7 @@
 <p>The GameBoy Color has 32KB of RAM broken into eight 4KB banks. Normally, the first bank is exposed at $C000, and the other seven banks are paged into the $D000 memory space. As RetroAchievements only process data once per frame, we can't rely on the correct data being in the $D000 page when we evaluate our logic, so we ask that $D000 always only contains bank 1, and banks 2-7 are exposed at $10000-$15FFF (addresses which are not normally used by the GameBoy Color).</p>
 <h3 id="immutable-game-data">Immutable Game Data<a class="headerlink" href="#immutable-game-data" title="Permanent link">link</a></h3>
 <p>The other important thing for a core to consider is that the game files should not be modified.</p>
-<p>RetroAchievements <a href="../Game-Identification/">hashes a portion of the game data</a> (usually most or all of it) to ensure the player is using a compatible version of the game. If the hash doesn't match exactly, we don't enable achievements. This ensures that regional variants are only allowed if their memory lines up correctly. It also ensures players aren't playing on a hacked version where they have infinite health or some other cheat applied.</p>
+<p>RetroAchievements <a href="Game-Identification">hashes a portion of the game data</a> (usually most or all of it) to ensure the player is using a compatible version of the game. If the hash doesn't match exactly, we don't enable achievements. This ensures that regional variants are only allowed if their memory lines up correctly. It also ensures players aren't playing on a hacked version where they have infinite health or some other cheat applied.</p>
 <p>If the game files are modified by the core, the hash may change and the game will no longer be identified.</p>
 <p>Any modifications to the game files should be handled through the <code>retro_serialize</code> interface.</p>
 <h3 id="core-settings">Core Settings<a class="headerlink" href="#core-settings" title="Permanent link">link</a></h3>
@@ -3337,21 +3297,6 @@
 <h3 id="disabling-support">Disabling Support<a class="headerlink" href="#disabling-support" title="Permanent link">link</a></h3>
 <p>If a core wishes to opt-out of achievement support, it can explicitly call the <code>RETRO_ENVIRONMENT_SET_SUPPORT_ACHIEVEMENTS</code> with <code>false</code>/<code>0</code>. This will disable the achievement subsystem while the core is loaded, which will avoid any attempts to identify if the loaded content has achievements, and disable all functionality limited by having achievement hardcore mode enabled (rewind, loading save states, slow-motion, cheats).</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-01-06 07:40] Jamiras:</code> Created libretro core support (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-01-06 07:40] Jamiras:</code> Created libretro core support (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-01-06 07:40] Jamiras:</code> Created libretro core support (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-01-06 07:40] Jamiras:</code> Created libretro core support (markdown)</li>

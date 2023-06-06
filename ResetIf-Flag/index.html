@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/ResetIf-Flag/">
+      
       
         <link rel="prev" href="../Achievement-Development-Overview/">
       
@@ -1192,27 +1194,6 @@
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
     Changelog
   </a>
   
@@ -3139,27 +3120,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3181,32 +3141,14 @@
   <h1>ResetIf Flag</h1>
 
 <p>The <code>ResetIf</code> can be chosen in the Flag column of the Achievement Editor</p>
-<p>If the associated condition is true, <strong>all</strong> <a href="../Hit-Counts/">hit counts</a> in the achievement will be reset to 0. This includes hit counts in other groups (more about it in <a href="../Alt-Groups/">Alt Groups</a> below).</p>
+<p>If the associated condition is true, <strong>all</strong> <a href="Hit-Counts">hit counts</a> in the achievement will be reset to 0. This includes hit counts in other groups (more about it in <a href="Alt-Groups">Alt Groups</a> below).</p>
 <p>The achievement will not trigger if one or more <code>ResetIf</code> conditions is true, even if there are no conditions with hit count targets.</p>
-<p>You can see many examples of <code>ResetIf</code> in the <a href="../Real-Examples/">Real Examples page</a>.</p>
+<p>You can see many examples of <code>ResetIf</code> in the <a href="Real-Examples">Real Examples page</a>.</p>
 <h2 id="resetif-with-hit-counts"><code>ResetIf</code> with hit counts<a class="headerlink" href="#resetif-with-hit-counts" title="Permanent link">link</a></h2>
 <p>A <code>Reset If</code> condition with a hit count will only trigger when the hit count target is met.</p>
 <p><strong>Note</strong>: If another <code>ResetIf</code> condition is met, all conditions, including the <code>ResetIf</code> with the hit count will have their hit counts reset to 0.</p>
 <p>It is very common to use a condition with a hit count of 1 as a start marker for an achievement, and use a <code>ResetIf</code> to cancel the achievement before the end condition is met. A common example is a damageless achievement: "From start of (level/battle), reset if damage taken, trigger at end of (level/battle)". When the start condition is true, a hit count is captured. If it's still set when the end condition is true, the achievement triggers. If the <code>ResetIf</code> condition triggers, the hit count on the start condition is set back to zero, which makes the condition false when evaluating the state when the end condition is true, and the achievement will not trigger.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-02-12 13:11] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated ResetIf (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-02-12 13:11] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated ResetIf (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-02-12 13:11] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:36] meleu:</code> Updated ResetIf (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2019-02-12 13:11] meleu:</code> fix broken links</li>

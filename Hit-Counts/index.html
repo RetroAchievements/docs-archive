@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/Hit-Counts/">
+      
       
         <link rel="prev" href="../Alt-Groups/">
       
@@ -1365,27 +1367,6 @@
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
     Changelog
   </a>
   
@@ -3137,27 +3118,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3182,51 +3142,18 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/32706333/48969526-38774c80-efbd-11e8-98ec-9d6c16dba022.png" /></p>
 <p>The default is Zero, which means the condition must be true for the achievement to trigger.</p>
 <p>If you set a target hit count, like 5, it means the condition must be true for at least that many frames, and once that hit count target is met, it doesn't need to be met again at any other time.</p>
-<p><strong>PLEASE NOTE</strong>: if a condition has a non-zero hit count, and reaches the number required, this condition is no longer tested. It  remains true, <strong>UNLESS</strong> you have a <a href="../ResetIf-Flag/"><code>ResetIf</code></a>, which we will discuss below.</p>
-<p>Conditions with <a href="../ResetIf-Flag/"><code>Reset If</code></a> and <a href="../PauseIf-Flag/"><code>PauseIf</code></a> flags can also have hits. Follow the links for details.</p>
-<p>In the <a href="../Real-Examples/">Real Examples</a> section there are two examples good examples:</p>
+<p><strong>PLEASE NOTE</strong>: if a condition has a non-zero hit count, and reaches the number required, this condition is no longer tested. It  remains true, <strong>UNLESS</strong> you have a <a href="ResetIf-Flag"><code>ResetIf</code></a>, which we will discuss below.</p>
+<p>Conditions with <a href="ResetIf-Flag"><code>Reset If</code></a> and <a href="PauseIf-Flag"><code>PauseIf</code></a> flags can also have hits. Follow the links for details.</p>
+<p>In the <a href="Real-Examples">Real Examples</a> section there are two examples good examples:</p>
 <ul>
-<li><a href="../Using-Hit-Counts-as-a-Timer/">Using Hit Counts as a Timer</a></li>
-<li><a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/">Using Delta Values and Hit Counts to Detect an Increment</a></li>
+<li><a href="Using-Hit-Counts-as-a-Timer">Using Hit Counts as a Timer</a></li>
+<li><a href="Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment">Using Delta Values and Hit Counts to Detect an Increment</a></li>
 </ul>
 <h3 id="effect-of-resetting-the-emulator">Effect of Resetting the Emulator<a class="headerlink" href="#effect-of-resetting-the-emulator" title="Permanent link">link</a></h3>
 <p>When the emulator is reset, all hits are immediately zeroed out and the achievement is set back to Waiting. However, an emulator reset does not clear out memory, so it's possible for the hits to reaccumulate before the game reinitializes the memory. As such, you should not rely on the hits being cleared out by the emulator reset.</p>
 <p>Similarly, when the emulator first "powers on", the state of memory is not guaranteed to be consistent as true hardware does not initialize its memory. Instead, the software sets some initial state when it claims portions of memory. Some games actually rely on the random nature of the uninitialized memory to seed their random number generators.</p>
 <p>For both cases, you should have an explicit reset for some piece of knowable logic, like the player being on the title screen.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-07-27 19:31] Searo:</code> Page doesn't exist and we don't care what softcore users do anymore</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> add section detailing behavior at reset/power on</li>
-<li><code>[2019-02-18 17:01] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 13:10] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:23] meleu:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2019-02-12 09:21] meleu:</code> Created Hit Counts (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-07-27 19:31] Searo:</code> Page doesn't exist and we don't care what softcore users do anymore</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> add section detailing behavior at reset/power on</li>
-<li><code>[2019-02-18 17:01] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 13:10] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:23] meleu:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2019-02-12 09:21] meleu:</code> Created Hit Counts (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-07-27 19:31] Searo:</code> Page doesn't exist and we don't care what softcore users do anymore</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2021-07-17 07:27] Jamiras:</code> add section detailing behavior at reset/power on</li>
-<li><code>[2019-02-18 17:01] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 13:10] meleu:</code> fix broken links</li>
-<li><code>[2019-02-12 09:23] meleu:</code> Updated Hit Counts (markdown)</li>
-<li><code>[2019-02-12 09:21] meleu:</code> Created Hit Counts (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-07-27 19:31] Searo:</code> Page doesn't exist and we don't care what softcore users do anymore</li>

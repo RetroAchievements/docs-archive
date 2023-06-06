@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/Getting-Started-as-an-Achievement-Developer-es/">
+      
       
         <link rel="prev" href="../How-to-Become-an-Achievement-Developer-es/">
       
@@ -2591,27 +2593,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3237,27 +3218,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3306,7 +3266,7 @@
 <p><img alt="memoryinspector" src="https://user-images.githubusercontent.com/8508804/38775207-485b706e-4053-11e8-9a94-842e7fd838e1.png" /></p>
 <p>El inspector de memoria se puede utilizar para encontrar variables en la RAM que podamos utilizar. Esencialmente estas en una caseria de tesoros por encontrar los lugares en memoria - esta ventana te ayudara a examinar y filtrar la RAM del juego que se encuentra corriendo.</p>
 <p><strong>NOTA: Si deseas un video paso por paso explicando como encontra valores en la memoria, <a href="https://www.youtube.com/watch?v=8nYb_5cgQHY">este viejo video</a> puede llegar a ser util</strong>.</p>
-<p><strong>Tambien mira</strong>: <a href="../Memory-Inspector-Overview-es/">Un vistaso al Inspector de Memoria</a> y <a href="../Tips-and-Tricks-es/#memory-digging-tips">Tips en la busqueda de Memoria</a>.</p>
+<p><strong>Tambien mira</strong>: <a href="Memory-Inspector-Overview-es">Un vistaso al Inspector de Memoria</a> y <a href="Tips-and-Tricks-es#memory-digging-tips">Tips en la busqueda de Memoria</a>.</p>
 <p>Para empezar o reiniciar una prueba, haz click en <strong>New 8-bit Test</strong> en la parte casi superior del medio.</p>
 <p>Para manter las cosas simple, vamos a empezar a buscar el valor en memoria que guarda el numero de anillos que hemos recolectado. Nuestros pasos son los siguientes:</p>
 <ol>
@@ -3334,7 +3294,7 @@
 <li><strong>Tip</strong>: Si te gusta experimentar con la memoria, intenta ingresar valores directamente en el visor de la RAM. Esto puede causar efectos devastadores en un juego, o podria hacer exactamente lo que deseas que pase, (o inclusive nada!) De todos modos podria ser util, ver si ingresas un valor y paso el resultado que esperas. Utilizalo con cuidado!</li>
 </ul>
 <p>Cuando encuentres un valor del que te sientes feliz con el, puedes escriber una pequeña nota de lo que es haciendo click en <strong>Save Note</strong>, esto lo va a guardar en la base de datos, y va a ser automaticamente cargado la siguiente vez que cargues el visor de memoria para ese juego, donde sea que te encuentres! Nota despues que haces click en 'Save Note', la nota va a ser automaticamente guardada en la base de datos y compartida, la cual todos los desarrolladores tendran acceso a ella. Todos van a descargar esa nota cuando carguen su ROM. Si intentas sobre-escribir una nota, te va a salir una ventana de confirmacion antes de guardarla.</p>
-<p>Puedes encontrar mas utiles <a href="../Tips-and-Tricks-es/#Tips-en-Busqueda-de-Memoria">Tips en Busqueda de Memoria aqui</a>.</p>
+<p>Puedes encontrar mas utiles <a href="Tips-and-Tricks-es#Tips-en-Busqueda-de-Memoria">Tips en Busqueda de Memoria aqui</a>.</p>
 <h2 id="sets-de-logros">Sets de Logros<a class="headerlink" href="#sets-de-logros" title="Permanent link">link</a></h2>
 <p>Ok asi que el valor en memoria para el numero de anillos se encuentra almacenado en <code>0xfe20</code> - nota para un no-programador, estamos manejando numeros en el <a href="https://es.wikipedia.org/wiki/Sistema_hexadecimal">sistema numerico Hexadecimal</a> que puede llegar a ser desalentador, pero no te preocupes, esencialmente simplemente son numeros y letras en vez de solo numeros, y no olvides <code>0x</code> al principio para mostrar que es un valor en memoria en hexadecimal. Hemos encontrado un valor en el que estamos interesado y lo hemos guardado con <strong>Save Note</strong>. Ahora queremos crear un nuevo logro.</p>
 <p>Ve a la pestaña de <strong>RetroAchievements</strong> en el menu de tu emulador, escoje <strong>Achievement Sets</strong> y vas a ver esta ventana:</p>
@@ -3370,7 +3330,7 @@
 </ul>
 <p>Con esto establecido, no necesitamos ninguna otra condicion que agregar, asi que podemos regresar a <strong>Achievements Dialog</strong> (Ventana de Logros). Para estar seguros, tenemos que guardar nuestro progreso presionando <strong>Save Local</strong>! Esto guarda todo localmente para asegurar que no perdamos ningun progreso.</p>
 <ul>
-<li><strong>Nota</strong>: usualmente un logro tiene mas de un requisito para evadir que salte en un momento equivocado (por ejemplo: jugando en modo demo). En este ejemplo estamos utilizando solamente un requisito para simplificar la explicacion. Mira mas <a href="../Tips-and-Tricks-es/#Tips-en-la-Creacion-de-Logros">Tips en la Creacion de Logros aqui</a>.</li>
+<li><strong>Nota</strong>: usualmente un logro tiene mas de un requisito para evadir que salte en un momento equivocado (por ejemplo: jugando en modo demo). En este ejemplo estamos utilizando solamente un requisito para simplificar la explicacion. Mira mas <a href="Tips-and-Tricks-es#Tips-en-la-Creacion-de-Logros">Tips en la Creacion de Logros aqui</a>.</li>
 </ul>
 <h2 id="probando-el-logro">Probando el logro<a class="headerlink" href="#probando-el-logro" title="Permanent link">link</a></h2>
 <p>Ahora podemos 'activar' este logro localmente presionando en <strong>Activate</strong> a mano derecha de la ventana. Esto va a empezar a monitoriar estos valores en memoria y va a entregar el logro una vez que todas las condiciones se hubieran cumplido de manera verdadera. Ahora podemos avanzar y probar si este logro sirve!</p>
@@ -3385,22 +3345,22 @@
 <li><strong><del>Nunca</del> Evade hacer logros con una sola condicion lo mas que puedas</strong>. De otra manera es muy probable que el logro se dispare en una parte no deseada. Este es el <strong>error mas comun por un desarrollador</strong></li>
 </ul>
 <ul>
-<li>Si el juego tiene un <strong>modo demo</strong> (El CPU juega despues que esperas un tiempo en la pantalla de titulo), percatate de <a href="../Tips-and-Tricks-es/#finding-the-address-for-demo-mode">encontrar el valor para eso</a> y agrega una condicion para que tus logros no se disparen en modo demo. Tambien necesitas saber como utilizar <a href="../Achievement-Logic-Features-es/#pauseif">PauseIf</a> y <a href="../Achievement-Logic-Features-es/#resetif">ResetIf</a>.</li>
+<li>Si el juego tiene un <strong>modo demo</strong> (El CPU juega despues que esperas un tiempo en la pantalla de titulo), percatate de <a href="Tips-and-Tricks-es#finding-the-address-for-demo-mode">encontrar el valor para eso</a> y agrega una condicion para que tus logros no se disparen en modo demo. Tambien necesitas saber como utilizar <a href="Achievement-Logic-Features-es#pauseif">PauseIf</a> y <a href="Achievement-Logic-Features-es#resetif">ResetIf</a>.</li>
 </ul>
 <ul>
-<li><strong><a href="../Achievement-Logic-Features-es/#pauseif">PauseIf</a> cheat codes</strong>: Si el juego tiene un cheat para aumentar vidas, seleccionar niveles, etc. Percatate de encontrar el valor para eso y agregar algo de proteccion en tus logros. OK, talvez no es un tema muy sencillo, pero es algo que tienes que tener en cuenta cuando estes creando un set oficial de logros.</li>
+<li><strong><a href="Achievement-Logic-Features-es#pauseif">PauseIf</a> cheat codes</strong>: Si el juego tiene un cheat para aumentar vidas, seleccionar niveles, etc. Percatate de encontrar el valor para eso y agregar algo de proteccion en tus logros. OK, talvez no es un tema muy sencillo, pero es algo que tienes que tener en cuenta cuando estes creando un set oficial de logros.</li>
 </ul>
 <ul>
-<li><strong>Evita crear logros de simplemente llegar a un nivel.</strong> Esto puede ser conseguido por medio de un password o un cheat. Mejor haz logros por terminar un nivel, <a href="../Achievement-Templates-es/#finish-level-n">como en la plantilla de aqui</a>. Tambie, <strong>no hagas logros por simplemente empezar un juego o "empieza el juego con X personaje"</strong>.</li>
+<li><strong>Evita crear logros de simplemente llegar a un nivel.</strong> Esto puede ser conseguido por medio de un password o un cheat. Mejor haz logros por terminar un nivel, <a href="Achievement-Templates-es#finish-level-n">como en la plantilla de aqui</a>. Tambie, <strong>no hagas logros por simplemente empezar un juego o "empieza el juego con X personaje"</strong>.</li>
 </ul>
 <ul>
-<li>Si quieres crear un logro por conseguir un item especifico y unico, agrega algunas condiciones para estar seguro que el jugador obtuvo el item donde se suponia que se tenga que obtener, <a href="../Achievement-Templates-es/#collect-an-item-in-a-specific-level">como en esta plantilla de aqui</a>. De otra manera el logro podra ser conseguible utilizando un codigo o cargando una partida de cargado.</li>
+<li>Si quieres crear un logro por conseguir un item especifico y unico, agrega algunas condiciones para estar seguro que el jugador obtuvo el item donde se suponia que se tenga que obtener, <a href="Achievement-Templates-es#collect-an-item-in-a-specific-level">como en esta plantilla de aqui</a>. De otra manera el logro podra ser conseguible utilizando un codigo o cargando una partida de cargado.</li>
 </ul>
 <ul>
 <li><strong>Evita hacer muchos logros sobre simples cosas que necesitan casi cero esfuerzo</strong>. Ejemplos de que <strong>NO</strong> tienes que hacer: obten una moneda o un hongo en Super Mario Bros.</li>
 </ul>
 <ul>
-<li>Ten encuenta los <a href="../Developers-Code-of-Conduct-es/#unwelcome-concepts">conceptos no-bienvenidos en el diseño de logros</a>.</li>
+<li>Ten encuenta los <a href="Developers-Code-of-Conduct-es#unwelcome-concepts">conceptos no-bienvenidos en el diseño de logros</a>.</li>
 </ul>
 <ul>
 <li><strong>Se creativo con tus logros</strong>. Esos que abarcan caracteristicas y detalles unicos son los mas bienvenidos. Los jugadores aman cuando un pequeño detalle de un juego que aman es apoyado por un logro. Leer un Walkthrough en <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> te puede dar un poco de inspiracion tambien.</li>
@@ -3408,41 +3368,23 @@
 <ul>
 <li>Intentar pasar la mayor cantidad de tiempo posible con el juego, especialmente si es la primera vez que desarrollas logros. Toma mas tiempo conocer el juego por dentro, trabajar con la memoria funciona ya que es la mejor fuente de ideas para logros unicos.</li>
 </ul>
-<p>Puedes encontrar mas en la <a href="../Tips-and-Tricks-es/">pagina de Tips y Trucos</a>.</p>
+<p>Puedes encontrar mas en la <a href="Tips-and-Tricks-es">pagina de Tips y Trucos</a>.</p>
 <h2 id="siguientes-pasos">Siguientes pasos<a class="headerlink" href="#siguientes-pasos" title="Permanent link">link</a></h2>
 <p>Ahora que ya sabes como utilizar el Inspector de Memoria, y el Editor de Logros. Llego la hora de que aprendas nuevas tecnicas y practiques:</p>
 <ul>
-<li>En orden que refines la logica de tus logros, puedes ver con que funciones cuentas en la pagina de <a href="../Achievement-Logic-Features-es/">Funciones en la Logica de los Logros</a>.</li>
+<li>En orden que refines la logica de tus logros, puedes ver con que funciones cuentas en la pagina de <a href="Achievement-Logic-Features-es">Funciones en la Logica de los Logros</a>.</li>
 </ul>
 <ul>
-<li>Puedes aprender viendo logros existentes que otros desarrolladores han hecho con una explicacion extra en la pagina de <a href="../Real-Examples-es/">Ejemplos Reales</a>.</li>
+<li>Puedes aprender viendo logros existentes que otros desarrolladores han hecho con una explicacion extra en la pagina de <a href="Real-Examples-es">Ejemplos Reales</a>.</li>
 </ul>
 <ul>
-<li>Tambien puedes ver algunos ejemplos genericos en la pagina de <a href="../Achievement-Templates-es/">Plantillas para Logros</a>.</li>
+<li>Tambien puedes ver algunos ejemplos genericos en la pagina de <a href="Achievement-Templates-es">Plantillas para Logros</a>.</li>
 </ul>
 <ul>
-<li>Una vez que hubieras aprendido todas las tecnicas basicas, si quieres obtener el estatus de Desarrollador tienes que seguir los pasos explicados aqui: <a href="../How-to-Become-an-Achievement-Developer-es/">Como convertirme en un desarrollador de logros</a>.</li>
+<li>Una vez que hubieras aprendido todas las tecnicas basicas, si quieres obtener el estatus de Desarrollador tienes que seguir los pasos explicados aqui: <a href="How-to-Become-an-Achievement-Developer-es">Como convertirme en un desarrollador de logros</a>.</li>
 </ul>
 <p>Que te diviertas!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-04-16 15:36] meleu:</code> fix broken links</li>
-<li><code>[2019-03-12 14:58] meleu:</code> Updated Getting Started as an Achievement Developer ES (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-04-16 15:36] meleu:</code> fix broken links</li>
-<li><code>[2019-03-12 14:58] meleu:</code> Updated Getting Started as an Achievement Developer ES (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2019-04-16 15:36] meleu:</code> fix broken links</li>
-<li><code>[2019-03-12 14:58] meleu:</code> Updated Getting Started as an Achievement Developer ES (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2019-04-16 15:36] meleu:</code> fix broken links</li>

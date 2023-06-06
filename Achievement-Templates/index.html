@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/Achievement-Templates/">
+      
       
         <link rel="prev" href="../Set-Development-Roadmap/">
       
@@ -1670,27 +1672,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3277,27 +3258,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3779,8 +3739,8 @@
 <p>In the <a href="#collecting-an-item-n-times">Collecting an Item N times</a> we are counting how many times the counter goes up. But in some games there are situations where the counter goes up twice in the same frame, and the hit counter is incremented only by one. This behavior, obviously, ruins our logic. We're going to see a way to circumvent this issue.</p>
 <p>The technique used here relies on two other ones:</p>
 <ul>
-<li><a href="../SubSource-Flag/#using-subsource-to-count-increments">using <code>SubSource</code> to count specific increments</a></li>
-<li><a href="../AddHits-and-SubHits-Flag/"><code>AddHits</code> Flag</a></li>
+<li><a href="SubSource-Flag#using-subsource-to-count-increments">using <code>SubSource</code> to count specific increments</a></li>
+<li><a href="AddHits-and-SubHits-Flag"><code>AddHits</code> Flag</a></li>
 </ul>
 <p>Here's the trick:</p>
 <table>
@@ -3839,7 +3799,7 @@
 </tr>
 </tbody>
 </table>
-<p>It can looks a bit confusing at a first sight, but maybe using a real example it can be more clear. Check the <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/">Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</a>.</p>
+<p>It can looks a bit confusing at a first sight, but maybe using a real example it can be more clear. Check the <a href="Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame">Circumvent the Problem of a Counter Incrementing Twice in the Same Frame</a>.</p>
 <h2 id="check-for-a-specific-value-changing-to-another-specific-value-ten-times">Check for a specific value changing to another specific value ten times<a class="headerlink" href="#check-for-a-specific-value-changing-to-another-specific-value-ten-times" title="Permanent link">link</a></h2>
 <p>In this example we want to detect a value changing from <code>V1</code> to <code>V2</code> ten times:</p>
 <table>
@@ -3987,48 +3947,6 @@
 <li><strong>Note:</strong> You can use multiple conditional resets, each one in their own alt group to have far greater control of reset behavior.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-05-01 07:24] meleu:</code> fix link to AddHits page</li>
-<li><code>[2020-09-01 09:50] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:31] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:28] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:23] Brandon D:</code> Updated as per feedback from Keltron</li>
-<li><code>[2020-09-01 09:04] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 08:47] Brandon D:</code> Took a real usage case from my game Dicing Knight Period and condensed it down to something more manageable. The AddHits docs are also a bit vague on some things and this hopefully will help out there.</li>
-<li><code>[2019-12-02 11:25] Searo:</code> Updating "Check for a specific value changing to another specific value ten times" to use AndNext to simplify the logic</li>
-<li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
-<li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-05-01 07:24] meleu:</code> fix link to AddHits page</li>
-<li><code>[2020-09-01 09:50] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:31] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:28] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:23] Brandon D:</code> Updated as per feedback from Keltron</li>
-<li><code>[2020-09-01 09:04] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 08:47] Brandon D:</code> Took a real usage case from my game Dicing Knight Period and condensed it down to something more manageable. The AddHits docs are also a bit vague on some things and this hopefully will help out there.</li>
-<li><code>[2019-12-02 11:25] Searo:</code> Updating "Check for a specific value changing to another specific value ten times" to use AndNext to simplify the logic</li>
-<li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
-<li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-05-01 07:24] meleu:</code> fix link to AddHits page</li>
-<li><code>[2020-09-01 09:50] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:31] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:28] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 09:23] Brandon D:</code> Updated as per feedback from Keltron</li>
-<li><code>[2020-09-01 09:04] Brandon D:</code> Updated Achievement Templates (markdown)</li>
-<li><code>[2020-09-01 08:47] Brandon D:</code> Took a real usage case from my game Dicing Knight Period and condensed it down to something more manageable. The AddHits docs are also a bit vague on some things and this hopefully will help out there.</li>
-<li><code>[2019-12-02 11:25] Searo:</code> Updating "Check for a specific value changing to another specific value ten times" to use AndNext to simplify the logic</li>
-<li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
-<li><code>[2019-02-08 10:43] meleu:</code> cosmetic</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2021-05-01 07:24] meleu:</code> fix link to AddHits page</li>

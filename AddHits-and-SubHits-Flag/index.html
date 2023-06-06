@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/AddHits-and-SubHits-Flag/">
+      
       
         <link rel="prev" href="../SubSource-Flag/">
       
@@ -1269,27 +1271,6 @@
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
     Changelog
   </a>
   
@@ -3125,27 +3106,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3168,27 +3128,12 @@
 
 <p><strong>NOTE</strong>: This technique is not needed for simple games, so it is not mandatory for jr-devs.</p>
 <p><code>AddHits</code> and <code>SubHits</code> can be chosen in the Flag column of the Achievement Editor.</p>
-<p>The <code>AddHits</code>/<code>SubHits</code> conditions do not have to be true for the achievement to trigger. They modify the <a href="../Hit-Counts/">hit count</a> of another condition, which does have to be true for the achievement to trigger. The sequence of conditions is referred to as a <code>AddHits</code> chain (even if it contains <code>SubHits</code>).</p>
+<p>The <code>AddHits</code>/<code>SubHits</code> conditions do not have to be true for the achievement to trigger. They modify the <a href="Hit-Counts">hit count</a> of another condition, which does have to be true for the achievement to trigger. The sequence of conditions is referred to as a <code>AddHits</code> chain (even if it contains <code>SubHits</code>).</p>
 <p>When a condition with the <code>AddHits</code>/<code>SubHits</code> flag is true, the hit count for that condition is incremented. A hit target may be placed on the condition to keep it from tallying too many times.</p>
 <p>The total hit count of the final condition in a chain is incremented by the hit counts of any <code>AddHits</code> conditions in the chain, and decremented by any <code>SubHits</code> conditions in the chain. If the total hit count meets or exceeds the target hit count of the final condition, it's considered true.</p>
 <p>If the final condition of the chain does not have a hit target, the <code>AddHits</code>/<code>SubHits</code> conditions have no effect on the achievement. The final condition will be true if, and only if, it is true by itself.</p>
 <p><strong>NOTE</strong>: The hit target on the final condition of the chain serves as both the overall target hit count and the maximum hit count for that condition. As a result, it is impossible to use <code>SubHits</code> without <code>AddHits</code>, as any hits subtracted by the <code>SubHits</code> could not be recovered without a separate <code>AddHits</code>. Similarly, if you need to put a condition-specific limit on the final condition of the chain, you should pull it out as an <code>AddHits</code> condition with the appropriate limit and use a dummy final condition with the overall hit target (i.e. <code>0=1 (10)</code>). The dummy condition would never accumulate any hits of its own, and only serve to tally the other values in the chain.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>

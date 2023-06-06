@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/Value-Definition/">
+      
       
         <link rel="prev" href="../Prior-Values/">
       
@@ -1455,27 +1457,6 @@
       
         <li class="md-nav__item">
   <a href="#changelog" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
     Changelog
   </a>
   
@@ -3233,27 +3214,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3274,11 +3234,11 @@
 
   <h1>Value Definition</h1>
 
-<p>Value definitions are used for <a href="../Leaderboards/#value">leaderboards</a> and <a href="../Rich-Presence/#value-properties">rich presence</a>.</p>
-<p>A value is calculated by evaluating one or more <a href="../Condition-Syntax/">memory reads</a>. Read values can be scaled (multiplication) or summed (addition) to arrive at the final value.</p>
+<p>Value definitions are used for <a href="Leaderboards#value">leaderboards</a> and <a href="Rich-Presence#value-properties">rich presence</a>.</p>
+<p>A value is calculated by evaluating one or more <a href="Condition-Syntax">memory reads</a>. Read values can be scaled (multiplication) or summed (addition) to arrive at the final value.</p>
 <p><strong>NOTE</strong>: Value calculations are performed using 32-bit signed integers. As such, the maximum value is 2147483647 and the minimum value is -2147483648. Values above the maximum will wrap around and register as very negative numbers. </p>
 <h3 id="value-from-measured">Value from Measured<a class="headerlink" href="#value-from-measured" title="Permanent link">link</a></h3>
-<p>Starting with the 0.77 DLL (and RetroArch 1.8.2), you can use the <a href="../Measured-Flag/">Measured</a> flag to generate a Value. This supports all logic supported by the achievement editor, but every condition must have a flag that somehow influences the Measured value (i.e. <a href="../AddSource-Flag/">AddSource</a>, <a href="../AddAddress-Flag/">AddAddress</a>). Note that the Measured condition cannot have a multiplier directly on it. If the final clause needs to be multiplied, use an additional AddSource and Measure 0.</p>
+<p>Starting with the 0.77 DLL (and RetroArch 1.8.2), you can use the <a href="Measured-Flag">Measured</a> flag to generate a Value. This supports all logic supported by the achievement editor, but every condition must have a flag that somehow influences the Measured value (i.e. <a href="AddSource-Flag">AddSource</a>, <a href="AddAddress-Flag">AddAddress</a>). Note that the Measured condition cannot have a multiplier directly on it. If the final clause needs to be multiplied, use an additional AddSource and Measure 0.</p>
 <p><strong>VAL</strong>: <code>A:0xhfe24_A:0xhfe25*60_A:0xhfe22*3600_M:0</code></p>
 <p>The example provided above reads:</p>
 <pre><code>AddSource 8-bit 0xfe24
@@ -3289,7 +3249,7 @@ Measured  Value 0
 <p>The addresses represent frames, seconds, and minutes respectively, and are individually multiplied and then added together to create a total number of frames that can be submitted to the database.</p>
 <h3 id="value-from-hitcount">Value from HitCount<a class="headerlink" href="#value-from-hitcount" title="Permanent link">link</a></h3>
 <p>Sometimes you want to count the number of times something happens and submit that as the value. You can also do this using Measured syntax. Just add a comparison to your final condition. Do not include an explicit Hit target, or that will be the maximum value that can be submitted.</p>
-<p>The <a href="../Hit-Counts/">HitCount</a> on the condition will automatically be set to 0 when the leaderboard starts, and the HitCount will be submitted as the Value when the leaderboard submit trigger activates. You can use <a href="../PauseIf-Flag/">PauseIf</a> and <a href="../ResetIf-Flag/">ResetIf</a> within the Value conditions to further control the behavior.</p>
+<p>The <a href="Hit-Counts">HitCount</a> on the condition will automatically be set to 0 when the leaderboard starts, and the HitCount will be submitted as the Value when the leaderboard submit trigger activates. You can use <a href="PauseIf-Flag">PauseIf</a> and <a href="ResetIf-Flag">ResetIf</a> within the Value conditions to further control the behavior.</p>
 <p>For example:</p>
 <pre><code>M:0xH1234!=d0xH1234
 </code></pre>
@@ -3321,30 +3281,6 @@ Measured  Value 0
 <p>Binary Coded Decimal (BCD) is when a values in memory is stored as decimal digits in each hex digit location. For example, if the memory inspector shows 86 at a byte in memory, it would normally represent the decimal value 134 (0x86 hex = 134 decimal). BCD decoding the value keeps the individual decimal numbers and the result is 86 (0x86 hex = 86 BCD).</p>
 <p>You can have the runtime decode BCD values by putting a <code>b</code> prefix in front of the memory reference (i.e. <code>b0xW1234</code>). You still need to specify the size of the BCD memory address. b0x1234 reads a 16-bit value. b0xh1234 reads an 8-bit value and b0xX1234 reads a 32-bit value. NOTE: Support for 16-bit and 32-bit BCD decoding is a feature of the 0.075 toolkit.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-02-04 17:41] Jamiras:</code> add link to Condition Syntax</li>
-<li><code>[2022-02-04 17:34] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:52] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:41] Jamiras:</code> Updated Value definition (markdown)</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-02-04 17:41] Jamiras:</code> add link to Condition Syntax</li>
-<li><code>[2022-02-04 17:34] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:52] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:41] Jamiras:</code> Updated Value definition (markdown)</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-02-04 17:41] Jamiras:</code> add link to Condition Syntax</li>
-<li><code>[2022-02-04 17:34] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:52] Jamiras:</code> Updated Value Definition (markdown)</li>
-<li><code>[2022-02-04 16:41] Jamiras:</code> Updated Value definition (markdown)</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-02-04 17:41] Jamiras:</code> add link to Condition Syntax</li>

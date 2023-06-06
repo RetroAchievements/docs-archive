@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.retroachievements.org/Leaderboards/">
+      
       
         <link rel="prev" href="../Tips-and-Tricks/">
       
@@ -1697,27 +1699,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3275,27 +3256,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changelog_1" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_2" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog_3" class="md-nav__link">
-    Changelog
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3340,7 +3300,7 @@
 <p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. NOTE: Cancel is given priority over Start. If both become true in the same frame, the leaderboard will not start.</p>
 <p>If the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard score will be submitted. NOTE: Cancel is given priority over Submit. If both become true in the same frame, the score will not be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
-<p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="../Condition-Syntax/">here</a>.</p>
+<p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="Condition-Syntax">here</a>.</p>
 <p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">link</a></h2>
 <p>The best place to start is to look at existing leaderboards and break it down to see how it works. We're going to use the <a href="https://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
@@ -3386,10 +3346,10 @@
 <p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
 <h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">link</a></h3>
 <p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an in game popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
-<p>For more information on the value format, see <a href="../Value-Definition/">Value Definition</a>.</p>
+<p>For more information on the value format, see <a href="Value-Definition">Value Definition</a>.</p>
 <p><strong>NOTE</strong>: The value calculation is performed using 32-bit signed integers. As such, the maximum value is 2147483647 and the minimum value is -2147483648. Values above the maximum will wrap around and register as very negative numbers. </p>
 <h3 id="value-format">Value Format<a class="headerlink" href="#value-format" title="Permanent link">link</a></h3>
-<p>'Format' can be any of the available <a href="../Rich-Presence/#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
+<p>'Format' can be any of the available <a href="Rich-Presence#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
 <p><strong>NOTE</strong>: If you're using a system that doesn't run at 60Hz, you have to use "Time (millisecs)" and multiply by some value to do the conversion yourself (50Hz = <code>*2</code> [100/50], 60Hz = <code>*1.666666</code> [100/60], 75Hz =<code>*1.333333</code> [100/75]).</p>
 <p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
 <h2 id="design-tips">Design Tips<a class="headerlink" href="#design-tips" title="Permanent link">link</a></h2>
@@ -3414,48 +3374,6 @@ Core needs to have a Measured statement in it so just put something that is neve
 <p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard. Just remember to clean up any test leaderboards that you push to the site afterwards.</p>
 <p>Please remember that these files are pulled directly into someone's game if they decide to play it, and a badly formed memory address or string could cause their emulator to crash, so please test your leaderboard code!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
-<li><code>[2022-05-30 18:45] Searo:</code> Typos</li>
-<li><code>[2022-05-30 18:35] Searo:</code> Misc updates</li>
-<li><code>[2022-02-04 17:36] Jamiras:</code> extract memory sizes</li>
-<li><code>[2022-02-04 16:47] Jamiras:</code> extract Value Definition to separate page</li>
-<li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
-<li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
-</ul>
-<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
-<li><code>[2022-05-30 18:45] Searo:</code> Typos</li>
-<li><code>[2022-05-30 18:35] Searo:</code> Misc updates</li>
-<li><code>[2022-02-04 17:36] Jamiras:</code> extract memory sizes</li>
-<li><code>[2022-02-04 16:47] Jamiras:</code> extract Value Definition to separate page</li>
-<li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
-<li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
-</ul>
-<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
-<p>Last 10 changes on this page:</p>
-<ul>
-<li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
-<li><code>[2022-05-30 18:45] Searo:</code> Typos</li>
-<li><code>[2022-05-30 18:35] Searo:</code> Misc updates</li>
-<li><code>[2022-02-04 17:36] Jamiras:</code> extract memory sizes</li>
-<li><code>[2022-02-04 16:47] Jamiras:</code> extract Value Definition to separate page</li>
-<li><code>[2021-10-23 12:28] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
-<li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
-</ul>
-<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
