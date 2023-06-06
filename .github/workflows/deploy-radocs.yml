@@ -13,6 +13,7 @@ jobs:
       - run: |
           pip install mkdocs-material
           pip install git+https://github.com/cmitu/mkdocs-altlink-plugin
+          pip install mdx_truly_sane_lists
       - name: Deploying the documentation website...
         run: |
           git config user.name "${{ github.actor }}"
