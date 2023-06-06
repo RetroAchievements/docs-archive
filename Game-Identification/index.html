@@ -1231,6 +1231,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3410,6 +3424,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3433,63 +3461,71 @@
 <p>This page details the hashing method used for each supported system.</p>
 <h2 id="the-3do-company">The 3DO Company<a class="headerlink" href="#the-3do-company" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>3DO Interactive Multiplayer</strong> uses a custom hash.</li>
+<li><strong>3DO Interactive Multiplayer</strong> uses a custom hash.<ul>
 <li>The volume header (first 132 bytes of sector 0) and the contents of the LaunchMe file are hashed.</li>
+</ul>
+</li>
 </ul>
 <h2 id="amstrad">Amstrad<a class="headerlink" href="#amstrad" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Amstrad CPC</strong> uses the MD5 checksums of each disk.</li>
+<li><strong>Amstrad CPC</strong> uses the MD5 checksums of each disk.<ul>
 <li>As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</li>
+</ul>
+</li>
 </ul>
 <h2 id="apple">Apple<a class="headerlink" href="#apple" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Apple II</strong> uses the MD5 checksums of each disk.</li>
+<li><strong>Apple II</strong> uses the MD5 checksums of each disk.<ul>
 <li>As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</li>
+</ul>
+</li>
 </ul>
 <h2 id="arcade">Arcade<a class="headerlink" href="#arcade" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Arcade</strong> uses a custom hash.</li>
+<li><strong>Arcade</strong> uses a custom hash.<ul>
 <li>The filename string without the extension (<code>path/galaga.zip</code> -&gt; <code>galaga</code>) is hashed. It is case-sensitive.</li>
+</ul>
+</li>
 </ul>
 <h2 id="arduboy-inc">Arduboy Inc.<a class="headerlink" href="#arduboy-inc" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Arduboy</strong> uses a custom hash.</li>
+<li><strong>Arduboy</strong> uses a custom hash.<ul>
 <li>Arudboy .hex files contain ASCII text. We normalize to Unix line endings, then perform a full file hash.</li>
+</ul>
+</li>
 </ul>
 <h2 id="atari">Atari<a class="headerlink" href="#atari" title="Permanent link">link</a></h2>
 <ul>
-<li>
-<p><strong>Atari 2600</strong> uses the MD5 checksum.</p>
+<li><strong>Atari 2600</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Atari 7800</strong> uses the MD5 checksum unless the ROM has a header.<ul>
+<li>If the ROM starts with <code>\1ATARI7800</code>, the first 128 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>\1ATARI7800</code>, the entire file is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Atari 7800</strong> uses the MD5 checksum unless the ROM has a header.</p>
-</li>
-<li>
-<p>If the ROM starts with <code>\1ATARI7800</code>, the first 128 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>\1ATARI7800</code>, the entire file is hashed.</p>
-</li>
-<li>
-<p><strong>Atari Jaguar</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Atari Jaguar CD</strong> uses a custom hash.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Atari Jaguar</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Atari Jaguar CD</strong> uses a custom hash.<ul>
 <li>A header block is located within the first sector of the disc. This block indicates the location and size of the boot code, which is loaded and hashed.</li>
-<li>
-<p>If the resulting hash is <code>254487b59ab21bc005338e85cbf9fd2f</code>, it's a common bootloader for homebrew games and the actual game code is located in track 2. If a separate header block containing a new location and size is found in track 2, then that data is loaded and hashed.</p>
+<li>If the resulting hash is <code>254487b59ab21bc005338e85cbf9fd2f</code>, it's a common bootloader for homebrew games and the actual game code is located in track 2. If a separate header block containing a new location and size is found in track 2, then that data is loaded and hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Atari Lynx</strong> uses the MD5 checksum unless the ROM has a header.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Atari Lynx</strong> uses the MD5 checksum unless the ROM has a header.<ul>
 <li>If the ROM starts with <code>LYNX\0</code>, the first 64 bytes are ignored and the remaining file contents are hashed. If the ROM does not start with <code>LYNX\0</code>, the entire file is hashed.</li>
+</ul>
+</li>
 </ul>
 <h2 id="bandai">Bandai<a class="headerlink" href="#bandai" title="Permanent link">link</a></h2>
 <ul>
-<li>
-<p><strong>WonderSwan</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>WonderSwan Color</strong> uses the MD5 checksum.</p>
-</li>
+<li><strong>WonderSwan</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>WonderSwan Color</strong> uses the MD5 checksum.</li>
 </ul>
 <h2 id="coleco">Coleco<a class="headerlink" href="#coleco" title="Permanent link">link</a></h2>
 <ul>
@@ -3513,36 +3549,38 @@
 </ul>
 <h2 id="microsoft">Microsoft<a class="headerlink" href="#microsoft" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>MSX / MSX2</strong> uses the MD5 checksums of each disk.</li>
+<li><strong>MSX / MSX2</strong> uses the MD5 checksums of each disk.<ul>
 <li>As saving mutates disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions. We do not believe this is working, but have yet to find a game where saving to disk actually works.</li>
+</ul>
+</li>
 </ul>
 <h2 id="nec">NEC<a class="headerlink" href="#nec" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>PC-8001/PC-8801</strong> uses the MD5 checksums of each disk.</li>
-<li>
-<p>As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
+<li><strong>PC-8001/PC-8801</strong> uses the MD5 checksums of each disk.<ul>
+<li>As saving and other manipulations can mutate disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</li>
+</ul>
 </li>
-<li>
-<p><strong>PC Engine / TurboGrafx 16 / SuperGrafx</strong> use the MD5 checksum unless the ROM has a header.</p>
+</ul>
+<ul>
+<li><strong>PC Engine / TurboGrafx 16 / SuperGrafx</strong> use the MD5 checksum unless the ROM has a header.<ul>
+<li>If the size of the file is 512 bytes more than a multiple of 128KB, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 128KB, the entire file is hashed.</li>
+</ul>
 </li>
-<li>
-<p>If the size of the file is 512 bytes more than a multiple of 128KB, the first 512 bytes are ignored and the remaining file contents are hashed. If the size of the file is not 512 bytes more than a multiple of 128KB, the entire file is hashed.</p>
-</li>
-<li>
-<p><strong>PC Engine CD / TurboGrafx-CD</strong> - uses a custom hash. The boot code and disc title are hashed as follows:</p>
-</li>
+</ul>
+<ul>
+<li><strong>PC Engine CD / TurboGrafx-CD</strong> - uses a custom hash. The boot code and disc title are hashed as follows:<ul>
 <li>Read 128 bytes from sector 1 of the data track (PCE predates ISO-9660, so there's no file system to read).</li>
 <li>If <code>"PC Engine CD-ROM SYSTEM"</code> does not exist at 32 bytes into the data, discard as invalid.</li>
 <li>Copy the last 22 bytes of the data into a buffer. This is the disc title, and <em>usually</em> identifies the game.</li>
 <li>The first three bytes of the data are a little-endian sector index for the boot code.</li>
 <li>The fourth byte is the number of sectors that the boot code occupies.</li>
 <li>The boot code is appended to the buffer (N sectors, starting at sector X)</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>PC-FX</strong> uses a custom hash. The boot code and disc title are hashed as follows:</p>
-</li>
+</ul>
+<ul>
+<li><strong>PC-FX</strong> uses a custom hash. The boot code and disc title are hashed as follows:<ul>
 <li>Read 32 bytes from sector 0 of the data track (PC-FX predates ISO-9660, so there's no file system to read).</li>
 <li>If <code>"PC-FX:Hu_CD-ROM"</code> was not read, discard as invalid.</li>
 <li>Read 128 bytes from sector 1 of the data track into a buffer. This is the volume header and includes the disc title.</li>
@@ -3551,144 +3589,148 @@
 <li>The boot code is appended to the buffer (N sectors, starting at sector X)</li>
 <li>The buffer is hashed.</li>
 </ul>
+</li>
+</ul>
 <h2 id="nintendo">Nintendo<a class="headerlink" href="#nintendo" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Famicom Disk System</strong> uses the MD5 checksum unless the file has a header.</li>
+<li><strong>Famicom Disk System</strong> uses the MD5 checksum unless the file has a header.<ul>
 <li>If the ROM starts with <code>FDS\1a</code>, the first 16 bytes are ignored and the remaining file contents are hashed. </li>
 <li>If the ROM does not start with <code>FDS\1a</code>, the entire file is hashed. </li>
-<li>
-<p>As saving mutates disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</p>
+<li>As saving mutates disk data, local copies of loaded images are required to ensure that their hashes do not change across sessions.</li>
+</ul>
 </li>
-<li>
-<p><strong>Game Boy</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Game Boy Advance</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Game Boy Color</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>GameCube</strong> uses a custom hash. Initially loaded program code is hashed as follows:</p>
-</li>
+</ul>
+<ul>
+<li><strong>Game Boy</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Game Boy Advance</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Game Boy Color</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>GameCube</strong> uses a custom hash. Initially loaded program code is hashed as follows:<ul>
 <li>The Apploader is loaded and added to a buffer.</li>
 <li>Each DOL segment (code and data) referenced in the Apploader is loaded and added to the buffer.</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Nintendo 64</strong> uses the MD5 checksum for Big Endian (<code>.z64</code>) ROMs.</p>
+</ul>
+<ul>
+<li><strong>Nintendo 64</strong> uses the MD5 checksum for Big Endian (<code>.z64</code>) ROMs.<ul>
+<li>ByteSwapped (<code>.v64</code>) and Little Endian (<code>.n64</code>) use the MD5 checksum for its Big Endian counterpart.</li>
+</ul>
 </li>
-<li>
-<p>ByteSwapped (<code>.v64</code>) and Little Endian (<code>.n64</code>) use the MD5 checksum for its Big Endian counterpart.</p>
-</li>
-<li>
-<p><strong>Nintendo DS</strong> uses a custom hash.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Nintendo DS</strong> uses a custom hash.<ul>
 <li>A NDS ROM has a 0x160 byte header. In this header are pointers to icon/title information and to the boot code for both processors. The hash method combines the header, the two pieces of boot code, and the icon/title information and hashes the result.</li>
 <li>The icon/title information is 0xA00 bytes starting at the address stored in the header at $68</li>
 <li>The arm9 code address is stored at $20 in the header, and the size is stored at $2C in the header</li>
-<li>
-<p>The arm7 code address is stored at $30 in the header, and the size is stored at $3C in the header</p>
+<li>The arm7 code address is stored at $30 in the header, and the size is stored at $3C in the header</li>
+</ul>
 </li>
-<li>
-<p><strong>Nintendo Entertainment System / Famicom</strong> uses a custom hash.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Nintendo Entertainment System / Famicom</strong> uses a custom hash.<ul>
 <li>If the ROM starts with <code>NES\1a</code>, the first 16 bytes are ignored and the remaining file contents are hashed.</li>
-<li>
-<p>If the ROM does not start with <code>NES\1a</code>, the entire file is hashed.</p>
+<li>If the ROM does not start with <code>NES\1a</code>, the entire file is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Pokemon Mini</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Super Nintendo Entertainment System / Super Famicom / Satellaview / Sufami Turbo</strong> use the MD5 unless the ROM has a header.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Pokemon Mini</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Super Nintendo Entertainment System / Super Famicom / Satellaview / Sufami Turbo</strong> use the MD5 unless the ROM has a header.<ul>
 <li>If the size of the file is 512 bytes more than a multiple of 8KB, the first 512 bytes are ignored and the remaining file contents are hashed. </li>
-<li>
-<p>If the size of the file is not 512 bytes more than a multiple of 8KB, the entire file is hashed.</p>
+<li>If the size of the file is not 512 bytes more than a multiple of 8KB, the entire file is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Virtual Boy</strong> uses the MD5 checksum.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Virtual Boy</strong> uses the MD5 checksum.</li>
 </ul>
 <h2 id="snk">SNK<a class="headerlink" href="#snk" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>Neo Geo CD</strong> uses a custom hash. Initially loaded program code is hashed as follows:</li>
+<li><strong>Neo Geo CD</strong> uses a custom hash. Initially loaded program code is hashed as follows:<ul>
 <li>The <code>IPL.TXT</code> file is loaded and parsed.</li>
 <li>Each line of the file is data to load. PRG files are executable code. Each PRG file is loaded and added to the buffer.</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Neo Geo Pocket</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Neo Geo Pocket Color</strong> uses the MD5 checksum.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Neo Geo Pocket</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Neo Geo Pocket Color</strong> uses the MD5 checksum.</li>
 </ul>
 <h2 id="sega">Sega<a class="headerlink" href="#sega" title="Permanent link">link</a></h2>
 <ul>
-<li>
-<p><strong>32X</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Dreamcast</strong> uses a custom hash. The disc metadata and primary executable are hashed as follows:</p>
-</li>
+<li><strong>32X</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Dreamcast</strong> uses a custom hash. The disc metadata and primary executable are hashed as follows:<ul>
 <li>The first 512 bytes of sector 0 are appended to the buffer. This contains the volume header and ROM header. The first 16 bytes must be <code>"SEGA SEGAKATANA "</code>. If not, discard as invalid.</li>
 <li>The contents of the primary executable (as identified by the volume header) are appended to the buffer.</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>Game Gear</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Master System</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Mega Drive / Genesis</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>SG-1000</strong> uses the MD5 checksum.</p>
-</li>
-<li>
-<p><strong>Saturn</strong> uses a custom hash.</p>
-</li>
-<li>The first 512 bytes of track 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be <code>"SEGADISCSYSTEM  "</code> for Sega CD or <code>"SEGA SEGASATURN "</code> for Sega Saturn. If not, discard as invalid.</li>
-<li>
-<p>Immediately following those 512 bytes are an arbitrary amount of code that validates the region and loads the primary executable. Without processing the code, we cannot determine what additional file(s) to hash, so this was determined to be sufficient as an alternative to hashing the entire CD.</p>
-</li>
-<li>
-<p><strong>Sega CD</strong> uses a custom hash.</p>
-</li>
+</ul>
+<ul>
+<li><strong>Game Gear</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Master System</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Mega Drive / Genesis</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>SG-1000</strong> uses the MD5 checksum.</li>
+</ul>
+<ul>
+<li><strong>Saturn</strong> uses a custom hash.<ul>
 <li>The first 512 bytes of track 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be <code>"SEGADISCSYSTEM  "</code> for Sega CD or <code>"SEGA SEGASATURN "</code> for Sega Saturn. If not, discard as invalid.</li>
 <li>Immediately following those 512 bytes are an arbitrary amount of code that validates the region and loads the primary executable. Without processing the code, we cannot determine what additional file(s) to hash, so this was determined to be sufficient as an alternative to hashing the entire CD.</li>
 </ul>
+</li>
+</ul>
+<ul>
+<li><strong>Sega CD</strong> uses a custom hash.<ul>
+<li>The first 512 bytes of track 0 are hashed. This contains the volume header and ROM header. The first 16 bytes must be <code>"SEGADISCSYSTEM  "</code> for Sega CD or <code>"SEGA SEGASATURN "</code> for Sega Saturn. If not, discard as invalid.</li>
+<li>Immediately following those 512 bytes are an arbitrary amount of code that validates the region and loads the primary executable. Without processing the code, we cannot determine what additional file(s) to hash, so this was determined to be sufficient as an alternative to hashing the entire CD.</li>
+</ul>
+</li>
+</ul>
 <h2 id="sony">Sony<a class="headerlink" href="#sony" title="Permanent link">link</a></h2>
 <ul>
-<li><strong>PlayStation</strong> uses a custom hash. The primary executable and its name are hashed as follows:</li>
+<li><strong>PlayStation</strong> uses a custom hash. The primary executable and its name are hashed as follows:<ul>
 <li>The <code>SYSTEM.CNF</code> file is loaded and parsed. The primary executable is identified by the BOOT= line within.</li>
 <li>The primary executable name (and its path) are extracted from <code>SYSTEM.CNF</code> and written to a buffer.</li>
 <li>The contents of the primary executable are appended to the buffer.</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>PlayStation 2</strong> uses a custom hash. The primary executable and its name are hashed as follows:</p>
-</li>
+</ul>
+<ul>
+<li><strong>PlayStation 2</strong> uses a custom hash. The primary executable and its name are hashed as follows:<ul>
 <li>The <code>SYSTEM.CNF</code> file is loaded and parsed. The primary executable is identified by the BOOT2= line within.</li>
 <li>The primary executable name (and its path) are extracted from <code>SYSTEM.CNF</code> and written to a buffer.</li>
 <li>The contents of the primary executable are appended to the buffer.</li>
-<li>
-<p>The buffer is hashed.</p>
+<li>The buffer is hashed.</li>
+</ul>
 </li>
-<li>
-<p><strong>PlayStation Portable</strong> uses a custom hash. The disc metadata and primary executable are hashed as follows:</p>
-</li>
+</ul>
+<ul>
+<li><strong>PlayStation Portable</strong> uses a custom hash. The disc metadata and primary executable are hashed as follows:<ul>
 <li>The contents of the <code>PSP_GAME\PARAMS.SFO</code> file are written to a buffer. This contains the game attributes displayed in the menu, including the name and serial.</li>
 <li>The contents of the primary executable (<code>PSP_GAME\SYSDIR\EBOOT.BIN</code>) are appended to the buffer.</li>
 <li>The buffer is hashed.</li>
+</ul>
+</li>
 </ul>
 <h2 id="wasm-4">WASM-4<a class="headerlink" href="#wasm-4" title="Permanent link">link</a></h2>
 <ul>
@@ -3717,6 +3759,34 @@
 <li><code>[2020-06-07 11:41] Jamiras:</code> update for new systems</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-06-04 21:00] televandalist:</code> Changed to a new format</li>
+<li><code>[2023-06-03 02:03] televandalist:</code> Removed the "Pending Explanation" section since it only contained Wii, which is a ways away.</li>
+<li><code>[2023-05-25 11:16] Jamiras:</code> add hash algorithms for Arduboy, GameCube, Jaguar CD and Neo Geo CD</li>
+<li><code>[2023-04-11 03:01] televandalist:</code> Added Amstrad CPC, Arduboy, Atari Jaguar CD, Fairchild Channel F, Game Cube, Intellivision, Magnavox Odyssey 2, Mega Duck, Neo Geo CD, SG-1000, and Wii. Added "Pending Explanation" section. Made some naming corrections and some formatting tweaks.</li>
+<li><code>[2021-12-16 13:02] Jamiras:</code> add dreamcast</li>
+<li><code>[2021-10-10 11:20] Jamiras:</code> add psp</li>
+<li><code>[2021-04-30 13:05] Jamiras:</code> Updated Game Identification (markdown)</li>
+<li><code>[2020-12-25 00:07] televandalist:</code> Corrected PC Engine CD name and fixed a minor grammatical error. :bomber:</li>
+<li><code>[2020-06-13 17:45] Jamiras:</code> add PC-FX</li>
+<li><code>[2020-06-07 11:41] Jamiras:</code> update for new systems</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-06-04 21:00] televandalist:</code> Changed to a new format</li>
+<li><code>[2023-06-03 02:03] televandalist:</code> Removed the "Pending Explanation" section since it only contained Wii, which is a ways away.</li>
+<li><code>[2023-05-25 11:16] Jamiras:</code> add hash algorithms for Arduboy, GameCube, Jaguar CD and Neo Geo CD</li>
+<li><code>[2023-04-11 03:01] televandalist:</code> Added Amstrad CPC, Arduboy, Atari Jaguar CD, Fairchild Channel F, Game Cube, Intellivision, Magnavox Odyssey 2, Mega Duck, Neo Geo CD, SG-1000, and Wii. Added "Pending Explanation" section. Made some naming corrections and some formatting tweaks.</li>
+<li><code>[2021-12-16 13:02] Jamiras:</code> add dreamcast</li>
+<li><code>[2021-10-10 11:20] Jamiras:</code> add psp</li>
+<li><code>[2021-04-30 13:05] Jamiras:</code> Updated Game Identification (markdown)</li>
+<li><code>[2020-12-25 00:07] televandalist:</code> Corrected PC Engine CD name and fixed a minor grammatical error. :bomber:</li>
+<li><code>[2020-06-13 17:45] Jamiras:</code> add PC-FX</li>
+<li><code>[2020-06-07 11:41] Jamiras:</code> update for new systems</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2023-06-04 21:00] televandalist:</code> Changed to a new format</li>

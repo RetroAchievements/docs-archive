@@ -1377,6 +1377,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3158,6 +3172,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3191,36 +3219,32 @@ In <code>Alt 02</code>: <code>0xbc = 2</code>. This checks that the player is cr
 <p>As long as the player is on stage. The core group is true. If the player looks up, Alt 01 is true. If the player crouches, Alt 02 is true. If core + Alt 01 OR Alt 02 are true, the achievement will trigger.</p>
 <h2 id="facts-about-alt-groups">Facts about Alt Groups<a class="headerlink" href="#facts-about-alt-groups" title="Permanent link">link</a></h2>
 <ul>
-<li>
-<p>To add or remove <em>Alt groups</em> click the <code>+</code> or <code>-</code> button in the bottom left of the achievement editor.<br />
-<img alt="image" src="https://user-images.githubusercontent.com/32706333/48969436-bdf9fd00-efbb-11e8-98ab-2cc730026836.png" /> </p>
-</li>
-<li>
-<p>If you want to simply test for <strong>this</strong> <code>OR</code> <strong>that</strong> you can leave the core group blank and add <strong>this</strong> in <code>Alt 01</code>, and <strong>that</strong> in <code>Alt 02</code>.</p>
-</li>
-<li>
-<p>No matter how many <code>Alt groups</code> an achievement has, if the Core group is true, only one Alt has to be true for the achievement to trigger.</p>
-</li>
-<li>
-<p>When using <a href="#resetif">ResetIf</a> and <a href="#pauseif">PauseIf</a>, PauseIf only pauses the group that it's in, but ResetIf resets hit counts in all groups and prevents achievements from triggering so long as the reset is active.</p>
-</li>
+<li>To add or remove <em>Alt groups</em> click the <code>+</code> or <code>-</code> button in the bottom left of the achievement editor.<br />
+<img alt="image" src="https://user-images.githubusercontent.com/32706333/48969436-bdf9fd00-efbb-11e8-98ab-2cc730026836.png" /> </li>
+</ul>
+<ul>
+<li>If you want to simply test for <strong>this</strong> <code>OR</code> <strong>that</strong> you can leave the core group blank and add <strong>this</strong> in <code>Alt 01</code>, and <strong>that</strong> in <code>Alt 02</code>.</li>
+</ul>
+<ul>
+<li>No matter how many <code>Alt groups</code> an achievement has, if the Core group is true, only one Alt has to be true for the achievement to trigger.</li>
+</ul>
+<ul>
+<li>When using <a href="#resetif">ResetIf</a> and <a href="#pauseif">PauseIf</a>, PauseIf only pauses the group that it's in, but ResetIf resets hit counts in all groups and prevents achievements from triggering so long as the reset is active.</li>
 </ul>
 <h2 id="using-alt-groups-for-conditional-resets">Using Alt Groups for Conditional Resets<a class="headerlink" href="#using-alt-groups-for-conditional-resets" title="Permanent link">link</a></h2>
 <p><strong>Advanced:</strong> An <em>Alt group</em> can be used to create a ResetIf condition that is only active some of the time.</p>
 <p>If you create an <em>Alt group</em> containing a PauseIf condition and a ResetIf condition, you can use the PauseIf condition to disable the ResetIf condition under certain circumstances without disabling the entire achievement.</p>
 <ul>
-<li>
-<p>The Reset will still affect all groups, including your core group. The Pause will only pause the <em>Alt group</em> containing the PauseIf.</p>
-</li>
-<li>
-<p>This logic can be applied to multiple <em>Alt groups</em> in the same achievement to protect several separate Reset statements.</p>
-</li>
-<li>
-<p><strong>Make sure</strong> that you have at least one <em>Alt group</em> that will be true or the achievement won't trigger. The easiest way to do this is to create an extra alt group that has one condition that is <code>Value 1 = Value 1</code>.</p>
-</li>
-<li>
-<p><strong>Beware</strong>: If your Pause condition is false, and the Reset condition is also false, the group will be considered true unless you have another always false condition in the group. When using an <em>Alt group</em> to segregate a PauseIf, make sure to include an always false condition like <code>Value 1 = Value 0</code>.</p>
-</li>
+<li>The Reset will still affect all groups, including your core group. The Pause will only pause the <em>Alt group</em> containing the PauseIf.</li>
+</ul>
+<ul>
+<li>This logic can be applied to multiple <em>Alt groups</em> in the same achievement to protect several separate Reset statements.</li>
+</ul>
+<ul>
+<li><strong>Make sure</strong> that you have at least one <em>Alt group</em> that will be true or the achievement won't trigger. The easiest way to do this is to create an extra alt group that has one condition that is <code>Value 1 = Value 1</code>.</li>
+</ul>
+<ul>
+<li><strong>Beware</strong>: If your Pause condition is false, and the Reset condition is also false, the group will be considered true unless you have another always false condition in the group. When using an <em>Alt group</em> to segregate a PauseIf, make sure to include an always false condition like <code>Value 1 = Value 0</code>.</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
@@ -3230,6 +3254,20 @@ In <code>Alt 02</code>: <code>0xbc = 2</code>. This checks that the player is cr
 <li><code>[2019-02-12 09:38] meleu:</code> Created Alt Groups (markdown)</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2019-06-18 15:48] Jamiras:</code> add whitespace so bullets are joined when document is published</li>
+<li><code>[2019-03-07 21:00] Jamiras:</code> Updated Alt Groups (markdown)</li>
+<li><code>[2019-02-12 09:38] meleu:</code> Created Alt Groups (markdown)</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2019-06-18 15:48] Jamiras:</code> add whitespace so bullets are joined when document is published</li>
+<li><code>[2019-03-07 21:00] Jamiras:</code> Updated Alt Groups (markdown)</li>
+<li><code>[2019-02-12 09:38] meleu:</code> Created Alt Groups (markdown)</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2019-06-18 15:48] Jamiras:</code> add whitespace so bullets are joined when document is published</li>

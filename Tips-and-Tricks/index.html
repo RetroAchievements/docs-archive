@@ -1662,6 +1662,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3212,6 +3226,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3236,84 +3264,80 @@
 <li><a href="#memory-digging-tips">Memory Digging Tips</a></li>
 <li><a href="#achievement-creation-tips">Achievement Creation Tips</a></li>
 <li><a href="#naming-convention-tips">Naming Convention Tips</a></li>
-<li><a href="#tricks">Tricks</a></li>
+<li><a href="#tricks">Tricks</a><ul>
 <li><a href="#finding-the-address-for-demo-mode">Finding the Address for Demo Mode</a></li>
 <li><a href="#address-watcher">Address Watcher</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="memory-digging-tips">Memory Digging Tips<a class="headerlink" href="#memory-digging-tips" title="Permanent link">link</a></h2>
 <p>See also: <a href="../Memory-Inspector-Overview/">Memory Inspector Overview</a>.</p>
 <ul>
-<li>
-<p>Start with 8-bit view in the Memory Viewer. Looking at larger chunks of memory will complicate things, but it will make a seasoned developer's job easier. If you're just starting out and unaware of terms like <strong>endianess</strong> and <strong>bit ordering</strong> (or when the eyes are tired), its best to make your observations in 8-bit view. Its just easier!</p>
-</li>
-<li>
-<p><strong>Uncheck "Show Decimal Values"</strong> in the Achievement Editor so you can enter the hex values you see in the Memory Viewer. Its better than using a programmers calculator!</p>
-</li>
-<li>
-<p>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</p>
-</li>
-<li>
-<p>You can input values in the memory viewer to see if it affects the game.</p>
-</li>
-<li>
-<p>Even if something is visibly decreasing in-game, like health, memory can behave differently. It's possible for it to be increasing, so since it's uncommon for you to know for sure, prefer the <code>!=</code> and <code>=</code> filters.</p>
-</li>
-<li>
-<p>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting (<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually <code>0</code>, Stage 1 is usually value <code>0</code>, Stage 2 is usually value <code>1</code> depending on the type of game.</p>
-</li>
-<li>
-<p><strong>16/32 bit view</strong>: remember that when working with 16 or 32 bit address the address to the right comes first. Example: if in 8bit it looks like <code>AB CD WX YZ</code>, in 16 bit it becomes <code>CDAB YZWX</code>. This is called "<a href="https://en.wikipedia.org/wiki/Endianness#Big-endian">big endian byte ordering</a>". You can safely ignore the geek-speak by just remembering things are stored <strong>backwards</strong> in 16 bit view and above.</p>
-</li>
-<li>
-<p><strong>Bit fields</strong>: Use single bits for things that only change a single bit. In the Memory Inspector, when an address is selected, there will be <code>Bits: 7 6 5 4 3 2 1 0</code> above the addresses. And below those numbers will be either <code>0</code> or <code>1</code>, like <code>0 0 1 0 0 0 1 1</code> in the image below. If <code>bit5</code> has <code>1</code> under it, then <code>bit5=1</code> for that address. Single bit usage is very common for game items/events/unlocks/etc. This may be confusing, but it's very important to understand. Some games with limited memory space use bit fields a lot! Its an important technique to learn.</p>
-</li>
+<li>Start with 8-bit view in the Memory Viewer. Looking at larger chunks of memory will complicate things, but it will make a seasoned developer's job easier. If you're just starting out and unaware of terms like <strong>endianess</strong> and <strong>bit ordering</strong> (or when the eyes are tired), its best to make your observations in 8-bit view. Its just easier!</li>
+</ul>
+<ul>
+<li><strong>Uncheck "Show Decimal Values"</strong> in the Achievement Editor so you can enter the hex values you see in the Memory Viewer. Its better than using a programmers calculator!</li>
+</ul>
+<ul>
+<li>If you find an address, also search the same region surrounding it and you could find many more useful addresses.</li>
+</ul>
+<ul>
+<li>You can input values in the memory viewer to see if it affects the game.</li>
+</ul>
+<ul>
+<li>Even if something is visibly decreasing in-game, like health, memory can behave differently. It's possible for it to be increasing, so since it's uncommon for you to know for sure, prefer the <code>!=</code> and <code>=</code> filters.</li>
+</ul>
+<ul>
+<li>If you absolutely cannot reduce the results of a filter, you can try guessing some values or at least how the value is acting (<code>&gt;</code> or <code>&lt;</code>). For example, no health is usually <code>0</code>, Stage 1 is usually value <code>0</code>, Stage 2 is usually value <code>1</code> depending on the type of game.</li>
+</ul>
+<ul>
+<li><strong>16/32 bit view</strong>: remember that when working with 16 or 32 bit address the address to the right comes first. Example: if in 8bit it looks like <code>AB CD WX YZ</code>, in 16 bit it becomes <code>CDAB YZWX</code>. This is called "<a href="https://en.wikipedia.org/wiki/Endianness#Big-endian">big endian byte ordering</a>". You can safely ignore the geek-speak by just remembering things are stored <strong>backwards</strong> in 16 bit view and above.</li>
+</ul>
+<ul>
+<li><strong>Bit fields</strong>: Use single bits for things that only change a single bit. In the Memory Inspector, when an address is selected, there will be <code>Bits: 7 6 5 4 3 2 1 0</code> above the addresses. And below those numbers will be either <code>0</code> or <code>1</code>, like <code>0 0 1 0 0 0 1 1</code> in the image below. If <code>bit5</code> has <code>1</code> under it, then <code>bit5=1</code> for that address. Single bit usage is very common for game items/events/unlocks/etc. This may be confusing, but it's very important to understand. Some games with limited memory space use bit fields a lot! Its an important technique to learn.</li>
 </ul>
 <p><img alt="memsizes" src="https://user-images.githubusercontent.com/32680403/45276439-8cbf6580-b47f-11e8-803c-7e7e391a9e55.png" /></p>
 <h2 id="achievement-creation-tips">Achievement Creation Tips<a class="headerlink" href="#achievement-creation-tips" title="Permanent link">link</a></h2>
 <p>See also: <a href="../Developers-Code-of-Conduct/#unwelcome-concepts">Unwelcome Concepts</a> and <a href="../Achievement-Design/">Achievement Design</a>.</p>
 <ul>
-<li>
-<p><strong><del>Never</del> Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong>.</p>
-</li>
-<li>
-<p>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add a condition so your achievements don't trigger in demo mode. You'll probably need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</p>
-</li>
-<li>
-<p><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements.</p>
-</li>
-<li>
-<p>If you wanna create an achievement for <strong>collecting a specific and unique item</strong> in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement may trigger by using password, loading a save game, etc.</p>
-</li>
-<li>
-<p><strong>OR conditions</strong>: if you need OR conditions, you'll need <a href="../Achievement-Logic-Features/#alt-groups">Alt groups</a>.</p>
-</li>
-<li>
-<p><strong>Avoid Achievement Spam</strong>. If a game has 100 levels, do not make an achievement for each level. Do every 25 or so. Consider the time segment a casual player would unlock these progressive Achievements in. If generally you could unlock all in a progressive set of Achievements of this nature in under half an hour as a casual player, that's filler design, and not recommended.</p>
-</li>
-<li>
-<p><strong>Be Creative and Fun</strong>: Get as creative as possible with achievements. "Beat X without using/doing Y", "Beat X in 5 seconds", "3 heart run". Be sure casual players can still get these with their best effort. It isn't fun if its way too difficult for a casual player!  (See:  <strong>Bonus Set Tips</strong> below for the real challenges!). There is a whole page about <a href="../Achievement-Design/">Achievement Design</a> that can give good advices on how to think about good achievements.</p>
-</li>
-<li>
-<p><strong>Glitchless, please!</strong>: Do not make achievements requiring glitches. Glitches, in most cases, corrupt and destabilize game memory and RAM. They break the rest of the set to include. It is however, wise to code block walls stopping players from using them to get easy mastery.</p>
-</li>
-<li>
-<p><strong>Avoid relying on text and graphics</strong>: Most of the time, an achievement that requires triggering a special event can be tied to an event flag (usually a single bit or byte), or to an item received by the player. It is better practice to use these values than to check the ID of text being displayed in a text box, or, even worse, video RAM (memory tied to the actual graphics displaying on the screen) as they are often less stable. Especially between different versions of a single game, and they are more difficult to debug.</p>
-</li>
-<li>
-<p><strong>We love Art</strong>:  Pretty badges are rewarding badges! It should visually represent the achievement itself, or hint at the location in the game for secrets.  Matching to the game's art style works well.  Google Image searches for "Sprite Sheets" is an useful tip to include some game art. If you're a good graphics artist, updating badges is your time to shine! More info can be found at the <a href="../Badge-and-Icon-Creation/">Badge and Icon Creation page</a>.</p>
-</li>
-<li>
-<p><strong>Regional Consideration</strong>: For games with text-triggered achievements (especially RPGs) it's recommend to find an event flag instead of hooking onto text or text ID. Text presentation varies between regional versions making multi-region support difficult.</p>
-</li>
+<li><strong><del>Never</del> Avoid using only one condition as much as you can</strong>. When using only one condition the achievement will most likely pop at the wrong time.  This is the <strong>most common error by a developer</strong>.</li>
+</ul>
+<ul>
+<li>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to find the address for it and add a condition so your achievements don't trigger in demo mode. You'll probably need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</li>
+</ul>
+<ul>
+<li><strong><code>PauseIf</code> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc. Make sure to find the addresses for it and add some kind of protection in your achievements.</li>
+</ul>
+<ul>
+<li>If you wanna create an achievement for <strong>collecting a specific and unique item</strong> in the game, add some conditions to make sure the player got the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement may trigger by using password, loading a save game, etc.</li>
+</ul>
+<ul>
+<li><strong>OR conditions</strong>: if you need OR conditions, you'll need <a href="../Achievement-Logic-Features/#alt-groups">Alt groups</a>.</li>
+</ul>
+<ul>
+<li><strong>Avoid Achievement Spam</strong>. If a game has 100 levels, do not make an achievement for each level. Do every 25 or so. Consider the time segment a casual player would unlock these progressive Achievements in. If generally you could unlock all in a progressive set of Achievements of this nature in under half an hour as a casual player, that's filler design, and not recommended.</li>
+</ul>
+<ul>
+<li><strong>Be Creative and Fun</strong>: Get as creative as possible with achievements. "Beat X without using/doing Y", "Beat X in 5 seconds", "3 heart run". Be sure casual players can still get these with their best effort. It isn't fun if its way too difficult for a casual player!  (See:  <strong>Bonus Set Tips</strong> below for the real challenges!). There is a whole page about <a href="../Achievement-Design/">Achievement Design</a> that can give good advices on how to think about good achievements.</li>
+</ul>
+<ul>
+<li><strong>Glitchless, please!</strong>: Do not make achievements requiring glitches. Glitches, in most cases, corrupt and destabilize game memory and RAM. They break the rest of the set to include. It is however, wise to code block walls stopping players from using them to get easy mastery.</li>
+</ul>
+<ul>
+<li><strong>Avoid relying on text and graphics</strong>: Most of the time, an achievement that requires triggering a special event can be tied to an event flag (usually a single bit or byte), or to an item received by the player. It is better practice to use these values than to check the ID of text being displayed in a text box, or, even worse, video RAM (memory tied to the actual graphics displaying on the screen) as they are often less stable. Especially between different versions of a single game, and they are more difficult to debug.</li>
+</ul>
+<ul>
+<li><strong>We love Art</strong>:  Pretty badges are rewarding badges! It should visually represent the achievement itself, or hint at the location in the game for secrets.  Matching to the game's art style works well.  Google Image searches for "Sprite Sheets" is an useful tip to include some game art. If you're a good graphics artist, updating badges is your time to shine! More info can be found at the <a href="../Badge-and-Icon-Creation/">Badge and Icon Creation page</a>.</li>
+</ul>
+<ul>
+<li><strong>Regional Consideration</strong>: For games with text-triggered achievements (especially RPGs) it's recommend to find an event flag instead of hooking onto text or text ID. Text presentation varies between regional versions making multi-region support difficult.</li>
 </ul>
 <h2 id="naming-convention-tips">Naming Convention Tips<a class="headerlink" href="#naming-convention-tips" title="Permanent link">link</a></h2>
 <ul>
-<li>
-<p><strong>No Symbols</strong>: Do not use accented/special characters like the <code>é</code> in Pokemon, as they currently break a few things (like feed). They are also not visible in search without the special character. Same for UTF-8 Universal Emoji codes. <strong>Allowed exception</strong>: <a href="../Rich-Presence/">Rich Presence Scripts</a>.</p>
-</li>
-<li>
-<p><strong>Mind your English</strong>: avoid grammar mistakes. As RetroAchievements is an international community, using English for Code Notes is a good practice, as another developer can use your notes in the future.</p>
-</li>
+<li><strong>No Symbols</strong>: Do not use accented/special characters like the <code>é</code> in Pokemon, as they currently break a few things (like feed). They are also not visible in search without the special character. Same for UTF-8 Universal Emoji codes. <strong>Allowed exception</strong>: <a href="../Rich-Presence/">Rich Presence Scripts</a>.</li>
+</ul>
+<ul>
+<li><strong>Mind your English</strong>: avoid grammar mistakes. As RetroAchievements is an international community, using English for Code Notes is a good practice, as another developer can use your notes in the future.</li>
 </ul>
 <h2 id="tricks">Tricks<a class="headerlink" href="#tricks" title="Permanent link">link</a></h2>
 <h3 id="finding-the-address-for-demo-mode">Finding the Address for Demo Mode<a class="headerlink" href="#finding-the-address-for-demo-mode" title="Permanent link">link</a></h3>
@@ -3329,13 +3353,11 @@
 <ol>
 <li><code>Value 1 = Value 0</code>; This is to prevent the achievement from ever being true, as the value 0 never equals 1.</li>
 <li><code>Value 1 = Value 1</code>; For this trick to work the achievement needs hits to reset. When 1 = 1 hits will be added to this condition.</li>
-<li>
-<p><code>ResetIf Mem 0x10 != Delta 0x10</code>; This is the address you want to watch. Any time there is a change the achievement will reset.</p>
-</li>
-<li>
-<p>Last of all make sure that <code>Pause on Reset</code> and <code>Active</code> are both checked. Now you will get a pop-up and emulation will pause each time this address changes.</p>
-</li>
+<li><code>ResetIf Mem 0x10 != Delta 0x10</code>; This is the address you want to watch. Any time there is a change the achievement will reset.</li>
 </ol>
+<ul>
+<li>Last of all make sure that <code>Pause on Reset</code> and <code>Active</code> are both checked. Now you will get a pop-up and emulation will pause each time this address changes.</li>
+</ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
@@ -3351,6 +3373,34 @@
 <li><code>[2019-01-13 15:41] Raphaël Zumer:</code> Fix typos and reword a memory digging tip</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-06-05 22:26] televandalist:</code> Updated Tips and Tricks (markdown)</li>
+<li><code>[2023-06-03 02:06] televandalist:</code> Updated Tips and Tricks (markdown)</li>
+<li><code>[2021-11-30 18:30] SporyTike:</code> Typo that caused a jr-dev confusion. Bit5 = Bit5 and not Bit3</li>
+<li><code>[2019-08-13 19:42] Kvon:</code> Tips and Tricks: Text hooks tip added</li>
+<li><code>[2019-02-07 14:57] meleu:</code> decrease verbosity; add trick fo find demo mode; group tips and tricks more reasonably</li>
+<li><code>[2019-01-17 11:19] meleu:</code> removed the "Limitations" topic</li>
+<li><code>[2019-01-17 11:17] meleu:</code> subnests on bullet points need 4 spaces</li>
+<li><code>[2019-01-15 19:15] Jamiras:</code> Update reset behavior for 0.75 toolkit</li>
+<li><code>[2019-01-13 16:20] Raphaël Zumer:</code> Add "Avoid relying on text and graphics" tip</li>
+<li><code>[2019-01-13 15:41] Raphaël Zumer:</code> Fix typos and reword a memory digging tip</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-06-05 22:26] televandalist:</code> Updated Tips and Tricks (markdown)</li>
+<li><code>[2023-06-03 02:06] televandalist:</code> Updated Tips and Tricks (markdown)</li>
+<li><code>[2021-11-30 18:30] SporyTike:</code> Typo that caused a jr-dev confusion. Bit5 = Bit5 and not Bit3</li>
+<li><code>[2019-08-13 19:42] Kvon:</code> Tips and Tricks: Text hooks tip added</li>
+<li><code>[2019-02-07 14:57] meleu:</code> decrease verbosity; add trick fo find demo mode; group tips and tricks more reasonably</li>
+<li><code>[2019-01-17 11:19] meleu:</code> removed the "Limitations" topic</li>
+<li><code>[2019-01-17 11:17] meleu:</code> subnests on bullet points need 4 spaces</li>
+<li><code>[2019-01-15 19:15] Jamiras:</code> Update reset behavior for 0.75 toolkit</li>
+<li><code>[2019-01-13 16:20] Raphaël Zumer:</code> Add "Avoid relying on text and graphics" tip</li>
+<li><code>[2019-01-13 15:41] Raphaël Zumer:</code> Fix typos and reword a memory digging tip</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2023-06-05 22:26] televandalist:</code> Updated Tips and Tricks (markdown)</li>

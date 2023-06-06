@@ -1126,6 +1126,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3228,6 +3242,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3299,15 +3327,13 @@
 </ol>
 <p>Each time you perform 4 then 5, the number of possibilities or 'candidates' will get smaller. We will continue doing this until the number of candidates reaches a very small number (as few as possible), it can take several attempts. Next we can click in the results window, and monitor the memory address in the memory viewer at the bottom. Continue using the game and you should see the values in memory change as you collect rings. If you don't, or if something doesn't look right, try another value. With the first Sonic the Hedgehog, the memory address for the number of rings should be <code>0xfe20</code>.</p>
 <ul>
-<li>
-<p><strong>Note 1</strong>: Using save states (Shift+F1-F10 to save states, F1-F10 to load states), you can switch back and forth between different states allowing you to alter what is in RAM, and use this to filter out bad candidates. You can search for values that remain the same (I.e. If you know the value didn't change, use <code>=</code>), or values that are different (use 'not equal', symbol <code>!=</code>). Using the example above, you can collect a ring then use the "&gt;" filter, take a few steps then use the "=" filter (since the number of rings did not change), collect more rings and use the "&gt;" filter again, etc.</p>
-</li>
-<li>
-<p><strong>Note 2</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good addresses. Note if you are struggling to find good values, post in <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum</a>, or <a href="https://discord.gg/dq2E4hE">RetroAchievements Discord server</a>. There are plenty of people who will be very happy to help!!</p>
-</li>
-<li>
-<p><strong>Tip</strong>: if you'd like to experiment with memory, try entering new values directly into the RAM viewer. This can have devastating effects on the game, or it might do exactly what you expect, (or nothing at all!) It can be useful though, to see if you can enter a value and get the result you expect. Use with caution!</p>
-</li>
+<li><strong>Note 1</strong>: Using save states (Shift+F1-F10 to save states, F1-F10 to load states), you can switch back and forth between different states allowing you to alter what is in RAM, and use this to filter out bad candidates. You can search for values that remain the same (I.e. If you know the value didn't change, use <code>=</code>), or values that are different (use 'not equal', symbol <code>!=</code>). Using the example above, you can collect a ring then use the "&gt;" filter, take a few steps then use the "=" filter (since the number of rings did not change), collect more rings and use the "&gt;" filter again, etc.</li>
+</ul>
+<ul>
+<li><strong>Note 2</strong>: There's unfortunately no guarantee from game to game on how the developers have stored their data (4-bit, 8-bit, 16-bit, binary-coded decimals, negative/inverted, i.e. using 0xff/0xffff to represent 'set', or plain randomly), but eventually you should come across some good addresses. Note if you are struggling to find good values, post in <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum</a>, or <a href="https://discord.gg/dq2E4hE">RetroAchievements Discord server</a>. There are plenty of people who will be very happy to help!!</li>
+</ul>
+<ul>
+<li><strong>Tip</strong>: if you'd like to experiment with memory, try entering new values directly into the RAM viewer. This can have devastating effects on the game, or it might do exactly what you expect, (or nothing at all!) It can be useful though, to see if you can enter a value and get the result you expect. Use with caution!</li>
 </ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
 <p>You can find more useful <a href="../Tips-and-Tricks/#memory-digging-tips">Memory Digging Tips here</a>.</p>
@@ -3358,50 +3384,46 @@
 <h2 id="important-tips">Important Tips<a class="headerlink" href="#important-tips" title="Permanent link">link</a></h2>
 <p>Here are some tips you have to keep in mind when creating your achievements:</p>
 <ul>
-<li>
-<p><strong><del>Never</del> Avoid making achievements with only one condition as much as you can</strong>. Otherwise it will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></p>
-</li>
-<li>
-<p>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="../Tips-and-Tricks/#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</p>
-</li>
-<li>
-<p><strong><a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</p>
-</li>
-<li>
-<p><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="../Achievement-Templates/#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</p>
-</li>
-<li>
-<p>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</p>
-</li>
-<li>
-<p><strong>Avoid making too many achievements about simple things that require minimal effort</strong>. Examples of what <strong>NOT</strong> to do: get one coin or one mushroom on Super Mario Bros.</p>
-</li>
-<li>
-<p>Be aware of the <a href="../Developers-Code-of-Conduct/#unwelcome-concepts">unwelcome achievement's design concepts</a>.</p>
-</li>
-<li>
-<p><strong>Be creative with your achievements</strong>. Those covering unique features and details of the game are the most welcome. The players love when that little detail of a game they love is supported on an achievement. Reading a walkthrough on <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> can give some inspiration too.</p>
-</li>
-<li>
-<p>It can take a while to understand how the memory works in a game, so try spending as much time with it as you can, especially if it's your first attempt at developing achievements. </p>
-</li>
+<li><strong><del>Never</del> Avoid making achievements with only one condition as much as you can</strong>. Otherwise it will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></li>
+</ul>
+<ul>
+<li>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="../Tips-and-Tricks/#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</li>
+</ul>
+<ul>
+<li><strong><a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</li>
+</ul>
+<ul>
+<li><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="../Achievement-Templates/#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</li>
+</ul>
+<ul>
+<li>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</li>
+</ul>
+<ul>
+<li><strong>Avoid making too many achievements about simple things that require minimal effort</strong>. Examples of what <strong>NOT</strong> to do: get one coin or one mushroom on Super Mario Bros.</li>
+</ul>
+<ul>
+<li>Be aware of the <a href="../Developers-Code-of-Conduct/#unwelcome-concepts">unwelcome achievement's design concepts</a>.</li>
+</ul>
+<ul>
+<li><strong>Be creative with your achievements</strong>. Those covering unique features and details of the game are the most welcome. The players love when that little detail of a game they love is supported on an achievement. Reading a walkthrough on <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> can give some inspiration too.</li>
+</ul>
+<ul>
+<li>It can take a while to understand how the memory works in a game, so try spending as much time with it as you can, especially if it's your first attempt at developing achievements. </li>
 </ul>
 <p>You can find more in the <a href="../Tips-and-Tricks/">Tips and Tricks page</a>.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">link</a></h2>
 <p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
 <ul>
-<li>
-<p>In order to refine your achievement logic, you can see what features you have in the <a href="../Achievement-Logic-Features/">Achievement Logic Features</a> page.</p>
-</li>
-<li>
-<p>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="../Real-Examples/">Real Examples</a> page.</p>
-</li>
-<li>
-<p>You can also see some generic examples in the <a href="../Achievement-Templates/">Achievement Templates</a> page.</p>
-</li>
-<li>
-<p>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="../How-to-Become-an-Achievement-Developer/">How to Become an Achievement Developer</a></p>
-</li>
+<li>In order to refine your achievement logic, you can see what features you have in the <a href="../Achievement-Logic-Features/">Achievement Logic Features</a> page.</li>
+</ul>
+<ul>
+<li>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="../Real-Examples/">Real Examples</a> page.</li>
+</ul>
+<ul>
+<li>You can also see some generic examples in the <a href="../Achievement-Templates/">Achievement Templates</a> page.</li>
+</ul>
+<ul>
+<li>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="../How-to-Become-an-Achievement-Developer/">How to Become an Achievement Developer</a></li>
 </ul>
 <p>Have fun!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
@@ -3419,6 +3441,34 @@
 <li><code>[2019-02-08 02:07] Kvon:</code> added a link to the demo mode tips</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-01-28 22:59] OvenOverlord:</code> Added Fridge's video link to the step-by-step video explanation links</li>
+<li><code>[2021-07-08 09:31] televandalist:</code> Fix image links</li>
+<li><code>[2020-05-15 02:15] televandalist:</code> Changed the Save/Load State method to match that of RALib rather than RAGens.</li>
+<li><code>[2020-05-15 02:13] televandalist:</code> Quick typo fix.</li>
+<li><code>[2020-05-15 02:04] televandalist:</code> Reworded instructions to apply to RALibRetro instead of RAGens. Added note about why the 16-bit address was selected in the editor. Fixed multiple typos, grammatical errors, and reworded some 'casual' speak.</li>
+<li><code>[2020-05-15 00:05] televandalist:</code> Recreated the old images with RALib. Old ones were using RAGens and had the old overlay.</li>
+<li><code>[2019-02-09 20:44] meleu:</code> mentioning PauseIf with hitcounts on this doc can lead to confusion (if we had a template/example for this technique it would be OK)</li>
+<li><code>[2019-02-08 10:53] meleu:</code> cosmetic</li>
+<li><code>[2019-02-08 02:12] Kvon:</code> pauseif link, added critical line for adding cheat protection, typically</li>
+<li><code>[2019-02-08 02:07] Kvon:</code> added a link to the demo mode tips</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-01-28 22:59] OvenOverlord:</code> Added Fridge's video link to the step-by-step video explanation links</li>
+<li><code>[2021-07-08 09:31] televandalist:</code> Fix image links</li>
+<li><code>[2020-05-15 02:15] televandalist:</code> Changed the Save/Load State method to match that of RALib rather than RAGens.</li>
+<li><code>[2020-05-15 02:13] televandalist:</code> Quick typo fix.</li>
+<li><code>[2020-05-15 02:04] televandalist:</code> Reworded instructions to apply to RALibRetro instead of RAGens. Added note about why the 16-bit address was selected in the editor. Fixed multiple typos, grammatical errors, and reworded some 'casual' speak.</li>
+<li><code>[2020-05-15 00:05] televandalist:</code> Recreated the old images with RALib. Old ones were using RAGens and had the old overlay.</li>
+<li><code>[2019-02-09 20:44] meleu:</code> mentioning PauseIf with hitcounts on this doc can lead to confusion (if we had a template/example for this technique it would be OK)</li>
+<li><code>[2019-02-08 10:53] meleu:</code> cosmetic</li>
+<li><code>[2019-02-08 02:12] Kvon:</code> pauseif link, added critical line for adding cheat protection, typically</li>
+<li><code>[2019-02-08 02:07] Kvon:</code> added a link to the demo mode tips</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2023-01-28 22:59] OvenOverlord:</code> Added Fridge's video link to the step-by-step video explanation links</li>

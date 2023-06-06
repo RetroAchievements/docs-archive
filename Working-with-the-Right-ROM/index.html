@@ -771,6 +771,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3214,6 +3228,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3241,27 +3269,25 @@
 <h2 id="rom-selection">ROM Selection<a class="headerlink" href="#rom-selection" title="Permanent link">link</a></h2>
 <p>Almost every game has multiple ROM versions available, sometimes dozens. Often there are major differences under the hood that prevent achievement compatibility between version. Because of this, finding the best ROM for achievements is critical and should be done carefully.</p>
 <ul>
-<li>
-<p><strong>Region Selection</strong>: For TV-connected consoles, when possible choose No-Intro (cartridge) or Redump (disc) <code>NTSC USA</code> release ROMs, because 60Hz is a smoother gaming experience and generally matches the intended play speed. <code>PAL European</code> releases run at 50Hz, and are to be avoided in most cases. <code>NTSC Japan</code> releases also run at 60Hz, but are only the best choice if the game was a Japan-exclusive release. <code>PAL European</code> releases should be used as a last resort only (Europe-only exclusive), and are typically limited to a very select few <em>unique</em> games from the entire console's library. Handheld consoles don't have regional timing differences, so language options should be prioritized there whenever possible.</p>
-</li>
-<li>
-<p><strong>Revision Selection</strong>: Since revisions primarily contain bug and typo fixes, unless you have a -specific- reason not to, always choose the final revision. This will often save both players and developers headaches in the long run. Before working on a game, do a quick search for known revisional changes and take a look at <a href="https://tcrf.net/">TCRF</a> to see if there's a reason to prefer an earlier revision.</p>
-</li>
-<li>
-<p><strong>Ring Codes</strong>: Some systems, such as Sega Saturn, have multiple version of the game with different "ring codes". These are alphanumeric identifiers stamped on the inner ring of the physical discs. In most cases these will have no functional effect on the game or perhaps even the hash, but as mentioned with Revisions, check to see if there are known differences first.</p>
-</li>
-<li>
-<p><strong>Format</strong>: For most systems this won't be an issue if you've used verified good dumps. For N64 in particular, games can exist in three formats based on the order of the bytes in the file: n64 (little endian), v64 (byteswapped), and z64 (big endian). Despite producing unique hashes, these three formats are identical for the same dump. Because big endian is the most accurate representation of the N64's cartridges, the big endian (z64) hash -must- be linked for any N64 game, in addition to whatever format you may wish to use personally as a developer. This ensures a single set of roms can consistently be used to play. If required, <a href="https://gbatemp.net/download/tool-64.32494/">Tool64</a> can be used to change byte order.</p>
-</li>
-<li>
-<p><strong>Arcade</strong>: Arcade ROMs are a bit of a special case because FBNeo mandates the exact contents of the game's archive. When different versions exist, the base version of the name should be preferred in general (for instance, mslug2 should be preferred over mslug2dg or mslug2t). This is merely a guideline, as there may be various reasons to prefer a different version.</p>
-</li>
-<li>
-<p><strong>No Mods</strong>: Use a clean ROM. Do not use a ROM with a modded/custom launch screen such as Mode7 and RisingSun have because it changes RAM values and complicates users' ability to use their own legally dumped ROMs.</p>
-</li>
-<li>
-<p><strong>No Trainers</strong>: Do not use a ROM that includes an integrated cheat feature. These are most often refereed to as after-market <code>ROM trainers</code>, are not official, and are not in any way supported by RetroAchievements. These ROMs cannot be linked even as secondary options.</p>
-</li>
+<li><strong>Region Selection</strong>: For TV-connected consoles, when possible choose No-Intro (cartridge) or Redump (disc) <code>NTSC USA</code> release ROMs, because 60Hz is a smoother gaming experience and generally matches the intended play speed. <code>PAL European</code> releases run at 50Hz, and are to be avoided in most cases. <code>NTSC Japan</code> releases also run at 60Hz, but are only the best choice if the game was a Japan-exclusive release. <code>PAL European</code> releases should be used as a last resort only (Europe-only exclusive), and are typically limited to a very select few <em>unique</em> games from the entire console's library. Handheld consoles don't have regional timing differences, so language options should be prioritized there whenever possible.</li>
+</ul>
+<ul>
+<li><strong>Revision Selection</strong>: Since revisions primarily contain bug and typo fixes, unless you have a -specific- reason not to, always choose the final revision. This will often save both players and developers headaches in the long run. Before working on a game, do a quick search for known revisional changes and take a look at <a href="https://tcrf.net/">TCRF</a> to see if there's a reason to prefer an earlier revision.</li>
+</ul>
+<ul>
+<li><strong>Ring Codes</strong>: Some systems, such as Sega Saturn, have multiple version of the game with different "ring codes". These are alphanumeric identifiers stamped on the inner ring of the physical discs. In most cases these will have no functional effect on the game or perhaps even the hash, but as mentioned with Revisions, check to see if there are known differences first.</li>
+</ul>
+<ul>
+<li><strong>Format</strong>: For most systems this won't be an issue if you've used verified good dumps. For N64 in particular, games can exist in three formats based on the order of the bytes in the file: n64 (little endian), v64 (byteswapped), and z64 (big endian). Despite producing unique hashes, these three formats are identical for the same dump. Because big endian is the most accurate representation of the N64's cartridges, the big endian (z64) hash -must- be linked for any N64 game, in addition to whatever format you may wish to use personally as a developer. This ensures a single set of roms can consistently be used to play. If required, <a href="https://gbatemp.net/download/tool-64.32494/">Tool64</a> can be used to change byte order.</li>
+</ul>
+<ul>
+<li><strong>Arcade</strong>: Arcade ROMs are a bit of a special case because FBNeo mandates the exact contents of the game's archive. When different versions exist, the base version of the name should be preferred in general (for instance, mslug2 should be preferred over mslug2dg or mslug2t). This is merely a guideline, as there may be various reasons to prefer a different version.</li>
+</ul>
+<ul>
+<li><strong>No Mods</strong>: Use a clean ROM. Do not use a ROM with a modded/custom launch screen such as Mode7 and RisingSun have because it changes RAM values and complicates users' ability to use their own legally dumped ROMs.</li>
+</ul>
+<ul>
+<li><strong>No Trainers</strong>: Do not use a ROM that includes an integrated cheat feature. These are most often refereed to as after-market <code>ROM trainers</code>, are not official, and are not in any way supported by RetroAchievements. These ROMs cannot be linked even as secondary options.</li>
 </ul>
 <h2 id="preservation-groups">Preservation Groups<a class="headerlink" href="#preservation-groups" title="Permanent link">link</a></h2>
 <p><a href="http://www.no-intro.org/">No-Intro</a> and <a href="http://redump.org/">Redump</a> are the primary groups responsible for verifying clean dumps of console games, excluding all modifications and untrustworthy sources in the process. They offer dat files that can be used to verify your own dumps via a ROM manager. ROMs verified by these groups are preferred whenever possible, and can generally be identified by the following naming scheme:</p>
@@ -3575,6 +3601,28 @@
 <li><code>[2018-09-17 17:56] meleu:</code> capital 'R' in the title (Right)</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2022-02-25 20:41] televandalist:</code> Changed bonus set link to subset link - added a preferred group table for each console</li>
+<li><code>[2020-06-02 06:00] Sanaki:</code> Added revision and N64 format guidelines, removed entire section on region splitting procedure, made numerous grammar and detail updates</li>
+<li><code>[2019-08-13 19:49] Kvon:</code> Working with the right rom: text hooking tip added</li>
+<li><code>[2019-05-03 11:30] meleu:</code> typo</li>
+<li><code>[2019-05-03 10:55] meleu:</code> merge "ROM Localization Policy" into here</li>
+<li><code>[2018-11-17 08:07] Kvon:</code> changed one word, for clarifcation</li>
+<li><code>[2018-09-17 17:56] meleu:</code> capital 'R' in the title (Right)</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2022-02-25 20:41] televandalist:</code> Changed bonus set link to subset link - added a preferred group table for each console</li>
+<li><code>[2020-06-02 06:00] Sanaki:</code> Added revision and N64 format guidelines, removed entire section on region splitting procedure, made numerous grammar and detail updates</li>
+<li><code>[2019-08-13 19:49] Kvon:</code> Working with the right rom: text hooking tip added</li>
+<li><code>[2019-05-03 11:30] meleu:</code> typo</li>
+<li><code>[2019-05-03 10:55] meleu:</code> merge "ROM Localization Policy" into here</li>
+<li><code>[2018-11-17 08:07] Kvon:</code> changed one word, for clarifcation</li>
+<li><code>[2018-09-17 17:56] meleu:</code> capital 'R' in the title (Right)</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2022-02-25 20:41] televandalist:</code> Changed bonus set link to subset link - added a preferred group table for each console</li>

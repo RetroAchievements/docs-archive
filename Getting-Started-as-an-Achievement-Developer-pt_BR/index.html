@@ -2066,6 +2066,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3250,6 +3264,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_2" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_3" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3316,15 +3344,13 @@
 <p>Na caixa de diálogo de memória, agora queremos filtrar por valores que sejam "maiores do que valores anteriores" (símbolo&gt;). Selecionamos isso, então, clique em <strong>Filter</strong>.</p>
 <p>Cada vez que você executa 3 e 4, o número de possibilidades ou 'candidatos' diminuirá. Continuaremos a fazê-lo até que o número de candidatos alcance um número muito pequeno (o menor possível), pode demorar 4-5 tentativas. Em seguida, podemos clicar na janela de resultados e monitorar o endereço de memória no visor de memória na parte inferior. Continue usando o jogo e você deve ver os valores em mudança de memória à medida que você coleciona anéis. Se você não, ou se algo não parece direito, tente outro valor. Com o primeiro Sonic the Hedgehog, o endereço da memória para o número de anéis deve ser 0xfe20.</p>
 <ul>
-<li>
-<p><strong>Nota</strong>: Usando estados de salvamento (F5 para salvar o estado, F8 para carregar o estado, F6-F7 para alternar o estado a ser usado), você pode alternar entre estados diferentes, permitindo alterar o que está na RAM e usar isso para filtrar fora candidatos ruins. Você pode procurar por valores que permanecem os mesmos (ou seja, se você sabe que o valor não mudou, use =) ou valores diferentes (use 'not equal', symbol! =).</p>
-</li>
-<li>
-<p><strong>Nota</strong>: Infelizmente nenhuma garantia de jogo para jogo sobre como os desenvolvedores armazenaram seus dados (decimais de codigo binário de 4 bits, 8 bits, 16 bits, negativos / invertidos, ou seja, usando 0xff / 0xffff para representar 'set' , ou simples, aleatoriamente), mas, eventualmente, você deve encontrar um bom endereço. Observe se você está lutando para encontrar bons valores, postar o fórum de Ajuda de desenvolvimento <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum </a>ou o servidor <a href="https://discord.gg/dq2E4hE"> RetroAchievements Discord server</a>. Há muitas pessoas que ficarão muito felizes em ajudar!</p>
-</li>
-<li>
-<p><strong>Dica</strong>: se você quiser experimentar a memória, tente inserir novos valores diretamente no visualizador de RAM. Isso pode ter efeitos devastadores no jogo, ou pode fazer exatamente o que você espera, (ou nada!) Pode ser útil, para ver se você pode inserir um valor e obter o resultado esperado. Use com cuidado!</p>
-</li>
+<li><strong>Nota</strong>: Usando estados de salvamento (F5 para salvar o estado, F8 para carregar o estado, F6-F7 para alternar o estado a ser usado), você pode alternar entre estados diferentes, permitindo alterar o que está na RAM e usar isso para filtrar fora candidatos ruins. Você pode procurar por valores que permanecem os mesmos (ou seja, se você sabe que o valor não mudou, use =) ou valores diferentes (use 'not equal', symbol! =).</li>
+</ul>
+<ul>
+<li><strong>Nota</strong>: Infelizmente nenhuma garantia de jogo para jogo sobre como os desenvolvedores armazenaram seus dados (decimais de codigo binário de 4 bits, 8 bits, 16 bits, negativos / invertidos, ou seja, usando 0xff / 0xffff para representar 'set' , ou simples, aleatoriamente), mas, eventualmente, você deve encontrar um bom endereço. Observe se você está lutando para encontrar bons valores, postar o fórum de Ajuda de desenvolvimento <a href="http://retroachievements.org/viewforum.php?f=15">RetroAchievements.org Development Help forum </a>ou o servidor <a href="https://discord.gg/dq2E4hE"> RetroAchievements Discord server</a>. Há muitas pessoas que ficarão muito felizes em ajudar!</li>
+</ul>
+<ul>
+<li><strong>Dica</strong>: se você quiser experimentar a memória, tente inserir novos valores diretamente no visualizador de RAM. Isso pode ter efeitos devastadores no jogo, ou pode fazer exatamente o que você espera, (ou nada!) Pode ser útil, para ver se você pode inserir um valor e obter o resultado esperado. Use com cuidado!</li>
 </ul>
 <p>Quando você encontrou um endereço com o qual você está feliz, você pode escrever uma nota curta para o que é e clicar em Salvar nota, isso irá armazená-lo no banco de dados e será restaurado automaticamente na próxima vez que você carregar o visor de memória para isso jogo onde quer que esteja! Note que depois de clicar em "Salvar nota", a nota será armazenada automaticamente no banco de dados, e compartilhada para que todos os desenvolvedores compartilhem o acesso a essas notas de memória. Todos serão baixados de novo quando você carregar uma ROM. Se você tentar substituir uma nota, verificará com você primeiro antes de enviar.</p>
 <p>Você pode encontrar <a href="../Tips-and-Tricks/#memory-digging-tips">Dicas de Escavação de Memória aqui</a>.</p>
@@ -3353,27 +3379,25 @@
 <p>Ao clicar neste botão, serão adicionados vários valores padrão à lista Requisitos. Esses padrões apenas garantem que algo relativamente sensível seja adicionado à lista. Por enquanto, ignorando o campo 'Special?'. Quando clicamos em criar, o valor de memória padrão será o valor que você deixou pela última vez na caixa de diálogo de memória.</p>
 <p>Em seguida, alteraremos esses valores para o seguinte:</p>
 <ul>
-<li>
-<p><strong>Size</strong>: <code>16 bits</code>.</p>
-</li>
-<li>
-<p><strong>Memory</strong>: <code>0xfe20</code>.</p>
-</li>
-<li>
-<p><strong>Cmp:</strong> <code>&gt;=</code> - esta é a comparação a fazer. Podemos ter alguma comparação aqui, mas é sensato ter "maior ou igual". Isso é importante porque, se conseguimos 10 anéis, então uma caixa de super anel para ter 20, perderíamos exatamente 15 anéis.</p>
-</li>
-<li>
-<p><strong>Type</strong>: <code>Value</code> - estamos comparando esse valor de memória com um valor fixo: 15.</p>
-</li>
-<li>
-<p><strong>Size</strong>: <code>Empty</code> - isso só é relevante ao comparar a memória com a memória.</p>
-</li>
-<li>
-<p><strong>Mem/Val</strong>: <code>15</code> - o número de anéis necessários: o valor com o qual estamos comparando a memória</p>
-</li>
-<li>
-<p><strong>Hit Count</strong>: <code>0</code> - ignore isso por enquanto, é útil para quando algo precisa acontecer um certo número de vezes.</p>
-</li>
+<li><strong>Size</strong>: <code>16 bits</code>.</li>
+</ul>
+<ul>
+<li><strong>Memory</strong>: <code>0xfe20</code>.</li>
+</ul>
+<ul>
+<li><strong>Cmp:</strong> <code>&gt;=</code> - esta é a comparação a fazer. Podemos ter alguma comparação aqui, mas é sensato ter "maior ou igual". Isso é importante porque, se conseguimos 10 anéis, então uma caixa de super anel para ter 20, perderíamos exatamente 15 anéis.</li>
+</ul>
+<ul>
+<li><strong>Type</strong>: <code>Value</code> - estamos comparando esse valor de memória com um valor fixo: 15.</li>
+</ul>
+<ul>
+<li><strong>Size</strong>: <code>Empty</code> - isso só é relevante ao comparar a memória com a memória.</li>
+</ul>
+<ul>
+<li><strong>Mem/Val</strong>: <code>15</code> - o número de anéis necessários: o valor com o qual estamos comparando a memória</li>
+</ul>
+<ul>
+<li><strong>Hit Count</strong>: <code>0</code> - ignore isso por enquanto, é útil para quando algo precisa acontecer um certo número de vezes.</li>
 </ul>
 <p>Com esse conjunto, não temos mais condições para adicionar, então retornamos à caixa de diálogo <strong>Achievements</strong>. Para estar seguro, devemos salvar nosso progresso ao clicar em <strong>Save Local</strong>! Isso salva tudo para arquivar localmente para garantir que não perderemos nenhum progresso.</p>
 <ul>
@@ -3388,15 +3412,13 @@
 <p>O cheevo (<strong>achievement</strong>) que criamos neste tutorial é muito simples, tem apenas uma condição: "anéis coletados" &gt;= 15 ". Mas o endereço para gravar o número de anéis coletados também é usado quando o jogo é executado em "modo de demonstração" (AI jogando o jogo depois de esperar um pouco na tela de título). Então, se Sonic coletar 15 anéis no modo de demonstração, essa conquista irá desencadear, o que é indesejável.</p>
 <p>Então, aqui estão algumas dicas que você sempre deve ter em mente ao criar suas conquistas:</p>
 <ul>
-<li>
-<p><strong>Nunca use/Evite ao máximo usar apenas uma condição</strong>. Caso contrário, a conquista provavelmente irá aparecer na hora errada. Este é o erro mais comum cometido por um desenvolvedor.</p>
-</li>
-<li>
-<p><strong>Use <code>PauseIf</code> demo mode (modo demonstração)</strong>: Se o jogo tiver um modo de demonstração, certifique-se de encontrar o endereço para ele e adicionar o modo! = Demo ou algo semelhante em suas conquistas. Mais informações sobre PauseIf na página Características da lógica de conquista.</p>
-</li>
-<li>
-<p><strong>Use <code>PauseIf</code> usando macetes (cheat codes)</strong>: se o jogo tiver um código secreto de macete para aumentar vidas, selecionar fases, etc. Certifique-se de encontrar os endereços para isso e adicionar algum tipo de proteção em suas conquistas. OK, talvez não seja um tópico muito básico, mas você deve ter em mente ao criar um conjunto de conquistas real.</p>
-</li>
+<li><strong>Nunca use/Evite ao máximo usar apenas uma condição</strong>. Caso contrário, a conquista provavelmente irá aparecer na hora errada. Este é o erro mais comum cometido por um desenvolvedor.</li>
+</ul>
+<ul>
+<li><strong>Use <code>PauseIf</code> demo mode (modo demonstração)</strong>: Se o jogo tiver um modo de demonstração, certifique-se de encontrar o endereço para ele e adicionar o modo! = Demo ou algo semelhante em suas conquistas. Mais informações sobre PauseIf na página Características da lógica de conquista.</li>
+</ul>
+<ul>
+<li><strong>Use <code>PauseIf</code> usando macetes (cheat codes)</strong>: se o jogo tiver um código secreto de macete para aumentar vidas, selecionar fases, etc. Certifique-se de encontrar os endereços para isso e adicionar algum tipo de proteção em suas conquistas. OK, talvez não seja um tópico muito básico, mas você deve ter em mente ao criar um conjunto de conquistas real.</li>
 </ul>
 <h2 id="ok-o-achievement-funciona-e-agora">OK, o achievement funciona. E agora?<a class="headerlink" href="#ok-o-achievement-funciona-e-agora" title="Permanent link">link</a></h2>
 <p>Depois de testarmos que a conquista funciona localmente, há um processo de confirmação em duas etapas:</p>
@@ -3412,15 +3434,13 @@
 <h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">link</a></h2>
 <p>Agora que você sabe como usar o Memory Inspector e o Editor de Conquistas. É hora de aprender novas técnicas e práticas:</p>
 <ul>
-<li>
-<p>Para refinar a lógica de sua conquista, você pode ver quais recursos você possui na página <a href="../Achievement-Logic-Features-pt_BR/">Achievement Logic Features</a>.</p>
-</li>
-<li>
-<p>Você pode aprender observando as conquistas existentes que outros desenvolvedores fizeram com uma explicação extra na página <a href="../Real-Examples-pt_BR/">Real Examples</a>.</p>
-</li>
-<li>
-<p>Você também pode ver alguns exemplos genéricos na página <a href="../Achievement-Templates-pt_BR/">Achievement Templates</a>.</p>
-</li>
+<li>Para refinar a lógica de sua conquista, você pode ver quais recursos você possui na página <a href="../Achievement-Logic-Features-pt_BR/">Achievement Logic Features</a>.</li>
+</ul>
+<ul>
+<li>Você pode aprender observando as conquistas existentes que outros desenvolvedores fizeram com uma explicação extra na página <a href="../Real-Examples-pt_BR/">Real Examples</a>.</li>
+</ul>
+<ul>
+<li>Você também pode ver alguns exemplos genéricos na página <a href="../Achievement-Templates-pt_BR/">Achievement Templates</a>.</li>
 </ul>
 <p>Diverta-se! Obrigado pela leitura!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
@@ -3434,6 +3454,26 @@
 <li><code>[2018-03-23 01:19] meleu:</code> Updated Getting Started as an Achievement Developer.pt_BR (markdown)</li>
 </ul>
 <h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-04-26 13:27] meleu:</code> fix links</li>
+<li><code>[2020-06-20 18:15] meleu:</code> adicionado link para a playlist do Thoreau</li>
+<li><code>[2018-06-10 10:51] lilbud:</code> Updated Discord Link</li>
+<li><code>[2018-03-28 20:09] meleu:</code> Updated Getting Started as an Achievement Developer pt_BR (markdown)</li>
+<li><code>[2018-03-25 01:09] meleu:</code> Updated Getting Started as an Achievement Developer pt_BR (markdown)</li>
+<li><code>[2018-03-23 01:19] meleu:</code> Updated Getting Started as an Achievement Developer.pt_BR (markdown)</li>
+</ul>
+<h2 id="changelog_2">Changelog<a class="headerlink" href="#changelog_2" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-04-26 13:27] meleu:</code> fix links</li>
+<li><code>[2020-06-20 18:15] meleu:</code> adicionado link para a playlist do Thoreau</li>
+<li><code>[2018-06-10 10:51] lilbud:</code> Updated Discord Link</li>
+<li><code>[2018-03-28 20:09] meleu:</code> Updated Getting Started as an Achievement Developer pt_BR (markdown)</li>
+<li><code>[2018-03-25 01:09] meleu:</code> Updated Getting Started as an Achievement Developer pt_BR (markdown)</li>
+<li><code>[2018-03-23 01:19] meleu:</code> Updated Getting Started as an Achievement Developer.pt_BR (markdown)</li>
+</ul>
+<h2 id="changelog_3">Changelog<a class="headerlink" href="#changelog_3" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2021-04-26 13:27] meleu:</code> fix links</li>
