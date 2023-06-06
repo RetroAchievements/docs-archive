@@ -10,8 +10,6 @@
       
       
       
-        <link rel="canonical" href="https://docs.retroachievements.org/AddHits-and-SubHits-Flag/">
-      
       
         <link rel="prev" href="../SubSource-Flag/">
       
@@ -1276,6 +1274,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_1" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1761,6 +1766,20 @@
     <li class="md-nav__item">
       <a href="../WIP-Content-Guidelines/" class="md-nav__link">
         WIP Content Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-Jr/" class="md-nav__link">
+        WIP-Jr
       </a>
     </li>
   
@@ -3092,6 +3111,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changelog_1" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3120,6 +3146,11 @@
 <p>If the final condition of the chain does not have a hit target, the <code>AddHits</code>/<code>SubHits</code> conditions have no effect on the achievement. The final condition will be true if, and only if, it is true by itself.</p>
 <p><strong>NOTE</strong>: The hit target on the final condition of the chain serves as both the overall target hit count and the maximum hit count for that condition. As a result, it is impossible to use <code>SubHits</code> without <code>AddHits</code>, as any hits subtracted by the <code>SubHits</code> could not be recovered without a separate <code>AddHits</code>. Similarly, if you need to put a condition-specific limit on the final condition of the chain, you should pull it out as an <code>AddHits</code> condition with the appropriate limit and use a dummy final condition with the overall hit target (i.e. <code>0=1 (10)</code>). The dummy condition would never accumulate any hits of its own, and only serve to tally the other values in the chain.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>
+</ul>
+<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
 <li><code>[2021-04-30 12:40] Jamiras:</code> Updated AddHits Flag (markdown)</li>
