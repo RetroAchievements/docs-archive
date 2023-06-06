@@ -29,6 +29,7 @@ markdown_extensions:
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.tilde
+    - mdx_truly_sane_lists
 
 extra:
     social:
