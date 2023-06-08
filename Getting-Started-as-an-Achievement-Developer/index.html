@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1225,17 +1239,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1519,114 +1533,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3265,7 +3175,7 @@
 <p>The Memory Inspector can be used to find addresses in RAM for us to use. Essentially you are on a treasure hunt for memory locations - this dialog will help you examine and filter the game's RAM while the game is running.</p>
 <p><strong>NOTE: If you want a step-by-step video explanation on finding memory addresses, you can <a href="https://www.youtube.com/watch?v=7ZMlBVyHl5M">view this updated video</a>.</strong>
 <strong>For another video resource, you can <a href="https://www.youtube.com/watch?v=8nYb_5cgQHY">view this older video</a></strong>.</p>
-<p><strong>See also</strong>: <a href="Memory-Inspector-Overview">Memory Inspector Overview</a> and <a href="Tips-and-Tricks#memory-digging-tips">Memory Digging Tips</a>.</p>
+<p><strong>See also</strong>: <a href="../Memory-Inspector-Overview/">Memory Inspector Overview</a> and <a href="../Tips-and-Tricks/#memory-digging-tips">Memory Digging Tips</a>.</p>
 <p>To start or restart a test, click <strong>Reset</strong> near the top left.</p>
 <p>To keep things simple, we'll start by looking for the memory address which holds the number of rings we have collected. Our steps will be the following:</p>
 <ol>
@@ -3296,7 +3206,7 @@
 <li><strong>Tip</strong>: if you'd like to experiment with memory, try entering new values directly into the RAM viewer. This can have devastating effects on the game, or it might do exactly what you expect, (or nothing at all!) It can be useful though, to see if you can enter a value and get the result you expect. Use with caution!</li>
 </ul>
 <p>When you've found an address you're happy with, you can write a short note for what it is and hit <strong>Save Note</strong>, this will store it on database, and will be automatically restored next time you load up the memory viewer for this game, wherever you are! Note that after clicking 'Save Note', the note will be automatically stored on the database, and shared so all developers will share access to these memory notes. They will all be downloaded afresh when you load a ROM. If you try to overwrite a note, it will check with you first before submitting.</p>
-<p>You can find more useful <a href="Tips-and-Tricks#memory-digging-tips">Memory Digging Tips here</a>.</p>
+<p>You can find more useful <a href="../Tips-and-Tricks/#memory-digging-tips">Memory Digging Tips here</a>.</p>
 <h2 id="achievement-sets">Achievement Sets<a class="headerlink" href="#achievement-sets" title="Permanent link">link</a></h2>
 <p>So the memory location for the number of rings is stored at <code>0xfe20</code> - note to a non-programmer, we're dealing in <a href="https://simple.wikipedia.org/wiki/Hexadecimal_numeral_system">hexadecimal numeral system</a> which can be daunting, but don't worry, essentially it's just numbers and letters instead of only numbers, and not forgetting <code>0x</code> at the start to show that it's a memory location in hex. We've found an address we're interested in and stored it using <strong>Save Note</strong>. We now want to create a new achievement.</p>
 <p>Go to the <strong>RetroAchievements</strong> in the menu, choose <strong>Achievement Sets</strong> and you'll see this dialog:</p>
@@ -3332,7 +3242,7 @@
 </ul>
 <p>With that set, we don't have any more conditions to add, so we return to the <strong>Achievements Dialog</strong>. To be safe, we should save our progress by hitting <strong>Save Local</strong>! This saves everything to file locally to ensure that we won't lose any progress.</p>
 <ul>
-<li><strong>Note</strong>: An achievement should have more than one requirement to avoid it triggering at the wrong time (i.e. playing demo mode). In this example, we are using only one requirement to simplify the explanation. See more <a href="Tips-and-Tricks#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
+<li><strong>Note</strong>: An achievement should have more than one requirement to avoid it triggering at the wrong time (i.e. playing demo mode). In this example, we are using only one requirement to simplify the explanation. See more <a href="../Tips-and-Tricks/#achivement-creation-tips">Achievement Creation Tips here</a>.</li>
 </ul>
 <h2 id="testing-the-achievement">Testing the Achievement<a class="headerlink" href="#testing-the-achievement" title="Permanent link">link</a></h2>
 <p>We can now 'activate' this achievement locally by checking the box next to <strong>Active</strong> on the right-hand side in the Achievement Editor or by selecting the achievement in Achievement Sets and clicking <strong>Activate Selected</strong>. This will start monitoring these memory locations and will award the achievement once all the conditions are true. Now we can go ahead and test to see if this achievement works!</p>
@@ -3347,22 +3257,22 @@
 <li><strong><del>Never</del> Avoid making achievements with only one condition as much as you can</strong>. Otherwise it will most likely pop at the wrong time. This is the <strong>most common error by a developer</strong></li>
 </ul>
 <ul>
-<li>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="Tips-and-Tricks#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="Achievement-Logic-Features#pauseif">PauseIf</a> and <a href="Achievement-Logic-Features#resetif">ResetIf</a>.</li>
+<li>If the game has a <strong>demo mode</strong> (AI plays the game after you wait a while on the title screen), make sure to <a href="../Tips-and-Tricks/#finding-the-address-for-demo-mode">find the address for it</a> and add a condition so your achievements don't trigger in demo mode. You'll also need to know how to use <a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> and <a href="../Achievement-Logic-Features/#resetif">ResetIf</a>.</li>
 </ul>
 <ul>
-<li><strong><a href="Achievement-Logic-Features#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</li>
+<li><strong><a href="../Achievement-Logic-Features/#pauseif">PauseIf</a> cheat codes</strong>: If the game has a cheat code to increase lives, select stages, etc., make sure to find the addresses for it and add some kind of protection in your achievements. OK, maybe it's not a very basic topic, but you have to keep it in mind when creating an official achievement set.</li>
 </ul>
 <ul>
-<li><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="Achievement-Templates#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</li>
+<li><strong>Avoid creating achievements for just entering a stage.</strong> As it can be earned by a password or a stage select cheat code. It is preferred to make achievements for finishing stages, <a href="../Achievement-Templates/#finish-level-n">like in this template here</a>. Also, <strong>do not create achievements for just starting a game or "starting a game with character X"</strong>.</li>
 </ul>
 <ul>
-<li>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="Achievement-Templates#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</li>
+<li>If you want to create an achievement for getting a unique item in the game, add some conditions to make sure the player obtained the item where it is supposed to be obtained, <a href="../Achievement-Templates/#collect-an-item-in-a-specific-level">like in this template here</a>. Otherwise the achievement can be earned by using password or loading a saved game.</li>
 </ul>
 <ul>
 <li><strong>Avoid making too many achievements about simple things that require minimal effort</strong>. Examples of what <strong>NOT</strong> to do: get one coin or one mushroom on Super Mario Bros.</li>
 </ul>
 <ul>
-<li>Be aware of the <a href="Developers-Code-of-Conduct#unwelcome-concepts">unwelcome achievement's design concepts</a>.</li>
+<li>Be aware of the <a href="../Developers-Code-of-Conduct/#unwelcome-concepts">unwelcome achievement's design concepts</a>.</li>
 </ul>
 <ul>
 <li><strong>Be creative with your achievements</strong>. Those covering unique features and details of the game are the most welcome. The players love when that little detail of a game they love is supported on an achievement. Reading a walkthrough on <a href="https://gamefaqs.gamespot.com/">GameFAQs</a> can give some inspiration too.</li>
@@ -3370,20 +3280,20 @@
 <ul>
 <li>It can take a while to understand how the memory works in a game, so try spending as much time with it as you can, especially if it's your first attempt at developing achievements. </li>
 </ul>
-<p>You can find more in the <a href="Tips-and-Tricks">Tips and Tricks page</a>.</p>
+<p>You can find more in the <a href="../Tips-and-Tricks/">Tips and Tricks page</a>.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">link</a></h2>
 <p>Now that you know how to use the Memory Inspector, and the Achievement Editor. It's time to learn new techniques and practice:</p>
 <ul>
-<li>In order to refine your achievement logic, you can see what features you have in the <a href="Achievement-Logic-Features">Achievement Logic Features</a> page.</li>
+<li>In order to refine your achievement logic, you can see what features you have in the <a href="../Achievement-Logic-Features/">Achievement Logic Features</a> page.</li>
 </ul>
 <ul>
-<li>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="Real-Examples">Real Examples</a> page.</li>
+<li>Another way to learn is by looking at existing achievements that other devs made with an extra explanation in the <a href="../Real-Examples/">Real Examples</a> page.</li>
 </ul>
 <ul>
-<li>You can also see some generic examples in the <a href="Achievement-Templates">Achievement Templates</a> page.</li>
+<li>You can also see some generic examples in the <a href="../Achievement-Templates/">Achievement Templates</a> page.</li>
 </ul>
 <ul>
-<li>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="How-to-Become-an-Achievement-Developer">How to Become an Achievement Developer</a></li>
+<li>Once you have learned the basic techniques, you can continue your quest to become an achievement developer by following the steps explained here: <a href="../How-to-Become-an-Achievement-Developer/">How to Become an Achievement Developer</a></li>
 </ul>
 <p>Have fun!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>

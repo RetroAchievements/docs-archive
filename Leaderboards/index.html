@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1132,17 +1146,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1426,114 +1440,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1687,7 +1597,7 @@
       
         <li class="md-nav__item">
   <a href="#further-help" class="md-nav__link">
-    Further help
+    Further Help
   </a>
   
 </li>
@@ -3244,7 +3154,7 @@
       
         <li class="md-nav__item">
   <a href="#further-help" class="md-nav__link">
-    Further help
+    Further Help
   </a>
   
 </li>
@@ -3276,6 +3186,18 @@
 
   <h1>Leaderboards</h1>
 
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#example">Example</a></li>
+<li><a href="#start-conditions">Start Conditions</a></li>
+<li><a href="#cancel-conditions">Cancel Conditions</a></li>
+<li><a href="#submit-conditions">Submit Conditions</a></li>
+<li><a href="#value">Value</a></li>
+<li><a href="#value-format">Value Format</a></li>
+<li><a href="#design-tips">Design Tips</a></li>
+<li><a href="#score-wrapping">Score Wrapping</a></li>
+<li><a href="#further-help">Further Help</a></li>
+</ul>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">link</a></h2>
 <p>This is how a game's Leaderboard List looks like on the website:</p>
 <p><img alt="leaderboard_list" src="https://user-images.githubusercontent.com/8508804/33172797-ad9b2f22-d038-11e7-97fe-09116181ddfa.png" /></p>
@@ -3300,7 +3222,7 @@
 <p>If a <strong>Cancel</strong> (<strong>CAN</strong>) condition is true, then it will cancel the leaderboard and no score will be submitted. NOTE: Cancel is given priority over Start. If both become true in the same frame, the leaderboard will not start.</p>
 <p>If the <strong>Submit</strong> (<strong>SUB</strong>) condition is true, then the leaderboard score will be submitted. NOTE: Cancel is given priority over Submit. If both become true in the same frame, the score will not be submitted.</p>
 <p>Finally, the <strong>Value</strong> (<strong>VAL</strong>) is a special case, and will be taken from memory using the formula stated in the memory box. This is the score that gets displayed while the leaderboard is active, and the value that's submitted if <strong>SUB</strong> is true.</p>
-<p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="Condition-Syntax">here</a>.</p>
+<p>Memory addresses for STA/CAN/SUB/VAL have the format defined <a href="../Condition-Syntax/">here</a>.</p>
 <p>NOTE: Once an active leaderboard is cancelled or submitted, it cannot be reactivated until the <strong>Start</strong> condition becomes false, then true again. This prevents the leaderboard from immediately reactivating after submission/cancel.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">link</a></h2>
 <p>The best place to start is to look at existing leaderboards and break it down to see how it works. We're going to use the <a href="https://retroachievements.org/leaderboardinfo.php?i=2">Green Hill Act 1 (Sonic the Hedgehog) Leaderboard</a> for this purpose. Then let's see how it looks:</p>
@@ -3346,10 +3268,10 @@
 <p><strong>Tip</strong>: it can be useful to watch these values in memory to see how they perform, and what sort of values they end up at in different circumstances.</p>
 <h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">link</a></h3>
 <p>Finally, value. Once the player has reached the start condition, they will be shown a popup which remains on-screen, showing their progress so far. If it's a time leaderboard, it will be a clock, and if it's a score, it will just be the value. If they fulfill the cancel condition, they will be told that they have failed, and the popup will be removed. If they successfully reach the submit condition, the current value will be taken and submitted as their score, and on successful submission, an in game popup will inform the player of the leaderboard so far, and their position in the leaderboard.</p>
-<p>For more information on the value format, see <a href="Value-Definition">Value Definition</a>.</p>
+<p>For more information on the value format, see <a href="../Value-Definition/">Value Definition</a>.</p>
 <p><strong>NOTE</strong>: The value calculation is performed using 32-bit signed integers. As such, the maximum value is 2147483647 and the minimum value is -2147483648. Values above the maximum will wrap around and register as very negative numbers. </p>
 <h3 id="value-format">Value Format<a class="headerlink" href="#value-format" title="Permanent link">link</a></h3>
-<p>'Format' can be any of the available <a href="Rich-Presence#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
+<p>'Format' can be any of the available <a href="../Rich-Presence/#format">formats</a>, but the editor currently only provides <strong>Score</strong>, <strong>Time (Frames)</strong>, <strong>Time (Milliseconds)</strong> and <strong>Value</strong>. <strong>Time (Frames)</strong> is the most common one, and represents a time derived from a value that increments every frame. It does this by multiplying by 100 (to convert to hundredths of a second) and dividing by 60 (the number of frames per second).</p>
 <p><strong>NOTE</strong>: If you're using a system that doesn't run at 60Hz, you have to use "Time (millisecs)" and multiply by some value to do the conversion yourself (50Hz = <code>*2</code> [100/50], 60Hz = <code>*1.666666</code> [100/60], 75Hz =<code>*1.333333</code> [100/75]).</p>
 <p><strong>NOTE</strong>: <strong>Time (Milliseconds)</strong> is actually hundredths of a second, not thousandths of a second. i.e. a Value of 6234 would be 62.34 seconds, not 6.234 seconds.</p>
 <h2 id="design-tips">Design Tips<a class="headerlink" href="#design-tips" title="Permanent link">link</a></h2>
@@ -3369,13 +3291,14 @@ Core needs to have a Measured statement in it so just put something that is neve
 <p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171063993-04267eec-c4db-47cd-b15a-e8255b1c3f50.png" /></p>
 <p>For the next Alt we increment the number of hits used in the loop detection as well as the value we multiply the total score added by for each loop</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/4047771/171064115-5680050d-e9d9-477f-9070-d45b7a353dc2.png" /></p>
-<h2 id="further-help">Further help<a class="headerlink" href="#further-help" title="Permanent link">link</a></h2>
+<h2 id="further-help">Further Help<a class="headerlink" href="#further-help" title="Permanent link">link</a></h2>
 <p>There are unfortunately <em>MANY</em> ways to get this process wrong, so if you are having any trouble feel free to ask for help in our <a href="https://discord.gg/dq2E4hE">Discord server</a>.</p>
 <p>If you want to practice, it's highly recommended to create your own leaderboard and attempting something on a new game, rather than using an existing leaderboard. Just remember to clean up any test leaderboards that you push to the site afterwards.</p>
 <p>Please remember that these files are pulled directly into someone's game if they decide to play it, and a badly formed memory address or string could cause their emulator to crash, so please test your leaderboard code!</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2023-06-06 11:08] televandalist:</code> Added ToC</li>
 <li><code>[2022-05-30 18:49] Searo:</code> Cleanup</li>
 <li><code>[2022-05-30 18:45] Searo:</code> Typos</li>
 <li><code>[2022-05-30 18:35] Searo:</code> Misc updates</li>
@@ -3385,7 +3308,6 @@ Core needs to have a Measured statement in it so just put something that is neve
 <li><code>[2021-06-08 10:07] Jamiras:</code> Updated Leaderboards (markdown)</li>
 <li><code>[2021-04-26 13:35] meleu:</code> fix link</li>
 <li><code>[2020-11-13 16:36] Jamiras:</code> Updated Leaderboards (markdown)</li>
-<li><code>[2020-02-07 20:19] Jamiras:</code> add note about value range</li>
 </ul>
 
 

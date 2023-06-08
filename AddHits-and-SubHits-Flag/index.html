@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1134,17 +1148,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1465,114 +1479,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3128,7 +3038,7 @@
 
 <p><strong>NOTE</strong>: This technique is not needed for simple games, so it is not mandatory for jr-devs.</p>
 <p><code>AddHits</code> and <code>SubHits</code> can be chosen in the Flag column of the Achievement Editor.</p>
-<p>The <code>AddHits</code>/<code>SubHits</code> conditions do not have to be true for the achievement to trigger. They modify the <a href="Hit-Counts">hit count</a> of another condition, which does have to be true for the achievement to trigger. The sequence of conditions is referred to as a <code>AddHits</code> chain (even if it contains <code>SubHits</code>).</p>
+<p>The <code>AddHits</code>/<code>SubHits</code> conditions do not have to be true for the achievement to trigger. They modify the <a href="../Hit-Counts/">hit count</a> of another condition, which does have to be true for the achievement to trigger. The sequence of conditions is referred to as a <code>AddHits</code> chain (even if it contains <code>SubHits</code>).</p>
 <p>When a condition with the <code>AddHits</code>/<code>SubHits</code> flag is true, the hit count for that condition is incremented. A hit target may be placed on the condition to keep it from tallying too many times.</p>
 <p>The total hit count of the final condition in a chain is incremented by the hit counts of any <code>AddHits</code> conditions in the chain, and decremented by any <code>SubHits</code> conditions in the chain. If the total hit count meets or exceeds the target hit count of the final condition, it's considered true.</p>
 <p>If the final condition of the chain does not have a hit target, the <code>AddHits</code>/<code>SubHits</code> conditions have no effect on the achievement. The final condition will be true if, and only if, it is true by itself.</p>

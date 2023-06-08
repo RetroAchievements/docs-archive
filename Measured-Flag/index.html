@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1134,17 +1148,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1465,114 +1479,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3128,13 +3038,13 @@
 
 <p><code>Measured</code> marks a condition for tracking progress. It adds a progress bar to the achievement overlay to inform the user how close they are to completing an achievement. As the user expects an achievement to trigger when the progress bar is full, it is expected that any other conditions in the achievement should be true most of the time.</p>
 <p><code>Measured</code> should not be used to track things that are clearly visible to the user. If you have an achievement for getting 500,000 points, you don't need to Measure it if the score is displayed on the screen. Similarly, there's no need to use <code>Measured</code> in an achievement for having 100 of something in the inventory if the player can see a count of how many they have just by opening the inventory.</p>
-<p>If placed on a condition with a required <a href="Hit-Counts">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="AddHits-and-SubHits-Flag"><code>AddHits</code></a> can be used.</p>
-<p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="AddSource-Flag"><code>AddSource</code></a> and <a href="SubSource-Flag"><code>SubSource</code></a> can be used.</p>
+<p>If placed on a condition with a required <a href="../Hit-Counts/">HitCount</a>, the target value is the required HitCount and the current value is the current HitCount. <a href="../AddHits-and-SubHits-Flag/"><code>AddHits</code></a> can be used.</p>
+<p>If placed on a condition without a HitCount, the target value is the constant on the right side of the condition and the current value is the evaluation of the left side of the condition. <a href="../AddSource-Flag/"><code>AddSource</code></a> and <a href="../SubSource-Flag/"><code>SubSource</code></a> can be used.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have the same target value, the current value will be the maximum of all the <code>Measured</code> conditions.</p>
 <p>If multiple conditions are marked as <code>Measured</code> and have different target values, a Parse Error -22 will occur.</p>
 <p>Note that progress for <code>Measured</code> values is reported at the time of examination and may actually go down depending on the current value (Hit Count could be reset, or comparison value decreases).</p>
 <p>To limit the scope of a <code>Measured</code> condition, you can add a <code>MeasuredIf</code> condition. A <code>MeasuredIf</code> condition must be true for the <code>Measured</code> value to be non-zero (and for the achievement to trigger). You can use <code>MeasuredIf</code> to create achievements that require playing as a certain character, or just to prevent bogus data from showing up if the player is in the wrong part of the game. If any <code>MeasuredIf</code> condition in a group is false, the <code>Measured</code> value for the group is automatically 0.</p>
-<p>Since <a href="PauseIf-Flag"><code>PauseIf</code></a> has precedence over <code>Measured</code>, the <code>Measured</code> value will be captured when a group becomes paused, and the captured value will be returned until the group is unpaused and <code>Measured</code> can be evaluated again. If another <code>Measured</code> exists in a non-paused group, its value will be returned even if it is lower than the captured value.</p>
+<p>Since <a href="../PauseIf-Flag/"><code>PauseIf</code></a> has precedence over <code>Measured</code>, the <code>Measured</code> value will be captured when a group becomes paused, and the captured value will be returned until the group is unpaused and <code>Measured</code> can be evaluated again. If another <code>Measured</code> exists in a non-paused group, its value will be returned even if it is lower than the captured value.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>

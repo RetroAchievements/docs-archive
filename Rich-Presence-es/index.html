@@ -223,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link">
+      <a href="../Developer-Docs/" class="md-tabs__link">
         Achievement Development
       </a>
     </li>
@@ -1013,6 +1013,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1130,17 +1144,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1424,114 +1438,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3595,7 +3505,7 @@ Jugando Batalla @Batalla(0x 00007c*0.2) en @Zona(0xH00016c)
 <p><strong>NOTA</strong>: Se requiere una string default en caso de que ninguna de tus strings condicionales sean verdaderas. Si solamente cuentas con strings condicionales, el script no va a hacer nada.</p>
 <p>Observando este ejemplo, si el valor de 16-bit en $0085 es igual a 0, el string del display sera <code>Title Screen</code>. Si no, la siguiente linea es examinada. Si el 7mo bit de $007C es igual a 1, el string del display sera <code>Mapa Personalizado en @Zona(0xH00016c)</code>. Si no entonces, como linea final no cuenta con una clausula condicional esta es utilizada.</p>
 <p>Strings de Display asociados con una clausula condicional soportan todo la misma sintaxis que el string de display predeterminado. En este ejemplo, puedes ver que el lookup <code>@Zona</code> se utiliza en los dos strings condicionales y en el string predeterminado. </p>
-<p>La frase condicional soporta todos los asesores de direcciones previamente mencionados así como la lógica de los AND (_) y OR (S). Nota: las clausulas OR aun requieren un grupo 'core', <a href="Alt-Groups-es">así como en los logros</a>.</p>
+<p>La frase condicional soporta todos los asesores de direcciones previamente mencionados así como la lógica de los AND (_) y OR (S). Nota: las clausulas OR aun requieren un grupo 'core', <a href="../Alt-Groups-es/">así como en los logros</a>.</p>
 <ul>
 <li><code>?0xH1234=32_0xH2345=0?ejemplo y</code><p>si el valor de 8-bit en $1234 es 32 <em>y</em> el valor de 8-bit en $2345 is 0, muestra <code>ejemplo y</code></p>
 </li>
@@ -3611,7 +3521,7 @@ Jugando Batalla @Batalla(0x 00007c*0.2) en @Zona(0xH00016c)
 <h2 id="codigo-binario-programado-en-decimal-bcd">Código Binario programado en Decimal (BCD)<a class="headerlink" href="#codigo-binario-programado-en-decimal-bcd" title="Permanent link">link</a></h2>
 <p>BCD es cuando cuando los valores son almacenados en una dirección del 0-9 (un dígito) o 0-99 (dos dígitos). ten en mente que la mayoría de las veces los valores son almacenados en hexadecimal, pero algunas veces los juegos los almacenan de esta manera y aquí esta el mejor método para trabajar con este tipo de valores en tu display.</p>
 <p>BCD decodifica cada carácter hexadecimal como un dígito decimal. Si el inspector de memoria muestra un 86 (en hex), el resulta de BCD decodificando el valor seria un 86 (en decimal).</p>
-<p>Para objectos con estos valores puedes utilizar le prefijo BCD, como aquí <code>b0xh1234</code>. Esto también funciona con <a href="Leaderboards-es#interpretador-de-valores">valores en tablas de clasificación</a>.
+<p>Para objectos con estos valores puedes utilizar le prefijo BCD, como aquí <code>b0xh1234</code>. Esto también funciona con <a href="../Leaderboards-es/#interpretador-de-valores">valores en tablas de clasificación</a>.
 Ten en cuenta que también vas a necesitar especificar el tamaño de la dirección BCD en memoria. <code>b0x1234</code> lee un valor de  16-bit. <code>b0xh1234</code> lee un valor de 8-bit y <code>b0xX1234</code> lee un valor de 32-bit.
 <em>NOTA</em>: Soporte para decodificacion BCD de 16-bit y 32-bit es una función para el kit de desarrollo 0.075.</p>
 <p>Esto es usualmente usado para puntuaciones y tiempo, pero algunas veces también para otros tipos de valores.</p>

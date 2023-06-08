@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1134,17 +1148,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1472,114 +1486,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3142,9 +3052,9 @@
 
 <p>The <code>PauseIf</code> flag can be chosen in the Flag column of the Achievement Editor.</p>
 <p><code>PauseIf</code> is usually used to prevent hit counts from going up during a specific situation (like when the game is paused). It's used when you want to keep previously earned hit count, but don't want to increment it or reset it while something else is going on.</p>
-<p>When a group is processed, first all <code>PauseIf</code> are evaluated in order. As soon as any <code>PauseIf</code> is true, the group stops processing. This means that any <code>PauseIf</code>s after the true <code>PauseIf</code> <strong>will not be evaluated</strong>. This allows one <code>PauseIf</code> to prevent another <code>PauseIf</code> from collecting hits, but it's usually better to write the second <code>PauseIf</code> with an <a href="AndNext-and-OrNext-Flags"><code>AndNext</code></a> to limit when it collects hits.</p>
-<p>This also means that any <a href="ResetIf-Flag"><code>ResetIf</code></a>s in the group will not be processed while the group is paused. To reset the hit count on a <code>PauseIf</code>, you must place the <code>ResetIf</code> in an alt group or attach a <a href="ResetNextIf-Flag"><code>ResetNextIf</code></a> to the <code>PauseIf</code>.</p>
-<p><a href="Delta-Values">Delta values</a> are not affected by paused groups. The value returned by a delta read will still be from the previous frame, not from the frame just before the group was paused.</p>
+<p>When a group is processed, first all <code>PauseIf</code> are evaluated in order. As soon as any <code>PauseIf</code> is true, the group stops processing. This means that any <code>PauseIf</code>s after the true <code>PauseIf</code> <strong>will not be evaluated</strong>. This allows one <code>PauseIf</code> to prevent another <code>PauseIf</code> from collecting hits, but it's usually better to write the second <code>PauseIf</code> with an <a href="../AndNext-and-OrNext-Flags/"><code>AndNext</code></a> to limit when it collects hits.</p>
+<p>This also means that any <a href="../ResetIf-Flag/"><code>ResetIf</code></a>s in the group will not be processed while the group is paused. To reset the hit count on a <code>PauseIf</code>, you must place the <code>ResetIf</code> in an alt group or attach a <a href="../ResetNextIf-Flag/"><code>ResetNextIf</code></a> to the <code>PauseIf</code>.</p>
+<p><a href="../Delta-Values/">Delta values</a> are not affected by paused groups. The value returned by a delta read will still be from the previous frame, not from the frame just before the group was paused.</p>
 <h2 id="pauseif-with-hit-counts"><code>PauseIf</code> with hit counts<a class="headerlink" href="#pauseif-with-hit-counts" title="Permanent link">link</a></h2>
 <p>A <code>PauseIf</code> condition with a hit count target will only trigger when the hit count target is met. Once the hit count target is met, the group <strong>remains paused</strong> until the hit count is reset by a <code>ResetIf</code> in another group or a <code>ResetNextIf</code> attached to the <code>PauseIf</code>. You may hear this referred to as a PauseLock.</p>
 <p>A <code>PauseIf</code> without a hit count will automatically unpause when the condition is no longer true.</p>

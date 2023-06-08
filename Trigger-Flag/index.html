@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../How-to-Become-an-Achievement-Developer/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Developer-Docs/" class="md-tabs__link md-tabs__link--active">
         Achievement Development
       </a>
     </li>
@@ -1015,6 +1015,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        Developer Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
         How to Become an Achievement Developer
       </a>
@@ -1134,17 +1148,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
           Flags
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
           Flags
         </label>
@@ -1472,114 +1486,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
-          Real Examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_19">
-          <span class="md-nav__icon md-icon"></span>
-          Real Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Real-Examples/" class="md-nav__link">
-        Intro
+        Real Examples
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
-        Using Hit Counts as a Timer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
-        Using Delta Values and Hit Counts to Detect an Increment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
-        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Creating-a-Timer-with-Reset-If-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
-        Creating a Timer with Reset If Hits based on the Speed of the Game
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using-Add-Source-and-Deltas-for-Collectibles-or-Similar-Achievements/" class="md-nav__link">
-        Using Add Source and Deltas for Collectibles or Similar Achievements
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3143,7 +3053,7 @@
 <p><code>Trigger</code> marks one or more conditions in an achievement as the logic that is expected to be the final logic to become true which causes the achievement to trigger. This allows the runtime to know when an achievement is about to trigger, so a challenge indicator can be shown on the screen.</p>
 <p>When all conditions that must be true for the achievement to trigger are true except those marked with the <code>Trigger</code> flag, the achievement will become Primed. It will remain Primed as long as all of the previous conditions remain true, or until the achievement triggers or is deactivated.</p>
 <p>This functionality allows putting indicators on the screen to help players know when a challenge is active, or more importantly, when they fail the challenge. </p>
-<p>A prime example would be for a damageless boss fight. The <code>Trigger</code> flag would be put on the "boss is dead" condition. When all other conditions are true (ex: in boss fight, boss at full hp (<a href="Hit-Counts">HitCount</a> 1), not demo), the challenge indicator would be displayed. If the player takes damage, the HitCount on the "boss at full hp" condition would get reset, and the challenge indicator would go away.</p>
+<p>A prime example would be for a damageless boss fight. The <code>Trigger</code> flag would be put on the "boss is dead" condition. When all other conditions are true (ex: in boss fight, boss at full hp (<a href="../Hit-Counts/">HitCount</a> 1), not demo), the challenge indicator would be displayed. If the player takes damage, the HitCount on the "boss at full hp" condition would get reset, and the challenge indicator would go away.</p>
 <p>Trigger should not be used if the player is not attempting a challenge. Achievements that would be earned without any additional effort from the player don't need to tell the player they're about to be earned.</p>
 <p>Up to eight challenge indicators can be shown at one time (though rarely more than one or two should be). If indicators and leaderboard trackers are both visible, the tracker will appear above the indicators.</p>
 <h3 id="interaction-with-pauseif">Interaction with PauseIf<a class="headerlink" href="#interaction-with-pauseif" title="Permanent link">link</a></h3>
