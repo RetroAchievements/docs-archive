@@ -1,0 +1,5178 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Progression-and-Win-Condition-Guidelines/">
+      
+      
+        <link rel="prev" href="../Difficulty-Scale-and-Balance/">
+      
+      
+        <link rel="next" href="../Badge-and-Icon-Creation/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>Progression and Win Condition Typing - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RADocs" class="md-header__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M192 64C86 64 0 150 0 256s86 192 192 192h256c106 0 192-86 192-192S554 64 448 64H192zm304 104a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1-80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32v32c0 13.3-10.7 24-24 24s-24-10.7-24-24v-32h-32c-13.3 0-24-10.7-24-24s10.7-24 24-24h32v-32z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Progression and Win Condition Typing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../RetroAchievements-Manifesto/" class="md-tabs__link">
+          
+  
+  Guidelines
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Developer-Docs/" class="md-tabs__link">
+          
+  
+  Achievement Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Docs-To-Do-List/" class="md-tabs__link">
+          
+  
+  WIP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Home-pt_BR/" class="md-tabs__link">
+          
+  
+  Portugues
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Home-es/" class="md-tabs__link">
+          
+  
+  Español
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RADocs" class="md-nav__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M192 64C86 64 0 150 0 256s86 192 192 192h256c106 0 192-86 192-192S554 64 448 64H192zm304 104a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1-80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24h-32v32c0 13.3-10.7 24-24 24s-24-10.7-24-24v-32h-32c-13.3 0-24-10.7-24-24s10.7-24 24-24h32v-32z"/></svg>
+
+    </a>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guidelines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guidelines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            User Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RetroAchievements Manifesto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Leaderboard and Achievement Hunting Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Guidelines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developer's Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Entries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Entries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Claims-System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claims System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Handling-Tickets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handling Tickets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Content Guidelines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Content Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Set Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Unwelcome-Concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unwelcome Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Progression and Win Condition Typing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Progression and Win Condition Typing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progression-type-conditions" class="md-nav__link">
+    Progression Type Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Progression Type Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progression-conditions" class="md-nav__link">
+    Progression Conditions:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-progression" class="md-nav__link">
+    Non-progression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win-conditions" class="md-nav__link">
+    Win Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-progression" class="md-nav__link">
+    Types of Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-progression" class="md-nav__link">
+    Linear progression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grouped" class="md-nav__link">
+    Grouped
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bosses" class="md-nav__link">
+    Bosses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-itemsevents" class="md-nav__link">
+    Key Items/Events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-standard-progression" class="md-nav__link">
+    Non-Standard Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Standard Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intended-skips" class="md-nav__link">
+    Intended Skips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-scopelittle-substance" class="md-nav__link">
+    Limited Scope/Little Substance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-game-modes" class="md-nav__link">
+    Multiple Game Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-possible-win-conditions" class="md-nav__link">
+    Multiple Possible Win Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Possible Win Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-endings" class="md-nav__link">
+    Multiple Endings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-difficulties" class="md-nav__link">
+    Multiple difficulties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-storylinescharacters" class="md-nav__link">
+    Multiple Storylines/Characters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-genres" class="md-nav__link">
+    Notable Genres
+  </a>
+  
+    <nav class="md-nav" aria-label="Notable Genres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arcade" class="md-nav__link">
+    Arcade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fighting" class="md-nav__link">
+    Fighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puzzle" class="md-nav__link">
+    Puzzle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhythm" class="md-nav__link">
+    Rhythm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot-em-ups-aka-shumps" class="md-nav__link">
+    Shoot 'em Ups (aka Shumps)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sports" class="md-nav__link">
+    Sports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_1" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Plagiarism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Plagiarism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badge and Icons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code-Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Editing-Leaderboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing Leaderboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Set Revisions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievements for ROM hacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subsets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subsets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with the Right ROM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hash-Labels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hash Labels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Emulator-Support-and-Issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emulator Support and Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ways-to-Contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ways to Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RABot%2C-the-RA-Discord-Robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RABot, the RA Discord Robot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overlay-Themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overlay Themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Useful-Links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Useful Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing with the docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../About-Us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-configure-OBS-Studio-to-see-the-popups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure OBS Studio to see the popups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Disc Games Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-DLC-for-the-PlayStation-Portable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with DLC for the PlayStation Portable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Achievement Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Achievement Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-Docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developer Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Become an Achievement Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started as an Achievement Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Identification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Scoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Scoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Difficulty Scale and Balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Progression and Win Condition Typing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Progression and Win Condition Typing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progression-type-conditions" class="md-nav__link">
+    Progression Type Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Progression Type Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progression-conditions" class="md-nav__link">
+    Progression Conditions:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-progression" class="md-nav__link">
+    Non-progression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win-conditions" class="md-nav__link">
+    Win Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-progression" class="md-nav__link">
+    Types of Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-progression" class="md-nav__link">
+    Linear progression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grouped" class="md-nav__link">
+    Grouped
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bosses" class="md-nav__link">
+    Bosses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-itemsevents" class="md-nav__link">
+    Key Items/Events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-standard-progression" class="md-nav__link">
+    Non-Standard Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Standard Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intended-skips" class="md-nav__link">
+    Intended Skips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-scopelittle-substance" class="md-nav__link">
+    Limited Scope/Little Substance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-game-modes" class="md-nav__link">
+    Multiple Game Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-possible-win-conditions" class="md-nav__link">
+    Multiple Possible Win Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Possible Win Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-endings" class="md-nav__link">
+    Multiple Endings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-difficulties" class="md-nav__link">
+    Multiple difficulties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-storylinescharacters" class="md-nav__link">
+    Multiple Storylines/Characters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-genres" class="md-nav__link">
+    Notable Genres
+  </a>
+  
+    <nav class="md-nav" aria-label="Notable Genres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arcade" class="md-nav__link">
+    Arcade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fighting" class="md-nav__link">
+    Fighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puzzle" class="md-nav__link">
+    Puzzle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhythm" class="md-nav__link">
+    Rhythm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot-em-ups-aka-shumps" class="md-nav__link">
+    Shoot 'em Ups (aka Shumps)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sports" class="md-nav__link">
+    Sports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_1" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badge and Icon Creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Development-Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Development Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flags
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Flags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ResetIf Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetNextIf-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ResetNextIf Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PauseIf Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AndNext-and-OrNext-Flags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AndNext and OrNext Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AddSource Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubSource Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-and-SubHits-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AddHits and SubHits Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddAddress-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AddAddress Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measured-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measured Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Trigger-Flag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trigger Flag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BitCount-Size/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BitCount Size
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alt Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hit Counts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delta Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prior-Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prior Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Value-Definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Definition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Condition-Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Condition Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Required Versions for Logic Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memory Inspector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Real Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Development Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips and Tricks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rich Presence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RATools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RATools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Specific Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libretro-core-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    libretro core support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    WIP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            WIP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs-To-Do-List/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docs To Do List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-User-Code-of-Conduct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP User Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-CoC-FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP CoC FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-Content-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP Content Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-Jr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP-Jr
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP---Dev-Tips---Code-Notes-En-Masse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP---Dev-Tips---Code-Notes-En-Masse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Portugues
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Portugues
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Geral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manifesto RetroAchievements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Código de Conduta do Usuário
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ - Perguntas Frequentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como contribuir se você não é um desenvolvedor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial para Jogos Multi-Discos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Desenvolvedores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desenvolvedores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primeiros Passos como um Desenvolvedor de Conquistas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursos de Lógica para Achievements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_4" id="__nav_5_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exemplos Reais
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Exemplos Reais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Hit Counts e ResetIf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Delta Values e ResetIf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simples Exemplo de como Evitar Abuso de Load State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dicas e Truques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dicas Específicas de Console
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelos de Achievement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Escala de Dificuldade e Equilíbrio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roteiro de Desenvolvimento de um Set de Conquistas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Criação de Ícones e Emblemas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leaderboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rich Presence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-pt_BR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design de Conquistas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Español
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Español
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manifesto RetroAchievements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Código de Conducta del Usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ - Preguntas Frecuentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tablas Globales y Reglas para la Casería de Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mi juego no esta cargando los logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como contribuir si no eres un desarrollador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Por que no deberías utilizar la función de cargar estado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribuyendo con los documentos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-RA-Documentation-Works-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como funciona la Documentación de RA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descargas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Desarrolladores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desarrolladores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Código de Conducta del Desarrollador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como convertirme en un Desarrollador de Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primeros pasos como un Desarrollador de Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Un vistazo al Inspector de Memoria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_6" id="__nav_6_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características en la Logica de un Logro
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Características en la Logica de un Logro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contador de Golpes (Hit Counts)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Valores Delta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bandera ResetIf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bandera PauseIf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bandera AddSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bandera SubSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bandera AddHits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combinando Banderas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alt Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versiones Mínimas Requeridas para Funciones en la Lógica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_7" id="__nav_6_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejemplos Reales
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ejemplos Reales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilizando Hit Counts como un Temporizador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plantillas para Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips y Trucos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Escala de Dificultad y Balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño de Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Desarrollo de Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revisiones en Set de Logros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creación de Iconos y Badges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tablas de Clasificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rich Presence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajando con el ROM apropiado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identificación del Juego
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía para Sets Bonus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logros para ROM hacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips Específicos por Consola
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progression-type-conditions" class="md-nav__link">
+    Progression Type Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Progression Type Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progression-conditions" class="md-nav__link">
+    Progression Conditions:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-progression" class="md-nav__link">
+    Non-progression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win-conditions" class="md-nav__link">
+    Win Conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-progression" class="md-nav__link">
+    Types of Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-progression" class="md-nav__link">
+    Linear progression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grouped" class="md-nav__link">
+    Grouped
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bosses" class="md-nav__link">
+    Bosses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-itemsevents" class="md-nav__link">
+    Key Items/Events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-standard-progression" class="md-nav__link">
+    Non-Standard Progression
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Standard Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intended-skips" class="md-nav__link">
+    Intended Skips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-scopelittle-substance" class="md-nav__link">
+    Limited Scope/Little Substance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-game-modes" class="md-nav__link">
+    Multiple Game Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-possible-win-conditions" class="md-nav__link">
+    Multiple Possible Win Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Possible Win Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-endings" class="md-nav__link">
+    Multiple Endings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-difficulties" class="md-nav__link">
+    Multiple difficulties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-storylinescharacters" class="md-nav__link">
+    Multiple Storylines/Characters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-genres" class="md-nav__link">
+    Notable Genres
+  </a>
+  
+    <nav class="md-nav" aria-label="Notable Genres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arcade" class="md-nav__link">
+    Arcade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fighting" class="md-nav__link">
+    Fighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puzzle" class="md-nav__link">
+    Puzzle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhythm" class="md-nav__link">
+    Rhythm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot-em-ups-aka-shumps" class="md-nav__link">
+    Shoot 'em Ups (aka Shumps)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sports" class="md-nav__link">
+    Sports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog_1" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">link</a></h1>
+<p>Progression and Win Type conditions are assigned to achievements in a set and used to designate when a game has been beaten. A game is considered when all the following statements are true:
+1. All progression-typed achievements have been earned, if any are present.
+2. Any win-typed achievement has been earned, if any are present.</p>
+<p>Typing core sets is required for set release. Subsets should not be typed.</p>
+<h2 id="progression-type-conditions">Progression Type Conditions<a class="headerlink" href="#progression-type-conditions" title="Permanent link">link</a></h2>
+<h3 id="progression-conditions">Progression Conditions:<a class="headerlink" href="#progression-conditions" title="Permanent link">link</a></h3>
+<ul>
+<li>Achievements that mark steady progress through a set. Post-game content is usually not progression.</li>
+<li>Cannot be missed assuming no glitches/exploits have been used.</li>
+</ul>
+<h3 id="non-progression">Non-progression<a class="headerlink" href="#non-progression" title="Permanent link">link</a></h3>
+<p>The following types of achievements are <em>not</em> considered for progression type marking:
+- Optional content
+- Higher Difficulties
+- Side Quests
+- Collectibles
+- Challenges
+- Easter Eggs
+- Story that can be missed, including ending variations.</p>
+<h2 id="win-conditions">Win Conditions<a class="headerlink" href="#win-conditions" title="Permanent link">link</a></h2>
+<ul>
+<li>Achievement(s) that mark the end of the game. Bad endings are usually not true endings.</li>
+<li>Some games may have multiple Win Conditions, in which case earning any of these achievements (plus all progression) marks the game as beaten.</li>
+<li>Others may only have one, which should still be marked as a Win Condition for user readability.</li>
+<li>In some cases, there is no single Win Condition, such as a puzzle game when progression can be done in any order. In these cases, earning all Progression achievements will mark the game as beaten.</li>
+</ul>
+<h2 id="types-of-progression">Types of Progression<a class="headerlink" href="#types-of-progression" title="Permanent link">link</a></h2>
+<h3 id="standard">Standard<a class="headerlink" href="#standard" title="Permanent link">link</a></h3>
+<h4 id="linear-progression">Linear progression<a class="headerlink" href="#linear-progression" title="Permanent link">link</a></h4>
+<ul>
+<li>Things you encounter as you play through level-to-level.</li>
+<li>Example: <a href="https://retroachievements.org/game/257">Prince of Persia</a> - Each level is played sequentially to complete the game.</li>
+</ul>
+<h4 id="grouped">Grouped<a class="headerlink" href="#grouped" title="Permanent link">link</a></h4>
+<ul>
+<li>Levels are grouped together rather than having individual achievements.</li>
+<li>Example: <a href="https://retroachievements.org/game/1798">Lemmings</a> - Achievements are awarded every 5 levels.</li>
+</ul>
+<h4 id="bosses">Bosses<a class="headerlink" href="#bosses" title="Permanent link">link</a></h4>
+<ul>
+<li>Boss fights as story milestones.</li>
+<li>Example: <a href="https://retroachievements.org/game/11267">Spyro: Year of the Dragon</a> - Buzz, Spike and Scorch are mandatory boss fights to be able to progress and defeat the Sorceress.</li>
+</ul>
+<h4 id="key-itemsevents">Key Items/Events<a class="headerlink" href="#key-itemsevents" title="Permanent link">link</a></h4>
+<ul>
+<li>Collecting important items, reaching the next location or witness key story events.</li>
+<li>Example: <a href="https://retroachievements.org/game/1449">Final Fantasy</a> - Significant events such as Sleeping Prince and Flotation act as story milestones between the game's other boss progression.</li>
+</ul>
+<h3 id="non-standard-progression">Non-Standard Progression<a class="headerlink" href="#non-standard-progression" title="Permanent link">link</a></h3>
+<h4 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Permanent link">link</a></h4>
+<ul>
+<li>All games within these have equal importance, so all need to be completed to mark the compilation as beaten.</li>
+<li>Mark Progression for all individual games as usual.</li>
+<li>Win Conditions must instead be marked as Progression.</li>
+<li>Example: <a href="https://retroachievements.org/game/11332">Final Fantasy Origins</a> - Both Scions and Sinners and True Emperor of Hell are marked as Progression.</li>
+</ul>
+<h4 id="intended-skips">Intended Skips<a class="headerlink" href="#intended-skips" title="Permanent link">link</a></h4>
+<ul>
+<li>Some games include features that allow levels to be skipped without the use of bugs or exploits. In these cases, skippable levels must not be marked as progression as the game can be beaten without them.</li>
+<li>Example: <a href="https://retroachievements.org/game/1446">Super Mario Bros.</a> - Because it is possible to warp to different levels, it is not possible to mark any as Progression. Saved The Girl is marked as the Win condition.</li>
+</ul>
+<h4 id="limited-scopelittle-substance">Limited Scope/Little Substance<a class="headerlink" href="#limited-scopelittle-substance" title="Permanent link">link</a></h4>
+<ul>
+<li>Some games are so simplistic, or have so little content, that the difference between Progression and Mastery is minor. If Progression is clear, mark as usual. Otherwise, mark every achievement as a Progression Condition.</li>
+<li>Example: <a href="https://retroachievements.org/game/19577">Dice of Fate</a> - This is a dice simulator.</li>
+</ul>
+<h4 id="multiple-game-modes">Multiple Game Modes<a class="headerlink" href="#multiple-game-modes" title="Permanent link">link</a></h4>
+<ul>
+<li>All non-endless and non-restrictive modes that are available when first launching the game have Progression Conditions marked.</li>
+<li>These game modes have equal importance, much like the individual games in a compilation. Any Win Conditions should instead be marked as Progression.</li>
+<li>Endless modes, by definition, continue until failure, so lack Progression and are not included.</li>
+<li>Restrictive modes limit the player in some way, most often with time or turn limits. They may appear to contain Progression, but the limitations act as an additional challenge, making these achievements Non-Progression that should not be marked.</li>
+<li>Example: <a href="https://retroachievements.org/game/814">Kirby Super Star</a> - Bye Bye Birdy, What A Meta-Knightmare, Like A Gentle Breeze, Back On Solid Ground and Balance Restored...? are marked as Progression.</li>
+</ul>
+<h4 id="subsets">Subsets<a class="headerlink" href="#subsets" title="Permanent link">link</a></h4>
+<ul>
+<li>These are inherently focused on a challenge, restriction or other non-standard ways of playing a game.</li>
+<li><strong>Do not</strong> mark any Progression or Win conditions; this is already covered within the core set.</li>
+</ul>
+<h3 id="multiple-possible-win-conditions">Multiple Possible Win Conditions<a class="headerlink" href="#multiple-possible-win-conditions" title="Permanent link">link</a></h3>
+<h4 id="multiple-endings">Multiple Endings<a class="headerlink" href="#multiple-endings" title="Permanent link">link</a></h4>
+<ul>
+<li>Endings that occur at the end of the game through normal play should be marked as Win Conditions.</li>
+<li>Alternative endings that require optional content such as collectibles are Non-Progression and should not be marked.</li>
+<li>Alternative endings that end the storyline early are also Non-Progression and should not be marked.</li>
+<li>Examples:
+    - <a href="https://retroachievements.org/game/10023">Knuckles Chaotix</a> - Both Bad Ending and Good Ending are marked as Win conditions. The ending is determined by optional collectibles.
+    - <a href="https://retroachievements.org/game/11295">Oddworld: Abe's Oddysee</a> - Both Bad Ending and Good Ending are marked as Win conditions. The ending is determined by saving NPCs.
+    - <a href="https://retroachievements.org/game/5179">Sigma Star Saga</a> - One is the Loneliest Number and Show Me This Planet are marked as Win conditions. The ending is determined by a gameplay action that only changes the final cutscene.
+    - <a href="https://retroachievements.org/game/13943">Cave Story MD</a> - Coward is not marked as either Progression or Win because it ends the game early and does not resolve the story. Shtuff Happens and Curse Broken are both marked as Win conditions.
+    - <a href="https://retroachievements.org/game/5522">Castlevania: Dawn of Sorrow</a> - The Dark Lord Returns is not marked as either Progression or Win because it ends the game early and does not resolve the story. No Dark Lord Here is marked as the Win condition.
+    - <a href="https://retroachievements.org/game/1499">Shadowgate</a> - Uh... What? is not marked as either Progression or Win because it causes the player's death. Talimar the Black is marked as the Win condition.
+    - <a href="https://retroachievements.org/game/3417">Sonic Adventure 2</a> - Final Story
+    - <a href="https://retroachievements.org/game/999">Zero Escape: Nine Hours, Nine Persons, Nine Doors</a> - Plaudite! Acta Est Fabula!
+    - <a href="https://retroachievements.org/game/1411">Live-A-Live</a> - Live A Live requires optional character recruitment. Only Demon King No More is marked as a Win condition.
+    - <a href="https://retroachievements.org/game/9989">Powerslave | Exhumed</a> - King of the World requires optional collectibles. Only Time to Rest is marked as a Win condition.
+    - <a href="https://retroachievements.org/game/4874">Sonic 3 &amp; Knuckles</a> - Hyper Sonic Victory, Hyper Knuckles Victory and Super Tails Victory all require optional collectibles. Sonic Victory, Knuckles Victory and Tails Victory are all marked as Win conditions.</li>
+</ul>
+<h4 id="multiple-difficulties">Multiple difficulties<a class="headerlink" href="#multiple-difficulties" title="Permanent link">link</a></h4>
+<ul>
+<li>Progression and Win Conditions should be marked for the lowest difficulty supported by the set.</li>
+<li>If difficulty achievements do not stack (e.g. normal or higher), for each difficulty available from a fresh save, mark each game completion achievement as a Win Condition.</li>
+<li>Endings that are only available on lower difficulties are not considered Progression.</li>
+<li>Examples:
+    - <a href="https://retroachievements.org/game/2936">Devil May Cry 3</a> - Leave Me And Go and Normal Mode are marked as Win conditions as Easy and Normal are available on a 1st playthrough.
+    - <a href="https://retroachievements.org/game/11265">Resident Evil 3: Nemesis</a> - Carlos, My Love! and Is That You?! are Win conditions, Easy is not covered by the set.
+    - <a href="https://retroachievements.org/game/54">Streets of Rage 3</a> - The End? is not marked as Progression or Win because Easy difficulty ends the game early. Unfinished Business, Time's Up and The End! are all Win conditions.</li>
+</ul>
+<h4 id="multiple-storylinescharacters">Multiple Storylines/Characters<a class="headerlink" href="#multiple-storylinescharacters" title="Permanent link">link</a></h4>
+<ul>
+<li>Some linear games have an epilogue or expanded story that are still part of a standard playthrough. These resolve the storyline and should be marked as a Win Condition.</li>
+<li>Some games may have endless post-game content after the story has resolved. This optional content should not be marked as either Progression or Win Conditions.</li>
+<li>Additional story content that is exclusive to a particular version or release are part of Progression. These differentiate that game from other releases and should be marked as Win Conditions. Endings reached before this point should be marked as Progression.</li>
+<li>Credits do not always mean the end of a story.</li>
+<li>Some games have progression differences based on initial character choice. In these cases, all starting characters' endings are needed to beat the game, so these should all be marked as Progression Conditions.</li>
+<li>If the character choice only affects playstyle or abilities, each character's ending should be marked as Win Conditions.</li>
+<li>Characters may each have multiple endings. In these cases, make sure to only mark their normal ending, not ones that require extra steps.</li>
+<li>Examples:
+    - <a href="https://retroachievements.org/game/264">EarthBound</a> - Smiles and Tears is marked as the Win condition, On a Mission from God is marked as a Progression condition.
+    - <a href="https://retroachievements.org/game/11245">Resident Evil 2</a> - No Time to Waste and I Have to Find You are marked as Win conditions. Progression cannot be marked due to the order of characters chosen not being significant to the overall story.
+    - <a href="https://retroachievements.org/game/2657">Shin Megami Tensei: Persona 3 FES</a> - The Fate of the Sealed is marked as the Win condition, Thank You for Everything is marked as a Progression condition.
+    - <a href="https://retroachievements.org/game/762">Final Fantasy I &amp; II: Dawn of Souls</a> - Break The Time Loop, To Heck With You! and To Arubboth With You! are marked as Progression. This version of the game expands the storyline to resolve the plot.
+    - <a href="https://retroachievements.org/game/764">Final Fantasy V: Advance</a> - The True Power of the Void is not marked as Progression or Win due to being post-game content in an endless game. The Win condition is Warriors of Light.
+    - <a href="https://retroachievements.org/game/576">Pokemon Gold Version</a> - Battle On the Mountain is not marked as Progression or Win due to being post-game content in an endless game. The Win condition is Elite Five.</li>
+</ul>
+<h2 id="notable-genres">Notable Genres<a class="headerlink" href="#notable-genres" title="Permanent link">link</a></h2>
+<p>These genres often lack standard progression, so have additional guidelines here. They may also feature multiple game modes; see the guidelines above for how to mark Progression for these.</p>
+<h3 id="arcade">Arcade<a class="headerlink" href="#arcade" title="Permanent link">link</a></h3>
+<p>Use the first of the following that is applicable:
+- Mark achievements for clearing each stage as Progression and the last as a Win Condition.
+    - Example: <a href="https://retroachievements.org/game/12138">Galaga</a> - Bulletstorm is marked as the Win condition.
+- Use the last stage that adds new elements (enemies/obstacles/mechanics) or increases the difficulty as the final stage of Progression.
+    - Example: <a href="https://retroachievements.org/game/11943">Donkey Kong</a> - Mark 150m Finish as the Win condition.
+- Use the set developer's score achievements as Progression, with reaching the highest as the Win Condition.
+    - Example: <a href="https://retroachievements.org/game/789">Pokemon Pinball: Ruby &amp; Sapphire</a> - 1st Place Ruby, 1st Place Sapphire and High Roller are marked as Progression.
+- Use the in-game leaderboards' high scores as Progression.</p>
+<h3 id="fighting">Fighting<a class="headerlink" href="#fighting" title="Permanent link">link</a></h3>
+<ul>
+<li>The game should be cleared with all starting characters for a Beat</li>
+<li>The progression and/or win achievements for each character available on a fresh launch should be marked as Progression, with no Win Conditions.
+    - Example: <a href="https://retroachievements.org/game/2982">Soulcalibur II</a> - Weapon Master (Story) and each default character's Arcade (Normal or Higher) are marked as Progression. Time Attack (Restrictive), Survival (Endless) and the unlockable modes are not marked.</li>
+</ul>
+<h3 id="puzzle">Puzzle<a class="headerlink" href="#puzzle" title="Permanent link">link</a></h3>
+<ul>
+<li>Some Puzzle games allow levels to be played in any order. In these cases, do not mark any Win Conditions, only Progression.</li>
+<li>Puzzle games may segment levels by difficulty. These function as categories rather than the same levels again but more challenging, so higher difficulties are still part of Progression in these cases.</li>
+</ul>
+<h3 id="rhythm">Rhythm<a class="headerlink" href="#rhythm" title="Permanent link">link</a></h3>
+<ul>
+<li>All songs unlocked through standard gameplay are considered Progression.</li>
+<li>Do not include songs unlocked with additional steps such as high score or chain requirements.</li>
+</ul>
+<h3 id="shoot-em-ups-aka-shumps">Shoot 'em Ups (aka Shumps)<a class="headerlink" href="#shoot-em-ups-aka-shumps" title="Permanent link">link</a></h3>
+<ul>
+<li>If character/ship choice does not affect the storyline, only one needs to be cleared to Beat the game.</li>
+<li>Mark each character's win achievement as a Win Condition.</li>
+<li>Do not mark character-specific achievements as Progression.</li>
+</ul>
+<h3 id="sports">Sports<a class="headerlink" href="#sports" title="Permanent link">link</a></h3>
+<ul>
+<li>Win a game is only considered Progression if there are no other game modes.</li>
+<li>Progression should be marked for all non-endless modes available from a fresh launch.</li>
+<li>All tournaments/events unlocked through standard gameplay are considered Progression.</li>
+<li>Do not include tournaments/events unlocked through additional steps such as perfect games</li>
+</ul>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-11-05 16:36] Andrew Comer:</code> Remove duplicate bullet points</li>
+<li><code>[2023-11-03 14:34] Etron:</code> Added game links to each example</li>
+<li><code>[2023-11-03 08:05] The Mystical One:</code> Initial Creation based on Progression Typing Draft</li>
+</ul>
+<h2 id="changelog_1">Changelog<a class="headerlink" href="#changelog_1" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2023-11-05 16:36] Andrew Comer:</code> Remove duplicate bullet points</li>
+<li><code>[2023-11-03 14:34] Etron:</code> Added game links to each example</li>
+<li><code>[2023-11-03 08:05] The Mystical One:</code> Initial Creation based on Progression Typing Draft</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://retroachievements.org/" target="_blank" rel="noopener" title="retroachievements.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/dq2E4hE" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RetroAchievements" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  </body>
+</html>
