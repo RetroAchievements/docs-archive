@@ -5015,8 +5015,10 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 <p>Pointers are more commonly found in newer consoles and their notes typically include information for various addresses that the pointer can point to. The pointer notes will typically include numerous offset values to the important addresses used by the developer.</p>
 <ul>
 <li>If offsets with labels are written correctly, the memory inspector and assets editor will generate indirect code notes at the pointer <em>address + offset</em> of the correct size.</li>
-<li>Use a plus sign <code>+</code> before the offset value.
-    * For pointers with multiple layers, many people will use additional pluses to indicate that it is an offset of a pointer being pointed to by the original pointer. However, this will break all indirect code notes for that pointer. Consider using a vertical pipe before these layered offsets instead to allow for the top layer to generate indirect code notes.</li>
+<li>Use a plus sign <code>+</code> before the offset value.<ul>
+<li>For pointers with multiple layers, many people will use additional pluses to indicate that it is an offset of a pointer being pointed to by the original pointer. However, this will break all indirect code notes for that pointer. Consider using a vertical pipe before these layered offsets instead to allow for the top layer to generate indirect code notes.</li>
+</ul>
+</li>
 <li>Use <code>0x</code> to indicate a hexadecimal offset value; the memory inspector will treat it as a decimal offset if this is not present.</li>
 <li>You can separate the offset value and its label with any number of spaces, and a separator character like an equals sign, a colon, or a vertical pipe.</li>
 <li>You should specify the size of the data at the offset like any normal code note. Indirect notes and highlighting will use this.</li>
@@ -5068,6 +5070,7 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2024-03-11 14:08] Andrew Comer:</code> Updated Code Notes (markdown)</li>
 <li><code>[2024-03-11 14:03] Andrew Comer:</code> Bullet formatting fixes.</li>
 <li><code>[2024-03-11 13:57] Andrew Comer:</code> Updated Code Notes (markdown)</li>
 <li><code>[2024-03-11 13:53] Andrew Comer:</code> Bullet formatting fixes.</li>
@@ -5077,7 +5080,6 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 <li><code>[2024-01-09 16:36] The Mystical One:</code> Updated Code Notes (markdown)</li>
 <li><code>[2024-01-09 16:33] The Mystical One:</code> Updated Code Notes (markdown)</li>
 <li><code>[2024-01-09 15:29] The Mystical One:</code> Added another score example to replace the one that was removed.</li>
-<li><code>[2024-01-09 15:26] The Mystical One:</code> Adjusted a suggestion for layered pointers. Added guidance for where juniors can add code notes.</li>
 </ul>
 
 

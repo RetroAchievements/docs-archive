@@ -4597,21 +4597,27 @@ You're expected to keep your work bug free by appropriately resolving tickets. R
 <li>Attempt to reproduce the issue on the same core used by the user.
     * You may need to edit <code>cores.json</code> in RALibretro to remove the <code>"platforms": "none"</code> line from a core’s definition in order to download  and use the core.</li>
 <li>If resolving a ticket for another developer’s achievement, make a backup of the old logic and leave it in a comment on the ticket. That way if your fix has a further issue, you or another developer will be able to reference the previous logic.</li>
-<li>When you have found the issue, develop and test your changes.
-    * Note: For achievements that triggered at the wrong time make sure you test that your changes work to resolve the false trigger and that they still work to trigger the achievement in the correct method.</li>
+<li>When you have found the issue, develop and test your changes.<ul>
+<li>Note: For achievements that triggered at the wrong time make sure you test that your changes work to resolve the false trigger and that they still work to trigger the achievement in the correct method.</li>
+</ul>
+</li>
 <li>Leave a summary of what you did to fix the ticket. If possible, explain why the issue occurred, what fixed it, and why the fix works.</li>
 </ol>
 <h2 id="steps-to-close-tickets">Steps to Close Tickets<a class="headerlink" href="#steps-to-close-tickets" title="Permanent link">link</a></h2>
 <ol>
 <li>Perform due diligence in attempting to reproduce the problem.</li>
 <li>Do not close tickets without leaving a comment about why closing the ticket is the correct action.</li>
-<li>Close with the most appropriate reason
-    * <strong>Unable to Reproduce</strong> should be done only after gathering as much information about the context of the ticket as possible, attempting to reproduce it on the core by approaching the triggering conditions as many ways as you can, and still being unable to reproduce the results.
-    * <strong>Not Enough Information</strong> should be done only after attempting to reproduce the issue as much as possible, but without further information from the reporter are unable to come up with the same result.
-      * Give several days for new information to be given before closing in this fashion.
-    * <strong>Network Problems</strong> should be the close reason if it becomes clear that the issue was caused by the user not having a connection to the server.
-    * A <strong>Mistaken Report</strong> should be used only if it becomes clear that the user did not perform the correct actions to unlock the ticket or reported a ticket for non-ticketable reasons.
-    * <strong>Other Reason</strong> can be used if some other reason for closing a ticket exists. Be sure to properly justify the closure in a ticket comment.</li>
+<li>Close with the most appropriate reason<ul>
+<li><strong>Unable to Reproduce</strong> should be done only after gathering as much information about the context of the ticket as possible, attempting to reproduce it on the core by approaching the triggering conditions as many ways as you can, and still being unable to reproduce the results.</li>
+<li><strong>Not Enough Information</strong> should be done only after attempting to reproduce the issue as much as possible, but without further information from the reporter are unable to come up with the same result.<ul>
+<li>Give several days for new information to be given before closing in this fashion.</li>
+</ul>
+</li>
+<li><strong>Network Problems</strong> should be the close reason if it becomes clear that the issue was caused by the user not having a connection to the server.</li>
+<li>A <strong>Mistaken Report</strong> should be used only if it becomes clear that the user did not perform the correct actions to unlock the ticket or reported a ticket for non-ticketable reasons.</li>
+<li><strong>Other Reason</strong> can be used if some other reason for closing a ticket exists. Be sure to properly justify the closure in a ticket comment.</li>
+</ul>
+</li>
 </ol>
 <h2 id="handling-tickets-for-other-developers">Handling Tickets for Other Developers<a class="headerlink" href="#handling-tickets-for-other-developers" title="Permanent link">link</a></h2>
 <p>You may resolve tickets for another developer under the following guidelines:</p>
@@ -4620,8 +4626,10 @@ You're expected to keep your work bug free by appropriately resolving tickets. R
 <h3 id="if-the-developer-is-inactive">If the Developer is Inactive<a class="headerlink" href="#if-the-developer-is-inactive" title="Permanent link">link</a></h3>
 <p>You can work on their tickets on your own.</p>
 <ul>
-<li>An <strong>inactive developer</strong> is someone who has <strong>10 or more open tickets that are older than two months</strong> (you can see their open tickets from the Ticket Manager).
-    * Contact a Developer Compliance team member to ensure this is the case before making the judgement on your own if they still have the Developer role.</li>
+<li>An <strong>inactive developer</strong> is someone who has <strong>10 or more open tickets that are older than two months</strong> (you can see their open tickets from the Ticket Manager).<ul>
+<li>Contact a Developer Compliance team member to ensure this is the case before making the judgement on your own if they still have the Developer role.</li>
+</ul>
+</li>
 <li>If the developer is inactive, you can freely resolve their tickets through normal resolution processes as stated above.</li>
 <li>You may change the achievement description to clarify the objective or to match the logic that is present to clarify the intent of the achievement.
 Do not deviate from an achievement's concept or objective in any way without an approved revision vote.</li>
@@ -4640,10 +4648,11 @@ Do not deviate from an achievement's concept or objective in any way without an 
 * It is strongly recommended that the newly active dev review any tickets that were resolved during their inactivity period so they can understand the changes made to their achievements.
 * If necessary, reach out to the developer who made the updates that resolved the tickets.
 * If the newly active developer no longer wants to be the owner of the achievements, they can reach out to the Developer Compliance team to inquire about a reauthor of said achievements.
-    * Note that an accepted reauthor will be handled on a case-by-case basis, depending on the developers in question as well as the changes made to the achievements. This rule will be reevaluated if the implementation of a set or achievement maintainer is introduced.</p>
+  * Note that an accepted reauthor will be handled on a case-by-case basis, depending on the developers in question as well as the changes made to the achievements. This rule will be reevaluated if the implementation of a set or achievement maintainer is introduced.</p>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2024-03-11 14:08] Andrew Comer:</code> Updated Handling Tickets (markdown)</li>
 <li><code>[2024-03-11 14:03] Andrew Comer:</code> Bullet formatting fixes.</li>
 <li><code>[2024-03-11 13:57] Andrew Comer:</code> Bullet formatting fixes.</li>
 <li><code>[2024-01-14 10:07] The Mystical One:</code> Cleaned up the "Handling Tickets for Other Developers" section so it flows better.</li>
@@ -4653,7 +4662,6 @@ Do not deviate from an achievement's concept or objective in any way without an 
 <li><code>[2024-01-13 23:03] The Mystical One:</code> Updated Handling Tickets (markdown)</li>
 <li><code>[2024-01-13 22:57] The Mystical One:</code> Updated Handling Tickets (markdown)</li>
 <li><code>[2024-01-13 22:55] The Mystical One:</code> Changed the Set Claims &amp; Tickets heading to be a question so that it is much more eye-catching.</li>
-<li><code>[2024-01-13 20:26] The Mystical One:</code> Updated Handling Tickets (markdown)</li>
 </ul>
 
 
