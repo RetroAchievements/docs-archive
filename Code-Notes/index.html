@@ -4890,8 +4890,10 @@
 <p>Code notes are a vital part of achievement development. They provide valuable context to memory addresses used in achievement creation. Good code notes can make future achievement troubleshooting a breeze for developers, while bad code notes can make it a nightmare. This guide will help developers create clear, helpful, and consistent code notes that can be used by any developer looking at their sets in the future.</p>
 <h2 id="how-to-make-code-notes">How to Make Code Notes<a class="headerlink" href="#how-to-make-code-notes" title="Permanent link">link</a></h2>
 <p>Code notes are made by the developer in the Memory Inspector as they are RAM digging a game. This allows for easily seeing where sizes of notable addresses as well as areas in the RAM that hold important values. Code notes can be added, deleted and updated from the Memory Inspector. Code notes that are already created can be updated or deleted from the games' "Code Notes" page on the website. This is intended for quick fixes to notes and not intended as the main form of code note modification.</p>
-<p>* Developers are free to add any code notes to any game without declaring intentions to work on the game. Just be careful to not delete previous notes added by someone else unless you are certain they are incorrect.
-  * Junior Developers shall limit their code notes to the game they have claimed. Juniors are unable to delete or overwrite notes made by other users.</p>
+<ul>
+<li>Developers are free to add any code notes to any game without declaring intentions to work on the game. Just be careful to not delete previous notes added by someone else unless you are certain they are incorrect.</li>
+<li>Junior Developers shall limit their code notes to the game they have claimed. Juniors are unable to delete or overwrite notes made by other users.</li>
+</ul>
 <h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">link</a></h2>
 <ul>
 <li><strong>Be Clear and Informative</strong>: Code notes should clearly document what the address represents such that it can easily be understood by other developers.</li>
@@ -4901,19 +4903,19 @@
 </ul>
 <h2 id="specifying-memory-addresses-size">Specifying Memory Addresses Size<a class="headerlink" href="#specifying-memory-addresses-size" title="Permanent link">link</a></h2>
 <p>There are multiple ways to specify a memory address that will be recognized by the Memory Inspector highlighting. Any code note that does not specify a valid size will cause the Memory Inspector to highlight the byte the note is for. Any number of bit and byte lengths will be recognized by the Memory Inspector highlighting. Many developers will enclose the address size in square brackets (<code>[]</code>) to make it more noticeable in the full note.
-  * <code>[Lower4]</code>, <code>[Upper4]</code>
-  * <code>[8-bit]</code>, <code>[16-bit]</code>, <code>[24-bit BE]</code>, <code>[32-bit]</code>, <code>[Float]</code>
-  * <code>[1 byte]</code>, <code>[2 bytes]</code>, <code>[4 bytes]</code>, <code>[8-bytes]</code>
-  * <code>[128 bits]</code>, <code>[78 bytes]</code>, <code>[428 bits]</code>, <code>[1024 bytes]</code></p>
+* <code>[Lower4]</code>, <code>[Upper4]</code>
+* <code>[8-bit]</code>, <code>[16-bit]</code>, <code>[24-bit BE]</code>, <code>[32-bit]</code>, <code>[Float]</code>
+* <code>[1 byte]</code>, <code>[2 bytes]</code>, <code>[4 bytes]</code>, <code>[8-bytes]</code>
+* <code>[128 bits]</code>, <code>[78 bytes]</code>, <code>[428 bits]</code>, <code>[1024 bytes]</code></p>
 <h3 id="bit-fields-and-bit-flags">Bit Fields and Bit Flags<a class="headerlink" href="#bit-fields-and-bit-flags" title="Permanent link">link</a></h3>
 <p>Very often you will run into an address that uses each bit within the address to store data. Noting the individual bits won't affect any Memory Inspector highlighting, though each bit should be properly noted in the code note. Some people choose to mark the size for these as [Bitfield] or [Bitflags] instead of [8-Bit].</p>
 <h2 id="adding-values-and-labels">Adding values and labels.<a class="headerlink" href="#adding-values-and-labels" title="Permanent link">link</a></h2>
 <p>When you need to label specific values or bit meanings in a note, here are some things to keep in mind.
-  * Always prefix hexadecimal values with <code>0x</code> so that it is clear the value is in hex. This is especially important if none of your values use characters A-F.
-  * If values are in decimal, consider putting a note in the description to this effect: <code>(Values below are decimal)</code>
-  * Put each value on a separate line - This is usually the easiest way to visually distinguish each value. You should usually use this when there are more than two values to label.
-  * If there are only two values (Example: Yes/No), consider placing them inline with the description, if the description and labels are short.
-  * Put a separator between the value and its label. This can be an equals sign, a colon, or a dash, and you may put whitespace as needed. Tip: Using an equals sign without spaces lets you easily copy the value list into a <a href="../Rich-Presence/">Rich Presence</a> lookup.</p>
+* Always prefix hexadecimal values with <code>0x</code> so that it is clear the value is in hex. This is especially important if none of your values use characters A-F.
+* If values are in decimal, consider putting a note in the description to this effect: <code>(Values below are decimal)</code>
+* Put each value on a separate line - This is usually the easiest way to visually distinguish each value. You should usually use this when there are more than two values to label.
+* If there are only two values (Example: Yes/No), consider placing them inline with the description, if the description and labels are short.
+* Put a separator between the value and its label. This can be an equals sign, a colon, or a dash, and you may put whitespace as needed. Tip: Using an equals sign without spaces lets you easily copy the value list into a <a href="../Rich-Presence/">Rich Presence</a> lookup.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">link</a></h2>
 <h3 id="simple-types">Simple Types<a class="headerlink" href="#simple-types" title="Permanent link">link</a></h3>
 <p>Simple address types cover the very basic address that are needed for nearly every achievement set and are often the some of first addresses noted when RAM digging. Often easily described in a line or two. These may include health, lives, in game currency, level, X/Y positions, etc...</p>
@@ -5007,13 +5009,13 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 </code></pre>
 <h3 id="pointers">Pointers<a class="headerlink" href="#pointers" title="Permanent link">link</a></h3>
 <p>Pointers are more commonly found in newer consoles and their notes typically include information for various addresses that the pointer can point to. The pointer notes will typically include numerous offset values to the important addresses used by the developer, each of which including information about the added
-  * If offsets with labels are written correctly, the memory inspector and assets editor will generate indirect code notes at the pointer <em>address + offset</em> of the correct size.
-  * Use a plus sign <code>+</code> before the offset value.
+* If offsets with labels are written correctly, the memory inspector and assets editor will generate indirect code notes at the pointer <em>address + offset</em> of the correct size.
+* Use a plus sign <code>+</code> before the offset value.
     * For pointers with multiple layers, many people will use additional pluses to indicate that it is an offset of a pointer being pointed to by the original pointer. However, this will break all indirect code notes for that pointer. Consider using a vertical pipe before these layered offsets instead to allow for the top layer to generate indirect code notes.
-  * Use <code>0x</code> to indicate a hexadecimal offset value; the memory inspector will treat it as a decimal offset if this is not present.
-  * You can separate the offset value and its label with any number of spaces, and a separator character like an equals sign, a colon, or a vertical pipe.
-  * You should specify the size of the data at the offset like any normal code note. Indirect notes and highlighting will use this.
-  * If multiple lines are present after the offset value, they will all be part of the indirect note for that address.</p>
+* Use <code>0x</code> to indicate a hexadecimal offset value; the memory inspector will treat it as a decimal offset if this is not present.
+* You can separate the offset value and its label with any number of spaces, and a separator character like an equals sign, a colon, or a vertical pipe.
+* You should specify the size of the data at the offset like any normal code note. Indirect notes and highlighting will use this.
+* If multiple lines are present after the offset value, they will all be part of the indirect note for that address.</p>
 <h4 id="good-examples_3">Good Examples<a class="headerlink" href="#good-examples_3" title="Permanent link">link</a></h4>
 <p>Good examples here will include various address offsets, each of which including details and size of the address being pointed to.</p>
 <pre><code>Pointer to P1 Data [16-Bit]
@@ -5060,6 +5062,8 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2024-03-11 13:57] Andrew Comer:</code> Updated Code Notes (markdown)</li>
+<li><code>[2024-03-11 13:53] Andrew Comer:</code> Bullet formatting fixes.</li>
 <li><code>[2024-03-11 13:14] Andrew Comer:</code> Removed WIP header</li>
 <li><code>[2024-01-15 13:27] The Mystical One:</code> Updated Code Notes (markdown)</li>
 <li><code>[2024-01-10 07:05] The Mystical One:</code> Updated Code Notes (markdown)</li>
@@ -5068,8 +5072,6 @@ Bit7=[Castle Deist 1F - NW Treasure Room] Gold Needle
 <li><code>[2024-01-09 15:29] The Mystical One:</code> Added another score example to replace the one that was removed.</li>
 <li><code>[2024-01-09 15:26] The Mystical One:</code> Adjusted a suggestion for layered pointers. Added guidance for where juniors can add code notes.</li>
 <li><code>[2024-01-09 13:16] The Mystical One:</code> Updated Code Notes (markdown)</li>
-<li><code>[2024-01-09 13:12] The Mystical One:</code> Updated Code Notes (markdown)</li>
-<li><code>[2024-01-09 13:08] The Mystical One:</code> Fixed some typos, Expanded the bit fields and bit flags in the memory sizes. Removed a code note example at the request of its author.</li>
 </ul>
 
 
