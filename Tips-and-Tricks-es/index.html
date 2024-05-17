@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -4545,7 +4545,7 @@
 <li>Si tu absolutamente no puedes reducir los resultados de un filtro, puedes intentar adivinar algunos valores o mínimo como esta actuando ese valor (<code>&gt;</code> o <code>&lt;</code>). Por ejemplo, cero vida es usualmente <code>0</code>, Stage 1 es usualmente el valor <code>0</code>, Stage 2 es usualmente el valor <code>1</code> dependiendo el tipo de juego.</li>
 </ul>
 <ul>
-<li><strong>Vista de 16/32 bit</strong>: Recuerda que cuando trabajas con variables de 16 o 32 bit las variables de la derecha son primero. Por Ejemplo: si en 8bit se mira de esta manera <code>AB CD WX YZ</code>, en 16 bit se convierte en <code>CDAB YZWX</code>. A esto se le llama "<a href="https://es.wikipedia.org/wiki/Endianness#Etimolog%C3%ADa">ordenado de bits big endian</a>". Sin preocupaciones puedes ignorar esta platica geek, solamente recordando que las cosas se almacenan <strong>al revés</strong> en la vista de 16 bit y superiores.</li>
+<li><strong>Vista de 16/32 bit</strong>: Recuerda que cuando trabajas con variables de 16 o 32 bit las variables de la derecha son primero. Por Ejemplo: si en 8bit se mira de esta manera <code>AB CD WX YZ</code>, en 16 bit se convierte en <code>CDAB YZWX</code> y en 32 bit se convierte en <code>YZWXCDAB</code>. A esto se le llama "<a href="https://es.wikipedia.org/wiki/Little_endian">ordenado de bits little endian</a>". Sin preocupaciones puedes ignorar esta platica geek, solamente recordando que las cosas se almacenan <strong>al revés</strong> en la vista de 16 bit y superiores.</li>
 </ul>
 <ul>
 <li><strong>Bit fields</strong>: Utiliza single bits para cosas que solamente cambian en un bit. En el Inspector de Memoria (Memory Inspector), cuando una variable es seleccionada, vas a encontrar <code>Bits: 7 6 5 4 3 2 1 0</code> arriba de las variables. Y abajo de esos números va a ver ya sea un <code>0</code> o un <code>1</code>, así como <code>0 0 1 0 0 0 1 1</code> en la imagen de abajo. Si <code>bit5</code> tiene un <code>1</code> arriba de el, entonces <code>bit3=1</code> para esa variable. El uso de Single bit es muy común en un juego para items/eventos/desbloqueos/etc. Tal vez suene un poco confuso , pero es muy importante que lo entiendas. Algunos juegos con espacio en memoria muy limite usan los campos de bits (Bit fields) muchísimo! Es una técnica importante de aprender.</li>
@@ -4612,6 +4612,7 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2024-05-13 10:10] Christian Legge:</code> fixed endian error</li>
 <li><code>[2019-04-14 13:53] eldexterr:</code> Document Finished :)</li>
 <li><code>[2019-04-12 11:50] eldexterr:</code> Document isn´t finish</li>
 </ul>
@@ -4701,7 +4702,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
   </body>
