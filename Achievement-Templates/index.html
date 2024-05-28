@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -2580,6 +2580,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WIP-%E2%80%90-Reauthorship-Policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WIP-‐-Reauthorship-Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4623,7 +4644,8 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4635,6 +4657,7 @@
 <tr>
 <td>1</td>
 <td></td>
+<td>Mem</td>
 <td>0xCOUNT</td>
 <td>&gt;</td>
 <td>Delta</td>
@@ -4648,7 +4671,8 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4660,6 +4684,7 @@
 <tr>
 <td>1</td>
 <td></td>
+<td>Mem</td>
 <td>0xCOUNT</td>
 <td>&gt;</td>
 <td>Delta</td>
@@ -4669,6 +4694,7 @@
 <tr>
 <td>2</td>
 <td>ResetIf</td>
+<td>Mem</td>
 <td>0xLIVES</td>
 <td>&lt;</td>
 <td>Delta</td>
@@ -4684,7 +4710,8 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4696,63 +4723,31 @@
 <tr>
 <td>1</td>
 <td></td>
+<td>Delta</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
 <td>N</td>
-<td>(1)</td>
+<td>(0)</td>
 </tr>
 <tr>
 <td>2</td>
 <td></td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
 <td>N+1</td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td></td>
-<td>0xLEVEL</td>
-<td>&gt;</td>
-<td>Delta</td>
-<td>0xLEVEL</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>ResetIf</td>
-<td>0xLEVEL</td>
-<td>=</td>
-<td>Value</td>
-<td>TITLE</td>
-<td></td>
+<td>(0)</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Requirements</strong></p>
 <ul>
-<li>1: On level <code>N</code> at least one time</li>
-<li>2: Currently at level <code>N+1</code></li>
-<li>3: The level has been increased</li>
-<li>4: Reset the hit counter when back to title screen</li>
+<li>1: On Level <code>N</code> in previous frame.</li>
+<li>2: Now at level <code>N+1</code> on current frame.</li>
 </ul>
-<p>The value <strong>0xTITLE</strong> means "at game's title screen". You need to <code>ResetIf</code> going to the title screen to avoid the awarding at a wrong time.</p>
-<p>Here is an example of game flow that could make the achievement trigger at a wrong time if it wasn't for that ResetIf:</p>
-<ol>
-<li>Start the game and reach level 2 (this make the hit counter goes to 1)</li>
-<li>Get a game over while on level 2</li>
-<li>Go back to the title screen</li>
-<li>Use a password for level 3</li>
-</ol>
-<p>If not using the ResetIf we will have these conditions:</p>
-<ol>
-<li>Hit level 2: TRUE</li>
-<li>Current level = level 3: TRUE</li>
-<li>Level increased (from title/password screen to level 3): TRUE</li>
-</ol>
-<p>And it would be enough to trigger the cheevo (at a wrong time). That's why we're using the <code>ResetIf</code> in this example.</p>
+<p>This logic is true only on the exact frame the level advances from <code>N</code> to <code>N+1</code>, which makes it safe from being triggered by a level select cheat or loading a password to Level <code>N+1</code>. For robust achievement logic, you'll want other conditions too, such as checking the player is in-game or there is no demo active.</p>
 <h2 id="finish-level-n-before-time-reaches-t">Finish Level N Before Time Reaches T<a class="headerlink" href="#finish-level-n-before-time-reaches-t" title="Permanent link">link</a></h2>
 <p>In this example we consider a game where the time decreases (e.g.: Super Mario Bros). Adapt it accordingly the time on your game has a different behavior.</p>
 <p>We want to award if the player finishes the level <code>N</code> while time is greater than <code>T</code>.</p>
@@ -4760,7 +4755,8 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4771,16 +4767,38 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
+<td>And Next</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
 <td>N</td>
-<td>(1)</td>
+<td></td>
 </tr>
 <tr>
 <td>2</td>
 <td></td>
+<td>Mem</td>
+<td>0xTIME</td>
+<td>=</td>
+<td>Value</td>
+<td>START_TIME</td>
+<td>(1)</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Delta</td>
+<td>0xLEVEL</td>
+<td>=</td>
+<td>Value</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Trigger</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
@@ -4788,17 +4806,9 @@
 <td></td>
 </tr>
 <tr>
-<td>3</td>
-<td></td>
-<td>0xLEVEL</td>
-<td>&gt;</td>
-<td>Delta</td>
-<td>0xLEVEL</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>ResetIf</td>
+<td>5</td>
+<td>Reset If</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
@@ -4806,10 +4816,21 @@
 <td></td>
 </tr>
 <tr>
-<td>5</td>
+<td>6</td>
+<td>And Next</td>
+<td>Mem</td>
+<td>0xLEVEL</td>
+<td>=</td>
+<td>Value</td>
+<td>N</td>
 <td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reset If</td>
+<td>Mem</td>
 <td>0xTIME</td>
-<td>&gt;=</td>
+<td>&lt;=</td>
 <td>Value</td>
 <td>T</td>
 <td></td>
@@ -4817,17 +4838,24 @@
 </tbody>
 </table>
 <p><strong>Requirements</strong></p>
-<p>Requirements 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
 <ul>
-<li>5: timer is greater than <code>T</code>.</li>
+<li>1-2: Set a checkpoint hit when the <code>LEVEL</code> address is <code>N</code> and <code>TIME</code> address has the value of the level's <code>START_TIME</code>.</li>
+<li>3-4: Functionally the same as conditions 1-2 from the <a href="#finish-level-n">Finish Level N</a> template, but with a Trigger on the final line so that the challenge icon shows to the player while the challenge is active.</li>
+<li>5: Reset the start checkpoint if we game over and return to the title screen (or if able to quite game by some other means)</li>
+<li>6-7: Reset the start checkpoint hit when the <code>LEVEL</code> address is <code>N</code> and the <code>TIME</code> address has a value at or lower than the failure time.</li>
 </ul>
-<p><strong>Keep in mind that besides knowing how the time behaves in game you also need to research how it behaves in memory.</strong></p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Keep in mind that besides knowing how the time behaves in game you also need to research how it behaves in memory.**</li>
+<li>You may need other conditions to detect the true start of the Level.</li>
+</ul>
 <h2 id="finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc">Finish Level N without Dying (or getting hit, using a weapon, etc.)<a class="headerlink" href="#finish-level-n-without-dying-or-getting-hit-using-a-weapon-etc" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4838,93 +4866,38 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
+<td>And Next</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
 <td>N</td>
-<td>(1)</td>
+<td></td>
 </tr>
 <tr>
 <td>2</td>
 <td></td>
-<td>0xLEVEL</td>
-<td>=</td>
-<td>Value</td>
-<td>N+1</td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td></td>
-<td>0xLEVEL</td>
-<td>&gt;</td>
-<td>Delta</td>
-<td>0xLEVEL</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>ResetIf</td>
-<td>0xLEVEL</td>
-<td>=</td>
-<td>Value</td>
-<td>TITLE</td>
-<td></td>
-</tr>
-<tr>
-<td>5</td>
-<td></td>
-<td>0xSCREEN</td>
+<td>Mem</td>
+<td>0xLVL_STATE</td>
 <td>=</td>
 <td>Value</td>
 <td>LVL_N_INTRO</td>
 <td>(1)</td>
 </tr>
 <tr>
-<td>6</td>
-<td>ResetIf</td>
-<td>0xLIFE</td>
-<td>&lt;</td>
+<td>3</td>
+<td></td>
 <td>Delta</td>
-<td>0xLIFE</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Requirements</strong></p>
-<p>Requirements 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
-<ul>
-<li>5: a checkpoint to represent the point from where the player is suposed to start the chalenge of not losing a life. If the game has a level intro screen, it can be a good checkpoint.</li>
-<li>6: reset hit count if life decreased.</li>
-</ul>
-<p>The requirement 6 can also be used to reset hit count if a weapon was used, damage taken, or anything else that you want the player to NOT do.</p>
-<h2 id="finish-level-n-with-item">Finish Level N with Item<a class="headerlink" href="#finish-level-n-with-item" title="Permanent link">link</a></h2>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Special?</th>
-<th>Memory</th>
-<th>Cmp</th>
-<th>Type</th>
-<th>Mem/Val</th>
-<th>Hits</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td></td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
 <td>N</td>
-<td>(1)</td>
+<td></td>
 </tr>
 <tr>
-<td>2</td>
-<td></td>
+<td>4</td>
+<td>Trigger</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
@@ -4932,17 +4905,9 @@
 <td></td>
 </tr>
 <tr>
-<td>3</td>
-<td></td>
-<td>0xLEVEL</td>
-<td>&gt;</td>
-<td>Delta</td>
-<td>0xLEVEL</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>ResetIf</td>
+<td>5</td>
+<td>Reset If</td>
+<td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
@@ -4950,28 +4915,44 @@
 <td></td>
 </tr>
 <tr>
-<td>5</td>
-<td></td>
-<td>0xITEM</td>
+<td>6</td>
+<td>And Next</td>
+<td>Mem</td>
+<td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
-<td>TRUE</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reset If</td>
+<td>Mem</td>
+<td>0xLIVES</td>
+<td>&lt;</td>
+<td>Delta</td>
+<td>0xLIVES</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Requirements</strong></p>
-<p>Requirements 1-4 are the same as <a href="#finish-level-n">Finish Level N</a> template.</p>
 <ul>
-<li>5: the player have the item</li>
+<li>1-2 Supposes there is a <code>LEVEL_STATE</code> address that has values like "In Level Intro Screen," "Playing Level," etc and sets a checkpoint hit when you are in the correct level's intro. This is a stand in for some "checkpoint" where you want the challenge to start. You will need to determine the proper conditions and timing and set up your own appropriate start checkpoint.</li>
+<li>3-5 are the same as <a href="#finish-level-n-before-time-reaches-t">Finish Level N Before Time Reaches T</a> template.</li>
+<li>6-7: A Reset for when the <code>LEVEL</code> address has the value of level <code>N</code> and the <code>LIVES</code> address is less than it was on the previous frame, indicating the player lost a life. Clears the starting checkpoint hit and so fails the challenge.</li>
 </ul>
-<h2 id="collect-an-item-in-a-specific-level">Collect an Item In a Specific Level<a class="headerlink" href="#collect-an-item-in-a-specific-level" title="Permanent link">link</a></h2>
-<p>This template is for battery save or password protection for items. It avoids awarding "get item X" by loading to where player already has the item. It checks that an item is collected in the level/room ID it is supposed to be collected, and only allows it be earned at that time.</p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>The requirements in 6-7 can also be modified to reset hit count if a weapon was used, damage taken, or anything else that you want the player to NOT do.</li>
+</ul>
+<h2 id="finish-level-n-with-item">Finish Level N with Item<a class="headerlink" href="#finish-level-n-with-item" title="Permanent link">link</a></h2>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
 <th>Type</th>
@@ -4983,48 +4964,116 @@
 <tr>
 <td>1</td>
 <td></td>
-<td>0xITEM</td>
+<td>Delta</td>
+<td>0xLEVEL</td>
 <td>=</td>
 <td>Value</td>
-<td>FALSE</td>
-<td>(1)</td>
+<td>N</td>
+<td>(0)</td>
 </tr>
 <tr>
 <td>2</td>
-<td></td>
+<td>Trigger</td>
+<td>Mem</td>
+<td>0xLEVEL</td>
+<td>=</td>
+<td>Value</td>
+<td>N+1</td>
+<td>(0)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Trigger</td>
+<td>Mem</td>
 <td>0xITEM</td>
 <td>=</td>
 <td>Value</td>
 <td>TRUE</td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td>ResetIf</td>
-<td>0xLEVEL</td>
-<td>!=</td>
-<td>Value</td>
-<td>collect level</td>
-<td></td>
+<td>(0)</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Requirements</strong></p>
 <ul>
-<li>1: Do not have the item when entered the collect level, the hit is a checkpoint so 1&amp;2 can both be true at once.</li>
-<li>2: Have the item</li>
-<li>3: Reset hit counter if in a level different than the one where the item must be obtained</li>
+<li>1-2: Functionally the same as conditions 1-2 from the <a href="#finish-level-n">Finish Level N</a> template, but with a Trigger on the final line so that the challenge icon shows to the player while the challenge is active.</li>
+<li>3: Value that is true when the player has the correct item. Trigger flag here allows the icon to appear while the player has the item, and disappear when the player does not have it.</li>
 </ul>
-<p>Requirements 1 and 3 together mean "arrived the level/Room ID without the item".</p>
-<p>Even if the player loads a savestate and goes to the required level they will not be able to add hits to condition 1, thus they can't get it except in normal gameplay.  </p>
-<p>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</p>
-<h2 id="collected-100-percent-of-something">Collected 100 Percent of Something<a class="headerlink" href="#collected-100-percent-of-something" title="Permanent link">link</a></h2>
-<p>This is limited battery save /password protection for when a player will collect 100% of something like clearing each stage in Super Mario world, or getting a 100% collection rate in Super Metroid. It's necessary so that a player cannot just load a save at 100% and get the achievement for free. (As usual there are other ways to approach this problem too.)</p>
+<h2 id="collect-an-item-in-a-specific-level">Collect an Item In a Specific Level<a class="headerlink" href="#collect-an-item-in-a-specific-level" title="Permanent link">link</a></h2>
+<p>This template is for battery save or password protection for items. It avoids awarding "get item X" by loading a password or save where the player already has the item. It checks that an item is collected in the level/room ID it is supposed to be collected, and only allows it be earned at that time.</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
+<th>Type</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>Mem</td>
+<td>0xLEVEL</td>
+<td>=</td>
+<td>Value</td>
+<td>COLLECT_LEVEL</td>
+<td>(0)</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>Mem</td>
+<td>0xLEVEL</td>
+<td>=</td>
+<td>Delta</td>
+<td>0xLEVEL</td>
+<td>(0)</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Delta</td>
+<td>0xITEM</td>
+<td>=</td>
+<td>Value</td>
+<td>FALSE</td>
+<td>(0)</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Mem</td>
+<td>0xITEM</td>
+<td>=</td>
+<td>Value</td>
+<td>TRUE</td>
+<td>(0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>1-2: Be in the correct Level (<code>COLLECT_LEVEL</code>) for multiple frames.during the frame at which the item status changes, preventing the following conditions from triggering the logic on load.</li>
+<li>3: Did not have the item last frame</li>
+<li>4: Have the item on the current frame.</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Requirements 1 and 2 together mean you have to have been in the level for at least two frames. The frame at which you load the data (from password or save) will be considered false, so any change in the item status at this time won't cause the trigger.</li>
+<li>It does not necessarily have to be level/Room ID. There are other ways to approach this problem, for example a unique Mem/Val that only occurs on collection. Etc.</li>
+</ul>
+<h2 id="collected-100-percent-of-something">Collected 100 Percent of Something<a class="headerlink" href="#collected-100-percent-of-something" title="Permanent link">link</a></h2>
+<p>This is limited battery save/password protection for when a player will collect 100% of something like clearing each stage in Super Mario world, or getting a 100% collection rate in Super Metroid. It's necessary so that a player cannot just load a save at 100% and get the achievement for free. (As usual there are other ways to approach this problem too.)</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Flag</th>
 <th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
@@ -5056,24 +5105,91 @@
 </tr>
 <tr>
 <td>3</td>
-<td>PauseIf</td>
+<td></td>
 <td>Mem</td>
-<td>0xPlayerState</td>
-<td>!=</td>
+<td>0xGuardConditions</td>
+<td>=</td>
 <td>Value</td>
-<td>Specific mode/point in game where % is increased</td>
+<td>When to Check for Increase</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>Using the correct address value for condition 3 is especially important. You need to find an address that represents a unique time in the game where this percent increases. You'd not want the achievement to trigger when the player is loading their in game save file, which means this achievement must be paused at that time.</p>
-<p><strong>Example</strong>: In Super Mario World this change happens while the player sees the world map after completing a stage.</p>
-<p><strong>Note:</strong> This is similar in behavior and result to <a href="#collect-an-item-in-a-specific-level">Collect an Item in a specific Level</a>.</p>
+<p>Using the correct condition or conditions for requirement 3+ is especially important. You need to find an address or addresses that represents a unique time in the game where this percent increases. You'd not want the achievement to trigger when the player is loading their in game save file, which means this achievement must evaluate to <code>False</code> at that time.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Check for an in-game state and look for it being active for multiple frames, similar to the level check in [Collect an Item in a specific Level](#collect-an-item-in-a-specific-level:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Flag</th>
+<th>Type</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td></td>
+<td>Mem</td>
+<td>0xGAME_STATE</td>
+<td>=</td>
+<td>Value</td>
+<td>IN_GAME</td>
+<td>(0)</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Mem</td>
+<td>0xGAME_STATE</td>
+<td>=</td>
+<td>Delta</td>
+<td>0xGAME_STATE</td>
+<td>(0)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In Super Mario World this change happens while the player sees the world map after completing a stage. So you construct your conditions for this timing in a way to distinguish that from loading a save. Here the player state would be </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Flag</th>
+<th>Type</th>
+<th>Memory</th>
+<th>Cmp</th>
+<th>Type</th>
+<th>Mem/Val</th>
+<th>Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td></td>
+<td>Mem</td>
+<td>0xPlayerState</td>
+<td>=</td>
+<td>Value</td>
+<td>Returned to map from completed</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame">Circumvent the Problem of a Counter Incrementing Twice in the Same Frame<a class="headerlink" href="#circumvent-the-problem-of-a-counter-incrementing-twice-in-the-same-frame" title="Permanent link">link</a></h2>
 <p>In the <a href="#collecting-an-item-n-times">Collecting an Item N times</a> we are counting how many times the counter goes up. But in some games there are situations where the counter goes up twice in the same frame, and the hit counter is incremented only by one. This behavior, obviously, ruins our logic. We're going to see a way to circumvent this issue.</p>
 <p>The technique used here relies on two other ones:</p>
 <ul>
-<li><a href="../SubSource-Flag/#using-subsource-to-count-increments">using <code>SubSource</code> to count specific increments</a></li>
+<li><a href="../SubSource-Flag/#using-subsource-to-count-increments">Using <code>SubSource</code> to count specific increments</a></li>
 <li><a href="../AddHits-and-SubHits-Flag/"><code>AddHits</code> Flag</a></li>
 </ul>
 <p>Here's the trick:</p>
@@ -5081,7 +5197,7 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
 <th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
@@ -5093,7 +5209,7 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>SubSource</td>
+<td>Sub Source</td>
 <td>Delta</td>
 <td>0xCOUNT</td>
 <td></td>
@@ -5103,7 +5219,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td>AddHits</td>
+<td>Add Hits</td>
 <td>Mem</td>
 <td>0xCOUNT</td>
 <td>=</td>
@@ -5123,7 +5239,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td>ResetIf</td>
+<td>Reset If</td>
 <td>Mem</td>
 <td>0xLIVES</td>
 <td>&lt;</td>
@@ -5140,7 +5256,7 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
 <th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
@@ -5152,7 +5268,7 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>AndNext</td>
+<td>And Next</td>
 <td>Delta</td>
 <td>0xADDRESS</td>
 <td>=</td>
@@ -5189,7 +5305,7 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
 <th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
@@ -5200,7 +5316,7 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>ResetIf</td>
+<td>Reset If</td>
 <td>Mem</td>
 <td>0xLEVEL</td>
 <td>=</td>
@@ -5209,7 +5325,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td>PauseIf</td>
+<td>Pause If</td>
 <td>Mem</td>
 <td>0xX-COORDS</td>
 <td>&gt;</td>
@@ -5218,7 +5334,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td>PauseIf</td>
+<td>Pause If</td>
 <td>Mem</td>
 <td>0xX-COORDS</td>
 <td>&lt;</td>
@@ -5227,7 +5343,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td>PauseIf</td>
+<td>Pause If</td>
 <td>Mem</td>
 <td>0xY-COORDS</td>
 <td>&gt;</td>
@@ -5236,7 +5352,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td>PauseIf</td>
+<td>Pause If</td>
 <td>Mem</td>
 <td>0xY-COORDS</td>
 <td>&lt;</td>
@@ -5246,7 +5362,7 @@
 </tbody>
 </table>
 <ul>
-<li>The reset will only happen if all of the Pauseif conditions are not true.</li>
+<li>The reset will only happen if all of the Pause If conditions are not true.</li>
 <li>The pause is local to the alt but the reset resets the entire achievement.</li>
 </ul>
 <p><strong>ALT2</strong></p>
@@ -5254,7 +5370,7 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Special?</th>
+<th>Flag</th>
 <th>Type</th>
 <th>Memory</th>
 <th>Cmp</th>
@@ -5283,6 +5399,8 @@
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
 <p>Last 10 changes on this page:</p>
 <ul>
+<li><code>[2024-05-28 10:10] The Mystical One:</code> Fixes minor typographical errors.</li>
+<li><code>[2024-05-28 10:03] The Mystical One:</code> Updated templates to use current best practices.</li>
 <li><code>[2023-06-06 11:17] televandalist:</code> Added ToC</li>
 <li><code>[2021-05-01 07:24] meleu:</code> fix link to AddHits page</li>
 <li><code>[2020-09-01 09:50] Brandon D:</code> Updated Achievement Templates (markdown)</li>
@@ -5291,8 +5409,6 @@
 <li><code>[2020-09-01 09:23] Brandon D:</code> Updated as per feedback from Keltron</li>
 <li><code>[2020-09-01 09:04] Brandon D:</code> Updated Achievement Templates (markdown)</li>
 <li><code>[2020-09-01 08:47] Brandon D:</code> Took a real usage case from my game Dicing Knight Period and condensed it down to something more manageable. The AddHits docs are also a bit vague on some things and this hopefully will help out there.</li>
-<li><code>[2019-12-02 11:25] Searo:</code> Updating "Check for a specific value changing to another specific value ten times" to use AndNext to simplify the logic</li>
-<li><code>[2019-02-17 21:19] meleu:</code> add "Collecting an Item N times" and "Circumvent the Problem of a Counter Incrementing Twice in the Same Frame"</li>
 </ul>
 
 
@@ -5380,7 +5496,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
