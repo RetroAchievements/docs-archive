@@ -1,3 +1,9 @@
+**NOTE: This project is archived as of 2 June 2024.**
+- **A preserved snapshot of the deployment from that time is available [here](https://docs-archive.retroachievements.org).**
+- **The new docs project repo can be found [here](https://github.com/RetroAchievements/docs).**
+
+---
+
 # docs
 
 Files needed to generate [RetroAchievements.org documentation pages](https://retroachievements.github.io/docs/)
